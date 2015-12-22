@@ -2,6 +2,4 @@
 
 #### Live site at: [http://emmasax1.github.io](http://emmasax1.github.io)
 
-This will soon be Emma Sax's homepage. It will serve mainly as a brief background of who I am and my hobbies, and then will have links to other information, such as LinkedIn, Twitter, GitHub, and various ways to contact me.
-
-This site is not done yet! It currently is still set as the template html.
+This is Emma Sax's homepage, which contains brief, (and I mean brief), information about who I am and what I do, as well as links to a few other sites (such as Twitter, GitHub, and LinkedIn) about me. My contact info is at the bottom.
