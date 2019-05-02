@@ -15,6 +15,37 @@ a {
   a:hover {
     text-decoration: underline; }
 
+/* Add a black background color to the top navigation */
+.topnav {
+  color: #fff;
+  text-align: center;
+  background-color: #A7A3A3;
+  /* background-image: linear-gradient(120deg, #155799, #159957); */
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  display: inline-block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 28px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
 .btn {
   display: inline-block;
   margin-bottom: 1rem;
@@ -97,22 +128,22 @@ a {
       margin-top: 1rem;
       margin-left: 0; } }
 
-.page-header {
+.title {
   color: #fff;
   text-align: center;
   background-color: #159957;
   background-image: linear-gradient(120deg, #155799, #159957); }
 
 @media screen and (min-width: 64em) {
-  .page-header {
+  .title {
     padding: 5rem 6rem; } }
 
 @media screen and (min-width: 42em) and (max-width: 64em) {
-  .page-header {
+  .title {
     padding: 3rem 4rem; } }
 
 @media screen and (max-width: 42em) {
-  .page-header {
+  .title {
     padding: 2rem 1rem; } }
 
 .project-name {
