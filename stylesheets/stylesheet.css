@@ -1,9 +1,17 @@
 * {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
+
+html, body {
+  min-height: 100vh;
+  flex-direction: column;
+  position: relative;
+}
 
 body {
   padding: 0;
   margin: 0;
+  padding-bottom: 40px;
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.5;
@@ -129,7 +137,6 @@ a:hover {
 /********************** HEADER **********************/
 
 .project-name {
-  margin-top: 0;
   margin-bottom: 0.1rem;
 }
 
@@ -215,17 +222,14 @@ a:hover {
 
 /********************** FOOTER **********************/
 
-.site-footer {
-  padding-top: 2rem;
-  margin-top: 2rem;
-  border-top: solid 1px #eff0f1;
-}
-
-.site-footer-owner {
-  display: block;
-  font-weight: bold;
-}
-
-.site-footer-credits {
-  color: #819198;
+.footer {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-top: solid 2px #eff0f1;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 12px;
+  position: absolute;
 }
