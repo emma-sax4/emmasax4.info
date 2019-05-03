@@ -41,13 +41,13 @@ a:hover {
 
 /* Change the color of links on hover */
 .topnav a:hover {
-  background-color: #ddd;
+  background-color: #6EBBC8;
   color: black;
 }
 
 /* Add a color to the active/current link */
 .topnav a.active {
-  background-color: #4CAF50;
+  background-color: #3A8592;
   color: white;
 }
 
@@ -93,7 +93,7 @@ a:hover {
 	background: -ms-linear-gradient(top, #599bb3 5%, #408c99 100%);
 	background: linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#599bb3', endColorstr='#408c99',GradientType=0);
-	background-color: #599bb3;
+	background-color: #3A8592;
 	-moz-border-radius: 8px;
 	-webkit-border-radius: 8px;
 	border-radius: 8px;
@@ -117,7 +117,7 @@ a:hover {
 	background: -ms-linear-gradient(top, #408c99 5%, #599bb3 100%);
 	background: linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#408c99', endColorstr='#599bb3',GradientType=0);
-  background-color: #408c99;
+  background-color: #3A8592;
   text-decoration: none;
 }
 
