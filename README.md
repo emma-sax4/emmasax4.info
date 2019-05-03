@@ -1,4 +1,4 @@
-# emmasax1.github.io
+# emmasax1.github.io [![Code Climate](https://codeclimate.com/github/emmasax1/emmasax1.github.io/badges/gpa.svg)](https://codeclimate.com/github/emmasax1/emmasax1.github.io)
 
 #### Live site at: [https://emmasax1.github.io](https://emmasax1.github.io)
 
