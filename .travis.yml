@@ -1,5 +1,6 @@
 sudo: false
 dist: trusty
-language: ruby
+language: nodejs
 script:
-  - echo "tests succeeded!"
+  - jasmine
+  - echo "Tests have succeeded!"
