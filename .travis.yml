@@ -1,0 +1,5 @@
+sudo: false
+dist: trusty
+language: ruby
+script:
+  - echo "tests succeeded!"
