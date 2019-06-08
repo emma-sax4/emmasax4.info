@@ -1,6 +1,8 @@
 sudo: false
-dist: trusty
+dist: xenial
 language: nodejs
+branches:
+  only:
+    - master
 script:
   - jasmine
-  - echo "Tests have succeeded!"
