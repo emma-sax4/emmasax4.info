@@ -1,8 +1,22 @@
 sudo: false
 dist: trusty
 language: nodejs
+
+env:
+  global:
+    - CC_TEST_REPORTER_ID=0eed57b465f7076e158a2ef9e554627d93a8527d1ae059a0b0122a76f1ec88b0
+
 branches:
   only:
     - master
+
+before_script:
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
+
 script:
   - jasmine
+
+after_script:
+  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
