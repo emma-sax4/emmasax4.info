@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/x-icon" href="../resources/favicon/favicon.ico">
+    <title>Emma Sax | Platform Operations Engineer</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="../stylesheets/stylesheet.css" media="screen">
+  </head>
+
+  <header>
+    <div class="topnav" style="text-align: center">
+      <a href="/">Home</a>
+      <a href="/about_me">About Me</a>
+      <a href="/around_town">Around Town</a>
+      <a class="active" href="/thoughts">Thoughts</a>
+      <a href="/contact_me">Contact Me</a>
+    </div>
+
+    <div class="title">
+      <h1 class="project-name">Emma Sax</h1>
+    </div>
+  </header>
+
+  <body>
+    <section class="main-content">
+      <div class="row" style="display: flex">
+        <div class="column" align="center" style="flex: 0%; padding-top: 1.75%">
+          <a href="/thoughts" class="button"><img src="../resources/logos/back.png"></a>
+        </div>
+
+        <div class="column" align="left" style="flex: 55%; padding-top: 0%">
+
+<!-- ************************************************************************************************************** -->
+
+          <h2>My First Thought</h2>
+          <p style="font-size: 2; font-style: italic">Published Sep 6, 2019</p>
+
+          <p>I've been wanting to start a blog for myself for a while, but I've been having trouble figuring out where to start. But, there's no time like the present, so I thought I might as well just go for it!</p>
+
+          <p>The very first blog I started, used Ruby On Rails.... you can check it out <a href="https://github.com/emma-sax4/blog" target="_blank">here</a>. Needless to say, it didn't go very well.</p>
+
+          <p>But since I started to beef up this little website (which, 🤫, is actually just a bunch of static HTML files), I decided that I could probably just add the blog functionality to this site.</p>
+
+          <p>I originally wanted to try to use layouts, Jekyll, and javascript-like styles to store the blogs as Markdown files. In that case, the main "Thoughts" page would just use a fancy little loop to show each of the blog lines (which I named "thoughts"). But that turned out to be more difficult than I thought it would be. In all honesty, I could figure it all out myself... there's plenty of examples out there in GitHub. But I had a limited amount of time I wanted to spend putting the blog together, and tbh, I had a limited amount of patience as well.</p>
+
+          <p>Instead, I figured... I'm afraid of neither a little bit of HTML nor a little bit of duplicated code (I know the code isn't as "pretty", and if there was actual functionality on this website, I would try harder to avoid it). So, I realized that I could make a decently good blog function by simply being smart about my HTML, CSS, and <code>href</code> linking. At the very least, it would look professional, and like I knew what I was doing, even if the skeleton of the code is a little ugly.</p>
+
+          <p>Then, I went a step further. I added a <code>.htaccess</code> file (even though GitHub Pages normally doesn't play nice with that file), so that the URLs of this website could hide the <code>.html</code> endings of the HTML pages. In this way, the website wouldn't show up as obviously just a compilation of HTML files.... aka it makes it look like the whole website is served using RoR or something like that. And then, using a little bit of directory-magic, I can add a bunch of thoughts in a <code>thought/</code> directory — and link to them appropriately. Add in a <code>Back</code> button, and voilà... here we are!</p>
+
+          <p>Now I have a blog that I can edit as I choose (as long as I'm willing to duplicate my code). I'm excited to add my next "thought" to the list. Let's see how long it takes for this blog to stop being updated.... it may just be a phase.</p>
+
+<!-- ************************************************************************************************************** -->
+
+        </div>
+       </div>
+    </section>
+  </body>
+
+  <footer class="footer">
+    &copy; Copyright 2015<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script> by Emma Sax. Powered by <a href="https://pages.github.com" target="_blank">GitHub Pages</a>. Source code on <a href="https://github.com/emma-sax4/emma-sax4.github.io" target="_blank">GitHub</a>.
+  </footer>
+</html>
