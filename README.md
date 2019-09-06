@@ -2,9 +2,9 @@
 
 #### Live site at: [https://emma-sax4.github.io](https://emma-sax4.github.io)
 
-This is Emma Sax's website.
+For more information on contributing, running locally, testing, etc, please see [CONTRIBUTING.md](https://github.com/emma-sax4/emma-sax4.github.io/blob/master/CONTRIBUTING.md).
 
-For more information on contributing, running locally, testing, etc, please see [CONTRIBUTING.md](https://github.com/emma-sax4/emma-sax4.github.io/blob/master/CONTRIBUTING.md)
+To submit a feature request or a bug ticket, please use submit an official [GitHub Issue](https://github.com/emma-sax4/emma-sax4.github.io/issues/new/choose).
 
 For information on licensing, please see [LICENSE](https://github.com/emma-sax4/emma-sax4.github.io/blob/master/LICENSE).
 
