@@ -32,8 +32,8 @@ It is totally possible to run this site locally!
 
 ## Tests
 
-This repository is set up with basic Jasmine tests that are run automatically on TravisCI upon each commit. To see a full list of what the tests do, view the [`.travis.yml`](https://github.com/emma-sax4/emma-sax4.github.io/blob/master/.travis.yml) file. But in short, the tests:
-1. Run `bundle install`
-2. Run `jasmine`
+This repository doesn't really have any tests at all (GitHub Pages is just a host of static site files, so there's no functionality to test). I do run TravisCI tests on every pull request and commit to master branch, but, as you can see from the [`.travis.yml`](https://github.com/emma-sax4/emma-sax4.github.io/blob/master/.travis.yml), all the Travis run does is run `script: true`, so the builds will always pass (assuming `bundle` can properly install the dependencies as well).
 
-The `jasmine` command runs the five default tests that come when Jasmine is installed. There are no tests to test any actual functionality of this repository (since GitHub Pages only support static site files anyway).
+## Deploys
+
+GitHub automatically deploys each commit to master branch. A full deploy only takes a couple of minutes, but depending on what was changed (HTML files, images, etc), it can take up to about 5 minutes to propogate the changes. To make the changes appear faster, you can reload the entire website in incognito mode.
