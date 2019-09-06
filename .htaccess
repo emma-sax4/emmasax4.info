@@ -3,6 +3,8 @@ Options +FollowSymLinks -MultiViews
 DirectoryIndex index.html
 
 RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)/$ /$1 [L,R=302]
 RewriteBase /
 #
 # Rewrite valid requests on .html files
