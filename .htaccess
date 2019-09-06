@@ -2,7 +2,10 @@ Options +FollowSymLinks -MultiViews
 
 DirectoryIndex index.html
 
+ErrorDocument 404 /page_not_found.html
+
 RewriteEngine On
+RewriteBase /
 #
 # Rewrite valid requests on .html files
 RewriteCond %{REQUEST_FILENAME}.html -f
