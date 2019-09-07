@@ -18,6 +18,19 @@ repository: emma-sax4/emma-sax4.github.io
 
 future: true
 
+pagination:
+  enabled: true
+  per_page: 3
+  sort_field: 'date'
+  sort_reverse: true
+  collection: 'thoughts'
+  trail:
+    before: 2
+    after: 2
+  extension: html
+  indexpage: 'thoughts'
+  permalink: '/page/:num/'
+
 sass:
   style: compressed
   load_paths:
@@ -38,6 +51,7 @@ plugins:
   - jekyll-optional-front-matter
   - jemoji
   - jekyll-github-metadata
+  - jekyll-paginate-v2
 
 relative_links:
   enabled:     true
@@ -46,6 +60,7 @@ relative_links:
 collections:
   thoughts:
     output: true
+    permalink: /thoughts/:path/
 
 defaults:
   -
