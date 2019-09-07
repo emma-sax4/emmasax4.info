@@ -1,7 +1,7 @@
 ---
+layout: info
 title: Contact Me
 order: 5
-layout: info
 permalink: /contact_me
 ---
 
