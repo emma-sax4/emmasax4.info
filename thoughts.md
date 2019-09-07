@@ -1,7 +1,7 @@
 ---
+layout: thoughts
 title: Thoughts
 order: 4
-layout: paginate
 permalink: /thoughts
 pagination:
   enabled: true
