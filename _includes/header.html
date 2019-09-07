@@ -1,45 +1,15 @@
-
-
-  <div class="container">
-    <a href="{{ site.url }}{{ site.baseurl }}" class="masthead-logo">
-      {{ site.title }}
-    </a>
-
-    <nav class="masthead-nav">
-      {% assign sorted_pages = site.pages | where_exp:"item", "item.order" | sort:"order" %}
-      {% for node in sorted_pages %}
-        {% if page.url == node.url or (page.select_link == node.url) or (page.collection == node.match_collection && page.collection != null) %}
-          <a class="active" href="{{ site.baseurl }}{{node.url}}">{{node.title}}</a>
-        {% else %}
-          <a href="{{ site.baseurl }}{{node.url}}">{{node.title}}</a>
-        {% endif %}
-      {% endfor %}
-    </nav>
-  </div>
-</header>
-
-
 <header>
   <div class="topnav" style="text-align: center">
-    <a href="{{ site.url }}{{ site.baseurl }}">
-      {{ site.title }}
-    </a>
-
     <nav>
       {% assign sorted_pages = site.pages | where_exp:"item", "item.order" | sort:"order" %}
       {% for node in sorted_pages %}
-        {% if page.url == node.url or (page.select_link == node.url) or (page.collection == node.match_collection && page.collection != null) %}
+        {% if page.url == node.url %}
           <a class="active" href="{{ site.baseurl }}{{node.url}}">{{node.title}}</a>
         {% else %}
           <a href="{{ site.baseurl }}{{node.url}}">{{node.title}}</a>
         {% endif %}
       {% endfor %}
     </nav>
-    <!-- <a class="active" href="/">Home</a>
-    <a href="/about_me">About Me</a>
-    <a href="/around_town">Around Town</a>
-    <a href="/thoughts/list">Thoughts</a>
-    <a href="/contact_me">Contact Me</a> -->
   </div>
 
   <div class="title">
