@@ -14,81 +14,46 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Emma Sax's Homepage
-repository: emma-sax4/emma-sax4.github.io
+repository: emma-sax4.github.io
+description: Emma Sax's personal website.
+github_username: emma-sax4
+email: emma.sax4@gmail.com
+url: https://emma-sax4.github.io
 
 future: true
-
-pagination:
-  enabled: true
-  per_page: 3
-  sort_field: 'date'
-  sort_reverse: true
-  collection: 'thoughts'
-  trail:
-    before: 2
-    after: 2
-  extension: html
-  indexpage: 'thoughts'
-  permalink: '/page/:num/'
+markdown: kramdown
 
 sass:
   style: compressed
-  load_paths:
-    - primer/src/
-
-# Build settings
-markdown: kramdown
-highlighter: rouge
 
 exclude:
   - Gemfile
   - Gemfile.lock
-  - primer/
 
 plugins:
-  - jekyll-readme-index
-  - jekyll-relative-links
-  - jekyll-optional-front-matter
-  - jemoji
-  - jekyll-github-metadata
   - jekyll-paginate-v2
 
 relative_links:
-  enabled:     true
+  enabled: true
   collections: true
 
 collections:
   thoughts:
     output: true
-    permalink: /thoughts/:path/
+    permalink: /thought/:path
 
 autopages:
   enabled: true
   collections:
-    permalink: /thoughts/
     enabled: true
+    permalink: /thoughts
 
 pagination:
   enabled: true
   per_page: 3
-  sort_field: 'date'
+  sort_field: date
   sort_reverse: true
-  permalink: /:num/
+  permalink: /:num
   trail:
     before: 2
     after: 2
-
-defaults:
-  -
-    scope:
-      path: ""
-      type: pages
-    values:
-      layout: default
-  -
-    scope:
-      path: ""
-      type: thoughts
-    values:
-      layout: thought
-      showtable: true
