@@ -13,4 +13,4 @@ pagination:
 
 <h1>What do I think about?</h1>
 
-Here's a list of some of the things I've written:
+Here's some of the "blog posts" I've written so far:
