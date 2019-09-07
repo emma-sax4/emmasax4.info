@@ -1,5 +1,5 @@
 ---
-layout: info
+layout: default
 title: Around Town
 order: 3
 permalink: /around_town
