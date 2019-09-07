@@ -1,3 +1,6 @@
+---
+---
+
 * {
   box-sizing: border-box;
 }
@@ -13,7 +16,7 @@ body {
   margin: 0;
   padding-bottom: 40px;
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.5;
   color: #606c71;
 }
@@ -34,28 +37,76 @@ a:hover {
   text-align: center;
   background-color: #A7A3A3;
   overflow: hidden;
+
+  a {
+    display: inline-block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 28px;
+    text-decoration: none;
+    font-size: 17px;
+
+    &:hover {
+      background-color: #6EBBC8;
+      color: black;
+    }
+  }
+
+  a.active {
+    background-color: #409ED4;
+    color: white;
+  }
 }
 
-/* Style the links inside the navigation bar */
-.topnav a {
-  display: inline-block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 28px;
-  text-decoration: none;
-  font-size: 17px;
+/**************************************** PAGINATION ********************************/
+
+.paginate-container {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
-/* Change the color of links on hover */
-.topnav a:hover {
-  background-color: #6EBBC8;
-  color: black;
-}
+.pagination {
+  list-style-type: none;
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100%;
 
-/* Add a color to the active/current link */
-.topnav a.active {
-  background-color: #409ED4;
-  color: white;
+  .page {
+    &:first-child {
+      border-top-left-radius: 0px;
+      border-bottom-left-radius: 0px;
+    }
+
+    &:last-child {
+      border-top-right-radius: 0px;
+      border-bottom-right-radius: 0px;
+    }
+  }
+
+  li {
+    margin: 0 !important;
+    padding: 0;
+
+    +li {
+      .page {
+        margin-left: -1px;
+      }
+    }
+
+    &:first-child {
+      .page {
+        border-top-left-radius: 3px;
+        border-bottom-left-radius: 3px;
+      }
+    }
+
+    &:last-child {
+      .page {
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+      }
+    }
+ }
 }
 
 /**************************************** GENERIC BUTTON ********************************/
@@ -147,7 +198,25 @@ a:hover {
   background-image: linear-gradient(120deg, #2299BD, #1CB942);
 }
 
+/********************** RESPONSIVE CONTAINERS **********************/
+
+.container {
+  width: auto;
+  max-width: 1020px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.markdown-body {
+  overflow: visible;
+}
+
 /********************** PRESET FORMATTING **********************/
+
+.thought-meta {
+  font-size: 15px;
+  color: grey;
+}
 
 pre {
   display: block;
@@ -237,6 +306,12 @@ code {
   .main-content {
     padding: 2rem 1rem;
     font-size: 1rem;
+  }
+}
+
+@media print {
+  .pagination {
+    display: none !important;
   }
 }
 
