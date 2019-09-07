@@ -1,5 +1,5 @@
 ---
-layout: info
+layout: default
 title: Contact Me
 order: 5
 permalink: /contact_me
