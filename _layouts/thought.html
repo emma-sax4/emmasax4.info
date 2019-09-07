@@ -2,26 +2,21 @@
 layout: default
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-  <body>
-    <section class="main-content">
-      <div class="row" style="display: flex">
-        <div class="column" align="center" style="flex: 0%; padding-top: 2%">
-          <a href="{{ "/thoughts/" | relative_url }}" class="button"><img src="/resources/logos/back.png"></a>
-        </div>
+<section class="main-content">
+  <div class="row" style="display: flex">
+    <div class="column" align="center" style="flex: 0%; padding-top: 2%">
+      <a href="{{ "/thoughts" | relative_url }}" class="button"><img src="/resources/logos/back.png"></a>
+    </div>
 
-        <div class="column" align="left" style="flex: 55%; padding-top: 0%">
-          {% if page.subtitle %}
-            <h2>{{ page.title }} <br> <div style="font-size: 22px"> &nbsp;&nbsp; ☞ {{ page.subtitle }}</div></h2>
-          {% else %}
-            <h2>{{ page.title }}</h2>
-          {% endif %}
-          <p style="font-size: 2; font-style: italic">Published {{ page.date | date: "%B %-d, %Y" }}</p>
+    <div class="column" align="left" style="flex: 55%; padding-top: 0%">
+      {% if page.subtitle %}
+        <h2>{{ page.title }} <br> <div style="font-size: 22px"> &nbsp;&nbsp; ☞ {{ page.subtitle }}</div></h2>
+      {% else %}
+        <h2>{{ page.title }}</h2>
+      {% endif %}
+      <p style="font-size: 2; font-style: italic">Published {{ page.date | date: "%B %-d, %Y" }}</p>
 
-          {{ content }}
-        </div>
-      </div>
-    </section>
-  </body>
-</html>
+      {{ content }}
+    </div>
+  </div>
+</section>
