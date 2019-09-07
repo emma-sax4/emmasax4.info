@@ -12,8 +12,8 @@ match_collection: thoughts
     <h1>What do I think about?</h1>
 
     <ul>
-      <!-- {% assign all_thoughts = site.thoughts | sort:"date" | reverse %} -->
-      {% for thought in paginator.thoughts %}
+      {% assign all_thoughts = site.thoughts | sort:"date" | reverse %}
+      {% for thought in all_thoughts %}
         {% assign thought_url = thought.url | replace: '.html', '' | relative_url %}
         <span class="thought-meta">{{ thought.date | date: "%B %-d, %Y" }}</span>
         <br>
