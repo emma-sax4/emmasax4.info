@@ -1,36 +1,33 @@
 ---
 title: Thoughts
 order: 4
-layout: default
+layout: info
+permalink: /thoughts
 pagination:
   enabled: true
 match_collection: thoughts
 ---
 
-<div id="thoughts">
-  <div style="padding-top: 15px; padding-left: 20%; padding-right: 20%;">
-    <h1>What do I think about?</h1>
+<h1>What do I think about?</h1>
 
-    <ul>
-      {% assign all_thoughts = site.thoughts | sort:"date" | reverse %}
-      {% for thought in all_thoughts %}
-        {% assign thought_url = thought.url | replace: '.html', '' | relative_url %}
-        <span class="thought-meta">{{ thought.date | date: "%B %-d, %Y" }}</span>
-        <br>
-        {% if thought.subtitle %}
-          <a href="{{ thought_url | prepend: site.baseurl }}">{{ thought.title }} ☞ {{ thought.subtitle }}</a>
-        {% else %}
-          <a href="{{ thought_url | prepend: site.baseurl }}">{{ thought.title }}</a>
-        {% endif %}
-        <br><br>
-      {% endfor %}
-    </ul>
-  </div>
+<ul>
+  {% assign all_thoughts = site.thoughts | sort:"date" | reverse %}
+  {% for thought in all_thoughts %}
+    {% assign thought_url = thought.url | replace: '.html', '' | relative_url %}
+    <span class="thought-meta">{{ thought.date | date: "%B %-d, %Y" }}</span>
+    <br>
+    {% if thought.subtitle %}
+      <a href="{{ thought_url | prepend: site.baseurl }}">{{ thought.title }} ☞ {{ thought.subtitle }}</a>
+    {% else %}
+      <a href="{{ thought_url | prepend: site.baseurl }}">{{ thought.title }}</a>
+    {% endif %}
+    <br><br>
+  {% endfor %}
+</ul>
 
   <!-- <nav class="paginate-container" aria-label="Pagination">
     <ul class="pagination"></ul>
   </nav> -->
-</div>
 
 {% if paginator.total_pages > 1 %}
 <ul>
