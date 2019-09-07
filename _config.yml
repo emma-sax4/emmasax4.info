@@ -23,9 +23,6 @@ url: https://emma-sax4.github.io
 future: true
 markdown: kramdown
 
-sass:
-  style: compressed
-
 exclude:
   - Gemfile
   - Gemfile.lock
