@@ -48,28 +48,25 @@ a:hover {
   text-align: center;
   background-color: #A7A3A3;
   overflow: hidden;
-}
 
-/* Style the links inside the navigation bar */
-.topnav a {
-  display: inline-block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 28px;
-  text-decoration: none;
-  font-size: 17px;
-}
+  a {
+    display: inline-block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 28px;
+    text-decoration: none;
+    font-size: 17px;
 
-/* Change the color of links on hover */
-.topnav a:hover {
-  background-color: #6EBBC8;
-  color: black;
-}
+    &:hover {
+      background-color: #6EBBC8;
+      color: black;
+    }
+  }
 
-/* Add a color to the active/current link */
-.topnav a.active {
-  background-color: #409ED4;
-  color: white;
+  a.active {
+    background-color: #409ED4;
+    color: white;
+  }
 }
 
 /**************************************** PAGINATION ********************************/
