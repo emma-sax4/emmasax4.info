@@ -1,7 +1,7 @@
 ---
+layout: info
 title: About Me
 order: 2
-layout: info
 permalink: /about_me
 ---
 
