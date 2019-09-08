@@ -2,27 +2,49 @@
 layout: default
 ---
 
-{{ content }}
-
-<style>
+<!-- <style>
   ul.pager { text-align: center; list-style: none; }
   ul.pager li {display: inline;border: 1px solid black; padding: 10px; margin: 5px;}
   .selected{ background-color: magenta; }
-</style>
+</style> -->
+
+{% unless page.to_show == "all" %}
+  <div class="row" style="display: flex">
+    {% include all_thoughts_button.html %}
+
+    <div class="column" align="left" style="flex: 45%; padding-top: 0%">
+{% endunless %}
+
+{{ content }}
+
+{% assign all_thoughts = site.thoughts | sort:"date" | reverse %}
 
 <ul>
-  {% for thought in thoughts_to_show %}
-    {% assign thought_url = thought.url | replace: '.html', '' | relative_url %}
-    <span class="thought-meta">{{ thought.date | date: "%B %-d, %Y" }}</span>
-    <br>
-    {% if thought.subtitle %}
-      <a href="{{ site.baseurl }}{{ thought_url }}">{{ thought.title }} ☞ {{ thought.subtitle }}</a>
-    {% else %}
-      <a href="{{ site.baseurl }}{{ thought_url }}">{{ thought.title }}</a>
+  {% for thought in all_thoughts %}
+    {% if thought.categories contains page.to_show %}
+      {% assign thought_url = thought.url | replace: '.html', '' | relative_url %}
+
+      {% if thought.subtitle %}
+        {% if page.to_show == "all" %}
+          {% assign short_title = thought.title | append: " ☞ " | append: thought.subtitle %}
+        {% else %}
+          {% assign short_title = thought.subtitle %}
+        {% endif %}
+      {% else %}
+        {% assign short_title = thought.title %}
+      {% endif %}
+
+      <span class="thought-meta">{{ thought.date | date: "%B %-d, %Y" }}</span>
+      <br>
+      <a href="{{ site.baseurl }}{{ thought_url }}">{{ short_title }}</a>
+      <br><br>
     {% endif %}
-    <br><br>
   {% endfor %}
 </ul>
+
+{% unless page.to_show == "all" %}
+  </div>
+{% endunless %}
 
 <!-- {% if paginator.total_pages > 1 %}
   <ul>
