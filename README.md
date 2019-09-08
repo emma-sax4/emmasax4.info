@@ -43,7 +43,7 @@ GitHub automatically deploys each commit to master branch. A full deploy only ta
 ├── _config.yml
 ├── drafts
 |   ├── draft-01.md
-|   └── draft-01.md
+|   └── draft-02.md
 ├── _includes
 |   ├── footer.html
 |   └── header.html
