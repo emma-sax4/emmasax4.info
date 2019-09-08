@@ -3,17 +3,17 @@ layout: default
 ---
 
 <div class="row" style="display: flex">
-  <div class="column" align="center" style="flex: 0%; padding-top: 2%">
-    <a href="{{ "/thoughts" | relative_url }}" class="button">
-      <img src="/resources/logos/back.png">
-    </a>
-  </div>
+  {% include all_thoughts_button.html %}
 
-  <div class="column" align="left" style="flex: 55%; padding-top: 0%">
+  <div class="column" align="left" style="flex: 45%; padding-top: 0%">
     {% if page.subtitle %}
-      <h2>{{ page.title }}
+      {{ page.url | split: '/' | first }}
+      <h2>
+        {{ page.title }}
         <br>
-        <div style="font-size: 22px">&nbsp;&nbsp;☞ {{ page.subtitle }}</div>
+        <div style="font-size: 22px">
+          &nbsp;&nbsp;☞ {{ page.subtitle }}
+        </div>
       </h2>
     {% else %}
       <h2>{{ page.title }}</h2>
