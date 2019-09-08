@@ -41,7 +41,7 @@ GitHub automatically deploys each commit to master branch. A full deploy only ta
 ```
 .
 ├── _config.yml
-├── drafts
+├── _drafts
 |   ├── draft-01.md
 |   └── draft-02.md
 ├── _includes
@@ -164,7 +164,7 @@ categories: [ all, thoughts_group ]
 ```
 This indicates the date that the thought was published, the subtitle if the thought is in a group, the chosen layout to use, and the category/ies indicating when this thought should show up in any lists we make. We do this so that the `index.md` files don't show up as their own thoughts (since they're technically a list of thoughts).
 
-### `css`
+### `css/`
 This directory only has one file — `main.scss`. This is where I can keep _all_ of the CSS that this project uses. To make sure it's all being used, there are two very important lines in the `_includes/head.html`:
 ```
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
@@ -185,7 +185,7 @@ Or you can put a link to it in Markdown:
 This is an example sentence, so the link will throw a 404. See this in action [here](resources/resource-01.pdf).
 ```
 
-### `_site`
+### `_site/`
 This directory should only exist on your local machine... otherwise it's in the `.gitignore`. This is auto-generated when a user runs `jekyll build` or `jekyll serve` on their local machine. This directory is what compiles all of the Markdown, liquid, and HTML files into plain, static HTML to show to the world on a browser. While developing locally, if you need to do a hard-restart on your Jekyll server, feel free to stop the local server process, `rm -rf` this directory, and then try again.
 
 ### Any Markdown or HTML file
