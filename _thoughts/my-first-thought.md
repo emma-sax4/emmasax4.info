@@ -2,6 +2,8 @@
 layout: thought
 title: My First Thought
 date: '2019-09-06'
+categories:
+  - "all"
 ---
 
 I've been wanting to start a blog for myself for a while, but I've been having trouble figuring out where to start. But, there's no time like the present, so I thought I might as well just go for it!
