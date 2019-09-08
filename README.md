@@ -176,7 +176,7 @@ Without these lines, none of the CSS or fonts would show up as expected.
 This directory gives me a place to store handy items, such as my resume(s), pictures, logos, past slides from tech talks, etc. By putting them all into one directory (that's nested as necessary), it provides some organization to the repository. To call a specific resource, you can either ask for it in HTML:
 ```
 <div>
-  <img src="resources/pictures/picture-01.jpg" alt="Picture 1">
+  <img src="/resources/pictures/picture-01.jpg" alt="Picture 1">
 </div>
 ```
 
