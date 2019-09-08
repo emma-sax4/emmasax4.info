@@ -1,0 +1,12 @@
+<div class="column" align="center" style="flex: 0%; padding-top: 2%; padding-right: 10px">
+  <a href="{{ "/thoughts" | relative_url }}" class="myButton">
+    All Thoughts
+  </a>
+
+  {% if page.subtitle %}
+    <br><br>
+    <a href="{{ "/thought/" | append: page.title | replace: ' ', '-' | downcase | relative_url }}" class="myButton" style="padding: 13px 20px">
+      See All "{{ page.title }}"
+    </a>
+  {% endif %}
+</div>
