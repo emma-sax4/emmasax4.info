@@ -2,7 +2,7 @@
 layout: thoughts
 title: Welcome to Kenya
 permalink: /thoughts/welcome-to-kenya
-category: kenya2019
+category: welcome_to_kenya
 ---
 
 <h1>{{ page.title }}</h1>
