@@ -18,17 +18,17 @@ In my free time, I like to go on walks and hikes, swim (as much swimming as poss
 I also love to travel, expecially to international places. I try to go to a new country every year. Here's a list of some of the foreign countries I've been to:
 
 <ol start="0">
-  <li>China</li>
-  <li>France</li>
-  <li>Spain</li>
-  <li>Czech Republic</li>
-  <li>Austria</li>
-  <li>Germany</li>
-  <li>England</li>
-  <li>Montréal — technically Canada, but saying <i>Montréal</i> is cooler than saying <i>Canada</i></li>
-  <li>Kenya</li>
+  <li>China 🇨🇳</li>
+  <li>France 🇫🇷</li>
+  <li>Spain 🇪🇸</li>
+  <li>Czech Republic 🇨🇿</li>
+  <li>Austria 🇦🇹</li>
+  <li>Germany 🇩🇪</li>
+  <li>England 🏴󠁧󠁢󠁥󠁮󠁧󠁿</li>
+  <li>Montréal 🇨🇦 — technically Canada, but saying <i>Montréal</i> is cooler than saying <i>Canada</i></li>
+  <li>Kenya 🇰🇪</li>
 </ol>
 
-I try to collect a "tourist's" magnet of each city (or landmark) I visit within each country. If you want to see a picture of them, let me know!
+I try to collect a magnet of each city (or landmark) I visit within each country. If you want to see a picture of them, let me know!
 
 ** I started the bullet list with 0 for two reasons: (1) I was born in China, so I never had to "travel" there, and (2) I'm in engineering.
