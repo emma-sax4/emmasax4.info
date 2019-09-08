@@ -1,9 +1,9 @@
 ---
 layout: thought
 title: Welcome to Kenya
-subtitle: Kenya Test Draft
+subtitle: 'Part 3: The Cuisine'
 categories: [ all, kenya2019 ]
 draft: true
 ---
 
-A test draft thought.
+Draft about the food in Kenya.
