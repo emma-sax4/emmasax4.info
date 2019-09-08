@@ -10,7 +10,7 @@ layout: default
 
 {% unless page.to_show == "all" %}
   <div class="row" style="display: flex">
-    {% include all_thoughts_button.html %}
+    {% include thoughts_buttons.html %}
 
     <div class="column" align="left" style="flex: 45%; padding-top: 0%">
 {% endunless %}
@@ -44,6 +44,7 @@ layout: default
 
 {% unless page.to_show == "all" %}
   </div>
+</div>
 {% endunless %}
 
 <!-- {% if paginator.total_pages > 1 %}
