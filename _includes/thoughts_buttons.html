@@ -3,6 +3,11 @@
     All Thoughts
   </a>
 
+  <!--
+    If the thought in question is a part of any categories (except "all"), then show a button for
+    each one that links to an index page with all thoughts on that category. If this page is a list
+    of thoughts, then don't show the button to this page.
+  -->
   {% if page.categories %}
     {% for category in page.categories %}
       {% assign category_url = category | replace: '_', '-' %}
