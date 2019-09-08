@@ -2,8 +2,8 @@
 layout: thought
 title: Welcome to Kenya
 subtitle: 'Part 1: Jambo!'
+date: 2019-09-08
 categories: [ all, kenya2019 ]
-draft: true
 ---
 
 I like to consider myself a world traveler. I'm not going to pretend I don't like home; coming home after a long, and sometimes uncomfortable trip, can be super relaxing. Sleeping in my own bed, taking a warm shower, changing my clothes, eating familiar foods, etc, is sometimes _exactly_ what I need. But, I also love to go to different places around the world.
@@ -20,6 +20,6 @@ Despite the heat, we persevered, and 9 hours later, and a few naps, movies, and 
   <img src="/resources/pictures/thoughts/welcome-to-kenya/fly_over_nairobi.jpg" alt="Fly Over Nairobi">
 </div>
 
-After landing, getting through Customs, and picking up our bags, the first thing I noticed was the amount of guns the guards at the airport had. I'm not really a big gun person, so I'm not sure what types of guns they were, but I think maybe they were AK-47s or something... they looked to be military style. And they were all over. A few of us theorized that they were actually empty, and that people were only carrying them around for show... I didn't feel like seeing if they were right or not. Either way, by the end of the trip, I eventually got used to the security guards always carrying weapons (huge rifles, large sticks, sharp knives, etc).
+After landing, getting through Customs, and picking up our bags, the first thing I noticed was the amount of guns the guards at the airport had. I'm not really a big gun person, so I'm not sure what types of guns they were, but I think maybe they were AK-47s or something... they looked to be military style 🙀. And they were all over. A few of us theorized that they were actually empty, and that people were only carrying them around for show... I didn't feel like seeing if they were right or not. Either way, by the end of the trip, I eventually got used to the security guards always carrying weapons (huge rifles, large sticks, sharp knives, etc).
 
 After a stop at Safaricom to get an international SIM card (~$10 for one month of data!) and a stop at an ATM to pick up some cash, we checked into our first hotel. We were surprised to find the hotel had metal detectors at the entrance. Shortly after, we were told by our tour guides that we were advised not to leave the hotel for safely reasons 😬. Welcome to Kenya, everybody!
