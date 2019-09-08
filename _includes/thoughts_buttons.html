@@ -3,10 +3,18 @@
     All Thoughts
   </a>
 
-  {% if page.subtitle %}
-    <br><br>
-    <a href="{{ "/thoughts/" | append: page.title | replace: ' ', '-' | downcase | relative_url }}" class="myButton" style="padding: 13px 20px">
-      See "{{ page.title }}"
-    </a>
+  {% if page.categories %}
+    {% for category in page.categories %}
+      {% assign category_url = category | replace: '_', '-' %}
+
+      {% unless category == "all" or category_url == page.url %}
+        {% assign category_words = category | split: "_"  %}
+        {% capture category_name %} {% for word in category_words %} {{ word | capitalize }} {% endfor %} {% endcapture %}
+        <br><br>
+        <a href="{{ "/thoughts/" | append: category_url | relative_url }}" class="myButton" style="padding: 13px 20px">
+          See "{{ category_name | strip }}"
+        </a>
+      {% endunless %}
+    {% endfor %}
   {% endif %}
 </div>
