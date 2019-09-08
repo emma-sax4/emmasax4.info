@@ -9,12 +9,12 @@ permalink: /around_town
 
 Post-college:
 * Platform Operations Engineer at [SportsEngine](https://www.sportsengine.com/corp/careers)
-* Speaker at DevOpsDays MSP 2019 (view my slides [here](/resources/DevOpsDays_MSP_Ignite_08062019.pdf) and watch a recording of the talk [here](https://devopsdays.org/events/2019-minneapolis/program/emma-sax/"))
+* Speaker at DevOpsDays MSP 2019 (view my slides [here](resources/DevOpsDays_MSP_Ignite_08062019.pdf) and watch a recording of the talk [here](https://devopsdays.org/events/2019-minneapolis/program/emma-sax/"))
 * Judge for the [Technovation Challenge](https://technovationchallenge.org) in 2018-2019
 * Regular attendee of [DevOpsDays MSP](https://devopsdays.org/) since 2015
 * Volunteer and attendee at [RailsConf 2019](https://railsconf.org/)
 * A panelist at a Tech Talk at one of the [University of Minnesota's Coding Bootcamps](https://bootcamp.umn.edu/)
-* Speaker at DevOpsDays MSP 2017 (view my slides [here](/resources/DevOpsDays_MSP_Ignite_07252017.pdf) and watch a recording of the talk [here](https://devopsdays.org/events/2017-minneapolis/program/emma-sax/))
+* Speaker at DevOpsDays MSP 2017 (view my slides [here](resources/DevOpsDays_MSP_Ignite_07252017.pdf) and watch a recording of the talk [here](https://devopsdays.org/events/2017-minneapolis/program/emma-sax/))
 
 Before graduating college:
 * Junior Software Engineer at [SportsEngine](https://www.sportsengine.com/corp/careers) (see a little bit of what I worked on [here](https://www.codinginthecrease.com/news_article/show/772772))
@@ -33,5 +33,5 @@ Before graduating college:
 * Student Campus Ambassador at UMM
 * Orientation Group Leader at UMM in 2016
 * Dance teacher to children
-* Participated in theatre around the Twin Cities (view a copy of my theatre resume [here](/resources/SaxTheatreResume.pdf))
+* Participated in theatre around the Twin Cities (view a copy of my theatre resume [here](resources/SaxTheatreResume.pdf))
 * Volunteered at various nonprofit organizations in the Twin Cities
