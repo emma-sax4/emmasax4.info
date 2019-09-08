@@ -1,7 +1,7 @@
 ---
 layout: thought
 title: Switching to Jekyll
-categories: [ all ]
+categories: [ all, tech_talks ]
 draft: true
 ---
 
