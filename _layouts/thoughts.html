@@ -21,9 +21,12 @@ layout: default
 
 <ul>
   {% for thought in thoughts %}
-    {% if thought.categories contains page.to_show %}
+    <!--
+      Only show the thoughts that are in the same category that we're searching for and don't consider
+      this page a thought itself (this page is a list of thoughts)
+    -->
+    {% if thought.categories contains page.category and thought.url != page.url %}
       {% assign thought_url = thought.url | replace: '.html', '' | relative_url %}
-
       {% if thought.subtitle %}
         {% if page.to_show == "all" %}
           {% assign short_title = thought.title | append: " ☞ " | append: thought.subtitle %}
