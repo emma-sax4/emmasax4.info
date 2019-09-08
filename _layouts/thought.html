@@ -1,0 +1,30 @@
+---
+layout: default
+---
+
+<div class="row" style="display: flex">
+  {% include thoughts_buttons.html %}
+
+  <div class="column" align="left" style="flex: 45%; padding-top: 0%">
+    {% if page.subtitle %}
+      <h2>
+        {{ page.title }}
+        <br>
+        <div style="font-size: 22px">
+          &nbsp;&nbsp;☞ {{ page.subtitle }}
+        </div>
+      </h2>
+    {% else %}
+      <h2>{{ page.title }}</h2>
+    {% endif %}
+    <p style="font-size: 2; font-style: italic">
+      {% if page.draft == true %}
+        Unpublished
+      {% else %}
+        Published {{ page.date | date: "%B %-d, %Y" }}
+      {% endif %}
+    </p>
+
+    {{ content }}
+  </div>
+</div>
