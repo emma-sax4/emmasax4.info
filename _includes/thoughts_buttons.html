@@ -5,7 +5,7 @@
 
   {% if page.subtitle %}
     <br><br>
-    <a href="{{ "/thought/" | append: page.title | replace: ' ', '-' | relative_url }}" class="myButton" style="padding: 13px 20px">
+    <a href="{{ "/thought/" | append: page.title | replace: ' ', '-' | downcase | relative_url }}" class="myButton" style="padding: 13px 20px">
       See All "{{ page.title }}"
     </a>
   {% endif %}
