@@ -41,6 +41,9 @@ GitHub automatically deploys each commit to master branch. A full deploy only ta
 ```
 .
 ├── _config.yml
+├── drafts
+|   ├── draft-01.md
+|   └── draft-01.md
 ├── _includes
 |   ├── footer.html
 |   └── header.html
@@ -77,6 +80,37 @@ Let's go through what each section does, from the top.
 
 ### `_config.yml`
 This is where we tell Jekyll all of the configurations for this project. It's written in YAML format.
+
+### `_drafts/`
+This is where we can place all of the thoughts that we're not ready to publish yet. There's no need to put any thoughts into subdirectories in here, usually there's only a few drafts at a time, so it's not a big deal to leave them in the base directory. The front matter of a draft should look something like this for a generic draft:
+```
+---
+layout: thought
+title: Draft 1
+categories: [ all ]
+draft: true
+---
+```
+
+And something like this for a draft that will eventually be grouped:
+```
+---
+layout: thought
+title: Thoughts Group
+subtitle: Draft 2
+categories: [ all, thoughts_group ]
+draft: true
+---
+```
+
+When we're ready for a draft to be published, move it into the appropriate `_thoughts/` directory, add in the `date` front matter with the current date in `YYYY-MM-DD` format, and remove the `draft: true` matter.
+
+Drafts can only be seen when working locally (that's the point of a draft!). So, to run this project to see drafts, add the `--drafts` flag:
+```
+jekyll serve --drafts
+```
+
+The drafts should appear at the top of the list of thoughts on any thoughts list page.
 
 ### `_includes/`
 HTML files in this directory are for page elements, such as the header, footer, buttons, etc. Each element belongs in its own file. By placing these elements here, they can be reused on multiple pages without duplicating any code, and they reduce the clutter in busy pages. To call one of the elements, simply include the file in any other Markdown/HTML file:
@@ -170,15 +204,15 @@ pagination: # this is for the pagination gem (see more on pagination: https://gi
 You can also specify custom settings that you want the page to have:
 ```
 ---
-custom_field_01: true
-custom_field_02: useful_string
+custom_field_1: true
+custom_field_2: useful_string
 ---
 ```
 
 Then, you can reference those custom settings on other HTML files (such as the layout the page is using... 😉):
 ```
-{{ page.custom_field_01 }}
+{{ page.custom_field_1 }}
 => true
-{{ page.custom_field_02 }}
+{{ page.custom_field_2 }}
 => useful_string
 ```
