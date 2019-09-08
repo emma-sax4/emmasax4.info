@@ -17,10 +17,10 @@ layout: default
 
 {{ content }}
 
-{% assign all_thoughts = site.thoughts | sort:"date" | reverse %}
+{% assign thoughts = site.thoughts | sort:"date" | reverse %}
 
 <ul>
-  {% for thought in all_thoughts %}
+  {% for thought in thoughts %}
     {% if thought.categories contains page.to_show %}
       {% assign thought_url = thought.url | replace: '.html', '' | relative_url %}
 
