@@ -8,7 +8,7 @@ layout: default
   .selected{ background-color: magenta; }
 </style> -->
 
-{% unless page.to_show == "all" %}
+{% unless page.category == "all" %}
   <div class="row" style="display: flex">
     {% include thoughts_buttons.html %}
 
@@ -17,7 +17,9 @@ layout: default
 
 {{ content }}
 
-{% assign thoughts = site.thoughts | sort:"date" | reverse %}
+{% assign draft_thoughts = site.posts %}
+{% assign published_thoughts = site.thoughts | sort:"date" | reverse %}
+{% assign thoughts = draft_thoughts | concat: published_thoughts %}
 
 <ul>
   {% for thought in thoughts %}
@@ -28,7 +30,7 @@ layout: default
     {% if thought.categories contains page.category and thought.url != page.url %}
       {% assign thought_url = thought.url | replace: '.html', '' | relative_url %}
       {% if thought.subtitle %}
-        {% if page.to_show == "all" %}
+        {% if page.category == "all" %}
           {% assign short_title = thought.title | append: " ☞ " | append: thought.subtitle %}
         {% else %}
           {% assign short_title = thought.subtitle %}
@@ -37,7 +39,11 @@ layout: default
         {% assign short_title = thought.title %}
       {% endif %}
 
-      <span class="thought-meta">{{ thought.date | date: "%B %-d, %Y" }}</span>
+      {% if thought.draft == true %}
+        <span class="thought-meta">Unpublished</span>
+      {% else %}
+        <span class="thought-meta">{{ thought.date | date: "%B %-d, %Y" }}</span>
+      {% endif %}
       <br>
       <a href="{{ site.baseurl }}{{ thought_url }}">{{ short_title }}</a>
       <br><br>
@@ -45,7 +51,7 @@ layout: default
   {% endfor %}
 </ul>
 
-{% unless page.to_show == "all" %}
+{% unless page.category == "all" %}
     </div>
   </div>
 {% endunless %}
