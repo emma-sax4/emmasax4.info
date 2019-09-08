@@ -51,6 +51,8 @@ GitHub automatically deploys each commit to master branch. A full deploy only ta
 |   ├── layout-01.html
 |   └── layout-02.html
 ├── _thoughts
+|   ├── related-thoughts
+|   |   └── index.md
 |   ├── thoughts-group
 |   |   ├── index.md
 |   |   ├── group-thought-01.md
@@ -140,19 +142,19 @@ permalink: /thoughts/thoughts-group
 category: thoughts_group
 ---
 ```
-The `category` will be what Jekyll will use to filter out which thoughts to show on each given index page.
+The `category` will be what Jekyll will use to filter out which thoughts to show on each given index page. In theory, we could make thoughts that aren't part of any special physical file location, but we still want them to all be related. In that case, the relation (below called `related_thoughts`) would still need a directory called `related-thoughts/` and an `index.md` file, even if the thought itself doesn't sit inside the `related-thoughts/` directory.
 
-For a generic thought, the front matter should look like this:
+So, for a generic thought, the front matter could look like this:
 ```
 ---
 layout: thought
 title: Thought 1
 date: '2001-01-01'
-categories: [ all ]
+categories: [ all, related_thoughts ]
 ---
 ```
 
-For a thought in a nested group, the front matter should look like this:
+For thoughts that aren't only related, but are part of an entire set, each thought should sit inside the set/relation directory, and should make use of the `title` and `subtitle` metadata:
 ```
 ---
 layout: thought
