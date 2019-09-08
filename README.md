@@ -51,10 +51,12 @@ GitHub automatically deploys each commit to master branch. A full deploy only ta
 |   ├── layout-01.html
 |   └── layout-02.html
 ├── _thoughts
-|   ├── thoughts-group
+|   ├── related-thoughts
+|   |   └── index.md
+|   ├── thoughts-set
 |   |   ├── index.md
-|   |   ├── group-thought-01.md
-|   |   └── group-thought-02.md
+|   |   ├── set-thought-01.md
+|   |   └── set-thought-02.md
 |   ├── thought-01.md
 |   └── thought-02.md
 ├── css
@@ -92,13 +94,13 @@ draft: true
 ---
 ```
 
-And something like this for a draft that will eventually be grouped:
+For a draft that will eventually be a part of a set, use the `title` and `subtitle` metadata, and make sure to add the proper set name as a category:
 ```
 ---
 layout: thought
-title: Thoughts Group
+title: Thoughts Set
 subtitle: Draft 2
-categories: [ all, thoughts_group ]
+categories: [ all, thoughts_set ]
 draft: true
 ---
 ```
@@ -136,33 +138,33 @@ If I'm going to write a set of thoughts that all have a common theme, they can g
 ---
 layout: thoughts
 title: Thoughts Group
-permalink: /thoughts/thoughts-group
-category: thoughts_group
+permalink: /thoughts/thoughts-set
+category: thoughts_set
 ---
 ```
-The `category` will be what Jekyll will use to filter out which thoughts to show on each given index page.
+The `category` will be what Jekyll will use to filter out which thoughts to show on each given index page. In theory, we could make thoughts that aren't part of any special physical file location, but we still want them to all be related. In that case, the relation (below called `related_thoughts`) would still need a directory called `related-thoughts/` and an `index.md` file, even if the thought itself doesn't sit inside the `related-thoughts/` directory.
 
-For a generic thought, the front matter should look like this:
+So, for a generic thought, the front matter could look like this:
 ```
 ---
 layout: thought
 title: Thought 1
 date: '2001-01-01'
-categories: [ all ]
+categories: [ all, related_thoughts ]
 ---
 ```
 
-For a thought in a nested group, the front matter should look like this:
+For thoughts that aren't only related, but are part of an entire set, each thought should sit inside the set/relation directory, and should make use of the `title` and `subtitle` metadata:
 ```
 ---
 layout: thought
 title: Thoughts Group
 subtitle: Group Thought 1
 date: '2001-01-01'
-categories: [ all, thoughts_group ]
+categories: [ all, thoughts_set ]
 ---
 ```
-This indicates the date that the thought was published, the subtitle if the thought is in a group, the chosen layout to use, and the category/ies indicating when this thought should show up in any lists we make. We do this so that the `index.md` files don't show up as their own thoughts (since they're technically a list of thoughts).
+This indicates the date that the thought was published, the subtitle if the thought is in a set, the chosen layout to use, and the category/ies indicating when this thought should show up in any lists we make. We do this so that the `index.md` files don't show up as their own thoughts (since they're technically a list of thoughts).
 
 ### `css/`
 This directory only has one file — `main.scss`. This is where I can keep _all_ of the CSS that this project uses. To make sure it's all being used, there are two very important lines in the `_includes/head.html`:
