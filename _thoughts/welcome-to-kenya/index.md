@@ -1,7 +1,6 @@
 ---
 layout: thoughts
-title: Thoughts
-order: 4
+title: Welcome to Kenya
 permalink: /thought/welcome-to-kenya
 to_show: kenya2019
 ---
