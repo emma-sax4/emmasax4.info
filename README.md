@@ -184,7 +184,7 @@ This directory gives me a place to store handy items, such as my resume(s), pict
 
 Or you can put a link to it in Markdown:
 ```
-This is an example sentence, so the link will throw a 404. See this in action [here](resources/resource-01.pdf).
+This is an example sentence, so the link will throw a 404. See this in action [here](/resources/resource-01.pdf).
 ```
 
 ### `_site/`
