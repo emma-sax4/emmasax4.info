@@ -2,7 +2,7 @@
 layout: default
 title: About Me
 order: 2
-permalink: /about_me
+permalink: /about-me
 ---
 
 # Who am I? What do I like?

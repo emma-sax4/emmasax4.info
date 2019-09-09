@@ -2,7 +2,7 @@
 layout: default
 title: Around Town
 order: 3
-permalink: /around_town
+permalink: /around-town
 ---
 
 # What do I do, and what have I done?
