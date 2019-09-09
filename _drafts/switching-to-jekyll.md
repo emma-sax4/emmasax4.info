@@ -1,7 +1,7 @@
 ---
 layout: thought
 title: Switching to Jekyll
-tags: [ all, tech_talks, jekyll ]
+tags: [ all, tech, jekyll ]
 draft: true
 ---
 
