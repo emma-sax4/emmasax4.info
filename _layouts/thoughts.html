@@ -24,8 +24,8 @@ layout: default
 <ul>
   {% for thought in thoughts %}
     <!--
-      Only show the thoughts that are in the same tag that we're searching for and don't consider
-      this page a thought itself (this page is a list of thoughts)
+      Only show the thoughts that have the same tag as the page we're on. Don't consider
+      this page a thought itself (this page is a list of thoughts).
     -->
     {% if thought.tags contains page.tag and thought.url != page.url %}
       {% assign thought_url = thought.url | replace: ".html", "" | relative_url %}
@@ -48,6 +48,7 @@ layout: default
           {{ thought.date | date: "%B %-d, %Y" }}
         </span>
       {% endif %}
+
       <br>
       <a href="{{ site.baseurl }}{{ thought_url }}">{{ short_title }}</a>
       {% assign main_tags = thought.tags | shift | sort %}
