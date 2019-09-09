@@ -4,6 +4,6 @@
   </a>
 
   <br>
-  {% assign main_tags = page.tags | shift %}
+  {% assign main_tags = page.tags | shift | sort %}
   {% include tags_list.html %}
 </div>
