@@ -2,7 +2,7 @@
 layout: default
 title: Contact Me
 order: 5
-permalink: /contact_me
+permalink: /contact-me
 ---
 
 # Contact Me!
