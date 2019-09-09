@@ -149,7 +149,7 @@ So, for a generic thought, the front matter could look like this:
 ---
 layout: thought
 title: Thought 1
-date: '2001-01-01'
+date: 2001-01-01
 categories: [ all, related_thoughts ]
 ---
 ```
@@ -160,7 +160,7 @@ For thoughts that aren't only related, but are part of an entire set, each thoug
 layout: thought
 title: Thoughts Group
 subtitle: Group Thought 1
-date: '2001-01-01'
+date: 2001-01-01
 categories: [ all, thoughts_set ]
 ---
 ```
@@ -169,7 +169,7 @@ This indicates the date that the thought was published, the subtitle if the thou
 ### `css/`
 This directory only has one file — `main.scss`. This is where I can keep _all_ of the CSS that this project uses. To make sure it's all being used, there are two very important lines in the `_includes/head.html`:
 ```
-<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="{{ "css/main.css" | relative_url }}">
 ```
 Without these lines, none of the CSS or fonts would show up as expected.
