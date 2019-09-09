@@ -1,8 +1,8 @@
 ---
 layout: thought
 title: Switching to Jekyll
+date: 2019-09-09
 tags: [ all, tech, jekyll ]
-draft: true
 ---
 
 A few days ago, I published another thought (read it [here](/thought/my-first-thought)), in which I stated that although I wanted to originally try to use Jekyll more, I gave up, instead favoring raw HTML files, hard-coding the headers and links.
