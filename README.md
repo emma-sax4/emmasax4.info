@@ -42,8 +42,8 @@ GitHub automatically deploys each commit to master branch. A full deploy only ta
 .
 ├── _config.yml
 ├── _drafts
-|   ├── draft-01.md
-|   └── draft-02.md
+|   ├── thought-draft.md
+|   └── set-thought-draft.md
 ├── _includes
 |   ├── footer.html
 |   └── header.html
@@ -51,14 +51,13 @@ GitHub automatically deploys each commit to master branch. A full deploy only ta
 |   ├── layout-01.html
 |   └── layout-02.html
 ├── _thoughts
-|   ├── related-thoughts
-|   |   └── index.md
 |   ├── thoughts-set
-|   |   ├── index.md
-|   |   ├── set-thought-01.md
-|   |   └── set-thought-02.md
-|   ├── thought-01.md
-|   └── thought-02.md
+|   |   ├── 2001-01-01-set-thought-01.md
+|   |   ├── 2001-01-01-set-thought-02.md
+|   |   └── thoughts_set.md
+|   ├── 2001-01-01-thought-01.md
+|   ├── 2001-01-01-thought-02.md
+|   └── tag_name.md
 ├── css
 |   └── main.scss
 ├── resources
@@ -88,7 +87,7 @@ This is where we can place all of the thoughts that we're not ready to publish y
 ```
 ---
 layout: thought
-title: Draft 1
+title: Thought Draft
 tags: [ all ]
 draft: true
 ---
@@ -99,13 +98,13 @@ For a draft that will eventually be a part of a set, use the `title` and `subtit
 ---
 layout: thought
 title: Thoughts Set
-subtitle: Draft 2
+subtitle: Set Thought Draft
 tags: [ all, thoughts_set ]
 draft: true
 ---
 ```
 
-When we're ready for a draft to be published, move it into the appropriate `_thoughts/` directory, add in the `date` front matter with the current date in `YYYY-MM-DD` format, and remove the `draft: true` matter.
+When we're ready for a draft to be published, move it into the appropriate `_thoughts/` directory, add in the date into the name of the file, add in the `date` front matter, and remove the `draft: true` matter. The date should always be a part of the thought in `YYYY-MM-DD` format.
 
 Drafts can only be seen when working locally (that's the point of a draft!). So, to run this project to see drafts, add the `--drafts` flag:
 ```
@@ -133,16 +132,18 @@ permalink: /page/1
 ### `_thoughts/`
 This is the collection of "thoughts" that I've had ("thought"/"thoughts" are the very non-creative terms I've come up with instead of using "post"/"blog"). Most of the thoughts can just go into the directory, written as Markdown files.
 
-If I'm going to write a set of thoughts that all have a common theme, they can go into a nested directory inside `_thoughts/`. If that's the case, then there should also be an `index.md` inside that inner directory, which would serve as a table of contents for the thoughts related to that theme.
+If I'm going to write a set of thoughts that all have a common theme, they can go into a nested directory inside `_thoughts/`. If that's the case, then there should also be a Markdown file titled `<set-name>.md` inside that inner directory, which would serve as a table of contents for the thoughts in that set.
 ```
 ---
 layout: thoughts
-title: Thoughts Group
+title: Thoughts Set
 permalink: /thoughts/thoughts-set
 tag: thoughts_set
 ---
 ```
-The `tag` will be what Jekyll will use to filter out which thoughts to show on each given index page. In theory, we could make thoughts that aren't part of any special physical file location, but we still want them to all be tagged similarly. In that case, the relation (below called `related_thoughts`) would still need a directory called `related-thoughts/` and an `index.md` file, even if the thought itself doesn't sit inside the `related-thoughts/` directory.
+The `tag` will be what Jekyll will use to filter out which thoughts to show on each given lists page.
+
+We can also make thoughts that aren't part of any special physical file location (what I've been calling a set), but we still want them to all be tagged similarly. In that case, the relation (below called `tag_name`) just needs a file called `tag-name.md`, even if the thought itself doesn't sit inside a `tag_name/` directory.
 
 So, for a generic thought, the front matter could look like this:
 ```
@@ -150,7 +151,7 @@ So, for a generic thought, the front matter could look like this:
 layout: thought
 title: Thought 1
 date: 2001-01-01
-tags: [ all, related_thoughts ]
+tags: [ all, tag_name ]
 ---
 ```
 
@@ -158,8 +159,8 @@ For thoughts that aren't only related, but are part of an entire set, each thoug
 ```
 ---
 layout: thought
-title: Thoughts Group
-subtitle: Group Thought 1
+title: Thoughts Set
+subtitle: Set Thought 1
 date: 2001-01-01
 tags: [ all, thoughts_set ]
 ---
