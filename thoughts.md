@@ -3,7 +3,7 @@ layout: thoughts
 title: Thoughts
 order: 4
 permalink: /thoughts
-category: all
+tag: all
 pagination:
   enabled: true
   collection: thoughts
