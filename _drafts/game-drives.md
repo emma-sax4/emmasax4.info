@@ -1,7 +1,7 @@
 ---
 layout: thought
 title: Welcome to Kenya
-subtitle: 'Part 2: The Game Drives'
+subtitle: "Part 2: The Game Drives"
 categories: [ all, welcome_to_kenya ]
 draft: true
 ---

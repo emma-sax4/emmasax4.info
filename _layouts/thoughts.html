@@ -28,7 +28,7 @@ layout: default
       this page a thought itself (this page is a list of thoughts)
     -->
     {% if thought.categories contains page.category and thought.url != page.url %}
-      {% assign thought_url = thought.url | replace: '.html', '' | relative_url %}
+      {% assign thought_url = thought.url | replace: ".html", "" | relative_url %}
       {% if thought.subtitle %}
         {% if page.category == "all" %}
           {% assign short_title = thought.title | append: " ☞ " | append: thought.subtitle %}
@@ -77,7 +77,7 @@ layout: default
       <ul class="pager">
         {% if paginator.first_page %}
           <li class="previous">
-            <a href="{{ paginator.first_page_path | prepend: site.baseurl | replace: '//', '/' }}">
+            <a href="{{ paginator.first_page_path | prepend: site.baseurl | replace: "//", "/" }}">
               First
             </a>
           </li>
@@ -85,7 +85,7 @@ layout: default
 
       {% if paginator.previous_page %}
         <li class="previous">
-          <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">
+          <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: "//", "/" }}">
             &larr; Newer Posts
           </a>
         </li>
@@ -94,7 +94,7 @@ layout: default
       {% if paginator.page_trail %}
         {% for trail in paginator.page_trail %}
           <li {% if page.url == trail.path %}class="selected"{% endif %}>
-            <a href="{{ trail.path | prepend: site.baseurl | replace: '//', '/' }}" title="{{trail.title}}">
+            <a href="{{ trail.path | prepend: site.baseurl | replace: "//", "/" }}" title="{{trail.title}}">
               {{ trail.num }}
             </a>
           </li>
@@ -103,7 +103,7 @@ layout: default
 
       {% if paginator.next_page %}
         <li class="next">
-          <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">
+          <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: "//", "/" }}">
             Older Posts &rarr;
           </a>
         </li>
@@ -111,7 +111,7 @@ layout: default
 
       {% if paginator.last_page %}
         <li class="previous">
-          <a href="{{ paginator.last_page_path | prepend: site.baseurl | replace: '//', '/' }}">
+          <a href="{{ paginator.last_page_path | prepend: site.baseurl | replace: "//", "" }}">
             Last
           </a>
         </li>
