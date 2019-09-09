@@ -198,8 +198,6 @@ layout: default # the layout HTML to use
 title: Page 1 # the title of this page
 order: 3 # the number of this page in the navigation bar (you're essentially setting what order the navigation bar's pages should be in)
 permalink: /page/1 # the static permalink that this page should have
-pagination: # this is for the pagination gem (see more on pagination: https://github.com/sverrirs/jekyll-paginate-v2)
-  enabled: true
 ---
 ```
 
