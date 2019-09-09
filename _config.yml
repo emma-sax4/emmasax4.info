@@ -39,19 +39,3 @@ collections:
   thoughts:
     output: true
     permalink: /thought/:path
-
-# autopages:
-#   enabled: true
-#   collections:
-#     enabled: true
-#     permalink: /thoughts
-
-# pagination:
-#   enabled: true
-#   per_page: 3
-#   sort_field: date
-#   sort_reverse: true
-#   permalink: /:num
-#   trail:
-#     before: 2
-#     after: 2
