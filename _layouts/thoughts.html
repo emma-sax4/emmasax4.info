@@ -8,9 +8,9 @@ layout: default
   .selected{ background-color: magenta; }
 </style> -->
 
-{% unless page.category == "all" %}
+{% unless page.tag == "all" %}
   <div class="row" style="display: flex">
-    {% include thoughts_buttons.html %}
+    {% include thoughts_sidebar.html %}
 
     <div class="column" align="left" style="flex: 45%; padding-top: 0%">
 {% endunless %}
@@ -24,13 +24,13 @@ layout: default
 <ul>
   {% for thought in thoughts %}
     <!--
-      Only show the thoughts that are in the same category that we're searching for and don't consider
+      Only show the thoughts that are in the same tag that we're searching for and don't consider
       this page a thought itself (this page is a list of thoughts)
     -->
-    {% if thought.categories contains page.category and thought.url != page.url %}
+    {% if thought.tags contains page.tag and thought.url != page.url %}
       {% assign thought_url = thought.url | replace: ".html", "" | relative_url %}
       {% if thought.subtitle %}
-        {% if page.category == "all" %}
+        {% if page.tag == "all" %}
           {% assign short_title = thought.title | append: " ☞ " | append: thought.subtitle %}
         {% else %}
           {% assign short_title = thought.subtitle %}
@@ -40,18 +40,24 @@ layout: default
       {% endif %}
 
       {% if thought.draft == true %}
-        <span class="thought-meta">Unpublished</span>
+        <span class="thought-meta">
+          Unpublished
+        </span>
       {% else %}
-        <span class="thought-meta">{{ thought.date | date: "%B %-d, %Y" }}</span>
+        <span class="thought-meta">
+          {{ thought.date | date: "%B %-d, %Y" }}
+        </span>
       {% endif %}
       <br>
       <a href="{{ site.baseurl }}{{ thought_url }}">{{ short_title }}</a>
+      {% assign main_tags = thought.tags | shift %}
+      {% include tags_list.html %}
       <br><br>
     {% endif %}
   {% endfor %}
 </ul>
 
-{% unless page.category == "all" %}
+{% unless page.tag == "all" %}
     </div>
   </div>
 {% endunless %}

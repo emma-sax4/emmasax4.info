@@ -3,7 +3,7 @@ layout: thought
 title: Welcome to Kenya
 subtitle: "Part 1: Jambo!"
 date: 2019-09-08
-categories: [ all, welcome_to_kenya ]
+tags: [ all, welcome_to_kenya ]
 ---
 
 I like to consider myself a world traveler. I'm not going to pretend I don't like home; coming home after a long, and sometimes uncomfortable trip, can be super relaxing. Sleeping in my own bed, taking a warm shower, changing my clothes, eating familiar foods, etc, is sometimes _exactly_ what I need. But, I also love to go to different places around the world.
