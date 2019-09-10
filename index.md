@@ -11,7 +11,7 @@ Check out my newest feature... my own blog! Find it in the _Thoughts_ tab above 
 <br>
 ... or right here because I'm nice and I'll just give you a link:
 <div align="center">
-  <a href="/thoughts/" class="myButton">
+  <a href="/thoughts" class="myButton">
     Thoughts!
   </a>
 </div>
