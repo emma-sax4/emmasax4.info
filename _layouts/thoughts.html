@@ -42,7 +42,7 @@ layout: default
           {% endif %}
 
           <br>
-          <td class="thought"><a href="{{ site.baseurl }}{{ thought_url }}">{{ short_title }}</a></td>
+          <a href="{{ site.baseurl }}{{ thought_url }}">{{ short_title }}</a>
           {% assign main_tags = thought.tags | shift | sort %}
           {% include tags_list.html %}
         </li>
