@@ -15,7 +15,7 @@
 # in the templates via {{ site.myvariable }}.
 title: Emma Sax's Homepage
 repository: emma-sax4.github.io
-description: Emma Sax's personal website.
+description: Emma Sax's personal website and blog.
 github_username: emma-sax4
 email: emma.sax4@gmail.com
 url: https://emma-sax4.github.io
@@ -41,4 +41,4 @@ relative_links:
 collections:
   thoughts:
     output: true
-    permalink: /thought/:path
+    permalink: /thoughts/:path
