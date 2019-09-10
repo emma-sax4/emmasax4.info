@@ -1,5 +1,6 @@
 ---
 ---
+@import "core/index.scss";
 
 * {
   box-sizing: border-box;
@@ -70,30 +71,26 @@ a:hover {
   margin: 0 !important;
   padding: 0 !important;
   width: 100%;
-
-  //@extend .subnav-flush;
-
-  .page {
-    //@extend .subnav-item;
-
+​​
+  .page {​
     &:first-child {
       border-top-left-radius: 0px;
       border-bottom-left-radius: 0px;
     }
-
+​
     &:last-child {
       border-top-right-radius: 0px;
       border-bottom-right-radius: 0px;
     }
   }
   .active .page {
-    @extend .selected !optional;
-    @extend .current !optional;
+    @extend .selected;
+    @extend .current;
   }
   .disabled .page {
-    @extend .gap !optional;
+    @extend .gap;
   }
-
+​
   li {
     margin: 0 !important;
     padding: 0;
@@ -101,15 +98,15 @@ a:hover {
       .page {
         margin-left: -1px;
       }
-      //margin-left: -1px;
     }
+
     &:first-child {
       .page {
         border-top-left-radius: 3px;
         border-bottom-left-radius: 3px;
       }
     }
-
+​
     &:last-child {
       .page {
         border-top-right-radius: 3px;
