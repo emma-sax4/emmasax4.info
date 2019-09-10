@@ -1,7 +1,6 @@
 ---
 layout: thought
 title: My First Thought
-date: 2019-09-06
 tags: [ all, tech ]
 ---
 

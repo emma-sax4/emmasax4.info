@@ -1,7 +1,6 @@
 ---
 layout: thought
 title: Switching to Jekyll
-date: 2019-09-09
 tags: [ all, tech, jekyll ]
 ---
 
