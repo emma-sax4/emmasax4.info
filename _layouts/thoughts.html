@@ -15,44 +15,65 @@ layout: default
 {% assign published_thoughts = site.thoughts | sort:"date" | reverse %}
 {% assign thoughts = draft_thoughts | concat: published_thoughts %}
 
-<ul>
-  {% for thought in thoughts %}
-    <!--
-      Only show the thoughts that have the same tag as the page we're on. Don't consider
-      this page a thought itself (this page is a list of thoughts).
-    -->
-    {% if thought.tags contains page.tag and thought.url != page.url %}
-      {% assign thought_url = thought.url | replace: ".html", "" | relative_url %}
-      {% if thought.subtitle %}
-        {% if page.tag == "all" %}
-          {% assign short_title = thought.title | append: " ☞ " | append: thought.subtitle %}
-        {% else %}
-          {% assign short_title = thought.subtitle %}
-        {% endif %}
-      {% else %}
-        {% assign short_title = thought.title %}
-      {% endif %}
+<div id="thoughts">
+  <ul class="list" style="list-style: none">
+    {% for thought in thoughts %}
+      {% if thought.tags contains page.tag and thought.url != page.url %}
+        <li>
+          {% assign thought_url = thought.url | replace: ".html", "" | relative_url %}
+          {% if thought.subtitle %}
+            {% if page.tag == "all" %}
+              {% assign short_title = thought.title | append: " ☞ " | append: thought.subtitle %}
+            {% else %}
+              {% assign short_title = thought.subtitle %}
+            {% endif %}
+          {% else %}
+            {% assign short_title = thought.title %}
+          {% endif %}
 
-      {% if thought.draft == true %}
-        <span class="thought-meta">
-          Unpublished
-        </span>
-      {% else %}
-        <span class="thought-meta">
-          {{ thought.date | date: "%B %-d, %Y" }}
-        </span>
-      {% endif %}
+          {% if thought.draft == true %}
+            <span class="thought-meta">
+              Unpublished
+            </span>
+          {% else %}
+            <span class="thought-meta">
+              {{ thought.date | date: "%B %-d, %Y" }}
+            </span>
+          {% endif %}
 
-      <br>
-      <a href="{{ site.baseurl }}{{ thought_url }}">{{ short_title }}</a>
-      {% assign main_tags = thought.tags | shift | sort %}
-      {% include tags_list.html %}
-      <br><br>
-    {% endif %}
-  {% endfor %}
-</ul>
+          <br>
+          <td class="thought"><a href="{{ site.baseurl }}{{ thought.url }}">{{ thought.title }}</a></td>
+          {% assign main_tags = thought.tags | shift | sort %}
+          {% include tags_list.html %}
+        </li>
+        <br>
+      {% endif %}
+    {% endfor %}
+  </ul>
+
+  <nav class="paginate-container" aria-label="Pagination">
+    <ul class="pagination"></ul>
+  </nav>
+</div>
 
 {% unless page.tag == "all" %}
     </div>
   </div>
 {% endunless %}
+
+<script type="text/javascript">
+  document.getElementById("thoughts").style.display = "none";
+
+  var options = {
+    valueNames: [ 'thought' ],
+    page: 10,
+    pagination: {
+      outerWindow: 3,
+      innerWindow: 3
+    }
+  };
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js";
+onload="var thoughtList = new List('thoughts', options); document.getElementById('thoughts').style.display = 'block';">
+</script>

@@ -71,7 +71,11 @@ a:hover {
   padding: 0 !important;
   width: 100%;
 
+  //@extend .subnav-flush;
+
   .page {
+    //@extend .subnav-item;
+
     &:first-child {
       border-top-left-radius: 0px;
       border-bottom-left-radius: 0px;
@@ -82,17 +86,23 @@ a:hover {
       border-bottom-right-radius: 0px;
     }
   }
+  .active .page {
+    @extend .selected !optional;
+    @extend .current !optional;
+  }
+  .disabled .page {
+    @extend .gap !optional;
+  }
 
   li {
     margin: 0 !important;
     padding: 0;
-
     +li {
       .page {
         margin-left: -1px;
       }
+      //margin-left: -1px;
     }
-
     &:first-child {
       .page {
         border-top-left-radius: 3px;
@@ -106,7 +116,7 @@ a:hover {
         border-bottom-right-radius: 3px;
       }
     }
- }
+  }
 }
 
 /**************************************** GENERIC BUTTON ********************************/
@@ -224,12 +234,6 @@ a:hover {
   }
 }
 
-@media screen and (min-width: 42em) and (max-width: 64em) {
-  .title {
-    padding: 3rem 4rem;
-  }
-}
-
 @media screen and (max-width: 42em) {
   .title {
     padding: 2rem 1rem;
@@ -240,31 +244,6 @@ a:hover {
   .project-name {
     font-size: 3.25rem; } }
 
-@media screen and (min-width: 42em) and (max-width: 64em) {
-  .project-name {
-    font-size: 2.25rem; } }
-
-@media screen and (max-width: 42em) {
-  .project-name {
-    font-size: 1.75rem; } }
-
-@media screen and (min-width: 64em) {
-  .project-tagline {
-    font-size: 1.25rem;
-  }
-}
-
-@media screen and (min-width: 42em) and (max-width: 64em) {
-  .project-tagline {
-    font-size: 1.15rem;
-  }
-}
-
-@media screen and (max-width: 42em) {
-  .project-tagline {
-    font-size: 1rem;
-  }
-}
 
 @media screen and (min-width: 64em) {
   .main-content {
@@ -272,20 +251,6 @@ a:hover {
     padding: 2rem 6rem;
     margin: 0 auto;
     font-size: 1.1rem;
-  }
-}
-
-@media screen and (min-width: 42em) and (max-width: 64em) {
-  .main-content {
-    padding: 2rem 4rem;
-    font-size: 1.1rem;
-  }
-}
-
-@media screen and (max-width: 42em) {
-  .main-content {
-    padding: 2rem 1rem;
-    font-size: 1rem;
   }
 }
 
