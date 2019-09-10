@@ -16,3 +16,5 @@ Of course, I started with the things I know how to do best: copy-paste 💁🏻�
 <div align="center">
   <img src="/resources/pictures/thoughts/bad_pagination_bar.png" alt="Badly formatted pagination bar">
 </div>
+
+So, I went on a mission to figure out how to make a prettier pagination bar. After a couple of hours—and a good night's sleep—I realized that the answer lies in the `css/main.scss` file. Specifically, [this line](https://github.com/emma-sax4/emma-sax4.github.io/blob/master/css/main.scss#L3).
