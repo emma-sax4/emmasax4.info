@@ -161,7 +161,6 @@ So, for a generic thought, the front matter could look like this:
 ---
 layout: thought
 title: Thought 1
-date: 2001-01-01
 tags: [ all, tag_name ]
 ---
 ```
@@ -172,7 +171,6 @@ For thoughts that aren't only related, but are part of an entire set, each thoug
 layout: thought
 title: Thoughts Set
 subtitle: Set Thought 1
-date: 2001-01-01
 tags: [ all, thoughts_set ]
 ---
 ```
