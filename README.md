@@ -50,6 +50,10 @@ GitHub automatically deploys each commit to master branch. A full deploy only ta
 ├── _layouts
 |   ├── layout-01.html
 |   └── layout-02.html
+├── _sass
+|   └── syntax.scss
+├── _site
+|   └── <other stuff we don't need to touch>
 ├── _thoughts
 |   ├── thoughts-set
 |   |   ├── 2001-01-01-set-thought-01.md
@@ -60,6 +64,8 @@ GitHub automatically deploys each commit to master branch. A full deploy only ta
 |   └── tag_name.md
 ├── css
 |   └── main.scss
+├── primer
+|   └── <other stuff we don't need to touch>
 ├── resources
 |   ├── favicons
 |   |   └── favicon.ico
@@ -71,7 +77,6 @@ GitHub automatically deploys each commit to master branch. A full deploy only ta
 |   |   └── picture-02.jpg
 |   ├── resource-01.pdf
 |   └── resource-02.pdf
-├── _site
 ├── page-01.md
 ├── page-02.md
 └── index.md
@@ -129,6 +134,12 @@ permalink: /page/1
 ---
 ```
 
+### `_sass/`
+This directory contains the `syntax.scss` file that goes with primer and the `main.scss`. There's no need to mess with this.
+
+### `_site/`
+This directory should only exist on your local machine... otherwise it's in the `.gitignore`. This is auto-generated when a user runs `jekyll build` or `jekyll serve` on their local machine. This directory is what compiles all of the Markdown, liquid, and HTML files into plain, static HTML to show to the world on a browser. While developing locally, if you need to do a hard-restart on your Jekyll server, feel free to stop the local server process, `rm -rf` this directory, and then try again.
+
 ### `_thoughts/`
 This is the collection of "thoughts" that I've had ("thought"/"thoughts" are the very non-creative terms I've come up with instead of using "post"/"blog"). Most of the thoughts can just go into the directory, written as Markdown files.
 
@@ -175,6 +186,13 @@ This directory only has one file — `main.scss`. This is where I can keep _all_
 ```
 Without these lines, none of the CSS or fonts would show up as expected.
 
+### `primer/`
+This is a submodule to [primer/css](https://github.com/primer/css/tree/6a8733ea0f3c079fe4a37c1828297d8f661ccee8) at a certain commit. This is necessary to get the pagination working. Without having this submodule initialized, running this repository locally will not work. To initialize after cloning, please run:
+```
+git submodule update --init --recursive
+```
+and make sure it's on commit `6a8733ea0f3c079fe4a37c1828297d8f661ccee8`. Once things are initialized, there should be no need to be committing to this directory.
+
 ### `resources/`
 This directory gives me a place to store handy items, such as my resume(s), pictures, logos, past slides from tech talks, etc. By putting them all into one directory (that's nested as necessary), it provides some organization to the repository. To call a specific resource, you can either ask for it in HTML:
 ```
@@ -187,9 +205,6 @@ Or you can put a link to it in Markdown:
 ```
 This is an example sentence, so the link will throw a 404. See this in action [here](/resources/resource-01.pdf).
 ```
-
-### `_site/`
-This directory should only exist on your local machine... otherwise it's in the `.gitignore`. This is auto-generated when a user runs `jekyll build` or `jekyll serve` on their local machine. This directory is what compiles all of the Markdown, liquid, and HTML files into plain, static HTML to show to the world on a browser. While developing locally, if you need to do a hard-restart on your Jekyll server, feel free to stop the local server process, `rm -rf` this directory, and then try again.
 
 ### Any Markdown or HTML file
 This is the first page that a user will see when they navigate to the main URL of this site. It's written in Markdown, but Jekyll and liquid will use the Markdown content to make an HTML file. The front matter of any Markdown/HTML file specifies the settings of the page:
