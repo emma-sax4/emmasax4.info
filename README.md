@@ -40,7 +40,6 @@ GitHub automatically deploys each commit to master branch. A full deploy only ta
 ## Structure of this Project
 ```
 .
-├── _config.yml
 ├── _drafts
 |   ├── thought-draft.md
 |   └── set-thought-draft.md
@@ -50,8 +49,6 @@ GitHub automatically deploys each commit to master branch. A full deploy only ta
 ├── _layouts
 |   ├── layout-01.html
 |   └── layout-02.html
-├── _sass
-|   └── syntax.scss
 ├── _site
 |   └── <other stuff we don't need to touch>
 ├── _thoughts
@@ -77,15 +74,13 @@ GitHub automatically deploys each commit to master branch. A full deploy only ta
 |   |   └── picture-02.jpg
 |   ├── resource-01.pdf
 |   └── resource-02.pdf
+├── _config.yml
 ├── page-01.md
 ├── page-02.md
 └── index.md
 ```
 
 Let's go through what each section does, from the top.
-
-### `_config.yml`
-This is where we tell Jekyll all of the configurations for this project. It's written in YAML format.
 
 ### `_drafts/`
 This is where we can place all of the thoughts that we're not ready to publish yet. There's no need to put any thoughts into subdirectories in here, usually there's only a few drafts at a time, so it's not a big deal to leave them in the base directory. The front matter of a draft should look something like this for a generic draft:
@@ -133,9 +128,6 @@ title: Page 1
 permalink: /page/1
 ---
 ```
-
-### `_sass/`
-This directory contains the `syntax.scss` file that goes with primer and the `main.scss`. There's no need to mess with this.
 
 ### `_site/`
 This directory should only exist on your local machine... otherwise it's in the `.gitignore`. This is auto-generated when a user runs `jekyll build` or `jekyll serve` on their local machine. This directory is what compiles all of the Markdown, liquid, and HTML files into plain, static HTML to show to the world on a browser. While developing locally, if you need to do a hard-restart on your Jekyll server, feel free to stop the local server process, `rm -rf` this directory, and then try again.
@@ -203,6 +195,9 @@ Or you can put a link to it in Markdown:
 ```
 This is an example sentence, so the link will throw a 404. See this in action [here](/resources/resource-01.pdf).
 ```
+
+### `_config.yml`
+This is where we tell Jekyll all of the configurations for this project. Each time this file is changed, restart your local Jekyll server to get the new changes.
 
 ### Any Markdown or HTML file
 This is the first page that a user will see when they navigate to the main URL of this site. It's written in Markdown, but Jekyll and liquid will use the Markdown content to make an HTML file. The front matter of any Markdown/HTML file specifies the settings of the page:
