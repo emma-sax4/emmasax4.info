@@ -104,7 +104,7 @@ draft: true
 ---
 ```
 
-When we're ready for a draft to be published, move it into the appropriate `_thoughts/` directory, add in the date into the name of the file, add in the `date` front matter, and remove the `draft: true` matter. The date should always be a part of the thought in `YYYY-MM-DD` format.
+When a draft is ready to be published, move it into the appropriate `_thoughts/` directory, add the date into the name of the file (in `YYYY-MM-DD` format), and remove the `draft: true` front matter.
 
 Drafts can only be seen when working locally (that's the point of a draft!). So, to run this project to see drafts, add the `--drafts` flag:
 ```
