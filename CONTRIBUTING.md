@@ -10,3 +10,8 @@ To contribute, please follow this step-by-step process:
 7. When you're satisfied, make a pull request to this repository
 8. If I don't comment or start looking at the pull request in a couple of days, feel free to send me [an email](mailto:emma.sax4@gmail.com)
 9. I approve your pull request and merge!
+
+NOTE: This repository has a submodule in it. Therefore, when you clone this repository to your local machine, you'll need to initialize the submodule:
+```
+git submodule update --init --recursive
+```
