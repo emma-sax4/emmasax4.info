@@ -24,12 +24,15 @@ future: true
 markdown: kramdown
 show_drafts: false
 
+sass:
+  style: compressed
+  load_paths:
+    - primer/src/
+
 exclude:
   - Gemfile
   - Gemfile.lock
-
-plugins:
-  - jekyll-paginate-v2
+  - primer/
 
 relative_links:
   enabled: true
