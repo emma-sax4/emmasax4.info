@@ -11,16 +11,8 @@ layout: default
 
 {{ content }}
 
-{% assign draft_thoughts = site.posts %}
-{% assign published_thoughts = site.thoughts | sort:"date" | reverse %}
-{% assign thoughts = draft_thoughts | concat: published_thoughts %}
-
 <ul>
-  {% for thought in thoughts %}
-    <!--
-      Only show the thoughts that have the same tag as the page we're on. Don't consider
-      this page a thought itself (this page is a list of thoughts).
-    -->
+  {% for thought in site.posts %}
     {% if thought.tags contains page.tag and thought.url != page.url %}
       {% assign thought_url = thought.url | replace: ".html", "" | relative_url %}
       {% if thought.subtitle %}
