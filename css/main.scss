@@ -1,5 +1,12 @@
 ---
 ---
+@import "core/index.scss";
+@import "syntax.scss";
+@import "markdown/index.scss";
+@import "labels/index.scss";
+@import "blankslate/index.scss";
+@import "alerts/index.scss";
+@import "branch-name/index.scss";
 
 * {
   box-sizing: border-box;
@@ -70,23 +77,29 @@ a:hover {
   margin: 0 !important;
   padding: 0 !important;
   width: 100%;
-
-  .page {
+​​
+  .page {​
     &:first-child {
       border-top-left-radius: 0px;
       border-bottom-left-radius: 0px;
     }
-
+​
     &:last-child {
       border-top-right-radius: 0px;
       border-bottom-right-radius: 0px;
     }
   }
-
+  .active .page {
+    @extend .selected;
+    @extend .current;
+  }
+  .disabled .page {
+    @extend .gap;
+  }
+​
   li {
     margin: 0 !important;
     padding: 0;
-
     +li {
       .page {
         margin-left: -1px;
@@ -99,7 +112,7 @@ a:hover {
         border-bottom-left-radius: 3px;
       }
     }
-
+​
     &:last-child {
       .page {
         border-top-right-radius: 3px;
