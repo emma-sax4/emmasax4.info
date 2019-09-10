@@ -4,7 +4,7 @@ title: Switching to Jekyll
 tags: [ all, tech, jekyll ]
 ---
 
-A few days ago, I published another thought (read it [here](/thought/my-first-thought)), in which I stated that although I wanted to originally try to use Jekyll more, I gave up, instead favoring raw HTML files, hard-coding the headers and links.
+A few days ago, I published another thought (read it [here](/thoughts/all/2019-09-06-my-first-thought)), in which I stated that although I wanted to originally try to use Jekyll more, I gave up, instead favoring raw HTML files, hard-coding the headers and links.
 
 After reflecting on this decision (after publishing that thought of course), I changed my mind. I don't want to consider myself a giver-upper, and I certainly don't want to shy away from learning new coding frameworks, all because I don't want to spend a few more hours in front of the computer 💻. In fact, in the long run, utilizing Jekyll on this site will actually _save_ me time (and code) as I continue to add more thoughts and content to the site. However, if I'm completely honest, the biggest thing that made me want to switch to Jekyll was the ugly pagination that would have to be hard-coded and change frequently as more thoughts were added to the site. By switching to be Jekyll-based, this could be avoided.
 
