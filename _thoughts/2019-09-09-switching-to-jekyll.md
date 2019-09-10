@@ -26,7 +26,7 @@ The only big hiccup I found while implementing the drafts is that Jekyll conside
 {﹪ assign published = site.thoughts ﹪}
 {﹪ assign all_thoughts = drafts | concat: published ﹪}
 ```
-
+<br>
 And then also, there's a `show_drafts: false` line to add to the `_config.yml`, which all of the official documentation fails to mention. They talk about running the local server with the `--drafts` flag, but don't talk about changing the config file. So, it took me quite a bit of googling until I could fit together all of those puzzle pieces 🧩.
 
 Hours of work later—I'm writing this Sunday night, and I started switching to Jekyll on Friday—I finally have a Jekyll-based site that's hosted fully on GitHub pages. I stayed up until 2am Friday night, and 5am Saturday night, prepping this. The main before-and-after content pages look _super_ similar, which is the point. The biggest difference is the thoughts page, which is now set up for success in the future, even if it isn't too different right now.
