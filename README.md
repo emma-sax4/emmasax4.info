@@ -52,12 +52,13 @@ GitHub automatically deploys each commit to master branch. A full deploy only ta
 ├── _site
 |   └── <other stuff we don't need to touch>
 ├── _thoughts
+|   ├── all
+|   |   ├── 2001-01-01-thought-01.md
+|   |   └── 2001-01-02-thought-02.md
 |   ├── thoughts-set
 |   |   ├── 2001-01-01-set-thought-01.md
-|   |   ├── 2001-01-01-set-thought-02.md
+|   |   ├── 2001-01-02-set-thought-02.md
 |   |   └── thoughts_set.md
-|   ├── 2001-01-01-thought-01.md
-|   ├── 2001-01-01-thought-02.md
 |   └── tag_name.md
 ├── css
 |   └── main.scss
@@ -125,7 +126,7 @@ HTML files in this directory are for the skeletons of a specific page. The `defa
 ---
 layout: default
 title: Page 1
-permalink: /page/1
+permalink: /page-1
 ---
 ```
 
@@ -133,22 +134,10 @@ permalink: /page/1
 This directory should only exist on your local machine... otherwise it's in the `.gitignore`. This is auto-generated when a user runs `jekyll build` or `jekyll serve` on their local machine. This directory is what compiles all of the Markdown, liquid, and HTML files into plain, static HTML to show to the world on a browser. While developing locally, if you need to do a hard-restart on your Jekyll server, feel free to stop the local server process, `rm -rf` this directory, and then try again.
 
 ### `_thoughts/`
-This is the collection of "thoughts" that I've had ("thought"/"thoughts" are the very non-creative terms I've come up with instead of using "post"/"blog"). Most of the thoughts can just go into the directory, written as Markdown files.
+This is the collection of "thoughts" that I've had ("thought"/"thoughts" are the very non-creative terms I've come up with instead of using "post"/"blog").
 
-If I'm going to write a set of thoughts that all have a common theme, they can go into a nested directory inside `_thoughts/`. If that's the case, then there should also be a Markdown file titled `<set-name>.md` inside that inner directory, which would serve as a table of contents for the thoughts in that set.
-```
----
-layout: thoughts
-title: Thoughts Set
-permalink: /thoughts/thoughts-set
-tag: thoughts_set
----
-```
-The `tag` will be what Jekyll will use to filter out which thoughts to show on each given lists page.
-
-We can also make thoughts that aren't part of any special physical file location (what I've been calling a set), but we still want them to all be tagged similarly. In that case, the relation (below called `tag_name`) just needs a file called `tag-name.md`, even if the thought itself doesn't sit inside a `tag_name/` directory.
-
-So, for a generic thought, the front matter could look like this:
+#### Thoughts without a Set
+Most of the thoughts can just go into the `_thoughts/all/` directory, written as Markdown files. For a generic thought, the front matter could look like this:
 ```
 ---
 layout: thought
@@ -157,7 +146,33 @@ tags: [ all, tag_name ]
 ---
 ```
 
-For thoughts that aren't only related, but are part of an entire set, each thought should sit inside the set/relation directory, and should make use of the `title` and `subtitle` metadata:
+Let's talk about the `tags`. The tags determine how we want to categorize each thought. Each thought should automatically have the `all` tag. But, if you think the thought is a good contestant for a different tag, such as `tag_name` in our example, then add that **after** the `all` tag in the list.
+
+For every tag (except the ones associated with sets and `all`), there needs to be a `<tag-name>.md` file in the `_thoughts/` directory. The general file for this should look like this:
+```
+---
+layout: thoughts
+title: Tag Name
+permalink: /thoughts/tag-name
+tag: tag_name
+---
+
+<h1>{{ page.title }}</h1>
+```
+
+#### Thoughts in a Set
+If I'm going to write a set of thoughts that all have a common theme, they can go into a new nested directory: `_thoughts/<set-name>/`. If that's the case, then there should also be a Markdown file titled `<set-name>.md` inside that inner directory, which would serve as a table of contents for the thoughts in that set. Here's the example front matter for that Markdown file:
+```
+---
+layout: thoughts
+title: Thoughts Set
+permalink: /thoughts/thoughts-set
+tag: thoughts_set
+---
+```
+The `tag` will be what Jekyll will use to filter out which thoughts to show on each given lists page. This should be the same as the set name but with underscores. The permalink should have the name of the set, but with dashes.
+
+Each individual thought should sit inside the `_thoughts/<set-name>/` directory, and should make use of the `title` and `subtitle` metadata, where the `title` is the name of the set, and the `subtitle` is the title of that specific thought:
 ```
 ---
 layout: thought
@@ -166,7 +181,6 @@ subtitle: Set Thought 1
 tags: [ all, thoughts_set ]
 ---
 ```
-This indicates the date that the thought was published, the subtitle if the thought is in a set, the chosen layout to use, and the tag(s) indicating how to categorize this thought. We do this so that the `index.md` files don't show up as their own thoughts (since they're technically a list of thoughts).
 
 ### `css/`
 This directory only has one file — `main.scss`. This is where I can keep _all_ of the CSS that this project uses. To make sure it's all being used, there are two very important lines in the `_includes/head.html`:
@@ -205,8 +219,8 @@ This is the first page that a user will see when they navigate to the main URL o
 ---
 layout: default # the layout HTML to use
 title: Page 1 # the title of this page
-order: 3 # the number of this page in the navigation bar (you're essentially setting what order the navigation bar's pages should be in)
-permalink: /page/1 # the static permalink that this page should have
+order: 3 # the order of this page in the navigation bar
+permalink: /page-1 # the static permalink that this page should have
 ---
 ```
 
