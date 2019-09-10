@@ -42,7 +42,7 @@ layout: default
           {% endif %}
 
           <br>
-          <td class="thought"><a href="{{ site.baseurl }}{{ thought.url }}">{{ thought.title }}</a></td>
+          <td class="thought"><a href="{{ site.baseurl }}{{ thought_url }}">{{ short_title }}</a></td>
           {% assign main_tags = thought.tags | shift | sort %}
           {% include tags_list.html %}
         </li>
@@ -52,7 +52,7 @@ layout: default
   </ul>
 
   <nav class="paginate-container" aria-label="Pagination">
-    <ul class="pagination"></ul>
+    <ul class="pagination"></ul> <!--Why is my pagination bar just numbers, and not pretty? -->
   </nav>
 </div>
 
@@ -66,14 +66,13 @@ layout: default
 
   var options = {
     valueNames: [ 'thought' ],
-    page: 10,
+    page: 10, // Why does this only show five items locally? If I add more <br> into the HTML, then it'll show even less items on each page...
     pagination: {
-      outerWindow: 3,
-      innerWindow: 3
+      outerWindow: 1,
+      innerWindow: 2
     }
   };
 </script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js";
-onload="var thoughtList = new List('thoughts', options); document.getElementById('thoughts').style.display = 'block';">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js" integrity="sha256-YqOIp4MygNx9/lcWr5lpcR88Ki/MNMWvJJkH0eK+fHM=" crossorigin="anonymous" onload="var thoughtList = new List('thoughts', options); document.getElementById('thoughts').style.display = 'block';">
 </script>
