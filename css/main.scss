@@ -1,6 +1,12 @@
 ---
 ---
 @import "core/index.scss";
+@import "syntax.scss";
+@import "markdown/index.scss";
+@import "labels/index.scss";
+@import "blankslate/index.scss";
+@import "alerts/index.scss";
+@import "branch-name/index.scss";
 
 * {
   box-sizing: border-box;
