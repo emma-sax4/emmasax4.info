@@ -7,5 +7,3 @@ tag: all
 ---
 
 <h1>What do I think about?</h1>
-
-Here's some of the "blog posts" I've written so far:
