@@ -28,9 +28,6 @@ exclude:
   - Gemfile
   - Gemfile.lock
 
-plugins:
-  - jekyll-paginate-v2
-
 relative_links:
   enabled: true
   collections: true
