@@ -4,11 +4,13 @@
 * {
   box-sizing: border-box;
 }
+
 html, body {
   min-height: 100vh;
   flex-direction: column;
   position: relative;
 }
+
 body {
   padding: 0;
   margin: 0;
@@ -18,6 +20,7 @@ body {
   line-height: 1.5;
   color: #606c71;
 }
+
 a {
   color: #1e6bb8;
   text-decoration: none;
@@ -25,13 +28,16 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
 /********************** NAVIGATION BAR **********************/
+
 /* Add a black background color to the top navigation */
 .topnav {
   color: #fff;
   text-align: center;
   background-color: #A7A3A3;
   overflow: hidden;
+
   a {
     display: inline-block;
     color: #f2f2f2;
@@ -39,33 +45,42 @@ a:hover {
     padding: 14px 28px;
     text-decoration: none;
     font-size: 17px;
+
     &:hover {
       background-color: #6EBBC8;
       color: black;
     }
   }
+
   a.active {
     background-color: #409ED4;
     color: white;
   }
 }
+
 /**************************************** PAGINATION ********************************/
+
 .paginate-container {
   margin-top: 0;
   margin-bottom: 0;
 }
+
 .pagination {
   list-style-type: none;
   margin: 0 !important;
   padding: 0 !important;
   width: 100%;
+
   //@extend .subnav-flush;
+
   .page {
     //@extend .subnav-item;
+
     &:first-child {
       border-top-left-radius: 0px;
       border-bottom-left-radius: 0px;
     }
+
     &:last-child {
       border-top-right-radius: 0px;
       border-bottom-right-radius: 0px;
@@ -78,6 +93,7 @@ a:hover {
   .disabled .page {
     @extend .gap !optional;
   }
+
   li {
     margin: 0 !important;
     padding: 0;
@@ -93,6 +109,7 @@ a:hover {
         border-bottom-left-radius: 3px;
       }
     }
+
     &:last-child {
       .page {
         border-top-right-radius: 3px;
@@ -101,7 +118,9 @@ a:hover {
     }
   }
 }
+
 /**************************************** GENERIC BUTTON ********************************/
+
 .btn {
   display: inline-block;
   margin-bottom: 1rem;
@@ -113,19 +132,24 @@ a:hover {
   border-radius: 0.3rem;
   transition: color 0.2s, background-color 0.2s, border-color 0.2s;
 }
+
 .btn + .btn {
   margin-left: 1rem;
 }
+
 .btn:hover {
   color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
   background-color: rgba(255, 255, 255, 0.2);
   border-color: rgba(255, 255, 255, 0.3);
 }
+
 .wrapper {
   text-align: center;
 }
+
 /*********************************** CUSTOM BUTTON ************************/
+
 .myButton {
   -moz-box-shadow: 0px 10px 14px -7px #409ED4;
   -webkit-box-shadow: 0px 10px 14px -7px #409ED4;
@@ -152,6 +176,7 @@ a:hover {
   text-decoration: none;
   text-shadow: 0px 1px 0px #3d768a;
 }
+
 .myButton:hover {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #408c99), color-stop(1, #599bb3));
   background: -moz-linear-gradient(top, #408c99 5%, #599bb3 100%);
@@ -163,75 +188,94 @@ a:hover {
   background-color: #3A8592;
   text-decoration: none;
 }
+
 .myButton:active {
   position:relative;
   top:1px;
 }
+
 /********************** HEADER **********************/
+
 .project-name {
   margin-top: 0;
   margin-bottom: 0.1rem;
 }
+
 .title {
   color: white;
   text-align: center;
   background-color: #159957;
   background-image: linear-gradient(120deg, #2299BD, #1CB942);
 }
+
 /********************** RESPONSIVE CONTAINERS **********************/
+
 .container {
   width: auto;
   max-width: 1020px;
   padding-left: 15px;
   padding-right: 15px;
 }
+
 .markdown-body {
   overflow: visible;
 }
+
 /********************** PRESET FORMATTING **********************/
+
 .thought-meta {
   font-size: 15px;
   color: grey;
 }
+
 @media screen and (min-width: 64em) {
   .title {
     padding: 5rem 6rem;
   }
 }
+
 @media screen and (min-width: 42em) and (max-width: 64em) {
   .title {
     padding: 3rem 4rem;
   }
 }
+
 @media screen and (max-width: 42em) {
   .title {
     padding: 2rem 1rem;
   }
 }
+
 @media screen and (min-width: 64em) {
   .project-name {
     font-size: 3.25rem; } }
+
 @media screen and (min-width: 42em) and (max-width: 64em) {
   .project-name {
     font-size: 2.25rem; } }
+
 @media screen and (max-width: 42em) {
   .project-name {
     font-size: 1.75rem; } }
+
 @media screen and (min-width: 64em) {
   .project-tagline {
     font-size: 1.25rem;
   }
 }
+
 @media screen and (min-width: 42em) and (max-width: 64em) {
   .project-tagline {
     font-size: 1.15rem;
   }
 }
+
 @media screen and (max-width: 42em) {
   .project-tagline {
     font-size: 1rem;
   }
 }
+
 @media screen and (min-width: 64em) {
   .main-content {
     max-width: 64rem;
@@ -240,24 +284,29 @@ a:hover {
     font-size: 1.1rem;
   }
 }
+
 @media screen and (min-width: 42em) and (max-width: 64em) {
   .main-content {
     padding: 2rem 4rem;
     font-size: 1.1rem;
   }
 }
+
 @media screen and (max-width: 42em) {
   .main-content {
     padding: 2rem 1rem;
     font-size: 1rem;
   }
 }
+
 @media print {
   .pagination {
     display: none !important;
   }
 }
+
 /********************** FOOTER **********************/
+
 .footer {
   padding-top: 1rem;
   padding-bottom: 1rem;
