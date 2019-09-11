@@ -27,7 +27,7 @@ Before graduating college:
 * Participant in the [NATS Competition](http://www.nats.org/competitions.html) 2014
 * Participant in a Senior Recital in April 2017
 * Presented in the UMM [Undergraduate Research Symposium](http://www.morris.umn.edu/urs/) 2015
-* [URSA Major Developer](https://github.com/emma-sax4/UMM3601ursamajor)
+* [URSA Major](https://github.com/emma-sax4/UMM3601ursamajor) Developer
 * Research assistant for [Clojure research](https://github.com/Clojure-Intro-Course) at UMM
 * Participant in the UMM Honors Program
 * Student Campus Ambassador at UMM
