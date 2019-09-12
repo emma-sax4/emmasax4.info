@@ -12,7 +12,7 @@ layout: default
 {{ content }}
 
 {% assign draft_thoughts = site.posts %}
-{% assign published_thoughts = site.thoughts | sort:"date" | reverse %}
+{% assign published_thoughts = site.thoughts | sort: "date" | reverse %}
 {% assign thoughts = draft_thoughts | concat: published_thoughts %}
 
 <div id="thoughts">
