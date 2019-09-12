@@ -18,3 +18,20 @@ Of course, I started with the things I know how to do best: copy-paste 💁🏻�
 </div>
 
 So, I went on a mission to figure out how to make a prettier pagination bar. After a couple of hours—and a good night's sleep—I realized that the answer lies in the `css/main.scss` file. Specifically, [this line](https://github.com/emma-sax4/emma-sax4.github.io/blob/master/css/main.scss#L3).
+
+Prior, that line was making the entire build break. When I tried to load the project locally, my Jekyll server would give me this error back:
+```
+".pagination .active .page" failed to @extend ".selected". The selector ".selected" was not found.
+```
+Clearly, that means my CSS is broken. But I didn't quite understand why 😕. The repository that I was copying pagination from  included this line, and since I couldn't understand out why my CSS was broken, I figured it was time for me to try to add that "directory" to my repo.
+
+I had never worked with submodules in Git before. So, I started how any developer-who-doesnt-recognize-anythng would start: with Google. I started to google how to add submodules to Git repositories. And me, not liking to actually read anything, just started to jump in.
+
+After everything, I ended up having to add, remove, re-add, re-remove, and re-re-add the `primer` submodule to my Git repo in order for it to stick in the repo, show up in the directory structure, and be sitting on the same commit as my example repository 🤦🏻‍♀️. Here's a list of the resources I used to add the `primer` submodule:
+* https://chrisjean.com/git-submodules-adding-using-removing-and-updating/
+* https://stackoverflow.com/questions/10914022/how-do-i-check-out-a-specific-version-of-a-submodule-using-git-submodule
+* https://twoguysarguing.wordpress.com/2010/11/14/tie-git-submodules-to-a-particular-commit-or-branch/
+* https://subfictional.com/fun-with-git-submodules/
+* And possibly others I can't find in my browser history anymore
+
+Also, note that there is no easy way to remove a submodule. I'm just glad that I attempted this inside of a pull request, that then I could `git reset` with.
