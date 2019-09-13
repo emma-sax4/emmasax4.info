@@ -10,7 +10,7 @@ permalink: /around-town
 Post-college:
 * Platform Operations Engineer at [SportsEngine](https://www.sportsengine.com/corp/careers)
 * Speaker at DevOpsDays MSP 2019 (view my slides [here](/resources/DevOpsDays_MSP_Ignite_08062019.pdf) and watch a recording of the talk [here](https://devopsdays.org/events/2019-minneapolis/program/emma-sax/))
-* Judge for the [Technovation Challenge](https://technovationchallenge.org) in 2018-2019
+* Judge for the [Technovation Challenge](https://technovationchallenge.org) in 2018–2019
 * Regular attendee of [DevOpsDays MSP](https://devopsdays.org/) since 2015
 * Volunteer and attendee at [RailsConf 2019](https://railsconf.org/)
 * A panelist at a Tech Talk at one of the [University of Minnesota's Coding Bootcamps](https://bootcamp.umn.edu/)
