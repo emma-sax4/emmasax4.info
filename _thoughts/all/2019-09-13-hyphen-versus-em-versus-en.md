@@ -2,22 +2,19 @@
 layout: thought
 title: Hyphen vs. Em vs. En vs. Everything Else
 tags: [ all ]
-draft: true
 ---
 
 As I've begun working on this website, I've figured that I tend to use this punctuation a lot:
-```
-—
-```
+> —
 
-But `—` is not the same as `-`. I know it can be hard to tell the difference. Let me show it to you this way:
-```
-—
-–
--
-```
+But — is not the same as -. Depending on the font and text editor, it can be hard to tell the difference. Let me show it to you this way:
+> —
 
-Do you see it 👀? It's a very slight change. The top line is slightly longer than the middle, and the middle line is slightly longer than the bottom. Because they're all so similar, and I always want to make sure to use the correct punctuation in each circumstance, I thought it'd be a good idea to do some research into what they each mean, how to write them, and how to use them.
+> –
+
+> -
+
+Do you see it 👀? The top line is slightly longer than the middle, and the middle line is slightly longer than the bottom. Because they're all so similar, and I always want to make sure to use the correct punctuation in each circumstance, I thought it'd be a good idea to do some research into what they each mean, how to write them, and how to use them.
 
 ## The Hyphen
 The hyphen is what we think of as a small dash. It should be used when combining two words together into a compound word, such as the following:
@@ -25,7 +22,7 @@ The hyphen is what we think of as a small dash. It should be used when combining
 * like-minded
 * freeze-dried
 
-The hyphen is also typically used as a minus sign in mathematics. Technically, the minus sign sits a bit higher than the hyphen (`−` vs. `-`), but the only great way to make a minus sign is through emojis or special symbols, and that usually takes more time than it's worth.
+The hyphen is also typically used as a minus sign in mathematics. Technically, the minus sign sits a bit higher than the hyphen (− vs. -), but the only great way to make a minus sign is through emojis or special symbols, and that usually takes more time than it's worth.
 
 ### To Space or Not to Space
 Generally, there should be no spaces surrounding a hyphen. The only exceptions would be in mathematics (where there should always be spaces around mathemtical operations), and when using a [hanging hyphen](https://en.wikipedia.org/wiki/Hyphen#Suspended_hyphens).
