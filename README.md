@@ -35,7 +35,7 @@ It is totally possible to run this site locally!
 This repository doesn't really have any tests at all (GitHub Pages is just a host of static site files, so there's no functionality to test). I do run TravisCI tests on every pull request and commit to master branch, but, as you can see from the [`.travis.yml`](https://github.com/emma-sax4/emma-sax4.github.io/blob/master/.travis.yml), all the Travis run does is run `script: true`, so the builds will always pass (assuming `bundle` can properly install the dependencies as well).
 
 ## Deploys
-GitHub automatically deploys each commit to master branch. A full deploy only takes a couple of minutes, but depending on what was changed (HTML files, images, etc), it can take up to about 5 minutes to propogate the changes. To make the changes appear faster, you can reload the entire website in incognito mode.
+GitHub automatically deploys each commit to master branch. A full deploy only takes a couple of minutes, but depending on what was changed (HTML files, images, etc), it can take up to about 5 minutes to propagate the changes. To make the changes appear faster, you can reload the entire website in incognito mode.
 
 ## Structure of this Project
 ```
@@ -161,7 +161,7 @@ tag: tag_name
 ```
 
 #### Thoughts in a Set
-If I'm going to write a set of thoughts that all have a common theme, they can go into a new nested directory: `_thoughts/<set-name>/`. If that's the case, then there should also be a Markdown file titled `<set-name>.md` inside that inner directory, which would serve as a table of contents for the thoughts in that set. Here's the example front matter for that Markdown file:
+If I'm going to write a set of thoughts that all have a common theme, they can go into a new nested directory: `_thoughts/<set-name>/`. If that's the case, then there should also be a Markdown file titled `<set-name>.md` inside that inner directory, which would serve as a table of contents for the thoughts in that set. Here's an example of what that table of contents page should look like:
 ```
 ---
 layout: thoughts
@@ -169,6 +169,10 @@ title: Thoughts Set
 permalink: /thoughts/thoughts-set
 tag: thoughts_set
 ---
+
+<h1>{{ page.title }}</h1>
+
+Some words describing this set should go here.
 ```
 The `tag` will be what Jekyll will use to filter out which thoughts to show on each given lists page. This should be the same as the set name but with underscores. The permalink should have the name of the set, but with dashes.
 
