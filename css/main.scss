@@ -26,13 +26,30 @@ a {
   color: #1e6bb8;
   text-decoration: none;
 }
+
 a:hover {
   text-decoration: underline;
 }
 
+pre {
+  background-color: #F8F8F8;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+:not(pre) > code {
+  background-color: #F0F0F0;
+  padding: 3px;
+  border-radius: 5px;
+}
+
+.thought-meta {
+  font-size: 15px;
+  color: grey;
+}
+
 /* NAVIGATION BAR */
 
-/* Add a black background color to the top navigation */
 .topnav {
   color: #fff;
   text-align: center;
@@ -205,6 +222,20 @@ a:hover {
   background-image: linear-gradient(120deg, #2299BD, #1CB942);
 }
 
+/* FOOTER */
+
+.footer {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-top: solid 2px #eff0f1;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 12px;
+  position: absolute;
+}
+
 /* RESPONSIVE CONTAINERS */
 
 .container {
@@ -219,11 +250,6 @@ a:hover {
 }
 
 /* PRESET FORMATTING */
-
-.thought-meta {
-  font-size: 15px;
-  color: grey;
-}
 
 @media screen and (min-width: 64em) {
   .title {
@@ -306,18 +332,4 @@ a:hover {
   .pagination {
     display: none !important;
   }
-}
-
-/* FOOTER */
-
-.footer {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  border-top: solid 2px #eff0f1;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
-  font-size: 12px;
-  position: absolute;
 }
