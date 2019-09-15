@@ -2,7 +2,7 @@
 layout: thought
 title: Welcome to Kenya
 subtitle: "Part 2: The Game Drives"
-tags: [ ] # [ all, welcome_to_kenya ]
+tags: [ all, welcome_to_kenya ]
 draft: true
 ---
 
@@ -57,7 +57,7 @@ At the Aberdares Country Club, near the Ark, we also saw some baboons, impalas, 
 Although there weren't many animals at the Ark, it was our first real chance to see some wildlife, and it was exciting, nevertheless.
 
 ### Samburu
-Samburu is an area north of the equator, located in the center of Kenya. The land around here is dry and desert-like, with few bushes and trees. Here, we saw baboons, reticulated giraffes, oryx, impala, thomson's gazelles, elephants, dik diks, ostriches, grevy's zebra, grant's gazelles (what our safari truck called "diaper butts", and see why [here](https://ejphoto.com/grants_gazelle_page.htm)), and even a lioness resting in some bushes.
+Samburu is an area north of the equator, located in the center of Kenya. The land around here is dry and desert-like, with few bushes and trees. Here, we saw baboons, reticulated giraffes, oryx, impala, thomson's gazelles, elephants, dik diks, ostriches, grevy's zebra, grant's gazelles (what our safari truck called "diaper butts", and see why [here](https://en.wikipedia.org/wiki/Grant%27s_gazelle)), and even a lioness resting in some bushes.
 
 <div align="center">
   <img src="/resources/pictures/thoughts/welcome-to-kenya/baboon_at_samburu.jpeg" alt="Baboons at Samburu">
@@ -83,3 +83,15 @@ The resort where we stayed is famous for having hippos come graze on the grass r
 </div>
 
 ### Maasai
+
+## References
+Huge thank you to my friends, Kristen Correa, Jennifer Hruska, Heather Hubbard, and Evelyn Kodman, for the use of some of their photos.
+* https://en.wikipedia.org/wiki/Ol_Pejeta_Conservancy
+* http://www.walkthroughindia.com/wild-world/top-12-elegant-species-of-antelopes-in-africa/
+* https://animals.mom.me/names-african-gazelles-6565.html
+* https://www.olpejetaconservancy.org/
+* https://www.olpejetaconservancy.org/wildlife/rhinos/black-rhinos/
+* https://www.olpejetaconservancy.org/wildlife/rhinos/northern-white-rhinos/
+* https://www.olpejetaconservancy.org/wildlife/rhinos/southern-white-rhinos/
+* https://en.wikipedia.org/wiki/Grant%27s_gazelle
+* https://safaripark.cz/
