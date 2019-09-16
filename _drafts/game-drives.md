@@ -33,25 +33,16 @@ We started our safaris at the Ark in the Aberdares mountain range. I'll talk mor
 The Ark is where we saw our first cape buffalo, hyenas, warthogs (think Pumbaa!), and elephants.
 
 <div align="center">
-  <img src="/resources/pictures/thoughts/welcome-to-kenya/single_buffalo_at_ark.jpeg" alt="A buffalo posing for pictures at the Ark">
-</div>
-
-<div align="center">
-  <img src="/resources/pictures/thoughts/welcome-to-kenya/buffalo_at_ark.jpeg" alt="A small group of buffalo at the Ark">
-</div>
-
-<div align="center">
-  <img src="/resources/pictures/thoughts/welcome-to-kenya/elephants_at_ark.jpeg" alt="A small herd of elephants at the Ark">
+  <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/48740606838/in/album-72157710860887528/" title="single_buffalo_at_ark"><img src="https://live.staticflickr.com/65535/48740606838_d469ce0358_z.jpg" width="600" height="450" alt="Buffalo at the Ark posing for pictures"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+  <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/48740934946/in/album-72157710860887528/" title="buffalo_at_ark"><img src="https://live.staticflickr.com/65535/48740934946_d32e31e68f_z.jpg" width="600" height="450" alt="Buffalo at the Ark"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+  <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/48741119477/in/album-72157710860887528/" title="elephants_at_ark"><img src="https://live.staticflickr.com/65535/48741119477_5edfd2cf84_z.jpg" width="600" height="450" alt="Elephants at the Ark"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
 </div>
 
 At the Aberdares Country Club, near the Ark, we also saw some baboons, impalas, thomson's gazelles, and a peacock.
 
 <div align="center">
-  <img src="/resources/pictures/thoughts/welcome-to-kenya/peacock_at_ark.jpeg" alt="A peacock at the Ark">
-</div>
-
-<div align="center">
-  <img src="/resources/pictures/thoughts/welcome-to-kenya/peacock_closeup.jpg" alt="A closeup of the Ark peacock">
+  <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/48740606758/in/album-72157710860887528/" title="peacock_at_aberdares_country_club"><img src="https://live.staticflickr.com/65535/48740606758_0d4c94d668_z.jpg" width="450" height="600" alt="Peacock at Aberdares Country Club"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+  <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/48740935281/in/album-72157710860887528/" title="peacock_closeup"><img src="https://live.staticflickr.com/65535/48740935281_7ddbc09737_z.jpg" width="600" height="400" alt="Peacock closeup"></a><script async  src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
 </div>
 
 Although there weren't many animals at the Ark, it was our first real chance to see some wildlife, and it was exciting, nevertheless.
@@ -60,13 +51,14 @@ Although there weren't many animals at the Ark, it was our first real chance to 
 Samburu is an area north of the equator, located in the center of Kenya. The land around here is dry and desert-like, with few bushes and trees. Here, we saw baboons, reticulated giraffes, oryx, impala, thomson's gazelles, elephants, dik diks, ostriches, grevy's zebra, grant's gazelles (what our safari truck called "diaper butts", and see why [here](https://en.wikipedia.org/wiki/Grant%27s_gazelle)), and even a lioness resting in some bushes.
 
 <div align="center">
-  <img src="/resources/pictures/thoughts/welcome-to-kenya/baboon_at_samburu.jpeg" alt="Baboons at Samburu">
-  <img src="/resources/pictures/thoughts/welcome-to-kenya/elephant_at_samburu.jpeg" alt="Elephant at Samburu">
-  <img src="/resources/pictures/thoughts/welcome-to-kenya/oryx_at_samburu.jpeg" alt="Oryx antelope at Samburu">
-  <img src="/resources/pictures/thoughts/welcome-to-kenya/giraffe_at_samburu.jpeg" alt="Reticulated giraffes at Samburu">
-  <img src="/resources/pictures/thoughts/welcome-to-kenya/impala_at_samburu.jpeg" alt="Impalas at Samburu">
-  <img src="/resources/pictures/thoughts/welcome-to-kenya/lion_at_samburu.jpeg" alt="Lioness resting in a bush at Samburu">
-  <img src="/resources/pictures/thoughts/welcome-to-kenya/ostrich_at_samburu.jpeg" alt="A male ostrich at Samburu">
+  <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/48740606393/in/album-72157710860887528/" title="baboon_at_samburu"><img src="https://live.staticflickr.com/65535/48740606393_eb129515d5_z.jpg" width="600" height="450" alt="Baboons at Samburu"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+  <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/48740606453/in/album-72157710860887528/" title="elephant_at_samburu"><img src="https://live.staticflickr.com/65535/48740606453_8d93d2912b_z.jpg" width="600" height="450" alt="Elephant at Samburu"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+  <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/48741119692/in/album-72157710860887528/" title="oryx_at_samburu"><img src="https://live.staticflickr.com/65535/48741119692_d885434f05_z.jpg" width="600" height="450" alt="Oryx at Samburu"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+  <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/48740935066/in/album-72157710860887528/" title="giraffe_at_samburu"><img src="https://live.staticflickr.com/65535/48740935066_007b4ee605_z.jpg" width="600" height="450" alt="Reticulated giraffes at Samburu"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+  <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/48740606638/in/album-72157710860887528/" title="impala_at_samburu"><img src="https://live.staticflickr.com/65535/48740606638_be9de360af_z.jpg" width="600" height="450" alt="Impalas at Samburu"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+  <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/48740606678/in/album-72157710860887528/" title="lion_at_samburu"><img src="https://live.staticflickr.com/65535/48740606678_ea278d8001_z.jpg" width="600" height="536" alt="lion_at_samburu"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+  <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/48741119697/in/album-72157710860887528/" title="ostrich_at_samburu"><img src="https://live.staticflickr.com/65535/48741119697_9c6f2a9382_z.jpg" width="600" height="450" alt="Male ostrich at Samburu"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+  <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/48741119832/in/album-72157710860887528/" title="zebra_at_samburu"><img src="https://live.staticflickr.com/65535/48741119832_c5c568a998_z.jpg" width="600" height="450" alt="Zebra at Samburu"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
 </div>
 
 The incredible thing is that, on these safaris, the animals will come right up to the safari truck, as long as the truck is quiet, still, and patient. There were moments where the elephants were passing right by the truck.
@@ -77,9 +69,9 @@ Ol Pejeta is located in central Kenya, just straight north of Nairobi. The game 
 We managed to visit the Chimpanzee and Rhinoceros conservancies while we were there, and we managed to actually see chimpanzees interacting with each other (although they were lazily just lying around). We had the unique opportunity to feed one of the black rhinos, a blind rhino named Baraka.
 
 <div align="center">
-  <img src="/resources/pictures/thoughts/welcome-to-kenya/chimp_at_old_pejeta.jpg" alt="An adult chimpanzee at Ol Pejeta Conservancy">
-  <img src="/resources/pictures/thoughts/welcome-to-kenya/rhino_at_old_pejeta.jpeg" alt="Baraka the rhino at Ol Pejeta Conservancy">
-  <img src="/resources/pictures/thoughts/welcome-to-kenya/rhino_feeding_at_old_pejeta.jpeg" alt="My partner feeding Baraka">
+  <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/48741119427/in/album-72157710860887528/" title="chimp_at_ol_pejeta"><img src="https://live.staticflickr.com/65535/48741119427_ecb6585700_z.jpg" width="600" height="400" alt="Chimpanzee at Ol Pejeta Conservancy"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+  <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/48741119722/in/album-72157710860887528/" title="rhino_at_ol_pejeta"><img src="https://live.staticflickr.com/65535/48741119722_d4de18f940_z.jpg" width="600" height="450" alt="Baraka, black rhino, at Ol Pejeta Conservancy"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+  <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/48740606828/in/album-72157710860887528/" title="rhino_feeding_at_ol_pejeta"><img src="https://live.staticflickr.com/65535/48740606828_6d0a3a9f82_z.jpg" width="450" height="600" alt="Baraka feeding at Ol Pejeta Conservancy"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
 </div>
 
 We didn't see very many animals on the actual Ol Pejeta game drive, but we did see a dust tornado, and a storm settling in. It also rained while we were out driving, so we enjoyed the drop in temperature, and playing _Africa_ by Toto on our phones.
@@ -94,7 +86,7 @@ Lake Naivasha is a small lake just to the west of Nairobi. While there, we got t
 The resort where we stayed is famous for having hippos come graze on the grass right by the cabins, but we didn't see any hippos that night. We did manage to see some waterbucks grazing, but that was about it.
 
 <div align="center">
-  <img src="/resources/pictures/thoughts/welcome-to-kenya/waterbucks_at_lake_naivasha.jpeg" alt="Waterbucks grazing at Lake Naivasha">
+  <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/48740935336/in/album-72157710860887528/" title="waterbucks_near_lake_naivasha"><img src="https://live.staticflickr.com/65535/48740935336_d67bcb8028_z.jpg" width="450" height="600" alt="Waterbucks near Lake Naivasha"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
 </div>
 
 ### Maasai Mara
@@ -105,20 +97,21 @@ Because of the time of year we went, and the location, we managed to see thousan
 Although I wish I could attach all of the pictures we have from the Maasai Mara, I honestly can't... there's too many incredible ones. Intead, I'll have to add some of my favorites:
 
 <div align="center">
-  <img src="/resources/pictures/thoughts/welcome-to-kenya/cheetah_at_maasai_mara.jpg" alt="Cheetah at Maasai Mara">
-  <img src="/resources/pictures/thoughts/welcome-to-kenya/elephant_fam_at_maasai_mara.jpg" alt="Elephants at Maasai Mara">
-  <img src="/resources/pictures/thoughts/welcome-to-kenya/elephants_at_maasai_mara.jpg" alt="Elephants at Maasai Mara">
-  <img src="/resources/pictures/thoughts/welcome-to-kenya/giraffe_at_maasai_mara.jpeg" alt="Giraffe at Maasai Mara">
-  <img src="/resources/pictures/thoughts/welcome-to-kenya/giraffe_profile_at_maasai_mara.jpg" alt="Giraffe closeup at Maasai Mara">
-  <img src="/resources/pictures/thoughts/welcome-to-kenya/hippo_at_maasai_mara.jpg" alt="Hippos at Maasai Mara">
-  <img src="/resources/pictures/thoughts/welcome-to-kenya/hippo_swimming_at_maasai_mara.jpg" alt="Hippo swimming at Maasai Mara">
-  <img src="/resources/pictures/thoughts/welcome-to-kenya/hyenas_at_maasai_mara.jpg" alt="Hyenas at Maasai Mara">
-  <img src="/resources/pictures/thoughts/welcome-to-kenya/leopard_at_maasai_mara.jpg" alt="Leopard in a tree at Maasai Mara">
-  <img src="/resources/pictures/thoughts/welcome-to-kenya/lions_at_maasai_mara.jpg" alt="Lions at Maasai Mara">
-  <img src="/resources/pictures/thoughts/welcome-to-kenya/lion_yawning_at_maasai_mara.jpg" alt="Lion yawning at Maasai Mara... time for bed!">
-  <img src="/resources/pictures/thoughts/welcome-to-kenya/warthogs_at_maasai_mara.jpg" alt="Warthogs at Maasai Mara">
-  <img src="/resources/pictures/thoughts/welcome-to-kenya/wildebeest_at_maasai_mara.jpg" alt="Wildebeest at Maasai Mara">
-  <img src="/resources/pictures/thoughts/welcome-to-kenya/wildebeests_at_maasai_mara.jpg" alt="Wildebeests at Maasai Mara">
+  <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/48740934961/in/album-72157710860887528/" title="cheetah_at_maasai_mara"><img src="https://live.staticflickr.com/65535/48740934961_5e3588686e_z.jpg" width="600" height="414" alt="Cheetah at Maasai Mara"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+  <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/48740935001/in/album-72157710860887528/" title="elephants_at_maasai_mara"><img src="https://live.staticflickr.com/65535/48740935001_2f1da4cda5_z.jpg" width="600" height="450" alt="Elephants at Maasai Mara"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+  <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/48741119482/in/album-72157710860887528/" title="elephants_at_maasai_mara"><img src="https://live.staticflickr.com/65535/48741119482_e721e76543_z.jpg" width="600" height="400" alt="Elephants at Maasai Mara"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+  <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/48741119542/in/album-72157710860887528/" title="giraffe_at_maasai_mara"><img src="https://live.staticflickr.com/65535/48741119542_49f874fdf2_z.jpg" width="600" height="450" alt="Giraffe at Maasai Mara"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+  <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/48741119572/in/album-72157710860887528/" title="giraffe_profile_at_maasai_mara"><img src="https://live.staticflickr.com/65535/48741119572_4384b8dc6b_z.jpg" width="600" height="450" alt="Giraffe at Maasai Mara"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+  <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/48740935081/in/album-72157710860887528/" title="hippo_at_maasai_mara"><img src="https://live.staticflickr.com/65535/48740935081_8aaf5759f3_z.jpg" width="600" height="400" alt="Lounging hippos at Maasai Mara"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+  <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/48740935106/in/album-72157710860887528/" title="hippo_swimming_at_maasai_mara"><img src="https://live.staticflickr.com/65535/48740935106_12814e2f60_z.jpg" width="600" height="450" alt="Swimming hippo at Maasai Mara"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+  <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/48741119617/in/album-72157710860887528/" title="hyenas_at_maasai_mara"><img src="https://live.staticflickr.com/65535/48741119617_e81e0690b3_z.jpg" width="600" height="450" alt="Hyengas at Maasai Mara"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+  <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/48740935151/in/album-72157710860887528/" title="leopard_at_maasai_mara"><img src="https://live.staticflickr.com/65535/48740935151_fb665b6280_z.jpg" width="600" height="450" alt="Sleeping leopard at Maasai Mara"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+  <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/48740606698/in/album-72157710860887528/" title="lions_at_maasai_mara"><img src="https://live.staticflickr.com/65535/48740606698_5f5e777d93_z.jpg" width="600" height="424" alt="Lions at Maasai Mara"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+  <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/48740935211/in/album-72157710860887528/" title="lion_yawning_at_maasai_mara"><img src="https://live.staticflickr.com/65535/48740935211_dde4f02937_z.jpg" width="600" height="450" alt="Yawning lion at Maasai Mara"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+  <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/48740935321/in/album-72157710860887528/" title="warthogs_at_maasai_mara"><img src="https://live.staticflickr.com/65535/48740935321_599710837a_z.jpg" width="600" height="400" alt="Warthogs at Maasai Mara"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+  <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/48741119787/in/album-72157710860887528/" title="wildebeest_at_maasai_mara"><img src="https://live.staticflickr.com/65535/48741119787_fbe95cb73d_z.jpg" width="600" height="400" alt="Wildebeest at Maasai Mara"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+  <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/48740935386/in/album-72157710860887528/" title="wildebeests_at_maasai_mara"><img src="https://live.staticflickr.com/65535/48740935386_2d23d41760_z.jpg" width="600" height="450" alt="Wildebeests at Maasai Mara"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+  <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/48741119842/in/album-72157710860887528/" title="zebras_at_maasai_mara"><img src="https://live.staticflickr.com/65535/48741119842_bb49aaace2_z.jpg" width="600" height="446" alt="Zebras at Maasai Mara"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
 </div>
 
 ## Conclusion
