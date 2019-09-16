@@ -70,9 +70,8 @@ GitHub automatically deploys each commit to master branch. A full deploy only ta
 |   ├── logos
 |   |   ├── logo-01.png
 |   |   └── logo-02.jpg
-|   ├── pictures
-|   |   ├── picture-01.jpg
-|   |   └── picture-02.jpg
+|   ├── picture-01.jpg
+|   ├── picture-02.jpg
 |   ├── resource-01.pdf
 |   └── resource-02.pdf
 ├── _config.yml
@@ -202,16 +201,16 @@ git submodule update --init --recursive
 and make sure it's on commit `6a8733ea0f3c079fe4a37c1828297d8f661ccee8`. Once things are initialized, there should be no need to be committing to this directory.
 
 ### `resources/`
-This directory gives me a place to store handy items, such as my resume(s), pictures, logos, past slides from tech talks, etc. By putting them all into one directory (that's nested as necessary), it provides some organization to the repository. To call a specific resource, you can either ask for it in HTML:
+This directory gives me a place to store handy items, such as my resume(s), some pictures, logos, past slides from tech talks, etc. By putting them all into one directory (that's nested as necessary), it provides some organization to the repository. To call a specific resource, you can either ask for it in HTML:
 ```
 <div>
-  <img src="/resources/pictures/picture-01.jpg" alt="Picture 1">
+  <img src="/resources/picture-01.jpg" alt="Picture 1">
 </div>
 ```
 
 Or you can put a link to it in Markdown:
 ```
-This is an example sentence, so the link will throw a 404. See this in action [here](/resources/resource-01.pdf).
+This is an example sentence, so it will throw a 404. See [here](/resources/resource-01.pdf)?
 ```
 
 ### `_config.yml`
