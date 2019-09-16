@@ -121,7 +121,7 @@ Although I wish I could attach all of the pictures we have from the Maasai Mara,
   <img src="/resources/pictures/thoughts/welcome-to-kenya/wildebeests_at_maasai_mara.jpg" alt="Wildebeests at Maasai Mara">
 </div>
 
-### Conclusion
+## Conclusion
 
 All in all, we saw incredible animals at every location of our adventure. We met incredible people, learned amazing facts about the country and its animals, and we have great memories of each game drive we went on. As you can see from some of our photos, we saw unbelievable animals in their natural habitat, and that was worth every penny of this trip.
 
