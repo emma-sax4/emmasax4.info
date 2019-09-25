@@ -69,28 +69,28 @@ h1 {
 /* NAVIGATION BAR */
 
 .topnav {
-  color: #fff;
+  color: black;
   text-align: center;
-  background-color: #A7A3A3;
+  background-color: #159957;
+  background: linear-gradient(to right, #2299BD, #1CB942);
   overflow: hidden;
 
   a {
     display: inline-block;
-    color: #f2f2f2;
+    color: white;
     text-align: center;
     padding: 14px 28px;
     text-decoration: none;
     font-size: 17px;
 
     &:hover {
-      background-color: #6EBBC8;
       color: black;
     }
   }
 
   a.active {
-    background-color: #409ED4;
-    color: white;
+    background-color: white;
+    color: black;
   }
 }
 
@@ -237,7 +237,7 @@ h1 {
   color: white;
   text-align: center;
   background-color: #159957;
-  background-image: linear-gradient(120deg, #2299BD, #1CB942);
+  background: linear-gradient(to right, #2299BD, #1CB942);
 }
 
 /* FOOTER */
