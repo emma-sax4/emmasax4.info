@@ -6,6 +6,7 @@ set: welcome_to_kenya
 ---
 
 ## The Big 5
+
 Africa considers five animals the [Big 5](https://en.wikipedia.org/wiki/Big_five_game). That means that if you can get on a safari that will show you all five, you just won the game lottery. They are elephants, lions, leopards, cape buffalo, and rhinoceroses. Finding elephants are easy; they're pretty much everywhere. Cape buffalo are also easy to spot, there's lots of them all over the place.
 
 Lions are more difficult. Lionesses are okay to find... they do all of the hunting and caretaking, so they can mostly be found during the day sleeping under some trees or bushes, and then hunting at dawn and dusk. Male lions are harder because they're notorious for being lazy. Leopards are even more challenging to find. There's plenty of leopards in eastern Africa, but they're elusive. They're good at hiding; if they don't want to be found, they won't be. Sometimes, they hang out in trees sleeping during the day.
@@ -13,6 +14,7 @@ Lions are more difficult. Lionesses are okay to find... they do all of the hunti
 And lastly, you have your rhinoceroses. Southern white rhinos are decently easy enough to find—[Ol Pejeta](https://www.olpejetaconservancy.org/), a conservancy between Mount Kenya and Aberdares, has around 30, and there are approximately about 5,000 in Kenya alone. Although there aren't many sourthern white rhinos, they like to graze grass in open fields, making them easy to spot by safari truck. Black rhinos, on the other hand, are more rare. Ol Pejeta has  about 126, and they like to hide, which means that if you see a black rhino in Ol Pejeta, you just got lucky. Their snouts—not their color—are what distinguishes white rhinos versus black rhinos: white rhinos have flat snouts to graze grass, and black rhinos have pointier snouts to handle branches and bushes. In fact, the name "white rhino" is a mistranslation of the Afrikaans word "weit", meaning "wide"... they aren't supposed to be called "_white_ rhinos" at all!
 
 ## The Story of the Northern White Rhinoceros
+
 Now, let's talk northern white rhinos. In 2009, four of the world's last northern white rhinos, two males and two females, were moved to Ol Pejeta. They were provided extensive security, nutritious diets, and plenty of space. But by 2014, when one of the males died of natural causes, there had been no reproduction between the rhinos.
 
 Veterinarians came out to help, and after evaluating the rhinos, they found that the male rhino's sperm count was extremely low, given his age, and the females were unable to give conceive naturally, making it near impossible for them to further the species.
@@ -24,9 +26,11 @@ In March of 2018, the last male northern white rhino passed away from old age an
 The incredible news is, that as of August 22, 2019 (just days before I visited Ol Pejeta), seven northern white rhino eggs were successfully matured and artificially inseminated! You can read more about the press release [here](https://www.olpejetaconservancy.org/northern-white-rhino-eggs-fertilised/). This is an incredible step forward in the conservation efforts of the northern white rhino. The results of embryo development will be announced at the end of September.
 
 ## What Did We See?
+
 Now that we've talked about some of the different animals visible in Kenya, the question is, where did _we_ go, and what did _we_ see?
 
 ### Aberdares County
+
 We started our safaris at the Ark in the Aberdares mountain range. I'll talk more about the Ark in my next thought, but the gist of it is that it's situated right on a watering hole. And so with the water (and the Ark _may_ place some yummy things in the dirt by the windows), animals will come to drink, graze, and relax right by the windows of the resort.
 
 The Ark is where we saw our first cape buffalo, hyenas, warthogs (think Pumbaa!), and elephants.
@@ -47,6 +51,7 @@ At the Aberdares Country Club, near the Ark, we also saw some baboons, impalas, 
 Although there weren't many animals at the Ark, it was our first real chance to see some wildlife, and it was exciting, nevertheless.
 
 ### Samburu
+
 Samburu is an area north of the equator, located in the center of Kenya. The land around here is dry and desert-like, with few bushes and trees. Here, we saw baboons, reticulated giraffes, oryxes, impalas, thomson's gazelles, elephants, dik diks, ostriches, grevy's zebras, grant's gazelles (what our safari truck called "diaper butts", and see why [here](https://en.wikipedia.org/wiki/Grant%27s_gazelle)), and even a lioness resting in some bushes.
 
 <div align="center">
@@ -63,6 +68,7 @@ Samburu is an area north of the equator, located in the center of Kenya. The lan
 The incredible thing is that, on these safaris, the animals will come right up to the safari truck, as long as the truck is quiet, still, and patient. There were moments where the elephants were passing right by the truck.
 
 ### Ol Pejeta
+
 Ol Pejeta is located in central Kenya, just straight north of Nairobi. The game reserve and conservancy is the home of many different types of animals.
 
 We managed to visit the Chimpanzee and Rhinoceros conservancies while we were there, and we managed to actually see chimpanzees interacting with each other (although they were lazily just lying around). We also had the unique opportunity to feed one of the black rhinos, a blind rhino named Baraka.
@@ -80,6 +86,7 @@ Sweetwaters, the tented camp where we stayed at Ol Pejeta, offered a special gam
 Long story short, doing a night game drive gave us the opportunity to see animals that we wouldn't have seen during the day. Unfortunately, because of the lighting, we weren't able to get any good pictures of the animals at night.
 
 ### Lake Naivasha
+
 Lake Naivasha is a small lake just to the west of Nairobi. While there, we got the opportunity to go on a hippopotamus-viewing boat drive while on the lake We did see some hippos underwater, and we saw some of Kenya's eagles. But besides that, we didn't see too many new animals.
 
 The resort where we stayed is famous for having hippos come graze on the grass right by the cabins, but we didn't see any hippos that night. We did manage to see some waterbucks grazing, but that was about it.
@@ -89,6 +96,7 @@ The resort where we stayed is famous for having hippos come graze on the grass r
 </div>
 
 ### Maasai Mara
+
 The Maasai Mara is where the Great Migration happens. Well, the Maasai Mara and the Serengeti. Actually, the Maasai Mara is the northern-most part of the Serengeti, but separated by the Tanzania/Kenya border. The two large areas have the same animals.
 
 Because of the time of year we went, and the location, we managed to see thousands, perhaps even millions, of animals. We saw cheetahs feeding on a newly killed baby zebra 😭, lion cubs playing, lionnesses hunting, a leopard sleeping in a tree, wildebeests, cape buffalo, plains zebras, hyenas, elephants, Maasai giraffes (only found in the Maasai Mara and the Serengeti), eland antelopes, kudu antelopes, oryxes, waterbucks, impalas, thomson's gazelles, gerenuks, hippos laying by the water in the sand, crocodiles, eagles, vultures, and bones... lots and lots of bones.
@@ -120,6 +128,7 @@ All in all, we saw incredible animals at every location of our adventure. We met
 I'd like to give a huge thank you to my friends, Kristen Correa, Jennifer Hruska, Heather Hubbard, and Evelyn Kodman, for the use of some of their photos in both my personal albums, and in this thought.
 
 ## References
+
 * [wikipedia.org/Ol_Pejeta_Conservancy](https://en.wikipedia.org/wiki/Ol_Pejeta_Conservancy)
 * [walkthroughindia.com/top-12-elegant-species-of-antelopes-in-africa](http://www.walkthroughindia.com/wild-world/top-12-elegant-species-of-antelopes-in-africa/)
 * [animals.mom.me/names-african-gazelles](https://animals.mom.me/names-african-gazelles-6565.html)
