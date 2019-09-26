@@ -16,7 +16,7 @@ layout: default
 {% assign draft_thoughts_and_lists = site.posts %}
 {% assign published_thoughts_and_lists = site.thoughts | sort: "date" | reverse %}
 {% assign all_thoughts_and_lists = draft_thoughts_and_lists | concat: published_thoughts_and_lists %}
-{% assign all_thoughts = all_thoughts_and_lists | where_exp: "item", "item.is_list != true" %}
+{% assign all_thoughts = all_thoughts_and_lists | where: "layout", "thought" %}
 
 <div id="thoughts">
   <ul class="list" style="list-style: none">
