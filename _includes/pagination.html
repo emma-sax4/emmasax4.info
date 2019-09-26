@@ -1,0 +1,20 @@
+<nav class="paginate-container" aria-label="Pagination">
+  <div class="pagination"></div>
+</nav>
+
+<script type="text/javascript">
+  document.getElementById("thoughts").style.display = "none";
+
+  var options = {
+    valueNames: [ 'thought' ],
+    page: 5,
+    pagination: {
+      outerWindow: 1,
+      innerWindow: 1
+    }
+  };
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"
+  onload="var thoughts = new List('thoughts', options); document.getElementById('thoughts').style.display = 'block';">
+</script>
