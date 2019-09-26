@@ -146,7 +146,7 @@ tags: [ tag_name, another_tag_name ]
 
 Let's talk about the `tags`. The tags determine how we want to categorize each thought. If there's no categorization of a thought (if it's completely random), then there's no need to specify any `tag(s)`, AKA just leave the line completely out of the front matter. But, if you think the thought is a good contestant for a tag, such as `tag_name` or `another_tag_name` in our example, then add those appropriate tags in a list format.
 
-For every tag, there needs to be a `<tag-name>.md` file in the `_thoughts/` directory. The general front matter for this should look like this:
+For every tag, there needs to be a `<tag-name>.md` file in the `_thoughts/` directory. The general file for this should look like this:
 ```
 ---
 layout: thoughts
@@ -158,7 +158,7 @@ tag: tag_name
 <h1>{{ page.title }}</h1>
 ```
 
-The `tag` indicates which thoughts to filter on that page (only the thoughts with that tag will show).
+The `tag` front matter indicates which thoughts to show on that page (only the thoughts with that tag will show).
 
 #### Thoughts in a Set
 If I'm going to write a set of thoughts that all have a common theme, they can go into a new nested directory: `_thoughts/<set-name>/`. If that's the case, then there should also be a Markdown file titled `<set-name>.md` inside that inner directory, which would serve as a table of contents for the thoughts in that set. Here's an example of what that table of contents page should look like:
@@ -175,7 +175,7 @@ set: thoughts_set
 Some words describing this set should go here.
 ```
 
-The `set` will be what Jekyll will use to filter out which thoughts belong to that set, so the page will only show that set's thoughts on the page. This should be the same as the set name but with underscores. The permalink should have the name of the set, but with dashes.
+The `set` front matter indicates which thoughts to show on that page, so only thoughts that belong to that single set will be on the page. This should be the same as the set name but with underscores. The permalink should have the name of the set, but with dashes.
 
 Each individual thought should sit inside the `_thoughts/<set-name>/` directory, and should make use of the `title` and `subtitle` metadata, where the `title` is the name of the set, and the `subtitle` is the title of that specific thought:
 ```
