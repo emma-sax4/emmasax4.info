@@ -15,19 +15,19 @@ layout: default
     <div class="column" align="left" style="flex: 45%; padding-top: 0%">
 {% endunless %}
 
-{{ content }}
+      {{ content }}
 
-<div id="thoughts">
-  <ul class="list" style="list-style: none">
-    {% for thought in all_thoughts %}
-      {% if thought.tags contains page.tag or thought.set contains page.set or page.tag == "all" %}
-        {% include thought_summary.html %}
-      {% endif %}
-    {% endfor %}
-  </ul>
+      <div id="thoughts">
+        <ul class="list" style="list-style: none">
+          {% for thought in all_thoughts %}
+            {% if thought.tags contains page.tag or thought.set contains page.set or page.tag == "all" %}
+              {% include thought_summary.html %}
+            {% endif %}
+          {% endfor %}
+        </ul>
 
-  {% include pagination.html %}
-</div>
+        {% include pagination.html %}
+      </div>
 
 {% unless page.tag == "all" %}
     </div>
