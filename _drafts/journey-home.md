@@ -2,8 +2,7 @@
 layout: thought
 title: Welcome to Kenya
 subtitle: "Part 4: The Journey Home"
-tags: [ ] # [ all ]
-set: # welcome_to_kenya
+set: welcome_to_kenya
 draft: true
 ---
 
