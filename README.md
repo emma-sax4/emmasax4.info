@@ -52,13 +52,12 @@ GitHub automatically deploys each commit to master branch. A full deploy only ta
 ├── _site
 |   └── <other stuff we don't need to touch>
 ├── _thoughts
-|   ├── all
-|   |   ├── 2001-01-01-thought-01.md
-|   |   └── 2001-01-02-thought-02.md
 |   ├── thoughts-set
 |   |   ├── 2001-01-01-set-thought-01.md
 |   |   ├── 2001-01-02-set-thought-02.md
 |   |   └── thoughts_set.md
+|   ├── 2001-01-01-thought-01.md
+|   ├── 2001-01-02-thought-02.md
 |   └── tag_name.md
 ├── css
 |   └── main.scss
@@ -88,7 +87,7 @@ This is where we can place all of the thoughts that we're not ready to publish y
 ---
 layout: thought
 title: Thought Draft
-tags: [ all ]
+tags: [ tag_name, another_tag_name ]
 draft: true
 ---
 ```
@@ -99,7 +98,7 @@ For a draft that will eventually be a part of a set, use the `title` and `subtit
 layout: thought
 title: Thoughts Set
 subtitle: Set Thought Draft
-tags: [ all, thoughts_set ]
+set: thoughts_set
 draft: true
 ---
 ```
@@ -136,18 +135,18 @@ This directory should only exist on your local machine... otherwise it's in the 
 This is the collection of "thoughts" that I've had ("thought"/"thoughts" are the very non-creative terms I've come up with instead of using "post"/"blog").
 
 #### Thoughts without a Set
-Most of the thoughts can just go into the `_thoughts/all/` directory, written as Markdown files. For a generic thought, the front matter could look like this:
+Most of the thoughts can just go into the general `_thoughts/` directory, written as Markdown files. For a generic thought, the front matter could look like this:
 ```
 ---
 layout: thought
 title: Thought 1
-tags: [ all, tag_name ]
+tags: [ tag_name, another_tag_name ]
 ---
 ```
 
-Let's talk about the `tags`. The tags determine how we want to categorize each thought. Each thought should automatically have the `all` tag. But, if you think the thought is a good contestant for a different tag, such as `tag_name` in our example, then add that **after** the `all` tag in the list.
+Let's talk about the `tags`. The tags determine how we want to categorize each thought. If there's no categorization of a thought (if it's completely random), then there's no need to specify any `tag(s)`, AKA just leave the line completely out of the front matter. But, if you think the thought is a good contestant for a tag, such as `tag_name` or `another_tag_name` in our example, then add those appropriate tags in a list format.
 
-For every tag (except the ones associated with sets and `all`), there needs to be a `<tag-name>.md` file in the `_thoughts/` directory. The general file for this should look like this:
+For every tag, there needs to be a `<tag-name>.md` file in the `_thoughts/` directory. The general file for this should look like this:
 ```
 ---
 layout: thoughts
@@ -159,6 +158,8 @@ tag: tag_name
 <h1>{{ page.title }}</h1>
 ```
 
+The `tag` front matter indicates which thoughts to show on that page (only the thoughts with that tag will show).
+
 #### Thoughts in a Set
 If I'm going to write a set of thoughts that all have a common theme, they can go into a new nested directory: `_thoughts/<set-name>/`. If that's the case, then there should also be a Markdown file titled `<set-name>.md` inside that inner directory, which would serve as a table of contents for the thoughts in that set. Here's an example of what that table of contents page should look like:
 ```
@@ -166,14 +167,15 @@ If I'm going to write a set of thoughts that all have a common theme, they can g
 layout: thoughts
 title: Thoughts Set
 permalink: /thoughts/thoughts-set
-tag: thoughts_set
+set: thoughts_set
 ---
 
 <h1>{{ page.title }}</h1>
 
 Some words describing this set should go here.
 ```
-The `tag` will be what Jekyll will use to filter out which thoughts to show on each given lists page. This should be the same as the set name but with underscores. The permalink should have the name of the set, but with dashes.
+
+The `set` front matter indicates which thoughts to show on that page, so only thoughts that belong to that single set will be on the page. This should be the same as the set name but with underscores. The permalink should have the name of the set, but with dashes.
 
 Each individual thought should sit inside the `_thoughts/<set-name>/` directory, and should make use of the `title` and `subtitle` metadata, where the `title` is the name of the set, and the `subtitle` is the title of that specific thought:
 ```
@@ -181,9 +183,11 @@ Each individual thought should sit inside the `_thoughts/<set-name>/` directory,
 layout: thought
 title: Thoughts Set
 subtitle: Set Thought 1
-tags: [ all, thoughts_set ]
+set: thoughts_set
 ---
 ```
+
+Currently, the code is not set up to handle thoughts that are part of a set **and** contain tags.
 
 ### `css/`
 This directory only has one file — `main.scss`. This is where I can keep _all_ of the CSS that this project uses. To make sure it's all being used, there are two very important lines in the `_includes/head.html`:
