@@ -19,10 +19,7 @@
   </span>
 
   <br>
-
-  <a href="{{ site.baseurl }}{{ thought_url }}">
-    {{ short_title }}
-  </a>
+  <a href="{{ site.baseurl }}{{ thought_url }}">{{ short_title }}</a>
 
   {% if thought.set %}
     {% unless page.set %}
@@ -33,6 +30,5 @@
     {% assign tags_list = thought.tags | sort %}
     {% include tags_list.html %}
   {% endif %}
-
   <br><br>
 </li>
