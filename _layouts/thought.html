@@ -5,6 +5,7 @@ layout: default
 <div class="row" style="display: flex">
   <div class="column" align="center" style="flex: 0%; padding-top: 2%; padding-right: 10px">
     {% include all_thoughts_button.html %}
+
     {% if page.set %}
       {% include set_sidebar.html %}
     {% else %}
@@ -13,25 +14,7 @@ layout: default
   </div>
 
   <div class="column" align="left" style="flex: 45%; padding-top: 0%">
-    {% if page.subtitle %}
-      <h1>
-        {{ page.title }}
-        <br>
-        <div style="font-size: 22px">
-          &nbsp;&nbsp;☞ {{ page.subtitle }}
-        </div>
-      </h1>
-    {% else %}
-      <h1>{{ page.title }}</h1>
-    {% endif %}
-    <p style="font-size: 2; font-style: italic">
-      {% if page.draft == true %}
-        Unpublished
-      {% else %}
-        Published {{ page.date | date: "%B %-d, %Y" }}
-      {% endif %}
-    </p>
-
+    {% include thought_title.html %}
     {{ content }}
   </div>
 </div>
