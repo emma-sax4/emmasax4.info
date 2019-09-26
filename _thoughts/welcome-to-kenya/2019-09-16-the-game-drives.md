@@ -2,7 +2,7 @@
 layout: thought
 title: Welcome to Kenya
 subtitle: "Part 2: The Game Drives"
-tags: [ all, welcome_to_kenya ]
+set: welcome_to_kenya
 ---
 
 ## The Big 5
