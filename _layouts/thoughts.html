@@ -2,9 +2,10 @@
 layout: default
 ---
 
-{% assign draft_thoughts = site.posts %}
-{% assign published_thoughts = site.thoughts | where: "layout", "thought" | sort: "date" | reverse %}
-{% assign all_thoughts = draft_thoughts | concat: published_thoughts %}
+{% assign draft_thoughts = site.thoughts | where: "draft", "true" %}
+{% assign published_thoughts = site.thoughts | where: "layout", "thought" | where_exp: "thought", "thought.draft != true" %}
+{% assign sorted_published_thoughts = published_thoughts | sort: "date" | reverse %}
+{% assign all_thoughts = draft_thoughts | concat: sorted_published_thoughts %}
 
 {% unless page.tag == "all" %}
   <div class="row" style="display: flex">
