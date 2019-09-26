@@ -85,7 +85,7 @@ Women and mothers take care of the children, take care of the livestock, do bead
   <a data-flickr-embed="true"  href="https://www.flickr.com/photos/184539266@N08/48799451886/in/album-72157710860887528/" title="samburu_village_children"><img src="https://live.staticflickr.com/65535/48799451886_edfe7f12da.jpg" width="500" height="333" alt="samburu_village_children"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
 </div>
 
-## The Equator ☞ [Sweetwaters Serena Camp](https://www.serenahotels.com/serenasweetwaters/en/default.html)
+## Ol Pejeta ☞ [Sweetwaters Serena Camp](https://www.serenahotels.com/serenasweetwaters/en/default.html)
 
 ## Lake Naivasha ☞ [Sopa Resort](https://www.sopalodges.com/lake-naivasha-sopa-resort/the-resort)
 
