@@ -1,9 +1,0 @@
-<div class="column" align="center" style="flex: 0%; padding-top: 2%; padding-right: 10px">
-  <a href="{{ "/thoughts" | relative_url }}" class="myButton">
-    All Thoughts
-  </a>
-
-  <br>
-  {% assign main_tags = page.tags | shift | sort %}
-  {% include tags_list.html %}
-</div>
