@@ -1,7 +1,7 @@
 ---
 layout: thought
 title: Adding Pagination without Jekyll
-tags: [ all, tech, jekyll ]
+tags: [ tech, jekyll ]
 ---
 
 As I stated in my original _[Switching to Jekyll](/thoughts/all/2019-09-09-switching-to-jekyll)_ post, one of the original reasons I wanted to move to a Jekyll-based site was so that I could implement pagination on my Thoughts page(s). Converting my site to Jekyll was definitely challenging, and it involved me learning a new framework and a new language (Liquid). And therefore, the [pull request that made the switch](https://github.com/emma-sax4/emma-sax4.github.io/pull/6) was massive, and took a while—it had 54 changed files and 19 commits. Because of this, I decided that pagination should come in a separate pull request. And then, because I'm in my "website-phase", I thought I'd write a thought about it 🤷🏻‍♀️😂.

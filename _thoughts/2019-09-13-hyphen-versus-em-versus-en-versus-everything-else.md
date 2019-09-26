@@ -1,7 +1,6 @@
 ---
 layout: thought
 title: Hyphen vs. Em vs. En vs. Everything Else
-tags: [ all ]
 ---
 
 As I've begun working on this website, I've figured that I tend to use this punctuation a lot:
