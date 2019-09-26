@@ -1,12 +1,12 @@
-{% unless main_tags.size == 0 %}
+{% unless tags_list.size == 0 %}
+  {% assign tag_url = tag | replace: "_", "-" %}
+
   <br>
   <span class="thought-meta">
     Tags:
-    {% for tag in main_tags %}
-      {% assign tag_url = tag | replace: "_", "-" %}
-      <a href="{{ "/thoughts/" | append: tag_url | relative_url }}">
-        {{ tag }}</a>
-      {% unless tag == main_tags.last %}
+    {% for tag in tags_list %}
+      <a href="{{ "/thoughts/" | append: tag_url | relative_url }}">{{ tag }}</a>
+      {% unless tag == tags_list.last %}
         |
       {% endunless %}
     {% endfor %}
