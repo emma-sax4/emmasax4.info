@@ -3,7 +3,6 @@ layout: thoughts
 title: Welcome to Kenya
 permalink: /thoughts/welcome-to-kenya
 set: welcome_to_kenya
-is_list: true
 ---
 
 <h1>{{ page.title }}</h1>
