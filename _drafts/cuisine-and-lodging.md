@@ -2,8 +2,7 @@
 layout: thought
 title: Welcome to Kenya
 subtitle: "Part 3: The Cuisine and the Lodging"
-tags: [ ] # [ all ]
-set: # welcome_to_kenya
+set: welcome_to_kenya
 draft: true
 ---
 
