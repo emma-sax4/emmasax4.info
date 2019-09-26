@@ -1,5 +1,5 @@
 ---
-layout: set
+layout: thoughts
 title: Welcome to Kenya
 permalink: /thoughts/welcome-to-kenya
 set: welcome_to_kenya

@@ -11,57 +11,61 @@ layout: default
     <div class="column" align="left" style="flex: 45%; padding-top: 0%">
 {% endunless %}
 
-      {{ content }}
+{{ content }}
 
-      {% assign draft_thoughts = site.posts %}
-      {% assign published_thoughts = site.thoughts | sort: "date" | reverse %}
-      {% assign thoughts = draft_thoughts | concat: published_thoughts %}
+{% assign draft_thoughts = site.posts %}
+{% assign published_thoughts = site.thoughts | sort: "date" | reverse %}
+{% assign thoughts = draft_thoughts | concat: published_thoughts %}
 
-      <div id="thoughts">
-        <ul class="list" style="list-style: none">
-          {% for thought in thoughts %}
-            {% if thought.tags contains page.tag and thought.url != page.url %}
-              <li>
-                {% assign thought_url = thought.url | replace: ".html", "" | relative_url %}
-                {% if thought.subtitle %}
-                  {% if page.tag == "all" %}
-                    {% assign short_title = thought.title | append: " ☞ " | append: thought.subtitle %}
-                  {% else %}
-                    {% assign short_title = thought.subtitle %}
-                  {% endif %}
-                {% else %}
-                  {% assign short_title = thought.title %}
-                {% endif %}
-
-                {% if thought.draft == true %}
-                  <span class="thought-meta">
-                    Unpublished
-                  </span>
-                {% else %}
-                  <span class="thought-meta">
-                    {{ thought.date | date: "%B %-d, %Y" }}
-                  </span>
-                {% endif %}
-
-                <br>
-                <a href="{{ site.baseurl }}{{ thought_url }}">{{ short_title }}</a>
-                {% if thought.set %}
-                  {% assign set_name = thought.set %}
-                  {% include set_list.html %}
-                {% else %}
-                  {% assign main_tags = thought.tags | shift | sort %}
-                  {% include tags_list.html %}
-                {% endif %}
-                <br><br>
-              </li>
+<div id="thoughts">
+  <ul class="list" style="list-style: none">
+    {% for thought in thoughts %}
+      {% if thought.url != page.url %}
+        {% if thought.tags contains page.tag or thought.set contains page.set %}
+          <li>
+            {% assign thought_url = thought.url | replace: ".html", "" | relative_url %}
+            {% if thought.subtitle %}
+              {% if page.tag == "all" %}
+                {% assign short_title = thought.title | append: " ☞ " | append: thought.subtitle %}
+              {% else %}
+                {% assign short_title = thought.subtitle %}
+              {% endif %}
+            {% else %}
+              {% assign short_title = thought.title %}
             {% endif %}
-          {% endfor %}
-        </ul>
 
-        <nav class="paginate-container" aria-label="Pagination">
-          <div class="pagination"></div>
-        </nav>
-      </div>
+            {% if thought.draft == true %}
+              <span class="thought-meta">
+                Unpublished
+              </span>
+            {% else %}
+              <span class="thought-meta">
+                {{ thought.date | date: "%B %-d, %Y" }}
+              </span>
+            {% endif %}
+
+            <br>
+            <a href="{{ site.baseurl }}{{ thought_url }}">{{ short_title }}</a>
+            {% if thought.set %}
+              {% unless page.set %}
+                {% assign set_name = thought.set %}
+                {% include set_list.html %}
+              {% endunless %}
+            {% else %}
+              {% assign main_tags = thought.tags | shift | sort %}
+              {% include tags_list.html %}
+            {% endif %}
+            <br><br>
+          </li>
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  </ul>
+
+  <nav class="paginate-container" aria-label="Pagination">
+    <div class="pagination"></div>
+  </nav>
+</div>
 
 {% unless page.tag == "all" %}
     </div>
