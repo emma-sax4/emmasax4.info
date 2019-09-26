@@ -28,7 +28,7 @@ The Ark was certainly the most unique place we stayed. The entire hotel/resort w
 
 During the day, the watering hole and surrounding area has hyenas, buffalo, and warthogs. At night, the elephants come out, and stay for hours eating the nutrients (that are meticulously placed) in the dirt, and playing.
 
-The rooms are small, but that's by design. They feel cozy and snug. The hallways are a maze, but you only need to know where to go a few places: your room, the entrance/exit, the decks, and the buffet room (but you can get to the food from the decks).
+The rooms are small, but that's by design. They feel cozy and snug. The hallways are a maze, but you only need to know where to go a few places: your room, the entrance/exit, the decks, and the restaurant (but you can get to the food from the decks).
 
 <div align="center">
   <a data-flickr-embed="true"  href="https://www.flickr.com/photos/184539266@N08/48797244476/in/album-72157710860887528/" title="the_ark"><img src="https://live.staticflickr.com/65535/48797244476_b8b7e63c5d_o.jpg" width="600" height="450" alt="Our rooms at the Ark"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
