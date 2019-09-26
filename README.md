@@ -40,9 +40,6 @@ GitHub automatically deploys each commit to master branch. A full deploy only ta
 ## Structure of this Project
 ```
 .
-├── _drafts
-|   ├── thought-draft.md
-|   └── set-thought-draft.md
 ├── _includes
 |   ├── footer.html
 |   └── header.html
@@ -55,9 +52,11 @@ GitHub automatically deploys each commit to master branch. A full deploy only ta
 |   ├── thoughts-set
 |   |   ├── 2001-01-01-set-thought-01.md
 |   |   ├── 2001-01-02-set-thought-02.md
+|   |   ├── set-thought-draft.md
 |   |   └── thoughts_set.md
 |   ├── 2001-01-01-thought-01.md
 |   ├── 2001-01-02-thought-02.md
+|   ├── thought-draft.md
 |   └── tag_name.md
 ├── css
 |   └── main.scss
@@ -80,37 +79,6 @@ GitHub automatically deploys each commit to master branch. A full deploy only ta
 ```
 
 Let's go through what each section does, from the top.
-
-### `_drafts/`
-This is where we can place all of the thoughts that we're not ready to publish yet. There's no need to put any thoughts into subdirectories in here, usually there's only a few drafts at a time, so it's not a big deal to leave them in the base directory. The front matter of a draft should look something like this for a generic draft:
-```
----
-layout: thought
-title: Thought Draft
-tags: [ tag_name, another_tag_name ]
-draft: true
----
-```
-
-For a draft that will eventually be a part of a set, use the `title` and `subtitle` metadata, and make sure to add the proper set name as a tag as well:
-```
----
-layout: thought
-title: Thoughts Set
-subtitle: Set Thought Draft
-set: thoughts_set
-draft: true
----
-```
-
-When a draft is ready to be published, move it into the appropriate `_thoughts/` directory, add the date into the name of the file (in `YYYY-MM-DD` format), and remove the `draft: true` front matter.
-
-Drafts can only be seen when working locally (that's the point of a draft!). So, to run this project to see drafts, add the `--drafts` flag:
-```
-jekyll serve --drafts
-```
-
-The drafts should appear at the top of the list of thoughts on any thoughts list page.
 
 ### `_includes/`
 HTML files in this directory are for page elements, such as the header, footer, buttons, etc. Each element belongs in its own file. By placing these elements here, they can be reused on multiple pages without duplicating any code, and they reduce the clutter in busy pages. To call one of the elements, simply include the file in any other Markdown/HTML file:
@@ -188,6 +156,15 @@ set: thoughts_set
 ```
 
 Currently, the code is not set up to handle thoughts that are part of a set **and** contain tags.
+
+#### Writing Drafts
+
+To write a draft, write a new thought in the proper directory, and then make sure the front matter contains the following:
+```
+draft: true
+```
+
+Any drafts should appear at the top of the list of thoughts, and should show as "Unpublished".
 
 ### `css/`
 This directory only has one file — `main.scss`. This is where I can keep _all_ of the CSS that this project uses. To make sure it's all being used, there are two very important lines in the `_includes/head.html`:
