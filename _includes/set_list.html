@@ -1,7 +1,8 @@
 {% assign set_url = set | replace: "_", "-" %}
+{% assign set_name = set | replace: "_", " " %}
 
 <br>
 <span class="thought-meta">
   Set:
-  <a href="{{ "/thoughts/" | append: set_url | relative_url }}">{{ set }}</a>
+  <a href="{{ "/thoughts/" | append: set_url | relative_url }}">{{ set_name }}</a>
 </span>
