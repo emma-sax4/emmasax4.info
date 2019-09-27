@@ -159,12 +159,14 @@ Currently, the code is not set up to handle thoughts that are part of a set **an
 
 #### Writing Drafts
 
+Drafts should always be written in a pull request in new branch. This will allow the author of the thought to let it sit for as long as necessary, before feeling pressured to finish the thought.
+
 To write a draft, write a new thought in the proper directory, and then make sure the front matter contains the following:
 ```
 draft: true
 ```
 
-Any drafts should appear at the top of the list of thoughts, and should show as "Unpublished".
+Any drafts should appear at the top of the list of thoughts, and should show as "Unpublished". When it's time to publish a draft, rename the file to include the publishing date (in `YYYY-MM-DD-` format... follow the previous thought examples), and remove the `draft: true` line from the front matter.
 
 ### `css/`
 This directory only has one file — `main.scss`. This is where I can keep _all_ of the CSS that this project uses. To make sure it's all being used, there are two very important lines in the `_includes/head.html`:
