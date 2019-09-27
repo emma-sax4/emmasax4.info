@@ -14,6 +14,6 @@
   {% if page.draft == true %}
     Unpublished
   {% else %}
-    {{ page.date | date: "%B %-d, %Y" }}
+    Published {{ page.date | date: "%B %-d, %Y" }}
   {% endif %}
 </p>
