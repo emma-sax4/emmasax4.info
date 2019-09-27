@@ -87,12 +87,79 @@ Women and mothers take care of the children, take care of the livestock, do bead
 
 ## Ol Pejeta ☞ [Sweetwaters Serena Camp](https://www.serenahotels.com/serenasweetwaters/en/default.html)
 
+Ol Pejeta's Sweetwaters Serena Camp was my favorite place we stayed. It's a tented camp, which means each suite is a full tent. However, it's not the types of tents that you'd think of when it comes to camping. These tents are on solid tile/wood/brick bases, have solid roofs, and have full bathrooms inside of them, including a toilet, shower, and sink. The tents were clean and well-kept. Take a look at the inside of one of the tents!
+
+<div align="center">
+  <a data-flickr-embed="true"  href="https://www.flickr.com/photos/184539266@N08/48796885958/in/album-72157710860887528/" title="sweetwaters"><img src="https://live.staticflickr.com/65535/48796885958_594a93b9e1.jpg" width="375" height="500" alt="sweetwaters"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+</div>
+
+The walk from the main resort buildings to the tents was also quite relaxing and beautiful. We even saw a strange bird land on the resort, as well as a couple of small gazelles.
+
+All of the resorts had very similar type of food, but one super cool thing that Sweetwaters Serena Camp did was they had a made-to-order pasta bar at lunch and dinner. They provided several options of types of pastas, several types of sauces, and then each person could select their own vegetables to mix with the pasta. It was very yummy 🍝!
+
+Sweetwaters Serena Camp is on the Equator. No joke, the sign at the entrance gave the latitude and longitude—latitude was 00.00:
+
+<div align="center">
+  <a data-flickr-embed="true"  href="https://www.flickr.com/photos/184539266@N08/48802026607/in/album-72157710860887528/" title="Sweetwaters Serena Camp"><img src="https://live.staticflickr.com/65535/48802026607_8bb9580f56.jpg" width="500" height="375" alt="Sweetwaters Serena Camp"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+</div>
+
+So, walking around in direct sunlight was a bit hot. However, as the night came, the air cooled off to a chilly 55°F. However, it wasn't too cold for my Minnesota blood, and I was just fine without a jacket.
+
+That is... until we went for the night game drive. One of the add-ons that I chose to do was night game drive that the resort provided. Read more about that excursion [here](/thoughts/welcome-to-kenya/2019-09-16-the-game-drives). I did get a bit chilly on that adventure, but it was well worth it (my fault... I had a jacket in the tent and just didn't bring it with me on the game drive).
+
+The other amazing thing about Sweetwaters Serena Camp is the view. Most of our tents were right along a super long fence, and on the other side of the fence was a watering hole with lots of animals. From the entrance to our tent, it just felt like we could see so far in nature, and we could see so many buffalos and elephants. It was truly beautiful and peaceful. Feel free to check out more about Sweetwaters Serena Camp at their website ☝🏼.
+
 ## Lake Naivasha ☞ [Sopa Resort](https://www.sopalodges.com/lake-naivasha-sopa-resort/the-resort)
+
+Our afternoon in Lake Naivasha was designed to be relaxing. Although we did go on a hippopotamus-viewing boat ride, once we actually got to the resort, we just hung out for the rest of the afternoon.
+
+The Sopa Resort, where we stayed, featured a (very) long walk from the main resort to the cabins, and we took that opportunity to get some exercise. To provide a little bit of context, there were four suites per cabin structure (two on the ground floor, and two on the top floor), and there were 82 suites. However, the entire walk was delightful! It was completely paved, and each cabin looked exactly like the one next to it, which made them seem very cookie-cutter.... I actually liked that. It probably helped that my partner and I stayed in suite #2.
+
+The only truly awesome thing about the cuisine at Sopa Resort (that made it stand out), was that it was my birthday the night we stayed there. Our trip leader must've mentioned that it was my birthday to the staff, because they brought out a cake for me, and all of the staff did a "congo" line, and they sang a native Kenyan song (which featured the words "hakuna matata") to celebrate my birthday. The chocolate cake was _really_ good, too.
+
+One famous thing about the Sopa Resort is that they're known for having hippopotamuses out grazing during the night. During the day, hippos lay around in and around water to keep cool. But at night, they come out and graze on grass. Although there is a fence between the cabins and the "wild", the hippos step right over the fence to get more grass! Rumor has it that just last year, a tourist died because he tried to go up to a hippo to get a picture. So, Sopa Resort was our first experience where we had to be "escorted" back to our cabins at night.
+
+Essentially, any time between when the sun sets and 7am the next morning, the resort recommends visitors be escorted back to their cabins. I believe this was for safety with the animals; if the visitors come across a hippo or another animals, then the security guards can take care of the visitors and potentially try to scare away the animals. Except hippos... you just back up slowly and carefully and wait for the hippo to leave (they're dangerous). At first, this wasn't so bad, until we realized that whenever you receive an escort, you need to tip the security guard... hence one of the reasons why we spent so much on tips on this trip 💵.
+
+However, if you're lucky, your cabin windows (or deck on a top floor), give you a beautiful chance to see some hippos out of the water. My partner and I stayed up trying to look for the hippos, and we even got up periodically in the middle of the night just to look out the windows to see if we could see anything. But we weren't so lucky. It was nice that our suite provided us a little couch to sit on while we gazed out the windows though:
+
+<div align="center">
+  <a data-flickr-embed="true"  href="https://www.flickr.com/photos/184539266@N08/48796885438/in/album-72157710860887528/" title="sopa_lake_naivasha"><img src="https://live.staticflickr.com/65535/48796885438_df62bf99d7.jpg" width="375" height="500" alt="sopa_lake_naivasha"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+  <a data-flickr-embed="true"  href="https://www.flickr.com/photos/184539266@N08/48797382142/in/album-72157710860887528/" title="sopa_lake_naivasha_2"><img src="https://live.staticflickr.com/65535/48797382142_d96980a318.jpg" width="500" height="375" alt="sopa_lake_naivasha_2"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+</div>
+
+Feel free to check out even more pictures from Sopa Resort's gallery on their website!
 
 ## Maasai Mara ☞ [Fig Tree Camp](https://www.maasaimara.com/entries/fig-tree-camp)
 
+Fig Tree Camp in the Maasai Mara was the last place we stayed. Fig Tree Camp is another tented camp, and unfortunately we weren't able to get a picture of our tents at this location. However, the fascinating thing about this resort was that the paths to get from one were lined with bones. I'm sure that locals just pick up random bones they find out on the savanna and bring them back to the resort. They had buffalo skulls, spines, an elephant skull, and more!
+
+But if I'm completely honest, the thing I'll remember most about Fig Tree Camp was the walk from the main resort shelter to our tent. We were at tent 47. Our tent was so far away that the first employee we asked to escort us to the tent didn't know where it was—he needed to ask another employee. Our tent was so far away that the stone-paved path eventually disappeared and became a dirt path. Our tent was so far away that we could visibly tell there were less lights indicating our path as we went on. Sometimes, I felt like that walk was a mile long.
+
+However, one cool thing was that all of the tents were almost completely surrounded by a river. In this river, hippos and crocodiles live. We did decide twice to tip a security guard extra to take us to the other side of the tents to try to view the hippos. We did indeed see about five hippos (including babies), and at least one crocodile sitting on the side of the river. They did make noise, but my partner and I didn't stick around long enough to hear them. But, other travellers in our group claimed that the hippo song came on at about 5am each morning (promptly waking all of those shore-tents up). They also told us that security guards were pacing around the tents all night, listening for any strange noises or any indication that a primate may have gotten into a tent. So maybe our tent was far away, but at least we got a good night's rest 🤷🏻‍♀️.
+
+Like some of the other resorts, Fig Tree Camp also offered a special excursion: a sunrise hot air balloon ride over the bush. Of course my partner and I did it! It was our first hot air balloon ride, too. We woke up at the crack of dawn (actually more like 5:30am), and made our way to the center of the resort at 6:30am. After the balloon ride completed (yes, we did see animals playing, walking, and relaxing), we finished the morning with a buffet breakfast, champagne, and mimosas on the bush (provided by the resort).
+
+Oh, the last thing I'll mention about Fig Tree Camp: they had limited times the power and hot water was on. The power was on in the morning and afternoon/evening, and the hot water ran in the morning (from maybe 6am-9am), and in the evening (approximately 6pm-9pm). I know because the morning of the hot air balloon ride, I took an ice-cold shower.
+
 ### The Maasai Village Visit
+
+On our last day before heading home, we got the opportunity to visit one more Kenyan tribe: the Maasai tribe. To me, the two tribes look very similar, although I'm sure they would beg to differ. I will say that they don't wear the same types of clothes, and they style their hair and jewelry differently. The Samburu tribe wear a variety of different colored fabric and have shorter hair. The Maasai tribe wear primarily red fabric, have longer hair, and wear more earrings and long necklaces.
+
+Similarly to the Samburu tribe, the boys become warriors around age 15, after a live circumcision, and a ritual (which in the past usually involved killing some dangerous creature, such as a male lion). Women are married around 20, and warriors become elders around age 45. Warriors can marry multiple women, depending on livestock, power, and status. But there were a few other differences as well.
+
+The Samburu tribe lives in huts made out of pieces of metal, fabric, and wood. The Maasai tribes make their homes out of branches and animal excrement, so it almost looks like real walls (excpet I didn't touch them). Both of them involve crouching down, and their doors are narrow. In the Maasai tribe, what side of the home the door is on indicates what number wife made the home: a husband's first wife's door is on the left, the second wife's door is on the right, and then all of the husband's other wives' houses follow in a line from there, with each door on the right. The Maasai tribe said the first wife is usually chosen for status and money. The second, third, and so on are all chosen based on "love" or romantic interest.
+
+Also, the Samburu village was just a bunch of huts in a scattered area. But the Maasai village's homes were actually in a full circle, with a big open space in the middle. Between each home is a fence, which they actually shut at night. At night, the village brings all of their livestock inside the circle to protect it from predation and escaping. However, what that means is that the entire village's ground is covered in animal (usually cow) excrement. There wasn't even a point to trying to avoid stepping on it; it was just everywhere. The Samburu village, by contrast, felt much cleaner.
+
+The last thing I'll mention is that both tribes do a type of ceremonial activity where the boys/warriors will jump vertically in the air. A woman decides which man is a good suitor based on how high he can jump—the higher the better. While watching an example ceremony take place, we also learned that the men in the Maasai tribe don't wear underwear underneath their clothes... don't ask us how.
+
+<div align="center">
+  <a data-flickr-embed="true"  href="https://www.flickr.com/photos/184539266@N08/48799594437/in/album-72157710860887528/" title="maasai_village_jumping_ceremony"><img src="https://live.staticflickr.com/65535/48799594437_a54226509b.jpg" width="281" height="500" alt="maasai_village_jumping_ceremony"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+  <a data-flickr-embed="true"  href="https://www.flickr.com/photos/184539266@N08/48799451771/in/album-72157710860887528/" title="maasai_village"><img src="https://live.staticflickr.com/65535/48799451771_0b6e938b59.jpg" width="356" height="500" alt="maasai_village"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+  <a data-flickr-embed="true"  href="https://www.flickr.com/photos/184539266@N08/48799595727/in/album-72157710860887528/" title="maasai_mara_village_in_ceremony"><img src="https://live.staticflickr.com/65535/48799595727_ee144de5d9.jpg" width="500" height="375" alt="maasai_mara_village_in_ceremony"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+</div>
 
 ## Conclusion
 
-At the end of the day, we stayed in some incredible resorts in Kenya. They were definitely for the "luxury-safari-traveller", and we enjoyed every minute of our stays. The food kept us fulfilled and ready for adventure, and we managed to get a sound night's sleep each night (except that one night where I was suffering from some traveller's diarrhea 🤢, but that's another story, and one I won't both disclosing to you here). If you choose to visit Kenya—which I higly recommend—just be sure you remember your small dollar bills to tip with... the tipping community in Kenya is huge!
+At the end of the day, we stayed in some incredible resorts in Kenya. They were definitely for the "luxury-safari-traveller", and we enjoyed every minute of our stays. The food kept us fulfilled and ready for adventure, and we managed to get a sound night's sleep each night (except that one night where I was suffering from some traveller's diarrhea 🤢, but that's another story, and one I won't both disclosing to you here). If you choose to visit Kenya—which I higly recommend—just be sure you remember your small dollar bills to tip with... tipping in Kenya is expected!
