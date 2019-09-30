@@ -1,6 +1,2 @@
 sudo: false
-dist: trusty
-branches:
-  only:
-    - master
 script: true
