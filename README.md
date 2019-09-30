@@ -64,6 +64,7 @@ Here are all of the parts of this project associated with running this applicati
 |   ├── 2001-01-03-thought-01.md
 |   ├── 2001-01-04-thought-02.md
 |   ├── thought-draft.md
+|   ├── another_tag_name.md
 |   └── tag_name.md
 ├── css
 |   └── main.scss
@@ -149,7 +150,7 @@ If I'm going to write a set of thoughts that all have a common theme, they can g
 layout: thoughts
 title: Thoughts Set
 permalink: /thoughts/thoughts-set
-set: thoughts_set
+set: Thoughts Set
 ---
 
 <h1>{{ page.title }}</h1>
@@ -165,7 +166,7 @@ Each individual thought should sit inside the `_thoughts/<set-name>/` directory,
 layout: thought
 title: Thoughts Set
 subtitle: Set Thought 1
-set: thoughts_set
+set: Thoughts Set
 ---
 ```
 
