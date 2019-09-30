@@ -6,14 +6,18 @@ layout: default
   <div class="column" align="center" style="flex: 0%; padding-top: 2%; padding-right: 10px">
     {% include all_thoughts_button.html %}
     {% if page.set %}
-      {% include set_sidebar.html %}
+      <br>
+      {% assign set = page.set %}
+      {% include set_list.html %}
     {% else %}
-      {% include tags_sidebar.html %}
+      <br>
+      {% assign tags = page.tags | sort %}
+      {% include tags_list.html %}
     {% endif %}
   </div>
 
   <div class="column" align="left" style="flex: 45%; padding-top: 0%">
-    {% include thought_title.html %}
+    {% include thought_summary_for_show.html %}
     {{ content }}
   </div>
 </div>
