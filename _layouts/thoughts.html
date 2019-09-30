@@ -22,7 +22,7 @@ layout: default
         <ul class="list" style="list-style: none">
           {% for thought in all_thoughts %}
             {% if thought.tags contains page.tag or thought.set contains page.set or page.tag == "all" %}
-              {% include thought_summary.html %}
+              {% include thought_summary_for_lists.html %}
             {% endif %}
           {% endfor %}
         </ul>
