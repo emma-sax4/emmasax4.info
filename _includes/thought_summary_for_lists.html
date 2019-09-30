@@ -1,5 +1,5 @@
 <li>
-  {% assign thought_url = thought.url | replace: ".html", "" | relative_url %}
+  {% assign thought_url = thought.url | downcase | replace: ".html", "" | relative_url %}
   {% if thought.subtitle %}
     {% if page.tag == "all" %}
       {% assign short_title = thought.title | append: " ☞ " | append: thought.subtitle %}
@@ -27,7 +27,7 @@
       {% include set_list.html %}
     {% endunless %}
   {% else %}
-    {% assign tags_list = thought.tags | sort %}
+    {% assign tags = thought.tags | sort %}
     {% include tags_list.html %}
   {% endif %}
   <br><br>
