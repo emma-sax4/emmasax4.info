@@ -1,8 +1,5 @@
 sudo: false
-dist: trusty
 language: ruby
 cache: bundler
-branches:
-  only:
-    - master
+branches: only: master
 script: true
