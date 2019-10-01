@@ -67,7 +67,12 @@ The food was incredible. From our first buffet meal, it was clear that their foo
 
 They provided an array of extra activities we could do. Our tour guide set up a happy-hour for us that was hosted by the resort. We all went "into the bush", and they provided live Kenyan music, a guest from a Samburan tribe to talk to us about his village and his life, wine, cocktails, and appetizers. They had a cook who was also very good at photography, and he took several of us down to a river nearby to take some pictures of the setting sun.
 
-I forgot to take any pictures of Sarova Shaba Game Lodge, and that's really a pity; the best thing about this resort was the beautiful resort grounds. But, the good news is that their website has plenty of pictures featuring the resort.
+I forgot to take any pictures of the exterior of Sarova Shaba Game Lodge, and that's really a pity; the best thing about this resort was the beautiful resort grounds. But, the good news is that their website has plenty of pictures featuring the resort grounds. Here's one picture of our room and one of the buffet line:
+
+<div align="center">
+  <a data-flickr-embed="true"  href="https://www.flickr.com/photos/184539266@N08/48826445063/in/album-72157710860887528/" title="Sarova_Shaba"><img src="https://live.staticflickr.com/65535/48826445063_a4575a3694.jpg" width="500" height="375" alt="Sarova Shaba room"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+  <a data-flickr-embed="true"  href="https://www.flickr.com/photos/184539266@N08/48826445088/in/album-72157710860887528/" title="The ark&#x27;s buffet line"><img src="https://live.staticflickr.com/65535/48826445088_3132fa06a3.jpg" width="375" height="500" alt="The ark&#x27;s buffet line"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+</div>
 
 ### The Samburu Village Visit
 
@@ -82,6 +87,9 @@ Women and mothers take care of the children, take care of the livestock, do bead
 <div align="center">
   <a data-flickr-embed="true"  href="https://www.flickr.com/photos/184539266@N08/48799101398/in/album-72157710860887528/" title="samburu_village"><img src="https://live.staticflickr.com/65535/48799101398_fff90651b6.jpg" width="500" height="375" alt="samburu_village"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
   <a data-flickr-embed="true"  href="https://www.flickr.com/photos/184539266@N08/48799451886/in/album-72157710860887528/" title="samburu_village_children"><img src="https://live.staticflickr.com/65535/48799451886_edfe7f12da.jpg" width="500" height="333" alt="samburu_village_children"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+  <a data-flickr-embed="true"  href="https://www.flickr.com/photos/184539266@N08/48826820661/in/album-72157710860887528/" title="Samburu_village"><img src="https://live.staticflickr.com/65535/48826820661_aed40f6716.jpg" width="500" height="281" alt="Samburu_village"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+  <a data-flickr-embed="true"  href="https://www.flickr.com/photos/184539266@N08/48826444963/in/album-72157710860887528/" title="Samburu_hut"><img src="https://live.staticflickr.com/65535/48826444963_e60dced23d.jpg" width="500" height="375" alt="The hut in the Samburu village"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+  <a data-flickr-embed="true"  href="https://www.flickr.com/photos/184539266@N08/48826445033/in/album-72157710860887528/" title="Samburu_elders"><img src="https://live.staticflickr.com/65535/48826445033_dbaa06b427.jpg" width="500" height="375" alt="Samburu_elders"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
 </div>
 
 ## Ol Pejeta ☞ [Sweetwaters Serena Camp](https://www.serenahotels.com/serenasweetwaters/en/default.html)
@@ -125,6 +133,7 @@ However, if you're lucky, your cabin windows (or deck on a top floor), gives you
 <div align="center">
   <a data-flickr-embed="true"  href="https://www.flickr.com/photos/184539266@N08/48796885438/in/album-72157710860887528/" title="sopa_lake_naivasha"><img src="https://live.staticflickr.com/65535/48796885438_df62bf99d7.jpg" width="375" height="500" alt="sopa_lake_naivasha"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
   <a data-flickr-embed="true"  href="https://www.flickr.com/photos/184539266@N08/48797382142/in/album-72157710860887528/" title="sopa_lake_naivasha_2"><img src="https://live.staticflickr.com/65535/48797382142_d96980a318.jpg" width="500" height="375" alt="sopa_lake_naivasha_2"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+  <a data-flickr-embed="true"  href="https://www.flickr.com/photos/184539266@N08/48826444793/in/album-72157710860887528/" title="Lake_Naivasha"><img src="https://live.staticflickr.com/65535/48826444793_45dfe8f14d.jpg" width="500" height="375" alt="Lake_Naivasha"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
 </div>
 
 Feel free to check out even more pictures from Sopa Resort's gallery on their website!
@@ -140,6 +149,10 @@ However, one cool thing was that all of the tents were almost completely surroun
 Like some of the other resorts, Fig Tree Camp also offered a special excursion: a sunrise hot air balloon ride over the bush. Of course my partner and I did it! It was our first hot air balloon ride, too. We woke up at the crack of dawn (actually more like 5:30am), and made our way to the center of the resort at 6:30am. After the balloon ride completed (yes, we did see animals playing, walking, and relaxing), we finished the morning with a buffet breakfast, champagne, and mimosas on the bush (provided by the resort).
 
 Oh, the last thing I'll mention about Fig Tree Camp: they had limited times the power and hot water was on. The power was on in the morning and afternoon/evening, and the hot water ran in the morning (from maybe 6am-9am), and in the evening (approximately 6pm-9pm). I know because the morning of the hot air balloon ride, I took an ice-cold shower.
+
+<div align="center">
+  <a data-flickr-embed="true"  href="https://www.flickr.com/photos/184539266@N08/48826443083/in/album-72157710860887528/" title="Maasai_Mara_room"><img src="https://live.staticflickr.com/65535/48826443083_b335a58a4f.jpg" width="375" height="500" alt="Maasai_Mara_room"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+</div>
 
 ### The Maasai Village Visit
 
