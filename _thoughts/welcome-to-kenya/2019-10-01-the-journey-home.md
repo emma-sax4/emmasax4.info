@@ -3,7 +3,6 @@ layout: thought
 title: Welcome to Kenya
 subtitle: "Part 4: The Journey Home"
 set: Welcome to Kenya
-draft: true
 ---
 
 At the end of the trip, we ended in the Maasai Mara, approximately six hours away from Nairobi. So, we had a long day of travel ahead of us to start our journey home. But, our trip planners didn't want to have a boring last day, so they planned a few extra stops. Here's what our original itinerary for the day looked like:
