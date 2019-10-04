@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Theatre
+title: Theatre Resume
 permalink: /theatre-resume
 ---
 
