@@ -33,5 +33,5 @@ Before graduating college:
 * Student Campus Ambassador at UMM
 * Orientation Group Leader at UMM in 2016
 * Dance teacher to children
-* Participated in theatre around the Twin Cities (view a copy of my theatre resume [here](/resources/SaxTheatreResume.pdf))
+* Participated in theatre around the Twin Cities (view a copy of my theatre resume [here](/theatre-resume))
 * Volunteered at various nonprofit organizations in the Twin Cities
