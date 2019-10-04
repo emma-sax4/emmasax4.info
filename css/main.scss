@@ -66,6 +66,25 @@ h1 {
   font-size: 30px;
 }
 
+/* TABLES */
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 1px solid #606c71;
+}
+
+th {
+  border: 2px solid #606c71;
+  padding: 5px;
+}
+
+td {
+  border-top: 1px solid #606c71;
+  border-bottom: 1px solid #606c71;
+  padding: 5px;
+}
+
 /* NAVIGATION BAR */
 
 .topnav {
