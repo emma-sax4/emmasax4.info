@@ -17,6 +17,8 @@ class PullRequest
       puts "Could not create pull request:"
       if e.message.include?("pull request already exists")
         puts "  A pull request already exists for this branch"
+      elsif e.message.include?("No commits between master and")
+        puts "  No commits have been pushed to GitHub"
       else
         puts e.message
       end
