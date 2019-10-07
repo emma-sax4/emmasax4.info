@@ -1,6 +1,5 @@
 ---
 layout: resume
-title: Theatre Resume
 permalink: /theatre-resume
 back_link: /around-town
 ---
