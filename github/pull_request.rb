@@ -32,4 +32,4 @@ class PullRequest
   end
 end
 
-PullRequest.new(ARGV[0]).create_pull_request
+PullRequest.new(ARGV.join(" ")).create_pull_request
