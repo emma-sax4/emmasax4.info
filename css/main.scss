@@ -71,18 +71,31 @@ h1 {
 table {
   border-collapse: collapse;
   border-spacing: 0;
-  border: 1px solid #606c71;
+  // border: 1px solid #606c71;
+  padding: 5px;
 }
 
 th {
-  border: 2px solid #606c71;
+  // border: 2px solid #606c71;
   padding: 5px;
+  padding-right: 8px;
+  padding-left: 8px;
+}
+
+tr {
+  // border-top: 1px solid #606c71;
+  // border-bottom: 1px solid #606c71;
+  padding: 5px;
+  padding-right: 8px;
+  padding-left: 8px;
 }
 
 td {
-  border-top: 1px solid #606c71;
-  border-bottom: 1px solid #606c71;
+  // border-top: 1px solid #606c71;
+  // border-bottom: 1px solid #606c71;
   padding: 5px;
+  padding-right: 8px;
+  padding-left: 8px;
 }
 
 /* NAVIGATION BAR */
