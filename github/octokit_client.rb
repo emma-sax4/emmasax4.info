@@ -2,6 +2,8 @@ require 'yaml'
 require 'octokit'
 
 class OctokitClient
+  GITHUB_CONFIG_FILE = ".automation/config.yml"
+
   def client
     Octokit::Client.new(access_token: github_token)
   end
@@ -14,9 +16,3 @@ class OctokitClient
     Dir.pwd.scan(/\A\/[\w]*\/[\w]*\//).first << GITHUB_CONFIG_FILE
   end
 end
-
-# GITHUB_CONFIG_FILE = ".automation/config.yml"
-
-# private def octokit_client
-#   @octokit_client ||= OctokitClient.new.client
-# end
