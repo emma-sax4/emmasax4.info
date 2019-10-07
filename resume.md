@@ -1,6 +1,5 @@
 ---
 layout: resume
-title: Resume
 permalink: /resume
 back_link: /
 ---
