@@ -23,15 +23,19 @@ To run this application locally, following these steps:
     gem install bundler -v 1.17.3
     bundle install
     ```
-3. Then build the site using Jekyll:
+3. Initialize the submodule and make sure it's on commit `6a8733ea0f3c079fe4a37c1828297d8f661ccee8`. Once things are initialized, there should be no need to be committing to this directory.
+   ```
+   git submodule update --init --recursive
+   ```
+4. Then build the site using Jekyll:
     ```
     jekyll build
     ```
-4. Serve it up:
+5. Serve it up:
     ```
     jekyll serve
     ```
-5. Navigate to the local URL Jekyll provides (`http://127.0.0.1:4000` on my machine)
+6. Navigate to the local URL Jekyll provides (`http://127.0.0.1:4000` on my machine)
 
 NOTE: Running this process locally will most likely create at least one directory locally on your machine, such as `_site/`, `Gemfile.lock`, `.sass-cache/`, and potentially others. All of these are already in the `.gitignore`, but feel free to add others as necessary.
 
