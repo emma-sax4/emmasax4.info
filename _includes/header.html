@@ -1,7 +1,7 @@
 <header>
   <div class="topnav" style="text-align: center">
     <nav>
-      {% assign sorted_pages = site.pages | where_exp: "item", "item.order" | sort: "order" %}
+      {% assign sorted_pages = site.pages | where_exp: "item", "item.order" | sort: "order" | shift %}
 
       {% for node in sorted_pages %}
         {% if page.url == node.url or node.url contains page.collection and page.collection != null %}
