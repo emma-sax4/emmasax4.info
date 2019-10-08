@@ -8,7 +8,7 @@ For more information on contributing to this project, please see [CONTRIBUTING.m
 
 To submit a feature request or a bug ticket, please use submit an official [GitHub Issue](https://github.com/emma-sax4/emma-sax4.github.io/issues/new/choose).
 
-For information on licensing, please see [LICENSE](https://github.com/emma-sax4/emma-sax4.github.io/blob/master/.github/LICENSE).
+For information on licensing, please see [LICENSE](https://github.com/emma-sax4/emma-sax4.github.io/blob/master/LICENSE).
 
 A brief reminder that this repository does have a standard [Code of Conduct](https://github.com/emma-sax4/emma-sax4.github.io/blob/master/.github/CODE_OF_CONDUCT.md)... please follow it.
 
