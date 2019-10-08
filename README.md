@@ -123,9 +123,9 @@ These are the general pages in the top navigation bar of the site, although tech
 ```
 ---
 layout: default # the layout HTML to use (required for EVERY page)
-title: Page 1 # the title of this page (optional if the page is NOT in the navigation bar)
-order: 3 # the order of this page in the navigation bar (delete if the page is NOT in the navigation bar)
-permalink: /page1 # the static permalink this page should have (required for EACH page in this directory)
+title: Page 1 # the title of this page (optional if the page is NOT in the nav bar)
+order: 3 # the order of this page in the navigation bar (delete if the page is NOT in the nav bar)
+permalink: /page1 # the static link this page should have (required for EACH page in this directory)
 ---
 ```
 
