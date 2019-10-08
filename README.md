@@ -149,7 +149,7 @@ Then, you can reference those custom settings on other HTML files (such as the l
 
 This is the collection of "thoughts" that I've had ("thought"/"thoughts" are the very non-creative terms I've come up with instead of using "post"/"blog").
 
-#### Thoughts without a Set
+### Thoughts without a Set
 
 Most of the thoughts can just go into the general `_thoughts/` directory, written as Markdown files. For a generic thought, the front matter could look like this:
 ```
@@ -176,7 +176,7 @@ tag: tag_name
 
 The `tag` front matter indicates which thoughts to show on that page (only the thoughts with that tag will show).
 
-#### Thoughts in a Set
+### Thoughts in a Set
 
 If I'm going to write a set of thoughts that all have a common theme, they can go into a new nested directory: `_thoughts/<set-name>/`. If that's the case, then there should also be a Markdown file titled `<set-name>.md` inside that inner directory, which would serve as a table of contents for the thoughts in that set. Here's an example of what that table of contents page should look like:
 ```
@@ -206,7 +206,7 @@ set: Thoughts Set
 
 Currently, the code is not set up to handle thoughts that are part of a set **and** contain tags.
 
-#### Writing Drafts
+### Writing Drafts
 
 Drafts should always be written in a pull request in new branch. This will allow the author of the thought to let it sit for as long as necessary, before feeling pressured to finish the thought.
 
