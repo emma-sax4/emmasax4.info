@@ -16,19 +16,20 @@
 
 title: Emma Sax's Homepage
 repository: emma-sax4.github.io
-description: Emma Sax's personal website and blog.
+description: Emma's personal website
 github_username: emma-sax4
-email: emma.sax4@gmail.com
 url: https://emma-sax4.github.io
 
 future: true
 markdown: kramdown
-show_drafts: false
 
 sass:
   style: compressed
   load_paths:
     - primer/src/
+
+include:
+  - _pages
 
 exclude:
   - Gemfile

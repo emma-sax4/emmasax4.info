@@ -24,9 +24,9 @@ To run this application locally, following these steps:
     bundle install
     ```
 3. Initialize the submodule and make sure it's on commit `6a8733ea0f3c079fe4a37c1828297d8f661ccee8`. Once things are initialized, there should be no need to be committing to this directory.
-   ```
-   git submodule update --init --recursive
-   ```
+    ```
+    git submodule update --init --recursive
+    ```
 4. Then build the site using Jekyll:
     ```
     jekyll build
@@ -59,6 +59,10 @@ Here are all of the parts of this project associated with running this applicati
 |   ├── default.html
 |   ├── layout-01.html
 |   └── layout-02.html
+├── _pages
+|   ├── page-01.md
+|   ├── page-02.md
+|   └── page-03.md
 ├── _thoughts
 |   ├── thoughts-set
 |   |   ├── 2001-01-01-set-thought-01.md
@@ -72,6 +76,9 @@ Here are all of the parts of this project associated with running this applicati
 |   └── tag_name.md
 ├── css
 |   └── main.scss
+├── github
+|   ├── command-bash
+|   └── command-ruby.rb
 ├── primer
 |   └── https://github.com/primer/css/tree/6a8733ea0f3c079fe4a37c1828297d8f661ccee8
 ├── resources
@@ -86,8 +93,6 @@ Here are all of the parts of this project associated with running this applicati
 |   └── resource-02.pdf
 ├── _config.yml
 ├── Gemfile
-├── page-01.md
-├── page-02.md
 └── index.md
 ```
 
@@ -106,14 +111,39 @@ HTML files in this directory are for the skeletons of a specific page. The `defa
 ```
 ---
 layout: default
-title: Page 1
-permalink: /page-1
+.
+.
+.
 ---
 ```
 
-### `_site/`
+### `_pages/`
 
-This directory should only exist on your local machine... otherwise it's in the `.gitignore`. This is auto-generated when a user runs `jekyll build` or `jekyll serve` on their local machine. This directory is what compiles all of the Markdown, liquid, and HTML files into plain, static HTML to show to the world on a browser. While developing locally, if you need to do a hard-restart on your Jekyll server, feel free to stop the local server process, `rm -rf` this directory, and then try again.
+These are the general pages in the top navigation bar of the site, although technically there are several other pages in there as well. They're written in Markdown, but Jekyll and liquid will use the Markdown content to make HTML files. The front matter of any Markdown/HTML file specifies the settings of the page:
+```
+---
+layout: default # the layout HTML to use (required for EVERY page)
+title: Page 1 # the title of this page (optional if the page is NOT in the nav bar)
+order: 3 # the order of this page in the navigation bar (delete if the page is NOT in the nav bar)
+permalink: /page1 # the static link this page should have (required for EACH page in this directory)
+---
+```
+
+You can also specify custom settings that you want the page to have:
+```
+---
+custom_field_1: true
+custom_field_2: useful_string
+---
+```
+
+Then, you can reference those custom settings on other HTML files (such as the layout the page is using... 😉):
+```
+{{ page.custom_field_1 }}
+=> true
+{{ page.custom_field_2 }}
+=> useful_string
+```
 
 ### `_thoughts/`
 
@@ -196,6 +226,20 @@ This directory only has one file — `main.scss`. This is where I can keep _all_
 ```
 Without these lines, none of the CSS or fonts would show up as expected.
 
+### `github/`
+
+None of the files in this directory affect the site application itself, but they're there for me to use to make new GitHub branches and pull requests in an easier fashion. This way, users don't need to click as many buttons or remember as many git commands.
+
+To make a new branch:
+```
+github/new-branch my-new-feature-branch
+```
+
+To make a pull request from a feature branch:
+```
+github/pull-request Pull request title
+```
+
 ### `primer/`
 
 This is a submodule to [primer/css](https://github.com/primer/css/tree/6a8733ea0f3c079fe4a37c1828297d8f661ccee8) at a certain commit. This is necessary to get the pagination working. Without having this submodule initialized, running this repository locally will not work. To initialize after cloning, please run:
@@ -225,30 +269,6 @@ This is where we tell Jekyll all of the configurations for this project. Each ti
 
 The Gemfile is where the application defines which Ruby gems are important to run the application. To learn how to use this file, see this [section](https://github.com/emma-sax4/emma-sax4.github.io#running-locally).
 
-### Any Markdown or HTML file
+### `index.md`
 
-This is the first page that a user will see when they navigate to the main URL of this site. It's written in Markdown, but Jekyll and liquid will use the Markdown content to make an HTML file. The front matter of any Markdown/HTML file specifies the settings of the page:
-```
----
-layout: default # the layout HTML to use
-title: Page 1 # the title of this page
-order: 3 # the order of this page in the navigation bar
-permalink: /page-1 # the static permalink that this page should have
----
-```
-
-You can also specify custom settings that you want the page to have:
-```
----
-custom_field_1: true
-custom_field_2: useful_string
----
-```
-
-Then, you can reference those custom settings on other HTML files (such as the layout the page is using... 😉):
-```
-{{ page.custom_field_1 }}
-=> true
-{{ page.custom_field_2 }}
-=> useful_string
-```
+This is the first page that the site sees. Because of the way GitHub pages and Jekyll work, this is the only page that needs to be in the root directory of the project, and needs to be titled `index.md`. However, it's symlinked to the `_pages/home.md` file, so the only real place to edit that page should be through editing the `_pages/home.md` instead of the `index.md` file.
