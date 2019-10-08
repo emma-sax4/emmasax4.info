@@ -1,0 +1,5 @@
+#!/bin/bash
+
+new_branch_name=$1
+echo "Creating a new branch: $new_branch_name"
+ruby github/new_branch.rb $new_branch_name

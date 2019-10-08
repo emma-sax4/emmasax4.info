@@ -22,7 +22,7 @@ Before graduating college:
 * Calculus 1 tutor at UMM
 * UMM Concert Choir Dress Manager
 * UMM Dance Ensemble Treasurer
-* Programming contests (placed 3rd at [DKC<sup>3</sup>](http://www.digikey.com/US/EN/Careers/computing-competition.html) 2015)
+* Participant in programming contests
 * [UMM Open Hatch](https://github.com/OH-UMM/2015/wiki) event leader
 * Participant in the [NATS Competition](http://www.nats.org/competitions.html) 2014
 * Participant in a Senior Recital in April 2017
@@ -33,5 +33,5 @@ Before graduating college:
 * Student Campus Ambassador at UMM
 * Orientation Group Leader at UMM in 2016
 * Dance teacher to children
-* Participated in theatre around the Twin Cities (view a copy of my theatre resume [here](/resources/SaxTheatreResume.pdf))
+* Participated in theatre around the Twin Cities (view a copy of my theatre resume [here](/theatre-resume))
 * Volunteered at various nonprofit organizations in the Twin Cities

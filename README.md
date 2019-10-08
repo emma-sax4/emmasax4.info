@@ -4,13 +4,13 @@
 
 ## Basic Information
 
-For more information on contributing to this project, please see [CONTRIBUTING.md](https://github.com/emma-sax4/emma-sax4.github.io/blob/master/CONTRIBUTING.md).
+For more information on contributing to this project, please see [CONTRIBUTING.md](https://github.com/emma-sax4/emma-sax4.github.io/blob/master/.github/CONTRIBUTING.md).
 
 To submit a feature request or a bug ticket, please use submit an official [GitHub Issue](https://github.com/emma-sax4/emma-sax4.github.io/issues/new/choose).
 
 For information on licensing, please see [LICENSE](https://github.com/emma-sax4/emma-sax4.github.io/blob/master/LICENSE).
 
-A brief reminder that this repository does have a standard [Code of Conduct](https://github.com/emma-sax4/emma-sax4.github.io/blob/master/CODE_OF_CONDUCT.md)... please follow it.
+A brief reminder that this repository does have a standard [Code of Conduct](https://github.com/emma-sax4/emma-sax4.github.io/blob/master/.github/CODE_OF_CONDUCT.md)... please follow it.
 
 This page was originally generated using the [Cayman theme](https://github.com/jasonlong/cayman-theme) by [Jason Long](https://twitter.com/jasonlong).
 
@@ -23,15 +23,19 @@ To run this application locally, following these steps:
     gem install bundler -v 1.17.3
     bundle install
     ```
-3. Then build the site using Jekyll:
+3. Initialize the submodule and make sure it's on commit `6a8733ea0f3c079fe4a37c1828297d8f661ccee8`. Once things are initialized, there should be no need to be committing to this directory.
+    ```
+    git submodule update --init --recursive
+    ```
+4. Then build the site using Jekyll:
     ```
     jekyll build
     ```
-4. Serve it up:
+5. Serve it up:
     ```
     jekyll serve
     ```
-5. Navigate to the local URL Jekyll provides (`http://127.0.0.1:4000` on my machine)
+6. Navigate to the local URL Jekyll provides (`http://127.0.0.1:4000` on my machine)
 
 NOTE: Running this process locally will most likely create at least one directory locally on your machine, such as `_site/`, `Gemfile.lock`, `.sass-cache/`, and potentially others. All of these are already in the `.gitignore`, but feel free to add others as necessary.
 
@@ -55,6 +59,10 @@ Here are all of the parts of this project associated with running this applicati
 |   ├── default.html
 |   ├── layout-01.html
 |   └── layout-02.html
+├── _pages
+|   ├── page-01.md
+|   ├── page-02.md
+|   └── page-03.md
 ├── _thoughts
 |   ├── thoughts-set
 |   |   ├── 2001-01-01-set-thought-01.md
@@ -68,6 +76,9 @@ Here are all of the parts of this project associated with running this applicati
 |   └── tag_name.md
 ├── css
 |   └── main.scss
+├── github
+|   ├── command-bash
+|   └── command-ruby.rb
 ├── primer
 |   └── https://github.com/primer/css/tree/6a8733ea0f3c079fe4a37c1828297d8f661ccee8
 ├── resources
@@ -82,8 +93,6 @@ Here are all of the parts of this project associated with running this applicati
 |   └── resource-02.pdf
 ├── _config.yml
 ├── Gemfile
-├── page-01.md
-├── page-02.md
 └── index.md
 ```
 
@@ -102,20 +111,45 @@ HTML files in this directory are for the skeletons of a specific page. The `defa
 ```
 ---
 layout: default
-title: Page 1
-permalink: /page-1
+.
+.
+.
 ---
 ```
 
-### `_site/`
+### `_pages/`
 
-This directory should only exist on your local machine... otherwise it's in the `.gitignore`. This is auto-generated when a user runs `jekyll build` or `jekyll serve` on their local machine. This directory is what compiles all of the Markdown, liquid, and HTML files into plain, static HTML to show to the world on a browser. While developing locally, if you need to do a hard-restart on your Jekyll server, feel free to stop the local server process, `rm -rf` this directory, and then try again.
+These are the general pages in the top navigation bar of the site, although technically there are several other pages in there as well. They're written in Markdown, but Jekyll and liquid will use the Markdown content to make HTML files. The front matter of any Markdown/HTML file specifies the settings of the page:
+```
+---
+layout: default # the layout HTML to use (required for EVERY page)
+title: Page 1 # the title of this page (optional if the page is NOT in the nav bar)
+order: 3 # the order of this page in the navigation bar (delete if the page is NOT in the nav bar)
+permalink: /page1 # the static link this page should have (required for EACH page in this directory)
+---
+```
+
+You can also specify custom settings that you want the page to have:
+```
+---
+custom_field_1: true
+custom_field_2: useful_string
+---
+```
+
+Then, you can reference those custom settings on other HTML files (such as the layout the page is using... 😉):
+```
+{{ page.custom_field_1 }}
+=> true
+{{ page.custom_field_2 }}
+=> useful_string
+```
 
 ### `_thoughts/`
 
 This is the collection of "thoughts" that I've had ("thought"/"thoughts" are the very non-creative terms I've come up with instead of using "post"/"blog").
 
-#### Thoughts without a Set
+### Thoughts without a Set
 
 Most of the thoughts can just go into the general `_thoughts/` directory, written as Markdown files. For a generic thought, the front matter could look like this:
 ```
@@ -142,7 +176,7 @@ tag: tag_name
 
 The `tag` front matter indicates which thoughts to show on that page (only the thoughts with that tag will show).
 
-#### Thoughts in a Set
+### Thoughts in a Set
 
 If I'm going to write a set of thoughts that all have a common theme, they can go into a new nested directory: `_thoughts/<set-name>/`. If that's the case, then there should also be a Markdown file titled `<set-name>.md` inside that inner directory, which would serve as a table of contents for the thoughts in that set. Here's an example of what that table of contents page should look like:
 ```
@@ -172,7 +206,7 @@ set: Thoughts Set
 
 Currently, the code is not set up to handle thoughts that are part of a set **and** contain tags.
 
-#### Writing Drafts
+### Writing Drafts
 
 Drafts should always be written in a pull request in new branch. This will allow the author of the thought to let it sit for as long as necessary, before feeling pressured to finish the thought.
 
@@ -191,6 +225,20 @@ This directory only has one file — `main.scss`. This is where I can keep _all_
 <link rel="stylesheet" href="{{ "css/main.css" | relative_url }}">
 ```
 Without these lines, none of the CSS or fonts would show up as expected.
+
+### `github/`
+
+None of the files in this directory affect the site application itself, but they're there for me to use to make new GitHub branches and pull requests in an easier fashion. This way, users don't need to click as many buttons or remember as many git commands.
+
+To make a new branch:
+```
+github/new-branch my-new-feature-branch
+```
+
+To make a pull request from a feature branch:
+```
+github/pull-request Pull request title
+```
 
 ### `primer/`
 
@@ -221,30 +269,6 @@ This is where we tell Jekyll all of the configurations for this project. Each ti
 
 The Gemfile is where the application defines which Ruby gems are important to run the application. To learn how to use this file, see this [section](https://github.com/emma-sax4/emma-sax4.github.io#running-locally).
 
-### Any Markdown or HTML file
+### `index.md`
 
-This is the first page that a user will see when they navigate to the main URL of this site. It's written in Markdown, but Jekyll and liquid will use the Markdown content to make an HTML file. The front matter of any Markdown/HTML file specifies the settings of the page:
-```
----
-layout: default # the layout HTML to use
-title: Page 1 # the title of this page
-order: 3 # the order of this page in the navigation bar
-permalink: /page-1 # the static permalink that this page should have
----
-```
-
-You can also specify custom settings that you want the page to have:
-```
----
-custom_field_1: true
-custom_field_2: useful_string
----
-```
-
-Then, you can reference those custom settings on other HTML files (such as the layout the page is using... 😉):
-```
-{{ page.custom_field_1 }}
-=> true
-{{ page.custom_field_2 }}
-=> useful_string
-```
+This is the first page that the site sees. Because of the way GitHub pages and Jekyll work, this is the only page that needs to be in the root directory of the project, and needs to be titled `index.md`. However, it's symlinked to the `_pages/home.md` file, so the only real place to edit that page should be through editing the `_pages/home.md` instead of the `index.md` file.
