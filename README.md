@@ -62,7 +62,7 @@ Here are all of the parts of this project associated with running this applicati
 ├── _pages
 |   ├── page-01.md
 |   ├── page-02.md
-|   └── page-02.md
+|   └── page-03.md
 ├── _thoughts
 |   ├── thoughts-set
 |   |   ├── 2001-01-01-set-thought-01.md
@@ -124,8 +124,8 @@ These are the general pages in the top navigation bar of the site, although tech
 ---
 layout: default # the layout HTML to use (required for EVERY page)
 title: Page 1 # the title of this page (optional if the page is NOT in the navigation bar)
-order: 3 # the order of this page in the navigation bar (eliminate this if the pages is NOT in the navigation bar)
-permalink: /page-1 # the static permalink that this page should have (required for EVERY page in this directory)
+order: 3 # the order of this page in the navigation bar (delete if the page is NOT in the navigation bar)
+permalink: /page-1 # the static permalink this page should have (required for EACH page in this directory)
 ---
 ```
 
