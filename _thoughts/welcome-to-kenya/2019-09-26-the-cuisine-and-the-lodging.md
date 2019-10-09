@@ -67,9 +67,10 @@ The food was incredible. From our first buffet meal, it was clear that their foo
 
 They provided an array of extra activities we could do. Our tour guide set up a happy-hour for us that was hosted by the resort. We all went "into the bush", and they provided live Kenyan music, a guest from a Samburan tribe to talk to us about his village and his life, wine, cocktails, and appetizers. They had a cook who was also very good at photography, and he took several of us down to a river nearby to take some pictures of the setting sun.
 
-I forgot to take any pictures of the exterior of Sarova Shaba Game Lodge, and that's really a pity; the best thing about this resort was the beautiful resort grounds. But, the good news is that their website has plenty of pictures featuring the resort grounds. Here's one picture of our room and one of the buffet line:
+I don't have many pictures of the exterior of Sarova Shaba Game Lodge, and that's really a pity; the best thing about this resort was the beautiful resort grounds. But, the good news is that their website has plenty of pictures featuring the resort grounds. Here's one picture of our room and one of the buffet line:
 
 <div align="center">
+  <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/48872057586/in/album-72157710860887528/" title="Sarova_Shaba_pool"><img src="https://live.staticflickr.com/65535/48872057586_8a1e440b3d.jpg" width="500" height="375" alt="Sarova_Shaba_pool"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
   <a data-flickr-embed="true"  href="https://www.flickr.com/photos/184539266@N08/48826445063/in/album-72157710860887528/" title="Sarova_Shaba"><img src="https://live.staticflickr.com/65535/48826445063_a4575a3694.jpg" width="500" height="375" alt="Sarova Shaba room"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
   <a data-flickr-embed="true"  href="https://www.flickr.com/photos/184539266@N08/48826445088/in/album-72157710860887528/" title="The ark&#x27;s buffet line"><img src="https://live.staticflickr.com/65535/48826445088_3132fa06a3.jpg" width="375" height="500" alt="The ark&#x27;s buffet line"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
 </div>
@@ -98,6 +99,7 @@ Ol Pejeta's Sweetwaters Serena Camp was my favorite place we stayed. It's a tent
 
 <div align="center">
   <a data-flickr-embed="true"  href="https://www.flickr.com/photos/184539266@N08/48796885958/in/album-72157710860887528/" title="sweetwaters"><img src="https://live.staticflickr.com/65535/48796885958_594a93b9e1.jpg" width="375" height="500" alt="sweetwaters"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+  <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/48872252992/in/album-72157710860887528/" title="Sweetwaters_tent"><img src="https://live.staticflickr.com/65535/48872252992_3ddc673f1b.jpg" width="500" height="333" alt="Sweetwaters_tent"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
 </div>
 
 The walk from the main resort buildings to the tents was also quite relaxing and beautiful. We even saw a strange bird land on the resort, as well as a couple of small gazelles.
