@@ -1,6 +1,6 @@
 ---
 layout: thought
-title: My Second Job
+title: My Time with Two Jobs
 draft: true
 ---
 
