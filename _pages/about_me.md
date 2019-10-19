@@ -27,6 +27,7 @@ I also love to travel, expecially to international places. I try to go to a new 
   <li>England 🏴󠁧󠁢󠁥󠁮󠁧󠁿</li>
   <li>Montréal 🇨🇦 — technically Canada, but saying <i>Montréal</i> is cooler than saying <i>Canada</i></li>
   <li>Kenya 🇰🇪</li>
+  <li>Either Greece 🇬🇷 & Turkey 🇹🇷 or Antarctica 🇦🇶... I can't decide yet</li>
 </ol>
 
 I try to collect a magnet of each city (or landmark) I visit within each country. If you want to see a picture of them, let me know!
