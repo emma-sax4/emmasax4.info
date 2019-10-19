@@ -2,7 +2,6 @@
 layout: thought
 title: "Skimp and Splurge: The Art of Saving Money"
 tags: [ money ]
-draft: true
 ---
 
 This was initially written in December of 2016, even if I'm publishing it in 2019. In a way, it was my first attempt at a blog post (just not on this blog). So, I thought it'd be interesting to document it here. Since writing this, some amount of my opinions on these ideas have changed a little bit. Stay tuned for an updated list coming soon 😉.
