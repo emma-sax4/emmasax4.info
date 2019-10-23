@@ -5,3 +5,11 @@ branches:
   only:
     - master
 script: true
+
+deploy:
+  - provider: script
+    script: ./test_script.sh
+    skip_cleanup: true
+    on:
+      all_branches: true
+      condition: $TRAVIS_BRANCH =~ /^staging$/ OR $TRAVIS_BRANCH = master
