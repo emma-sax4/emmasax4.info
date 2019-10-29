@@ -9,8 +9,8 @@ class PullRequest
 
   def create_pull_request
     begin
-      octokit_client.create_pull_request(repository, "master", branch_name, @pr_title)
-      puts "Pull request successfully created"
+      pr = octokit_client.create_pull_request(repository, "master", branch_name, @pr_title)
+      puts "Pull request successfully created: #{pr.html_url}"
     rescue Octokit::UnprocessableEntity => e
       puts "Could not create pull request:"
       if e.message.include?("pull request already exists")
