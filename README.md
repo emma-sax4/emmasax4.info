@@ -76,9 +76,6 @@ Here are all of the parts of this project associated with running this applicati
 |   └── tag_name.md
 ├── css
 |   └── main.scss
-├── github
-|   ├── command-bash
-|   └── command-ruby.rb
 ├── primer
 |   └── https://github.com/primer/css/tree/6a8733ea0f3c079fe4a37c1828297d8f661ccee8
 ├── resources
@@ -225,20 +222,6 @@ This directory only has one file — `main.scss`. This is where I can keep _all_
 <link rel="stylesheet" href="{{ "css/main.css" | relative_url }}">
 ```
 Without these lines, none of the CSS or fonts would show up as expected.
-
-### `github/`
-
-None of the files in this directory affect the site application itself, but they're there for me to use to make new GitHub branches and pull requests in an easier fashion. This way, users don't need to click as many buttons or remember as many git commands.
-
-To make a new branch:
-```
-github/new-branch my-new-feature-branch
-```
-
-To make a pull request from a feature branch:
-```
-github/pull-request Pull request title
-```
 
 ### `primer/`
 
