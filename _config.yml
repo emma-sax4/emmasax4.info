@@ -14,6 +14,8 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
+theme: jekyll-theme-cayman
+
 title: Emma's personal website
 url: https://emma-sax4.github.io
 future: true
