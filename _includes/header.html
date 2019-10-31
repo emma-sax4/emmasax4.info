@@ -5,10 +5,12 @@
 
       {% for node in sorted_pages %}
         {% if page.url == node.url or node.url contains page.collection and page.collection != null %}
-          <a class="active" href="{{ site.baseurl }}{{ node.url }}">{{node.title}}</a>
+          {% assign active = 'active' %}
         {% else %}
-          <a href="{{ site.baseurl }}{{ node.url }}">{{node.title}}</a>
+          {% assign active = nil %}
         {% endif %}
+
+        <a class="{{ active }}" href="{{ site.baseurl }}{{ node.url }}">{{node.title}}</a>
       {% endfor %}
     </nav>
   </div>
