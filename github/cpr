@@ -2,4 +2,4 @@
 
 pull_request_title=$@
 echo "Creating a new pull request: $pull_request_title"
-ruby github/pull_request.rb $pull_request_title
+ruby github/pull_request.rb create $pull_request_title
