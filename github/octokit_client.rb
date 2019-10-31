@@ -8,8 +8,16 @@ class OctokitClient
     Octokit::Client.new(access_token: github_token)
   end
 
+  def github_username
+    config_file[:github_user]
+  end
+
   private def github_token
-    YAML.load_file(github_config_file_path)[:github_token]
+    config_file[:github_token]
+  end
+
+  private def config_file
+    YAML.load_file(github_config_file_path)
   end
 
   private def github_config_file_path
