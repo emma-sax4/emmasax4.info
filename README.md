@@ -1,4 +1,4 @@
-# emma-sax4.github.io [![Build Status](https://travis-ci.com/emma-sax4/emma-sax4.github.io.svg?branch=master)](https://travis-ci.com/emma-sax4/emma-sax4.github.io)
+# emma-sax4.github.io [![Maintainability](https://api.codeclimate.com/v1/badges/a9161347b2a122a15ec3/maintainability)](https://codeclimate.com/github/emma-sax4/emma-sax4.github.io/maintainability) [![Build Status](https://travis-ci.com/emma-sax4/emma-sax4.github.io.svg?branch=master)](https://travis-ci.com/emma-sax4/emma-sax4.github.io)
 
 #### Live site at: [https://emma-sax4.github.io](https://emma-sax4.github.io)
 
