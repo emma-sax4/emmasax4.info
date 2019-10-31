@@ -15,11 +15,13 @@
 # in the templates via {{ site.myvariable }}.
 
 title: Emma's personal website
-repository: emma-sax4.github.io
-github_username: emma-sax4
 url: https://emma-sax4.github.io
 future: true
 markdown: kramdown
+
+github:
+  repository: https://github.com/emma-sax4/emma-sax4.github.io
+  owner: https://github.com/emma-sax4
 
 kramdown:
   smart_quotes: ["rdquo", "rsquo", "quot", "quot"]
