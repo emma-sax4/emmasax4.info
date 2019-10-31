@@ -1,8 +1,8 @@
 > Describe what these changes are and why we're making them
 
 Changes:
-  * Adding a page "..."
-  * Refactoring "..."
+* Adding a page "..."
+* Refactoring "..."
 
 > Related PRs and Issues if applicable
 
