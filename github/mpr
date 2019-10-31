@@ -1,5 +1,0 @@
-#!/bin/bash
-
-pull_request_number=$1
-echo "Merging pull request: $pull_request_number"
-ruby github/pull_request.rb merge $pull_request_number
