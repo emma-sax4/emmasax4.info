@@ -216,12 +216,12 @@ Any drafts should appear at the top of the list of thoughts, and should show as 
 
 ### `css/`
 
-This directory only has one file — `main.scss`. This is where I can keep _all_ of the CSS that this project uses. To make sure it's all being used, there are two very important lines in the `_includes/head.html`:
+This directory only has one file — `main.scss`. This is where I can keep _all_ of the CSS that this project uses. To make sure it's all being used, there is one very important line in the `_includes/head.html`:
 ```
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="{{ "css/main.css" | relative_url }}">
 ```
-Without these lines, none of the CSS or fonts would show up as expected.
+
+Without that line, none of the CSS would show up as expected.
 
 ### `primer/`
 
@@ -229,6 +229,7 @@ This is a submodule to [primer/css](https://github.com/primer/css/tree/6a8733ea0
 ```
 git submodule update --init --recursive
 ```
+
 and make sure it's on commit `6a8733ea0f3c079fe4a37c1828297d8f661ccee8`. Once things are initialized, there should be no need to be committing to this directory.
 
 ### `resources/`
@@ -246,6 +247,7 @@ This is an example sentence, so it will throw a 404. See [here](/resources/resou
 ```
 
 ### `_config.yml`
+
 This is where we tell Jekyll all of the configurations for this project. Each time this file is changed, restart your local Jekyll server to get the new changes.
 
 ### `Gemfile`
