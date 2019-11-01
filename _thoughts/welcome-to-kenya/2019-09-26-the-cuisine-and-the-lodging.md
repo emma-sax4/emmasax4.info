@@ -23,7 +23,7 @@ In Kenya, we stayed at several resorts at different locations around the Equator
 
 **Best overall location in the country to see animals**: Fig Tree Camp
 
-## Nairobi ☞ [Tamarind Tree Hotel](http://www.tamarindtree-hotels.com/)
+## Nairobi ☞ <a href="http://www.tamarindtree-hotels.com/" target="_blank">Tamarind Tree Hotel</a>
 
 Tamarind Tree Hotel was by far the nicest place we stayed at in Nairobi. It was colorful 🌈, clean 🧼, the food was delicious, and the staff was pleasant. The entire hotel felt very safe, as there were security measures everywhere.
 
@@ -39,7 +39,7 @@ The food was delicious. However, the buffet meal (we were all on our own for din
 
 Unfortunately, my group didn't get any pictures of Tamarind Tree Hotel, but you can check out their website online (linked above).
 
-## Aberdares County ☞ [The Ark](https://thearkkenya.com/)
+## Aberdares County ☞ <a href="https://thearkkenya.com/" target="_blank">The Ark</a>
 
 The Ark was certainly the most unique place we stayed. The entire hotel/resort was designed to be like Noah's Ark, where the building is shaped like a boat. At the front (bow), there's four decks, and each one has an amazing view of a watering hole. A couple of the decks are actually outside, and this provides an amazing experience of the animals without glass—but be very quiet, or else the animals will get scared 🙀!
 
@@ -57,7 +57,7 @@ Like Tamarind Tree Hotel, the food here was scrumptious. The breakfast had a mad
 
 Read more about The Ark ⛵️, and check out their fabulous photo gallery, at their website.
 
-## Samburu ☞ [Sarova Shaba Game Lodge](https://www.sarovahotels.com/shabalodge-samburu/)
+## Samburu ☞ <a href="https://www.sarovahotels.com/shabalodge-samburu/" target="_blank">Sarova Shaba Game Lodge</a>
 
 The first thing we noticed about Sarova Shaba Game Lodge was that it was beautiful. The grounds were spectacular. There were man-made ponds with coi fish, man-made rivers to make us feel like we were out in nature, baboons and monkeys, large turtles in the rivers, crocodiles with a special crocodile watch area, a pool, gym, and plenty of space to relax at the resort. It was bright and open.
 
@@ -93,7 +93,7 @@ Women and mothers take care of the children, take care of the livestock, do bead
   <a data-flickr-embed="true"  href="https://www.flickr.com/photos/184539266@N08/48826445033/in/album-72157710860887528/" title="Samburu_elders"><img src="https://live.staticflickr.com/65535/48826445033_dbaa06b427.jpg" width="500" height="375" alt="Samburu_elders"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
 </div>
 
-## Ol Pejeta ☞ [Sweetwaters Serena Camp](https://www.serenahotels.com/serenasweetwaters/en/default.html)
+## Ol Pejeta ☞ <a href="https://www.serenahotels.com/serenasweetwaters/en/default.html" target="_blank">Sweetwaters Serena Camp</a>
 
 Ol Pejeta's Sweetwaters Serena Camp was my favorite place we stayed. It's a tented camp, which means each suite is a full tent. However, it's not the types of tents that you'd think of when it comes to camping. These tents are on solid tile/wood/brick bases, have solid roofs, and have full bathrooms inside of them, including a toilet, shower, and sink. The tents were clean and well-kept. Take a look at the inside of one of the tents!
 
@@ -114,11 +114,11 @@ Sweetwaters Serena Camp is on the Equator. No joke, the sign at the entrance gav
 
 So, walking around in direct sunlight was a bit hot. However, as the night came, the air cooled off to a chilly 55°F. However, it wasn't too cold for my Minnesota tendencies, and I was just fine without a jacket.
 
-That is... until we went for the night game drive. One of the add-ons that I chose to do was night game drive that the resort provided. Read more about that excursion [here](/thoughts/welcome-to-kenya/2019-09-16-the-game-drives). I did get a bit chilly on that adventure, with the chilly, blowing wind (my fault... I had a jacket in the tent and just didn't bring it with me on the game drive).
+That is... until we went for the night game drive. One of the add-ons that I chose to do was night game drive that the resort provided. Read more about that excursion [here</a>/thoughts/welcome-to-kenya/2019-09-16-the-game-drives). I did get a bit chilly on that adventure, with the chilly, blowing wind (my fault... I had a jacket in the tent and just didn't bring it with me on the game drive).
 
 The other amazing thing about Sweetwaters Serena Camp is the view. Most of our tents were right along a super long fence, and on the other side of the fence was a watering hole with lots of animals. From the entrance to our tent, it just felt like we could see so far on the horizon, and we could see so many buffalos and elephants. It was truly beautiful and extremely peaceful. Feel free to check out more about Sweetwaters Serena Camp at their website ☝🏼, and take a look at some of their rad pictures in the gallery.
 
-## Lake Naivasha ☞ [Sopa Resort](https://www.sopalodges.com/lake-naivasha-sopa-resort/the-resort)
+## Lake Naivasha ☞ <a href="https://www.sopalodges.com/lake-naivasha-sopa-resort/the-resort" target="_blank">Sopa Resort</a>
 
 Our afternoon in Lake Naivasha was designed to be relaxing. Although we did go on a hippopotamus-viewing boat ride, once we actually got to the resort, we just hung out for the rest of the afternoon.
 
@@ -140,7 +140,7 @@ However, if you're lucky, your cabin windows (or deck on a top floor), gives you
 
 Feel free to check out even more pictures from Sopa Resort's gallery on their website!
 
-## Maasai Mara ☞ [Fig Tree Camp](https://www.maasaimara.com/entries/fig-tree-camp)
+## Maasai Mara ☞ <a href="https://www.maasaimara.com/entries/fig-tree-camp" target="_blank">Fig Tree Camp</a>
 
 Fig Tree Camp in the Maasai Mara was the last place we stayed. Fig Tree Camp is another tented camp, and unfortunately we weren't able to get a picture of our tents at this location. However, the fascinating thing about this resort was that the paths to get from one were lined with bones. I'm sure that locals just pick up random bones they find out on the savanna and bring them back to the resort. They had buffalo skulls, spines, an elephant skull, and more!
 
