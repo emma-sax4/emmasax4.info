@@ -114,7 +114,7 @@ Sweetwaters Serena Camp is on the Equator. No joke, the sign at the entrance gav
 
 So, walking around in direct sunlight was a bit hot. However, as the night came, the air cooled off to a chilly 55°F. However, it wasn't too cold for my Minnesota tendencies, and I was just fine without a jacket.
 
-That is... until we went for the night game drive. One of the add-ons that I chose to do was night game drive that the resort provided. Read more about that excursion [here</a>/thoughts/welcome-to-kenya/2019-09-16-the-game-drives). I did get a bit chilly on that adventure, with the chilly, blowing wind (my fault... I had a jacket in the tent and just didn't bring it with me on the game drive).
+That is... until we went for the night game drive. One of the add-ons that I chose to do was night game drive that the resort provided. Read more about that excursion [here](/thoughts/welcome-to-kenya/2019-09-16-the-game-drives). I did get a bit chilly on that adventure, with the chilly, blowing wind (my fault... I had a jacket in the tent and just didn't bring it with me on the game drive).
 
 The other amazing thing about Sweetwaters Serena Camp is the view. Most of our tents were right along a super long fence, and on the other side of the fence was a watering hole with lots of animals. From the entrance to our tent, it just felt like we could see so far on the horizon, and we could see so many buffalos and elephants. It was truly beautiful and extremely peaceful. Feel free to check out more about Sweetwaters Serena Camp at their website ☝🏼, and take a look at some of their rad pictures in the gallery.
 
