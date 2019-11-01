@@ -34,4 +34,4 @@ Saint Paul Conservatory for Performing Artists (SPCPA) 2009–2013:
 * Software Developer, University of Minnesota, Morris (October 2014–December 2014)
 * Software Developer, University of Minnesota, Morris (May 2014–July 2014)
 
-### For a more detailed version of my experience, please visit my [LinkedIn](https://www.linkedin.com/in/emma-sax4).
+### For a more detailed version of my experience, please visit my <a href="https://www.linkedin.com/in/emma-sax4" target="_blank">LinkedIn</a>.
