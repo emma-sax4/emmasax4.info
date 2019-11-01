@@ -7,9 +7,9 @@ permalink: /about-me
 
 # Who am I? What do I like?
 
-My name is Emma Sax. I am currently a Platform Operations Engineer at [SportsEngine](https://www.sportsengine.com/solutions/).
+My name is Emma Sax. I am currently a Platform Operations Engineer at <a href="https://www.sportsengine.com/solutions/" target="_blank">SportsEngine</a>.
 
-I graduated from the [University of Minnesota Morris (UMM)](https://www4.morris.umn.edu/) with a Bachelor of Arts in Computer Science in May of 2017.
+I graduated from the <a href="https://www4.morris.umn.edu/" target="_blank">University of Minnesota Morris (UMM)</a> with a Bachelor of Arts in Computer Science in May of 2017.
 
 Before college, I was involved in theatre, dance, and music around the Twin Cities. This experience has allowed me to have a unique perspective on programming, software development, and DevOps.
 
