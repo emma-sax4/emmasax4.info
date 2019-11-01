@@ -9,12 +9,12 @@ permalink: /around-town
 
 Post-college:
 * Platform Operations Engineer at <a href="https://www.sportsengine.com/corp/careers" target="_blank">SportsEngine</a>
-* Speaker at DevOpsDays MSP 2019 (view my slides [here](/resources/DevOpsDays_MSP_Ignite_20190806.pdf) and watch a recording of the talk <a href="https://devopsdays.org/events/2019-minneapolis/program/emma-sax/" target="_blank">here</a>)
+* Speaker at DevOpsDays MSP 2019 (view my slides <a href="/resources/DevOpsDays_MSP_Ignite_20190806.pdf" target="_blank">here</a> and watch a recording of the talk <a href="https://devopsdays.org/events/2019-minneapolis/program/emma-sax/" target="_blank">here</a>)
 * Judge for the <a href="https://technovationchallenge.org" target="_blank">Technovation Challenge</a> in 2018–2019
 * Regular attendee of <a href="https://devopsdays.org/" target="_blank">DevOpsDays</a> MSP since 2015
 * Volunteer and attendee at <a href="https://railsconf.org/" target="_blank">RailsConf</a> 2019
 * A panelist at a Tech Talk at one of the <a href="https://bootcamp.umn.edu/" target="_blank">University of Minnesota's Coding Bootcamps</a>
-* Speaker at DevOpsDays MSP 2017 (view my slides [here](resources/DevOpsDays_MSP_Ignite_20170725.pdf) and watch a recording of the talk <a href="https://devopsdays.org/events/2017-minneapolis/program/emma-sax/" target="_blank">here</a>)
+* Speaker at DevOpsDays MSP 2017 (view my slides <a href="/resources/DevOpsDays_MSP_Ignite_20170725.pdf" target="_blank">here</a> and watch a recording of the talk <a href="https://devopsdays.org/events/2017-minneapolis/program/emma-sax/" target="_blank">here</a>)
 
 Before graduating college:
 * Junior Software Engineer at <a href="https://www.sportsengine.com/corp/careers" target="_blank">SportsEngine</a> (see a little bit of what I worked on <a href="https://www.codinginthecrease.com/news_article/show/772772" target="_blank">here</a>)
