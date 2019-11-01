@@ -8,27 +8,27 @@ permalink: /around-town
 # What do I do, and what have I done?
 
 Post-college:
-* Platform Operations Engineer at [SportsEngine](https://www.sportsengine.com/corp/careers)
-* Speaker at DevOpsDays MSP 2019 (view my slides [here](/resources/DevOpsDays_MSP_Ignite_20190806.pdf) and watch a recording of the talk [here](https://devopsdays.org/events/2019-minneapolis/program/emma-sax/))
-* Judge for the [Technovation Challenge](https://technovationchallenge.org) in 2018–2019
-* Regular attendee of [DevOpsDays MSP](https://devopsdays.org/) since 2015
-* Volunteer and attendee at [RailsConf 2019](https://railsconf.org/)
-* A panelist at a Tech Talk at one of the [University of Minnesota's Coding Bootcamps](https://bootcamp.umn.edu/)
-* Speaker at DevOpsDays MSP 2017 (view my slides [here](resources/DevOpsDays_MSP_Ignite_20170725.pdf) and watch a recording of the talk [here](https://devopsdays.org/events/2017-minneapolis/program/emma-sax/))
+* Platform Operations Engineer at <a href="https://www.sportsengine.com/corp/careers" target="_blank">SportsEngine</a>
+* Speaker at DevOpsDays MSP 2019 (view my slides [here](/resources/DevOpsDays_MSP_Ignite_20190806.pdf) and watch a recording of the talk <a href="https://devopsdays.org/events/2019-minneapolis/program/emma-sax/" target="_blank">here</a>)
+* Judge for the <a href="https://technovationchallenge.org" target="_blank">Technovation Challenge</a> in 2018–2019
+* Regular attendee of <a href="https://devopsdays.org/" target="_blank">DevOpsDays</a> MSP since 2015
+* Volunteer and attendee at <a href="https://railsconf.org/" target="_blank">RailsConf</a> 2019
+* A panelist at a Tech Talk at one of the <a href="https://bootcamp.umn.edu/" target="_blank">University of Minnesota's Coding Bootcamps</a>
+* Speaker at DevOpsDays MSP 2017 (view my slides [here](resources/DevOpsDays_MSP_Ignite_20170725.pdf) and watch a recording of the talk <a href="https://devopsdays.org/events/2017-minneapolis/program/emma-sax/" target="_blank">here</a>)
 
 Before graduating college:
-* Junior Software Engineer at [SportsEngine](https://www.sportsengine.com/corp/careers) (see a little bit of what I worked on [here](https://www.codinginthecrease.com/news_article/show/772772))
-* Summer intern at [SportsEngine](https://www.sportsengine.com/corp/careers) (learn about what I worked on [here](http://www.codinginthecrease.com/news_article/show/545869))
+* Junior Software Engineer at <a href="https://www.sportsengine.com/corp/careers" target="_blank">SportsEngine</a> (see a little bit of what I worked on <a href="https://www.codinginthecrease.com/news_article/show/772772" target="_blank">here</a>)
+* Summer intern at <a href="https://www.sportsengine.com/corp/careers" target="_blank">SportsEngine</a> (learn about what I worked on <a href="http://www.codinginthecrease.com/news_article/show/545869" target="_blank">here</a>)
 * Calculus 1 tutor at UMM
 * UMM Concert Choir Dress Manager
 * UMM Dance Ensemble Treasurer
 * Participant in programming contests
-* [UMM Open Hatch](https://github.com/OH-UMM/2015/wiki) event leader
-* Participant in the [NATS Competition](http://www.nats.org/competitions.html) 2014
+* <a href="https://github.com/OH-UMM/2015/wiki" target="_blank">UMM Open Hatch</a> event leader
+* Participant in the <a href="http://www.nats.org/competitions.html" target="_blank">NATS Competition</a> 2014
 * Participant in a Senior Recital in April 2017
-* Presented in the UMM [Undergraduate Research Symposium](http://www.morris.umn.edu/urs/) 2015
-* [URSA Major](https://github.com/emma-sax4/UMM3601ursamajor) Developer
-* Research assistant for [Clojure research](https://github.com/Clojure-Intro-Course) at UMM
+* Presented in the UMM <a href="http://www.morris.umn.edu/urs/" target="_blank">Undergraduate Research Symposium 2015
+* <a href="https://github.com/emma-sax4/UMM3601ursamajor" target="_blank">URSA Major</a> Developer
+* Research assistant for <a href="https://github.com/Clojure-Intro-Course" target="_blank">Clojure research</a> at UMM
 * Participant in the UMM Honors Program
 * Student Campus Ambassador at UMM
 * Orientation Group Leader at UMM in 2016
