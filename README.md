@@ -1,6 +1,6 @@
 # emma-sax4.github.io [![Build Status](https://travis-ci.com/emma-sax4/emma-sax4.github.io.svg?branch=master)](https://travis-ci.com/emma-sax4/emma-sax4.github.io)
 
-#### Live site at: [https://emma-sax4.github.io](https://emmasax4.info)
+#### Live site at: [https://emmasax4.info](https://emmasax4.info)
 
 ## Basic Information
 
