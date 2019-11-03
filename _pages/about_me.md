@@ -5,31 +5,35 @@ order: 2
 permalink: /about-me
 ---
 
-# Who am I? What do I like?
+# {{ page.title }}
 
-My name is Emma Sax. I am currently a Platform Operations Engineer at <a href="https://www.sportsengine.com/solutions/" target="_blank">SportsEngine</a>.
+My entire career has been spent on the Operations side of DevOps. But I dabble in website development in Ruby on Rails—and of course, Jekyll and GitHub Pages. For a more detailed version of my experience, please visit my <a href="https://www.linkedin.com/in/emma-sax4" target="_blank">LinkedIn</a>.
 
-I graduated from the <a href="https://www4.morris.umn.edu/" target="_blank">University of Minnesota Morris (UMM)</a> with a Bachelor of Arts in Computer Science in May of 2017.
+## Tools/Frameworks/Languages
 
-Before college, I was involved in theatre, dance, and music around the Twin Cities. This experience has allowed me to have a unique perspective on programming, software development, and DevOps.
+Ruby, Ruby on Rails, Bash, Git, GitHub API, AWS API, HTML/CSS, Yaml/JSON, Chef, Amazon Web Services, Kubernetes/EKS, New Relic, Datadog, Splunk
 
-In my free time, I like to go on walks and hikes, swim (as much swimming as possible), and hang out with friends and family.
+## Operating Systems
 
-I also love to travel, expecially to international places. I try to go to a new country every year. Here's a list of some of the foreign countries I've been to:
+OS X, Linux
 
-<ol start="0">
-  <li>China 🇨🇳</li>
-  <li>France 🇫🇷</li>
-  <li>Spain 🇪🇸</li>
-  <li>Czech Republic 🇨🇿</li>
-  <li>Austria 🇦🇹</li>
-  <li>Germany 🇩🇪</li>
-  <li>England 🏴󠁧󠁢󠁥󠁮󠁧󠁿</li>
-  <li>Montréal 🇨🇦 — technically Canada, but saying <i>Montréal</i> is cooler than saying <i>Canada</i></li>
-  <li>Kenya 🇰🇪</li>
-  <li>Either Greece 🇬🇷 & Turkey 🇹🇷 or Antarctica 🇦🇶... I can't decide yet</li>
-</ol>
+## Other
 
-I try to collect a magnet of each city (or landmark) I visit within each country. If you want to see a picture of them, let me know!
+Self-motivated, leadership skills, detail-oriented, problem solving skills, pair programming, agile methodologies, communication skills, collaboration, enthusiasm, strong work-ethic
 
-** I started the bullet list with 0 for two reasons: (1) I was born in China, so I never had to "travel" there, and (2) I'm in engineering.
+## Experience
+
+* SportsEngine (May 2015–present), Minneapolis, MN
+  * Platform Operations Engineer (June 2017–present)
+  * Junior Software Engineer (January 2016–May 2017)
+  * Software Engineer Intern (May 2015–August 2015)
+* University of Minnesota, Morris (May 2014–December 2014)
+  * Software Developer and Researcher
+
+## Education
+
+University of Minnesota, Morris (UMM) 2013–2017:
+* Bachelor of Arts in Computer Science, graduation with High Distinction
+
+Saint Paul Conservatory for Performing Artists (SPCPA) 2009–2013:
+* Studied Musical Theatre, graduated in the top 10 of the class
