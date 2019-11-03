@@ -1,36 +1,47 @@
 ---
-layout: default
 ---
 
-{% assign draft_posts = site.posts | where: "draft", "true" %}
-{% assign published_posts = site.posts | where_exp: "post", "post.draft != true" %}
-{% assign sorted_published_posts = published_posts | sort: "date" | reverse %}
-{% assign all_posts = draft_posts | concat: sorted_published_posts %}
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %}
+  {% include header.html %}
 
-{% unless page.tag == "all" %}
-  <div class="row" style="display: flex">
-    <div class="column" align="center" style="flex: 0%; padding-top: 2%; padding-right: 10px">
-      {% include all_posts_button.html %}
-    </div>
+  <body>
+    <section class="main-content" style="max-width: 64rem;"">
+      {% assign draft_posts = site.posts | where: "draft", "true" %}
+      {% assign published_posts = site.posts | where_exp: "post", "post.draft != true" %}
+      {% assign sorted_published_posts = published_posts | sort: "date" | reverse %}
+      {% assign all_posts = draft_posts | concat: sorted_published_posts %}
 
-    <div class="column" align="left" style="flex: 50%; padding-top: 0%">
-{% endunless %}
+      {% unless page.tag == "all" %}
+        <div class="row" style="display: flex">
+          <div class="column" align="center" style="flex: 0%; padding-top: 2%; padding-right: 10px">
+            {% include all_posts_button.html %}
+          </div>
 
-      {{ content }}
+          <div class="column" align="left" style="flex: 50%; padding-top: 0%">
+      {% endunless %}
 
-      <div id="posts">
-        <ul class="list" style="list-style: none">
-          {% for post in all_posts %}
-            {% if post.tags contains page.tag or post.set contains page.set or page.tag == "all" %}
-              {% include post_summary_for_lists.html %}
-            {% endif %}
-          {% endfor %}
-        </ul>
+            {{ content }}
 
-        {% include pagination.html %}
-      </div>
+            <div id="posts">
+              <ul class="list" style="list-style: none">
+                {% for post in all_posts %}
+                  {% if post.tags contains page.tag or post.set contains page.set or page.tag == "all" %}
+                    {% include post_summary_for_lists.html %}
+                  {% endif %}
+                {% endfor %}
+              </ul>
 
-{% unless page.tag == "all" %}
-    </div>
-  </div>
-{% endunless %}
+              {% include pagination.html %}
+            </div>
+
+      {% unless page.tag == "all" %}
+          </div>
+        </div>
+      {% endunless %}
+    </section>
+  </body>
+
+  {% include footer.html %}
+</html>
