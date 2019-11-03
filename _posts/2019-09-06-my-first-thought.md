@@ -1,5 +1,5 @@
 ---
-layout: thought
+layout: post
 title: My First Thought
 tags: [ tech ]
 ---

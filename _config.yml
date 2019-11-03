@@ -46,6 +46,6 @@ relative_links:
   collections: true
 
 collections:
-  thoughts:
+  posts:
     output: true
-    permalink: /thoughts/:path
+    permalink: /posts/:path

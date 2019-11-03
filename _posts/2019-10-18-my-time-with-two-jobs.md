@@ -1,11 +1,11 @@
 ---
-layout: thought
+layout: post
 title: My Time with Two Jobs
 ---
 
 A couple years ago, after I started working full-time, I thought about pursuing a second job. Perhaps something in retail or serving. I eventually decided not to go through with that—I really didn't need the additional money, since I work full-time as a software engineer. But this past January, I decided to make a change and take a second job anyway.
 
-The reasons why a person might decide to get a second (or third) job is usually related to money. If a person is having trouble paying the bills with their first job, they may get another one to cover the difference. But for me, I didn't necessarily _need_ a second job, I just _wanted_ one. Since I had decided to do my Kenya vacation in August (read more about that [here](/thoughts/welcome-to-kenya)), I figured that my savings account was going to take a significant hit if I didn't make up some of that money through another job.
+The reasons why a person might decide to get a second (or third) job is usually related to money. If a person is having trouble paying the bills with their first job, they may get another one to cover the difference. But for me, I didn't necessarily _need_ a second job, I just _wanted_ one. Since I had decided to do my Kenya vacation in August (read more about that [here](/posts/welcome-to-kenya)), I figured that my savings account was going to take a significant hit if I didn't make up some of that money through another job.
 
 ## Working with <a href="https://shoppers.instacart.com/" target="_blank">Instacart</a>
 ### Full-Service Shopper
