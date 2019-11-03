@@ -3,10 +3,10 @@
 </nav>
 
 <script type="text/javascript">
-  document.getElementById("thoughts").style.display = "none";
+  document.getElementById("posts").style.display = "none";
 
   var options = {
-    valueNames: [ 'thought' ],
+    valueNames: [ 'post' ],
     page: 5,
     pagination: {
       outerWindow: 1,
@@ -16,5 +16,5 @@
 </script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"
-  onload="var thoughts = new List('thoughts', options); document.getElementById('thoughts').style.display = 'block';">
+  onload="var posts = new List('posts', options); document.getElementById('posts').style.display = 'block';">
 </script>
