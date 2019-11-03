@@ -1,7 +1,7 @@
 ---
-layout: thoughts
+layout: posts
 title: Welcome to Kenya
-permalink: /thoughts/welcome-to-kenya
+permalink: /posts/welcome-to-kenya
 set: Welcome to Kenya
 ---
 
