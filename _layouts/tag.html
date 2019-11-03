@@ -3,7 +3,7 @@ layout: default
 ---
 
 {% assign draft_posts = site.posts | where: "draft", "true" %}
-{% assign published_posts = site.posts | where: "layout", "post" | where_exp: "post", "post.draft != true" %}
+{% assign published_posts = site.posts | where_exp: "post", "post.draft != true" %}
 {% assign sorted_published_posts = published_posts | sort: "date" | reverse %}
 {% assign all_posts = draft_posts | concat: sorted_published_posts %}
 
