@@ -1,7 +1,7 @@
 ---
-layout: posts
+layout: tag
 title: All About Tech
-permalink: /posts/tech
+permalink: /tag/tech
 tag: tech
 ---
 

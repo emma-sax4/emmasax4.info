@@ -9,7 +9,7 @@ layout: default
       <br>
       {% assign set = page.set %}
       {% include set_list.html %}
-    {% else %}
+    {% elsif page.tags %}
       <br>
       {% assign tags = page.tags | sort %}
       {% include tags_list.html %}
