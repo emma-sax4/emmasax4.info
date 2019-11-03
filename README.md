@@ -77,19 +77,18 @@ Here are all of the parts of this project associated with running this applicati
 |   ├── post-draft.md
 |   ├── another_tag_name.md
 |   └── tag_name.md
-├── css
-|   └── main.scss
+├── assets
+|   ├── css
+|   |   └── style.scss
+|   ├── images
+|   |   ├── favicons
+|   |   |   └── favicon.ico
+|   |   ├── picture-01.jpg
+|   |   ├── picture-02.jpg
+|   |   ├── picture-03.png
+|   |   └── picture-04.jpg
 ├── primer
 |   └── https://github.com/primer/css/tree/6a8733ea0f3c079fe4a37c1828297d8f661ccee8
-├── images
-|   ├── favicons
-|   |   └── favicon.ico
-|   ├── picture-01.jpg
-|   ├── picture-02.jpg
-|   ├── picture-03.png
-|   ├── picture-04.jpg
-|   ├── resource-01.pdf
-|   └── resource-02.pdf
 ├── resources
 |   ├── resource-01.pdf
 |   └── resource-02.pdf
@@ -229,14 +228,22 @@ set: Posts Set
 
 Currently, the code is not set up to handle posts that are part of a set **and** contain tags.
 
-### `css/`
+### `assets/`
 
-This directory only has one file — `main.scss`. This is where I can keep _all_ of the CSS that this project uses. To make sure it's all being used, there is one very important line in the `_includes/head.html`:
+This directory has two directories, `css/` and `images/`. `css/` only has one file — `style.scss`. This is where I can keep _all_ of the CSS that this project uses. To make sure it's all being used, there is one very important line in the `_includes/head.html`:
 ```
-<link rel="stylesheet" href="{{ "css/main.css" | relative_url }}">
+<link rel="stylesheet" href="{{ "assets/css/style.css" | relative_url }}">
 ```
 
 Without that line, none of the CSS would show up as expected.
+
+The `images/` directory gives me a place to store all of the images this site uses. By putting them all into one directory (that's nested as necessary), it provides some organization to the repository. To call a specific resource, you can either ask for it in HTML:
+```
+<div>
+  <img src="/assets/images/picture-01.jpg" alt="Picture 1">
+</div>
+```
+
 
 ### `primer/`
 
@@ -246,15 +253,6 @@ git submodule update --init --recursive
 ```
 
 and make sure it's on commit `6a8733ea0f3c079fe4a37c1828297d8f661ccee8`. Once things are initialized, there should be no need to be committing to this directory.
-
-### `images/`
-
-This directory gives me a place to store all of the images this site uses. By putting them all into one directory (that's nested as necessary), it provides some organization to the repository. To call a specific resource, you can either ask for it in HTML:
-```
-<div>
-  <img src="/images/picture-01.jpg" alt="Picture 1">
-</div>
-```
 
 ### `resources/`
 
