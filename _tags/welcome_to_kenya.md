@@ -1,7 +1,7 @@
 ---
-layout: thoughts
+layout: tag
 title: Welcome to Kenya
-permalink: /thoughts/welcome-to-kenya
+permalink: /tag/welcome-to-kenya
 set: Welcome to Kenya
 ---
 

@@ -1,5 +1,5 @@
 ---
-layout: thought
+layout: post
 title: "Skimp and Splurge: The Art of Saving Money"
 tags: [ money ]
 ---

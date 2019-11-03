@@ -52,6 +52,9 @@ GitHub automatically deploys each commit to master branch. A full deployment onl
 Here are all of the parts of this project associated with running this application. This list does not include files/directories related to GitHub, Travis, Git, etc.
 ```
 .
+├── _drafts
+|   ├── set-post-draft.md
+|   └── post-draft.md
 ├── _includes
 |   ├── footer.html
 |   └── header.html
@@ -63,29 +66,30 @@ Here are all of the parts of this project associated with running this applicati
 |   ├── page-01.md
 |   ├── page-02.md
 |   └── page-03.md
-├── _thoughts
-|   ├── thoughts-set
-|   |   ├── 2001-01-01-set-thought-01.md
-|   |   ├── 2001-01-02-set-thought-02.md
-|   |   ├── set-thought-draft.md
-|   |   └── thoughts_set.md
-|   ├── 2001-01-03-thought-01.md
-|   ├── 2001-01-04-thought-02.md
-|   ├── thought-draft.md
+├── posts
+|   ├── posts-set
+|   |   ├── 2001-01-01-set-post-01.md
+|   |   └── 2001-01-02-set-post-02.md
+|   ├── 2001-01-03-post-01.md
+|   └── 2001-01-04-post-02.md
+├── _tags
+|   ├── posts_set.md
+|   ├── post-draft.md
 |   ├── another_tag_name.md
 |   └── tag_name.md
-├── css
-|   └── main.scss
+├── assets
+|   ├── css
+|   |   └── style.scss
+|   ├── images
+|   |   ├── favicons
+|   |   |   └── favicon.ico
+|   |   ├── picture-01.jpg
+|   |   ├── picture-02.jpg
+|   |   ├── picture-03.png
+|   |   └── picture-04.jpg
 ├── primer
 |   └── https://github.com/primer/css/tree/6a8733ea0f3c079fe4a37c1828297d8f661ccee8
 ├── resources
-|   ├── favicons
-|   |   └── favicon.ico
-|   ├── logos
-|   |   ├── logo-01.png
-|   |   └── logo-02.jpg
-|   ├── picture-01.jpg
-|   ├── picture-02.jpg
 |   ├── resource-01.pdf
 |   └── resource-02.pdf
 ├── _config.yml
@@ -94,6 +98,27 @@ Here are all of the parts of this project associated with running this applicati
 ```
 
 Let's go through what each section does, from the top.
+
+### `_drafts/`
+
+Drafts should always be written in a pull request in new branch. This will allow the author of the post to let it sit for as long as necessary, before feeling pressured to finish the post.
+
+To write a draft, write a new post in the `_drafts/` directory, and then make sure the front matter looks somewhat like the following:
+```
+---
+layout: post
+title: Test Post
+tags: [ tag_name ] OR set: Posts Set
+draft: true
+---
+```
+
+Then, run your local Jekyll command like such:
+```
+jekyll serve --drafts
+```
+
+Any drafts should appear at the top of the list of posts, and should show as "Unpublished". When it's time to publish a draft, move the draft to the `_posts/` directory, rename the file to include the publishing date (in `YYYY-MM-DD-` format... follow the previous post examples), and remove the `draft: true` line from the front matter.
 
 ### `_includes/`
 
@@ -104,7 +129,7 @@ HTML files in this directory are for page elements, such as the header, footer, 
 
 ### `_layouts/`
 
-HTML files in this directory are for the skeletons of a specific page. The `default.html` is the plainest of the plain. It includes the head, header, and footer, and defines the body and main content of the page. The other HTML files in the directory are for more detailed pages, such as the homepage and listing thoughts. To specify that a certain page should use a specific layout, write that as the `layout` in the top of any other Markdown/HTML file:
+HTML files in this directory are for the skeletons of a specific page. The `default.html` is the plainest of the plain. It includes the head, header, and footer, and defines the body and main content of the page. The other HTML files in the directory are for more detailed pages, such as the homepage and listing posts. To specify that a certain page should use a specific layout, write that as the `layout` in the top of any other Markdown/HTML file:
 ```
 ---
 layout: default
@@ -142,46 +167,46 @@ Then, you can reference those custom settings on other HTML files (such as the l
 => useful_string
 ```
 
-### `_thoughts/`
+### `_posts/`
 
-This is the collection of "thoughts" that I've had ("thought"/"thoughts" are the very non-creative terms I've come up with instead of using "post"/"blog").
+This is the collection of blog posts that I've written.
 
-### Thoughts without a Set
+### Posts without a Set
 
-Most of the thoughts can just go into the general `_thoughts/` directory, written as Markdown files. For a generic thought, the front matter could look like this:
+Most of the posts can just go into the general `_posts/` directory, written as Markdown files. For a generic post, the front matter could look like this:
 ```
 ---
-layout: thought
-title: Thought 1
+layout: post
+title: Post 1
 tags: [ tag_name, another_tag_name ]
 ---
 ```
 
-Let's talk about the `tags`. The tags determine how we want to categorize each thought. If there's no categorization of a thought (if it's completely random), then there's no need to specify any `tag(s)`, AKA just leave the line completely out of the front matter. But, if you think the thought is a good contestant for a tag, such as `tag_name` or `another_tag_name` in our example, then add those appropriate tags in a list format.
+Let's talk about the `tags`. The tags determine how we want to categorize each post. If there's no categorization of a post (if it's completely random), then there's no need to specify any `tag(s)`, AKA just leave the line completely out of the front matter. But, if you think the post is a good contestant for a tag, such as `tag_name` or `another_tag_name` in our example, then add those appropriate tags in a list format.
 
-For every tag, there needs to be a `<tag-name>.md` file in the `_thoughts/` directory. The general file for this should look like this:
+For every tag, there needs to be a `<tag-name>.md` file in the `_tags/` directory. The general file for this should look like this:
 ```
 ---
-layout: thoughts
+layout: tag
 title: Tag Name
-permalink: /thoughts/tag-name
+permalink: /tag/tag-name
 tag: tag_name
 ---
 
 <h1>{{ page.title }}</h1>
 ```
 
-The `tag` front matter indicates which thoughts to show on that page (only the thoughts with that tag will show).
+The `tag` front matter indicates which posts to show on that page (only the posts with that tag will show).
 
-### Thoughts in a Set
+### Posts in a Set
 
-If I'm going to write a set of thoughts that all have a common theme, they can go into a new nested directory: `_thoughts/<set-name>/`. If that's the case, then there should also be a Markdown file titled `<set-name>.md` inside that inner directory, which would serve as a table of contents for the thoughts in that set. Here's an example of what that table of contents page should look like:
+If I'm going to write a set of posts that all have a common theme, they can go into a new nested directory: `_posts/<set-name>/`. If that's the case, then there should also be a Markdown file titled `<set-name>.md` inside `_tags/`, which would serve as a table of contents for the posts in that set. Here's an example of what that table of contents page should look like:
 ```
 ---
-layout: thoughts
-title: Thoughts Set
-permalink: /thoughts/thoughts-set
-set: Thoughts Set
+layout: tag
+title: Posts Set
+permalink: /tag/posts-set
+set: Posts Set
 ---
 
 <h1>{{ page.title }}</h1>
@@ -189,39 +214,36 @@ set: Thoughts Set
 Some words describing this set should go here.
 ```
 
-The `set` front matter indicates which thoughts to show on that page, so only thoughts that belong to that single set will be on the page. This should be the same as the set name but with underscores. The permalink should have the name of the set, but with dashes.
+The `set` front matter indicates which posts to show on that page, so only posts that belong to that single set will be on the page. This should be the same as the set name but with underscores. The permalink should have the name of the set, but with dashes.
 
-Each individual thought should sit inside the `_thoughts/<set-name>/` directory, and should make use of the `title` and `subtitle` metadata, where the `title` is the name of the set, and the `subtitle` is the title of that specific thought:
+Each individual post should sit inside the `_posts/<set-name>/` directory, and should make use of the `title` and `subtitle` metadata, where the `title` is the name of the set, and the `subtitle` is the title of that specific post:
 ```
 ---
-layout: thought
-title: Thoughts Set
-subtitle: Set Thought 1
-set: Thoughts Set
+layout: post
+title: Posts Set
+subtitle: Set Post 1
+set: Posts Set
 ---
 ```
 
-Currently, the code is not set up to handle thoughts that are part of a set **and** contain tags.
+Currently, the code is not set up to handle posts that are part of a set **and** contain tags.
 
-### Writing Drafts
+### `assets/`
 
-Drafts should always be written in a pull request in new branch. This will allow the author of the thought to let it sit for as long as necessary, before feeling pressured to finish the thought.
-
-To write a draft, write a new thought in the proper directory, and then make sure the front matter contains the following:
+This directory has two directories, `css/` and `images/`. `css/` only has one file — `style.scss`. This is where I can keep _all_ of the CSS that this project uses. To make sure it's all being used, there is one very important line in the `_includes/head.html`:
 ```
-draft: true
-```
-
-Any drafts should appear at the top of the list of thoughts, and should show as "Unpublished". When it's time to publish a draft, rename the file to include the publishing date (in `YYYY-MM-DD-` format... follow the previous thought examples), and remove the `draft: true` line from the front matter.
-
-### `css/`
-
-This directory only has one file — `main.scss`. This is where I can keep _all_ of the CSS that this project uses. To make sure it's all being used, there is one very important line in the `_includes/head.html`:
-```
-<link rel="stylesheet" href="{{ "css/main.css" | relative_url }}">
+<link rel="stylesheet" href="{{ "assets/css/style.css" | relative_url }}">
 ```
 
 Without that line, none of the CSS would show up as expected.
+
+The `images/` directory gives me a place to store all of the images this site uses. By putting them all into one directory (that's nested as necessary), it provides some organization to the repository. To call a specific resource, you can either ask for it in HTML:
+```
+<div>
+  <img src="/assets/images/picture-01.jpg" alt="Picture 1">
+</div>
+```
+
 
 ### `primer/`
 
@@ -234,14 +256,7 @@ and make sure it's on commit `6a8733ea0f3c079fe4a37c1828297d8f661ccee8`. Once th
 
 ### `resources/`
 
-This directory gives me a place to store handy items, such as my resume(s), some pictures, logos, past slides from tech talks, etc. By putting them all into one directory (that's nested as necessary), it provides some organization to the repository. To call a specific resource, you can either ask for it in HTML:
-```
-<div>
-  <img src="/resources/picture-01.jpg" alt="Picture 1">
-</div>
-```
-
-Or you can put a link to it in Markdown:
+This directory gives me a place to keep PDF documents that are linked in this site. You can put a link to it in Markdown:
 ```
 This is an example sentence, so it will throw a 404. See [here](/resources/resource-01.pdf)?
 ```

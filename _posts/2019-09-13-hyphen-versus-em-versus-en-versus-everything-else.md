@@ -1,5 +1,5 @@
 ---
-layout: thought
+layout: post
 title: Hyphen vs. Em vs. En vs. Everything Else
 ---
 

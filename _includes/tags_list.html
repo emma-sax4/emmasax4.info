@@ -1,11 +1,11 @@
 {% unless tags.size == 0 %}
   <br>
-  <span class="thought-meta">
+  <span class="post-meta">
     Tags:
     {% for tag in tags %}
       {% assign tag_url = tag | downcase | replace: "_", "-" %}
 
-      <a href="{{ "/thoughts/" | append: tag_url | relative_url }}">{{ tag }}</a>
+      <a href="{{ "/tag/" | append: tag_url | relative_url }}">{{ tag }}</a>
       {% unless tag == tags.last %}
         |
       {% endunless %}

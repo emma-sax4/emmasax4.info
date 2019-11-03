@@ -1,7 +1,7 @@
 ---
-layout: thoughts
+layout: tag
 title: Money and Savings
-permalink: /thoughts/money
+permalink: /tag/money
 tag: money
 ---
 
