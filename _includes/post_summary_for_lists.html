@@ -1,0 +1,34 @@
+<li>
+  {% assign post_url = post.url | downcase | replace: ".html", "" | relative_url %}
+  {% if post.subtitle %}
+    {% if page.tag == "all" %}
+      {% assign short_title = post.title | append: " ☞ " | append: post.subtitle %}
+    {% else %}
+      {% assign short_title = post.subtitle %}
+    {% endif %}
+  {% else %}
+    {% assign short_title = post.title %}
+  {% endif %}
+
+  <span class="post-meta">
+    {% if post.draft == true %}
+        Unpublished
+    {% else %}
+        {{ post.date | date: "%B %-d, %Y" }}
+    {% endif %}
+  </span>
+
+  <br>
+  <a href="{{ site.baseurl }}{{ post_url }}">{{ short_title }}</a>
+
+  {% if post.set %}
+    {% unless page.set %}
+      {% assign set = post.set %}
+      {% include set_list.html %}
+    {% endunless %}
+  {% else %}
+    {% assign tags = post.tags | sort %}
+    {% include tags_list.html %}
+  {% endif %}
+  <br><br>
+</li>

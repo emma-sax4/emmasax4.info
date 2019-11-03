@@ -35,6 +35,7 @@ sass:
 
 include:
   - _pages
+  - _tags
 
 exclude:
   - Gemfile
@@ -46,6 +47,9 @@ relative_links:
   collections: true
 
 collections:
-  thoughts:
+  posts:
     output: true
-    permalink: /thoughts/:path
+    permalink: /posts/:path
+  tags:
+    output: true
+    permalink: /tag/:path
