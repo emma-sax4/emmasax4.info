@@ -35,6 +35,7 @@ sass:
 
 include:
   - _pages
+  - _tags
 
 exclude:
   - Gemfile
@@ -49,3 +50,6 @@ collections:
   posts:
     output: true
     permalink: /posts/:path
+  tags:
+    output: true
+    permalink: /tag/:path

@@ -5,7 +5,7 @@
     {% for tag in tags %}
       {% assign tag_url = tag | downcase | replace: "_", "-" %}
 
-      <a href="{{ "/posts/" | append: tag_url | relative_url }}">{{ tag }}</a>
+      <a href="{{ "/tag/" | append: tag_url | relative_url }}">{{ tag }}</a>
       {% unless tag == tags.last %}
         |
       {% endunless %}
