@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: tag
 title: Blog
 order: 4
 permalink: /blog

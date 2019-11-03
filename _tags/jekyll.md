@@ -1,7 +1,7 @@
 ---
-layout: posts
+layout: post
 title: Jekyll
-permalink: /posts/jekyll
+permalink: /tag/jekyll
 tag: jekyll
 ---
 
