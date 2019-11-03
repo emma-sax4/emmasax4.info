@@ -1,0 +1,36 @@
+---
+layout: default
+---
+
+{% assign draft_posts = site.posts | where: "draft", "true" %}
+{% assign published_posts = site.posts | where: "layout", "post" | where_exp: "post", "post.draft != true" %}
+{% assign sorted_published_posts = published_posts | sort: "date" | reverse %}
+{% assign all_posts = draft_posts | concat: sorted_published_posts %}
+
+{% unless page.tag == "all" %}
+  <div class="row" style="display: flex">
+    <div class="column" align="center" style="flex: 0%; padding-top: 2%; padding-right: 10px">
+      {% include all_posts_button.html %}
+    </div>
+
+    <div class="column" align="left" style="flex: 50%; padding-top: 0%">
+{% endunless %}
+
+      {{ content }}
+
+      <div id="posts">
+        <ul class="list" style="list-style: none">
+          {% for post in all_posts %}
+            {% if post.tags contains page.tag or post.set contains page.set or page.tag == "all" %}
+              {% include post_summary_for_lists.html %}
+            {% endif %}
+          {% endfor %}
+        </ul>
+
+        {% include pagination.html %}
+      </div>
+
+{% unless page.tag == "all" %}
+    </div>
+  </div>
+{% endunless %}
