@@ -52,6 +52,9 @@ GitHub automatically deploys each commit to master branch. A full deployment onl
 Here are all of the parts of this project associated with running this application. This list does not include files/directories related to GitHub, Travis, Git, etc.
 ```
 .
+├── _drafts
+|   ├── set-post-draft.md
+|   └── post-draft.md
 ├── _includes
 |   ├── footer.html
 |   └── header.html
@@ -66,10 +69,9 @@ Here are all of the parts of this project associated with running this applicati
 ├── posts
 |   ├── posts-set
 |   |   ├── 2001-01-01-set-post-01.md
-|   |   ├── 2001-01-02-set-post-02.md
-|   |   ├── set-post-draft.md
+|   |   └── 2001-01-02-set-post-02.md
 |   ├── 2001-01-03-post-01.md
-|   ├── 2001-01-04-post-02.md
+|   └── 2001-01-04-post-02.md
 ├── _tags
 |   ├── posts_set.md
 |   ├── post-draft.md
@@ -79,14 +81,16 @@ Here are all of the parts of this project associated with running this applicati
 |   └── main.scss
 ├── primer
 |   └── https://github.com/primer/css/tree/6a8733ea0f3c079fe4a37c1828297d8f661ccee8
-├── resources
+├── images
 |   ├── favicons
 |   |   └── favicon.ico
-|   ├── logos
-|   |   ├── logo-01.png
-|   |   └── logo-02.jpg
 |   ├── picture-01.jpg
 |   ├── picture-02.jpg
+|   ├── picture-03.png
+|   ├── picture-04.jpg
+|   ├── resource-01.pdf
+|   └── resource-02.pdf
+├── resources
 |   ├── resource-01.pdf
 |   └── resource-02.pdf
 ├── _config.yml
@@ -95,6 +99,27 @@ Here are all of the parts of this project associated with running this applicati
 ```
 
 Let's go through what each section does, from the top.
+
+### `_drafts/`
+
+Drafts should always be written in a pull request in new branch. This will allow the author of the post to let it sit for as long as necessary, before feeling pressured to finish the post.
+
+To write a draft, write a new post in the `_drafts/` directory, and then make sure the front matter looks somewhat like the following:
+```
+---
+layout: post
+title: Test Post
+tags: [ tag_name ] OR set: Posts Set
+draft: true
+---
+```
+
+Then, run your local Jekyll command like such:
+```
+jekyll serve --drafts
+```
+
+Any drafts should appear at the top of the list of posts, and should show as "Unpublished". When it's time to publish a draft, move the draft to the `_posts/` directory, rename the file to include the publishing date (in `YYYY-MM-DD-` format... follow the previous post examples), and remove the `draft: true` line from the front matter.
 
 ### `_includes/`
 
@@ -204,17 +229,6 @@ set: Posts Set
 
 Currently, the code is not set up to handle posts that are part of a set **and** contain tags.
 
-### Writing Drafts
-
-Drafts should always be written in a pull request in new branch. This will allow the author of the post to let it sit for as long as necessary, before feeling pressured to finish the post.
-
-To write a draft, write a new post in the proper directory, and then make sure the front matter contains the following:
-```
-draft: true
-```
-
-Any drafts should appear at the top of the list of posts, and should show as "Unpublished". When it's time to publish a draft, rename the file to include the publishing date (in `YYYY-MM-DD-` format... follow the previous post examples), and remove the `draft: true` line from the front matter.
-
 ### `css/`
 
 This directory only has one file — `main.scss`. This is where I can keep _all_ of the CSS that this project uses. To make sure it's all being used, there is one very important line in the `_includes/head.html`:
@@ -233,16 +247,18 @@ git submodule update --init --recursive
 
 and make sure it's on commit `6a8733ea0f3c079fe4a37c1828297d8f661ccee8`. Once things are initialized, there should be no need to be committing to this directory.
 
-### `resources/`
+### `images/`
 
-This directory gives me a place to store handy items, such as my resume(s), some pictures, logos, past slides from tech talks, etc. By putting them all into one directory (that's nested as necessary), it provides some organization to the repository. To call a specific resource, you can either ask for it in HTML:
+This directory gives me a place to store all of the images this site uses. By putting them all into one directory (that's nested as necessary), it provides some organization to the repository. To call a specific resource, you can either ask for it in HTML:
 ```
 <div>
-  <img src="/resources/picture-01.jpg" alt="Picture 1">
+  <img src="/images/picture-01.jpg" alt="Picture 1">
 </div>
 ```
 
-Or you can put a link to it in Markdown:
+### `resources/`
+
+This directory gives me a place to keep PDF documents that are linked in this site. You can put a link to it in Markdown:
 ```
 This is an example sentence, so it will throw a 404. See [here](/resources/resource-01.pdf)?
 ```
