@@ -9,8 +9,8 @@ permalink: /around-town
 
 ## Talks
 
-* _What We Learn from Reviewing Others' Work_, DevOpsDays MSP 2019 (<a href="/resources/DevOpsDays_MSP_Ignite_20190806.pdf" target="_blank">slides</a>, <a href="https://devopsdays.org/events/2019-minneapolis/program/emma-sax/" target="_blank">recording</a>)
-* _DevOps in Education: A Virtually Non-Existent Course_, DevOpsDays MSP 2017 (<a href="/resources/DevOpsDays_MSP_Ignite_20170725.pdf" target="_blank">slides</a>, <a href="https://devopsdays.org/events/2017-minneapolis/program/emma-sax/" target="_blank">recording</a>)
+* _What We Learn from Reviewing Others' Work_, DevOpsDays MSP 2019 (<a href="/assets/resources/DevOpsDays_MSP_Ignite_20190806.pdf" target="_blank">slides</a>, <a href="https://devopsdays.org/events/2019-minneapolis/program/emma-sax/" target="_blank">recording</a>)
+* _DevOps in Education: A Virtually Non-Existent Course_, DevOpsDays MSP 2017 (<a href="/assets/resources/DevOpsDays_MSP_Ignite_20170725.pdf" target="_blank">slides</a>, <a href="https://devopsdays.org/events/2017-minneapolis/program/emma-sax/" target="_blank">recording</a>)
 
 ## Programming Competitions
 
