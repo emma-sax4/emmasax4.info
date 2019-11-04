@@ -1,1 +1,10 @@
-This is a placeholder for a draft. Please see https://github.com/emma-sax4/emma-sax4.github.io#_drafts for more information on writing drafts.
+This is a placeholder for a draft. Here's an example of what the front matter of a draft should look like:
+
+---
+layout: post
+title: Test Post
+tags: [ tag_name ] OR set: Posts Set
+draft: true
+---
+
+Please see https://github.com/emma-sax4/emma-sax4.github.io#_drafts for more information on writing drafts.
