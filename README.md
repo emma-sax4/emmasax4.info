@@ -66,7 +66,7 @@ Here are all of the parts of this project associated with running this applicati
 |   ├── page-01.md
 |   ├── page-02.md
 |   └── page-03.md
-├── posts
+├── _posts
 |   ├── posts-set
 |   |   ├── 2001-01-01-set-post-01.md
 |   |   └── 2001-01-02-set-post-02.md
@@ -87,11 +87,11 @@ Here are all of the parts of this project associated with running this applicati
 |   |   ├── picture-02.jpg
 |   |   ├── picture-03.png
 |   |   └── picture-04.jpg
+|   ├── resources
+|   |   ├── resource-01.pdf
+|   |   └── resource-02.pdf
 ├── primer
 |   └── https://github.com/primer/css/tree/6a8733ea0f3c079fe4a37c1828297d8f661ccee8
-├── resources
-|   ├── resource-01.pdf
-|   └── resource-02.pdf
 ├── _config.yml
 ├── Gemfile
 └── index.md
@@ -230,7 +230,7 @@ Currently, the code is not set up to handle posts that are part of a set **and**
 
 ### `assets/`
 
-This directory has two directories, `css/` and `images/`. `css/` only has one file — `style.scss`. This is where I can keep _all_ of the CSS that this project uses. To make sure it's all being used, there is one very important line in the `_includes/head.html`:
+This directory has three directories, `css/`, `images/`, and `resources/`. `css/` only has one file — `style.scss`. This is where I can keep _all_ of the CSS that this project uses. To make sure it's all being used, there is one very important line in the `_includes/head.html`:
 ```
 <link rel="stylesheet" href="{{ "assets/css/style.css" | relative_url }}">
 ```
@@ -244,6 +244,10 @@ The `images/` directory gives me a place to store all of the images this site us
 </div>
 ```
 
+The `resources/` directory gives me a place to keep PDF documents that are linked in this site. You can put a link to it in Markdown:
+```
+This is an example sentence, so it will throw a 404. See [here](/assets/resources/resource-01.pdf)?
+```
 
 ### `primer/`
 
@@ -253,13 +257,6 @@ git submodule update --init --recursive
 ```
 
 and make sure it's on commit `6a8733ea0f3c079fe4a37c1828297d8f661ccee8`. Once things are initialized, there should be no need to be committing to this directory.
-
-### `resources/`
-
-This directory gives me a place to keep PDF documents that are linked in this site. You can put a link to it in Markdown:
-```
-This is an example sentence, so it will throw a 404. See [here](/resources/resource-01.pdf)?
-```
 
 ### `_config.yml`
 
