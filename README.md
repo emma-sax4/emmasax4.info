@@ -66,7 +66,7 @@ Here are all of the parts of this project associated with running this applicati
 |   ├── page-01.md
 |   ├── page-02.md
 |   └── page-03.md
-├── posts
+├── _posts
 |   ├── posts-set
 |   |   ├── 2001-01-01-set-post-01.md
 |   |   └── 2001-01-02-set-post-02.md
