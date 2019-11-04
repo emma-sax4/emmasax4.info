@@ -114,7 +114,7 @@ td {
   color: black;
   text-align: center;
   background-color: #159957;
-  background: linear-gradient(to right, rgb(32, 92, 172), rgb(24, 168, 60));
+  background: linear-gradient(to right, rgb(27, 14, 172), rgb(107, 208, 245));
   overflow: hidden;
 
   a {
@@ -225,16 +225,16 @@ td {
 /* CUSTOM BUTTON */
 
 .myButton {
-  -moz-box-shadow: 0px 10px 14px -7px rgb(38, 106, 195);
-  -webkit-box-shadow: 0px 10px 14px -7px rgb(38, 106, 195);
-  box-shadow: 0px 10px 14px -7px rgb(38, 106, 195);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, rgb(38, 106, 195)), color-stop(1, rgb(56, 148, 202)));
-  background: -moz-linear-gradient(top, rgb(38, 106, 195) 5%, rgb(56, 148, 202) 100%);
-  background: -webkit-linear-gradient(top, rgb(38, 106, 195) 5%, rgb(56, 148, 202) 100%);
-  background: -o-linear-gradient(top, rgb(38, 106, 195) 5%, rgb(56, 148, 202) 100%);
-  background: -ms-linear-gradient(top, rgb(38, 106, 195) 5%, rgb(56, 148, 202) 100%);
-  background: linear-gradient(to bottom, rgb(38, 106, 195) 5%, rgb(56, 148, 202) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="rgb(38, 106, 195)", endColorstr="rgb(56, 148, 202)",GradientType=0);
+  -moz-box-shadow: 0px 10px 14px -7px rgb(94, 204, 250);
+  -webkit-box-shadow: 0px 10px 14px -7px rgb(94, 204, 250);
+  box-shadow: 0px 10px 14px -7px rgb(94, 204, 250);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, rgb(94, 204, 250)), color-stop(1, rgb(49, 122, 249)));
+  background: -moz-linear-gradient(top, rgb(94, 204, 250) 5%, rgb(49, 122, 249) 100%);
+  background: -webkit-linear-gradient(top, rgb(94, 204, 250) 5%, rgb(49, 122, 249) 100%);
+  background: -o-linear-gradient(top, rgb(94, 204, 250) 5%, rgb(49, 122, 249) 100%);
+  background: -ms-linear-gradient(top, rgb(94, 204, 250) 5%, rgb(49, 122, 249) 100%);
+  background: linear-gradient(to bottom, rgb(94, 204, 250) 5%, rgb(49, 122, 249) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="rgb(94, 204, 250)", endColorstr="rgb(49, 122, 249)",GradientType=0);
   background-color: #3A8592;
   -moz-border-radius: 8px;
   -webkit-border-radius: 8px;
@@ -252,13 +252,13 @@ td {
 }
 
 .myButton:hover {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, rgb(56, 148, 202)), color-stop(1, rgb(56, 148, 202)));
-  background: -moz-linear-gradient(top, rgb(56, 148, 202) 5%, rgb(56, 148, 202) 100%);
-  background: -webkit-linear-gradient(top, rgb(56, 148, 202) 5%, rgb(56, 148, 202) 100%);
-  background: -o-linear-gradient(top, rgb(56, 148, 202) 5%, rgb(56, 148, 202) 100%);
-  background: -ms-linear-gradient(top, rgb(56, 148, 202) 5%, rgb(56, 148, 202) 100%);
-  background: linear-gradient(to bottom, rgb(56, 148, 202) 5%, rgb(56, 148, 202) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="rgb(56, 148, 202)", endColorstr="rgb(56, 148, 202)",GradientType=0);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, rgb(49, 122, 249)), color-stop(1, rgb(49, 122, 249)));
+  background: -moz-linear-gradient(top, rgb(49, 122, 249) 5%, rgb(49, 122, 249) 100%);
+  background: -webkit-linear-gradient(top, rgb(49, 122, 249) 5%, rgb(49, 122, 249) 100%);
+  background: -o-linear-gradient(top, rgb(49, 122, 249) 5%, rgb(49, 122, 249) 100%);
+  background: -ms-linear-gradient(top, rgb(49, 122, 249) 5%, rgb(49, 122, 249) 100%);
+  background: linear-gradient(to bottom, rgb(49, 122, 249) 5%, rgb(49, 122, 249) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="rgb(49, 122, 249)", endColorstr="rgb(49, 122, 249)",GradientType=0);
   background-color: #3A8592;
   text-decoration: none;
 }
@@ -279,7 +279,7 @@ td {
   color: white;
   text-align: center;
   background-color: #159957;
-  background: linear-gradient(to right, rgb(32, 92, 172), rgb(24, 168, 60));
+  background: linear-gradient(to right, rgb(27, 14, 172), rgb(107, 208, 245));
 }
 
 /* FOOTER */
