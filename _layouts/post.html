@@ -2,8 +2,8 @@
 layout: default
 ---
 
-<div class="row" style="display: flex">
-  <div class="column" align="center" style="flex: 0%; padding-top: 2%; padding-right: 10px">
+<div class="row" style="display: flex;">
+  <div class="column" align="center" style="flex: -5%; padding-top: 2%; padding-right: 50px;">
     {% include all_posts_button.html %}
     {% if page.set %}
       <br>
@@ -16,7 +16,7 @@ layout: default
     {% endif %}
   </div>
 
-  <div class="column" align="left" style="flex: 50%; padding-top: 0%">
+  <div class="column" align="left" style="flex: 50%; padding-top: 0%;">
     {% include post_summary_for_show.html %}
     {{ content }}
   </div>
