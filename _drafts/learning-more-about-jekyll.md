@@ -1,6 +1,6 @@
 ---
 layout: post
-title: More Websites with More Jekyll
+title: More Websites, Jekyll, and DNS
 tags: [ tech, jekyll ]
 ---
 
