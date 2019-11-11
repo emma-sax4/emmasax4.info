@@ -13,12 +13,12 @@ There comes a point in most young adults’ lives where they need to think about
 Here’s 10 things my list of "skimps" and "splurges":
 1. **SKIMP: daily coffee**. In fact, I don’t drink any coffee at all. Call me lucky that I don’t need the pick-me-up of energy in the morning, but because of it, I can easily save $150 a month from frequent trips to Starbucks.
 2. **SPLURGE: apartment rent**. Even though apartments provide a low-contract living situation, I like knowing that the place I’m living in is decently nice, in a good neighborhood, and I would feel comfortable living there for years to come if I wanted to. And it’s not like I was super picky. In fact, my requirement for living there included 6 things:
-Central heat
-Air conditioning
-Dishwasher
-Underground parking available
-Free laundry (does not necessarily mean in-unit washer/dryer)
-Fitness room in building
+* Central heat
+* Air conditioning
+* Dishwasher
+* Underground parking available
+* Free laundry (does not necessarily mean in-unit washer/dryer)
+* Fitness room in building
 3. **SKIMP: tons of new clothes**. Call it luck that at my job, jeans and t-shirts are totally appropriate, but I never am willing to spend more than about $30 on a shirt or a pair of pants if I don’t have to. Stay away from the designer stores and expensive retail stores. I only buy expensive clothes when I know I’ll be wearing them to a very important occasion.
 4. **SPLURGE: eating at nice restaurants**. I don’t mean super pricey restaurants, just ones that aren’t fast-food chains. I would never skip on going out to eat with an old friend at a decently nice restaurant. Worst case scenario, I’m fed with good-tasting food, my wallet is $45 lighter, and I’ve gotten some socializing done with friend(s). Could be worse. And I’ll probably get leftovers out of it, too.
 5. **SKIMP: tons of takeout and fast-food**. Although it doesn’t seem like much, a month’s worth of take out fees and fast-food adds up. I’d much rather cook one meal, and have it and its leftovers last me three days than spend $5-10 every two days on lunches.
