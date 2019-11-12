@@ -1,7 +1,8 @@
 ---
 layout: post
-title: "Skimp and Splurge: Three Years Later"
-tags: [ money ]
+title: Skimp and Splurge
+subtitle: "Part 2: Three Years Later"
+set: Skimp and Splurge
 ---
 
 When I dug out the original post [Skimp and Splurge: The Art of Saving Money](posts/2019-10-19-skimp-and-splurge) from my Google Drive, I was immediately humored by my original intent to create a blog. As you can probably tell, that never actually came to fruition... Until I decided to adventure with GitHub Pages. Although, most of that is another story.
