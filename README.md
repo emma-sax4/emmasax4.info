@@ -66,17 +66,18 @@ Here are all of the parts of this project associated with running this applicati
 |   ├── page-01.md
 |   ├── page-02.md
 |   └── page-03.md
+├── _post_labels
+|   ├── sets.md
+|   |   └── posts_set_name.md
+|   ├── tags.md
+|   |   ├── tag_name.md
+|   └── └── another_tag_name.md
 ├── _posts
 |   ├── posts-set
 |   |   ├── 2001-01-01-set-post-01.md
 |   |   └── 2001-01-02-set-post-02.md
 |   ├── 2001-01-03-post-01.md
 |   └── 2001-01-04-post-02.md
-├── _tags
-|   ├── posts_set.md
-|   ├── post-draft.md
-|   ├── another_tag_name.md
-|   └── tag_name.md
 ├── assets
 |   ├── css
 |   |   └── style.scss
@@ -89,7 +90,7 @@ Here are all of the parts of this project associated with running this applicati
 |   |   └── picture-04.jpg
 |   ├── resources
 |   |   ├── resource-01.pdf
-|   |   └── resource-02.pdf
+|   └── └── resource-02.pdf
 ├── primer
 |   └── https://github.com/primer/css/tree/6a8733ea0f3c079fe4a37c1828297d8f661ccee8
 ├── _config.yml
@@ -167,6 +168,10 @@ Then, you can reference those custom settings on other HTML files (such as the l
 => useful_string
 ```
 
+### `_post_labels/`
+
+See the below section on `_posts/`.
+
 ### `_posts/`
 
 This is the collection of blog posts that I've written.
@@ -184,7 +189,7 @@ tags: [ tag_name, another_tag_name ]
 
 Let's talk about the `tags`. The tags determine how we want to categorize each post. If there's no categorization of a post (if it's completely random), then there's no need to specify any `tag(s)`, AKA just leave the line completely out of the front matter. But, if you think the post is a good contestant for a tag, such as `tag_name` or `another_tag_name` in our example, then add those appropriate tags in a list format.
 
-For every tag, there needs to be a `<tag-name>.md` file in the `_tags/` directory. The general file for this should look like this:
+For every tag, there needs to be a `<tag-name>.md` file in the `_post_labels/` directory. The general file for this should look like this:
 ```
 ---
 layout: blog
@@ -200,12 +205,12 @@ The `tag` front matter indicates which posts to show on that page (only the post
 
 ### Posts in a Set
 
-If I'm going to write a set of posts that all have a common theme, they can go into a new nested directory: `_posts/<set-name>/`. If that's the case, then there should also be a Markdown file titled `<set-name>.md` inside `_tags/`, which would serve as a table of contents for the posts in that set. Here's an example of what that table of contents page should look like:
+If I'm going to write a set of posts that all have a common theme, they can go into a new nested directory: `_posts/<set-name>/`. If that's the case, then there should also be a Markdown file titled `<set-name>.md` inside `_post_labels/`, which would serve as a table of contents for the posts in that set. Here's an example of what that table of contents page should look like:
 ```
 ---
 layout: blog
 title: Posts Set
-permalink: /tag/posts-set
+permalink: /set/posts-set
 set: Posts Set
 ---
 
