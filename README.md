@@ -187,7 +187,7 @@ Let's talk about the `tags`. The tags determine how we want to categorize each p
 For every tag, there needs to be a `<tag-name>.md` file in the `_tags/` directory. The general file for this should look like this:
 ```
 ---
-layout: tag
+layout: blog
 title: Tag Name
 permalink: /tag/tag-name
 tag: tag_name
@@ -203,7 +203,7 @@ The `tag` front matter indicates which posts to show on that page (only the post
 If I'm going to write a set of posts that all have a common theme, they can go into a new nested directory: `_posts/<set-name>/`. If that's the case, then there should also be a Markdown file titled `<set-name>.md` inside `_tags/`, which would serve as a table of contents for the posts in that set. Here's an example of what that table of contents page should look like:
 ```
 ---
-layout: tag
+layout: blog
 title: Posts Set
 permalink: /tag/posts-set
 set: Posts Set
