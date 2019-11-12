@@ -52,6 +52,62 @@ So... I guess my requirements list has gotten even longer. But one huge thing I 
 
 > **SKIMP: tons of new clothes**. Call it luck that at my job, jeans and t-shirts are totally appropriate, but I never am willing to spend more than about $30 on a shirt or a pair of pants if I don’t have to. Stay away from the designer stores and expensive retail stores. I only buy expensive clothes when I know I’ll be wearing them to a very important occasion.
 
+This has pretty much stayed the same. But unfortunately, what ends up happening is that I end up buying such cheap clothing that it only lasts a year. I know that if I paid a bit more on a more expensive version, it would actually be better quality. But in my defense, I actually have raised my maximum price range of a piece of clothing to more like $50.
+
 ### 4.
 
 > **SPLURGE: eating at nice restaurants**. I don’t mean super pricey restaurants, just ones that aren’t fast-food chains. I would never skip on going out to eat with an old friend at a decently nice restaurant. Worst case scenario, I’m fed with good-tasting food, my wallet is $45 lighter, and I’ve gotten some socializing done with friend(s). Could be worse. And I’ll probably get leftovers out of it, too.
+
+Recently, I've begun to switch up my diet in favor of healthy foods that are homecooked. I make simple, easy-to-remember recipes. But I've also learned that I can save a lot of money by not going out to eat. Cooking food at home is cheaper and healthier. Now, eating a bunch of frozen meals will add up, so instead I've been opting for pasta, beans, rice, eggs, fresh fruit, and frozen veggies. Cheap and easy to cook!
+
+### 5.
+
+> **SKIMP: tons of takeout and fast-food**. Although it doesn’t seem like much, a month’s worth of take out fees and fast-food adds up. I’d much rather cook one meal, and have it and its leftovers last me three days than spend $5-10 every two days on lunches.
+
+Since my answer to #4 has changed, it makes sense that this one would stay very much the same. Unless I'm in a rush, fast food isn't really worth it. And McDonald's is way more expensive now than I feel like it was when I was younger. Now, a Big Mac is almost $5!
+
+### 6.
+
+> **SPLURGE: Netflix**. Of course everyone will have different opinions about this, but for me, Netflix is a necessity. Almost right up there with internet. For me, Netflix can easily occupy 3 hours worth of time, and it is a good distraction from the rest of your life when you just need a break.
+
+I completely agree on the Netflix debate as I did three years ago. In fact, now I use Netflix, Hulu, Amazon Prime, the occasional Redbox DVD, and my internet provider's cable subscription to watch TV shows! Granted, I don't quite pay for all of these myself. I use my parents' Netflix still (that's a long story, but I'm still on strike—thank you Mom and Dad!), and my old friend's Hulu account. If I was paying for them myself, then I'd try to cut down some of these unless I was sharing the bill with a roommate or a significant other.
+
+However, one tool I would totally recommend is the public library. If you're willing to wait a few months, then you should take advantage of that old library card you had when you were 12, and put some DVD's and TV shows on hold at the library! You'll most likely be waiting a while, but (assuming you have a DVD player), it's a convenient and free (!) way to watch DVDs and TV shows. Then, you just return it to the library when you're done (make sure to return on time to avoid late fees).
+
+### 7.
+
+> **SKIMP: expensive phone bills with tons of unused data**. If you plan on getting Internet and WiFi at your apartment, like most people have, then you can skip on the data a little bit. For me, 5GB is plenty for the occasional watching of videos and browsing the web. But to each their own (some people use over 10GB a month, and I know that).
+
+When it comes to phone bills, paying some amount of money for a phone bill is a given. But, the truth still stands that if your home and work have WiFi, then you most likely won't need a lot of data. These days, I use my phone for navigation more and more while driving, and I occasionally stream Apple Music in the car, so I need some data for that. But I probably don't use more than 4GB a month. Make sure to shop around for the cheapest plan you can get, and always jump at the chance to share your bill with roommates or SOs. Oftentimes, having one account with multiple phones is cheaper than each person paying individually.
+
+### 8.
+
+> **SPLURGE: a good car**. Yes, my car was not cheap. I got a brand new Honda CR-V, with only 11 miles on it. The reason I got this car was because I think of it like an investment. If I bought a cheap car with 120,000 miles on it and it needed maintenance and new parts, then I spend the original amount on the car, plus gas, insurance, the maintenance, and parts. And, it could only last me 2-3 more years. But, if I buy a nice car that isn’t old and doesn’t need a lot of work, assuming I take proper care of the car, it could potentially last me 7 more years. And, I love my car.
+
+I still stand by this belief. It's important to have a good car that will last. My car hardly needs maintenance (besides routine tire rotations, tire alignments, and oil changes), but not much more, because it's still so new. My coworkers car has been in the auto shop for the past week, just getting fixed up to driveable condition because it's much older.
+
+However.... I got my car new.... and that's definitely not the most financially responsible thing to do. I should've gotten a used car that was a few years old. It still would've lasted just as long, and it would've been cheaper by about $5k. But, I opted for the newest safety features when I got my car, and those were only available in newer CR-V models.
+
+The one other thing I'd recommend against is fixing your car up when you bump into something. Everybody gets some damage on their car eventually. Whether that's scratches, running into a pole in the parking lot, bumping your back bumper into a snowbank, etc. However, in my limited experience, paying the shop to fix it up is rarely worth it. There was one time where I ran into the back of a semi truck, and my passenger-side mirror cracked. Replacing that was worth it because I couldn't see out of it. That was affecting my ability to drive my vehicle.
+
+But another time I ran into a pole in my parking garage at my apartment. And I paid to have parts of the rear moldings replaced. It cost about $450. And, I decided to leave some scratches in the paint because fixing those would be even _more_ expensive. But later that summer, my car fell victim to a hit-and-run in another parking lot. I did decide to get that fixed up (and my insurance deductible was a terrible $750). The only good news is that I convinced the auto shop to fix up the other scratches that were still remaining from the pole incident. In hindsight, I probably didn't need to spend $1,200 to fix my car up from those incidents. Neither of the accidents were affecting the drive of my vehicle, so they were all cosmetic. And if I didn't care about my car so dang much, I would've been fine leaving them the way they were.
+
+Don't worry... I've switched my auto insurance now, so my deductible is lower.
+
+### 9.
+
+> **SKIMP: buying a couch right when I move out**. The truth is, when you first move out, there are some things you need. Some pots and pans, and a shower curtain fall under that list. There are also some things you don’t need right away. A couch and a TV are in that list. Couches are expensive. Besides the bed/mattress and the dining table/chairs, it’ll be in the top 5 most expensive things you’ll buy for quite a while (at least in terms of furniture). Therefore, skip the couch. If you’re a college student, you’re probably used to lying on your bed watching cute animal videos anyway, so you’ll do just fine without a couch if you wait a couple months.
+
+When I first moved out, I did buy a couch. But hold on before you go judging me. I used some money given to me by my aunt who had recently past. If I was buying all of my furniture out of my own pocket, I would've skipped out on the couch. But, since my aunt past away earlier in the summer, she had left me and my sister a small amount of money. I decided to use that to furnish my new apartment, which my aunt would never see. I'm sure she's proud of the fact that my furniture was all the proper color scheme to match the apartment. I've moved a couple more times since, but every piece of furniture I bought transferred to the new apartments nicely.
+
+And, it turns out that when you don't have any pets to chew up your cushions, your Ikea furniture can actually last a long time!
+
+### 10.
+
+> **SPLURGE: a good bed**. The thing with mattresses is, the better quality mattress you buy, the longer it’ll last, the more comfortable it’ll be, and the better you’ll sleep. And hopefully you’ll learn sometime in your adult life that sleeping is never something you should skimp on if you can help it.
+
+Yes, yes, yes to this! I bought my bed and frame on sale for $1k from Macy's, and it was worth it. I love having a comfortable bed. Granted, now I know that I could've done a little more research to find a mattress that would've suited my sleeping needs more, but this one will do the trick, at least for the next 8 years or so.
+
+---
+
+There you go! I hope that taking another look at my opinions on these topics proves useful for you, and gives you a place to start from if you're looking at creating or re-evaluating your budget. Let me know what your opinions on these topics are! Shoot me an email from the link in the [Contact Me](/contact-me) tab!
