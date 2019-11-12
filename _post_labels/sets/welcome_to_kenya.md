@@ -1,7 +1,7 @@
 ---
-layout: tag
+layout: blog
 title: Welcome to Kenya
-permalink: /tag/welcome-to-kenya
+permalink: /set/welcome-to-kenya
 set: Welcome to Kenya
 ---
 

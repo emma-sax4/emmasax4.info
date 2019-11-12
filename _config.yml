@@ -50,6 +50,5 @@ collections:
   posts:
     output: true
     permalink: /posts/:path
-  tags:
+  post_labels:
     output: true
-    permalink: /tag/:path
