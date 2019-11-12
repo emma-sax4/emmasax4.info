@@ -1,5 +1,5 @@
 ---
-layout: tag
+layout: blog
 title: All About Tech
 permalink: /tag/tech
 tag: tech
