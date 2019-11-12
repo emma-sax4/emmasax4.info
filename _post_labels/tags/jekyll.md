@@ -1,5 +1,5 @@
 ---
-layout: tag
+layout: blog
 title: Jekyll
 permalink: /tag/jekyll
 tag: jekyll
