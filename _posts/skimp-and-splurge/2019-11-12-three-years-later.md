@@ -5,7 +5,7 @@ subtitle: "Part 2: Three Years Later"
 set: Skimp and Splurge
 ---
 
-When I dug out the original post [Skimp and Splurge: The Art of Saving Money](posts/2019-10-19-skimp-and-splurge) from my Google Drive, I was immediately humored by my original intent to create a blog. As you can probably tell, that never actually came to fruition... Until I decided to adventure with GitHub Pages. Although, most of that is another story.
+When I dug out the original post [Skimp and Splurge: The Art of Saving Money](/posts/skimp-and-splurge/2019-10-19-the-art-of-saving-money) from my Google Drive, I was immediately humored by my original intent to create a blog. As you can probably tell, that never actually came to fruition... Until I decided to adventure with GitHub Pages. Although, most of that is another story.
 
 What actually inspired me to publish that original "post" from 2016 was that a lot of the opinions I had on it have changed. When I wrote that originally, I wasn't even graduated from college yet. I was still living in a dorm room (suite, technically), and I still had a small meal plan at my college's Dining Hall. I had a decent amount of money for a senior in college (since I worked part-time at SportsEngine during the last couple years of school), but that didn't necessarily prepare me for what living in the "real world" would be like.
 
@@ -43,9 +43,9 @@ So, here's my revised list of requirements:
 * Laundry (this doesn't need to be free, and it doesn't need to be in-unit, but I do think I'd put my foot down on the place if the machines used quarters)
 * Fitness room in building (even though I don't go to the gym as often as I'd like to admit, it's still nice having this option in the building)
 * Mail and package receiving (normal mail is common, package rooms are a newer amentity that I could see older complexes not having)
-* Bonus: an indoor swimming pool and hot tub (I love to swim, in fact, it's probably my most preferred sport, so having these as bonus amentities make living anywhere way more enjoyable)
 * No smoking in the building or on balconies (this is actually a huge one for me as a non-smoker.... I hate the smell of cigarettes)
 * Comcast as an optional internet provider (since I work for NBCUniversal and Comcast, I get free internet and cable; there's no way I would willingly pay another internet provider when I could just get free internet through my work)
+* Bonus: an indoor swimming pool and hot tub (I love to swim, in fact, it's probably my most preferred sport, so having these as bonus amentities make living anywhere way more enjoyable)
 
 So... I guess my requirements list has gotten even longer. But one huge thing I have learned is that you may find an apartment that's great, and then learn that it's not as great as you thought. It's okay to move when your lease is over. In fact, financially that may be the best option, if your rent is increasing by a significant amount for the next year.
 
@@ -59,7 +59,7 @@ This has pretty much stayed the same. But unfortunately, what ends up happening 
 
 > **SPLURGE: eating at nice restaurants**. I don’t mean super pricey restaurants, just ones that aren’t fast-food chains. I would never skip on going out to eat with an old friend at a decently nice restaurant. Worst case scenario, I’m fed with good-tasting food, my wallet is $45 lighter, and I’ve gotten some socializing done with friend(s). Could be worse. And I’ll probably get leftovers out of it, too.
 
-Recently, I've begun to switch up my diet in favor of healthy foods that are homecooked. I make simple, easy-to-remember recipes. But I've also learned that I can save a lot of money by not going out to eat. Cooking food at home is cheaper and healthier. Now, eating a bunch of frozen meals will add up, so instead I've been opting for pasta, beans, rice, eggs, fresh fruit, and frozen veggies. Cheap and easy to cook!
+Recently, I've begun to switch up my diet in favor of healthy foods that are homecooked. I make simple, easy-to-remember recipes. But I've also learned that I can save a lot of money by not going out to eat. Cooking food at home is cheaper and healthier. I will say that eating a bunch of frozen meals will add up, so instead I've been opting for pasta, beans, rice, eggs, fresh fruit, and frozen veggies. Cheap and easy to cook!
 
 ### 5.
 
@@ -85,11 +85,11 @@ When it comes to phone bills, paying some amount of money for a phone bill is a 
 
 > **SPLURGE: a good car**. Yes, my car was not cheap. I got a brand new Honda CR-V, with only 11 miles on it. The reason I got this car was because I think of it like an investment. If I bought a cheap car with 120,000 miles on it and it needed maintenance and new parts, then I spend the original amount on the car, plus gas, insurance, the maintenance, and parts. And, it could only last me 2-3 more years. But, if I buy a nice car that isn’t old and doesn’t need a lot of work, assuming I take proper care of the car, it could potentially last me 7 more years. And, I love my car.
 
-I still stand by this belief. It's important to have a good car that will last. My car hardly needs maintenance (besides routine tire rotations, tire alignments, and oil changes), but not much more, because it's still so new. My coworkers car has been in the auto shop for the past week, just getting fixed up to driveable condition because it's much older.
+I still stand by this belief. It's important to have a good car that will last. My car hardly needs maintenance (besides routine tire rotations, tire alignments, and oil changes), but not much more, because it's still so new. My coworker's car has been in the auto shop for the past week, just getting fixed up to driveable condition because it's much older.
 
 However.... I got my car new.... and that's definitely not the most financially responsible thing to do. I should've gotten a used car that was a few years old. It still would've lasted just as long, and it would've been cheaper by about $5k. But, I opted for the newest safety features when I got my car, and those were only available in newer CR-V models.
 
-The one other thing I'd recommend against is fixing your car up when you bump into something. Everybody gets some damage on their car eventually. Whether that's scratches, running into a pole in the parking lot, bumping your back bumper into a snowbank, etc. However, in my limited experience, paying the shop to fix it up is rarely worth it. There was one time where I ran into the back of a semi truck, and my passenger-side mirror cracked. Replacing that was worth it because I couldn't see out of it. That was affecting my ability to drive my vehicle.
+The one other thing I'd recommend against is fixing your car up when you bump into something. Everybody gets some damage on their car eventually. Whether that's scratches, running into a pole in the parking lot, bumping your back bumper into a snowbank, etc. In my limited experience, paying the shop to fix it up is rarely worth it. There was one time where I ran into the back of a semi truck, and my passenger-side mirror cracked. Replacing that was worth it because I couldn't see out of it. That was affecting my ability to drive my vehicle.
 
 But another time I ran into a pole in my parking garage at my apartment. And I paid to have parts of the rear moldings replaced. It cost about $450. And, I decided to leave some scratches in the paint because fixing those would be even _more_ expensive. But later that summer, my car fell victim to a hit-and-run in another parking lot. I did decide to get that fixed up (and my insurance deductible was a terrible $750). The only good news is that I convinced the auto shop to fix up the other scratches that were still remaining from the pole incident. In hindsight, I probably didn't need to spend $1,200 to fix my car up from those incidents. Neither of the accidents were affecting the drive of my vehicle, so they were all cosmetic. And if I didn't care about my car so dang much, I would've been fine leaving them the way they were.
 
@@ -99,7 +99,7 @@ Don't worry... I've switched my auto insurance now, so my deductible is lower.
 
 > **SKIMP: buying a couch right when I move out**. The truth is, when you first move out, there are some things you need. Some pots and pans, and a shower curtain fall under that list. There are also some things you don’t need right away. A couch and a TV are in that list. Couches are expensive. Besides the bed/mattress and the dining table/chairs, it’ll be in the top 5 most expensive things you’ll buy for quite a while (at least in terms of furniture). Therefore, skip the couch. If you’re a college student, you’re probably used to lying on your bed watching cute animal videos anyway, so you’ll do just fine without a couch if you wait a couple months.
 
-When I first moved out, I did buy a couch. But hold on before you go judging me. I used some money given to me by my aunt who had recently past. If I was buying all of my furniture out of my own pocket, I would've skipped out on the couch. But, since my aunt past away earlier in the summer, she had left me and my sister a small amount of money. I decided to use that to furnish my new apartment, which my aunt would never see. I'm sure she's proud of the fact that my furniture was all the proper color scheme to match the apartment. I've moved a couple more times since, but every piece of furniture I bought transferred to the new apartments nicely.
+When I first moved out, I did buy a couch. But hold on before you go judging me. I used some money given to me by my aunt who had recently past away. If I was buying all of my furniture out of my own pocket, I would've skipped out on the couch. But, since my aunt past away earlier in the summer, she had left me and my sister a small amount of money. I decided to use that to furnish my new apartment, which my aunt would never see. I'm sure she's proud of the fact that my furniture was all the proper color scheme to match the apartment. I've moved a couple more times since, but every piece of furniture I bought transferred to the new apartments nicely.
 
 And, it turns out that when you don't have any pets to chew up your cushions, your Ikea furniture can actually last a long time!
 
