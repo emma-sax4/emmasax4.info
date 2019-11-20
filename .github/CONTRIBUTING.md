@@ -6,7 +6,7 @@ Fork this repository: https://github.com/emma-sax4/emma-sax4.github.io/fork
 
 | With GitHub UI | On your computer with Git |
 |----------------|---------------------------|
-| Make your first change | Make sure you have this repository cloned to your machine<br>Create your feature branch using my custom Git files:<br>`git checkout -b my-new-feature-branch` |
+| Make your first change | Make sure you have this repository cloned to your machine and then create your feature branch:<br>`git checkout -b my-new-feature-branch` |
 | When you're ready to commit your first change, make a new branch and name it appropriately | Make your first few changes |
 | Click that green `Commit changes` button | Commit and push your changes:<br>`git commit -am "Add some feature" && git push` |
 | Make a new pull request for your new branch (GitHub UI might automatically direct you to do this) | Continue making changes and committing/pushing them (unless you leave your feature branch, all new commits will be automatically added to your branch) |
