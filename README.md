@@ -17,10 +17,10 @@ This page was originally generated using the [Cayman theme](https://github.com/j
 ## Running Locally
 
 To run this application locally, following these steps:
-1. Be sure you have Ruby installed on your machine; the `.ruby-version` file specifies ruby 2.3.0 because that's what's required for Jekyll and `github-pages` to run
+1. Be sure you have Ruby installed on your machine; the `.ruby-version` file specifies ruby 2.3.* because that's what's required for Jekyll and `github-pages` to run
 2. First, bundle install and install all of the gems specified in the Gemfile:
     ```
-    gem install bundler -v 1.17.3
+    gem install bundler
     bundle install
     ```
 3. Initialize the submodule and make sure it's on commit `6a8733ea0f3c079fe4a37c1828297d8f661ccee8`. Once things are initialized, there should be no need to be committing to this directory.
