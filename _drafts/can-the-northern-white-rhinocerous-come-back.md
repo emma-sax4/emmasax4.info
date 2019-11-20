@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Welcome to Kenya
-subtitle: "Special: Can the Northern White Rhinocerous come back?"
+subtitle: "Special: Can the Northern White Rhinoceros come back?"
 set: Welcome to Kenya
 ---
 
