@@ -66,7 +66,7 @@ Here are all of the parts of this project associated with running this applicati
 |   ├── page-01.md
 |   ├── page-02.md
 |   └── page-03.md
-├── _post_labels
+├── _post_collections
 |   ├── sets.md
 |   |   └── posts_set_name.md
 |   ├── tags.md
@@ -168,7 +168,7 @@ Then, you can reference those custom settings on other HTML files (such as the l
 => useful_string
 ```
 
-### `_post_labels/`
+### `_post_collections/`
 
 See the below section on `_posts/`.
 
@@ -189,7 +189,8 @@ tags: [ tag_name, another_tag_name ]
 
 Let's talk about the `tags`. The tags determine how we want to categorize each post. If there's no categorization of a post (if it's completely random), then there's no need to specify any `tag(s)`, AKA just leave the line completely out of the front matter. But, if you think the post is a good contestant for a tag, such as `tag_name` or `another_tag_name` in our example, then add those appropriate tags in a list format.
 
-For every tag, there needs to be a `<tag-name>.md` file in the `_post_labels/tags/` directory. The general file for this should look like this:
+For every tag, there needs to be a `<tag-name>.md` file in the `_post_collections
+/tags/` directory. The general file for this should look like this:
 ```
 ---
 layout: blog
@@ -205,7 +206,8 @@ The `tag` front matter indicates which posts to show on that page (only the post
 
 ### Posts in a Set
 
-If I'm going to write a set of posts that all have a common theme, they can go into a new nested directory: `_posts/<set-name>/`. If that's the case, then there should also be a Markdown file titled `<set-name>.md` inside `_post_labels/sets/`, which would serve as a table of contents for the posts in that set. Here's an example of what that table of contents page should look like:
+If I'm going to write a set of posts that all have a common theme, they can go into a new nested directory: `_posts/<set-name>/`. If that's the case, then there should also be a Markdown file titled `<set-name>.md` inside `_post_collections
+/sets/`, which would serve as a table of contents for the posts in that set. Here's an example of what that table of contents page should look like:
 ```
 ---
 layout: blog
