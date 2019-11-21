@@ -5,7 +5,7 @@ subtitle: "Special: Can the Northern White Rhinoceros come back?"
 set: Welcome to Kenya
 ---
 
-Over two months ago I wrote my second installment of the [Welcome to Kenya](/set/welcome-to-kenya) blog set. In it, I told the a shortened version of the story of the northern white rhinos. Please read about it [here](/posts/welcome-to-kenya/2019-09-16-the-game-drives) for context before continuing.
+Over two months ago I wrote my second installment of the [Welcome to Kenya](/set/welcome-to-kenya) blog set. In it, I told the shortened version of the story of the northern white rhinos. Please read about it [here](/posts/welcome-to-kenya/2019-09-16-the-game-drives) for context before continuing.
 
 ---
 
@@ -19,7 +19,7 @@ And so, in light of all of these recent events, I decided to write a special blo
 
 This groundbreaking news provides the opportunity to save the northern white rhinos, one animal at a time. Now, I don't want to make things seem happier than they are. This is a huge breakthrough, but there's still a lot at risk. Having four northern white rhinos doesn't mean the species can grow in strength. There are still many risks (as with any birth), and the potential to be able to make more rhino babies after these ones is still limited. It will take decades of research, work, and failed attempts at fertilization in order to bring back a small northern white population.
 
-All we can hope is that the world sees these beautiful creatures and understands that losing them would be a devastating loss for our ecosystem and our world. I hope Kenya can work to protect these rhinos from poachers like Jimmy John Liautaud. 
+All we can hope is that the world sees these beautiful creatures and understands that losing them would be a devastating loss for our ecosystem and our world. I hope Kenya can work to protect these rhinos from poachers like Jimmy John Liautaud.
 
 ## Resources
 
