@@ -145,9 +145,14 @@ td {
 
 .pagination {
   list-style-type: none;
-  margin: 0 !important;
-  padding: 0 !important;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
   width: 100%;
+  padding-left: 10%;
+  padding-right: 10px;
+  padding-bottom: 0px;
+  padding-top: 0px;
 ​​
   .page {​
     &:first-child {
