@@ -14,7 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Emma's personal website
+title: Emma's website
 url: https://emmasax4.info
 future: true
 markdown: kramdown
