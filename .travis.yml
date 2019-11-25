@@ -6,10 +6,5 @@ branches:
   only:
     - master
 
-install:
-  - gem install bundler
-  - bundle install
-  # - gem install github-pages -v 200
-
 script:
-  - jekyll build
+  - JEKYLL_ENV=production bundle exec jekyll build
