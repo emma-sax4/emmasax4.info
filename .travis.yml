@@ -1,4 +1,7 @@
 sudo: false
 language: ruby
 cache: bundler
+branches:
+  only:
+    - master
 script: JEKYLL_ENV=production bundle exec jekyll build
