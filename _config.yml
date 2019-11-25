@@ -41,6 +41,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - primer/
+  - vendor/
 
 relative_links:
   enabled: true
