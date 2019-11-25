@@ -41,7 +41,7 @@ NOTE: Running this process locally will most likely create at least one director
 
 ## Running Tests
 
-This repository doesn't really have any tests at all (GitHub Pages is just a host of static site files, so there's no functionality to test). I do run TravisCI tests on every pull request and commit to master branch, but, as you can see from the [`.travis.yml`](https://github.com/emma-sax4/emma-sax4.github.io/blob/master/.travis.yml), all the Travis run does is run `script: true`, so the builds will always pass (assuming `bundle` can properly install the dependencies as well).
+This repository doesn't really have any tests at all (GitHub Pages is just a host of static site files, so there's no functionality to test). However, I do like to check that `bundle` can install the necessary dependencies and that Jekyll can properly build the site on each pull request and commit to `master` branch.
 
 ## Deployments
 
