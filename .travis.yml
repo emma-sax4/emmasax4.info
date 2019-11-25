@@ -4,4 +4,5 @@ cache: bundler
 branches:
   only:
     - master
-script: true
+script:
+  - jekyll build
