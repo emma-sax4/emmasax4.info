@@ -20,10 +20,8 @@ future: true
 markdown: kramdown
 
 github:
-  repo: emma-sax4.github.io
-  repo_url: https://github.com/emma-sax4/emma-sax4.github.io
-  owner: emma-sax4
-  owner_url: https://github.com/emma-sax4
+  repo: https://github.com/emma-sax4/emma-sax4.github.io
+  owner: https://github.com/emma-sax4
 
 kramdown:
   smart_quotes: ["rdquo", "rsquo", "quot", "quot"]
