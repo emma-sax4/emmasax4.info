@@ -10,5 +10,5 @@
 * Pull Request #1
 * Pull Request #2
 
-## Additional context
+## Additional Context
 > Add any other context about the problem here.
