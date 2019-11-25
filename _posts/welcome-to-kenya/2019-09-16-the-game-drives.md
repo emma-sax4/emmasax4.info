@@ -45,7 +45,7 @@ At the Aberdares Country Club, near the Ark, we also saw some baboons, impalas, 
 
 <div align="center">
   <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/48740606758/in/album-72157710860887528/" target="_blank" title="peacock_at_aberdares_country_club"><img src="https://live.staticflickr.com/65535/48740606758_0d4c94d668_z.jpg" width="450" height="600" alt="Peacock at Aberdares Country Club"></a>
-  <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/48740935281/in/album-72157710860887528/" target="_blank" title="peacock_closeup"><img src="https://live.staticflickr.com/65535/48740935281_7ddbc09737_z.jpg" width="500" height="375" alt="Peacock closeup"></a><script async  src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+  <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/48740935281/in/album-72157710860887528/" target="_blank" title="peacock_closeup"><img src="https://live.staticflickr.com/65535/48740935281_7ddbc09737_z.jpg" width="500" height="375" alt="Peacock closeup"></a>
 </div>
 
 Although there weren't many animals at the Ark, it was our first real chance to see some wildlife, and it was exciting, nevertheless.
