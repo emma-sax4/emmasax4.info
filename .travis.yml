@@ -1,8 +1,13 @@
 sudo: false
 language: ruby
 cache: bundler
+
 branches:
   only:
     - master
+    
+install:
+  - gem install jekyll
+  
 script:
   - jekyll build
