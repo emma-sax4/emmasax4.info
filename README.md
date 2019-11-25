@@ -6,7 +6,7 @@
 
 For more information on contributing to this project, please see [CONTRIBUTING.md](https://github.com/emma-sax4/emma-sax4.github.io/blob/master/.github/CONTRIBUTING.md).
 
-To submit a feature request or a bug ticket, please use submit an official [GitHub Issue](https://github.com/emma-sax4/emma-sax4.github.io/issues/new/choose).
+To submit a feature request or a bug ticket, please submit an official [GitHub Issue](https://github.com/emma-sax4/emma-sax4.github.io/issues/new/choose).
 
 For information on licensing, please see [LICENSE](https://github.com/emma-sax4/emma-sax4.github.io/blob/master/LICENSE).
 
