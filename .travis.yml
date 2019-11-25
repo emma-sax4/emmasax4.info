@@ -5,9 +5,11 @@ cache: bundler
 branches:
   only:
     - master
-    
+
 install:
-  - gem install jekyll
-  
+  - gem install bundler
+  - bundle install
+  # - gem install github-pages -v 200
+
 script:
   - jekyll build
