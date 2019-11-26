@@ -88,23 +88,26 @@ h1 {
 /* TABLES */
 
 table {
-  display: block;
+  table-layout: auto;
   width: 100%;
   border-collapse: collapse;
   overflow: auto;
+  font-size: 17px;
   word-break: normal;
   word-break: keep-all; // For Firefox to horizontally scroll wider tables.
   -webkit-overflow-scrolling: touch;
 
   th {
     font-weight: bold;
-    padding: 0.5rem 1rem;
-    border: 1px solid #e9ebec;
+    padding: 0px;
+    font-size: 0px;
+    border: 0px solid #e9ebec;
   }
 
   td {
-    padding: 5px;
-    padding-right: 4.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-right: 1rem;
     padding-left: 0.5rem;
     border: 1px solid #e9ebec;
   }
