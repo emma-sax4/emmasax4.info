@@ -62,41 +62,44 @@ I love to travel, especially to international locations. I try to go to a new co
 
 ## Theatre
 
-For a PDF copy of this document, please [email me](mailto:emma.sax4@gmail.com).
+### On Stage
 
-### Shows
+<!-- Add an empty header so the table renders correctly on GitHub Markdown -->
 
-| Pippi Longstocking                      | Ensemble                    | Children's Theatre Company                     |
-| Disney's Mulan Jr.                      | Ensemble                    | Children's Theatre Company                     |
-| Princess Academy                        | Frid                        | Stages Theatre Company                         |
-| Junie B. in Jingle Bells, Batman Smells | José                        | Stages Theatre Company                         |
-| 'Twas the Night Before Christmas        | Sugar Plum Fairy            | Stages Theatre Company                         |
-| 9 to 5: The Musical                     | Ensemble                    | Minnetonka Theatre                             |
-| Meredith Wilson's The Music Man         | Ensemble                    | Eat Street Players                             |
-| Disney's High School Musical            | Cheerleader/Ensemble        | Morris Park Players                            |
-| Once Upon a Mattress                    | Ensemble                    | Morris Park Players                            |
-| The Wizard of Oz                        | Jitterbug/Ensemble          | Blue Water Theatre Company                     |
-| Annie Get Your Gun                      | Ensemble                    | Blue Water Theatre Company                     |
-| Little Women: The Musical               | Amy March                   | Saint Paul Conservatory for Performing Artists |
-| Urinetown                               | Little Becky Two-Shoes      | Saint Paul Conservatory for Performing Artists |
-| The Uses of Enchantment                 | Claire/Ensemble             | Saint Paul Conservatory for Performing Artists |
-| Into the Woods                          | Milky White                 | Saint Paul Conservatory for Performing Artists |
-| Night at the Opera                      | Ensemble                    | Saint Paul Conservatory for Performing Artists |
-| Secrets                                 | Lily                        | Fine Arts Interdisciplinary Resource School    |
-| West Side Story Jr.                     | Anita                       | Fine Arts Interdisciplinary Resource School    |
+|                                           |                             |                                                |
+| ----------------------------------------- | --------------------------- | ---------------------------------------------- |
+| _Pippi Longstocking_                      | Ensemble                    | Children's Theatre Company                     |
+| _Disney's Mulan Jr._                      | Ensemble                    | Children's Theatre Company                     |
+| _Princess Academy_                        | Frid                        | Stages Theatre Company                         |
+| _Junie B. in Jingle Bells, Batman Smells_ | José                        | Stages Theatre Company                         |
+| _\'Twas the Night Before Christmas_       | Sugar Plum Fairy            | Stages Theatre Company                         |
+| _9 to 5_ — The Musical                    | Ensemble                    | Minnetonka Theatre                             |
+| Meredith Wilson's _The Music Man_         | Ensemble                    | Eat Street Players                             |
+| _Disney's High School Musical_            | Cheerleader/Ensemble        | Morris Park Players                            |
+| _Once Upon a Mattress_                    | Ensemble                    | Morris Park Players                            |
+| _The Wizard of Oz_                        | Jitterbug/Ensemble          | Blue Water Theatre Company                     |
+| _Annie Get Your Gun_                      | Ensemble                    | Blue Water Theatre Company                     |
+| _Little Women_ — The Musical              | Amy March                   | Saint Paul Conservatory for Performing Artists |
+| _Urinetown_                               | Little Becky Two-Shoes      | Saint Paul Conservatory for Performing Artists |
+| _The Uses of Enchantment_                 | Claire/Ensemble             | Saint Paul Conservatory for Performing Artists |
+| _Into the Woods_                          | Milky White                 | Saint Paul Conservatory for Performing Artists |
+| _Night at the Opera_                      | Ensemble                    | Saint Paul Conservatory for Performing Artists |
+| _Secrets_                                 | Lily                        | Fine Arts Interdisciplinary Resource School    |
+| _West Side Story Jr._                     | Anita                       | Fine Arts Interdisciplinary Resource School    |
 
 
 ### Training
 
-| Theatre, Dance, Music                         | Saint Paul Conservatory for Performing Artists                                              |
-| Ballet, Tap, Jazz, Modern                     | Deuxmensions Dance Theatre and School                                                       |
-| Theatre, Dance, Music                         | Chanhassen Dinner Theatre                                                                   |
-| Voice Lessons                                 | Ana Miller, Melissa Hanson, Teresa Tierney, Melissa Hart, Justin Staebebll, Stacey Stringer |
-| University of Minnesota Morris Concert Choir  | Bradley Miller, Christina Armendarez                                                        |
-| University of Minnesota Morris Dance Ensemble |                                                                                             |
-| Clarinet                                      | Todd Boyd, Eric Dollerschell                                                                |
-| Theatre, Dance, Music                         | Fine Arts Interdisciplinary Resource School                                                 |
-| Theatre, Dance, Music                         | Sing Minnesota Summer Camp                                                                  |
-| Theatre, Dance, Music                         | Children's Theatre Company Arts Training                                                    |
-| Theatre, Dance, Music                         | Stages Theatre Camp                                                                         |
-| Piano                                         | Annette Helder, Deborah Hanna                                                               |
+<!-- Add an empty header so the table renders correctly on GitHub Markdown -->
+
+|                                              |                                                                                                    |
+| -------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| Theatre                                      | Saint Paul Conservatory for Performing Artists, Chanhassen Dinner Theatre, Children's Theatre Company Arts Training, Stages Theatre Camp |
+| Vocal performance and technique              | Ana Miller, Melissa Hanson, Teresa Tierney, Melissa Hart, Justin Staebell, Stacey Stringer    |
+| Dance — Ballet, Tap, Jazz, Modern            | Deuxmensions Dance Theatre and School, Fine Arts Interdisciplinary Resource School            |
+| Dance — Hip Hop, Contemporary                | Saint Paul Conservatory for Performing Artists, University of Minnesota Morris Dance Ensemble |
+| Dance — Musical Theatre                      | Saint Paul Conservatory for Performing Artists, Chanhassen Dinner Theatre, Children's Theatre Company Arts Training, Stages Theatre Camp |
+| Dance — Ballroom, Partnering                 | DanceLife Ballroom                                                                                 |
+| Piano                                        | Annette Helder, Deborah Hanna                                                                      |
+| Clarinet                                     | Todd Boyd, Eric Dollerschell                                                                       |
+| University of Minnesota Morris Concert Choir | Bradley Miller, Christina Armendarez                                                               |
