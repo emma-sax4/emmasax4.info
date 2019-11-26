@@ -92,14 +92,14 @@ I love to travel, especially to international locations. I try to go to a new co
 
 <!-- Add an empty header so the table renders correctly on GitHub Markdown -->
 
-|                                              |                                                                                                    |
-| -------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+|                                              |                                                                                               |
+| -------------------------------------------- | --------------------------------------------------------------------------------------------- |
 | Theatre                                      | Saint Paul Conservatory for Performing Artists, Chanhassen Dinner Theatre, Children's Theatre Company Arts Training, Stages Theatre Camp |
 | Vocal performance and technique              | Ana Miller, Melissa Hanson, Teresa Tierney, Melissa Hart, Justin Staebell, Stacey Stringer    |
 | Dance — Ballet, Tap, Jazz, Modern            | Deuxmensions Dance Theatre and School, Fine Arts Interdisciplinary Resource School            |
 | Dance — Hip Hop, Contemporary                | Saint Paul Conservatory for Performing Artists, University of Minnesota Morris Dance Ensemble |
 | Dance — Musical Theatre                      | Saint Paul Conservatory for Performing Artists, Chanhassen Dinner Theatre, Children's Theatre Company Arts Training, Stages Theatre Camp |
-| Dance — Ballroom, Partnering                 | DanceLife Ballroom                                                                                 |
-| Piano                                        | Annette Helder, Deborah Hanna                                                                      |
-| Clarinet                                     | Todd Boyd, Eric Dollerschell                                                                       |
-| University of Minnesota Morris Concert Choir | Bradley Miller, Christina Armendarez                                                               |
+| Dance — Ballroom, Partnering                 | DanceLife Ballroom                                                                            |
+| Piano                                        | Annette Helder, Deborah Hanna                                                                 |
+| Clarinet                                     | Todd Boyd, Eric Dollerschell                                                                  |
+| University of Minnesota Morris Concert Choir | Bradley Miller, Christina Armendarez                                                          |
