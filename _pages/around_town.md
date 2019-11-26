@@ -91,8 +91,8 @@ For a PDF copy of this document, please [email me](mailto:emma.sax4@gmail.com).
 | Theatre, Dance, Music                         | Saint Paul Conservatory for Performing Artists                                              |
 | Ballet, Tap, Jazz, Modern                     | Deuxmensions Dance Theatre and School                                                       |
 | Theatre, Dance, Music                         | Chanhassen Dinner Theatre                                                                   |
-| Voice Lessons                                 | Ana Miller, Melissa Hanosn, Teresa Tierney, Melissa Hart, Justin Staebebll, Stacey Stringer |
-| University of Minnesota Morris Concer Choir   | Bradley Miller, Christina Armendarez                                                        |
+| Voice Lessons                                 | Ana Miller, Melissa Hanson, Teresa Tierney, Melissa Hart, Justin Staebebll, Stacey Stringer |
+| University of Minnesota Morris Concert Choir  | Bradley Miller, Christina Armendarez                                                        |
 | University of Minnesota Morris Dance Ensemble |                                                                                             |
 | Clarinet                                      | Todd Boyd, Eric Dollerschell                                                                |
 | Theatre, Dance, Music                         | Fine Arts Interdisciplinary Resource School                                                 |
