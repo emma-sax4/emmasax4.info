@@ -14,16 +14,14 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Emma's personal website
+title: Emma's website
 url: https://emmasax4.info
 future: true
 markdown: kramdown
 
 github:
-  repo: emma-sax4.github.io
-  repo_url: https://github.com/emma-sax4/emma-sax4.github.io
-  owner: emma-sax4
-  owner_url: https://github.com/emma-sax4
+  repo: https://github.com/emma-sax4/emma-sax4.github.io
+  owner: https://github.com/emma-sax4
 
 kramdown:
   smart_quotes: ["rdquo", "rsquo", "quot", "quot"]
