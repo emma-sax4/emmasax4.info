@@ -62,23 +62,20 @@ I love to travel, especially to international locations. I try to go to a new co
 
 ## Theatre
 
-For a PDF copy of this document, please [email me](mailto:emma.sax4@gmail.com).
-
 ### Shows
 
-|------------------------------------------|:-----------------------------:|----------------------------------------------:|
 | _Pippi Longstocking_                      | Ensemble                    | Children's Theatre Company                     |
 | _Disney's Mulan Jr._                      | Ensemble                    | Children's Theatre Company                     |
 | _Princess Academy_                        | Frid                        | Stages Theatre Company                         |
 | _Junie B. in Jingle Bells, Batman Smells_ | José                        | Stages Theatre Company                         |
-| _\'Twas the Night Before Christmas_        | Sugar Plum Fairy            | Stages Theatre Company                         |
-| _9 to 5_ – The Musical                     | Ensemble                    | Minnetonka Theatre                             |
+| _\'Twas the Night Before Christmas_       | Sugar Plum Fairy            | Stages Theatre Company                         |
+| _9 to 5_ – The Musical                    | Ensemble                    | Minnetonka Theatre                             |
 | Meredith Wilson's _The Music Man_         | Ensemble                    | Eat Street Players                             |
 | _Disney's High School Musical_            | Cheerleader/Ensemble        | Morris Park Players                            |
 | _Once Upon a Mattress_                    | Ensemble                    | Morris Park Players                            |
 | _The Wizard of Oz_                        | Jitterbug/Ensemble          | Blue Water Theatre Company                     |
 | _Annie Get Your Gun_                      | Ensemble                    | Blue Water Theatre Company                     |
-| _Little Women_ – The Musical               | Amy March                   | Saint Paul Conservatory for Performing Artists |
+| _Little Women_ – The Musical              | Amy March                   | Saint Paul Conservatory for Performing Artists |
 | _Urinetown_                               | Little Becky Two-Shoes      | Saint Paul Conservatory for Performing Artists |
 | _The Uses of Enchantment_                 | Claire/Ensemble             | Saint Paul Conservatory for Performing Artists |
 | _Into the Woods_                          | Milky White                 | Saint Paul Conservatory for Performing Artists |
