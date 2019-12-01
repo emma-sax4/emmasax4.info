@@ -57,7 +57,6 @@ I love to travel, especially to international locations. I try to go to a new co
   <li>England 🏴󠁧󠁢󠁥󠁮󠁧󠁿</li>
   <li>Montréal 🇨🇦 — technically Canada, but saying <i>Montréal</i> is cooler than saying <i>Canada</i></li>
   <li>Kenya 🇰🇪</li>
-  <li>Antarctica 🇦🇶— coming up soon!</li>
 </ol>
 
 ## Theatre
