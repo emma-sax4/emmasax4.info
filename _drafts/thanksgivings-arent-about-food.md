@@ -19,7 +19,7 @@ But my family was so understanding of the stress of this holiday. So my family d
 
 What this whole post boils down to is that for many Americans, their favorite part of Thanksgiving is the feast. There's nothing wrong with that whatsoever. But for me, and for a solid chunk of Americans, it's good to remember that the food wasn't the original purpose of Thanksigiving (ignoring the whole colonization/Native American topic right now). The original purpose was to "give thanks for one's blessings, along with... [celebrating] ...a harvest."
 
-So with that, have a happy holiday season, filled with love, joy, gratefulness, and smiles for one's family and friends 🥂.
+So with that, have a happy holiday season, filled with love, joy, and gratefulness for one's family and friends 🥂.
 
 ## References
 
