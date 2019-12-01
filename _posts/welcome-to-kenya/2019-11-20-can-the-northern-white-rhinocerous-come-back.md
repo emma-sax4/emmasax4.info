@@ -21,7 +21,7 @@ This groundbreaking news provides the opportunity to save the northern white rhi
 
 All we can hope is that the world sees these beautiful creatures and understands that losing them would be a devastating loss for our ecosystem and our world. I hope Kenya can work to protect these rhinos from poachers like Jimmy John Liautaud.
 
-## Resources
+## References
 
 * <a href="https://www.olpejetaconservancy.org/saving-the-northern-whites/" target="_blank">olpejetaconservancy.org/saving-the-northern-whites</a>
 * <a href="https://www.olpejetaconservancy.org/first-ever-in-vitro-embryos/" target="_blank">olpejetaconservancy.org/first-ever-in-vitro-embryos</a>
