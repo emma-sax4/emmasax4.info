@@ -2,7 +2,6 @@
 layout: post
 title: Thanksgivings Aren't About Food 🍽
 tag: holidays
-draft: true
 ---
 
 Now, I know what you all may be thinking. "Of course Thanksgiving is about the food!" And I understand why you believe that. I get that many people feel this way. For many Americans, connecting with friends and family over food is totally normal and is a healthy way to bond with loved ones.
