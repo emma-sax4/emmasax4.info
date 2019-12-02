@@ -1,6 +1,6 @@
 # Contributing
 
-To contribute, please follow this process:
+## Contribution Process
 
 1. Fork this repository: https://github.com/emma-sax4/emma-sax4.github.io/fork
 2. Make your changes on a feature branch:
@@ -20,3 +20,36 @@ To contribute, please follow this process:
 If I don't comment or start looking at the pull request in a few days, feel free to [send me an email](mailto:emma.sax4@gmail.com).
 
 Happy coding! 🤗
+
+## Running Locally
+
+To run this application locally, following these steps:
+1. Be sure you have Ruby installed on your machine; the `.ruby-version` file specifies ruby 2.3.* because that's what's required for Jekyll and `github-pages` to run
+2. First, bundle install and install all of the gems specified in the Gemfile:
+    ```
+    gem install bundler
+    bundle install
+    ```
+3. Initialize the submodule and make sure it's on commit `6a8733ea0f3c079fe4a37c1828297d8f661ccee8`. Once things are initialized, there should be no need to be committing to this directory.
+    ```
+    git submodule update --init --recursive
+    ```
+4. Then build the site using Jekyll:
+    ```
+    jekyll build
+    ```
+5. Serve it up:
+    ```
+    jekyll serve
+    ```
+6. Navigate to the local URL Jekyll provides (`http://127.0.0.1:4000` on my machine)
+
+NOTE: Running this process locally will most likely create at least one directory locally on your machine, such as `_site/`, `Gemfile.lock`, `.sass-cache/`, and potentially others. All of these are already in the `.gitignore`, but feel free to add others as necessary.
+
+## Running Tests
+
+This repository doesn't really have any tests at all (GitHub Pages is just a host of static site files, so there's no functionality to test). However, I do like to check that `bundle` can install the necessary dependencies and that Jekyll can properly build the site on each pull request and commit to `master` branch.
+
+## Deployments
+
+GitHub automatically deploys each commit to master branch. A full deployment only takes a couple of minutes, but depending on what was changed (HTML files, images, etc), it can take up to about 5 minutes to propagate the changes. To make the changes appear faster, you can reload the entire website in incognito mode.
