@@ -64,14 +64,16 @@ I love to travel, especially to international locations. I try to go to a new co
 
 ### Test Table
 
-|        |        |        |
-| --------------- | --------------- | --------------- |
+<!-- Add an empty header so the table renders correctly on GitHub Markdown -->
+
+|                              |                              |                              |
+| ---------------------------- | ---------------------------- | ---------------------------- |
 | **<center>Title 1</center>** | **<center>Title 2</center>** | **<center>Title 3</center>** |
-| Test column 1.0 | Test column 2.0 | Test column 3.0 |
-| Test column 1.1 | Test column 2.1 | Test column 3.1 |
-| Test column 1.2 | Test column 2.2 | Test column 3.2 |
-| Test column 1.3 | Test column 2.3 | Test column 3.3 |
-| Test column 1.4 | Test column 2.4 | Test column 3.4 |
+| Test column 1.0              | Test column 2.0              | Test column 3.0              |
+| Test column 1.1              | Test column 2.1              | Test column 3.1              |
+| Test column 1.2              | Test column 2.2              | Test column 3.2              |
+| Test column 1.3              | Test column 2.3              | Test column 3.3              |
+| Test column 1.4              | Test column 2.4              | Test column 3.4              |
 
 ### On Stage
 
