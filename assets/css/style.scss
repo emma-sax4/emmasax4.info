@@ -120,6 +120,7 @@ table {
   overflow: hidden;
   color: white;
   vertical-align: middle;
+  overflow: hidden;
 }
 
 .topnav-left {
@@ -158,6 +159,10 @@ table {
   a.active {
     font-weight: bold;
   }
+}
+
+.topnav .icon {
+  display: none;
 }
 
 /* PAGINATION */
@@ -470,6 +475,33 @@ table {
     padding-top: 2.5%;
     position: relative;
   }
+
+  .topnav a:not(:only-child) {
+    display: none;
+  }
+
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+
+  .topnav.responsive {
+    position: relative;
+    padding-bottom: 15px;
+    padding-right: 50px;
+  }
+
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
 }
 
 @media screen and (min-width: 42em) and (max-width: 50em) {
@@ -507,6 +539,33 @@ table {
     padding-top: 2.5%;
     margin-right: -8%;
   }
+
+  .topnav a:not(:only-child) {
+    display: none;
+  }
+
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+
+  .topnav.responsive {
+    position: relative;
+    padding-bottom: 15px;
+    padding-right: 50px;
+  }
+
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
 }
 
 @media screen and (max-width: 42em) {
@@ -543,6 +602,33 @@ table {
     flex: 20%;
     padding-top: 2.5%;
     position: relative;
+  }
+
+  .topnav a:not(:only-child) {
+    display: none;
+  }
+
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+
+  .topnav.responsive {
+    position: relative;
+    padding-bottom: 15px;
+    padding-right: 50px;
+  }
+
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
   }
 }
 
