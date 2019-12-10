@@ -396,7 +396,7 @@ table {
   overflow: visible;
 }
 
-/* PRESET FORMATTING */
+/* FORMATTING BASED ON SCREEN SIZE */
 
 @media screen and (min-width: 64em) {
   .project-name {
@@ -502,6 +502,7 @@ table {
     float: none;
     display: block;
     text-align: left;
+    font-size: 20px;
   }
 }
 
@@ -567,6 +568,7 @@ table {
     float: none;
     display: block;
     text-align: left;
+    font-size: 20px;
   }
 }
 
@@ -632,6 +634,7 @@ table {
     float: none;
     display: block;
     text-align: left;
+    font-size: 20px;
   }
 }
 
