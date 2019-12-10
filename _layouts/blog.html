@@ -7,7 +7,7 @@
   {% include header.html %}
 
   <body>
-    <section class="main-content" style="max-width: 64rem;"">
+    <section class="main-content" style="max-width: 64rem;">
       {% assign draft_posts = site.posts | where: "draft", "true" %}
       {% assign published_posts = site.posts | where_exp: "post", "post.draft != true" %}
       {% assign sorted_published_posts = published_posts | sort: "date" | reverse %}
