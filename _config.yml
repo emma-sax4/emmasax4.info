@@ -48,6 +48,6 @@ relative_links:
 collections:
   posts:
     output: true
-    permalink: /posts/:path
+    permalink: /blog/posts/:path
   post_collections:
     output: true
