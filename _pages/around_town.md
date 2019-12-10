@@ -1,11 +1,9 @@
 ---
-layout: default
+layout: page
 title: Around Town
 order: 3
 permalink: /around-town
 ---
-
-# {{ page.title }}
 
 ## Talks
 

@@ -1,21 +1,42 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <header>
-  <div class="topnav" style="text-align: center">
+  <div class="topnav" id="myTopnav">
     <nav>
-      {% assign sorted_pages = site.pages | where_exp: "item", "item.order" | sort: "order" | shift %}
+      <div class="topnav-left">
+        <a href="{{ site.url }}">
+          <img src="/assets/images/favicon/favicon.ico" style="vertical-align: middle">
+          Emma Sax
+        </a>
+      </div>
 
-      {% for node in sorted_pages %}
-        {% if page.url == node.url or node.url contains page.collection and page.collection != null %}
-          {% assign active = 'active' %}
-        {% else %}
-          {% assign active = nil %}
-        {% endif %}
+      <div class="topnav-right">
+        {% assign sorted_pages = site.pages | where_exp: "item", "item.order" | sort: "order" | shift %}
 
-        <a class="{{ active }}" href="{{ site.baseurl }}{{ node.url }}">{{node.title}}</a>
-      {% endfor %}
+        {% for node in sorted_pages %}
+          {% if page.url == node.url or node.url contains "blog" and page.collection != null %}
+            {% assign active = 'active' %}
+          {% else %}
+            {% assign active = nil %}
+          {% endif %}
+
+          <a class="{{ active }}" href="{{ site.baseurl }}{{ node.url }}">{{node.title}}</a>
+        {% endfor %}
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
     </nav>
   </div>
-
-  <div class="title">
-    <h1 class="project-name">Emma Sax</h1>
-  </div>
 </header>
+
+<script>
+  function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
+</script>

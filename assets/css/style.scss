@@ -9,8 +9,10 @@
 
 html, body {
   min-height: 100vh;
+  width: 100vw;
   flex-direction: column;
   position: relative;
+  overflow-x: hidden;
 }
 
 body {
@@ -35,27 +37,27 @@ a:hover {
 code {
   padding: 2px 4px;
   font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
-  font-size: 0.9rem;
+  font-size: 14.4px;
   color: #567482;
   background-color: #f3f6fa;
-  border-radius: 0.3rem;
+  border-radius: 4.8px;
 }
 
 pre {
-  padding: 0.8rem;
+  padding: 12.8px;
   margin-top: 0;
-  margin-bottom: 1rem;
-  font: 1rem Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  margin-bottom: 16px;
+  font: 16px Consolas, "Liberation Mono", Menlo, Courier, monospace;
   color: #567482;
   word-wrap: normal;
   background-color: #f3f6fa;
   border: solid 1px #dce6f0;
-  border-radius: 0.3rem;
+  border-radius: 4.8px;
 
   > code {
     padding: 0;
     margin: 0;
-    font-size: 0.9rem;
+    font-size: 14.4px;
     color: #567482;
     word-break: normal;
     white-space: pre;
@@ -66,7 +68,7 @@ pre {
 
 blockquote {
   background: #f9f9f9;
-  border-left: 0.3rem solid #dce6f0;
+  border-left: 4.8px solid #dce6f0;
   margin: 1.5em 10px;
   padding: 0.5em 10px;
   quotes: "\201C""\201D""\2018""\2019";
@@ -79,10 +81,6 @@ blockquote p {
 .post-meta {
   font-size: 15px;
   color: grey;
-}
-
-h1 {
-  font-size: 30px;
 }
 
 /* TABLES */
@@ -105,10 +103,10 @@ table {
   }
 
   td {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    padding-right: 1rem;
-    padding-left: 0.5rem;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-right: 16px;
+    padding-left: 8px;
     border: 1px solid #e9ebec;
   }
 }
@@ -117,28 +115,54 @@ table {
 
 .topnav {
   color: black;
-  text-align: center;
   background-color: #159957;
   background: linear-gradient(to right, rgb(27, 14, 172), rgb(107, 208, 245));
   overflow: hidden;
+  color: white;
+  vertical-align: middle;
+  overflow: hidden;
+}
+
+.topnav-left {
+  margin-left: 20px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  float: left;
+  font-weight: bold;
+  font-size: 24px;
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+.topnav-right {
+  float: right;
+  margin-right: 10px;
 
   a {
     display: inline-block;
     color: white;
-    text-align: center;
-    padding: 10px 28px;
+    padding-top: 18px;
+    padding-right: 15px;
+    padding-left: 15px;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 16px;
+    vertical-align: middle;
 
     &:hover {
-      color: black;
+      color: rgba(225, 222, 222, 0.797);
     }
   }
 
   a.active {
-    background-color: white;
-    color: black;
+    font-weight: bold;
   }
+}
+
+.topnav .icon {
+  display: none;
 }
 
 /* PAGINATION */
@@ -207,18 +231,18 @@ table {
 
 .btn {
   display: inline-block;
-  margin-bottom: 1rem;
+  margin-bottom: 16px;
   color: rgba(255, 255, 255, 0.7);
   background-color: rgba(255, 255, 255, 0.08);
   border-color: rgba(255, 255, 255, 0.2);
   border-style: solid;
   border-width: 1px;
-  border-radius: 0.3rem;
+  border-radius: 4.8px;
   transition: color 0.2s, background-color 0.2s, border-color 0.2s;
 }
 
 .btn + .btn {
-  margin-left: 1rem;
+  margin-left: 16px;
 }
 
 .btn:hover {
@@ -335,21 +359,21 @@ table {
 
 .project-name {
   margin-top: 0;
-  margin-bottom: 0.1rem;
+  margin-bottom: 1.6px;
 }
 
 .title {
   color: white;
   text-align: center;
   background-color: #159957;
-  background: linear-gradient(to right, rgb(27, 14, 172), rgb(107, 208, 245));
+  // background: linear-gradient(to right, rgb(27, 14, 172), rgb(107, 208, 245));
 }
 
 /* FOOTER */
 
 .footer {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-top: 16px;
+  padding-bottom: 16px;
   border-top: solid 2px #eff0f1;
   left: 0;
   bottom: 0;
@@ -372,26 +396,35 @@ table {
   overflow: visible;
 }
 
-/* PRESET FORMATTING */
+/* FORMATTING BASED ON SCREEN SIZE */
 
 @media screen and (min-width: 64em) {
   .project-name {
-    font-size: 2.5rem;
+    font-size: 40px;
   }
 
   .project-tagline {
-    font-size: 1.25rem;
+    font-size: 20px;
   }
 
   .title {
-    padding: 1rem 1rem;
+    padding: 16px 16px;
+  }
+
+  h1 {
+    border-bottom: solid 2px #eff0f1;
+    padding-bottom: 16px;
+    font-size: 30px;
   }
 
   .main-content {
-    max-width: 80rem;
-    padding: 2rem 6rem;
+    max-width: 1280px;
+    padding-top: 0px;
+    padding-bottom: 32px;
+    padding-right: 96px;
+    padding-left: 96px;
     margin: 0 auto;
-    font-size: 1.1rem;
+    font-size: 18px;
   }
 
   .home-column-buttons {
@@ -408,20 +441,27 @@ table {
 
 @media screen and (min-width: 50em) and (max-width: 64em) {
   .project-name {
-    font-size: 2rem;
+    font-size: 32px;
   }
 
   .project-tagline {
-    font-size: 1.15rem;
+    font-size: 18px;
   }
 
   .title {
-    padding: 1rem 1rem;
+    padding: 16px 16px;
+  }
+
+  h1 {
+    border-bottom: solid 2px #eff0f1;
+    padding-bottom: 16px;
+    font-size: 32px;
   }
 
   .main-content {
-    padding: 2rem 4rem;
-    font-size: 1.1rem;
+    padding: 32px 64px;
+    font-size: 18px;
+    text-size-adjust: auto;
   }
 
   .home-column-buttons {
@@ -435,24 +475,59 @@ table {
     padding-top: 2.5%;
     position: relative;
   }
+
+  .topnav a:not(:only-child) {
+    display: none;
+  }
+
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+
+  .topnav.responsive {
+    position: relative;
+    padding-bottom: 15px;
+    padding-right: 30px;
+  }
+
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding-right: 25px;
+  }
+
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+    font-size: 20px;
+  }
 }
 
 @media screen and (min-width: 42em) and (max-width: 50em) {
   .project-name {
-    font-size: 2rem;
+    font-size: 32px;
   }
 
   .project-tagline {
-    font-size: 1.15rem;
+    font-size: 18px;
   }
 
   .title {
-    padding: 1rem 1rem;
+    padding: 16px;
+  }
+
+  h1 {
+    border-bottom: solid 2px #eff0f1;
+    padding-bottom: 16px;
+    font-size: 32px;
   }
 
   .main-content {
-    padding: 2rem 4rem;
-    font-size: 1.1rem;
+    padding: 32px 64px;
+    font-size: 18px;
   }
 
   .home-column-buttons {
@@ -466,24 +541,59 @@ table {
     padding-top: 2.5%;
     margin-right: -8%;
   }
+
+  .topnav a:not(:only-child) {
+    display: none;
+  }
+
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+
+  .topnav.responsive {
+    position: relative;
+    padding-bottom: 15px;
+    padding-right: 30px;
+  }
+
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding-right: 25px;
+  }
+
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+    font-size: 20px;
+  }
 }
 
 @media screen and (max-width: 42em) {
   .project-name {
-    font-size: 1.75rem;
+    font-size: 28px;
   }
 
   .project-tagline {
-    font-size: 1rem;
+    font-size: 18px;
   }
 
   .title {
-    padding: 1rem 1rem;
+    padding: 16px 16px;
+  }
+
+  h1 {
+    border-bottom: solid 2px #eff0f1;
+    padding-bottom: 16px;
+    font-size: 32px;
   }
 
   .main-content {
-    padding: 2rem 1rem;
-    font-size: 1rem;
+    padding: 32px 16px;
+    font-size: 18px;
   }
 
   .home-column-buttons {
@@ -496,6 +606,35 @@ table {
     flex: 20%;
     padding-top: 2.5%;
     position: relative;
+  }
+
+  .topnav a:not(:only-child) {
+    display: none;
+  }
+
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+
+  .topnav.responsive {
+    position: relative;
+    padding-bottom: 15px;
+    padding-right: 30px;
+  }
+
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding-right: 25px;
+  }
+
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+    font-size: 20px;
   }
 }
 
