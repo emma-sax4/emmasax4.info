@@ -1,11 +1,11 @@
 ---
 layout: blog
 title: Welcome to Kenya
-permalink: /set/welcome-to-kenya
+permalink: /blog/set/welcome-to-kenya
 set: Welcome to Kenya
 ---
 
-<h1>{{ page.title }}</h1>
+# {{ page.title }}
 
 A complilation of five thoughts revolving around my trip to Kenya in the summer of 2019. You can tell I will remember Kenya with fond memories.
 
