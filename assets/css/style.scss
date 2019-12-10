@@ -83,12 +83,6 @@ blockquote p {
   color: grey;
 }
 
-h1 {
-  border-bottom: solid 2px #eff0f1;
-  padding-bottom: 16px;
-  font-size: 30px;
-}
-
 /* TABLES */
 
 table {
@@ -412,6 +406,12 @@ table {
     padding: 16px 16px;
   }
 
+  h1 {
+    border-bottom: solid 2px #eff0f1;
+    padding-bottom: 16px;
+    font-size: 30px;
+  }
+
   .main-content {
     max-width: 1280px;
     padding-top: 0px;
@@ -447,9 +447,16 @@ table {
     padding: 16px 16px;
   }
 
+  h1 {
+    border-bottom: solid 2px #eff0f1;
+    padding-bottom: 16px;
+    font-size: 32px;
+  }
+
   .main-content {
     padding: 32px 64px;
     font-size: 18px;
+    text-size-adjust: auto;
   }
 
   .home-column-buttons {
@@ -478,6 +485,12 @@ table {
     padding: 16px;
   }
 
+  h1 {
+    border-bottom: solid 2px #eff0f1;
+    padding-bottom: 16px;
+    font-size: 32px;
+  }
+
   .main-content {
     padding: 32px 64px;
     font-size: 18px;
@@ -502,16 +515,22 @@ table {
   }
 
   .project-tagline {
-    font-size: 16px;
+    font-size: 18px;
   }
 
   .title {
     padding: 16px 16px;
   }
 
+  h1 {
+    border-bottom: solid 2px #eff0f1;
+    padding-bottom: 16px;
+    font-size: 32px;
+  }
+
   .main-content {
     padding: 32px 16px;
-    font-size: 16px;
+    font-size: 18px;
   }
 
   .home-column-buttons {
