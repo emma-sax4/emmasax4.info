@@ -3,21 +3,33 @@ layout: default
 ---
 
 <div class="row" style="display: flex;">
-  <div class="column" align="center" style="flex: -5%; padding-top: 2%; padding-right: 50px;">
+  <div class="column post-info" align="center">
     {% include all_posts_button.html %}
     {% if page.set %}
       <br>
       {% assign set = page.set %}
       {% include set_list.html %}
+      <br>
     {% elsif page.tags %}
       <br>
       {% assign tags = page.tags | sort %}
       {% include tags_list.html %}
+      <br>
     {% endif %}
+
+    <span class="post-meta">
+      {% if page.draft == true %}
+        Unpublished
+      {% else %}
+        Published {{ page.date | date: "%B %-d, %Y" }}
+      {% endif %}
+    </span>
   </div>
 
-  <div class="column" align="left" style="flex: 50%; padding-top: 0%;">
+  <div class="column post" align="left">
     {% include post_summary_for_post.html %}
-    {{ content }}
+    <div class="page-body">
+      {{ content }}
+    </div>
   </div>
 </div>
