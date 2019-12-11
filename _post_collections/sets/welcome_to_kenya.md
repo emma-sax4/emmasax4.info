@@ -1,5 +1,5 @@
 ---
-layout: blog
+layout: post_collection
 title: Welcome to Kenya
 permalink: /blog/set/welcome-to-kenya
 set: Welcome to Kenya
