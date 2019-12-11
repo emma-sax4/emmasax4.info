@@ -33,8 +33,6 @@ Here are all of the parts of this project associated with running this applicati
 |   ├── css
 |   |   └── style.scss
 |   ├── images
-|   |   ├── favicons
-|   |   |   └── favicon.ico
 |   |   ├── picture-01.jpg
 |   |   ├── picture-02.jpg
 |   |   ├── picture-03.png
