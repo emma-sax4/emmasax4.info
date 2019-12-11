@@ -1,7 +1,7 @@
 ---
 ---
 
-@import "bootstrap";
+@import "bootstrap.scss";
 @import "pagination/index.scss";
 
 * {
@@ -26,6 +26,14 @@ body {
 
 .page-body {
   padding-top: 15px;
+}
+
+a {
+  color: #1e6bb8;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
 }
 
 code {
@@ -262,6 +270,19 @@ table {
   text-align: center;
   font-size: 12px;
   position: absolute;
+}
+
+/* RESPONSIVE CONTAINERS */
+
+.container {
+  width: auto;
+  max-width: 1020px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.markdown-body {
+  overflow: visible;
 }
 
 /* FORMATTING BASED ON SCREEN SIZE */
