@@ -211,12 +211,12 @@ This is an example sentence, so it will throw a 404. See [here](/assets/resource
 
 ## `bootstrap-sass/` and `primer/`
 
-These are submodules to [twbs/bootstrap-sass](https://github.com/twbs/bootstrap-sass/tree/b34765d8a6aa775816c59012b2d6b30c4c66a8e9) and [primer/css](https://github.com/primer/css/tree/6a8733ea0f3c079fe4a37c1828297d8f661ccee8) at certain commits. This is necessary to get the pagination working. Without having this submodule initialized, running this repository locally will not work. To initialize after cloning, please run:
+These are submodules to [`twbs/bootstrap-sass`](https://github.com/twbs/bootstrap-sass/tree/b34765d8a6aa775816c59012b2d6b30c4c66a8e9) and [`primer/css`](https://github.com/primer/css/tree/6a8733ea0f3c079fe4a37c1828297d8f661ccee8) at certain commits. This is necessary to get the pagination working. Without having this submodule initialized, running this repository locally will not work. To initialize after cloning, please run:
 ```
 git submodule update --init --recursive
 ```
 
-and make sure they're on the proper commit (`b34765d8a6aa775816c59012b2d6b30c4c66a8e9` for twibs/bootstrap-sass and `6a8733ea0f3c079fe4a37c1828297d8f661ccee8` for primer/css). Once things are initialized, there should be no need to be committing to this directory.
+and make sure they're on the proper commit (`b34765d8a6aa775816c59012b2d6b30c4c66a8e9` for `twibs/bootstrap-sass` and `6a8733ea0f3c079fe4a37c1828297d8f661ccee8` for `primer/css`). Once things are initialized, there should be no need to be committing to this directory.
 
 ## `_config.yml`
 
