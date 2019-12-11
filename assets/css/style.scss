@@ -17,8 +17,6 @@ html, body {
 }
 
 body {
-  padding: 0;
-  margin: 0;
   padding-bottom: 40px;
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 18px;
@@ -26,21 +24,12 @@ body {
   color: #606c71;
 }
 
-a {
-  color: #1e6bb8;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
 code {
   padding: 2px 4px;
   font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
-  font-size: 14.4px;
-  color: #567482;
+  font-size: 15px;
   background-color: #f3f6fa;
+  border: solid 1px #dce6f0;
   border-radius: 4.8px;
 }
 
@@ -48,8 +37,8 @@ pre {
   padding: 12.8px;
   margin-top: 0;
   margin-bottom: 16px;
-  font: 16px Consolas, "Liberation Mono", Menlo, Courier, monospace;
-  color: #567482;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 15px;
   word-wrap: normal;
   background-color: #f3f6fa;
   border: solid 1px #dce6f0;
@@ -58,8 +47,7 @@ pre {
   > code {
     padding: 0;
     margin: 0;
-    font-size: 14.4px;
-    color: #567482;
+    font-size: 15px;
     word-break: normal;
     white-space: pre;
     background: transparent;
@@ -75,10 +63,6 @@ blockquote {
   quotes: "\201C""\201D""\2018""\2019";
 }
 
-blockquote p {
-  display: inline;
-}
-
 .post-meta {
   font-size: 15px;
   color: grey;
@@ -91,13 +75,12 @@ table {
   width: 100%;
   border-collapse: collapse;
   overflow: auto;
-  font-size: 17px;
+  font-size: 16px;
   word-break: normal;
   word-break: keep-all; // For Firefox to horizontally scroll wider tables.
   -webkit-overflow-scrolling: touch;
 
   th {
-    font-weight: bold;
     padding: 0px;
     font-size: 0px;
     border: 0px solid #e9ebec;
@@ -115,32 +98,28 @@ table {
 /* NAVIGATION BAR */
 
 .topnav {
-  color: black;
-  background-color: #159957;
+  background-color: rgb(27, 14, 172);
   background: linear-gradient(to right, rgb(27, 14, 172), rgb(107, 208, 245));
-  overflow: hidden;
-  color: white;
-  vertical-align: middle;
   overflow: hidden;
 }
 
 .topnav-left {
   margin-left: 20px;
   margin-top: 10px;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
   float: left;
-  font-weight: bold;
-  font-size: 24px;
 
   a {
     color: white;
     text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
   }
 }
 
 .topnav-right {
   float: right;
-  margin-right: 10px;
+  margin-right: 15px;
 
   a {
     display: inline-block;
@@ -150,7 +129,6 @@ table {
     padding-left: 15px;
     text-decoration: none;
     font-size: 16px;
-    vertical-align: middle;
 
     &:hover {
       color: rgba(225, 222, 222, 0.797);
@@ -159,6 +137,7 @@ table {
 
   a.active {
     font-weight: bold;
+    color: #e9e9e9;
   }
 }
 
@@ -183,49 +162,6 @@ table {
   padding-right: 10px;
   padding-bottom: 0px;
   padding-top: 0px;
-​​
-  .page {​
-    &:first-child {
-      border-top-left-radius: 0px;
-      border-bottom-left-radius: 0px;
-    }
-​
-    &:last-child {
-      border-top-right-radius: 0px;
-      border-bottom-right-radius: 0px;
-    }
-  }
-  .active .page {
-    @extend .selected;
-    @extend .current;
-  }
-  .disabled .page {
-    @extend .gap;
-  }
-​
-  li {
-    margin: 0 !important;
-    padding: 0;
-    +li {
-      .page {
-        margin-left: -1px;
-      }
-    }
-
-    &:first-child {
-      .page {
-        border-top-left-radius: 3px;
-        border-bottom-left-radius: 3px;
-      }
-    }
-​
-    &:last-child {
-      .page {
-        border-top-right-radius: 3px;
-        border-bottom-right-radius: 3px;
-      }
-    }
-  }
 }
 
 /* GENERIC BUTTON */
@@ -258,50 +194,6 @@ table {
 }
 
 /* CUSTOM BUTTON */
-
-// .myButton {
-//   -moz-box-shadow: 0px 10px 14px -7px rgb(101, 206, 250);
-//   -webkit-box-shadow: 0px 10px 14px -7px rgb(101, 206, 250);
-//   box-shadow: 0px 10px 14px -7px rgb(101, 206, 250);
-//   background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, rgb(101, 206, 250)), color-stop(1, rgb(49, 122, 249)));
-//   background: -moz-linear-gradient(top, rgb(101, 206, 250) 5%, rgb(49, 122, 249) 100%);
-//   background: -webkit-linear-gradient(top, rgb(101, 206, 250) 5%, rgb(49, 122, 249) 100%);
-//   background: -o-linear-gradient(top, rgb(101, 206, 250) 5%, rgb(49, 122, 249) 100%);
-//   background: -ms-linear-gradient(top, rgb(101, 206, 250) 5%, rgb(49, 122, 249) 100%);
-//   background: linear-gradient(to bottom, rgb(101, 206, 250) 5%, rgb(49, 122, 249) 100%);
-//   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="rgb(101, 206, 250)", endColorstr="rgb(49, 122, 249)",GradientType=0);
-//   background-color: rgb(107, 208, 245);
-//   -moz-border-radius: 8px;
-//   -webkit-border-radius: 8px;
-//   border-radius: 8px;
-//   display: inline-flex;
-//   cursor: pointer;
-//   color: white;
-//   font-family: Arial;
-//   font-size: 20px;
-//   font-weight: bold;
-//   align-items: center;
-//   padding: 13px 32px;
-//   text-decoration: none;
-//   // text-shadow: 0px 1px 0px #3d768a;
-// }
-
-// .myButton:hover {
-//   background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, rgb(67, 134, 250)), color-stop(1, rgb(67, 134, 250)));
-//   background: -moz-linear-gradient(top, rgb(67, 134, 250) 5%, rgb(67, 134, 250) 100%);
-//   background: -webkit-linear-gradient(top, rgb(67, 134, 250) 5%, rgb(67, 134, 250) 100%);
-//   background: -o-linear-gradient(top, rgb(67, 134, 250) 5%, rgb(67, 134, 250) 100%);
-//   background: -ms-linear-gradient(top, rgb(67, 134, 250) 5%, rgb(67, 134, 250) 100%);
-//   background: linear-gradient(to bottom, rgb(67, 134, 250) 5%, rgb(67, 134, 250) 100%);
-//   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="rgb(67, 134, 250)", endColorstr="rgb(67, 134, 250)",GradientType=0);
-//   background-color: rgb(53, 189, 247);
-//   text-decoration: none;
-// }
-
-// .myButton:active {
-//   position:relative;
-//   top:1px;
-// }
 
 .myButton {
   padding-top: 20px;
