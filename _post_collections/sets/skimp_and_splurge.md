@@ -1,5 +1,5 @@
 ---
-layout: blog
+layout: post_collection
 title: Skimp and Splurge
 permalink: /blog/set/skimp-and-splurge
 set: Skimp and Splurge
