@@ -292,14 +292,14 @@ table {
     font-size: 18px;
   }
 
-  .home-column-buttons {
-    flex: 10%;
+  .home-column-content {
     padding-top: 1.75%;
-    margin-right: -100px;
+    margin-right: 150px;
+    padding-left: 50px;
   }
 
   .home-column-picture {
-    flex: 25%;
+    margin-left: 150px;
     padding-top: 2.5%;
   }
 
@@ -340,14 +340,14 @@ table {
     font-size: 18px;
   }
 
-  .home-column-buttons {
-    flex: 10%;
+  .home-column-content {
     padding-top: 1.75%;
-    margin-right: -100px;
+    margin-right: 100px;
+    padding-left: 50px;
   }
 
   .home-column-picture {
-    flex: 25%;
+    margin-left: 100px;
     padding-top: 2.5%;
   }
 
@@ -385,16 +385,16 @@ table {
     text-size-adjust: auto;
   }
 
-  .home-column-buttons {
-    flex: 10%;
+  // TODO: put these on top of each other
+  .home-column-content {
     padding-top: 1.75%;
-    margin-left: -10%;
+    margin-right: 100px;
+    padding-left: 50px;
   }
 
   .home-column-picture {
-    flex: 20%;
+    margin-left: 100px;
     padding-top: 2.5%;
-    position: relative;
   }
 
   .post-info {
@@ -461,16 +461,16 @@ table {
     font-size: 18px;
   }
 
-  .home-column-buttons {
-    flex: 10%;
+  // TODO: put these on top of each other
+  .home-column-content {
     padding-top: 1.75%;
-    margin-left: -10%;
+    margin-right: 100px;
+    padding-left: 50px;
   }
 
   .home-column-picture {
-    flex: 20%;
+    margin-left: 100px;
     padding-top: 2.5%;
-    margin-right: -8%;
   }
 
   // TODO: fix spacing here
@@ -538,16 +538,16 @@ table {
     font-size: 18px;
   }
 
-  .home-column-buttons {
-    flex: 10%;
+  // TODO: put these on top of each other
+  .home-column-content {
     padding-top: 1.75%;
-    position: relative;
+    margin-right: 100px;
+    padding-left: 50px;
   }
 
   .home-column-picture {
-    flex: 20%;
+    margin-left: 100px;
     padding-top: 2.5%;
-    position: relative;
   }
 
   // TODO: fix spacing here
