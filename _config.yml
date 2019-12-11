@@ -31,6 +31,7 @@ sass:
   load_paths:
     - primer/src/
     - bootstrap-sass/assets/stylesheets/
+    - bootstrap/scss/
 
 include:
   - _pages
@@ -41,6 +42,7 @@ exclude:
   - Gemfile.lock
   - primer/
   - bootstrap-sass/
+  - bootstrap/
   - vendor/
 
 relative_links:
