@@ -30,6 +30,7 @@ sass:
   style: compressed
   load_paths:
     - primer/src/
+    - bootstrap-sass/assets/stylesheets/
 
 include:
   - _pages
@@ -39,6 +40,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - primer/
+  - bootstrap-sass/
   - vendor/
 
 relative_links:
