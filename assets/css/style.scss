@@ -38,7 +38,7 @@ h2 {
 }
 
 a {
-  color: #1e6bb8;
+  color: #3082d4;
   text-decoration: none;
 }
 
@@ -303,19 +303,6 @@ table {
   position: absolute;
 }
 
-/* RESPONSIVE CONTAINERS */
-
-.container {
-  width: auto;
-  max-width: 1020px;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-.markdown-body {
-  overflow: visible;
-}
-
 /* FORMATTING BASED ON SCREEN SIZE */
 
 /*
@@ -472,9 +459,11 @@ table {
   // TODO: fix spacing here
   .post-info {
     flex: 20%;
-    padding-top: 2%;
-    margin-left: -50px;
+    text-align: center;
+    margin-top: -25px;
+    margin-left: -25px;
     padding-right: 10px;
+    padding-bottom: 20px;
   }
 
   .post {
