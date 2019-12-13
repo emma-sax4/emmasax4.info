@@ -188,7 +188,7 @@ This directory has three directories, `css/`, `images/`, and `resources/`. `css/
 The `images/` directory gives me a place to store all of the images this site uses. By putting them all into one directory (that's nested as necessary), it provides some organization to the repository. To call a specific resource, you can either ask for it in HTML:
 ```
 <div>
-  <img src="/assets/images/picture-01.jpg" alt="Picture 1">
+  <img class="my-image" src="/assets/images/picture-01.jpg" alt="Picture 1">
 </div>
 ```
 
