@@ -413,7 +413,6 @@ table {
 
   .post-info {
     flex: 5%;
-    padding-top: 2%;
     padding-right: 20px;
   }
 
@@ -468,16 +467,15 @@ table {
   }
 
   .main-content {
-    padding: 32px 64px;
+    padding: 32px 36px;
     font-size: 18px;
   }
 
-  // TODO: fix spacing here
   .post-info {
     flex: 20%;
     text-align: center;
     margin-top: -25px;
-    margin-left: -25px;
+    margin-left: -10px;
     padding-right: 10px;
     padding-bottom: 20px;
   }
@@ -485,6 +483,7 @@ table {
   .post {
     flex: 50%;
     padding-top: 0%;
+    margin-right: -10px;
   }
 
   .topnav a:not(:only-child) {
@@ -536,7 +535,6 @@ table {
     font-size: 18px;
   }
 
-  // TODO: fix spacing here
   .post-info {
     flex: 20%;
     text-align: center;
