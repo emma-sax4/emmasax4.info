@@ -5,10 +5,10 @@
 
 * {
   box-sizing: border-box;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  hyphens: auto;
-  word-break: break-all;
+  // word-wrap: break-word;
+  // overflow-wrap: break-word;
+  // hyphens: auto;
+  // word-break: break-all;
 }
 
 html, body {
@@ -359,7 +359,7 @@ table {
 
   .post-info {
     flex: -5%;
-    padding-top: 2px;
+    padding-top: 20px;
     padding-right: 50px;
   }
 
@@ -405,7 +405,7 @@ table {
 
   .post-info {
     flex: -5%;
-    padding-top: 2px;
+    padding-top: 20px;
     padding-right: 50px;
   }
 
