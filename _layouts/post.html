@@ -2,34 +2,36 @@
 layout: default
 ---
 
-<div class="row" style="display: flex;">
-  <div class="column post-info" align="center">
-    {% include all_posts_button.html %}
-    {% if page.set %}
-      <br>
-      {% assign set = page.set %}
-      {% include set_list.html %}
-      <br>
-    {% elsif page.tags %}
-      <br>
-      {% assign tags = page.tags | sort %}
-      {% include tags_list.html %}
-      <br>
-    {% endif %}
-
-    <span class="post-meta" style="font-style: italic;">
-      {% if page.draft == true %}
-        Unpublished
-      {% else %}
-        Published {{ page.date | date: "%B %-d, %Y" }}
+<section class="main-content">
+  <div class="row" style="display: flex;">
+    <div class="column post-info" align="center">
+      {% include all_posts_button.html %}
+      {% if page.set %}
+        <br>
+        {% assign set = page.set %}
+        {% include set_list.html %}
+        <br>
+      {% elsif page.tags %}
+        <br>
+        {% assign tags = page.tags | sort %}
+        {% include tags_list.html %}
+        <br>
       {% endif %}
-    </span>
-  </div>
 
-  <div class="column post" align="left">
-    {% include post_summary_for_post.html %}
-    <div class="page-body">
-      {{ content }}
+      <span class="post-meta" style="font-style: italic;">
+        {% if page.draft == true %}
+          Unpublished
+        {% else %}
+          Published {{ page.date | date: "%B %-d, %Y" }}
+        {% endif %}
+      </span>
+    </div>
+
+    <div class="column post" align="left">
+      {% include post_summary_for_post.html %}
+      <div class="page-body">
+        {{ content }}
+      </div>
     </div>
   </div>
-</div>
+</section>
