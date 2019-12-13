@@ -49,6 +49,7 @@ a {
 }
 
 a:hover {
+  // text-decoration: underline;
   text-decoration: none;
 }
 
@@ -60,6 +61,7 @@ a:hover {
 
 .link-icon-with-hover:hover {
   color: #3082d4;
+  // text-decoration: none;
 }
 
 code {
@@ -140,7 +142,7 @@ table {
 }
 
 .topnav-left {
-  margin-left: 20px;
+  margin-left: 15px;
   margin-top: 10px;
   margin-bottom: 8px;
   float: left;
@@ -160,7 +162,7 @@ table {
   a {
     display: inline-block;
     color: white;
-    padding-top: 18px;
+    padding-top: 15px;
     padding-right: 15px;
     padding-left: 15px;
     text-decoration: none;
