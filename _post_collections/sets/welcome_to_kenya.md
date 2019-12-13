@@ -1,11 +1,9 @@
 ---
-layout: post_collection
+layout: blog
 title: Welcome to Kenya
 permalink: /blog/set/welcome-to-kenya
 set: Welcome to Kenya
 ---
-
-# {{ page.title }}
 
 A complilation of five thoughts revolving around my trip to Kenya in the summer of 2019. You can tell I will remember Kenya with fond memories.
 
