@@ -148,7 +148,6 @@ permalink: /tag/tag-name
 tag: tag_name
 ---
 
-<h1>{{ page.title }}</h1>
 ```
 
 The `tag` front matter indicates which posts to show on that page (only the posts with that tag will show).
@@ -164,8 +163,6 @@ title: Posts Set
 permalink: /set/posts-set
 set: Posts Set
 ---
-
-<h1>{{ page.title }}</h1>
 
 Some words describing this set should go here.
 ```
@@ -186,12 +183,7 @@ Currently, the code is not set up to handle posts that are part of a set **and**
 
 ## `assets/`
 
-This directory has three directories, `css/`, `images/`, and `resources/`. `css/` only has one file — `style.scss`. This is where I can keep _all_ of the CSS that this project uses. To make sure it's all being used, there is one very important line in the `_includes/head.html`:
-```
-<link rel="stylesheet" href="{{ "assets/css/style.css" | relative_url }}">
-```
-
-Without that line, none of the CSS would show up as expected.
+This directory has three directories, `css/`, `images/`, and `resources/`. `css/` only has one file — `style.scss`. This is where I can keep _all_ of the CSS that this project uses. All CSS in the project is loaded inside the `_includes/head.html`.
 
 The `images/` directory gives me a place to store all of the images this site uses. By putting them all into one directory (that's nested as necessary), it provides some organization to the repository. To call a specific resource, you can either ask for it in HTML:
 ```
