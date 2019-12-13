@@ -2,10 +2,34 @@
 layout: default
 ---
 
-{% include blog_data_start.html %}
+{% assign draft_posts = site.posts | where: "draft", "true" %}
+{% assign published_posts = site.posts | where_exp: "post", "post.draft != true" %}
+{% assign sorted_published_posts = published_posts | sort: "date" | reverse %}
+{% assign all_posts = draft_posts | concat: sorted_published_posts %}
 
-  <div class="main-content" style="max-width: 1024px;">
-    {% include blog_posts.html %}
-  </div>
+{% if page.tag == "all" %}
+  <section class="main-content" style="max-width: 1024px;">
+    <div style="text-align: center">
+      <h1>{{ page.title }}</h1>
+    </div>
+{% else if %}
+  <section class="main-content">
+    <div class="row" style="display: flex">
+      <div class="column collection-info" align="center">
+        {% include all_posts_button.html %}
+      </div>
 
-{% include blog_data_end.html %}
+      <div class="column collection" align="left">
+        <h1>{{ page.title }}</h1>
+{% endif %}
+
+<div class="page-body">
+  {{ content }}
+  {% include blog_posts.html %}
+</div>
+
+{% unless page.tag == "all" %}
+      </div>
+    </div>
+{% endunless %}
+  </section>
