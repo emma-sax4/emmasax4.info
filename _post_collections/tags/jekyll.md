@@ -1,8 +1,6 @@
 ---
-layout: post_collection
+layout: blog
 title: Jekyll
 permalink: /blog/tag/jekyll
 tag: jekyll
 ---
-
-# {{ page.title }}
