@@ -5,6 +5,10 @@
 
 * {
   box-sizing: border-box;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+  word-break: break-all;
 }
 
 html, body {
@@ -49,8 +53,7 @@ a {
 }
 
 a:hover {
-  // text-decoration: underline;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 .link-icon, .link-icon-with-hover {
@@ -61,7 +64,6 @@ a:hover {
 
 .link-icon-with-hover:hover {
   color: #3082d4;
-  // text-decoration: none;
 }
 
 code {
@@ -323,6 +325,14 @@ table {
 
 /* FORMATTING BASED ON SCREEN SIZE */
 
+.post-info {
+  white-space: nowrap;
+}
+
+.collection-info {
+  white-space: nowrap;
+}
+
 /*
   ## Device = Desktops
   ## Screen = 1281px to higher resolution desktops
@@ -349,13 +359,24 @@ table {
 
   .post-info {
     flex: -5%;
-    padding-top: 2%;
+    padding-top: 2px;
     padding-right: 50px;
   }
 
   .post {
     flex: 50%;
-    padding-top: 0%;
+    padding-top: 0px;
+  }
+
+  .collection-info {
+    flex: -5%;
+    padding-top: 20px;
+    padding-right: 50px;
+  }
+
+  .collection {
+    flex: 50%;
+    padding-top: 0;
   }
 }
 
@@ -384,13 +405,24 @@ table {
 
   .post-info {
     flex: -5%;
-    padding-top: 2%;
+    padding-top: 2px;
     padding-right: 50px;
   }
 
   .post {
     flex: 50%;
-    padding-top: 0%;
+    padding-top: 0px;
+  }
+
+  .collection-info {
+    flex: -5%;
+    padding-top: 20px;
+    padding-right: 50px;
+  }
+
+  .collection {
+    flex: 50%;
+    padding-top: 0px;
   }
 }
 
@@ -404,7 +436,7 @@ table {
   }
 
   h1 {
-    margin-top: -15px;
+    margin-top: -5px;
   }
 
   .main-content {
@@ -416,11 +448,25 @@ table {
   .post-info {
     flex: 5%;
     padding-right: 20px;
+    margin-left: -20px;
+    margin-top: -25px;
   }
 
   .post {
     flex: 60%;
-    padding-top: 0%;
+    padding-top: 0px;
+  }
+
+  .collection-info {
+    flex: 5%;
+    margin-top: -5px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+  }
+
+  .collection {
+    flex: 60%;
+    padding-top: 0px;
   }
 
   .topnav a:not(:only-child) {
@@ -465,7 +511,7 @@ table {
   }
 
   h1 {
-    margin-top: -15px;
+    margin-top: -5px;
   }
 
   .main-content {
@@ -476,7 +522,7 @@ table {
   .post-info {
     flex: 20%;
     text-align: center;
-    margin-top: -25px;
+    margin-top: -5px;
     margin-left: -10px;
     padding-right: 10px;
     padding-bottom: 20px;
@@ -484,7 +530,22 @@ table {
 
   .post {
     flex: 50%;
-    padding-top: 0%;
+    padding-top: 0px;
+    margin-right: -10px;
+  }
+
+  .collection-info {
+    flex: 20%;
+    text-align: center;
+    margin-top: -5px;
+    margin-left: -10px;
+    padding-right: 10px;
+    padding-bottom: 20px;
+  }
+
+  .collection {
+    flex: 50%;
+    padding-top: 0px;
     margin-right: -10px;
   }
 
@@ -507,7 +568,7 @@ table {
     position: absolute;
     right: 0;
     top: 0;
-    padding-right: 30px;
+    padding-right: 25px;
   }
 
   .topnav.responsive a {
@@ -529,7 +590,7 @@ table {
   }
 
   h1 {
-    margin-top: -15px;
+    margin-top: -5px;
   }
 
   .main-content {
@@ -540,14 +601,27 @@ table {
   .post-info {
     flex: 20%;
     text-align: center;
-    margin-top: -25px;
+    margin-top: -5px;
     padding-right: 10px;
     padding-bottom: 20px;
   }
 
   .post {
     display: inline;
-    word-wrap: normal;
+    margin-left: 10px;
+    margin-right: 5px;
+  }
+
+  .collection-info {
+    flex: 20%;
+    text-align: center;
+    margin-top: -5px;
+    padding-right: 10px;
+    padding-bottom: 20px;
+  }
+
+  .collection {
+    display: inline;
     margin-left: 10px;
     margin-right: 5px;
   }
