@@ -46,6 +46,16 @@ a:hover {
   text-decoration: none;
 }
 
+.link-icon, .link-icon-with-hover {
+  width: 48px;
+  height: 48px;
+  color: #829197;
+}
+
+.link-icon-with-hover:hover {
+  color: #3082d4;
+}
+
 code {
   padding: 2px 4px;
   font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
