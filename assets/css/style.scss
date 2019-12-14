@@ -5,18 +5,16 @@
 
 * {
   box-sizing: border-box;
-  // word-wrap: break-word;
-  // overflow-wrap: break-word;
-  // hyphens: auto;
-  // word-break: break-all;
 }
 
 html, body {
+  min-width: 320px;
   min-height: 100vh;
   width: 100vw;
   flex-direction: column;
   position: relative;
-  overflow-x: hidden;
+  overflow-x: scroll;
+  overflow-y: scroll;
 }
 
 body {
@@ -150,9 +148,9 @@ table {
 }
 
 .topnav-left {
-  margin-left: 15px;
-  margin-top: 10px;
-  margin-bottom: 8px;
+  padding-left: 15px;
+  padding-top: 15px;
+  padding-bottom: 5px;
   float: left;
 
   a {
@@ -170,7 +168,7 @@ table {
   a {
     display: inline-block;
     color: white;
-    padding-top: 15px;
+    padding-top: 20px;
     padding-right: 15px;
     padding-left: 15px;
     text-decoration: none;
@@ -353,7 +351,6 @@ table {
   }
 
   .main-content {
-    min-width: 1280px;
     max-width: 1600px;
     padding-top: 8px;
     padding-bottom: 32px;
@@ -474,37 +471,6 @@ table {
     flex: 60%;
     padding-top: 0px;
   }
-
-  .topnav a:not(:only-child) {
-    display: none;
-    font-size: 24px;
-  }
-
-  .topnav a.icon {
-    float: right;
-    display: block;
-  }
-
-  .topnav.responsive {
-    position: relative;
-    padding-bottom: 30px;
-    padding-right: 30px;
-    font-size: 24px;
-  }
-
-  .topnav.responsive .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-    padding-right: 30px;
-  }
-
-  .topnav.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-    font-size: 24px;
-  }
 }
 
 /*
@@ -523,6 +489,11 @@ table {
   .main-content {
     padding: 32px 36px;
     font-size: 18px;
+  }
+
+  pre {
+    overflow: auto;
+    width: 95vw;
   }
 
   .post-info {
@@ -560,6 +531,7 @@ table {
   }
 
   .topnav a.icon {
+    padding-top: 22px;
     float: right;
     display: block;
   }
@@ -604,6 +576,11 @@ table {
     font-size: 18px;
   }
 
+  pre {
+    overflow: auto;
+    width: 95vw;
+  }
+
   .post-info {
     flex: 20%;
     text-align: center;
@@ -637,6 +614,7 @@ table {
   }
 
   .topnav a.icon {
+    padding-top: 22px;
     float: right;
     display: block;
   }

@@ -88,6 +88,6 @@ On iPhones, press and hold the `-`, and a window will pop up that lets you selec
 
 ## References
 
-* <a href="https://getitwriteonline.com/articles/en-dashes-em-dashes/" target="_blank">getitwriteonline.com/en-dashes-em-dashes</a>
-* <a href="https://english.stackexchange.com/questions/20198/can-mean-the-same-thing-as-a-semicolon" target="_blank">english.stackexchange.com/can-mean-the-same-thing-as-a-semicolon</a>
-* <a href="https://english.stackexchange.com/questions/13855/what-do-you-call-words-that-are-separated-by-a-hyphen" target="_blank">english.stackexchange.com/what-do-you-call-words-that-are-separated-by-a-hyphen</a>
+* <a href="https://getitwriteonline.com/articles/en-dashes-em-dashes/" target="_blank">getitwriteonline.com/-en-dashes-em-dashes</a>
+* <a href="https://english.stackexchange.com/questions/20198/can-mean-the-same-thing-as-a-semicolon" target="_blank">english.stackexchange.com/-can-mean-the-same-thing-as-a-semicolon</a>
+* <a href="https://english.stackexchange.com/questions/13855/what-do-you-call-words-that-are-separated-by-a-hyphen" target="_blank">english.stackexchange.com/-what-do-you-call-words-that-are-separated-by-a-hyphen</a>
