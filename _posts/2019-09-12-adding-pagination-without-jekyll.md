@@ -38,10 +38,10 @@ Since I couldn't understand out why my CSS was broken, I figured it was time for
 I had never worked with submodules in Git before. So, I started how any developer-who-doesn't-recognize-anything would start: with Google. I started to google how to add submodules to Git repositories. And me, not liking to actually read anything, just started to jump in.
 
 After everything, I ended up having to add, remove, re-add, re-remove, and re-re-add the `primer` submodule to my Git repo in order for it to commit in the repo, show up in the directory structure, and be sitting on the same commit as my example repository 🤦🏻‍♀️. Here's a list of the resources I used to help me add the `primer` submodule:
-* <a href="https://chrisjean.com/git-submodules-adding-using-removing-and-updating/" target="_blank">chrisjean.com/git-submodules-adding-using-removing-and-updating</a>
-* <a href="https://stackoverflow.com/questions/10914022/how-do-i-check-out-a-specific-version-of-a-submodule-using-git-submodule" target="_blank">stackoverflow.com/how-do-i-check-out-a-specific-version-of-a-submodule-using-git-submodule</a>
-* <a href="https://twoguysarguing.wordpress.com/2010/11/14/tie-git-submodules-to-a-particular-commit-or-branch/" target="_blank">2guysarguing.wordpress.com-/-tie-git-submodules-to-a-particular-commit-or-branch</a>
-* <a href="https://subfictional.com/fun-with-git-submodules/" target="_blank">subfictional.com/fun-with-git-submodules</a>
+* <a href="https://chrisjean.com/git-submodules-adding-using-removing-and-updating/" target="_blank">chrisjean.com: git submodules adding, using, removing, and updating</a>
+* <a href="https://stackoverflow.com/questions/10914022/how-do-i-check-out-a-specific-version-of-a-submodule-using-git-submodule" target="_blank">stackoverflow.com: how do I check out a specific version of a submodule using git submodule</a>
+* <a href="https://twoguysarguing.wordpress.com/2010/11/14/tie-git-submodules-to-a-particular-commit-or-branch/" target="_blank">2guysarguing.wordpress.com: tie git submodules to a particular commit or branch</a>
+* <a href="https://subfictional.com/fun-with-git-submodules/" target="_blank">subfictional.com: fun with git submodules</a>
 * And possibly others I can't find in my browser history anymore
 
 Also, note that there is no easy way to remove a submodule. I'm just glad that I attempted this inside of a pull request because then I could `git reset` when things weren't going my way.
