@@ -23,7 +23,7 @@ All we can hope is that the world sees these beautiful creatures and understands
 
 ## References
 
-* <a href="https://www.olpejetaconservancy.org/saving-the-northern-whites/" target="_blank">olpejetaconservancy.org/saving-the-northern-whites</a>
-* <a href="https://www.olpejetaconservancy.org/first-ever-in-vitro-embryos/" target="_blank">olpejetaconservancy.org/first-ever-in-vitro-embryos</a>
-* <a href="https://www.aol.com/article/finance/2019/08/23/jimmy-johns-boycott-ceo-jimmy-john-liautaud-elephant-hunting-photo-goes-viral/23800248/?fbclid=IwAR3ZGSFAQ3btXRtEefAPq9oMNOFlterroWAz54rNyRuTLAwqWjJXkXXU9dM" target="_blank">aol.com/jimmy-johns-boycott-ceo-jimmy-john-liautaud-elephant-hunting-photo-goes-viral</a>
-* <a href="https://twitter.com/SikhProf/status/1164894341921480704" target="_blank">twitter.com/SikhProf/1164894341921480704</a>
+* <a href="https://www.olpejetaconservancy.org/saving-the-northern-whites/" target="_blank">olpejetaconservancy.org: saving the northern whites</a>
+* <a href="https://www.olpejetaconservancy.org/first-ever-in-vitro-embryos/" target="_blank">olpejetaconservancy.org: first ever in-vitro embryos</a>
+* <a href="https://www.aol.com/article/finance/2019/08/23/jimmy-johns-boycott-ceo-jimmy-john-liautaud-elephant-hunting-photo-goes-viral/23800248/?fbclid=IwAR3ZGSFAQ3btXRtEefAPq9oMNOFlterroWAz54rNyRuTLAwqWjJXkXXU9dM" target="_blank">aol.com: jimmy johns boycott ceo jimmy john liautaud elephant hunting photo goes viral</a>
+* <a href="https://twitter.com/SikhProf/status/1164894341921480704" target="_blank">twitter.com: @SikhProf post</a>
