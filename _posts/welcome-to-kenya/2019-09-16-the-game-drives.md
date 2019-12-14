@@ -127,13 +127,13 @@ All in all, we saw incredible animals at every location of our adventure. We met
 
 ## References
 
-* <a href="https://en.wikipedia.org/wiki/Ol_Pejeta_Conservancy" target="_blank">wikipedia.org/Ol_Pejeta_Conservancy</a>
+* <a href="https://en.wikipedia.org/wiki/Ol_Pejeta_Conservancy" target="_blank">wikipedia.org/Ol-Pejeta-Conservancy</a>
 * <a href="http://www.walkthroughindia.com/wild-world/top-12-elegant-species-of-antelopes-in-africa/" target="_blank">walkthroughindia.com/top-12-elegant-species-of-antelopes-in-africa</a>
 * <a href="https://animals.mom.me/names-african-gazelles-6565.html" target="_blank">animals.mom.me/names-african-gazelles</a>
 * <a href="https://www.olpejetaconservancy.org/" target="_blank">olpejetaconservancy.org</a>
 * <a href="https://www.olpejetaconservancy.org/wildlife/rhinos/black-rhinos/" target="_blank">olpejetaconservancy.org/black-rhinos</a>
-* <a href="https://www.olpejetaconservancy.org/wildlife/rhinos/northern-white-rhinos/" target="_blank">olpejetaconservancy.org/northern-white-rhinos</a>
-* <a href="https://www.olpejetaconservancy.org/wildlife/rhinos/southern-white-rhinos/" target="_blank">olpejetaconservancy.org/southern-white-rhinos</a>
+* <a href="https://www.olpejetaconservancy.org/wildlife/rhinos/northern-white-rhinos/" target="_blank">olpejetaconservancy.org/-northern-white-rhinos</a>
+* <a href="https://www.olpejetaconservancy.org/wildlife/rhinos/southern-white-rhinos/" target="_blank">olpejetaconservancy.org/-southern-white-rhinos</a>
 * <a href="https://en.wikipedia.org/wiki/Grant%27s_gazelle" target="_blank">wikipedia.org/grants_gazelle</a>
 * <a href="https://en.wikipedia.org/wiki/Dv%C5%AFr_Kr%C3%A1lov%C3%A9_Zoo" target="_blank">wikipedia.org/dvür_králové_zoo</a>
 * <a href="https://safaripark.cz/" target="_blank">safaripark.cz</a>
