@@ -13,8 +13,8 @@ html, body {
   width: 100vw;
   flex-direction: column;
   position: relative;
-  overflow-x: scroll;
-  overflow-y: scroll;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 body {
@@ -85,7 +85,7 @@ pre {
   margin-bottom: 16px;
   font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
   font-size: 15px;
-  word-wrap: normal;
+  // word-wrap: normal;
   background-color: #f3f6fa;
   border: solid 1px #dce6f0;
   border-radius: 4.8px;
@@ -95,7 +95,7 @@ pre {
     margin: 0;
     font-size: 15px;
     word-break: normal;
-    white-space: pre;
+    // white-space: p;
     background: transparent;
     border: 0;
   }
@@ -598,9 +598,9 @@ table {
   .collection-info {
     flex: 20%;
     text-align: center;
-    margin-top: -5px;
+    margin-top: -30px;
     padding-right: 10px;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
   }
 
   .collection {
