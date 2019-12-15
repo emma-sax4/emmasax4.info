@@ -1,8 +1,7 @@
 <header>
   <nav class="navbar navbar-expand-md navbar-dark">
     <a class="navbar-brand mb-0" href="{{ site.url }}">
-      <img src="/assets/images/e_logo_white_40.png" width="30" height="30" class="d-inline-block align-top" alt="">
-      <strong>Emma Sax</strong>
+      <img src="/assets/images/e_logo_white_40.png" width="30" height="30" class="d-inline-block align-top" alt="E logo">Emma Sax
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-links" aria-controls="navbar-links" aria-expanded="false" aria-label="Toggle navigation">
       <span data-feather="menu"></span>
@@ -10,17 +9,17 @@
     </button>
 
     <div class="collapse navbar-collapse" id="navbar-links">
-      <ul class="navbar-nav ml-auto mt-2 mt-md-0">
+      <ul class="navbar-nav ml-auto mt-2 mt-md-0" style="color: white;">
         {% assign sorted_pages = site.pages | where_exp: "item", "item.order" | sort: "order" | shift %}
 
         {% for node in sorted_pages %}
           {% if page.url == node.url or node.url contains "blog" and page.collection != null %}
-          <li class="nav-item active">
-              <a class="nav-link" href="{{ site.baseurl }}{{ node.url }}">{{node.title}} <span class="sr-only">(current)</span></a>
+            <li class="nav-item active">
+              <a class="nav-link" href="{{ site.baseurl }}{{ node.url }}">{{ node.title }} <span class="sr-only">(current)</span></a>
             </li>
           {% else %}
-          <li class="nav-item">
-              <a class="nav-link" href="{{ site.baseurl }}{{ node.url }}">{{node.title}}</a>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ site.baseurl }}{{ node.url }}">{{ node.title }}</a>
             </li>
           {% endif %}
         {% endfor %}

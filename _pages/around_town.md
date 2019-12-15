@@ -72,18 +72,17 @@ I love to travel, especially to international locations. I try to go to a new co
 | _\'Twas the Night Before Christmas_       | Sugar Plum Fairy            | Stages Theatre Company                         |
 | _9 to 5_ — The Musical                    | Ensemble                    | Minnetonka Theatre                             |
 | Meredith Wilson's _The Music Man_         | Ensemble                    | Eat Street Players                             |
-| _Disney's High School Musical_            | Cheerleader/Ensemble        | Morris Park Players                            |
+| _Disney's High School Musical_            | Cheerleader, Ensemble        | Morris Park Players                            |
 | _Once Upon a Mattress_                    | Ensemble                    | Morris Park Players                            |
-| _The Wizard of Oz_                        | Jitterbug/Ensemble          | Blue Water Theatre Company                     |
+| _The Wizard of Oz_                        | Jitterbug, Ensemble          | Blue Water Theatre Company                     |
 | _Annie Get Your Gun_                      | Ensemble                    | Blue Water Theatre Company                     |
 | _Little Women_ — The Musical              | Amy March                   | Saint Paul Conservatory for Performing Artists |
 | _Urinetown_                               | Little Becky Two-Shoes      | Saint Paul Conservatory for Performing Artists |
-| _The Uses of Enchantment_                 | Claire/Ensemble             | Saint Paul Conservatory for Performing Artists |
+| _The Uses of Enchantment_                 | Claire, Ensemble             | Saint Paul Conservatory for Performing Artists |
 | _Into the Woods_                          | Milky White                 | Saint Paul Conservatory for Performing Artists |
 | _Night at the Opera_                      | Ensemble                    | Saint Paul Conservatory for Performing Artists |
 | _Secrets_                                 | Lily                        | Fine Arts Interdisciplinary Resource School    |
 | _West Side Story Jr._                     | Anita                       | Fine Arts Interdisciplinary Resource School    |
-
 
 ### Training
 
