@@ -127,11 +127,13 @@ blockquote {
 table {
   table-layout: auto;
   width: 100%;
+  overflow: scroll;
   border-collapse: collapse;
   overflow: auto;
-  font-size: 16px;
+  font-size: 16%;
   word-break: normal;
   word-break: keep-all; // For Firefox to horizontally scroll wider tables.
+  -webkit-overflow-scrolling: touch;
 
   th {
     padding: 0px;
@@ -154,6 +156,10 @@ nav.navbar {
   background-color: rgb(27, 14, 172);
   background: linear-gradient(to right, rgb(27, 14, 172), rgb(107, 208, 245));
 
+  .navbar-brand {
+    font-weight: 700;
+  }
+
   .navbar-toggler[aria-expanded="false"] > .feather-x {
     display: none;
   }
@@ -162,8 +168,13 @@ nav.navbar {
     display: none;
   }
 
-  .nav-item {
+  .navbar-nav > .nav-item > .nav-link {
+    color: white;
     font-size: 1rem;
+  }
+
+  .navbar-nav > .nav-item.active > .nav-link {
+    font-weight: 700;
   }
 }
 
@@ -527,6 +538,7 @@ footer {
   pre {
     overflow: scroll;
     width: 95vw;
+    -webkit-overflow-scrolling: touch;
   }
 
   .post-info {
