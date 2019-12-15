@@ -132,7 +132,6 @@ table {
   font-size: 16px;
   word-break: normal;
   word-break: keep-all; // For Firefox to horizontally scroll wider tables.
-  -webkit-overflow-scrolling: touch;
 
   th {
     padding: 0px;
@@ -154,6 +153,14 @@ table {
 nav.navbar {
   background-color: rgb(27, 14, 172);
   background: linear-gradient(to right, rgb(27, 14, 172), rgb(107, 208, 245));
+
+  .navbar-toggler[aria-expanded="false"] > .feather-x {
+    display: none;
+  }
+
+  .navbar-toggler[aria-expanded="true"] > .feather-menu {
+    display: none;
+  }
 
   .nav-item {
     font-size: 1rem;
@@ -520,7 +527,6 @@ footer {
   pre {
     overflow: scroll;
     width: 95vw;
-    -webkit-overflow-scrolling: touch;
   }
 
   .post-info {
