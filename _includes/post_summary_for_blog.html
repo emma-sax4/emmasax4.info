@@ -12,25 +12,27 @@
 
   <div class="container" style="padding-left: 0; padding-right: 0; padding-bottom: 2rem;">
     <span class="post-meta">
-      {% if post.draft == true %}
-          Unpublished
-      {% else %}
-          {{ post.date | date: "%B %-d, %Y" }}
-      {% endif %}
+      <div>
+        {% if post.draft == true %}
+            Unpublished
+        {% else %}
+            {{ post.date | date: "%B %-d, %Y" }}
+        {% endif %}
+      </div>
     </span>
 
-    <br>
     <a href="{{ site.baseurl }}{{ post_url }}">{{ short_title }}</a>
-    <br>
 
-    {% if post.set %}
-      {% unless page.set %}
-        {% assign set = post.set %}
-        {% include set_list.html %}
-      {% endunless %}
-    {% else %}
-      {% assign tags = post.tags | sort %}
-      {% include tags_list.html %}
-    {% endif %}
+    <div>
+      {% if post.set %}
+        {% unless page.set %}
+          {% assign set = post.set %}
+          {% include set_list.html %}
+        {% endunless %}
+      {% else %}
+        {% assign tags = post.tags | sort %}
+        {% include tags_list.html %}
+      {% endif %}
+    </div>
   </div>
 </li>
