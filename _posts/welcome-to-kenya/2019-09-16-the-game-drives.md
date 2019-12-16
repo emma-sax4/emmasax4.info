@@ -35,7 +35,7 @@ We started our safaris at the Ark in the Aberdares mountain range. I'll talk mor
 
 The Ark is where we saw our first cape buffalo, hyenas, warthogs (think Pumbaa!), and elephants.
 
-<div align="center">
+<div class="text-center">
   <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/48740606838/in/album-72157710860887528/" target="_blank" title="single_buffalo_at_ark"><img class="my-image" src="https://live.staticflickr.com/65535/48740606838_d469ce0358_z.jpg" width="500" height="375" alt="Buffalo at the Ark posing for pictures"></a>
   <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/48740934946/in/album-72157710860887528/" target="_blank" title="buffalo_at_ark"><img class="my-image" src="https://live.staticflickr.com/65535/48740934946_d32e31e68f_z.jpg" width="500" height="375" alt="Buffalo at the Ark"></a>
   <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/48741119477/in/album-72157710860887528/" target="_blank" title="elephants_at_ark"><img class="my-image" src="https://live.staticflickr.com/65535/48741119477_5edfd2cf84_z.jpg" width="500" height="375" alt="Elephants at the Ark"></a>
@@ -43,7 +43,7 @@ The Ark is where we saw our first cape buffalo, hyenas, warthogs (think Pumbaa!)
 
 At the Aberdares Country Club, near the Ark, we also saw some baboons, impalas, thomson's gazelles, and a peacock.
 
-<div align="center">
+<div class="text-center">
   <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/48740606758/in/album-72157710860887528/" target="_blank" title="peacock_at_aberdares_country_club"><img class="my-image" src="https://live.staticflickr.com/65535/48740606758_0d4c94d668_z.jpg" width="450" height="600" alt="Peacock at Aberdares Country Club"></a>
   <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/48740935281/in/album-72157710860887528/" target="_blank" title="peacock_closeup"><img class="my-image" src="https://live.staticflickr.com/65535/48740935281_7ddbc09737_z.jpg" width="500" height="375" alt="Peacock closeup"></a>
 </div>
@@ -54,7 +54,7 @@ Although there weren't many animals at the Ark, it was our first real chance to 
 
 Samburu is an area north of the equator, located in the center of Kenya. The land around here is dry and desert-like, with few bushes and trees. Here, we saw baboons, reticulated giraffes, oryxes, impalas, thomson's gazelles, elephants, dik diks, ostriches, grevy's zebras, grant's gazelles (what our safari truck called "diaper butts", and see why <a href="https://en.wikipedia.org/wiki/Grant%27s_gazelle" target="_blank">here</a>), and even a lioness resting in some bushes.
 
-<div align="center">
+<div class="text-center">
   <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/48740606393/in/album-72157710860887528/" target="_blank" title="baboon_at_samburu"><img class="my-image" src="https://live.staticflickr.com/65535/48740606393_eb129515d5_z.jpg" width="500" height="375" alt="Baboons at Samburu"></a>
   <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/48740606453/in/album-72157710860887528/" target="_blank" title="elephant_at_samburu"><img class="my-image" src="https://live.staticflickr.com/65535/48740606453_8d93d2912b_z.jpg" width="500" height="375" alt="Elephant at Samburu"></a>
   <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/48741119692/in/album-72157710860887528/" target="_blank" title="oryx_at_samburu"><img class="my-image" src="https://live.staticflickr.com/65535/48741119692_d885434f05_z.jpg" width="500" height="375" alt="Oryx at Samburu"></a>
@@ -73,7 +73,7 @@ Ol Pejeta is located in central Kenya, just straight north of Nairobi. The game 
 
 We managed to visit the Chimpanzee and Rhinoceros conservancies while we were there, and we managed to actually see chimpanzees interacting with each other (although they were lazily just lying around). We also had the unique opportunity to feed one of the black rhinos, a blind rhino named Baraka.
 
-<div align="center">
+<div class="text-center">
   <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/48741119427/in/album-72157710860887528/" target="_blank" title="chimp_at_ol_pejeta"><img class="my-image" src="https://live.staticflickr.com/65535/48741119427_ecb6585700_z.jpg" width="500" height="375" alt="Chimpanzee at Ol Pejeta Conservancy"></a>
   <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/48741119722/in/album-72157710860887528/" target="_blank" title="rhino_at_ol_pejeta"><img class="my-image" src="https://live.staticflickr.com/65535/48741119722_d4de18f940_z.jpg" width="500" height="375" alt="Baraka, black rhino, at Ol Pejeta Conservancy"></a>
   <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/48740606828/in/album-72157710860887528/" target="_blank" title="rhino_feeding_at_ol_pejeta"><img class="my-image" src="https://live.staticflickr.com/65535/48740606828_6d0a3a9f82_z.jpg" width="450" height="600" alt="Baraka feeding at Ol Pejeta Conservancy"></a>
@@ -91,7 +91,7 @@ Lake Naivasha is a small lake just to the west of Nairobi. While there, we got t
 
 The resort where we stayed is famous for having hippos come graze on the grass right by the cabins, but we didn't see any hippos that night. We did manage to see some waterbucks grazing, but that was about it.
 
-<div align="center">
+<div class="text-center">
   <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/48740935336/in/album-72157710860887528/" target="_blank" title="waterbucks_near_lake_naivasha"><img class="my-image" src="https://live.staticflickr.com/65535/48740935336_d67bcb8028_z.jpg" width="450" height="600" alt="Waterbucks near Lake Naivasha"></a>
 </div>
 
@@ -103,7 +103,7 @@ Because of the time of year we went, and the location, we managed to see thousan
 
 Although I wish I could attach all of the pictures we have from the Maasai Mara, I honestly can't... there's too many incredible ones. Intead, I'll have to add some of my favorites:
 
-<div align="center">
+<div class="text-center">
   <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/48740934961/in/album-72157710860887528/" target="_blank" title="cheetah_at_maasai_mara"><img class="my-image" src="https://live.staticflickr.com/65535/48740934961_5e3588686e_z.jpg" width="500" height="375" alt="Cheetah at Maasai Mara"></a>
   <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/48740935001/in/album-72157710860887528/" target="_blank" title="elephants_at_maasai_mara"><img class="my-image" src="https://live.staticflickr.com/65535/48740935001_2f1da4cda5_z.jpg" width="500" height="375" alt="Elephants at Maasai Mara"></a>
   <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/48741119482/in/album-72157710860887528/" target="_blank" title="elephants_at_maasai_mara"><img class="my-image" src="https://live.staticflickr.com/65535/48741119482_e721e76543_z.jpg" width="500" height="375" alt="Elephants at Maasai Mara"></a>

@@ -47,7 +47,7 @@ During the day, the watering hole and surrounding area has hyenas, buffalo, and 
 
 The rooms are small, but that's by design. They feel cozy and snug. The hallways are a maze, but you only need to know how to get to a few places: your room, the entrance/exit, the decks, and the restaurant (but you can get to the food from the decks).
 
-<div align="center">
+<div class="text-center">
   <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/48797244476/in/album-72157710860887528/" target="_blank" title="the_ark"><img class="my-image" src="https://live.staticflickr.com/65535/48797244476_b8b7e63c5d_o.jpg" width="500" height="375" alt="Our rooms at the Ark"></a>
 </div>
 
@@ -69,7 +69,7 @@ They provided an array of extra activities we could do. Our tour guide set up a 
 
 I don't have many pictures of the exterior of Sarova Shaba Game Lodge, and that's really a pity; the best thing about this resort was the beautiful resort grounds. But, the good news is that their website has plenty of pictures featuring the resort grounds. Here's one picture of our room and one of the buffet line:
 
-<div align="center">
+<div class="text-center">
   <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/48872057586/in/album-72157710860887528/" target="_blank" title="Sarova_Shaba_pool"><img class="my-image" src="https://live.staticflickr.com/65535/48872057586_8a1e440b3d.jpg" width="500" height="375" alt="Sarova_Shaba_pool"></a>
   <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/48826445063/in/album-72157710860887528/" target="_blank" title="Sarova_Shaba"><img class="my-image" src="https://live.staticflickr.com/65535/48826445063_a4575a3694.jpg" width="500" height="375" alt="Sarova Shaba room"></a>
   <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/48826445088/in/album-72157710860887528/" target="_blank" title="The ark&#x27;s buffet line"><img class="my-image" src="https://live.staticflickr.com/65535/48826445088_3132fa06a3.jpg" width="375" height="500" alt="The ark&#x27;s buffet line"></a>
@@ -85,7 +85,7 @@ Children do attend school... now. In school, young children will learn Swahili a
 
 Women and mothers take care of the children, take care of the livestock, do beading and art projects, and sell their crafts to visitors and other tribes. We even got the chance to purchase some of their handmade jewelry and crafts.
 
-<div align="center">
+<div class="text-center">
   <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/48799101398/in/album-72157710860887528/" target="_blank" title="samburu_village"><img class="my-image" src="https://live.staticflickr.com/65535/48799101398_fff90651b6.jpg" width="500" height="375" alt="samburu_village"></a>
   <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/48799451886/in/album-72157710860887528/" target="_blank" title="samburu_village_children"><img class="my-image" src="https://live.staticflickr.com/65535/48799451886_edfe7f12da.jpg" width="500" height="333" alt="samburu_village_children"></a>
   <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/48826820661/in/album-72157710860887528/" target="_blank" title="Samburu_village"><img class="my-image" src="https://live.staticflickr.com/65535/48826820661_aed40f6716.jpg" width="500" height="281" alt="Samburu_village"></a>
@@ -97,7 +97,7 @@ Women and mothers take care of the children, take care of the livestock, do bead
 
 Ol Pejeta's Sweetwaters Serena Camp was my favorite place we stayed. It's a tented camp, which means each suite is a full tent. However, it's not the types of tents that you'd think of when it comes to camping. These tents are on solid tile/wood/brick bases, have solid roofs, and have full bathrooms inside of them, including a toilet, shower, and sink. The tents were clean and well-kept. Take a look at the inside of one of the tents!
 
-<div align="center">
+<div class="text-center">
   <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/48796885958/in/album-72157710860887528/" target="_blank" title="sweetwaters"><img class="my-image" src="https://live.staticflickr.com/65535/48796885958_594a93b9e1.jpg" width="375" height="500" alt="sweetwaters"></a>
   <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/48872252992/in/album-72157710860887528/" target="_blank" title="Sweetwaters_tent"><img class="my-image" src="https://live.staticflickr.com/65535/48872252992_3ddc673f1b.jpg" width="500" height="333" alt="Sweetwaters_tent"></a>
 </div>
@@ -108,7 +108,7 @@ All of the resorts had very similar type of food, but one super cool thing that 
 
 Sweetwaters Serena Camp is on the Equator. No joke, the sign at the entrance gave the latitude and longitude—latitude was 00.00:
 
-<div align="center">
+<div class="text-center">
   <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/48802026607/in/album-72157710860887528/" target="_blank" title="Sweetwaters Serena Camp"><img class="my-image" src="https://live.staticflickr.com/65535/48802026607_8bb9580f56.jpg" width="500" height="375" alt="Sweetwaters Serena Camp"></a>
 </div>
 
@@ -132,7 +132,7 @@ Essentially, any time between when the sun sets and 7am the next morning, the re
 
 However, if you're lucky, your cabin windows (or deck on a top floor), gives you a beautiful chance to see some hippos out of the water. My partner and I stayed up trying to look for the hippos, and we even got up periodically in the middle of the night just to look out the windows to see if we could see anything. But we weren't so lucky. It was nice that our suite provided us a little couch to sit on while we gazed out the windows though:
 
-<div align="center">
+<div class="text-center">
   <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/48796885438/in/album-72157710860887528/" target="_blank" title="sopa_lake_naivasha"><img class="my-image" src="https://live.staticflickr.com/65535/48796885438_df62bf99d7.jpg" width="375" height="500" alt="sopa_lake_naivasha"></a>
   <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/48797382142/in/album-72157710860887528/" target="_blank" title="sopa_lake_naivasha_2"><img class="my-image" src="https://live.staticflickr.com/65535/48797382142_d96980a318.jpg" width="500" height="375" alt="sopa_lake_naivasha_2"></a>
   <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/48826444793/in/album-72157710860887528/" target="_blank" title="Lake_Naivasha"><img class="my-image" src="https://live.staticflickr.com/65535/48826444793_45dfe8f14d.jpg" width="500" height="375" alt="Lake_Naivasha"></a>
@@ -152,7 +152,7 @@ Like some of the other resorts, Fig Tree Camp also offered a special excursion: 
 
 Oh, the last thing I'll mention about Fig Tree Camp: they had limited times the power and hot water was on. The power was on in the morning and afternoon/evening, and the hot water ran in the morning (from maybe 6am-9am), and in the evening (approximately 6pm-9pm). I know because the morning of the hot air balloon ride, I took an ice-cold shower.
 
-<div align="center">
+<div class="text-center">
   <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/48826443083/in/album-72157710860887528/" target="_blank" title="Maasai_Mara_room"><img class="my-image" src="https://live.staticflickr.com/65535/48826443083_b335a58a4f.jpg" width="375" height="500" alt="Maasai_Mara_room"></a>
 </div>
 
@@ -168,7 +168,7 @@ Also, the Samburu village was just a bunch of huts in a scattered area. But the 
 
 The last thing I'll mention is that both tribes do a type of ceremonial activity where the boys/warriors will jump vertically in the air. A woman decides which man is a good suitor based on how high he can jump—the higher the better. While watching an example ceremony take place, we also learned that the men in the Maasai tribe don't wear underwear underneath their clothes... don't ask us how.
 
-<div align="center">
+<div class="text-center">
   <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/48799594437/in/album-72157710860887528/" target="_blank" title="maasai_village_jumping_ceremony"><img class="my-image" src="https://live.staticflickr.com/65535/48799594437_a54226509b.jpg" width="281" height="500" alt="maasai_village_jumping_ceremony"></a>
   <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/48799451771/in/album-72157710860887528/" target="_blank" title="maasai_village"><img class="my-image" src="https://live.staticflickr.com/65535/48799451771_0b6e938b59.jpg" width="356" height="500" alt="maasai_village"></a>
   <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/48799595727/in/album-72157710860887528/" target="_blank" title="maasai_mara_village_in_ceremony"><img class="my-image" src="https://live.staticflickr.com/65535/48799595727_ee144de5d9.jpg" width="500" height="375" alt="maasai_mara_village_in_ceremony"></a>
