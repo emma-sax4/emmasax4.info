@@ -29,6 +29,7 @@ kramdown:
 
 sass:
   style: compressed
+  sass_dir: assets/css/_sass
   load_paths:
     - primer/src/
 

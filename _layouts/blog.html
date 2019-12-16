@@ -8,19 +8,17 @@ layout: default
 {% assign all_posts = draft_posts | concat: sorted_published_posts %}
 
 {% if page.tag == "all" %}
-  <main style="max-width: 1024px; width: 100%; margin-left: auto; margin-right: auto;">
-    <div style="text-align: center">
-      <h1>{{ page.title }}</h1>
-    </div>
+  <div style="text-align: center">
+    <h1>{{ page.title }}</h1>
+  </div>
 {% else if %}
-  <main style="max-width: 1024px; width: 100%; margin-left: auto; margin-right: auto;">
-    <div class="row" style="display: flex">
-      <div class="column collection-info" align="center">
-        {% include all_posts_button.html %}
-      </div>
+  <div class="row" style="display: flex">
+    <div class="col col-12 col-md-2 text-center">
+      {% include all_posts_button.html %}
+    </div>
 
-      <div class="column collection" align="left">
-        <h1>{{ page.title }}</h1>
+    <div class="col col-12 col-md-10">
+      <h1>{{ page.title }}</h1>
 {% endif %}
 
 <div class="page-body">
@@ -29,7 +27,6 @@ layout: default
 </div>
 
 {% unless page.tag == "all" %}
-      </div>
     </div>
+  </div>
 {% endunless %}
-  </main>

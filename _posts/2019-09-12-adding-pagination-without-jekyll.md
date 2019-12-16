@@ -12,7 +12,7 @@ Turns out, the Google doesn't have a lot of other suggestions on pagination. But
 
 Of course, I started with the things I know how to do best: copy-paste 💁🏻‍♀️. I started with <a href="https://github.com/UMM-CSci/senior-seminar/blob/master/seminars.html#L63-L80" target="_blank">this blob</a>, of course edited to suit my HTML file. Surprisingly, bits of this work right out of the box. But... the pagination isn't pretty, which is very important to me.
 
-<div align="center">
+<div class="text-center">
   <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/48741690227/in/album-72157710863695862/" target="_blank" title="bad_pagination_bar"><img class="my-image" src="https://live.staticflickr.com/65535/48741690227_e27cb82884.jpg" width="450" height="367" alt="Bad pagination bar"></a>
 </div>
 
@@ -29,7 +29,7 @@ was not found.
 ```
 Clearly, that means my CSS is broken. But I didn't quite understand why 😕. The repository that I was copying pagination from included this line:
 
-<div align="center">
+<div class="text-center">
   <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/48741503991/in/album-72157710863695862/" target="_blank" title="primer_submodule_directory"><img class="my-image" src="https://live.staticflickr.com/65535/48741503991_c9f4ec3ce4_o.png" width="486" height="45" alt="primer_submodule_directory"></a>
 </div>
 
@@ -52,7 +52,7 @@ After I finished succesfully adding the `primer` submodule 😌, all I had to do
 ```
 back to my `main.scss`, and finally the pagination was beautiful:
 
-<div align="center">
+<div class="text-center">
   <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/48741504061/in/album-72157710863695862/" target="_blank" title="lovely_pagination_bar"><img class="my-image" src="https://live.staticflickr.com/65535/48741504061_7ebbd630fa.jpg" width="450" height="311" alt="Lovely pagination bar"></a>
 </div>
 

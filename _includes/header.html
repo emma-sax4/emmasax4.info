@@ -9,19 +9,23 @@
     </button>
 
     <div class="collapse navbar-collapse" id="navbar-links">
-      <ul class="navbar-nav ml-auto mt-2 mt-md-0" style="color: white;">
+      <ul class="navbar-nav ml-auto mt-2 mt-md-0">
         {% assign sorted_pages = site.pages | where_exp: "item", "item.order" | sort: "order" | shift %}
 
         {% for node in sorted_pages %}
           {% if page.url == node.url or node.url contains "blog" and page.collection != null %}
-            <li class="nav-item active">
-              <a class="nav-link" href="{{ site.baseurl }}{{ node.url }}">{{ node.title }} <span class="sr-only">(current)</span></a>
-            </li>
+            {% assign active = "active" %}
           {% else %}
-            <li class="nav-item">
-              <a class="nav-link" href="{{ site.baseurl }}{{ node.url }}">{{ node.title }}</a>
-            </li>
+            {% assign active = nil %}
           {% endif %}
+
+          <li class="nav-item {{ active }}">
+            <a class="nav-link" href="{{ site.baseurl }}{{ node.url }}">{{ node.title }}
+              {% if active == "active" %}
+                <span class="sr-only">(current)</span>
+              {% endif %}
+            </a>
+          </li>
         {% endfor %}
       </ul>
     </div>
