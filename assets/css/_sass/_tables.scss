@@ -10,16 +10,16 @@ table {
   -webkit-overflow-scrolling: touch;
 
   th {
-    padding: 0px;
+    padding: 0rem;
     font-size: 0px;
-    border: 0px solid #e9ebec;
+    border: 0rem solid #e9ebec;
   }
 
   td {
-    padding-top: 8px;
-    padding-bottom: 8px;
-    padding-right: 16px;
-    padding-left: 8px;
-    border: 1px solid #e9ebec;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    padding-right: 1rem;
+    padding-left: .5rem;
+    border: .0625rem solid #e9ebec;
   }
 }
