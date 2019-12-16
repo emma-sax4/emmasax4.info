@@ -1,3 +1,11 @@
-{% for post in paginator.posts %}
-  <h1>{{ post.title }}</h1>
-{% endfor %}
+<div id="posts">
+  <ul class="list" style="list-style: none">
+    {% for post in paginator.posts %}
+      {% if post.tags contains page.tag or post.set contains page.set or page.tag == "all" %}
+        {% include post_summary_for_blog.html %}
+      {% endif %}
+    {% endfor %}
+  </ul>
+
+  {% include pagination.html %}
+</div>
