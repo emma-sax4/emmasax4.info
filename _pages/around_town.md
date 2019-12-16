@@ -61,41 +61,113 @@ I love to travel, especially to international locations. I try to go to a new co
 
 ### On Stage
 
-<!-- Add an empty header so the table renders correctly on GitHub Markdown -->
+<!-- Write tables as described here: https://getbootstrap.com/docs/4.0/content/tables/#always-responsive -->
 
-|                                           |                             |                                                |
-| ----------------------------------------- | --------------------------- | ---------------------------------------------- |
-| _Pippi Longstocking_                      | Ensemble                    | Children's Theatre Company                     |
-| _Disney's Mulan Jr._                      | Ensemble                    | Children's Theatre Company                     |
-| _Princess Academy_                        | Frid                        | Stages Theatre Company                         |
-| _Junie B. in Jingle Bells, Batman Smells_ | José                        | Stages Theatre Company                         |
-| _\'Twas the Night Before Christmas_       | Sugar Plum Fairy            | Stages Theatre Company                         |
-| _9 to 5_ — The Musical                    | Ensemble                    | Minnetonka Theatre                             |
-| Meredith Wilson's _The Music Man_         | Ensemble                    | Eat Street Players                             |
-| _Disney's High School Musical_            | Cheerleader, Ensemble        | Morris Park Players                            |
-| _Once Upon a Mattress_                    | Ensemble                    | Morris Park Players                            |
-| _The Wizard of Oz_                        | Jitterbug, Ensemble          | Blue Water Theatre Company                     |
-| _Annie Get Your Gun_                      | Ensemble                    | Blue Water Theatre Company                     |
-| _Little Women_ — The Musical              | Amy March                   | Saint Paul Conservatory for Performing Artists |
-| _Urinetown_                               | Little Becky Two-Shoes      | Saint Paul Conservatory for Performing Artists |
-| _The Uses of Enchantment_                 | Claire, Ensemble             | Saint Paul Conservatory for Performing Artists |
-| _Into the Woods_                          | Milky White                 | Saint Paul Conservatory for Performing Artists |
-| _Night at the Opera_                      | Ensemble                    | Saint Paul Conservatory for Performing Artists |
-| _Secrets_                                 | Lily                        | Fine Arts Interdisciplinary Resource School    |
-| _West Side Story Jr._                     | Anita                       | Fine Arts Interdisciplinary Resource School    |
+<div class="table-responsive-sm">
+  <table class="table table-hover">
+    <tbody>
+      <tr>
+        <td style="font-style: italic;">Pippi Longstocking</td>
+        <td>Ensemble</td>
+        <td>Children's Theatre Company</td>
+      </tr>
+      <tr>
+        <td style="font-style: italic;">Disney's Mulan Jr.</td>
+        <td>Ensemble</td>
+        <td>Children's Theatre Company</td>
+        </tr>
+      <tr>
+        <td style="font-style: italic;">Princess Academy</td>
+        <td>Frid</td>
+        <td>Stages Theatre Company</td>
+      </tr>
+      <tr>
+        <td style="font-style: italic;">Junie B. in Jingle Bells, Batman Smells</td>
+        <td>José</td>
+        <td>Stages Theatre Company</td>
+      </tr>
+      <tr>
+        <td style="font-style: italic;">'Twas the Night Before Christmas</td>
+        <td>Sugar Plum Fairy</td>
+        <td>Stages Theatre Company</td>
+      </tr>
+      <tr>
+        <td style="font-style: italic;">9 to 5 — The Musical</td>
+        <td>Ensemble</td>
+        <td>Minnetonka Theatre</td>
+      </tr>
+      <tr>
+        <td style="font-style: italic;">Meredith Wilson's The Music Man</td>
+        <td>Ensemble</td>
+        <td>Eat Street Players</td>
+      </tr>
+      <tr>
+        <td style="font-style: italic;">Disney's High School Musical</td>
+        <td>Cheerleader/Ensemble</td>
+        <td>Morris Park Players</td>
+      </tr>
+      <tr>
+        <td style="font-style: italic;">Once Upon a Mattress</td>
+        <td>Ensemble</td>
+        <td>Morris Park Players</td>
+      </tr>
+      <tr>
+        <td style="font-style: italic;">The Wizard of Oz</td>
+        <td>Jitterbug/Enssemble</td>
+        <td>Blue Water Theatre Company</td>
+      </tr>
+      <tr>
+        <td style="font-style: italic;">Annie Get Your Gun</td>
+        <td>Ensemble</td>
+        <td>Blue Water Theatre Company</td>
+      </tr>
+      <tr>
+        <td style="font-style: italic;">Little Women — The Musical</td>
+        <td>Amy March</td>
+        <td>Saint Paul Conservatory for Performing Artists</td>
+      </tr>
+      <tr>
+        <td style="font-style: italic;">Urinetown</td>
+        <td>Little Becky Two-Shoes</td>
+        <td>Saint Paul Conservatory for Performing Artists</td>
+      </tr>
+      <tr>
+        <td style="font-style: italic;">The Uses of Enchantment</td>
+        <td>Claire/Ensemble</td>
+        <td>Saint Paul Conservatory for Performing Artists</td>
+      </tr>
+      <tr>
+        <td style="font-style: italic;">Into the Woods</td>
+        <td>Milky White</td>
+        <td>Saint Paul Conservatory for Performing Artists</td>
+      </tr>
+      <tr>
+        <td style="font-style: italic;">Night at the Opera</td>
+        <td>Ensemble</td>
+        <td>Saint Paul Conservatory for Performing Artists</td>
+      </tr>
+      <tr>
+        <td style="font-style: italic;">Secrets</td>
+        <td>Lily</td>
+        <td>Fine Arts Interdisciplinary Resource School</td>
+      </tr>
+      <tr>
+        <td style="font-style: italic;">West Side Story Jr.</td>
+        <td>Anita</td>
+        <td>Fine Arts Interdisciplinary Resource School</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 ### Training
 
-<!-- Add an empty header so the table renders correctly on GitHub Markdown -->
-
-|                                              |                                                                                               |
-| -------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| Theatre                                      | Saint Paul Conservatory for Performing Artists, Chanhassen Dinner Theatre, Children's Theatre Company Arts Training, Stages Theatre Camp |
-| Vocal performance and technique              | Ana Miller, Melissa Hanson, Teresa Tierney, Melissa Hart, Justin Staebell, Stacey Stringer    |
-| Dance — Ballet, Tap, Jazz, Modern            | Deuxmensions Dance Theatre and School, Fine Arts Interdisciplinary Resource School            |
-| Dance — Hip Hop, Contemporary                | Saint Paul Conservatory for Performing Artists, University of Minnesota Morris Dance Ensemble |
-| Dance — Musical Theatre                      | Saint Paul Conservatory for Performing Artists, Chanhassen Dinner Theatre, Children's Theatre Company Arts Training, Stages Theatre Camp |
-| Dance — Ballroom, Partnering                 | DanceLife Ballroom                                                                            |
-| Piano                                        | Annette Helder, Deborah Hanna                                                                 |
-| Clarinet                                     | Todd Boyd, Eric Dollerschell                                                                  |
-| University of Minnesota Morris Concert Choir | Bradley Miller, Christina Armendarez                                                          |
+* **Theatre** — Saint Paul Conservatory for Performing Artists, Chanhassen Dinner Theatre, Children's Theatre Company Arts Training, Stages Theatre Camp
+* **Vocal performance and technique** — Ana Miller, Melissa Hanson, Teresa Tierney, Melissa Hart, Justin Staebell, Stacey Stringer
+* **Dance (Ballet, Tap, Jazz, Modern)** — Deuxmensions Dance Theatre and School, Fine Arts Interdisciplinary Resource School
+* **Dance (Hip Hop, Contemporary)** — Saint Paul Conservatory for Performing Artists, University of Minnesota Morris Dance Ensemble
+* **Dance (Musical Theatre)** — Saint Paul Conservatory for Performing Artists, Chanhassen Dinner Theatre, Children's Theatre Company Arts Training, Stages Theatre Camp
+* **Dance (Ballroom, Partnering)** — DanceLife Ballroom
+* **Piano** — Annette Helder, Deborah Hanna
+* **Clarinet** — Todd Boyd, Eric Dollerschell
+* **University of Minnesota Morris Concert Choir** — Bradley Miller, Christina Armendarez
