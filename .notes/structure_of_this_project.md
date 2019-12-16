@@ -31,6 +31,8 @@ Here are all of the parts of this project associated with running this applicati
 |   └── 2001-01-04-post-02.md
 ├── assets
 |   ├── css
+|   |   ├── css_file_01.scss
+|   |   ├── css_file_02.scss
 |   |   └── style.scss
 |   ├── images
 |   |   ├── picture-01.jpg
@@ -183,9 +185,9 @@ Currently, the code is not set up to handle posts that are part of a set **and**
 
 ## `assets/`
 
-This directory has three directories, `css/`, `images/`, and `resources/`. `css/` only has one file — `style.scss`. This is where I can keep _all_ of the CSS that this project uses. All CSS in the project is loaded inside the `_includes/head.html`.
+This directory has three directories, `css/`, `images/`, and `resources/`. The `css/` directory contains all of the CSS files in this site. They're all called together in `style.scss`. The CSS in the project is loaded inside the `_includes/head.html`. This site also uses [Bootstrap](https://getbootstrap.com/docs/4.4/getting-started/introduction/) for a lot of its CSS, including the navigation bar, headers, responsive page, etc.
 
-The `images/` directory gives me a place to store all of the images this site uses. By putting them all into one directory (that's nested as necessary), it provides some organization to the repository. To call a specific resource, you can either ask for it in HTML:
+The `images/` directory gives me a place to store all of the images this site uses. To call a specific resource, you can either ask for it in HTML:
 ```
 <div>
   <img class="my-image" src="/assets/images/picture-01.jpg" alt="Picture 1">
