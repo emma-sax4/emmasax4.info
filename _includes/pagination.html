@@ -1,20 +1,51 @@
-<!-- <nav class="paginate-container" aria-label="Pagination">
-  <div class="pagination"></div>
-</nav>
+<nav aria-label="Page navigation example">
+  <ul class="pagination justify-content-center">
+    {% if paginator.previous_page %}
+      {% if paginator.previous_page == 1 %}
+        <li class="page-item">
+          <a class="page-link" href="/blog/"><i style="width: 18px; height: 18px;" data-feather="skip-back"></i></a>
+        </li>
+      {% else %}
+        <li class="page-item">
+          <a class="page-link" href="{{ paginator.previous_page_path }}"><i style="width: 18px; height: 18px;" data-feather="skip-back"></i></a>
+        </li>
+      {% endif %}
+    {% else %}
+      <li class="page-item disabled">
+        <a class="page-link" href="#"><i style="width: 18px; height: 18px;" data-feather="x-octagon"></i></a>
+      </li>
+    {% endif %}
 
-<script type="text/javascript">
-  document.getElementById("posts").style.display = "none";
+    {% if paginator.page == 1 %}
+      <li class="page-item active">
+        <a class="page-link" href="#">1</a>
+      </li>
+    {% else %}
+      <li class="page-item">
+        <a class="page-link" href="/blog/">1</a>
+      </li>
+    {% endif %}
 
-  var options = {
-    valueNames: [ 'post' ],
-    page: 5,
-    pagination: {
-      outerWindow: 1,
-      innerWindow: 1
-    }
-  };
-</script>
+    {% for count in (2..paginator.total_pages) %}
+      {% if count == paginator.page %}
+        <li class="page-item active">
+          <a class="page-link" href="#">{{ count }}</a>
+        </li>
+      {% else %}
+        <li class="page-item">
+          <a class="page-link" href="/blog/{{ count }}">{{ count }}</a>
+        </li>
+      {% endif %}
+    {% endfor %}
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"
-  onload="var posts = new List('posts', options); document.getElementById('posts').style.display = 'block';">
-</script> -->
+    {% if paginator.next_page %}
+      <li class="page-item">
+        <a class="page-link" href="{{ paginator.next_page_path }}"><i style="width: 18px; height: 18px;" data-feather="skip-forward"></i></a>
+      </li>
+    {% else %}
+      <li class="page-item disabled">
+        <a class="page-link" href="#"><i style="width: 18px; height: 18px;" data-feather="x-octagon"></i></a>
+      </li>
+    {% endif %}
+  </ul>
+</div>
