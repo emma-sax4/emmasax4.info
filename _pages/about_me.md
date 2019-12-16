@@ -7,7 +7,7 @@ permalink: /about-me
 
 My entire career has been spent on the Operations side of DevOps. But I dabble in website development in Ruby on Rails—and of course, Jekyll and GitHub Pages. For a more detailed version of my experience, please visit my <a href="https://www.linkedin.com/in/emma-sax4" target="_blank">LinkedIn</a>.
 
-## Tools/Frameworks/Languages
+## Tools, Frameworks, & Languages
 
 Ruby, Ruby on Rails, Bash, Git, GitHub API, AWS API, HTML/CSS, Yaml/JSON, Chef, Amazon Web Services, Kubernetes/EKS, New Relic, Datadog, Splunk
 

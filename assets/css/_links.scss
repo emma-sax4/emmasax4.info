@@ -1,0 +1,40 @@
+a {
+  color: #3082d4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.email-link > a {
+  svg {
+    height: 3rem;
+    width: 3rem;
+    transition: stroke .15s ease-in-out;
+  }
+
+  &:hover,
+  &:active {
+    svg {
+      stroke: white;
+    }
+  }
+}
+
+.link-icon {
+  padding-left: .625rem;
+  padding-right: .625rem;
+  color: #829197;
+
+  > * {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  &:hover,
+  &:active {
+    color: #3082d4;
+    text-decoration: none;
+  }
+}

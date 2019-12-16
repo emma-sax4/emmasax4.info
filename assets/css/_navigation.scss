@@ -1,0 +1,34 @@
+nav.navbar {
+  background-color: rgb(27, 14, 172);
+  background: linear-gradient(to right, rgb(27, 14, 172), rgb(107, 208, 245));
+
+  .navbar-brand {
+    font-weight: 700;
+  }
+
+  > .navbar-toggler {
+    color: rgba(255,255,255,.95);
+    border-color: rgba(255,255,255,.5);
+  }
+
+  .navbar-toggler[aria-expanded="false"] > .feather-x {
+    display: none;
+  }
+
+  .navbar-toggler[aria-expanded="true"] > .feather-menu {
+    display: none;
+  }
+
+  .navbar-nav > .nav-item > .nav-link {
+    color: white;
+    font-size: 1rem;
+  }
+
+  .navbar-nav > .nav-item.active > .nav-link {
+    font-weight: 700;
+  }
+
+  .nav-link:focus {
+    outline-color: hotpink;
+  }
+}

@@ -1,40 +1,33 @@
 <header>
-  <div class="topnav" id="myTopnav">
-    <nav>
-      <div class="topnav-left">
-        <a href="{{ site.url }}">
-          <img class="my-image" src="/assets/images/e_logo_white_40.png" style="vertical-align: top">
-          Emma Sax
-        </a>
-      </div>
+  <nav class="navbar navbar-expand-md navbar-dark">
+    <a class="navbar-brand mb-0" href="{{ site.url }}">
+      <img src="/assets/images/e_logo_white_40.png" width="30" height="30" class="d-inline-block align-top" alt="E logo"> Emma Sax
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-links" aria-controls="navbar-links" aria-expanded="false" aria-label="Toggle navigation">
+      <span data-feather="menu"></span>
+      <span data-feather="x"></span>
+    </button>
 
-      <div class="topnav-right">
+    <div class="collapse navbar-collapse" id="navbar-links">
+      <ul class="navbar-nav ml-auto mt-2 mt-md-0">
         {% assign sorted_pages = site.pages | where_exp: "item", "item.order" | sort: "order" | shift %}
 
         {% for node in sorted_pages %}
           {% if page.url == node.url or node.url contains "blog" and page.collection != null %}
-            {% assign active = 'active' %}
+            {% assign active = "active" %}
           {% else %}
             {% assign active = nil %}
           {% endif %}
 
-          <a class="{{ active }}" href="{{ site.baseurl }}{{ node.url }}">{{node.title}}</a>
+          <li class="nav-item {{ active }}">
+            <a class="nav-link" href="{{ site.baseurl }}{{ node.url }}">{{ node.title }}
+              {% if active == "active" %}
+                <span class="sr-only">(current)</span>
+              {% endif %}
+            </a>
+          </li>
         {% endfor %}
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-          <i style="vertical-align: top; color: white; width: 24px; height: 24px;" data-feather="menu"></i>
-        </a>
-      </div>
-    </nav>
-  </div>
+      </ul>
+    </div>
+  </nav>
 </header>
-
-<script>
-  function myFunction() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-      x.className += " responsive";
-    } else {
-      x.className = "topnav";
-    }
-  }
-</script>
