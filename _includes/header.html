@@ -14,7 +14,7 @@
 
         {% for node in sorted_pages %}
           {% unless node.autogen == "jekyll-paginate-v2" %}
-            {% if page.url == node.url or node.url contains "blog" and page.collection != null %}
+            {% if page.url == node.url or page.url contains "blog" and node.url contains "blog" %}
               {% assign active = "active" %}
             {% else %}
               {% assign active = nil %}
