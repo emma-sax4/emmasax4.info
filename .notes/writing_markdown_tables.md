@@ -10,6 +10,7 @@ This reference is designed to help authors of this repository write tables that 
 
 ```markdown
 <!-- Add an empty header row so the table renders correctly on GitHub Markdown -->
+
 |                 |                 |                 |
 | --------------- | --------------- | --------------- |
 | Test column 1.0 | Test column 2.0 | Test column 3.0 |
@@ -38,6 +39,7 @@ This reference is designed to help authors of this repository write tables that 
 
 ```markdown
 <!-- Add an empty header row so the table renders correctly on GitHub Markdown -->
+
 |                              |                              |                              |
 | ---------------------------- | ---------------------------- | ---------------------------- |
 | **<center>Title 1</center>** | **<center>Title 2</center>** | **<center>Title 3</center>** |
