@@ -10,19 +10,19 @@
   margin-right: auto;
   width: 100%;
   padding-left: 10%;
-  padding-right: 10px;
-  padding-bottom: 0px;
-  padding-top: 0px;
+  padding-right: .625rem;
+  padding-bottom: 0rem;
+  padding-top: 0rem;
 
   .page {​
     &:first-child {
-      border-top-left-radius: 0px;
-      border-bottom-left-radius: 0px;
+      border-top-left-radius: 0rem;
+      border-bottom-left-radius: 0rem;
     }
 ​
     &:last-child {
-      border-top-right-radius: 0px;
-      border-bottom-right-radius: 0px;
+      border-top-right-radius: 0rem;
+      border-bottom-right-radius: 0rem;
     }
   }
 

@@ -3,7 +3,7 @@
 }
 
 html, body {
-  min-width: 320px;
+  min-width: 20rem;
   min-height: 100vh;
   width: 100vw;
   position: relative;
@@ -33,29 +33,18 @@ header, main, footer {
 }
 
 .page-body {
-  padding-top: 15px;
+  padding-top: 1rem;
 }
 
 h1 {
-  border-bottom: solid 2px #eff0f1;
-  padding-bottom: 24px;
-  font-size: 32px;
-}
-
-h2 {
-  padding-top: 10px;
-  font-size: 30px;
-}
-
-h3 {
-  padding-top: 10px;
-  font-size: 24px;
+  border-bottom: solid .125rem #eff0f1;
+  padding-bottom: 1.5rem;
 }
 
 .my-image {
   max-width: 100%;
   height: auto;
-  padding-bottom: 10px;
+  padding-bottom: .625rem;
 }
 
 .post-meta {
@@ -65,9 +54,9 @@ h3 {
 
 footer {
   margin-top: 1rem;
-  padding-top: 16px;
-  padding-bottom: 16px;
-  border-top: solid 2px #eff0f1;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-top: solid .125rem #eff0f1;
   left: 0;
   bottom: 0;
   width: 100%;
