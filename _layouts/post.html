@@ -4,17 +4,18 @@ layout: default
 
 <div class="row">
   <div class="col col-12 col-md-3 text-center">
-    {% include all_posts_button.html %}
-    {% if page.set %}
-      {% assign set = page.set %}
-      {% include set_list.html %}
-    {% elsif page.tags %}
-      {% assign tags = page.tags | sort %}
-      {% include tags_list.html %}
-    {% endif %}
+    <div>
+      {% include all_posts_button.html %}
+      {% if page.set %}
+        {% assign set = page.set %}
+        {% include set_list.html %}
+      {% elsif page.tags %}
+        {% assign tags = page.tags | sort %}
+        {% include tags_list.html %}
+      {% endif %}
+    </div>
 
     <span class="post-meta" style="font-style: italic;">
-      <br>
       {% if page.draft == true %}
         Unpublished
       {% else %}
