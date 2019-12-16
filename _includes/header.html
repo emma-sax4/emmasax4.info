@@ -13,19 +13,23 @@
         {% assign sorted_pages = site.pages | where_exp: "item", "item.order" | sort: "order" | shift %}
 
         {% for node in sorted_pages %}
-          {% if page.url == node.url or node.url contains "blog" and page.collection != null %}
-            {% assign active = "active" %}
-          {% else %}
-            {% assign active = nil %}
-          {% endif %}
+          {% unless node.autogen == "jekyll-paginate-v2" %}
+            {% if page.url == node.url or node.url contains "blog" and page.collection != null %}
+              {% assign active = "active" %}
+            {% else %}
+              {% assign active = nil %}
+            {% endif %}
 
-          <li class="nav-item {{ active }}">
-            <a class="nav-link" href="{{ site.baseurl }}{{ node.url }}">{{ node.title }}
-              {% if active == "active" %}
-                <span class="sr-only">(current)</span>
-              {% endif %}
-            </a>
-          </li>
+            {% assign url = node.url | remove: "/index.html" %}
+
+            <li class="nav-item {{ active }}">
+              <a class="nav-link" href="{{ site.baseurl }}{{ url }}">{{ node.title }}
+                {% if active == "active" %}
+                  <span class="sr-only">(current)</span>
+                {% endif %}
+              </a>
+            </li>
+          {% endunless %}
         {% endfor %}
       </ul>
     </div>
