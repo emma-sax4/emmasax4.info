@@ -1,5 +1,5 @@
-{% assign set_url = set | downcase | replace: " ", "-" %}
+{% assign category_url = category | downcase | replace: " ", "-" %}
 <span class="post-meta">
-  Set:
-  <a href="{{ "/blog/" | append: set_url | relative_url }}">{{ set }}</a>
+  <i data-feather="tag"></i>
+  <a href="{{ "/blog/" | append: category_url | relative_url }}">{{ category }}</a>
 </span>
