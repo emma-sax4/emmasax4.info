@@ -24,10 +24,10 @@
     <a href="{{ site.baseurl }}{{ post_url }}">{{ short_title }}</a>
 
     <div>
-      {% if post.set %}
-        {% unless page.pagination.set %}
-          {% assign set = post.set %}
-          {% include set_list.html %}
+      {% if post.category %}
+        {% unless page.pagination.category %}
+          {% assign set = post.category %}
+          {% include category_list.html %}
         {% endunless %}
       {% else %}
         {% assign tags = post.tags | sort %}

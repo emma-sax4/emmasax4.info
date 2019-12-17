@@ -6,9 +6,9 @@ layout: default
   <div class="col col-12 col-md-3 text-center">
     <div>
       {% include all_posts_button.html %}
-      {% if page.set %}
-        {% assign set = page.set %}
-        {% include set_list.html %}
+      {% if page.category %}
+        {% assign set = page.category %}
+        {% include category_list.html %}
       {% elsif page.tags %}
         {% assign tags = page.tags | sort %}
         {% include tags_list.html %}
