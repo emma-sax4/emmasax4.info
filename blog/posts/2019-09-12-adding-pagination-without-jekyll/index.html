@@ -11,8 +11,8 @@
 
   <link
     rel="stylesheet"
-    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
     crossorigin="anonymous"
   >
   <link
@@ -123,7 +123,7 @@
         
         
   <span class="post-meta">
-    Tags:
+    <i style="width: 20px; height: 20px;" data-feather="tag"></i>
     
       
 
@@ -156,9 +156,9 @@
 
 
     <div class="page-body">
-      <p>As I stated in my original <a href="/posts/2019-09-09-switching-to-jekyll"><em>Switching to Jekyll</em></a> post, one of the original reasons I wanted to move to a Jekyll-based site was so that I could implement pagination on my Thoughts page(s). Converting my site to Jekyll was definitely challenging, and it involved me learning a new framework and a new language (Liquid). And therefore, the <a href="https://github.com/emma-sax4/emma-sax4.github.io/pull/6" target="_blank">pull request that made the switch</a> was massive, and took a while—it had 54 changed files and 19 commits. Because of this, I decided that pagination should come in a separate pull request. And then, because I’m in my "website-phase", I thought I’d write a thought about it 🤷🏻‍♀️😂.</p>
+      <p>As I stated in my original <a href="/posts/2019-09-09-switching-to-jekyll"><em>Switching to Jekyll</em></a> post, one of the original reasons I wanted to move to a Jekyll-based site was so that I could implement pagination on my "Blog" page(s). Converting my site to Jekyll was definitely challenging, and it involved me learning a new framework and a new language (Liquid). And therefore, the <a href="https://github.com/emma-sax4/emma-sax4.github.io/pull/6" target="_blank">pull request that made the switch</a> was massive, and took a while—it had 54 changed files and 19 commits. Because of this, I decided that pagination should come in a separate pull request. And then, because I’m in my "website-phase", I thought I’d write a blog post about it 🤷🏻‍♀️😂.</p>
 
-<p>I originally tried to add Jekyll’s built-in pagination. Supposedly, it’s pretty slick. You add a few sections to the <code class="highlighter-rouge">_config.yml</code>, a couple sections to your <code class="highlighter-rouge">index.html</code>, and bam: it’s done and it works 💥. My real experience setting up the pagination was <em>not</em> like that. In fact, within one commit, I learned that Jekyll’s pagination (and other pagination gems), wouldn’t work well with my current directory/file setup. Both <a href="https://jekyllrb.com/docs/pagination/" target="_blank">Jekyll’s built-in pagination</a> and the gem <a href="https://github.com/sverrirs/jekyll-paginate-v2" target="_blank"><code class="highlighter-rouge">jekyll-paginate-v2</code></a> expect the blog posts to be in a <code class="highlighter-rouge">_posts/</code> directory, and to be referenced by <code class="highlighter-rouge">site.posts</code>. Mine are not because they’re called "thoughts" (don’t ask me why, I wanted to be unique). And of course, as soon as I worked to move that around, my site broke. And so, instead of fighting with that, I decided to get more creative. That can’t be the only pagination option, right? 🥴😬🙏🏼</p>
+<p>I originally tried to add Jekyll’s built-in pagination. Supposedly, it’s pretty slick. You add a few sections to the <code class="highlighter-rouge">_config.yml</code>, a couple sections to your <code class="highlighter-rouge">index.html</code>, and bam: it’s done and it works 💥. My real experience setting up the pagination was <em>not</em> like that. In fact, within one commit, I learned that Jekyll’s pagination (and other pagination gems), wouldn’t work well with my current directory/file setup. Both <a href="https://jekyllrb.com/docs/pagination/" target="_blank">Jekyll’s built-in pagination</a> and the gem <a href="https://github.com/sverrirs/jekyll-paginate-v2" target="_blank"><code class="highlighter-rouge">jekyll-paginate-v2</code></a> expect the blog posts to be in a <code class="highlighter-rouge">_posts/</code> directory, and to be referenced by <code class="highlighter-rouge">site.posts</code>. They also expect the main "Blog" page to be in its own directory, and my stuff wasn’t formatted like that. And so, instead of fighting with that, I decided to get more creative. That can’t be the only pagination option, right? 🥴😬🙏🏼</p>
 
 <p>Turns out, the Google doesn’t have a lot of other suggestions on pagination. But, the original Jekyll repository I copied (<a href="https://github.com/UMM-CSci/senior-seminar" target="_blank">UMM-CSci’s <code class="highlighter-rouge">senior-seminar</code></a>), implements a version of pagination that’s installed from <a href="https://listjs.com/docs/pagination/" target="_blank"><code class="highlighter-rouge">List.js</code></a>. Possibly this is because that site uses <code class="highlighter-rouge">seminars</code> instead of <code class="highlighter-rouge">posts</code>. But either way, I decided to give it a chance. Worst case scenario, it just wouldn’t work and I’d have to find another pagination option.</p>
 
@@ -247,8 +247,8 @@ was not found.
   crossorigin="anonymous">
 </script>
 <script
-  src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+  src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+  integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
   crossorigin="anonymous">
 </script>
 
