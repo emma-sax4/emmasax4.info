@@ -1,0 +1,5 @@
+{% assign category_url = category | downcase | replace: " ", "-" %}
+<span class="post-meta">
+  Set:
+  <a href="{{ "/blog/" | append: category_url | relative_url }}">{{ category }}</a>
+</span>
