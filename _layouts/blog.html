@@ -2,7 +2,7 @@
 layout: default
 ---
 
-{% if page.tag == "all" %}
+{% if page.show == "all" %}
   <div style="text-align: center">
     <h1>{{ page.title }}</h1>
   </div>
@@ -21,7 +21,7 @@ layout: default
   {% include blog_posts.html %}
 </div>
 
-{% unless page.tag == "all" %}
+{% unless page.show == "all" %}
     </div>
   </div>
 {% endunless %}
