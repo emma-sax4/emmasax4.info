@@ -2,7 +2,7 @@
   <ul class="list" style="list-style: none">
     {% for post in paginator.posts %}
       {% if post.tags contains page.pagination.tag or
-            post.set contains page.pagination.set or
+            post.category contains page.pagination.category or
             page.pagination.title == "Blog" %}
         {% include post_summary_for_blog.html %}
       {% endif %}
