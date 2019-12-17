@@ -26,21 +26,27 @@ permalink: /around-town/
 ## While in College
 
 * Calculus 1 <a href="https://academics.morris.umn.edu/office-academic-success/peer-assisted-learning-pal" target="_blank">Peer Assisted Learning</a> (PAL) tutor at UMM
-* UMM <a href="https://academics.morris.umn.edu/ensembles/concert-choir" target="_blank">Concert Choir</a> Dress Manager
-* UMM Dance Ensemble Treasurer
-* <a href="https://github.com/OH-UMM/2015/wiki" target="_blank">UMM Open Hatch</a> event leader
-* Participant in the <a href="http://www.nats.org/competitions.html" target="_blank">NATS Competition</a> 2014
-* Participant in a <a href="http://events.morris.umn.edu/event/student_senior_recital_amy_kuller_voice#.Xb7-40VKjOQ" target="_blank">Senior Recital</a> in April 2017
-* Participant in the UMM <a href="https://academics.morris.umn.edu/honors" target="_blank">Honors Program</a>
 * Dance teacher to children at a local dance studio
-* Student Campus Ambassador at UMM
-* Orientation Group Leader at UMM in 2016
 
-### Research
+### Undergraduate Research
 
 * Presented in the UMM <a href="http://www.morris.umn.edu/urs/" target="_blank">Undergraduate Research Symposium 2015
 * <a href="https://github.com/emma-sax4/UMM3601ursamajor" target="_blank">URSA Major</a> Developer
 * Research assistant for <a href="https://github.com/Clojure-Intro-Course" target="_blank">Clojure research</a> at UMM
+
+### Volunteering
+
+* <a href="https://github.com/OH-UMM/2015/wiki" target="_blank">UMM Open Hatch</a> event leader
+* Student Campus Ambassador at UMM
+* Orientation Group Leader at UMM in 2016
+* Participant in the UMM <a href="https://academics.morris.umn.edu/honors" target="_blank">Honors Program</a>
+
+### Extracurricular Activities
+
+* UMM <a href="https://academics.morris.umn.edu/ensembles/concert-choir" target="_blank">Concert Choir</a> Dress Manager
+* UMM Dance Ensemble Treasurer
+* Participant in the <a href="http://www.nats.org/competitions.html" target="_blank">NATS Competition</a> 2014
+* Participant in a <a href="http://events.morris.umn.edu/event/student_senior_recital_amy_kuller_voice#.Xb7-40VKjOQ" target="_blank">Senior Recital</a> in April 2017
 
 ## Traveling
 
