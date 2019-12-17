@@ -26,7 +26,7 @@
     <div>
       {% if post.category %}
         {% unless page.pagination.category %}
-          {% assign set = post.category %}
+          {% assign category = post.category %}
           {% include category_list.html %}
         {% endunless %}
       {% else %}
