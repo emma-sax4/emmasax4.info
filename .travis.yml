@@ -4,6 +4,7 @@ cache: bundler
 branches:
   only:
     - release
+    - master
 
 notifications:
   email:
