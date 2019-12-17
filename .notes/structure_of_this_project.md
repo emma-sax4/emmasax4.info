@@ -147,6 +147,8 @@ category: Posts Set
 
 Currently, the code is not set up to handle posts that are part of a set **and** contain tags.
 
+** Please notice that in the code, we need to call a `Set` a `Category`. This is in order to make the pagination work as expected. A user of the site will view it as a `Set`.
+
 ## `assets/`
 
 This directory has three directories, `css/`, `images/`, and `resources/`. The `css/` directory contains all of the CSS files in this site. They're all called together in `style.scss`. The CSS in the project is loaded inside the `_includes/head.html`. This site also uses [Bootstrap](https://getbootstrap.com/docs/4.4/getting-started/introduction/) for a lot of its CSS, including the navigation bar, headers, responsive page, etc.
