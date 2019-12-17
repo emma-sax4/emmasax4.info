@@ -57,7 +57,6 @@ pagination:
   enabled: true
   collection: posts
   per_page: 5
-  permalink: /:num/
   title: 'Blog'
   limit: 0
   sort_field: 'date'
@@ -65,9 +64,3 @@ pagination:
   trail:
     before: 2
     after: 2
-
-# autopages:
-#   enabled: true
-#   collections:
-#     enabled: true
-#     permalink: /blog
