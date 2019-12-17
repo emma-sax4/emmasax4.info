@@ -175,13 +175,13 @@ For a tag, the front-matter should look like this:
 ```html
 ---
 layout: blog
-permalink: /blog/tag-name
-url_settings: /blog/tag-name/
+permalink: /blog/tag-name/
+url_shortname: /tag-name
 pagination:
   enabled: true
   collection: posts
   permalink: /:num/
-  title: Tag Name
+  title: Posts about Tag Name
   tag: tag-name
 ---
 ```
@@ -190,13 +190,13 @@ For a set, the front-matter should look like this:
 ```html
 ---
 layout: blog
-permalink: /blog/posts-set-name
-url_settings: /blog/posts-set-name/
+permalink: /blog/posts-set-name/
+url_shortname: /posts-set-name
 pagination:
   enabled: true
   collection: posts
   permalink: /:num/
-  title: Posts Set Name
+  title: Posts within this Posts Set Name
   category: Posts Set Name
 ---
 
@@ -205,9 +205,9 @@ pagination:
 </p>
 ```
 
-The `url_settings` section is important... it should match the permalink but with the trailing `/`. In order for pagination to work, this must be included. The `category: Posts Set Name` or `tag: tag-name` indicates which posts to show on that specific page.
+The `url_shortname` section is important... it should start with a `/`, followed by the ending part of the `permalink` without the last `/`. In order for pagination to work, this **must** be included. The `category: Posts Set Name` or `tag: tag-name` indicates which posts to show on that specific page.
 
-** Please notice that in the code, we need to call a `Set` a `Category`. This is in order to make the pagination work as expected. A user of the site will view it as a `Set`.
+** Please notice that in the code, we need to call a `Set` a `Category`. This is in order to make the pagination work as expected. A user of the site will view it as a `Set`, but it can be developed as a `Category`.
 
 ## `_config.yml`
 

@@ -15,7 +15,7 @@
         </li>
       {% endif %}
 
-      {% assign blog_url = page.url_setting | default: "/blog/" | remove: "/index.html" %}
+      {% assign blog_url = "/blog" | append: page.url_shortname %}
 
       {% if paginator.page == 1 %}
         <li class="page-item active">
@@ -23,7 +23,7 @@
         </li>
       {% else %}
         <li class="page-item">
-          <a class="page-link" href="{{ blog_url }}">1</a>
+          <a class="page-link" href="{{ blog_url }}/">1</a>
         </li>
       {% endif %}
 
@@ -34,7 +34,7 @@
           </li>
         {% else %}
           <li class="page-item">
-            <a class="page-link" href="{{ blog_url }}{{ count }}">{{ count }}</a>
+            <a class="page-link" href="{{ blog_url }}/{{ count }}">{{ count }}</a>
           </li>
         {% endif %}
       {% endfor %}
