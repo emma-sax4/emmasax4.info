@@ -17,12 +17,6 @@ Here are all of the parts of this project associated with running this applicati
 |   ├── page-01.md
 |   ├── page-02.md
 |   └── page-03.md
-├── _post_collections
-|   ├── sets.md
-|   |   └── posts_set_name.md
-|   ├── tags.md
-|   |   ├── tag_name.md
-|   └── └── another_tag_name.md
 ├── _posts
 |   ├── posts-set
 |   |   ├── 2001-01-01-set-post-01.md
@@ -43,7 +37,10 @@ Here are all of the parts of this project associated with running this applicati
 |   |   ├── resource-01.pdf
 |   └── └── resource-02.pdf
 ├── blog
+|   ├── another_tag_name.html
 |   ├── index.html
+|   ├── posts_set_name.html
+|   └── tag_name.html
 ├── primer
 |   └── https://github.com/primer/css/tree/6a8733ea0f3c079fe4a37c1828297d8f661ccee8
 ├── _config.yml
@@ -140,40 +137,11 @@ tags: [ tag_name, another_tag_name ]
 ---
 ```
 
-Let's talk about the `tags`. The tags determine how we want to categorize each post. If there's no categorization of a post (if it's completely random), then there's no need to specify any `tag(s)`, AKA just leave the line completely out of the front matter. But, if you think the post is a good contestant for a tag, such as `tag_name` or `another_tag_name` in our example, then add those appropriate tags in a list format.
-
-For every tag, there needs to be a `<tag-name>.md` file in the `_post_collections
-/tags/` directory. The general file for this should look like this:
-```
----
-layout: blog
-title: Tag Name
-permalink: /tag/tag-name
-tag: tag_name
----
-
-```
-
-The `tag` front matter indicates which posts to show on that page (only the posts with that tag will show).
+Let's talk about the `tags`. The tags determine how we want to categorize each post. If there's no categorization of a post (if it's completely random), then there's no need to specify any `tag(s)`, AKA just leave the line completely out of the front matter. But, if you think the post is a good contestant for a tag, such as `tag_name` or `another_tag_name` in our example, then add those appropriate tags in a list format, as shown above.
 
 ### Posts in a Set
 
-If I'm going to write a set of posts that all have a common theme, they can go into a new nested directory: `_posts/<set-name>/`. If that's the case, then there should also be a Markdown file titled `<set-name>.md` inside `_post_collections
-/sets/`, which would serve as a table of contents for the posts in that set. Here's an example of what that table of contents page should look like:
-```
----
-layout: blog
-title: Posts Set
-permalink: /set/posts-set
-set: Posts Set
----
-
-Some words describing this set should go here.
-```
-
-The `set` front matter indicates which posts to show on that page, so only posts that belong to that single set will be on the page. This should be the same as the set name but with underscores. The permalink should have the name of the set, but with dashes.
-
-Each individual post should sit inside the `_posts/<set-name>/` directory, and should make use of the `title` and `subtitle` metadata, where the `title` is the name of the set, and the `subtitle` is the title of that specific post:
+If I'm going to write a set of posts that all have a common theme, they can each go into a new nested directory: `_posts/<set-name>/`, and should make use of the `title` and `subtitle` metadata, where the `title` is the name of the set, and the `subtitle` is the title of that specific post:
 ```
 ---
 layout: post
@@ -201,14 +169,47 @@ The `resources/` directory gives me a place to keep PDF documents that are linke
 This is an example sentence, so it will throw a 404. See [here](/assets/resources/resource-01.pdf)?
 ```
 
-## `primer/`
+## `blog/`
 
-This is a submodule to [`primer/css`](https://github.com/primer/css/tree/6a8733ea0f3c079fe4a37c1828297d8f661ccee8) at a certain commit. This is necessary to get the pagination working. Without having this submodule initialized, running this repository locally will not work. To initialize after cloning, please run:
-```
-git submodule update --init --recursive
+This site uses [`jekyll-paginate-v2`](https://github.com/sverrirs/jekyll-paginate-v2/) to do it's pagination of the blog posts. Because of this, we must specify the blog page in its own directory, titled `blog/index.html`. There shouldn't really be a need to change the front-matter of this page.
+
+However, we also paginate the tag/set filters. So, each tag/set needs to have its own page in that same directory. An example would be `blog/tag_name.html`.
+
+For a tag, the front-matter should look like this:
+```html
+---
+layout: blog
+permalink: /blog/tag-name
+url_settings: /blog/tag-name/
+pagination:
+  enabled: true
+  collection: posts
+  permalink: /:num/
+  title: Tag Name
+  tag: tag-name
+---
 ```
 
-and make sure the directory is on the proper commit (`6a8733ea0f3c079fe4a37c1828297d8f661ccee8`). Once things are initialized, there should be no need to be committing to this directory.
+For a set, the front-matter should look like this:
+```html
+---
+layout: blog
+permalink: /blog/posts-set-name
+url_settings: /blog/posts-set-name/
+pagination:
+  enabled: true
+  collection: posts
+  permalink: /:num/
+  title: Posts Set Name
+  set: Posts Set Name
+---
+
+<p>
+  Some words describing this set should go here.
+</p>
+```
+
+The `url_settings` section is important... it should match the permalink but with the trailing `/`. In order for pagination to work, this must be included. The `set: Posts Set Name` or `tag: tag-name` indicates which posts to show on that specific page.
 
 ## `_config.yml`
 
