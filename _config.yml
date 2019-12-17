@@ -46,7 +46,7 @@ relative_links:
 collections:
   posts:
     output: true
-    permalink: /blog/posts/:path
+    permalink: /blog/posts/:path/
 
 plugins:
   - jekyll-paginate-v2
