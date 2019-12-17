@@ -2,20 +2,16 @@
   <nav aria-label="Blog post navigation">
     <ul class="pagination justify-content-center">
       {% if paginator.previous_page %}
-        {% if paginator.previous_page == 1 %}
-          <li class="page-item">
-            <a class="page-link" href="/blog/"><i style="width: 18px; height: 18px;" data-feather="skip-back"></i></a>
-          </li>
-        {% else %}
-          <li class="page-item">
-            <a class="page-link" href="{{ paginator.previous_page_path }}"><i style="width: 18px; height: 18px;" data-feather="skip-back"></i></a>
-          </li>
-        {% endif %}
+        <li class="page-item">
+          <a class="page-link" href="{{ paginator.previous_page_path }}"><i style="width: 18px; height: 18px;" data-feather="skip-back"></i></a>
+        </li>
       {% else %}
         <li class="page-item disabled">
           <a class="page-link" href="#"><i style="width: 18px; height: 18px;" data-feather="x-octagon"></i></a>
         </li>
       {% endif %}
+
+      {% assign blog_url = page.url_setting | default: "/blog/" | remove: "/index.html" %}
 
       {% if paginator.page == 1 %}
         <li class="page-item active">
@@ -23,7 +19,7 @@
         </li>
       {% else %}
         <li class="page-item">
-          <a class="page-link" href="/blog/">1</a>
+          <a class="page-link" href="{{ blog_url }}">1</a>
         </li>
       {% endif %}
 
@@ -34,7 +30,7 @@
           </li>
         {% else %}
           <li class="page-item">
-            <a class="page-link" href="/blog/{{ count }}">{{ count }}</a>
+            <a class="page-link" href="{{ blog_url }}{{ count }}">{{ count }}</a>
           </li>
         {% endif %}
       {% endfor %}
