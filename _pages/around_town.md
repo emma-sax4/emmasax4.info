@@ -2,7 +2,7 @@
 layout: page
 title: Around Town
 order: 3
-permalink: /around-town
+permalink: /around-town/
 ---
 
 ## Talks
