@@ -31,7 +31,7 @@ Now that we've talked about some of the different animals visible in Kenya, the 
 
 ### Aberdares County
 
-We started our safaris at the Ark in the Aberdares mountain range. I'll talk more about the Ark in my next thought, but the gist of it is that it's situated right on a watering hole. And so with the water (and the Ark _may_ place some yummy things in the dirt by the windows), animals will come to drink, graze, and relax right by the windows of the resort.
+We started our safaris at the Ark in the Aberdares mountain range. I'll talk more about the Ark in my next post, but the gist of it is that it's situated right on a watering hole. And so with the water (and the Ark _may_ place some yummy things in the dirt by the windows), animals will come to drink, graze, and relax right by the windows of the resort.
 
 The Ark is where we saw our first cape buffalo, hyenas, warthogs (think Pumbaa!), and elephants.
 
