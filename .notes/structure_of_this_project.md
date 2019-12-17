@@ -4,7 +4,7 @@ Here are all of the parts of this project associated with running this applicati
 ```
 .
 ├── _drafts
-|   ├── set-post-draft.md
+|   ├── categorized-post-draft.md
 |   └── post-draft.md
 ├── _includes
 |   ├── footer.html
@@ -18,9 +18,9 @@ Here are all of the parts of this project associated with running this applicati
 |   ├── page-02.md
 |   └── page-03.md
 ├── _posts
-|   ├── posts-set
-|   |   ├── 2001-01-01-set-post-01.md
-|   |   └── 2001-01-02-set-post-02.md
+|   ├── posts-category
+|   |   ├── 2001-01-01-categorized-post-01.md
+|   |   └── 2001-01-02-categorized-post-02.md
 |   ├── 2001-01-03-post-01.md
 |   └── 2001-01-04-post-02.md
 ├── assets
@@ -39,10 +39,11 @@ Here are all of the parts of this project associated with running this applicati
 ├── blog
 |   ├── another_tag_name.html
 |   ├── index.html
-|   ├── posts_set_name.html
+|   ├── posts_category_name.html
 |   └── tag_name.html
 ├── _config.yml
 ├── Gemfile
+├── Gemfile.lock
 └── index.md
 ```
 
@@ -57,14 +58,14 @@ To write a draft, write a new post in the `_drafts/` directory, and then make su
 ---
 layout: post
 title: Test Post
-tags: [ tag_name ] OR category: Posts Set
+tags: [ tag_name ] OR category: Posts Category
 draft: true
 ---
 ```
 
 Then, run your local Jekyll command like such:
 ```
-jekyll serve --drafts
+bundle exec jekyll serve --drafts
 ```
 
 Any drafts should appear at the top of the list of posts, and should show as "Unpublished". When it's time to publish a draft, move the draft to the `_posts/` directory, rename the file to include the publishing date (in `YYYY-MM-DD-` format... follow the previous post examples), and remove the `draft: true` line from the front matter.
@@ -118,36 +119,36 @@ Then, you can reference those custom settings on other HTML files (such as the l
 
 ## `_posts/`
 
-This is the collection of blog posts that I've written.
+These are all of blog posts I've written.
 
-### Posts without a Set
+### Posts with and without Tags
 
 Most of the posts can just go into the general `_posts/` directory, written as Markdown files. For a generic post, the front matter could look like this:
 ```
 ---
 layout: post
 title: Post 1
-tags: [ tag_name, another_tag_name ]
+tags: [ tag_name, another_tag_name ] # optional
 ---
 ```
 
 Let's talk about the `tags`. The tags determine how we want to categorize each post. If there's no categorization of a post (if it's completely random), then there's no need to specify any `tag(s)`, AKA just leave the line completely out of the front matter. But, if you think the post is a good contestant for a tag, such as `tag_name` or `another_tag_name` in our example, then add those appropriate tags in a list format, as shown above.
 
-### Posts in a Set
+### Posts in a Collection
 
-If I'm going to write a set of posts that all have a common theme, they can each go into a new nested directory: `_posts/<set-name>/`, and should make use of the `title` and `subtitle` metadata, where the `title` is the name of the set, and the `subtitle` is the title of that specific post:
+> Please notice that in the code, we need to call a collection of related posts a `category`. This is in order to make the pagination work as expected. A user of the site will view the collection no differently than with a tag. The difference between a `tag` and a `category`/collection is that a post can have multiple tags, but can only be a part of one collection/`category`.
+
+If I'm going to write a collection of posts that all have a common theme, they can each go into a new nested directory: `_posts/<set-name>/`, and should make use of the `title` and `subtitle` metadata, where the `title` is the name of the collection, and the `subtitle` is the title of that specific post:
 ```
 ---
 layout: post
-title: Posts Set
-subtitle: Set Post 1
-category: Posts Set
+title: Posts Category
+subtitle: Post Category Post 1
+category: Posts Category
 ---
 ```
 
-Currently, the code is not set up to handle posts that are part of a set **and** contain tags.
-
-** Please notice that in the code, we need to call a `Set` a `Category`. This is in order to make the pagination work as expected. A user of the site will view it as a `Set`.
+Currently, the code is not set up to handle posts that are part of a collection **and** contain tags.
 
 ## `assets/`
 
@@ -169,53 +170,53 @@ This is an example sentence, so it will throw a 404. See [here](/assets/resource
 
 This site uses [`jekyll-paginate-v2`](https://github.com/sverrirs/jekyll-paginate-v2/) to do it's pagination of the blog posts. Because of this, we must specify the blog page in its own directory, titled `blog/index.html`. There shouldn't really be a need to change the front-matter of this page.
 
-However, we also paginate the tag/set filters. So, each tag/set needs to have its own page in that same directory. An example would be `blog/tag_name.html`.
+> Please notice that in the code, we need to call a collection of related posts a `category`. This is in order to make the pagination work as expected. A user of the site will view the collection no differently than with a tag. The difference between a `tag` and a `category`/collection is that a post can have multiple tags, but can only be a part of one collection/`category`.
+
+Besides paginating the normal `blog/index.html` page, we also paginate the `tag` and `category`/collection filtered pages. So, each `tag` and `category`/collection needs to have its own page in the `blog/` directory. An example would be `blog/tag_name.html`.
 
 For a tag, the front-matter should look like this:
 ```html
 ---
 layout: blog
-permalink: /blog/tag-name
-url_settings: /blog/tag-name/
+permalink: /blog/tag-name/
+url_shortname: /tag-name
 pagination:
   enabled: true
   collection: posts
   permalink: /:num/
-  title: Tag Name
+  title: Posts about Tag Name
   tag: tag-name
 ---
 ```
 
-For a set, the front-matter should look like this:
+For a `category`/collection, the front-matter should look like this:
 ```html
 ---
 layout: blog
-permalink: /blog/posts-set-name
-url_settings: /blog/posts-set-name/
+permalink: /blog/posts-category-name/
+url_shortname: /posts-category-name
 pagination:
   enabled: true
   collection: posts
   permalink: /:num/
-  title: Posts Set Name
-  category: Posts Set Name
+  title: Posts within this Posts Category
+  category: Posts Category
 ---
 
 <p>
-  Some words describing this set should go here.
+  Some words describing this collection should go here.
 </p>
 ```
 
-The `url_settings` section is important... it should match the permalink but with the trailing `/`. In order for pagination to work, this must be included. The `category: Posts Set Name` or `tag: tag-name` indicates which posts to show on that specific page.
-
-** Please notice that in the code, we need to call a `Set` a `Category`. This is in order to make the pagination work as expected. A user of the site will view it as a `Set`.
+The `url_shortname` section is important... it should start with a `/`, followed by the ending part of the `permalink` without the last `/`. In order for pagination to work, this **must** be included. The `category: Posts Category` or `tag: tag-name` indicates which posts to show on that specific page.
 
 ## `_config.yml`
 
 This is where we tell Jekyll all of the configurations for this project. Each time this file is changed, restart your local Jekyll server to get the new changes.
 
-## `Gemfile`
+## `Gemfile` and `Gemfile.lock`
 
-The Gemfile is where the application defines which Ruby gems are important to run the application. To learn how to use this file, see this [section](https://github.com/emma-sax4/emma-sax4.github.io/blob/master/.github/CONTRIBUTING.md#running-locally).
+The Gemfile is where the application defines which Ruby gems are important to run the application. To learn how to use these files, see this [section](https://github.com/emma-sax4/emma-sax4.github.io/blob/release/.github/CONTRIBUTING.md#running-locally).
 
 ## `index.md`
 
