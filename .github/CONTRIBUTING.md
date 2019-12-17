@@ -33,11 +33,11 @@ To run this application locally, following these steps:
     ```
 3. Then build the site using Jekyll:
     ```
-    jekyll build
+    bundle exec jekyll build
     ```
 4. Serve it up:
     ```
-    jekyll serve
+    bundle exec jekyll serve
     ```
 5. Navigate to the local URL Jekyll provides (`http://127.0.0.1:4000` on my machine)
 
