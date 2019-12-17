@@ -30,8 +30,6 @@ kramdown:
 sass:
   style: compressed
   sass_dir: assets/css/
-  load_paths:
-    - primer/src/
 
 include:
   - _pages
@@ -39,7 +37,6 @@ include:
 exclude:
   - Gemfile
   - Gemfile.lock
-  - primer/
   - vendor/
 
 relative_links:
@@ -50,5 +47,16 @@ collections:
   posts:
     output: true
     permalink: /blog/posts/:path
-  post_collections:
-    output: true
+
+plugins:
+  - jekyll-paginate-v2
+
+pagination:
+  enabled: true
+  per_page: 5
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
+  trail:
+    before: 2
+    after: 2

@@ -1,8 +1,8 @@
 <li>
   {% assign post_url = post.url | downcase | replace: ".html", "" | relative_url %}
   {% if post.subtitle %}
-    {% if page.tag == "all" %}
-      {% assign short_title = post.title | append: " ☞ " | append: post.subtitle %}
+    {% if page.pagination.title == "Blog" %}
+      {% assign short_title = post.title | append: " → " | append: post.subtitle %}
     {% else %}
       {% assign short_title = post.subtitle %}
     {% endif %}
@@ -24,10 +24,10 @@
     <a href="{{ site.baseurl }}{{ post_url }}">{{ short_title }}</a>
 
     <div>
-      {% if post.set %}
-        {% unless page.set %}
-          {% assign set = post.set %}
-          {% include set_list.html %}
+      {% if post.category %}
+        {% unless page.pagination.category %}
+          {% assign set = post.category %}
+          {% include category_list.html %}
         {% endunless %}
       {% else %}
         {% assign tags = post.tags | sort %}
