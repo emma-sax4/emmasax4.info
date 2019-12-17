@@ -116,10 +116,6 @@ Then, you can reference those custom settings on other HTML files (such as the l
 => useful_string
 ```
 
-## `_post_collections/`
-
-See the below section on `_posts/`.
-
 ## `_posts/`
 
 This is the collection of blog posts that I've written.
