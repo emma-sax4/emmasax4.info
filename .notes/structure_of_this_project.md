@@ -41,8 +41,6 @@ Here are all of the parts of this project associated with running this applicati
 |   ├── index.html
 |   ├── posts_set_name.html
 |   └── tag_name.html
-├── primer
-|   └── https://github.com/primer/css/tree/6a8733ea0f3c079fe4a37c1828297d8f661ccee8
 ├── _config.yml
 ├── Gemfile
 └── index.md
