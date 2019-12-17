@@ -64,7 +64,7 @@ draft: true
 
 Then, run your local Jekyll command like such:
 ```
-jekyll serve --drafts
+bundle exec jekyll serve --drafts
 ```
 
 Any drafts should appear at the top of the list of posts, and should show as "Unpublished". When it's time to publish a draft, move the draft to the `_posts/` directory, rename the file to include the publishing date (in `YYYY-MM-DD-` format... follow the previous post examples), and remove the `draft: true` line from the front matter.
