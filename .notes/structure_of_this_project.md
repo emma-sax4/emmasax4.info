@@ -216,7 +216,7 @@ This is where we tell Jekyll all of the configurations for this project. Each ti
 
 ## `Gemfile` and `Gemfile.lock`
 
-The Gemfile is where the application defines which Ruby gems are important to run the application. To learn how to use this file, see this [section](https://github.com/emma-sax4/emma-sax4.github.io/blob/release/.github/CONTRIBUTING.md#running-locally).
+The Gemfile is where the application defines which Ruby gems are important to run the application. To learn how to use these files, see this [section](https://github.com/emma-sax4/emma-sax4.github.io/blob/release/.github/CONTRIBUTING.md#running-locally).
 
 ## `index.md`
 
