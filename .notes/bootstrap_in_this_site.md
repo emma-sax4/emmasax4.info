@@ -72,6 +72,5 @@ See them in action [here](https://github.com/emma-sax4/emma-sax4.github.io/blob/
 ## Conclusion
 
 Now that you've seen how Bootstrap and Feather Icons have improved my website, it's time for you to get started! Here are some potentially helpful links to get you on the right track:
-* https://getbootstrap.com/docs/4.0/getting-started/introduction/
+* https://getbootstrap.com/
 * https://github.com/feathericons/feather#2-include
-

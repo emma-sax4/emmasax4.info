@@ -1,6 +1,6 @@
 {% unless tags.size == 0 %}
   <span class="post-meta">
-    Tags:
+    <i data-feather="tag"></i>
     {% for tag in tags %}
       {% assign tag_url = tag | downcase | replace: "_", "-" %}
 
