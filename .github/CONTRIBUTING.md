@@ -25,7 +25,7 @@ Happy coding! 🤗
 ## Running Locally
 
 To run this application locally, following these steps:
-1. Be sure you have Ruby installed on your machine; the `.ruby-version` file specifies ruby 2.3.* because that's what's required for Jekyll and `github-pages` to run
+1. Be sure you have Ruby installed on your machine; the `.ruby-version` file specifies ruby 2.6.5 because that's the latest stable version of Ruby.
 2. First, bundle install and install all of the gems specified in the Gemfile:
     ```
     gem install bundler
@@ -39,9 +39,9 @@ To run this application locally, following these steps:
     ```
     bundle exec jekyll serve
     ```
-5. Navigate to the local URL Jekyll provides (`http://127.0.0.1:4000` on my machine)
+5. Navigate to the local URL Jekyll provides (`http://127.0.0.1:4000` on my machine).
 
-NOTE: Running this process locally will most likely create at least one directory locally on your machine, such as `_site/`, `Gemfile.lock`, `.sass-cache/`, and potentially others. All of these are already in the `.gitignore`, but feel free to add others as necessary.
+NOTE: Running this process locally will most likely create at least one directory locally on your machine, such as `_site/` and `.sass-cache/`, and potentially others. All of these are already in the `.gitignore`, but feel free to add others as necessary.
 
 ## Running Tests & Deployments
 

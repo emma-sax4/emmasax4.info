@@ -43,6 +43,7 @@ Here are all of the parts of this project associated with running this applicati
 |   └── tag_name.html
 ├── _config.yml
 ├── Gemfile
+├── Gemfile.lock
 └── index.md
 ```
 
@@ -213,9 +214,9 @@ The `url_shortname` section is important... it should start with a `/`, followed
 
 This is where we tell Jekyll all of the configurations for this project. Each time this file is changed, restart your local Jekyll server to get the new changes.
 
-## `Gemfile`
+## `Gemfile` and `Gemfile.lock`
 
-The Gemfile is where the application defines which Ruby gems are important to run the application. To learn how to use this file, see this [section](https://github.com/emma-sax4/emma-sax4.github.io/blob/release/.github/CONTRIBUTING.md#running-locally).
+The Gemfile is where the application defines which Ruby gems are important to run the application. To learn how to use these files, see this [section](https://github.com/emma-sax4/emma-sax4.github.io/blob/release/.github/CONTRIBUTING.md#running-locally).
 
 ## `index.md`
 
