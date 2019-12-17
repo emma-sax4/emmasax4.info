@@ -16,14 +16,14 @@ Before long, I had a working homepage, with a single item in the header ("Home")
 
 But it wasn't until I started working on the "Blog" page that I got to play around with collections, loops, `if`s, etc. My first goal was to make the list of posts all show up as they were supposed to, with the proper title(s) and dates. It turns out Jekyll makes this pretty easy. This sweet line gathers all of the blog posts on the site:
 ```
-{{ site.posts }}
+{% raw %}{{ site.posts }}{% endraw %}
 ```
 
 And you can loop through them like this:
 ```
-{% for post in site.posts %}
-  {{ post.title }}
-{% endfor %}
+{% raw %}{% for post in site.posts %}{% endraw %}
+  {% raw %}{{ post.title }}{% endraw %}
+{% raw %}{% endfor %}{% endraw %}
 ```
 
 Then I wanted to add appropriate buttons to go back to the whole list of posts, and to the more general collections of posts, if there were any posts that were intentionally grouped together. This would also be the start of adding tags to the posts in order to organize them together, beyond just the titles. With this, I had to categorize each post, figure out how to compare the tags, and filter the posts based on the tags assigned. The easiest answer I found was to add a single `tag` to each main posts list, which would eventually be the tag to show on that page. Then, have each post have a list of `tags`. And any post that includes that single `tag` would appear on that list 💡. It only took me about 3️⃣ hours to come up with that.
