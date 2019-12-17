@@ -2,7 +2,7 @@
 layout: post
 title: Welcome to Kenya
 subtitle: "Part 3: The Cuisine and the Lodging"
-category: Welcome to Kenya
+set: Welcome to Kenya
 ---
 
 ## Overall

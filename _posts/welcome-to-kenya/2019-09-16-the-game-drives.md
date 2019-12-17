@@ -2,7 +2,7 @@
 layout: post
 title: Welcome to Kenya
 subtitle: "Part 2: The Game Drives"
-category: Welcome to Kenya
+set: Welcome to Kenya
 ---
 
 ## The Big 5
