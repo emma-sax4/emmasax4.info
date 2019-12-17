@@ -55,9 +55,7 @@ plugins:
 
 pagination:
   enabled: true
-  collection: posts
   per_page: 5
-  title: 'Blog'
   limit: 0
   sort_field: 'date'
   sort_reverse: true
