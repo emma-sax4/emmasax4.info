@@ -7,7 +7,7 @@ layout: default
     <div>
       {% include all_posts_button.html %}
       {% if page.category %}
-        {% assign set = page.category %}
+        {% assign category = page.category %}
         {% include category_list.html %}
       {% elsif page.tags %}
         {% assign tags = page.tags | sort %}
