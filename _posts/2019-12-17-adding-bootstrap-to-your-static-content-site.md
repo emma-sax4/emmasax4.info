@@ -88,7 +88,7 @@ Same process with the columns. To do the page layouts and responsive breakpoints
 
 Previously, I was running that second line without the `class="container"`. But, once we added that, suddenly the entire site's body was fully responsive! Now, everything word-wrapped appropriately from a huge screen, right down to 320px wide (the size of an iPhone 5/SE). It's brilliant!
 
-Over the next couple days, I eventually completely switched to using <a href="https://getbootstrap.com/docs/4.0/content/tables/" target="_blank">Bootstrap's tables</a> and <a href="https://getbootstrap.com/docs/4.0/components/pagination/pagination" target="_blank">Bootstrap's pagination</a> (but I'll get to that in another blog post).
+Over the next couple days, I eventually completely switched to using <a href="https://getbootstrap.com/docs/4.0/content/tables/" target="_blank">Bootstrap's tables</a> and <a href="https://getbootstrap.com/docs/4.0/components/pagination/" target="_blank">Bootstrap's pagination</a> (but I'll get to that in another blog post).
 
 At the end of the day (or a few days), my repo ended up going from over 650 lines of CSS code to 185 lines. That means I cut out at least 72% of my existing CSS code. _And_ I have a better-looking, more responsive, more modern, and accessible website? It's a win-win.
 
