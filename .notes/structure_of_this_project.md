@@ -57,7 +57,7 @@ To write a draft, write a new post in the `_drafts/` directory, and then make su
 ---
 layout: post
 title: Test Post
-tags: [ tag_name ] OR set: Posts Set
+tags: [ tag_name ] OR category: Posts Set
 draft: true
 ---
 ```
@@ -145,7 +145,7 @@ If I'm going to write a set of posts that all have a common theme, they can each
 layout: post
 title: Posts Set
 subtitle: Set Post 1
-set: Posts Set
+category: Posts Set
 ---
 ```
 
@@ -199,7 +199,7 @@ pagination:
   collection: posts
   permalink: /:num/
   title: Posts Set Name
-  set: Posts Set Name
+  category: Posts Set Name
 ---
 
 <p>
@@ -207,7 +207,9 @@ pagination:
 </p>
 ```
 
-The `url_settings` section is important... it should match the permalink but with the trailing `/`. In order for pagination to work, this must be included. The `set: Posts Set Name` or `tag: tag-name` indicates which posts to show on that specific page.
+The `url_settings` section is important... it should match the permalink but with the trailing `/`. In order for pagination to work, this must be included. The `category: Posts Set Name` or `tag: tag-name` indicates which posts to show on that specific page.
+
+** Please notice that in the code, we need to call a `Set` a `Category`. This is in order to make the pagination work as expected. A user of the site will view it as a `Set`.
 
 ## `_config.yml`
 
