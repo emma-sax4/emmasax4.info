@@ -47,8 +47,6 @@ collections:
   posts:
     output: true
     permalink: /blog/posts/:path
-  post_collections:
-    output: true
 
 plugins:
   - jekyll-paginate-v2
