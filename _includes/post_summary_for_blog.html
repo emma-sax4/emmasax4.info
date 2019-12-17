@@ -30,8 +30,10 @@
           {% include category_list.html %}
         {% endunless %}
       {% else %}
-        {% assign tags = post.tags | sort %}
-        {% include tags_list.html %}
+        {% unless page.pagination.tag %}
+          {% assign tags = post.tags | sort %}
+          {% include tags_list.html %}
+        {% endunless %}
       {% endif %}
     </div>
   </div>
