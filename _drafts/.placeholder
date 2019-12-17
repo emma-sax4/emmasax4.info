@@ -3,7 +3,7 @@ This is a placeholder for a draft. Here's an example of what the front matter of
 ---
 layout: post
 title: Test Post
-tags: [ tag_name ] OR set: Posts Set
+tags: [ tag_name ] OR category: Posts Set
 draft: true
 ---
 
