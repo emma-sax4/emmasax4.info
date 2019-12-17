@@ -42,6 +42,8 @@ Here are all of the parts of this project associated with running this applicati
 |   ├── resources
 |   |   ├── resource-01.pdf
 |   └── └── resource-02.pdf
+├── blog
+|   ├── index.html
 ├── primer
 |   └── https://github.com/primer/css/tree/6a8733ea0f3c079fe4a37c1828297d8f661ccee8
 ├── _config.yml
