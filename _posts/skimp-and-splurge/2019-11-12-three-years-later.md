@@ -33,7 +33,7 @@ I believe I've had maybe three cups of coffee in my entire life, and each one of
 * Free laundry (does not necessarily mean in-unit washer/dryer)
 * Fitness room in building
 
-Since I moved out of my parents home, I've lived in three apartments. And it's been only 2.5 years! There are some things in this set that haven't changed. I still like to live in a decently nice place. I will always try my darnedest not to live in a place where there's thefts, break-ins, and gunshots at night. But, it's okay if my apartment doesn't have a state-of-the-art gym facility.
+Since I moved out of my parents home, I've lived in three apartments. And it's been only 2.5 years! There are some things in this category that haven't changed. I still like to live in a decently nice place. I will always try my darnedest not to live in a place where there's thefts, break-ins, and gunshots at night. But, it's okay if my apartment doesn't have a state-of-the-art gym facility.
 
 So, here's my revised list of requirements:
 * Central heat (we do live in Minnesota, so hopefully this is common)
