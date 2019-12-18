@@ -25,3 +25,4 @@ deploy:
   keep-history: true
   on:
     branch: release
+    condition: "$TRAVIS_EVENT_TYPE != cron"

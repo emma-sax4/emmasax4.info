@@ -2,7 +2,7 @@ html, body {
   min-width: 20rem;
   min-height: 100vh;
   width: 100vw;
-  position: relative;
+  position: absolute;
   overflow-x: auto;
   overflow-y: auto;
 }
@@ -35,6 +35,15 @@ header, main, footer {
 h1 {
   border-bottom: solid .125rem #eff0f1;
   padding-bottom: 1.5rem;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+h4 {
+  font-weight: bold;
+  font-size: 20px;
 }
 
 .my-image {
