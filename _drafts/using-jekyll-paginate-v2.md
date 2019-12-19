@@ -94,6 +94,7 @@ It's a little complicated, but, one deploy from Travis CI later, and the site wa
 </div>
 
 ## References
+
 * <a href="https://github.com/sverrirs/jekyll-paginate-v2/blob/master/README-GENERATOR.md" target="_blank">github.com: sverrirs, jekyll-paginate-v2, README-GENERATOR</a>
 * <a href="https://github.com/sverrirs/jekyll-paginate-v2" target="_blank">github.com: sverrirs, jekyll-paginate-v2</a>
 * <a href="https://stackoverflow.com/questions/5948659/when-should-i-use-a-trailing-slash-in-my-url" target="_blank">stackoverflow.com: when should I use a trailing slash in my URL</a>
