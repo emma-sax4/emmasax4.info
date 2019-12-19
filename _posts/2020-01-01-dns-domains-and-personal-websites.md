@@ -19,34 +19,39 @@ But, for many individuals, that's not quite enough customization for their websi
 
 So, for some small amount of money annually (usually around $10–$15 per year), an individual can purchase a custom domain name. Each domain name is unique. So since `facebook.com` is already purchased, nobody else can get this domain. Hopefully nobody's name is `Faceb Ook`. My domain for my website is `emmasax4.info`, so nobody else can buy that, but they could buy `emmasax4.com`, or `emmasax.info`.
 
-A URL (or Uniform Resource Locator) has multiple parts to it. The first part is the protocol identifier. This is typically `http` or `https` (the `s` means secure connection with an SSL certificate). Other examples of protocols may be `ftp` or `telnet`. The last two portions (`example.com`) is the domain. This the unique name that indicates where the website is being served from. The ending part (`.com`, `.org`, `.edu`, `.net`, `.gov`, etc) indicates the top level domain designator. Here are some common top-level domains:
+A URL (or Uniform Resource Locator) has multiple parts to it. The first part is the protocol identifier. This is typically `http` or `https` (the `s` means secure connection with an SSL certificate). Other examples of protocols may be `ftp` or `telnet`. The last two portions (`example.com`) is the domain. This the unique name that indicates where the website is being served from. The ending part (`.com`, `.org`, `.edu`, `.net`, `.gov`, etc) indicates the top-level domain designator. Here are some common top-level domains:
 
 <div class="table-responsive-sm">
-  <table class="table table-hover">
+  <table class="table table-hover table-bordered">
+    <thead class="text-center">
+      <th>Top-Level Domain</th>
+      <th>Type</th>
+      <th>Description</th>
+    </thead>
     <tbody>
       <tr>
-        <td class="code">.com</td>
-        <td>Commercial Entity</td>
+        <td class="text-center"><code>.com</code></td>
+        <td class="text-center">Commercial Entity</td>
         <td>Most common for companies that wish to advertise and sell a product.</td>
       </tr>
       <tr>
-        <td class="code">.org</td>
-        <td>Organization</td>
+        <td class="text-center"><code>.org</code></td>
+        <td class="text-center">Organization</td>
         <td>This includes nonprofit organizations.</td>
       </tr>
       <tr>
-        <td class="code">.edu</td>
-        <td>Educational Institution</td>
+        <td class="text-center"><code>.edu</code></td>
+        <td class="text-center">Educational Institution</td>
         <td>This could include universities, colleges, and high schools.</td>
       </tr>
       <tr>
-        <td class="code">.net</td>
-        <td>Network Provider</td>
+        <td class="text-center"><code>.net</code></td>
+        <td class="text-center">Network Provider</td>
         <td>Originally designated for companies involved with internet organizations.</td>
       </tr>
       <tr>
-        <td class="code">.gov</td>
-        <td>Government</td>
+        <td class="text-center"><code>.gov</code></td>
+        <td class="text-center">Government</td>
         <td>Originally only for the federal government, but now it includes any level of government.</td>
       </tr>
     </tbody>

@@ -18,7 +18,7 @@ The responsive navbar utilized in this site is from [Bootstrap's built-in navbar
 
 ### Tables
 
-For my tables on this site, I use [Bootstrap's built-in tables](https://getbootstrap.com/docs/4.0/content/tables/), which are responsive, as long as you use `class: "table-responsive"` at the top (read more about responsive tables [here](https://getbootstrap.com/docs/4.0/content/tables/#responsive-tables)). The tables I've selected to use is described in ['Hoverable Rows'](https://getbootstrap.com/docs/4.0/content/tables/#hoverable-rows). I use the tables in [this Markdown file](https://github.com/emma-sax4/emma-sax4.github.io/blob/release/_pages/around_town.md). Because it's Markdown, it may be more helpful to view the 'Raw' code.
+For my tables on this site, I use [Bootstrap's built-in tables](https://getbootstrap.com/docs/4.0/content/tables/), which are responsive, as long as you use `class: "table-responsive"` at the top (read more about responsive tables [here](https://getbootstrap.com/docs/4.0/content/tables/#responsive-tables)). The tables I've selected to use is described in ['Hoverable Rows'](https://getbootstrap.com/docs/4.0/content/tables/#hoverable-rows). I use the tables in [this Markdown file](https://github.com/emma-sax4/emma-sax4.github.io/blob/release/_pages/around_town.md) and in [this Markdown file](https://github.com/emma-sax4/emma-sax4.github.io/blob/release/_posts_/2020-01-01-dns-domains-and-personal-websites.md). Because it's Markdown, it may be more helpful to view the 'Raw' code.
 
 ### Buttons
 
