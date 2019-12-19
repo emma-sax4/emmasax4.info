@@ -1,7 +1,15 @@
 blockquote {
   background: #f9f9f9;
   border-left: .3rem solid #dce6f0;
-  margin: 1.5em .625rem;
-  padding: 0.5em .625rem;
+  margin: 1.5rem .625rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.01rem;
+  padding-left: .625rem;
+  padding-right: .625rem;
   quotes: "\201C""\201D""\2018""\2019";
+  p {
+    margin-bottom: 0.75rem;
+    margin-top: 0.125rem;
+
+  }
 }
