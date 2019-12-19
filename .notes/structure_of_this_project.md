@@ -135,7 +135,7 @@ Then, make sure the front matter of the draft looks like this:
 ---
 layout: post
 title: Test Post
-tags: [ tag_name, optional_tag_name ] # OR category: Posts Category
+tags: [ tag_name, optional_tag_name ]
 draft: true
 ---
 ```
