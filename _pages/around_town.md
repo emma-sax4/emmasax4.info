@@ -67,8 +67,6 @@ I love to travel, especially to international locations. I try to go to a new co
 
 ### On Stage
 
-<!-- Write tables as described here: https://getbootstrap.com/docs/4.0/content/tables/#always-responsive -->
-
 <div class="table-responsive-sm">
   <table class="table table-hover">
     <tbody>
