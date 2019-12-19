@@ -151,11 +151,7 @@ draft: true
 ---
 ```
 
-Then, when you run
-```
-jekyll serve
-```
-locally, any drafts should appear at the top of the list of posts, and should show as "Unpublished".
+Then, when you run `jekyll serve` locally, any drafts should appear at the top of the list of posts, and should show as "Unpublished".
 
 When it's time to publish a draft, rename the file to include today's publishing date in the title (instead of whatever date was there previously), and remove the `draft: true` line from the front matter.
 
