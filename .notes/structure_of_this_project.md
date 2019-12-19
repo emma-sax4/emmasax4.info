@@ -3,9 +3,6 @@
 Here are all of the parts of this project associated with running this application. This list does not include files/directories related to GitHub, Travis, Git, etc.
 ```
 .
-├── _drafts
-|   ├── categorized-post-draft.md
-|   └── post-draft.md
 ├── _includes
 |   ├── footer.html
 |   └── header.html
@@ -48,27 +45,6 @@ Here are all of the parts of this project associated with running this applicati
 ```
 
 Let's go through what each section does, from the top.
-
-## `_drafts/`
-
-Drafts should always be written in a pull request in new branch. This will allow the author of the post to let it sit for as long as necessary, before feeling pressured to finish the post.
-
-To write a draft, write a new post in the `_drafts/` directory, and then make sure the front matter looks somewhat like the following:
-```
----
-layout: post
-title: Test Post
-tags: [ tag_name ] OR category: Posts Category
-draft: true
----
-```
-
-Then, run your local Jekyll command like such:
-```
-bundle exec jekyll serve --drafts
-```
-
-Any drafts should appear at the top of the list of posts, and should show as "Unpublished". When it's time to publish a draft, move the draft to the `_posts/` directory, rename the file to include the publishing date (in `YYYY-MM-DD-` format... follow the previous post examples), and remove the `draft: true` line from the front matter.
 
 ## `_includes/`
 
@@ -150,6 +126,35 @@ category: Posts Category
 
 Currently, the code is not set up to handle posts that are part of a collection **and** contain tags.
 
+### Writing Drafts
+
+To write drafts, make a new file in the `_posts/` directory (or in a subdirectory if the post will be part of a category/collection). The new file should be named in the following pattern: `YYYY-MM-DD-test-post-title`. Because this draft hasn't been published yet, I usually just put in either the date I hope to publish the draft, or the day I'm starting the draft. Make sure the date in the title is the most recent date compared to the other posts.
+
+Then, make sure the front matter of the draft looks like this:
+```
+---
+layout: post
+title: Test Post
+tags: [ tag_name, optional_tag_name ]
+draft: true
+---
+```
+
+If the post is part of a collection, then it should look like this:
+```
+---
+layout: post
+title: Test Post
+subtitle: Post Subtitle
+category: Posts Category
+draft: true
+---
+```
+
+Then, when you run `jekyll serve` locally, any drafts should appear at the top of the list of posts, and should show as "Unpublished".
+
+When it's time to publish a draft, rename the file to include today's publishing date in the title (instead of whatever date was there previously), and remove the `draft: true` line from the front matter.
+
 ## `assets/`
 
 This directory has three directories, `css/`, `images/`, and `resources/`. The `css/` directory contains all of the CSS files in this site. They're all called together in `style.scss`. The CSS in the project is loaded inside the `_includes/head.html`. This site also uses [Bootstrap](https://getbootstrap.com/docs/4.4/getting-started/introduction/) for a lot of its CSS, including the navigation bar, headers, responsive page, etc.
@@ -168,13 +173,13 @@ This is an example sentence, so it will throw a 404. See [here](/assets/resource
 
 ## `blog/`
 
-This site uses [`jekyll-paginate-v2`](https://github.com/sverrirs/jekyll-paginate-v2/) to do it's pagination of the blog posts. Because of this, we must specify the blog page in its own directory, titled `blog/index.html`. There shouldn't really be a need to change the front-matter of this page.
+This site uses [`jekyll-paginate-v2`](https://github.com/sverrirs/jekyll-paginate-v2/) to do it's pagination of the blog posts. Because of this, we must specify the blog page in its own directory, titled `blog/index.html`. There shouldn't really be a need to change the front matter of this page.
 
 > Please notice that in the code, we need to call a collection of related posts a `category`. This is in order to make the pagination work as expected. A user of the site will view the collection no differently than with a tag. The difference between a `tag` and a `category`/collection is that a post can have multiple tags, but can only be a part of one collection/`category`.
 
 Besides paginating the normal `blog/index.html` page, we also paginate the `tag` and `category`/collection filtered pages. So, each `tag` and `category`/collection needs to have its own page in the `blog/` directory. An example would be `blog/tag_name.html`.
 
-For a tag, the front-matter should look like this:
+For a tag, the front matter should look like this:
 ```html
 ---
 layout: blog
@@ -189,7 +194,7 @@ pagination:
 ---
 ```
 
-For a `category`/collection, the front-matter should look like this:
+For a `category`/collection, the front matter should look like this:
 ```html
 ---
 layout: blog
