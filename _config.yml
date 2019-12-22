@@ -25,7 +25,11 @@ future: true
 markdown: kramdown
 
 kramdown:
-  smart_quotes: ["rdquo", "rsquo", "quot", "quot"]
+  smart_quotes:
+    - rdquo
+    - rsquo
+    - quot
+    - quot
 
 sass:
   style: compressed
@@ -55,7 +59,7 @@ pagination:
   enabled: true
   per_page: 5
   limit: 0
-  sort_field: 'date'
+  sort_field: date
   sort_reverse: true
   trail:
     before: 2
