@@ -5,7 +5,7 @@ subtitle: "Part 2: Three Years Later"
 category: Skimp and Splurge
 ---
 
-When I dug out the original post [Skimp and Splurge: The Art of Saving Money](/posts/skimp-and-splurge/2019-10-19-the-art-of-saving-money) from my Google Drive, I was immediately humored by my original intent to create a blog. As you can probably tell, that never actually came to fruition... Until I decided to adventure with GitHub Pages. Although, most of that is another story.
+When I dug out the original post [Skimp and Splurge: The Art of Saving Money](/blog/posts/skimp-and-splurge/2019-10-19-the-art-of-saving-money) from my Google Drive, I was immediately humored by my original intent to create a blog. As you can probably tell, that never actually came to fruition... Until I decided to adventure with GitHub Pages. Although, most of that is another story.
 
 What actually inspired me to publish that original "post" from 2016 was that a lot of the opinions I had on it have changed. When I wrote that originally, I wasn't even graduated from college yet. I was still living in a dorm room (suite, technically), and I still had a small meal plan at my college's Dining Hall. I had a decent amount of money for a senior in college (since I worked part-time at SportsEngine during the last couple years of school), but that didn't necessarily prepare me for what living in the "real world" would be like.
 
@@ -111,4 +111,4 @@ Yes, yes, yes to this! I bought my bed and frame on sale for $1k from Macy's, an
 
 ---
 
-There you go! I hope that taking another look at my opinions on these topics proves useful for you, and gives you a place to start from if you're looking at creating or re-evaluating your budget. Let me know what your opinions on these topics are! Shoot me an email from the link in the [Contact Me](/contact-me) tab!
+There you go! I hope that taking another look at my opinions on these topics proves useful for you, and gives you a place to start from if you're looking at creating or re-evaluating your budget. Let me know what your opinions on these topics are! Shoot me an email from the link in the [Contact Me](/contact-me/) tab!
