@@ -11,8 +11,7 @@ notifications:
     on_failure: always
     on_error: always
 
-script:
-  - JEKYLL_ENV=production bundle exec jekyll build --destination site
+script: JEKYLL_ENV=production bundle exec jekyll build --destination ./site
 
 deploy:
   provider: pages
@@ -25,4 +24,4 @@ deploy:
   keep-history: true
   on:
     branch: release
-    condition: "$TRAVIS_EVENT_TYPE != cron"
+    condition: $TRAVIS_EVENT_TYPE != cron

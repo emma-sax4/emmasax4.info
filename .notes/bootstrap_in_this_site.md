@@ -40,12 +40,13 @@ The pieces I'm overriding are:
 
 ## Icons
 
-The site uses [Feather Icons](https://github.com/feathericons/feather) for all of its pretty icons, including the
+The site uses [Feather Icons](https://feathericons.com/) for all of its pretty icons, including the
 * GitHub icon
 * LinkedIn icon
 * Twitter icon
 * mail send icon
 * forward/backward icons
+* navbar X and bar icons
 
 Icons are called like this:
 ```html
