@@ -4,24 +4,8 @@ layout: default
 
 <div class="row">
   <div class="col col-12 col-md-2 text-center">
-    <div>
-      {% include all_posts_button.html %}
-      {% if page.category %}
-        {% assign category = page.category %}
-        {% include category_list.html %}
-      {% elsif page.tags %}
-        {% assign tags = page.tags | sort %}
-        {% include tags_list.html %}
-      {% endif %}
-    </div>
-
-    <span class="post-meta" style="font-style: italic;">
-      {% if page.draft == true %}
-        Unpublished
-      {% else %}
-        Published {{ page.date | date: "%B %-d, %Y" }}
-      {% endif %}
-    </span>
+    {% include all_posts_button.html %}
+    {% include rss_button.html %}
   </div>
 
   <div class="col col-12 col-md-10">
