@@ -4,7 +4,10 @@ layout: default
 
 {% if page.pagination.title == "Blog" %}
   <div class="text-center">
-    <h1>{{ page.pagination.title }}</h1>
+    <h1>
+      {{ page.pagination.title }}
+      {% include rss_button.html %}
+    </h1>
   </div>
 {% else if %}
   <div class="row" style="display: flex">
@@ -16,7 +19,7 @@ layout: default
     <div class="col col-12 col-md-10">
       <div class="text-center">
         <h1>
-          <i style="width: 40px; height: 40px;" data-feather="tag"></i>
+          <i style="width: 2.5rem; height: 2.5rem;" data-feather="tag"></i>
           {{ page.pagination.title }}
         </h1>
       </div>

@@ -14,7 +14,7 @@
   | Make a new pull request for your new branch (GitHub UI should automatically direct you to do this). | Continue making changes and committing/pushing them (unless you leave your feature branch, all new commits will be automatically added to your branch). |
   | Continue making changes to your pull request/branch (navigate to the main repository page, switch to your feature branch, and then continue making whatever changes you'd like). | When you're satisfied, make a pull request to this repository in the GitHub UI. |
 
-4. Verify TravisCI passes on your pull request. The test configuration lives inside the [`.travis.yml`](https://github.com/emma-sax4/emma-sax4.github.io/blob/release/.travis.yml) file. Read more about this repository's tests below.
+4. Verify Travis CI passes on your pull request. The test configuration lives inside the [`.travis.yml`](https://github.com/emma-sax4/emma-sax4.github.io/blob/release/.travis.yml) file. Read more about this repository's tests below.
 5. Check the site looks like how you expect it to look. Follow the instructions below to get your computer running the site locally. If you've been working on GitHub UI up until this point, you may need to switch over to a computer and clone the repository and branch to do this.
 6. When you're absolutely ready for me to look at your pull request, please request a Code Review from me in the pull request.
 
@@ -47,8 +47,8 @@ NOTE: Running this process locally will most likely create at least one director
 
 This repository doesn't really have any tests at all (GitHub Pages is just a host of static site files, so there's no functionality to test). However, I do want to check that `bundler` can install the necessary dependencies and that Jekyll can properly build the site on each pull request and commit to `release` branch (the default branch in this repository).
 
-Because of use of Jekyll gems that GitHub doesn't support, this site needs to use a 3rd Party instead of GitHub Pages to compile the code. So, here comes TravisCI to the rescue.
+Because of use of Jekyll gems that GitHub doesn't support, this site needs to use a 3rd Party instead of GitHub Pages to compile the code. So, here comes Travis CI to the rescue.
 
-When TravisCI runs on the `release` branch, not only does it bundle all of the dependencies and build the site, but it also puts it into a special `./site` directory. Then, TravisCI will run a Travis Deployment to upload that directory to the `master` branch of this GitHub repository. Then, GitHub automatically deploys the commits (in the `master` branch) to GitHub Pages. In this way, We develop the site on a pull request, we merge source code into the `release` branch, and then TravisCI builds the code and commits that automagically to the `master` branch. Then GitHub Pages does their thing.
+When Travis CI runs on the `release` branch, not only does it bundle all of the dependencies and build the site, but it also puts it into a special `./site` directory. Then, Travis CI will run a Travis Deployment to upload that directory to the `master` branch of this GitHub repository. Then, GitHub automatically deploys the commits (in the `master` branch) to GitHub Pages. In this way, We develop the site on a pull request, we merge source code into the `release` branch, and then Travis CI builds the code and commits that automagically to the `master` branch. Then GitHub Pages does their thing.
 
 A full deployment only takes about five minutes, but depending on what was changed (HTML files, images, etc), it can take up to about ten minutes to propagate the changes. To make the changes appear faster, you can reload the entire website in incognito mode.
