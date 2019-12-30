@@ -1,6 +1,6 @@
 # Structure of this Project
 
-Here are all of the parts of this project associated with running this application. This list does not include files/directories related to GitHub, Travis, Git, etc.
+Here are all of the parts of this project associated with running this application. This list does not include files/directories related to GitHub, Travis CI, Git, etc.
 ```
 .
 ├── _includes
