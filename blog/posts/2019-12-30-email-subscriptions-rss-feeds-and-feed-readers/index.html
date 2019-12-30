@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="Emma Sax"/>
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/images/e_logo_blue_196.png">
+  <link href="https://emmasax4.info/feed.xml" title="Emma Sax's Blog" rel="alternate" type="application/rss+xml">
+
+  <title>Emma Sax | Platform Operations Engineer</title>
+
+  <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+    crossorigin="anonymous"
+  >
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:400,700"
+    rel="stylesheet"
+    type="text/css"
+  >
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+
+  <header>
+  <nav class="navbar navbar-expand-md navbar-dark">
+    <a class="navbar-brand mb-0" href="https://emmasax4.info">
+      <img src="/assets/images/e_logo_white_40.png" width="30" height="30" class="d-inline-block align-top" alt="E logo"> Emma Sax
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-links" aria-controls="navbar-links" aria-expanded="false" aria-label="Toggle navigation">
+      <span data-feather="menu"></span>
+      <span data-feather="x"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbar-links">
+      <ul class="navbar-nav ml-auto mt-2 mt-md-0">
+        
+
+        
+          
+            
+
+            
+
+            <li class="nav-item ">
+              <a class="nav-link" href="/">Home
+                
+              </a>
+            </li>
+          
+        
+          
+            
+
+            
+
+            <li class="nav-item ">
+              <a class="nav-link" href="/about-me/">About Me
+                
+              </a>
+            </li>
+          
+        
+          
+            
+
+            
+
+            <li class="nav-item ">
+              <a class="nav-link" href="/around-town/">Around Town
+                
+              </a>
+            </li>
+          
+        
+          
+            
+
+            
+
+            <li class="nav-item active">
+              <a class="nav-link" href="/blog">Blog
+                
+                  <span class="sr-only">(current)</span>
+                
+              </a>
+            </li>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            
+
+            
+
+            <li class="nav-item ">
+              <a class="nav-link" href="/contact-me/">Contact Me
+                
+              </a>
+            </li>
+          
+        
+      </ul>
+    </div>
+  </nav>
+</header>
+
+
+  <body>
+    <main class="container">
+      <div class="row">
+  <div class="col col-12 col-md-2 text-center">
+    <div class="container" style="padding-bottom: 1rem;">
+  <a href="/blog" class="btn btn-lg btn-outline-secondary">All Posts</a>
+</div>
+
+
+    <div class="text-center" style="margin-bottom: 1rem;">
+      <a href="/feed.xml" target="_blank" class="link-icon-rss">
+  <i data-feather="rss"></i>
+</a>
+
+    </div>
+  </div>
+
+  <div class="col col-12 col-md-10">
+    <h1>
+  <div class="text-center">
+    
+      Email Subscriptions, RSS Feeds, and Feed Readers
+    
+  </div>
+
+  <div class="text-center">
+    <span class="post-meta" style="font-style: italic; margin-top: -1rem; margin-bottom: -1rem;">
+      
+        Published December 30, 2019
+      
+    </span>
+  </div>
+
+  <div class="text-center" style="margin-top: -1rem; margin-bottom: -1rem;">
+    
+      
+      
+  <span class="post-meta">
+    <i style="width: 20px; height: 20px;" data-feather="tag"></i>
+    
+      
+
+      <a href="/blog/tech">tech</a>
+      
+    
+  </span>
+
+
+    
+  </div>
+</h1>
+
+    <div class="page-body">
+      <p>Earlier this week, a reader of this site (no, not my mother) emailed me saying that they wish that my blog had a "Subscribe" feature so they could be notified when a new blog post is published. I decided that it could be cool to implement that feature, although it may be difficult given my site doesn’t have a database or a backend.</p>
+
+<p>The two most popular forms of subscription is an email service, and a live RSS feed. I started with the email service. The idea is that there’s a form for subscribers (or soon-to-be subscribers) to fill out where they enter their email address, and then a 3rd party service will add them to a list of subscribers. They’ll receive an email saying they successfully subscribed, and then they’ll receive an automated email whenever a new blog post is posted.</p>
+
+<p>I followed <a href="https://blog.webjeda.com/jekyll-subscribe-form/" target="_blank">this guide</a> for setting up email notifications with <a href="https://mailchimp.com/" target="_blank">MailChimp</a>. The embedded subscription form worked, the automated welcome email worked, and it was all great! Except for one big thing: the <a href="https://www.ftc.gov/tips-advice/business-center/guidance/can-spam-act-compliance-guide-business" target="_blank">CAN-SPAM Act</a>.</p>
+
+<p>Now, don’t get me wrong, that law is definitely useful and great, but for somebody that doesn’t own a business, isn’t selling any products, and isn’t making any money off of these emails, it seems sort of silly that I need to include a physical address where I can receive old-fashioned snail mail. I don’t have an office, and I don’t even rent a P.O. box. I <em>could</em> rent a P.O. box, for about $8/month. But I don’t want to be dabbling in renting a P.O. box that I won’t really get any mail to, just so I can send out occasional emails to my family and friends. So, if it weren’t for the physical address limitation, I’d probably still be using the email subscription.</p>
+
+<p>So instead, I began looking into an RSS feed. This is the <i color="orange" data-feather="rss"></i> icon that you see on this page, and you can probably find a similar icon elsewhere on the internet, too. RSS feeds were originally made with the goal of providing users of sites with a basic overview of the posts on a page, and updates on each page. A user utilizes a <a href="https://whatis.techtarget.com/definition/RSS-reader" target="_blank">feed reader</a> to make a list of all of the feeds their interested in, and then that reader would send them updates about new posts, and link to the full post on each site. But… RSS feed readers never really gained popularity (most readers prefer to just bookmark a site and go back to it to look for updates).</p>
+
+<p>But, since a reader requested it, I’ll play along and implement an RSS feed on my site, too. I followed <a href="https://joelglovier.com/writing/rss-for-jekyll" target="_blank">this blog</a> to help me add the RSS feed to my site. It turned out to be super easy. There’s no gem requirement, and it doesn’t use any 3rd party service to compile properly. It updates the feed whenever <code class="highlighter-rouge">bundle exec jekyll build</code> is run, and auto-updates when I’m actively serving my site locally.</p>
+
+<p>I added these values to my <code class="highlighter-rouge">_config.yml</code>:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>feed_title: Emma Sax's Blog
+feed_url: https://emmasax4.info/blog/
+feed_items: 5
+</code></pre></div></div>
+<p>and added this file to the root of my repository:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+layout: none
+---
+
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"&gt;
+  &lt;channel&gt;
+    &lt;title&gt;{{ site.feed_title | xml_escape }}&lt;/title&gt;
+    &lt;description&gt;{{ site.feed_description | xml_escape }}&lt;/description&gt;
+    &lt;link&gt;{{ site.feed_url }}&lt;/link&gt;
+    &lt;atom:link href="{{ site.url }}/feed.xml" rel="self" type="application/rss+xml" /&gt;
+    {% for post in site.posts limit: site.feed_items %}
+      &lt;item&gt;
+        {% if post.subtitle %}
+          {% assign short_title = post.title | append: " → " | append: post.subtitle %}
+        {% else %}
+          {% assign short_title = post.title %}
+        {% endif %}
+        &lt;title&gt;{{ short_title | xml_escape }}&lt;/title&gt;
+        &lt;description&gt;{{ post.description | xml_escape }}&lt;/description&gt;
+        &lt;pubDate&gt;{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}&lt;/pubDate&gt;
+        &lt;link&gt;{{ site.url }}{{ post.url }}&lt;/link&gt;
+        &lt;guid isPermaLink="true"&gt;{{ site.url }}{{ post.url }}&lt;/guid&gt;
+      &lt;/item&gt;
+    {% endfor %}
+  &lt;/channel&gt;
+&lt;/rss&gt;
+</code></pre></div></div>
+
+<p>And it works! It works locally and in "production". I can validate my feed <a href="https://validator.w3.org/feed/" target="_blank">here</a>, and I can add my own feed to my feed reader to test it out locally and on master.</p>
+
+<p>Now we’re only left with this question: which feed reader is best? I’m still figuring out the answer to that question. I used <a href="https://feeder.co/reader" target="_blank">feeder.co</a> for most of my testing while implementing this, but it costs about $10/month, and I was just using a free trial. Granted, it did seem handy and it worked well 🤷🏻‍♀️. So now I’ve installed the <a href="https://chrome.google.com/webstore/detail/rss-feed-reader/cdlhhcmmdobckneongkkmgigcimeibpf" target="_blank">RSS Feed Reader Chrome extension</a>, and I’ll play with this just long enough to see if posting a new blog (this one, actually) will update the feed reader. If it does seem to work, then I’ll keep digging for the best feed reader out there (that’s free… I’m cheap, remember?).</p>
+
+<p>I do know that there are a plethora of mobile apps and desktop/laptop computer apps available that can help users read their feeds. There’s probably even one that sends you an email when it detects a new content.</p>
+
+<p>Please let me know if you currently use any great feed readers or if you come across one. I’ll post any updates about my feed readers as they come up 😊. Good luck subscribing!</p>
+
+<h2 id="references">References</h2>
+
+<ul>
+  <li><a href="https://mailchimp.com/" target="_blank">mailchimp.com</a></li>
+  <li><a href="https://www.ftc.gov/tips-advice/business-center/guidance/can-spam-act-compliance-guide-business" target="_blank">ftc.gov: CAN-SPAM act</a></li>
+  <li><a href="https://feeder.co" target="_blank">feeder.co</a></li>
+  <li><a href="https://validator.w3.org/feed/" target="_blank">validator.w3.org: feed</a></li>
+  <li><a href="https://joelglovier.com/writing/rss-for-jekyll" target="_blank">joelglovier.com: RSS for Jekyll</a></li>
+  <li><a href="https://en.wikipedia.org/wiki/RSS" target="_blank">wikipedia.org: RSS</a></li>
+  <li><a href="https://whatis.techtarget.com/definition/RSS-reader" target="_blank">whatis.techtarget.com: RSS reader</a></li>
+  <li><a href="https://chrome.google.com/webstore/detail/rss-feed-reader/cdlhhcmmdobckneongkkmgigcimeibpf" target="_blank">chrome.google.com: webstore, RSS feed reader</a></li>
+</ul>
+
+    </div>
+  </div>
+</div>
+
+    </main>
+  </body>
+
+  <footer>
+  &copy; <script>new Date().getFullYear()>2010&&document.write(" "+new Date().getFullYear());</script> by
+    <a href="https://github.com/emma-sax4" target="_blank">Emma Sax</a>.
+  All rights reserved.
+  View on <a href="https://github.com/emma-sax4/emma-sax4.github.io" target="_blank">GitHub</a>.
+</footer>
+
+  <script src="https://unpkg.com/feather-icons">
+</script>
+<script>
+  feather.replace()
+</script>
+<script
+  src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+  crossorigin="anonymous">
+</script>
+<script
+  src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+  integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+  crossorigin="anonymous">
+</script>
+
+</html>

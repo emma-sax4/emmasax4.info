@@ -8,6 +8,15 @@
     
       <item>
         
+        <title>Email Subscriptions, RSS Feeds, and Feed Readers</title>
+        <description></description>
+        <pubDate>Mon, 30 Dec 2019 00:00:00 +0000</pubDate>
+        <link>https://emmasax4.info/blog/posts/2019-12-30-email-subscriptions-rss-feeds-and-feed-readers/</link>
+        <guid isPermaLink="true">https://emmasax4.info/blog/posts/2019-12-30-email-subscriptions-rss-feeds-and-feed-readers/</guid>
+      </item>
+    
+      <item>
+        
         <title>Bootstrap, CSS, and Icons in this Site</title>
         <description></description>
         <pubDate>Sun, 29 Dec 2019 00:00:00 +0000</pubDate>
@@ -40,15 +49,6 @@
         <pubDate>Wed, 18 Dec 2019 00:00:00 +0000</pubDate>
         <link>https://emmasax4.info/blog/posts/2019-12-18-using-jekyll-paginate-v2/</link>
         <guid isPermaLink="true">https://emmasax4.info/blog/posts/2019-12-18-using-jekyll-paginate-v2/</guid>
-      </item>
-    
-      <item>
-        
-        <title>Adding Bootstrap to Your Static Content Site</title>
-        <description></description>
-        <pubDate>Tue, 17 Dec 2019 00:00:00 +0000</pubDate>
-        <link>https://emmasax4.info/blog/posts/2019-12-17-adding-bootstrap-to-your-static-content-site/</link>
-        <guid isPermaLink="true">https://emmasax4.info/blog/posts/2019-12-17-adding-bootstrap-to-your-static-content-site/</guid>
       </item>
     
   </channel>
