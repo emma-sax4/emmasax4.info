@@ -96,4 +96,4 @@ At the end of the day (or a few days), my repo ended up going from over 650 line
 
 Thank you so much for getting to the bottom of that rather technical blog post. I hope it's enough compelling evidence to remember that using a 3rd party tool to make your website's CSS better is worth it. If I (a back-end coder with very little CSS experience) can make it happen, then so can you 😉.
 
-For more information about how my site uses Bootstrap, please see <a href="https://github.com/emma-sax4/emma-sax4.github.io/blob/release/.notes/bootstrap_in_this_site.md" target="_blank">this document</a>. To learn more about Bootstrap, please read their documentation <a href="https://getbootstrap.com/docs/4.4/getting-started/introduction/" target="_blank">here</a>.
+For more information about how my site uses Bootstrap, please see [this blog post](/blog/posts/2019-12-29-how-my-site-uses-bootstrap/). To learn more about Bootstrap, please read their documentation <a href="https://getbootstrap.com/docs/4.4/getting-started/introduction/" target="_blank">here</a>.
