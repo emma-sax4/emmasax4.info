@@ -12,4 +12,4 @@ A brief reminder that this repository does have a standard [Code of Conduct](htt
 
 This page was originally generated using the [Cayman theme](https://github.com/jasonlong/cayman-theme) by [Jason Long](https://twitter.com/jasonlong).
 
-For more notes about this repository/project, please see the [Notes files](https://github.com/emma-sax4/emma-sax4.github.io/blob/release/.notes).
+For more notes about this repository/project, please see the [Notes files](https://github.com/emma-sax4/emma-sax4.github.io/blob/release/.github/NOTES).
