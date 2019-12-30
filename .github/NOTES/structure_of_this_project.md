@@ -39,6 +39,7 @@ Here are all of the parts of this project associated with running this applicati
 |   ├── posts_category_name.html
 |   └── tag_name.html
 ├── _config.yml
+├── feed.xml
 ├── Gemfile
 ├── Gemfile.lock
 └── index.md
@@ -218,6 +219,10 @@ The `url_shortname` section is important... it should start with a `/`, followed
 ## `_config.yml`
 
 This is where we tell Jekyll all of the configurations for this project. Each time this file is changed, restart your local Jekyll server to get the new changes.
+
+## `feed.xml`
+
+This site implements a basic RSS feed for subscribers to keep an eye on the blog posts on this site. This file automatically updates whenever Travis CI will build on the `release` branch builds. A subscriber should use some sort of feed reader to watch the feed.
 
 ## `Gemfile` and `Gemfile.lock`
 
