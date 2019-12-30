@@ -47,6 +47,7 @@ The site uses [Feather Icons](https://feathericons.com/) for all of its pretty i
 * mail send icon
 * forward/backward icons
 * navbar X and bar icons
+* feed/rss icon
 
 Icons are called like this:
 ```html

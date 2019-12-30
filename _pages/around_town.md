@@ -117,7 +117,7 @@ I love to travel, especially to international locations. I try to go to a new co
       </tr>
       <tr>
         <td style="font-style: italic;">The Wizard of Oz</td>
-        <td>Jitterbug/Enssemble</td>
+        <td>Jitterbug/Ensemble</td>
         <td>Blue Water Theatre Company</td>
       </tr>
       <tr>
