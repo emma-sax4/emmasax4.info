@@ -1,4 +1,8 @@
-# Bootstrap, CSS, and Icons in this Site
+---
+layout: post
+title: Bootstrap, CSS, and Icons in this Site
+tags: [ tech ]
+---
 
 ## Bootstrap
 
@@ -26,7 +30,7 @@ This site uses [Bootstrap's buttons](https://getbootstrap.com/docs/4.0/component
 
 ## CSS
 
-Using Bootstrap for the entire layout of this website, as well as for specific elements means there's so much less CSS in this repository. I started with over 600 lines of CSS, and now I have more like ___. But, there are still some pieces that I've chosen to override from Bootstrap's defaults. All of my custom CSS is in [this directory](https://github.com/emma-sax4/emma-sax4.github.io/tree/release/assets/css).
+Using Bootstrap for the entire layout of this website, as well as for specific elements means there's so much less CSS in this repository. I started with over 600 lines of CSS, and now I have about 220 lines. But, there are still some pieces that I've chosen to override from Bootstrap's defaults. All of my custom CSS is in [this directory](https://github.com/emma-sax4/emma-sax4.github.io/tree/release/assets/css).
 
 The pieces I'm overriding are:
 * Blockquotes
@@ -35,7 +39,7 @@ The pieces I'm overriding are:
 * Navbar settings and colors
 * Other site settings
   * Font sizes and styles
-  * `main-content` and `body` settings
+  * Settings for the `main-content` and `body`
   * Footer
 
 ## Icons
@@ -44,10 +48,10 @@ The site uses [Feather Icons](https://feathericons.com/) for all of its pretty i
 * GitHub icon
 * LinkedIn icon
 * Twitter icon
-* mail send icon
-* forward/backward icons
-* navbar X and bar icons
-* feed/rss icon
+* Mail send icon
+* Forward/backward icons
+* Navbar X and bar icons
+* Feed/RSS icon
 
 Icons are called like this:
 ```html
@@ -73,6 +77,4 @@ See them in action [here](https://github.com/emma-sax4/emma-sax4.github.io/blob/
 
 ## Conclusion
 
-Now that you've seen how Bootstrap and Feather Icons have improved my website, it's time for you to get started! Here are some potentially helpful links to get you on the right track:
-* https://getbootstrap.com/
-* https://github.com/feathericons/feather#2-include
+Now that you've seen how Bootstrap and Feather Icons have improved my website, it's your turn! Check out my blog post [here](/blog/posts/2019-12-17-adding-bootstrap-to-your-static-content-site/) for more information on how to get Bootstrap started on your site.
