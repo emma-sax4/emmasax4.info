@@ -2,6 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Emma Sax's Blog</title>
+    <description></description>
     <link>https://emmasax4.info/blog/</link>
     <atom:link href="https://emmasax4.info/feed.xml" rel="self" type="application/rss+xml" />
     
