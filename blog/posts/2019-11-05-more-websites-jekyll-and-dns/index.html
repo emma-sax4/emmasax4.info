@@ -194,6 +194,41 @@
 
 <p>Throughout my website "spike", I’d like to say that I learned a lot more about Jekyll. I learned more about how the Jekyll themes use CSS, I learned that a Jekyll theme is really just a bunch of CSS, and Jekyll itself is really just about the data structures and config files. I learned more about how the permalinks work. And I learned that Jekyll isn’t really that magic 🎉… I could make my own Jekyll site by adding one file at a time, instead of selecting a specific theme in GitHub’s Settings page. I learned more about DNS, and about hosting websites on custom domains. After all of this, I feel like I’m finally ready to take on the website world!</p>
 
+      <div style="margin-top: 3rem;">
+  
+    <div class="text-center" style="margin-bottom: 1rem;">
+      <button id="show-comments-button" class="btn btn-lg btn-outline-secondary"
+      onclick="loadComments();return false;">
+        Load Comments
+        <i data-feather="message-circle"></i>
+      </button>
+    </div>
+
+    <div id="disqus_thread"></div>
+
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+    <script type="text/javascript">
+      var disqus_loaded = false;
+      var disqus_shortname = 'emmasax4';
+
+      function loadComments() {
+        if (!disqus_loaded) {
+          disqus_loaded = true;
+          (function() {
+            var d = document,
+              s = d.createElement('script');
+            s.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+          })();
+          document.getElementById('show-comments-button').remove();
+        }
+      }
+    </script>
+  
+</div>
+
     </div>
   </div>
 </div>

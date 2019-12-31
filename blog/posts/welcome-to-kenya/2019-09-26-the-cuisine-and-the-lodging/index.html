@@ -339,6 +339,41 @@
 
 <p>At the end of the day, we stayed in some incredible resorts in Kenya. They were definitely for the "luxury-safari-traveller", and we enjoyed every minute of our stays. The food kept us fulfilled and ready for adventure, and we managed to get a sound night’s sleep each night (except that one night where I was suffering from some traveller’s diarrhea 🤢, but that’s another story, and one I won’t both disclosing to you here). If you choose to visit Kenya—which I highly recommend—just be sure you remember your small dollar bills to tip with… tipping in Kenya is expected!</p>
 
+      <div style="margin-top: 3rem;">
+  
+    <div class="text-center" style="margin-bottom: 1rem;">
+      <button id="show-comments-button" class="btn btn-lg btn-outline-secondary"
+      onclick="loadComments();return false;">
+        Load Comments
+        <i data-feather="message-circle"></i>
+      </button>
+    </div>
+
+    <div id="disqus_thread"></div>
+
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+    <script type="text/javascript">
+      var disqus_loaded = false;
+      var disqus_shortname = 'emmasax4';
+
+      function loadComments() {
+        if (!disqus_loaded) {
+          disqus_loaded = true;
+          (function() {
+            var d = document,
+              s = d.createElement('script');
+            s.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+          })();
+          document.getElementById('show-comments-button').remove();
+        }
+      }
+    </script>
+  
+</div>
+
     </div>
   </div>
 </div>

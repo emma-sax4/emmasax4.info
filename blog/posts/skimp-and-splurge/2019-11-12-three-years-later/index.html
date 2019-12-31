@@ -298,6 +298,41 @@
 
 <p>There you go! I hope that taking another look at my opinions on these topics proves useful for you, and gives you a place to start from if you’re looking at creating or re-evaluating your budget. Let me know what your opinions on these topics are! Shoot me an email from the link in the <a href="/contact-me/">Contact Me</a> tab!</p>
 
+      <div style="margin-top: 3rem;">
+  
+    <div class="text-center" style="margin-bottom: 1rem;">
+      <button id="show-comments-button" class="btn btn-lg btn-outline-secondary"
+      onclick="loadComments();return false;">
+        Load Comments
+        <i data-feather="message-circle"></i>
+      </button>
+    </div>
+
+    <div id="disqus_thread"></div>
+
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+    <script type="text/javascript">
+      var disqus_loaded = false;
+      var disqus_shortname = 'emmasax4';
+
+      function loadComments() {
+        if (!disqus_loaded) {
+          disqus_loaded = true;
+          (function() {
+            var d = document,
+              s = d.createElement('script');
+            s.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+          })();
+          document.getElementById('show-comments-button').remove();
+        }
+      }
+    </script>
+  
+</div>
+
     </div>
   </div>
 </div>

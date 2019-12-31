@@ -184,6 +184,41 @@
 
 <p>After a stop at Safaricom to get an international SIM card (~$10 for one month of data!) and a stop at an ATM to pick up some cash, we checked into our first hotel. We were surprised to find the hotel had metal detectors at the entrance. Shortly after, we were told by our tour guides that we were advised not to leave the hotel for safely reasons 😬. Welcome to Kenya, everybody!</p>
 
+      <div style="margin-top: 3rem;">
+  
+    <div class="text-center" style="margin-bottom: 1rem;">
+      <button id="show-comments-button" class="btn btn-lg btn-outline-secondary"
+      onclick="loadComments();return false;">
+        Load Comments
+        <i data-feather="message-circle"></i>
+      </button>
+    </div>
+
+    <div id="disqus_thread"></div>
+
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+    <script type="text/javascript">
+      var disqus_loaded = false;
+      var disqus_shortname = 'emmasax4';
+
+      function loadComments() {
+        if (!disqus_loaded) {
+          disqus_loaded = true;
+          (function() {
+            var d = document,
+              s = d.createElement('script');
+            s.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+          })();
+          document.getElementById('show-comments-button').remove();
+        }
+      }
+    </script>
+  
+</div>
+
     </div>
   </div>
 </div>

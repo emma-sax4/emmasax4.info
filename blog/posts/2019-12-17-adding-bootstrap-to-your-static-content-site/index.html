@@ -261,6 +261,41 @@
 
 <p>For more information about how my site uses Bootstrap, please see <a href="/blog/posts/2019-12-29-how-my-site-uses-bootstrap/">this blog post</a>. To learn more about Bootstrap, please read their documentation <a href="https://getbootstrap.com/docs/4.4/getting-started/introduction/" target="_blank">here</a>.</p>
 
+      <div style="margin-top: 3rem;">
+  
+    <div class="text-center" style="margin-bottom: 1rem;">
+      <button id="show-comments-button" class="btn btn-lg btn-outline-secondary"
+      onclick="loadComments();return false;">
+        Load Comments
+        <i data-feather="message-circle"></i>
+      </button>
+    </div>
+
+    <div id="disqus_thread"></div>
+
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+    <script type="text/javascript">
+      var disqus_loaded = false;
+      var disqus_shortname = 'emmasax4';
+
+      function loadComments() {
+        if (!disqus_loaded) {
+          disqus_loaded = true;
+          (function() {
+            var d = document,
+              s = d.createElement('script');
+            s.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+          })();
+          document.getElementById('show-comments-button').remove();
+        }
+      }
+    </script>
+  
+</div>
+
     </div>
   </div>
 </div>
