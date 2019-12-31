@@ -1,6 +1,4 @@
-{% if page.comments == false %}
-  <div style="padding-top: 3rem;"></div>
-{% else %}
+{% if page.comments != false and jekyll.environment == "production" %}
   <div class="text-center">
     <button id="show-comments-button" class="btn btn-lg btn-outline-secondary"
     onclick="loadComments();return false;" style="margin-top: 3rem;">
@@ -31,4 +29,6 @@
       }
     }
   </script>
+{% else %}
+  <div style="padding-top: 3rem;"></div>
 {% endif %}
