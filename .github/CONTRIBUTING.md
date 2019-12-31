@@ -41,6 +41,11 @@ To run this application locally, following these steps:
     ```
 5. Navigate to the local URL Jekyll provides (`http://127.0.0.1:4000` on my machine).
 
+To view Disqus comments and comment loading locally, run Jekyll in the `production` environment (for local development, the default does not show comments):
+```
+JEKYLL_ENV=production bundle exec jekyll serve
+```
+
 NOTE: Running this process locally will most likely create at least one directory locally on your machine, such as `_site/` and `.sass-cache/`, and potentially others. All of these are already in the `.gitignore`, but feel free to add others as necessary.
 
 ## Running Tests & Deployments
