@@ -26,7 +26,7 @@ For my tables on this site, I use [Bootstrap's built-in tables](https://getboots
 
 ### Buttons
 
-This site uses [Bootstrap's buttons](https://getbootstrap.com/docs/4.0/components/buttons/) for all of it's button functionality (unless the button is an icon). Here's a [button that I've made](https://github.com/emma-sax4/emma-sax4.github.io/blob/release/_includes/email_button.html) that uses Bootstrap's design but includes a Feather Icon. I prefer the look of the [Outline buttons](https://getbootstrap.com/docs/4.0/components/buttons/#outline-buttons) more than the solid ones, but that's just my preference.
+This site uses [Bootstrap's buttons](https://getbootstrap.com/docs/4.0/components/buttons/) for all of it's button functionality (unless the button is an icon). Here's a [button that I've made](https://github.com/emma-sax4/emma-sax4.github.io/blob/release/_pages/contact_me.md) that uses Bootstrap's design but includes a Feather Icon. I prefer the look of the [Outline buttons](https://getbootstrap.com/docs/4.0/components/buttons/#outline-buttons) more than the solid ones, but that's just my preference.
 
 ## CSS
 
