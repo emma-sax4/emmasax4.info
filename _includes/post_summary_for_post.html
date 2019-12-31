@@ -24,7 +24,7 @@
     {% if page.category %}
       {% assign category = page.category %}
       {% include category_list.html %}
-    {% elsif page.tags %}
+    {% else if page.tags %}
       {% assign tags = page.tags | sort %}
       {% include tags_list.html %}
     {% endif %}

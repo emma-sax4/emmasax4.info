@@ -1,0 +1,34 @@
+{% if page.comments == false %}
+  <div style="padding-top: 3rem;"></div>
+{% else if %}
+  <div class="text-center">
+    <button id="show-comments-button" class="btn btn-lg btn-outline-secondary"
+    onclick="loadComments();return false;" style="margin-top: 3rem;">
+      Load Comments
+      <i data-feather="message-circle"></i>
+    </button>
+  </div>
+
+  <div id="disqus_thread" style="margin-top: 5rem;"></div>
+
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+  <script type="text/javascript">
+    var disqus_loaded = false;
+    var disqus_shortname = '{{ site.disqus.shortname }}';
+
+    function loadComments() {
+      if (!disqus_loaded) {
+        disqus_loaded = true;
+        (function() {
+          var d = document,
+            s = d.createElement('script');
+          s.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+        document.getElementById('show-comments-button').remove();
+      }
+    }
+  </script>
+{% endif %}
