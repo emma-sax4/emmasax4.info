@@ -56,6 +56,9 @@ collections:
     output: true
     permalink: /blog/posts/:path/
 
+disqus:
+  shortname: emmasax4
+
 plugins:
   - jekyll-paginate-v2
   - jekyll-sitemap
