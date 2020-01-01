@@ -5,11 +5,11 @@ layout: none
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>{{ site.feed_title | xml_escape }}</title>
-    <description>{{ site.feed_description | xml_escape }}</description>
-    <link>{{ site.feed_url }}</link>
+    <title>{{ site.feed[jekyll.environment].title | xml_escape }}</title>
+    <description>{{ site.feed[jekyll.environment].description | xml_escape }}</description>
+    <link>{{ site.feed[jekyll.environment].url }}</link>
     <atom:link href="{{ site.url }}/feed.xml" rel="self" type="application/rss+xml" />
-    {% for post in site.posts limit: site.feed_items %}
+    {% for post in site.posts limit: site.feed[jekyll.environment].items %}
       <item>
         {% if post.subtitle %}
           {% assign short_title = post.title | append: " → " | append: post.subtitle %}
@@ -19,8 +19,8 @@ layout: none
         <title>{{ short_title | xml_escape }}</title>
         <description>{{ post.description | xml_escape }}</description>
         <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
-        <link>{{ site.url }}{{ post.url }}</link>
-        <guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>
+        <link>{{ site.feed[jekyll.environment].url }}{{ post.url }}</link>
+        <guid isPermaLink="true">{{ site.feed[jekyll.environment].url }}{{ post.url }}</guid>
       </item>
     {% endfor %}
   </channel>
