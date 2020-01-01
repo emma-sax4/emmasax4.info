@@ -21,9 +21,15 @@ github:
   repo: https://github.com/emma-sax4/emma-sax4.github.io
   owner: https://github.com/emma-sax4
 
-feed_title: Emma Sax's Blog
-feed_url: https://emmasax4.info/blog/
-feed_items: 5
+feed:
+  production:
+    title: Emma Sax's Blog
+    url: https://emmasax4.info/blog/
+    items: 5
+  development:
+    title: LOCAL Emma's Blog
+    url: https://127.0.0.1:4000/blog/
+    items: 5
 
 future: true
 markdown: kramdown
