@@ -5,7 +5,9 @@ branches:
   only:
     - release
 
-install: bundle install --without development
+install:
+  - bundle config set without 'development'
+  - bundle install
 
 script: JEKYLL_ENV=production bundle exec jekyll build --destination ./site
 
