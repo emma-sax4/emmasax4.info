@@ -5,11 +5,7 @@ branches:
   only:
     - release
 
-notifications:
-  email:
-    on_success: never
-    on_failure: always
-    on_error: always
+install: bundle install --without development
 
 script: JEKYLL_ENV=production bundle exec jekyll build --destination ./site
 
@@ -25,3 +21,9 @@ deploy:
   on:
     branch: release
     condition: $TRAVIS_EVENT_TYPE != cron
+
+notifications:
+  email:
+    on_success: never
+    on_failure: always
+    on_error: always
