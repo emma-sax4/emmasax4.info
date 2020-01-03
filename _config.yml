@@ -21,16 +21,6 @@ github:
   repo: https://github.com/emma-sax4/emma-sax4.github.io
   owner: https://github.com/emma-sax4
 
-feed:
-  production:
-    title: Emma Sax's Blog
-    url: https://emmasax4.info/blog/
-    items: 5
-  development:
-    title: LOCAL Emma's Blog
-    url: https://127.0.0.1:4000/blog/
-    items: 5
-
 future: true
 markdown: kramdown
 
@@ -53,6 +43,10 @@ exclude:
   - Gemfile.lock
   - vendor/
 
+plugins:
+  - jekyll-paginate-v2
+  - jekyll-sitemap
+
 relative_links:
   enabled: true
   collections: true
@@ -65,10 +59,6 @@ collections:
 disqus:
   shortname: emmasax4
 
-plugins:
-  - jekyll-paginate-v2
-  - jekyll-sitemap
-
 pagination:
   enabled: true
   per_page: 5
@@ -78,3 +68,15 @@ pagination:
   trail:
     before: 2
     after: 2
+
+feed:
+  production:
+    title: Emma Sax's Blog
+    site_url: https://emmasax4.info
+    url: https://emmasax4.info/blog/
+    items: 5
+  development:
+    title: LOCAL Emma's Blog
+    site_url: https://127.0.0.1:4000
+    url: https://127.0.0.1:4000/blog/
+    items: 5
