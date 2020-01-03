@@ -251,7 +251,7 @@
 
 <p>So, we could (in theory) make a change to the source code in GitHub, and then have Travis CI build my website and "deploy" it to GitHub Pages. And, it turns out my site was already using Travis CI to test the Jekyll build process on every commit to the <code class="highlighter-rouge">master</code> branch. So, I only had to add a few lines to have Travis CI <em>also</em> deploy my changes:</p>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>script:
-  - JEKYLL_ENV=production bundle exec jekyll build --destination site
+  - JEKYLL_ENV=production bundle exec jekyll build --destination ./site
 
 deploy:
   provider: pages
