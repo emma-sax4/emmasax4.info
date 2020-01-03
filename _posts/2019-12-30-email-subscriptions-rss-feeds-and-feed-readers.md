@@ -53,7 +53,7 @@ layout: none
 {% raw %}</rss>{% endraw %}
 ```
 
-And it works! It works locally and in "production". I can validate my feed <a href="https://validator.w3.org/feed/" target="_blank">here</a>, and I can add my own feed to my feed reader to test it out locally and on master.
+And it works! It works locally and in `production`. I can validate my feed <a href="https://validator.w3.org/feed/" target="_blank">here</a>, and I can add my own feed to my feed reader to test it out locally and on master.
 
 Now we're only left with this question: which feed reader is best? I'm still figuring out the answer to that question. I used <a href="https://feeder.co/reader" target="_blank">feeder.co</a> for most of my testing while implementing this, but it costs about $10/month, and I was just using a free trial. Granted, it did seem handy and it worked well 🤷🏻‍♀️. So now I've installed the <a href="https://chrome.google.com/webstore/detail/rss-feed-reader/cdlhhcmmdobckneongkkmgigcimeibpf" target="_blank">RSS Feed Reader Chrome extension</a>, and I'll play with this just long enough to see if posting a new blog (this one, actually) will update the feed reader. If it does seem to work, then I'll keep digging for the best feed reader out there (that's free... I'm cheap, remember?).
 

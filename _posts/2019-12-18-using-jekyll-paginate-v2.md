@@ -74,7 +74,7 @@ The ending part of that statement is important:
 So, we could (in theory) make a change to the source code in GitHub, and then have Travis CI build my website and "deploy" it to GitHub Pages. And, it turns out my site was already using Travis CI to test the Jekyll build process on every commit to the `master` branch. So, I only had to add a few lines to have Travis CI _also_ deploy my changes:
 ```
 script:
-  - JEKYLL_ENV=production bundle exec jekyll build --destination site
+  - JEKYLL_ENV=production bundle exec jekyll build --destination ./site
 
 deploy:
   provider: pages
