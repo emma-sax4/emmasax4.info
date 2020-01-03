@@ -50,10 +50,10 @@ NOTE: Running this process locally will most likely create at least one director
 
 ## Running Tests & Deployments
 
-This repository doesn't really have any tests at all (GitHub Pages is just a host of static site files, so there's no functionality to test). However, I do want to check that `bundler` can install the necessary dependencies and that Jekyll can properly build the site on each pull request and commit to `release` branch (the default branch in this repository).
+This repository doesn't really have any tests at all (Jekyll sites are just a host of static site files, so there's no functionality to test). However, I do want to check that `bundler` can install the necessary dependencies and that Jekyll can properly build the site on each pull request and commit to `release` branch (the default branch in this repository).
 
-Because of use of Jekyll gems that GitHub doesn't support, this site needs to use a 3rd Party instead of GitHub Pages to compile the code. So, here comes Travis CI to the rescue.
+Because of the use of Jekyll gems that GitHub doesn't support, this site needs to use a 3rd Party instead of GitHub Pages to compile the code. So, here comes Travis CI to the rescue.
 
-When Travis CI runs on the `release` branch, not only does it bundle all of the dependencies and build the site, but it also puts it into a special `./site` directory. Then, Travis CI will run a Travis Deployment to upload that directory to the `master` branch of this GitHub repository. Then, GitHub automatically deploys the commits (in the `master` branch) to GitHub Pages. In this way, We develop the site on a pull request, we merge source code into the `release` branch, and then Travis CI builds the code and commits that automagically to the `master` branch. Then GitHub Pages does their thing.
+When Travis CI runs on the `release` branch, not only does it bundle all of the dependencies and build the site, but it also puts it into a special `./site` directory. Then, Travis CI will run a Travis Deployment to upload that directory to the `master` branch of this GitHub repository. Then, GitHub automatically deploys the commits (in the `master` branch) to GitHub Pages. In this way, we develop the site on a pull request, we merge source code into the `release` branch, and then Travis CI builds the code and commits that automagically to the `master` branch. Then GitHub Pages does their thing.
 
 A full deployment only takes about five minutes, but depending on what was changed (HTML files, images, etc), it can take up to about ten minutes to propagate the changes. To make the changes appear faster, you can reload the entire website in incognito mode.
