@@ -1,3 +1,12 @@
+GIT
+  remote: https://github.com/emma-sax4/jekyll-mentions.git
+  revision: 7cab9768c2a4c111ddfebff5306fffe842c7c823
+  branch: allow_overriding_base_url_frontmatter
+  specs:
+    jekyll-mentions (1.5.1)
+      html-pipeline (~> 2.3)
+      jekyll (>= 3.7, < 5.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -37,9 +46,6 @@ GEM
       safe_yaml (~> 1.0)
     jekyll-default-layout (0.1.4)
       jekyll (~> 3.0)
-    jekyll-mentions (1.5.1)
-      html-pipeline (~> 2.3)
-      jekyll (>= 3.7, < 5.0)
     jekyll-paginate-v2 (2.0.0)
       jekyll (~> 3.0)
     jekyll-relative-links (0.6.1)
@@ -87,7 +93,7 @@ PLATFORMS
 DEPENDENCIES
   jekyll (~> 3.8.5)
   jekyll-default-layout (~> 0.1.4)
-  jekyll-mentions (~> 1.5.1)
+  jekyll-mentions!
   jekyll-paginate-v2 (~> 2.0.0)
   jekyll-relative-links (~> 0.6.1)
   jekyll-seo-tag (~> 2.6.1)

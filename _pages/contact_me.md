@@ -3,6 +3,10 @@ layout: page
 title: Contact Me
 order: 5
 permalink: /contact-me/
+jekyll-mentions: https://twitter.com
+---
+
+@brianMitchL
 ---
 
 If you have a question or comment about this website, please make a GitHub Issue:
