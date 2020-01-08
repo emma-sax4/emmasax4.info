@@ -5,6 +5,8 @@ order: 3
 permalink: /around-town/
 ---
 
+@brianMitchL
+
 ## Talks
 
 * _What We Learn from Reviewing Others' Work_, DevOpsDays MSP 2019 (<a href="/assets/resources/DevOpsDays_MSP_Ignite_20190806.pdf" target="_blank">slides</a>, <a href="https://devopsdays.org/events/2019-minneapolis/program/emma-sax/" target="_blank">recording</a>)

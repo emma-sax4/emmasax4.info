@@ -2,6 +2,12 @@
 layout: post
 title: Using <header-code>jekyll-paginate-v2</header-code>
 tags: [ jekyll, tech ]
+jekyll-mentions:
+  base_url: https://twitter.com
+---
+
+@BrianMitchL
+
 ---
 
 A couple of weeks ago, I started the endeavor of adding Bootstrap to this website. You can read more about how this repository uses Bootstrap, and how to add Bootstrap to a static content site [here](/blog/posts/2019-12-17-adding-bootstrap-to-your-static-content-site/).
