@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/emma-sax4/jekyll-mentions.git
-  revision: f5cbe0096552bc26a827fc0eceecbd0e79b761ee
+  revision: 2f62269bc3f5e17931b69918701da68cbb1d3635
   specs:
     jekyll-mentions (1.5.1)
       html-pipeline (~> 2.3)
