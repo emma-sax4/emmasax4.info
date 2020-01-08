@@ -48,7 +48,7 @@ nav.navbar {
 
 Then, right away I could delete all of the old navbar CSS code! This included a solid chunk of lines!
 
-Next, I wanted to make it so the menu button (also known as a hamburger 🍔 icon) would turn into an ❌ button when the navbar expanded. This took more time, and to be honest, if not for <a href="https://github.com/brianMitchL" target="_blank">@brianMitchL</a>'s help, I may still be struggling. In order to save you from struggling, I'll give you some code:
+Next, I wanted to make it so the menu button (also known as a hamburger 🍔 icon) would turn into an ❌ button when the navbar expanded. This took more time, and to be honest, if not for @brianMitchL's help, I may still be struggling. In order to save you from struggling, I'll give you some code:
 ```
 nav.navbar {
   > .navbar-toggler {
