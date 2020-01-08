@@ -3,10 +3,7 @@ layout: page
 title: About Me
 order: 2
 permalink: /about-me/
-jekyll-mentions: false
 ---
-
-@brianMitchL
 
 My entire career has been spent on the Operations side of DevOps. But I dabble in website development in Ruby on Rails—and of course, Jekyll and GitHub Pages. For a more detailed version of my experience, please visit my <a href="https://www.linkedin.com/in/emma-sax4" target="_blank">LinkedIn</a>.
 

@@ -4,10 +4,6 @@ title: More Websites, Jekyll, and DNS
 tags: [ tech, jekyll ]
 ---
 
-@BrianMitchL
-
----
-
 Last week, for the first time in a couple of months, I felt the need to do more with my Jekyll website(s). GitHub Pages provides an opportunity to host as many sites as I wish, as long as their repository code is public and I'm okay with the resulting site being public. I wasn't really okay with that situation, so instead, I opted to look at GitHub Pro. GitHub Pro offered to host my GitHub Pages site on repositories that were private, which was basically exactly what I wanted. I know that GitLab Pages could provide me with that same setup for free, but my whole world is on GitHub, and I didn't quite feel the need to switch that up yet.
 
 When it comes to having a private website though, neither GitHub Pages nor GitLab Pages offers that. So, I went to the handy-dandy Google for how to protect a GitHub pages site. I ended up finding <a href='https://github.com/chrisssycollins/protected-github-pages' target='_blank'>@chrisssycollins' repo _protected-github-pages_</a>. Although the first Google result was actually basically the same thing (<a href='https://github.com/matteobrusa/Password-protection-for-static-pages' target='_blank'>@matteobrusa's _Password-protection-for-static-pages_</a>), I found I liked the documentation in @chrisssycollins' version better than @matteobrusa's version. #SorryNotSorry. 🤷🏻‍♀️. So, I'll acknowledge @chrisssycollins' version in my post and README.md instead 😉.
