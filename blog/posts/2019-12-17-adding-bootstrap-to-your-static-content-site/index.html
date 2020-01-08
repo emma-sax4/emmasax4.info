@@ -27,8 +27,8 @@
 <meta name="generator" content="Jekyll v3.8.6" />
 <meta property="og:title" content="Adding Bootstrap to Your Static Content Site" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Between when I originally turned this website into a Jekyll site and a couple of weeks ago, a decent amount of CSS in the site had been slowly changing. First of all, the navigation bar had gone from a whole quarter of the screen to just a small top bar. The navigation words had moved to the right of the screen. But most importantly, I was attempting to make the site responsive to different screen widths (particularly mobile vs. computer). And there was a point when I realized that there were certain limitations my CSS/HTML knowledge had." />
-<meta property="og:description" content="Between when I originally turned this website into a Jekyll site and a couple of weeks ago, a decent amount of CSS in the site had been slowly changing. First of all, the navigation bar had gone from a whole quarter of the screen to just a small top bar. The navigation words had moved to the right of the screen. But most importantly, I was attempting to make the site responsive to different screen widths (particularly mobile vs. computer). And there was a point when I realized that there were certain limitations my CSS/HTML knowledge had." />
+<meta name="description" content="@brianMitchL" />
+<meta property="og:description" content="@brianMitchL" />
 <link rel="canonical" href="https://emmasax4.info/blog/posts/2019-12-17-adding-bootstrap-to-your-static-content-site/" />
 <meta property="og:url" content="https://emmasax4.info/blog/posts/2019-12-17-adding-bootstrap-to-your-static-content-site/" />
 <meta property="og:site_name" content="Emma’s Website and Blog" />
@@ -38,7 +38,7 @@
 <meta name="msvalidate.01" content="89B2B19FF966341B78EF64EDADE6DF81" />
 <meta name="yandex-verification" content="c2741887f8c30dd1" />
 <script type="application/ld+json">
-{"datePublished":"2019-12-17T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emmasax4.info/blog/posts/2019-12-17-adding-bootstrap-to-your-static-content-site/"},"description":"Between when I originally turned this website into a Jekyll site and a couple of weeks ago, a decent amount of CSS in the site had been slowly changing. First of all, the navigation bar had gone from a whole quarter of the screen to just a small top bar. The navigation words had moved to the right of the screen. But most importantly, I was attempting to make the site responsive to different screen widths (particularly mobile vs. computer). And there was a point when I realized that there were certain limitations my CSS/HTML knowledge had.","@type":"BlogPosting","url":"https://emmasax4.info/blog/posts/2019-12-17-adding-bootstrap-to-your-static-content-site/","headline":"Adding Bootstrap to Your Static Content Site","dateModified":"2019-12-17T00:00:00+00:00","@context":"https://schema.org"}</script>
+{"headline":"Adding Bootstrap to Your Static Content Site","description":"@brianMitchL","datePublished":"2019-12-17T00:00:00+00:00","dateModified":"2019-12-17T00:00:00+00:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://emmasax4.info/blog/posts/2019-12-17-adding-bootstrap-to-your-static-content-site/"},"url":"https://emmasax4.info/blog/posts/2019-12-17-adding-bootstrap-to-your-static-content-site/","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -187,13 +187,17 @@
 </h1>
 
     <div class="page-body">
-      <p>Between when I originally turned this website into a Jekyll site and a couple of weeks ago, a decent amount of CSS in the site had been slowly changing. First of all, the navigation bar had gone from a whole quarter of the screen to just a small top bar. The navigation words had moved to the right of the screen. But most importantly, I was attempting to make the site responsive to different screen widths (particularly mobile vs. computer). And there was a point when I realized that there were certain limitations my CSS/HTML knowledge had.</p>
+      <p>@brianMitchL</p>
+
+<hr />
+
+<p>Between when I originally turned this website into a Jekyll site and a couple of weeks ago, a decent amount of CSS in the site had been slowly changing. First of all, the navigation bar had gone from a whole quarter of the screen to just a small top bar. The navigation words had moved to the right of the screen. But most importantly, I was attempting to make the site responsive to different screen widths (particularly mobile vs. computer). And there was a point when I realized that there were certain limitations my CSS/HTML knowledge had.</p>
 
 <p>Although it is arguably beneficial for a coder like me (that’s young in my career) to hand-craft all of my site’s CSS, the truth is that the site won’t come out as nicely as if I use a 3rd party tool. And, one could even claim that getting experience in implementing a 3rd party tool, and figuring out the best ways to use it, is even better experience.</p>
 
 <p>So, let’s walk through the process of adding Bootstrap to a Jekyll site, since this is what I did <em>very</em> recently.</p>
 
-<hr>
+<hr />
 
 <h2 id="install-bootstrap-into-your-site">Install Bootstrap into your site</h2>
 
@@ -273,7 +277,7 @@
 
 <p>At the end of the day (or a few days), my repo ended up going from over 650 lines of CSS code to 185 lines. That means I cut out at least 72% of my existing CSS code. <em>And</em> I have a better-looking, more responsive, more modern, and accessible website? It’s a win-win.</p>
 
-<hr>
+<hr />
 
 <p>Thank you so much for getting to the bottom of that rather technical blog post. I hope it’s enough compelling evidence to remember that using a 3rd party tool to make your website’s CSS better is worth it. If I (a back-end coder with very little CSS experience) can make it happen, then so can you 😉.</p>
 
@@ -282,7 +286,8 @@
       <div style="margin-top: 3rem;">
   
     <div class="text-center" style="margin-bottom: 1rem;">
-      <button id="show-comments-button" class="btn btn-lg btn-outline-secondary" onclick="loadComments();return false;">
+      <button id="show-comments-button" class="btn btn-lg btn-outline-secondary"
+      onclick="loadComments();return false;">
         Load Comments
         <i data-feather="message-circle"></i>
       </button>
@@ -290,8 +295,7 @@
 
     <div id="disqus_thread"></div>
 
-    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
-</noscript>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 
     <script type="text/javascript">
       var disqus_loaded = false;
