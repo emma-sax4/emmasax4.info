@@ -14,7 +14,8 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Emma's Website and Blog
+title: Emma Sax
+description: Emma's Website and Blog
 url: https://emmasax4.info
 
 webmaster_verifications:
