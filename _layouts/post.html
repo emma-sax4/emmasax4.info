@@ -9,6 +9,16 @@ layout: default
     <div class="text-center" style="margin-bottom: 1rem;">
       {% include rss_button.html %}
     </div>
+
+    <div class="text-center" style="margin-bottom: 1rem;">
+      {% if page.category %}
+        {% assign category = page.category %}
+        {% include category_list.html %}
+      {% elsif page.tags %}
+        {% assign tags = page.tags | sort %}
+        {% include tags_list.html %}
+      {% endif %}
+    </div>
   </div>
 
   <div class="col col-12 col-md-10">
