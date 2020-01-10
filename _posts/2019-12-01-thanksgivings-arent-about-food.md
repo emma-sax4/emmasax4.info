@@ -22,4 +22,4 @@ So with that, have a happy holiday season, filled with love, joy, and gratefulne
 
 ## References
 
-* <a href="https://en.wikipedia.org/wiki/Thanksgiving_(United_States)" target="_blank">wikipedia.org: Thanksgiving</a>
+* [wikipedia.org: Thanksgiving](https://en.wikipedia.org/wiki/Thanksgiving_(United_States)){:target="blank"}
