@@ -55,6 +55,8 @@ GEM
       jekyll (>= 3.3, < 5.0)
     jekyll-sitemap (1.4.0)
       jekyll (>= 3.7, < 5.0)
+    jekyll-time-to-read (0.1.2)
+      jekyll
     jekyll-titles-from-headings (0.5.3)
       jekyll (>= 3.3, < 5.0)
     jekyll-watch (2.2.1)
@@ -97,6 +99,7 @@ DEPENDENCIES
   jekyll-relative-links (~> 0.6.1)
   jekyll-seo-tag (~> 2.6.1)
   jekyll-sitemap (~> 1.4.0)
+  jekyll-time-to-read (~> 0.1.2)
   jekyll-titles-from-headings (~> 0.5.3)
 
 BUNDLED WITH
