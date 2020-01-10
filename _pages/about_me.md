@@ -5,7 +5,7 @@ order: 2
 permalink: /about-me/
 ---
 
-My entire career has been spent on the Operations side of DevOps. But I dabble in website development in Ruby on Rails—and of course, Jekyll and GitHub Pages. For a more detailed version of my experience, please visit my [LinkedIn](https://www.linkedin.com/in/emma-sax4){:target="blank"}.
+My entire career has been spent on the Operations side of DevOps. But I dabble in website development in Ruby on Rails—and of course, Jekyll and GitHub Pages. For a more detailed version of my experience, please visit my [LinkedIn](https://www.linkedin.com/in/emma-sax4){:target="_blank"}.
 
 ## Tools, Frameworks, & Languages
 

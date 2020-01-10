@@ -35,7 +35,7 @@ If your site does start to break, then that's an indicator that there's probably
 
 ## Go through your CSS bit by bit and delete those bits
 
-To do this part, I started with the biggest single element I could find: my navbar. I started by taking a look at [Bootstrap's built-in navbar](https://getbootstrap.com/docs/4.0/components/navbar/){:target="blank"}, and worked my way through my particular HTML file implementing a basic version of Bootstrap's navbar. This involved changing the `class` names and moving around the lines of Jekyll code that write the menu on the top. I didn't care if it was responsive or not; I could get to that later.
+To do this part, I started with the biggest single element I could find: my navbar. I started by taking a look at [Bootstrap's built-in navbar](https://getbootstrap.com/docs/4.0/components/navbar/){:target="_blank"}, and worked my way through my particular HTML file implementing a basic version of Bootstrap's navbar. This involved changing the `class` names and moving around the lines of Jekyll code that write the menu on the top. I didn't care if it was responsive or not; I could get to that later.
 
 After I implemented the basics of the navbar, it worked pretty miraculously. It also turned out to basically be responsive right away, all I had to do was modify a few more `class` names. Then, it was time to make the navbar look like mine (with similar colors, sizing, etc).
 
@@ -70,7 +70,7 @@ nav.navbar {
 
 Now, with only 20 minutes of work, I have a fully-functioning navbar that fits Accessibility standards, too!
 
-After the navbar, I tackled [Boostrap's buttons](https://getbootstrap.com/docs/4.0/components/buttons/){:target="blank"}, [general page layouts](https://getbootstrap.com/docs/4.0/layout/overview/){:target="blank"}, and [columns](https://getbootstrap.com/docs/4.0/layout/grid/){:target="blank"}.
+After the navbar, I tackled [Boostrap's buttons](https://getbootstrap.com/docs/4.0/components/buttons/){:target="_blank"}, [general page layouts](https://getbootstrap.com/docs/4.0/layout/overview/){:target="_blank"}, and [columns](https://getbootstrap.com/docs/4.0/layout/grid/){:target="_blank"}.
 
 To do the buttons, you can go through the same process as with the navbar:
 1. Look up the basic Bootstrap button's HTML
@@ -89,7 +89,7 @@ Same process with the columns. To do the page layouts and responsive breakpoints
 
 Previously, I was running that second line without the `class="container"`. But, once we added that, suddenly the entire site's body was fully responsive! Now, everything word-wrapped appropriately from a huge screen, right down to 320px wide (the size of an iPhone 5/SE). It's brilliant!
 
-Over the next couple days, I eventually completely switched to using [Bootstrap's tables](https://getbootstrap.com/docs/4.0/content/tables/){:target="blank"} and [Bootstrap's pagination](https://getbootstrap.com/docs/4.0/components/pagination/){:target="blank"} (but I'll get to that in another blog post).
+Over the next couple days, I eventually completely switched to using [Bootstrap's tables](https://getbootstrap.com/docs/4.0/content/tables/){:target="_blank"} and [Bootstrap's pagination](https://getbootstrap.com/docs/4.0/components/pagination/){:target="_blank"} (but I'll get to that in another blog post).
 
 At the end of the day (or a few days), my repo ended up going from over 650 lines of CSS code to 185 lines. That means I cut out at least 72% of my existing CSS code. _And_ I have a better-looking, more responsive, more modern, and accessible website? It's a win-win.
 
@@ -97,4 +97,4 @@ At the end of the day (or a few days), my repo ended up going from over 650 line
 
 Thank you so much for getting to the bottom of that rather technical blog post. I hope it's enough compelling evidence to remember that using a 3rd party tool to make your website's CSS better is worth it. If I (a back-end coder with very little CSS experience) can make it happen, then so can you 😉.
 
-For more information about how my site uses Bootstrap, please see [this blog post](/blog/posts/2019-12-29-how-my-site-uses-bootstrap/). To learn more about Bootstrap, please read their documentation [here](https://getbootstrap.com/docs/4.4/getting-started/introduction/){:target="blank"}.
+For more information about how my site uses Bootstrap, please see [this blog post](/blog/posts/2019-12-29-how-my-site-uses-bootstrap/). To learn more about Bootstrap, please read their documentation [here](https://getbootstrap.com/docs/4.4/getting-started/introduction/){:target="_blank"}.
