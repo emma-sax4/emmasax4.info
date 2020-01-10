@@ -29,6 +29,10 @@ github:
 
 future: true
 markdown: kramdown
+jekyll-mentions: https://github.com
+
+disqus:
+  shortname: emmasax4
 
 kramdown:
   smart_quotes:
@@ -67,11 +71,6 @@ collections:
   posts:
     output: true
     permalink: /blog/posts/:path/
-
-disqus:
-  shortname: emmasax4
-
-jekyll-mentions: https://github.com
 
 pagination:
   enabled: true
