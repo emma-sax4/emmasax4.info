@@ -8,7 +8,7 @@ permalink: /contact-me/
 If you have a question or comment about this website, please make a GitHub Issue:
 
 <div class="text-center link-icon-button" style="margin-bottom: 1rem;">
-  <a href="https://github.com/emma-sax4/emma-sax4.github.io/issues/new/choose" target="blank" class="btn btn-md btn-outline-secondary">
+  <a href="https://github.com/emma-sax4/emma-sax4.github.io/issues/new/choose" target="_blank" class="btn btn-md btn-outline-secondary">
     <i data-feather="github"></i>
     emma-sax4/emma-sax4.github.io
   </a>

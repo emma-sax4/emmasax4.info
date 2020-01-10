@@ -60,7 +60,7 @@ Icons are called like this:
 
 To make the icon into a button, you can write it in an `a href` tag:
 ```html
-<a href="https://twitter.com/emma_sax4" target="blank" class="link-icon">
+<a href="https://twitter.com/emma_sax4" target="_blank" class="link-icon">
   <i data-feather="twitter"></i>
 </a>
 ```
