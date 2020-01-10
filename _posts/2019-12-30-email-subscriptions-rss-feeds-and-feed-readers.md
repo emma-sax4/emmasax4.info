@@ -18,9 +18,17 @@ But, since a reader requested it, I'll play along and implement an RSS feed on m
 
 I added these values to my `_config.yml`:
 ```
-feed_title: Emma Sax's Blog
-feed_url: https://emmasax4.info/blog/
-feed_items: 5
+feed:
+  production:
+    title: Emma Sax's Blog
+    site_url: https://emmasax4.info
+    url: https://emmasax4.info/blog/
+    items: 5
+  development:
+    title: LOCAL Emma's Blog
+    site_url: https://127.0.0.1:4000
+    url: https://127.0.0.1:4000/blog/
+    items: 5
 ```
 and added this file to the root of my repository:
 ```
@@ -28,29 +36,30 @@ and added this file to the root of my repository:
 layout: none
 ---
 
-{% raw %}<?xml version="1.0" encoding="UTF-8"?>{% endraw %}
-{% raw %}<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">{% endraw %}
-{% raw %}  <channel>{% endraw %}
-{% raw %}    <title>{{ site.feed_title | xml_escape }}</title>{% endraw %}
-{% raw %}    <description>{{ site.feed_description | xml_escape }}</description>{% endraw %}
-{% raw %}    <link>{{ site.feed_url }}</link>{% endraw %}
-{% raw %}    <atom:link href="{{ site.url }}/feed.xml" rel="self" type="application/rss+xml" />{% endraw %}
-{% raw %}    {% for post in site.posts limit: site.feed_items %}{% endraw %}
-{% raw %}      <item>{% endraw %}
-{% raw %}        {% if post.subtitle %}{% endraw %}
-{% raw %}          {% assign short_title = post.title | append: " → " | append: post.subtitle %}{% endraw %}
-{% raw %}        {% else %}{% endraw %}
-{% raw %}          {% assign short_title = post.title %}{% endraw %}
-{% raw %}        {% endif %}{% endraw %}
-{% raw %}        <title>{{ short_title | xml_escape }}</title>{% endraw %}
-{% raw %}        <description>{{ post.description | xml_escape }}</description>{% endraw %}
-{% raw %}        <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>{% endraw %}
-{% raw %}        <link>{{ site.url }}{{ post.url }}</link>{% endraw %}
-{% raw %}        <guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>{% endraw %}
-{% raw %}      </item>{% endraw %}
-{% raw %}    {% endfor %}{% endraw %}
-{% raw %}  </channel>{% endraw %}
-{% raw %}</rss>{% endraw %}
+{% raw %}<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  {% assign feed = site.feed[jekyll.environment] %}
+  <channel>
+    <title>{{ feed.title | xml_escape }}</title>
+    <description>{{ feed.description | xml_escape }}</description>
+    <link>{{ feed.url }}</link>
+    <atom:link href="{{ feed.site_url }}/feed.xml" rel="self" type="application/rss+xml" />
+    {% for post in site.posts limit: feed.items %}
+      <item>
+        {% if post.subtitle %}
+          {% assign short_title = post.title | append: " → " | append: post.subtitle %}
+        {% else %}
+          {% assign short_title = post.title %}
+        {% endif %}
+        <title>{{ short_title | xml_escape }}</title>
+        <description>{{ post.description | xml_escape }}</description>
+        <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
+        <link>{{ feed.url }}{{ post.url }}</link>
+        <guid isPermaLink="true">{{ feed.url }}{{ post.url }}</guid>
+      </item>
+    {% endfor %}
+  </channel>
+</rss>{% endraw %}
 ```
 
 And it works! It works locally and in `production`. I can validate my feed [here](https://validator.w3.org/feed/){:target="_blank"}, and I can add my own feed to my feed reader to test it out locally and on master.
@@ -60,6 +69,12 @@ Now we're only left with this question: which feed reader is best? I'm still fig
 I do know that there are a plethora of mobile apps and desktop/laptop computer apps available that can help users read their feeds. There's probably even one that sends you an email when it detects a new content.
 
 Please let me know if you currently use any great feed readers or if you come across one. I'll post any updates about my feed readers as they come up 😊. Good luck subscribing!
+
+---
+
+Update:
+
+I believe I've finally found a feed reader that I like! It's called [Feedbro](https://twitter.com/feedbro){:target="_blank"}, and I use it as a Chrome extension. I've added only two feeds: my site's normal [feed](/feed.xml), and a local development version of my site's feed. To learn more about Feedbro, check it out [here](https://nodetics.com/feedbro/){:target="_blank"}. For more information about how I specify a `feed.xml` for two environments, check out [my GitHub gist](https://gist.github.com/emma-sax4/7c3b70a8f983fea9610209e9d7618cf4){:target="_blank"}.
 
 ## References
 
