@@ -43,7 +43,7 @@ So, here's my revised list of requirements:
 * Laundry (this doesn't need to be free, and it doesn't need to be in-unit, but I do think I'd put my foot down on the place if the machines used quarters)
 * Fitness room in building (even though I don't go to the gym as often as I'd like to admit, it's still nice having this option in the building)
 * Mail and package receiving (normal mail is common, package rooms are a newer amentity that I could see older complexes not having)
-* No smoking in the building or on balconies (this is actually a huge one for me as a non-smoker.... I hate the smell of cigarettes)
+* No smoking in the building or on balconies (this is actually a huge one for me as a non-smoker... I hate the smell of cigarettes)
 * Comcast as an optional internet provider (since I work for NBCUniversal and Comcast, I get free internet and cable; there's no way I would willingly pay another internet provider when I could just get free internet through my work)
 * Bonus: an indoor swimming pool and hot tub (I love to swim, in fact, it's probably my most preferred sport, so having these as bonus amentities make living anywhere way more enjoyable)
 
@@ -87,7 +87,7 @@ When it comes to phone bills, paying some amount of money for a phone bill is a 
 
 I still stand by this belief. It's important to have a good car that will last. My car hardly needs maintenance (besides routine tire rotations, tire alignments, and oil changes), but not much more, because it's still so new. My coworker's car has been in the auto shop for the past week, just getting fixed up to driveable condition because it's much older.
 
-However.... I got my car new.... and that's definitely not the most financially responsible thing to do. I should've gotten a used car that was a few years old. It still would've lasted just as long, and it would've been cheaper by about $5k. But, I opted for the newest safety features when I got my car, and those were only available in newer CR-V models.
+However... I got my car new... and that's definitely not the most financially responsible thing to do. I should've gotten a used car that was a few years old. It still would've lasted just as long, and it would've been cheaper by about $5k. But, I opted for the newest safety features when I got my car, and those were only available in newer CR-V models.
 
 The one other thing I'd recommend against is fixing your car up when you bump into something. Everybody gets some damage on their car eventually. Whether that's scratches, running into a pole in the parking lot, bumping your back bumper into a snowbank, etc. In my limited experience, paying the shop to fix it up is rarely worth it. There was one time where I ran into the back of a semi truck, and my passenger-side mirror cracked. Replacing that was worth it because I couldn't see out of it. That was affecting my ability to drive my vehicle.
 
