@@ -4,7 +4,7 @@ title: DNS, Domains, and Personal Websites
 tags: [ tech ]
 ---
 
-There's many companies that provide the ability for individuals to have their own websites. They include [GitHub Pages](https://pages.github.com/){:target="_blank"} (where this site is hosted), [GitLab Pages](https://about.gitlab.com/product/pages/){:target="_blank"}, [WordPress](https://wordpress.com/){:target="_blank"}, [Blogger](https://www.blogger.com/about/?r=2){:target="_blank"}, [Wix](https://www.wix.com/){:target="_blank"}, [Google Sites](https://support.google.com/a/users/answer/9314941?hl=en){:target="_blank"}, [Weebly](https://www.weebly.com/){:target="_blank"}, [HostGator](https://www.hostgator.com/){:target="_blank"}, [GoDaddy](https://www.godaddy.com/websites/website-builder){:target="_blank"}, and even [The Knot](https://www.theknot.com/gs/wedding-websites){:target="_blank"}. That's only naming a few. Every single site has their own pros and cons. Some provide more themes. Some provide more flexibility but require the user to know how to code. Some are completely free but usually sacrifice flexibility and theme options. Some start as free but then have payment plans to get more features.
+There's many companies that provide the ability for individuals to have their own websites. They include [GitHub Pages](https://pages.github.com/) (where this site is hosted), [GitLab Pages](https://about.gitlab.com/product/pages/), [WordPress](https://wordpress.com/), [Blogger](https://www.blogger.com/about/?r=2), [Wix](https://www.wix.com/), [Google Sites](https://support.google.com/a/users/answer/9314941?hl=en), [Weebly](https://www.weebly.com/), [HostGator](https://www.hostgator.com/), [GoDaddy](https://www.godaddy.com/websites/website-builder), and even [The Knot](https://www.theknot.com/gs/wedding-websites). That's only naming a few. Every single site has their own pros and cons. Some provide more themes. Some provide more flexibility but require the user to know how to code. Some are completely free but usually sacrifice flexibility and theme options. Some start as free but then have payment plans to get more features.
 
 Individuals may choose different hosting options for different websites, depending on their needs for the site. As an example, I have two maintained websites on my domain. This is my first one. I host on GitHub Pages because I feel comfortable enough to code and maintain my own site, and I like the flexibility it provides. But I also host a site on Google Sites. I host there because it doesn't need a fancy theme, and setup needed to be extra fast (I managed to easily set up that site within four hours).
 
@@ -77,7 +77,7 @@ There's several different types of configurations. The basic thing to know is th
 
 ## Domains + Your Website
 
-Now, let's walk through some examples of these DNS records may look like if you set up your website on a few different host providers. Note that TTL stands for Time to Live, and it specifies how long a resolver is supposed to cache the DNS query before looking for any new DNS queries. I purchased and manage my DNS on [Namecheap](https://namecheap.com/){:target="_blank"} (that's not a secret, so I don't feel bad disclosing that at all).
+Now, let's walk through some examples of these DNS records may look like if you set up your website on a few different host providers. Note that TTL stands for Time to Live, and it specifies how long a resolver is supposed to cache the DNS query before looking for any new DNS queries. I purchased and manage my DNS on [Namecheap](https://namecheap.com/) (that's not a secret, so I don't feel bad disclosing that at all).
 
 DNS records when setting up your website with your main domain on GitHub Pages:
 ```
@@ -138,12 +138,12 @@ I haven't worked with adding domains to any other website host providers, so I c
 So there you go! Hopefully this has helped you either learn more about DNS and domains, or will help you in choosing your personal domain and setting it up on your new website! Best of luck. I can attest that having your own website can be fun! It gives you a fun hobby and project, and it's definitely something that you can be proud of.
 
 ## References
-* [hownds.works](https://howdns.works/){:target="_blank"}
-* [dyn.com: everything you ever wanted to know about ttls](https://dyn.com/blog/dyn-tech-everything-you-ever-wanted-to-know-about-ttls/){:target="_blank"}
-* [support.dnsimple.com: differences between a cname alias url](https://support.dnsimple.com/articles/differences-between-a-cname-alias-url/){:target="_blank"}
-* [quora.com: why do some websites have www at the start but others have http](https://www.quora.com/Why-do-some-websites-have-www-at-the-start-but-others-have-http){:target="_blank"}
-* [www.oit.edu: understanding parts of internet address](https://www.oit.edu/libraries/help/internet-guides/understanding-parts-of-internet-address){:target="_blank"}
-* [www.webopedia: url.html](https://www.webopedia.com/TERM/U/URL.html){:target="_blank"}
-* [www.howtogeek.com: add your own domain to your wordpress.com blog](https://www.howtogeek.com/howto/18799/add-your-own-domain-to-your-wordpress.com-blog/){:target="_blank"}
-* [quora.com: what do you call the section at the end of an email that includes peoples job contact info](https://www.quora.com/What-do-you-call-the-section-at-the-end-of-an-email-that-includes-peoples-job-contact-info-etc-How-can-I-design-one-for-myself){:target="_blank"}
-* [namecheap.com](https://namecheap.com/){:target="_blank"}
+* [hownds.works](https://howdns.works/)
+* [dyn.com: everything you ever wanted to know about ttls](https://dyn.com/blog/dyn-tech-everything-you-ever-wanted-to-know-about-ttls/)
+* [support.dnsimple.com: differences between a cname alias url](https://support.dnsimple.com/articles/differences-between-a-cname-alias-url/)
+* [quora.com: why do some websites have www at the start but others have http](https://www.quora.com/Why-do-some-websites-have-www-at-the-start-but-others-have-http)
+* [www.oit.edu: understanding parts of internet address](https://www.oit.edu/libraries/help/internet-guides/understanding-parts-of-internet-address)
+* [www.webopedia: url.html](https://www.webopedia.com/TERM/U/URL.html)
+* [www.howtogeek.com: add your own domain to your wordpress.com blog](https://www.howtogeek.com/howto/18799/add-your-own-domain-to-your-wordpress.com-blog/)
+* [quora.com: what do you call the section at the end of an email that includes peoples job contact info](https://www.quora.com/What-do-you-call-the-section-at-the-end-of-an-email-that-includes-peoples-job-contact-info-etc-How-can-I-design-one-for-myself)
+* [namecheap.com](https://namecheap.com/)
