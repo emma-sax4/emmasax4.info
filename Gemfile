@@ -8,7 +8,6 @@ gem 'jekyll-mentions',
 gem 'html-pipeline',
   :git => 'https://github.com/emma-sax4/html-pipeline.git',
   :branch => 'option_to_open_mention_in_new_tab'
-# gem 'jekyll-mentions', :path => '/Users/emmasax/Personal/jekyll-mentions'
 gem 'jekyll-paginate-v2', '~> 2.0.0'
 gem 'jekyll-relative-links', '~> 0.6.1'
 gem 'jekyll-seo-tag', '~> 2.6.1'
