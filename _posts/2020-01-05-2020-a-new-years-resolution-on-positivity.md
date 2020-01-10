@@ -1,6 +1,6 @@
 ---
 layout: post
-title: '2020: A New Years Resolution on Positivity'
+title: "2020: A New Years Resolution on Positivity"
 ---
 
 Just a few days before NYE this past year, my dad sent my immediate family a link to a Wall Street Journal (WSJ) article: [_For the New Year, Say No to Negativity_](https://www.wsj.com/articles/for-the-new-year-say-no-to-negativity-11577464413){:target="blank"}. The past few months, I've been going through my life and focusing on trying to become happier person... happier with myself, with my partner, with my body, with my work, and with my life. So, this article particularly spoke to me, and I thought it could be useful for myself to go through it and write on it, and I'm hoping that it'll be useful for you (my readers) as well. So, without further ado, let's discuss!
