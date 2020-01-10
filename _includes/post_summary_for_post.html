@@ -21,12 +21,8 @@
   </div>
 
   <div class="text-center" style="margin-top: -1rem; margin-bottom: -1rem;">
-    {% if page.category %}
-      {% assign category = page.category %}
-      {% include category_list.html %}
-    {% elsif page.tags %}
-      {% assign tags = page.tags | sort %}
-      {% include tags_list.html %}
-    {% endif %}
+    <span class="post-meta">
+      Read time: {{ content | reading_time_as_i }}
+    </span>
   </div>
 </h1>
