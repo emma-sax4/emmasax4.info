@@ -58,7 +58,7 @@ back to my `main.scss`, and finally the pagination was beautiful:
 
 I was thrilled with the outcome of this pagination (even though it wasn't Jekyll's officially supported pagination), and I committed to master. However, perhaps a day later, I noticed something wrong with my CSS formatting. Perhaps you can notice it if you compare the before-pretty-pagination and the after-pretty-pagination pictures... I'll give you a hint: it has to do with the indentation and spacing of the words. Somehow, making the pagination bar pretty messed up my CSS formatting!
 
-I was upset. I wanted to have both a pretty pagination bar and proper formatting of the text. So, I went back in my commit changes and commented out everything from when the site last worked as expected. I slowly uncommented line after line until I found the problem line.... of course it happened to be with the same line that makes the pagination work:
+I was upset. I wanted to have both a pretty pagination bar and proper formatting of the text. So, I went back in my commit changes and commented out everything from when the site last worked as expected. I slowly uncommented line after line until I found the problem line... of course it happened to be with the same line that makes the pagination work:
 ```
 @import "core/index.scss";
 ```
