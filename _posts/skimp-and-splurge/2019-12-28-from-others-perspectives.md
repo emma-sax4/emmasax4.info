@@ -65,7 +65,7 @@ Given that our audience for these posts is a new graduate with not a lot of mont
 
 The agreement here is that safety is the number one priority when choosing a mode of transportation. Especially in Minnesota winters, you need a car that can get you from point A to point B even in the snowiest weather. But, I understand that getting a top rated car costs money that young adults may not have laying around.
 
-In that case, I'd say go carless for a while. Try to live in an area that has a good <a href="https://www.walkscore.com/MN/" target="_blank">walking and biking score</a>, and get a bus pass. If you have roommates or SOs that you live with, try to share a car while you save up money.
+In that case, I'd say go carless for a while. Try to live in an area that has a good [walking and biking score](https://www.walkscore.com/MN/){:target="blank"}, and get a bus pass. If you have roommates or SOs that you live with, try to share a car while you save up money.
 
 If that isn't possible and you absolutely need a car, then next try to look for friends or family members that may have a car that you can purchase from them for a discount. I know several people that have gotten hand-me-down vehicles from grandparents, aunts, and uncles at a significant discount. OR, they got a cheap car that wasn't that safe, but then traded it in at the dealers to get a discount on a nicer car.
 
@@ -83,7 +83,7 @@ If you are having trouble finding the funds to buy a couch and a bed, consider e
 
 ---
 
-The very last thing I asked my interviewees was which of these 10 items they would move from a Splurge to Skimp, since they both opted to move the new couch from a Skimp to a Splurge. One of my interviewees chose the new bed to sacrifice, the other chose eating at nice restaurants. I've already provided a solution for getting a bed _and_ a nice couch, and in terms of eating at nice restaurants, I think the best solution would just be to cook food in the comforts of your own kitchen. I highly recommend <a href="https://www.huffpost.com/entry/rules-of-batch-cooking_n_8401718" target="_blank">batch cooking</a> for the easiest way to have plenty of food in your fridge/freezer without cooking on a daily basis!
+The very last thing I asked my interviewees was which of these 10 items they would move from a Splurge to Skimp, since they both opted to move the new couch from a Skimp to a Splurge. One of my interviewees chose the new bed to sacrifice, the other chose eating at nice restaurants. I've already provided a solution for getting a bed _and_ a nice couch, and in terms of eating at nice restaurants, I think the best solution would just be to cook food in the comforts of your own kitchen. I highly recommend [batch cooking](https://www.huffpost.com/entry/rules-of-batch-cooking_n_8401718){:target="blank"} for the easiest way to have plenty of food in your fridge/freezer without cooking on a daily basis!
 
 Well, that concludes this set of blog posts! I hope that you've been able to get some inspiration to help get your own budget started! Good luck!
 
