@@ -199,7 +199,7 @@
 <p>When we got to the airport, our trip leaders were right; it was busy. We didn’t have time to hug our drivers one last time, so instead, we pushed our way to the long lines that awaited us inside the airport doors. Kwaheri, Kenya 👋🏼.</p>
 
 <div class="text-center">
-  <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/48871541883/in/album-72157710860887528/" target="_blank" title="Van 1 on our last day"><img class="my-image" src="https://live.staticflickr.com/65535/48871541883_c67c5270c0.jpg" width="500" height="375" alt="Van 1 on our last day" /></a>
+  <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/48871541883/in/album-72157710860887528/" title="Van 1 on our last day"><img class="my-image" src="https://live.staticflickr.com/65535/48871541883_c67c5270c0.jpg" width="500" height="375" alt="Van 1 on our last day" /></a>
 </div>
 
 <p>The above picture is of our van on our last day. In it we have Abdi (our driver), Impreet, Myra, Kristen, Andrew, and Jesse as our "photographer". Even over a month later, there’s still a part of me that misses them 😢.</p>
@@ -212,7 +212,7 @@
 
 <hr />
 
-<p>One month later, all 40 of us still have a Facebook page together. We occasionally tag each other in posts, and we sometimes share articles we read that relate to the animals we saw or to Kenya. Just today I shared a funny post about how dangerous hippos are (<a href="https://twitter.com/NomeDaBarbarian/status/1169598786777169921?fbclid=IwAR2pkUCtOIlyDhS6rFVaHNR3A2hnO5TdkmTHtIqYYzIqe4q1_yhoSRXhGd8" target="_blank">see the post here</a>). But in general, most of our lives have continued on as normal. We all go back to our normal jobs, we post our normal pictures, and life goes on. I’m sure our trip leader is off on their next tour, and I bet Abdi is driving around the savanna with a new crew of adventurers in his truck. But, I won’t forget the last thing Abdi said to us before we left: "Don’t forget, you’ll always have a friend in Kenya 🇰🇪. If you ever come back, just give us a call 📞."</p>
+<p>One month later, all 40 of us still have a Facebook page together. We occasionally tag each other in posts, and we sometimes share articles we read that relate to the animals we saw or to Kenya. Just today I shared a funny post about how dangerous hippos are (<a href="https://twitter.com/NomeDaBarbarian/status/1169598786777169921?fbclid=IwAR2pkUCtOIlyDhS6rFVaHNR3A2hnO5TdkmTHtIqYYzIqe4q1_yhoSRXhGd8">see the post here</a>). But in general, most of our lives have continued on as normal. We all go back to our normal jobs, we post our normal pictures, and life goes on. I’m sure our trip leader is off on their next tour, and I bet Abdi is driving around the savanna with a new crew of adventurers in his truck. But, I won’t forget the last thing Abdi said to us before we left: "Don’t forget, you’ll always have a friend in Kenya 🇰🇪. If you ever come back, just give us a call 📞."</p>
 
       <div style="margin-top: 3rem;">
   
@@ -258,21 +258,30 @@
 
   <footer>
   &copy; <script>new Date().getFullYear()>2010&&document.write(" "+new Date().getFullYear());</script> by
-    <a href="https://github.com/emma-sax4" target="_blank">Emma Sax</a>.
+    <a href="https://github.com/emma-sax4">Emma Sax</a>.
   All rights reserved.
-  View on <a href="https://github.com/emma-sax4/emma-sax4.github.io" target="_blank">GitHub</a>.
+  View on <a href="https://github.com/emma-sax4/emma-sax4.github.io">GitHub</a>.
 </footer>
 
-  <script src="https://unpkg.com/feather-icons">
+  <script type="text/javascript">
+  function externalLinks() {
+    for(var c = document.getElementsByTagName('a'), a = 0; a < c.length; a++) {
+      var b = c[a];
+      b.getAttribute('href') && b.hostname !== location.hostname && (b.target = '_blank')
+    }
+  };
+  externalLinks();
 </script>
-<script>
-  feather.replace()
-</script>
+
+<script src="https://unpkg.com/feather-icons"></script>
+<script>feather.replace()</script>
+
 <script
   src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
   integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
   crossorigin="anonymous">
 </script>
+
 <script
   src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
   integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"

@@ -366,21 +366,30 @@
 
   <footer>
   &copy; <script>new Date().getFullYear()>2010&&document.write(" "+new Date().getFullYear());</script> by
-    <a href="https://github.com/emma-sax4" target="_blank">Emma Sax</a>.
+    <a href="https://github.com/emma-sax4">Emma Sax</a>.
   All rights reserved.
-  View on <a href="https://github.com/emma-sax4/emma-sax4.github.io" target="_blank">GitHub</a>.
+  View on <a href="https://github.com/emma-sax4/emma-sax4.github.io">GitHub</a>.
 </footer>
 
-  <script src="https://unpkg.com/feather-icons">
+  <script type="text/javascript">
+  function externalLinks() {
+    for(var c = document.getElementsByTagName('a'), a = 0; a < c.length; a++) {
+      var b = c[a];
+      b.getAttribute('href') && b.hostname !== location.hostname && (b.target = '_blank')
+    }
+  };
+  externalLinks();
 </script>
-<script>
-  feather.replace()
-</script>
+
+<script src="https://unpkg.com/feather-icons"></script>
+<script>feather.replace()</script>
+
 <script
   src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
   integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
   crossorigin="anonymous">
 </script>
+
 <script
   src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
   integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
