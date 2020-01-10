@@ -46,6 +46,13 @@ h4 {
   font-size: 20px;
 }
 
+hr {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border-top: .2rem solid rgba(0,0,0,.1);
+  width: 50%;
+}
+
 .my-image {
   max-width: 100%;
   height: auto;
