@@ -30,6 +30,7 @@ github:
 future: true
 markdown: kramdown
 jekyll-mentions: https://github.com
+
 disqus:
   shortname: emmasax4
 
