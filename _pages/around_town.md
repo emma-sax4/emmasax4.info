@@ -7,46 +7,46 @@ permalink: /around-town/
 
 ## Talks
 
-* _What We Learn from Reviewing Others' Work_, DevOpsDays MSP 2019 ([slides](/assets/resources/DevOpsDays_MSP_Ignite_20190806.pdf){:target="_blank"}, [recording](https://devopsdays.org/events/2019-minneapolis/program/emma-sax/){:target="_blank"})
-* _DevOps in Education: A Virtually Non-Existent Course_, DevOpsDays MSP 2017 ([slides](/assets/resources/DevOpsDays_MSP_Ignite_20170725.pdf){:target="_blank"}, [recording](https://devopsdays.org/events/2017-minneapolis/program/emma-sax/){:target="_blank"})
+* _What We Learn from Reviewing Others' Work_, DevOpsDays MSP 2019 ([slides](/assets/resources/DevOpsDays_MSP_Ignite_20190806.pdf){:target="_blank"}, [recording](https://devopsdays.org/events/2019-minneapolis/program/emma-sax/))
+* _DevOps in Education: A Virtually Non-Existent Course_, DevOpsDays MSP 2017 ([slides](/assets/resources/DevOpsDays_MSP_Ignite_20170725.pdf){:target="_blank"}, [recording](https://devopsdays.org/events/2017-minneapolis/program/emma-sax/))
 
 ## Programming Competitions
 
-* 3rd place in the 2015 [Digi-Key Collegiate Computing Competition](https://www.digikey.com/en/resources/edu/dkc3-computing-competition){:target="_blank"} (DKC<sup>3</sup>)
-* 4th place in the 2015 UMM Annual [Sorting Competition](https://github.com/elenam/SortingCompetitionMaterials2015){:target="_blank"}
+* 3rd place in the 2015 [Digi-Key Collegiate Computing Competition](https://www.digikey.com/en/resources/edu/dkc3-computing-competition) (DKC<sup>3</sup>)
+* 4th place in the 2015 UMM Annual [Sorting Competition](https://github.com/elenam/SortingCompetitionMaterials2015)
 
 
 ## Volunteering
 
-* Judge at [Technovation Challenge](https://technovationchallenge.org){:target="_blank"} in 2018–2019
-* Panelist at a Tech Talk at one of the [University of Minnesota's Coding Bootcamps](https://bootcamp.umn.edu/){:target="_blank"}
-* Volunteer at [RailsConf](https://railsconf.org/){:target="_blank"} 2019
-* Volunteer at various nonprofit organizations, such as [Arc Value Village](https://www.arcsvaluevillage.org/volunteer/){:target="_blank"}, [Perspectives](https://www.perspectives-family.org/get-involved){:target="_blank"}, and [Feed My Starving Children](https://www.fmsc.org/get-involved/){:target="_blank"} in the Twin Cities
+* Judge at [Technovation Challenge](https://technovationchallenge.org) in 2018–2019
+* Panelist at a Tech Talk at one of the [University of Minnesota's Coding Bootcamps](https://bootcamp.umn.edu/)
+* Volunteer at [RailsConf](https://railsconf.org/) 2019
+* Volunteer at various nonprofit organizations, such as [Arc Value Village](https://www.arcsvaluevillage.org/volunteer/), [Perspectives](https://www.perspectives-family.org/get-involved), and [Feed My Starving Children](https://www.fmsc.org/get-involved/) in the Twin Cities
 
 ## While in College
 
-* Calculus 1 [Peer Assisted Learning](https://academics.morris.umn.edu/office-academic-success/peer-assisted-learning-pal){:target="_blank"} (PAL) tutor at UMM
+* Calculus 1 [Peer Assisted Learning](https://academics.morris.umn.edu/office-academic-success/peer-assisted-learning-pal) (PAL) tutor at UMM
 * Dance teacher to children at a local dance studio
 
 ### Undergraduate Research
 
-* Presented in the UMM [Undergraduate Research Symposium 2015](http://www.morris.umn.edu/urs/){:target="_blank"}
-* [URSA Major](https://github.com/emma-sax4/UMM3601ursamajor){:target="_blank"} Developer
-* Research assistant for [Clojure research](https://github.com/Clojure-Intro-Course){:target="_blank"} at UMM
+* Presented in the UMM [Undergraduate Research Symposium 2015](http://www.morris.umn.edu/urs/)
+* [URSA Major](https://github.com/emma-sax4/UMM3601ursamajor) Developer
+* Research assistant for [Clojure research](https://github.com/Clojure-Intro-Course) at UMM
 
 ### Volunteering
 
-* [UMM Open Hatch](https://github.com/OH-UMM/2015/wiki){:target="_blank"} event leader
+* [UMM Open Hatch](https://github.com/OH-UMM/2015/wiki) event leader
 * Student Campus Ambassador at UMM
 * Orientation Group Leader at UMM in 2016
-* Participant in the UMM [Honors Program](https://academics.morris.umn.edu/honors){:target="_blank"}
+* Participant in the UMM [Honors Program](https://academics.morris.umn.edu/honors)
 
 ### Extracurricular Activities
 
-* UMM [Concert Choir](https://academics.morris.umn.edu/ensembles/concert-choir){:target="_blank"} Dress Manager
+* UMM [Concert Choir](https://academics.morris.umn.edu/ensembles/concert-choir) Dress Manager
 * UMM Dance Ensemble Treasurer
-* Participant in the [NATS Competition](http://www.nats.org/competitions.html){:target="_blank"} 2014
-* Participant in a [Senior Recital](http://events.morris.umn.edu/event/student_senior_recital_amy_kuller_voice#.Xb7-40VKjOQ){:target="_blank"} in April 2017
+* Participant in the [NATS Competition](http://www.nats.org/competitions.html) 2014
+* Participant in a [Senior Recital](http://events.morris.umn.edu/event/student_senior_recital_amy_kuller_voice#.Xb7-40VKjOQ) in April 2017
 
 ## Traveling
 
