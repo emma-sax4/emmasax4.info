@@ -206,9 +206,17 @@
 <p>But, since a reader requested it, I’ll play along and implement an RSS feed on my site, too. I followed <a href="https://joelglovier.com/writing/rss-for-jekyll" target="_blank">this blog</a> to help me add the RSS feed to my site. It turned out to be super easy. There’s no gem requirement, and it doesn’t use any 3rd party service to compile properly. It updates the feed whenever <code class="highlighter-rouge">bundle exec jekyll build</code> is run, and auto-updates when I’m actively serving my site locally.</p>
 
 <p>I added these values to my <code class="highlighter-rouge">_config.yml</code>:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>feed_title: Emma Sax's Blog
-feed_url: https://emmasax4.info/blog/
-feed_items: 5
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>feed:
+  production:
+    title: Emma Sax's Blog
+    site_url: https://emmasax4.info
+    url: https://emmasax4.info/blog/
+    items: 5
+  development:
+    title: LOCAL Emma's Blog
+    site_url: https://127.0.0.1:4000
+    url: https://127.0.0.1:4000/blog/
+    items: 5
 </code></pre></div></div>
 <p>and added this file to the root of my repository:</p>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
@@ -217,12 +225,13 @@ layout: none
 
 &lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"&gt;
+  {% assign feed = site.feed[jekyll.environment] %}
   &lt;channel&gt;
-    &lt;title&gt;{{ site.feed_title | xml_escape }}&lt;/title&gt;
-    &lt;description&gt;{{ site.feed_description | xml_escape }}&lt;/description&gt;
-    &lt;link&gt;{{ site.feed_url }}&lt;/link&gt;
-    &lt;atom:link href="{{ site.url }}/feed.xml" rel="self" type="application/rss+xml" /&gt;
-    {% for post in site.posts limit: site.feed_items %}
+    &lt;title&gt;{{ feed.title | xml_escape }}&lt;/title&gt;
+    &lt;description&gt;{{ feed.description | xml_escape }}&lt;/description&gt;
+    &lt;link&gt;{{ feed.url }}&lt;/link&gt;
+    &lt;atom:link href="{{ feed.site_url }}/feed.xml" rel="self" type="application/rss+xml" /&gt;
+    {% for post in site.posts limit: feed.items %}
       &lt;item&gt;
         {% if post.subtitle %}
           {% assign short_title = post.title | append: " → " | append: post.subtitle %}
@@ -232,8 +241,8 @@ layout: none
         &lt;title&gt;{{ short_title | xml_escape }}&lt;/title&gt;
         &lt;description&gt;{{ post.description | xml_escape }}&lt;/description&gt;
         &lt;pubDate&gt;{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}&lt;/pubDate&gt;
-        &lt;link&gt;{{ site.url }}{{ post.url }}&lt;/link&gt;
-        &lt;guid isPermaLink="true"&gt;{{ site.url }}{{ post.url }}&lt;/guid&gt;
+        &lt;link&gt;{{ feed.url }}{{ post.url }}&lt;/link&gt;
+        &lt;guid isPermaLink="true"&gt;{{ feed.url }}{{ post.url }}&lt;/guid&gt;
       &lt;/item&gt;
     {% endfor %}
   &lt;/channel&gt;
@@ -247,6 +256,12 @@ layout: none
 <p>I do know that there are a plethora of mobile apps and desktop/laptop computer apps available that can help users read their feeds. There’s probably even one that sends you an email when it detects a new content.</p>
 
 <p>Please let me know if you currently use any great feed readers or if you come across one. I’ll post any updates about my feed readers as they come up 😊. Good luck subscribing!</p>
+
+<hr />
+
+<p>Update:</p>
+
+<p>I believe I’ve finally found a feed reader that I like! It’s called <a href="https://twitter.com/feedbro" target="_blank">Feedbro</a>, and I use it as a Chrome extension. I’ve added only two feeds: my site’s normal <a href="/feed.xml">feed</a>, and a local development version of my site’s feed. To learn more about Feedbro, check it out <a href="https://nodetics.com/feedbro/" target="_blank">here</a>. For more information about how I specify a <code class="highlighter-rouge">feed.xml</code> for two environments, check out <a href="https://gist.github.com/emma-sax4/7c3b70a8f983fea9610209e9d7618cf4" target="_blank">my GitHub gist</a>.</p>
 
 <h2 id="references">References</h2>
 
