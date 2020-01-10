@@ -89,7 +89,7 @@ The `script` section asks Travis CI to build the site to the `site` destination 
 It's a little complicated, but, one deploy from Travis CI later, and the site was up and running again. _AND_ I had the pagination option of my choosing that had all of the functionality I could ever want.
 
 <div class="text-center">
-  <iframe class="my-image giphy-embed" src="https://giphy.com/embed/4xpB3eE00FfBm" width="480" height="458" frameBorder="0" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/mrw-week-job-4xpB3eE00FfBm">via GIPHY</a></p>
+  <iframe class="my-image giphy-embed" src="https://giphy.com/embed/4xpB3eE00FfBm" width="480" height="458" frameBorder="0" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/mrw-week-job-4xpB3eE00FfBm" target="_blank">via GIPHY</a></p>
 </div>
 
 ## References
