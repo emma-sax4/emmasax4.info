@@ -71,7 +71,9 @@ collections:
 disqus:
   shortname: emmasax4
 
-jekyll-mentions: https://github.com
+jekyll-mentions:
+  base_url: https://github.com
+  new_tab: true
 
 pagination:
   enabled: true
