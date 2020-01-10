@@ -12,8 +12,8 @@ permalink: /around-town/
 
 ## Programming Competitions
 
-* 3rd place in the 2015 [Digi-Key Collegiate Computing Competition](https://www.digikey.com/en/resources/edu/dkc3-computing-competition"){:target="blank"} (DKC<sup>3</sup>)
-* 4th place in the 2015 UMM Annual [Sorting Competition](https://github.com/elenam/SortingCompetitionMaterials2015"){:target="blank"}
+* 3rd place in the 2015 [Digi-Key Collegiate Computing Competition](https://www.digikey.com/en/resources/edu/dkc3-computing-competition){:target="blank"} (DKC<sup>3</sup>)
+* 4th place in the 2015 UMM Annual [Sorting Competition](https://github.com/elenam/SortingCompetitionMaterials2015){:target="blank"}
 
 
 ## Volunteering
