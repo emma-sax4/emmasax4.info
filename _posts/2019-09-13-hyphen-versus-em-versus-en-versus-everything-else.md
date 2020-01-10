@@ -26,7 +26,7 @@ The hyphen is also typically used as a minus sign in mathematics. Technically, t
 
 ### To Space or Not to Space
 
-Generally, there should be no spaces surrounding a hyphen. The only exceptions would be in mathematics (where there should always be spaces around mathemtical operations), and when using a [hanging hyphen](https://en.wikipedia.org/wiki/Hyphen#Suspended_hyphens){:target="blank"}.
+Generally, there should be no spaces surrounding a hyphen. The only exceptions would be in mathematics (where there should always be spaces around mathemtical operations), and when using a [hanging hyphen](https://en.wikipedia.org/wiki/Hyphen#Suspended_hyphens){:target="_blank"}.
 
 ### How to Type a Hyphen
 
@@ -88,6 +88,6 @@ On iPhones, press and hold the `-`, and a window will pop up that lets you selec
 
 ## References
 
-* [getitwriteonline.com: en dashes em dashes](https://getitwriteonline.com/articles/en-dashes-em-dashes/){:target="blank"}
-* [english.stackexchange.com: can mean the same thing as a semicolon](https://english.stackexchange.com/questions/20198/can-mean-the-same-thing-as-a-semicolon){:target="blank"}
-* [english.stackexchange.com: what do you call words that are separated by a hyphen](https://english.stackexchange.com/questions/13855/what-do-you-call-words-that-are-separated-by-a-hyphen){:target="blank"}
+* [getitwriteonline.com: en dashes em dashes](https://getitwriteonline.com/articles/en-dashes-em-dashes/){:target="_blank"}
+* [english.stackexchange.com: can mean the same thing as a semicolon](https://english.stackexchange.com/questions/20198/can-mean-the-same-thing-as-a-semicolon){:target="_blank"}
+* [english.stackexchange.com: what do you call words that are separated by a hyphen](https://english.stackexchange.com/questions/13855/what-do-you-call-words-that-are-separated-by-a-hyphen){:target="_blank"}
