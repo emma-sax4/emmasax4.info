@@ -1,9 +1,9 @@
 <div id="posts">
   <ul class="list" style="list-style: none">
     {% for post in paginator.posts %}
-      {% include post_summary_for_blog.html %}
+      {% include blog/post.html %}
     {% endfor %}
   </ul>
 
-  {% include pagination.html %}
+  {% include blog/pagination.html %}
 </div>
