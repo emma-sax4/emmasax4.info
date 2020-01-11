@@ -4,14 +4,14 @@ layout: default
 
 <div class="row">
   <div class="col col-12 col-md-2 text-center">
-    {% include post_sidebar.html %}
+    {% include post/sidebar.html %}
   </div>
 
   <div class="col col-12 col-md-10">
-    {% include post_header.html %}
+    {% include post/header.html %}
     <div class="page-body">
       {{ content }}
-      {% include comments.html %}
+      {% include post/comments.html %}
     </div>
   </div>
 </div>

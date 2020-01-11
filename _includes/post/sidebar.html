@@ -1,7 +1,7 @@
-{% include button_all_posts.html %}
+{% include elements/all_posts_button.html %}
 
 <div class="text-center" style="margin-bottom: .5rem;">
-  {% include button_rss.html %}
+  {% include elements/rss_button.html %}
 </div>
 
 <div class="text-center">
@@ -13,7 +13,7 @@
     {% assign category_to_show = nil %}
   {% endif %}
 
-  {% include post_categorization.html %}
+  {% include post/categorization.html %}
 </div>
 
 <div class="text-center" style="margin-bottom: -1rem;">
