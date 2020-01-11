@@ -4,8 +4,15 @@ Here are all of the parts of this project associated with running this applicati
 ```
 .
 ├── _includes
-|   ├── footer.html
-|   └── header.html
+|   ├── elements
+|   |   ├── button_one.html
+|   |   └── button_two.html
+|   ├── other
+|   |   ├── pagination.html
+|   |   └── sidebar.html
+|   ├── site
+|   |   ├── footer.html
+|   └── └── header.html
 ├── _layouts
 |   ├── default.html
 |   ├── layout-01.html
@@ -51,15 +58,15 @@ Please notice that in the code, we need to call a collection of related posts a 
 
 ## `_includes/`
 
-HTML files in this directory are for page elements, such as the header, footer, buttons, divs, etc. Each element belongs in its own file. By placing these elements here, they can be reused on multiple pages without duplicating code, and they reduce the clutter in busier pages. To call one of the elements, simply include the file in any other Markdown/HTML file:
-```
-{% include header.html %}
+HTML files in this directory are for page elements, such as buttons, icons, images. It is also for divs that are long or have Jekyll/Liquid logic. Each div or element should have its own file in the appropriate directory. By placing these elements here, they can be reused on multiple pages without duplicating code, and they reduce the clutter in busier pages. To call one of the elements, simply include the file in any other Markdown/HTML file:
+```markdown
+{% include site/header.html %}
 ```
 
 ## `_layouts/`
 
 HTML files in this directory are for the skeletons of a specific page. The `default.html` is the plainest of the plain. It includes the head, header, footer, and necessary scripts, and defines the body and main content of the page. The other HTML files in the directory are for more detailed pages, such as the home page and blogs page. To specify that a certain page should use a specific layout, write that as the `layout` in the top of any other Markdown/HTML file:
-```yaml
+```yml
 ---
 layout: home
 .
@@ -68,10 +75,12 @@ layout: home
 ---
 ```
 
+Layout files should be short (20 lines at the longest) and should not contain any Jekyll/Liquid logic.
+
 ## `_pages/`
 
-These are the general pages in the top navigation bar of the site, although technically there are several other pages in there as well. They're written in Markdown, but Jekyll and liquid will use the Markdown content to make HTML files. The front matter of any Markdown/HTML file specifies the settings of the page:
-```yaml
+These are the general pages in the top navigation bar of the site, and they're for the main content of the site. They're written in Markdown, but Jekyll and Liquid will use the Markdown content to make HTML files. The front matter of any Markdown/HTML file specifies the settings of the page:
+```yml
 ---
 layout: page # the layout HTML to use (required for almost every page)
 title: Page 1 # the title of this page (optional if the page is NOT in the nav bar)
@@ -81,7 +90,7 @@ permalink: /page1/ # the static link this page should have (required for EACH pa
 ```
 
 You can also specify custom settings that you want the page to have:
-```yaml
+```yml
 ---
 custom_field_1: true
 custom_field_2: useful_string
@@ -105,7 +114,7 @@ The first index blog page we paginate is `_pages/blog.md`. The front matter of t
 In addition to that page, we also paginate the `tag` and `category`/collection filtered pages. We specify these blog pages in its own directory, titled `_pages/blog/`, where each `tag` and `category`/collection needs to have its own page. An example would be `_pages/blog/tag_name.md`.
 
 For a tag, the front matter should look like this:
-```yaml
+```yml
 ---
 layout: blog
 permalink: /blog/tag-name/
@@ -147,7 +156,7 @@ These are all of blog posts I've written.
 ### Posts with and without Tags
 
 Most of the posts can just go into the general `_posts/` directory, written as Markdown files. For a generic post, the front matter could look like this:
-```yaml
+```yml
 ---
 layout: post
 title: Post 1
@@ -160,7 +169,7 @@ Let's talk about the `tags`. The tags determine how we want to categorize each p
 ### Posts in a Collection
 
 If I'm going to write a collection of posts that all have a common theme, they can each go into a new nested directory: `_posts/<set-name>/`, and should make use of the `title` and `subtitle` metadata, where the `title` is the name of the collection, and the `subtitle` is the title of that specific post:
-```yaml
+```yml
 ---
 layout: post
 title: Posts Category
@@ -176,7 +185,7 @@ Currently, the code is not set up to handle posts that are part of a collection 
 To write drafts, make a new file in the `_posts/` directory (or in a subdirectory if the post will be part of a category/collection). The new file should be named in the following pattern: `YYYY-MM-DD-test-post-title`. Because this draft hasn't been published yet, I usually just put in either the date I hope to publish the draft, or the day I'm starting the draft. Make sure the date in the title is the most recent date compared to the other posts.
 
 Then, make sure the front matter of the draft looks like this:
-```yaml
+```yml
 ---
 layout: post
 title: Test Post
@@ -186,7 +195,7 @@ draft: true
 ```
 
 If the post is part of a collection, then it should look like this:
-```yaml
+```yml
 ---
 layout: post
 title: Test Post
