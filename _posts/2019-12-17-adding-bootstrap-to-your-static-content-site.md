@@ -15,7 +15,7 @@ So, let's walk through the process of adding Bootstrap to a Jekyll site, since t
 ## Install Bootstrap into your site
 
 I selected to use the most recent version of Bootstrap (4.4), and wanted to install it via a `<script>` and CDN. If you put this line right before where your site links your own stylesheets, then it'll automatically import this and combine the two CSS's:
-```
+```html
 <link
   rel="stylesheet"
   href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -39,7 +39,7 @@ To do this part, I started with the biggest single element I could find: my navb
 After I implemented the basics of the navbar, it worked pretty miraculously. It also turned out to basically be responsive right away, all I had to do was modify a few more `class` names. Then, it was time to make the navbar look like mine (with similar colors, sizing, etc).
 
 I did an `Inspect element` on Bootstrap's website to see what I should name the CSS class in my own repo: `nav.navbar`. Then, I simply copied over my color scheme:
-```
+```css
 nav.navbar {
   background-color: rgb(27, 14, 172);
   background: linear-gradient(to right, rgb(27, 14, 172), rgb(107, 208, 245));
@@ -49,7 +49,7 @@ nav.navbar {
 Then, right away I could delete all of the old navbar CSS code! This included a solid chunk of lines!
 
 Next, I wanted to make it so the menu button (also known as a hamburger 🍔 icon) would turn into an ❌ button when the navbar expanded. This took more time, and to be honest, if not for @brianMitchL's help, I may still be struggling. In order to save you from struggling, I'll give you some code:
-```
+```css
 nav.navbar {
   > .navbar-toggler {
     // The toggle button
@@ -78,7 +78,7 @@ To do the buttons, you can go through the same process as with the navbar:
 4. Delete your button CSS
 
 Same process with the columns. To do the page layouts and responsive breakpoints, the only piece of knowledge that I didn't know (until Brian came along), was that Bootstrap's automatically going to expect:
-```
+```html
 <body>
   <main class="container">
 
