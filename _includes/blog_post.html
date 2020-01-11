@@ -26,15 +26,17 @@
     <div>
       {% if post.category %}
         {% unless page.pagination.category %}
-          {% assign category = post.category %}
-          {% include category_list.html %}
+          {% assign category_to_show = post.category %}
+          {% assign tags_to_show = nil %}
         {% endunless %}
       {% else %}
         {% unless page.pagination.tag %}
-          {% assign tags = post.tags | sort %}
-          {% include tags_list.html %}
+          {% assign category_to_show = nil %}
+          {% assign tags_to_show = post.tags | sort %}
         {% endunless %}
       {% endif %}
+
+      {% include post_categorization.html %}
     </div>
   </div>
 </li>

@@ -2,35 +2,11 @@
 layout: default
 ---
 
-{% if page.pagination.title == "Blog" %}
-  <div class="text-center">
-    <h1>
-      {{ page.pagination.title }}
-      {% include rss_button.html %}
-    </h1>
-  </div>
-{% else %}
-  <div class="row" style="display: flex">
-    <div class="col col-12 col-md-2 text-center">
-      {% include all_posts_button.html %}
-      {% include rss_button.html %}
-    </div>
-
-    <div class="col col-12 col-md-10">
-      <div class="text-center">
-        <h1>
-          <i style="width: 2.5rem; height: 2.5rem;" data-feather="tag"></i>
-          {{ page.pagination.title }}
-        </h1>
-      </div>
-{% endif %}
+{% include blog_header.html %}
 
 <div class="page-body">
   {{ content }}
   {% include blog_posts.html %}
 </div>
 
-{% unless page.pagination.title == "Blog" %}
-    </div>
-  </div>
-{% endunless %}
+{% include blog_footer.html %}

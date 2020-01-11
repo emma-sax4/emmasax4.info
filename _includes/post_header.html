@@ -1,4 +1,4 @@
-<h1>
+<h1 style="padding-bottom: .75rem;">
   <div class="text-center">
     {% if page.subtitle %}
         {{ page.title }}
@@ -11,18 +11,12 @@
   </div>
 
   <div class="text-center">
-    <span class="post-meta" style="font-style: italic; margin-top: -1rem; margin-bottom: -1rem;">
+    <span class="post-meta" style="font-style: italic;">
       {% if page.draft == true %}
         Unpublished
       {% else %}
         Published {{ page.date | date: "%B %-d, %Y" }}
       {% endif %}
-    </span>
-  </div>
-
-  <div class="text-center" style="margin-top: -1rem; margin-bottom: -1rem;">
-    <span class="post-meta">
-      Read time: {{ content | reading_time_as_i }}
     </span>
   </div>
 </h1>
