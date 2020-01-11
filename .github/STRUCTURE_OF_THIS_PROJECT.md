@@ -102,7 +102,7 @@ This site uses [`jekyll-paginate-v2`](https://github.com/sverrirs/jekyll-paginat
 
 The first index blog page we paginate is `_pages/blog.md`. The front matter of this file is sort of repetitive, but by specifying titles and URLs, we are able to have more flexibility with our directory structure.
 
-In addition to that page, we also paginate the `tag` and `category`/collection filtered pages. We specify these blog pages in its own directory, titled `_pages/blog/`. So, each `tag` and `category`/collection needs to have its own page in the `blog/` directory. An example would be `_pages/blog/tag_name.md`.
+In addition to that page, we also paginate the `tag` and `category`/collection filtered pages. We specify these blog pages in its own directory, titled `_pages/blog/`, where each `tag` and `category`/collection needs to have its own page. An example would be `_pages/blog/tag_name.md`.
 
 For a tag, the front matter should look like this:
 ```yaml
@@ -202,7 +202,7 @@ When it's time to publish a draft, rename the file to include today's publishing
 
 This directory has three directories, `css/`, `images/`, and `resources/`. The `css/` directory contains all of the CSS files in this site. They're all called together in `style.scss`. The CSS in the project is loaded inside the `_includes/head.html`. This site also uses [Bootstrap](https://getbootstrap.com/docs/4.4/getting-started/introduction/) for a lot of its CSS, including the navigation bar, headers, responsive page, etc.
 
-The `images/` directory gives me a place to store all of the images this site uses. To call a specific resource, you can either ask for it in HTML:
+The `images/` directory gives me a place to store all of the images this site uses. To call a specific image, you can either ask for it in HTML:
 ```html
 <div>
   <img class="my-image" src="/assets/images/picture-01.jpg" alt="Picture 1">
@@ -213,6 +213,11 @@ The `resources/` directory gives me a place to keep PDF documents that are linke
 ```markdown
 This is an example sentence, so it will throw a 404. See [here](/assets/resources/resource-01.pdf)?
 ```
+When calling internal resources like this, it'll automatically open in the same tab that the user is currently in. If you wish to open it in a new tab, you'll have to specify that:
+```markdown
+This is an example sentence, so it will throw a 404. See <a href="/assets/resources/resource-01.pdf" target="_blank">here</a>?
+```
+
 
 ## `_config.yml`
 
