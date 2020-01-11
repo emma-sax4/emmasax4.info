@@ -133,7 +133,9 @@ pagination:
   category: Posts Category
 ---
 
-Some words describing this collection should go here. If this page doesn't render correctly when fully paginated on the site, then add `<p></p>` around each paragraph.
+Some words describing this collection should go here.
+
+If this page doesn't render correctly when fully paginated on the site, then add `<p></p>` around each paragraph.
 ```
 
 The `url_shortname` section is important. It should start with a `/`, followed by the ending part of the `permalink` without the last `/`. In order for pagination to work, this **must** be included. The `category: Posts Category` or `tag: tag-name` indicates which posts to show on that specific page.
