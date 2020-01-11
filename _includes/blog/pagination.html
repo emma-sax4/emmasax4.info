@@ -15,26 +15,20 @@
         </li>
       {% endif %}
 
-      {% assign blog_url = "/blog" | append: page.url_shortname %}
-
-      {% if paginator.page == 1 %}
-        <li class="page-item active">
-          <a class="page-link" href="#">1</a>
-        </li>
-      {% else %}
-        <li class="page-item">
-          <a class="page-link" href="{{ blog_url }}/">1</a>
-        </li>
-      {% endif %}
-
-      {% for count in (2..paginator.total_pages) %}
+      {% for count in (1..paginator.total_pages) %}
         {% if count == paginator.page %}
           <li class="page-item active">
             <a class="page-link" href="#">{{ count }}</a>
           </li>
         {% else %}
+          {% if count == 1 %}
+            {% assign blog_url = "/blog" | append: page.url_shortname | append: "/" %}
+          {% else %}
+            {% assign blog_url = "/blog" | append: page.url_shortname | append: "/" | append: count %}
+          {% endif %}
+
           <li class="page-item">
-            <a class="page-link" href="{{ blog_url }}/{{ count }}">{{ count }}</a>
+            <a class="page-link" href="{{ blog_url }}">{{ count }}</a>
           </li>
         {% endif %}
       {% endfor %}
