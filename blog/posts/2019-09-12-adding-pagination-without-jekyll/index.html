@@ -4,12 +4,21 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"> <!-- This is the tab icon -->
-  <meta property="og:title" content="Emma Sax"/>  <!-- This is to specify the page title when it's sent as a link -->
-  <link href="https://emmasax4.info/feed.xml" title="Emma Sax's Blog" rel="alternate" type="application/rss+xml"> <!-- This is indicating the RSS feed -->
+  <meta property="og:title" content="Emma Sax"/>
 
-  <title>Emma Sax</title> <!-- This is the tab title -->
+  <title>Emma Sax</title>
 
+  <link
+    rel="shortcut icon"
+    type="image/x-icon"
+    href="/favicon.ico"
+  >
+  <link
+    href="https://emmasax4.info/feed.xml"
+    title="Emma Sax's Blog"
+    rel="alternate"
+    type="application/rss+xml"
+  >
   <link
     rel="stylesheet"
     href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -21,7 +30,10 @@
     rel="stylesheet"
     type="text/css"
   >
-  <link rel="stylesheet" href="/assets/css/style.css">
+  <link
+    rel="stylesheet"
+    href="/assets/css/style.css"
+  >
   <!-- Begin Jekyll SEO tag v2.6.1 -->
 <title>Adding Pagination without Jekyll | Emma Sax</title>
 <meta name="generator" content="Jekyll v3.8.6" />
@@ -46,9 +58,14 @@
   <header>
   <nav class="navbar navbar-expand-md navbar-dark">
     <a class="navbar-brand mb-0" href="https://emmasax4.info">
-      <img src="/assets/images/e_logo_white_40.png" width="30" height="30" class="d-inline-block align-top" alt="E logo"> Emma Sax
+      <img src="/assets/images/e_logo_white_40.png" width="30" height="30"
+        class="d-inline-block align-top" alt="E logo"
+      > Emma Sax
     </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-links" aria-controls="navbar-links" aria-expanded="false" aria-label="Toggle navigation">
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse"
+      data-target="#navbar-links" aria-controls="navbar-links"
+      aria-expanded="false" aria-label="Toggle navigation">
       <span data-feather="menu"></span>
       <span data-feather="x"></span>
     </button>
@@ -143,58 +160,64 @@
 </div>
 
 
-    <div class="text-center" style="margin-bottom: 1rem;">
-      <a href="/feed.xml" target="_blank" class="link-icon-rss">
+<div class="text-center" style="margin-bottom: .5rem;">
+  <a href="/feed.xml" target="_blank" class="link-icon-rss">
   <i data-feather="rss"></i>
 </a>
 
-    </div>
+</div>
 
-    <div class="text-center" style="margin-bottom: 1rem;">
-      
-        
-        
+<div class="text-center">
+  
+
+  
   <span class="post-meta">
     <i style="width: 20px; height: 20px;" data-feather="tag"></i>
     
       
 
-      <a href="/blog/jekyll">jekyll</a>
+      <a href="/blog/jekyll/">
+        jekyll
+      </a>
       
         |
       
     
       
 
-      <a href="/blog/tech">tech</a>
+      <a href="/blog/tech/">
+        tech
+      </a>
       
     
   </span>
 
 
-      
-    </div>
+
+
+</div>
+
+<div class="text-center" style="margin-bottom: -1rem;">
+  <span class="post-meta">
+    Read time: 6 minutes
+  </span>
+</div>
+
   </div>
 
   <div class="col col-12 col-md-10">
-    <h1>
+    <h1 style="padding-bottom: .75rem;">
   <div class="text-center">
     
       Adding Pagination without Jekyll
     
   </div>
 
-  <div class="text-center">
-    <span class="post-meta" style="font-style: italic; margin-top: -1rem; margin-bottom: -1rem;">
+  <div class="text-center" style="margin-top: -.5rem;">
+    <span class="post-meta" style="font-style: italic;">
       
         Published September 12, 2019
       
-    </span>
-  </div>
-
-  <div class="text-center" style="margin-top: -1rem; margin-bottom: -1rem;">
-    <span class="post-meta">
-      Read time: 6 minutes
     </span>
   </div>
 </h1>
@@ -213,13 +236,13 @@
 </div>
 
 <p>So, I went on a mission to figure out how to make a prettier pagination bar. After a couple of hours, and a good night’s sleep, I realized that the answer lies in the <code class="highlighter-rouge">css/main.scss</code> file. Specifically, this line:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@import "core/index.scss";
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">@import</span> <span class="s1">"core/index.scss"</span><span class="p">;</span>
 </code></pre></div></div>
 
 <p>Prior to adding that line, the whole Jekyll build would break. When I tried to load the project locally, my server would give me this error back:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>".pagination .active .page" failed to
-@extend ".selected". The selector ".selected"
-was not found.
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s1">".pagination .active .page"</span> <span class="nt">failed</span> <span class="nt">to</span>
+<span class="k">@extend</span> <span class="s1">".selected"</span><span class="p">.</span> <span class="n">The</span> <span class="n">selector</span> <span class="s1">".selected"</span>
+<span class="n">was</span> <span class="n">not</span> <span class="n">found</span><span class="p">.</span>
 </code></pre></div></div>
 <p>Clearly, that means my CSS is broken. But I didn’t quite understand why 😕. The repository that I was copying pagination from included this line:</p>
 
@@ -243,7 +266,7 @@ was not found.
 <p>Also, note that there is no easy way to remove a submodule. I’m just glad that I attempted this inside of a pull request because then I could <code class="highlighter-rouge">git reset</code> when things weren’t going my way.</p>
 
 <p>After I finished succesfully adding the <code class="highlighter-rouge">primer</code> submodule 😌, all I had to do was re-add</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@import "core/index.scss";
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">@import</span> <span class="s1">"core/index.scss"</span><span class="p">;</span>
 </code></pre></div></div>
 <p>back to my <code class="highlighter-rouge">main.scss</code>, and finally the pagination was beautiful:</p>
 
@@ -254,12 +277,12 @@ was not found.
 <p>I was thrilled with the outcome of this pagination (even though it wasn’t Jekyll’s officially supported pagination), and I committed to master. However, perhaps a day later, I noticed something wrong with my CSS formatting. Perhaps you can notice it if you compare the before-pretty-pagination and the after-pretty-pagination pictures… I’ll give you a hint: it has to do with the indentation and spacing of the words. Somehow, making the pagination bar pretty messed up my CSS formatting!</p>
 
 <p>I was upset. I wanted to have both a pretty pagination bar and proper formatting of the text. So, I went back in my commit changes and commented out everything from when the site last worked as expected. I slowly uncommented line after line until I found the problem line… of course it happened to be with the same line that makes the pagination work:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@import "core/index.scss";
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">@import</span> <span class="s1">"core/index.scss"</span><span class="p">;</span>
 </code></pre></div></div>
 <p>Are we even surprised 😤🙄?</p>
 
 <p>So, I went on a mini-adventure through the <code class="highlighter-rouge">primer</code> code to see what that line was doing. Apparently, it ends up installing a bunch of CSS files through other nested CSS files. Let’s be real, even if I have the time to go through each one looking for what may be conflicting with my <code class="highlighter-rouge">main.scss</code> file, I don’t want to do that. So, I did an entire repository-wide file search for: <code class="highlighter-rouge">primer/pagination/index</code>, found the single pagination CSS page I needed (since that’s all I’m using <code class="highlighter-rouge">primer</code> for), and switched to import just that:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@import "pagination/index.scss";
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">@import</span> <span class="s1">"pagination/index.scss"</span><span class="p">;</span>
 </code></pre></div></div>
 
 <p>And it turns out, the answer was as easy as that! Now, I have proper CSS layouts, a lovely pagination bar that works and doesn’t take long to load, and the file structure of my project was able to stay the same. The pagination bar isn’t perfect, but it’s better than anything I had before, and it’s good enough for me—for right now anyway.</p>
@@ -270,15 +293,20 @@ was not found.
   
     <div class="text-center" style="margin-bottom: 1rem;">
       <button id="show-comments-button" class="btn btn-lg btn-outline-secondary" onclick="loadComments();return false;">
-        Load Comments
-        <i data-feather="message-circle"></i>
-      </button>
+  Load Comments
+  <i data-feather="message-circle"></i>
+</button>
+
     </div>
 
     <div id="disqus_thread"></div>
 
-    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
-</noscript>
+    <noscript>
+      Please enable JavaScript to view the
+      <a href="https://disqus.com/?ref_noscript" rel="nofollow">
+        comments powered by Disqus.
+      </a>
+    </noscript>
 
     <script type="text/javascript">
       var disqus_loaded = false;
@@ -309,8 +337,9 @@ was not found.
   </body>
 
   <footer>
-  &copy; <script>new Date().getFullYear()>2010&&document.write(" "+new Date().getFullYear());</script> by
-    <a href="https://github.com/emma-sax4">Emma Sax</a>.
+  &copy;
+  <script>new Date().getFullYear()>2010&&document.write(" "+new Date().getFullYear());</script>
+  by <a href="https://github.com/emma-sax4">Emma Sax</a>.
   All rights reserved.
   View on <a href="https://github.com/emma-sax4/emma-sax4.github.io">GitHub</a>.
 </footer>

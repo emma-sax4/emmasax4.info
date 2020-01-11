@@ -4,12 +4,21 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"> <!-- This is the tab icon -->
-  <meta property="og:title" content="Emma Sax"/>  <!-- This is to specify the page title when it's sent as a link -->
-  <link href="https://emmasax4.info/feed.xml" title="Emma Sax's Blog" rel="alternate" type="application/rss+xml"> <!-- This is indicating the RSS feed -->
+  <meta property="og:title" content="Emma Sax"/>
 
-  <title>Emma Sax</title> <!-- This is the tab title -->
+  <title>Emma Sax</title>
 
+  <link
+    rel="shortcut icon"
+    type="image/x-icon"
+    href="/favicon.ico"
+  >
+  <link
+    href="https://emmasax4.info/feed.xml"
+    title="Emma Sax's Blog"
+    rel="alternate"
+    type="application/rss+xml"
+  >
   <link
     rel="stylesheet"
     href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -21,7 +30,10 @@
     rel="stylesheet"
     type="text/css"
   >
-  <link rel="stylesheet" href="/assets/css/style.css">
+  <link
+    rel="stylesheet"
+    href="/assets/css/style.css"
+  >
   <!-- Begin Jekyll SEO tag v2.6.1 -->
 <title>Adding Bootstrap to Your Static Content Site | Emma Sax</title>
 <meta name="generator" content="Jekyll v3.8.6" />
@@ -46,9 +58,14 @@
   <header>
   <nav class="navbar navbar-expand-md navbar-dark">
     <a class="navbar-brand mb-0" href="https://emmasax4.info">
-      <img src="/assets/images/e_logo_white_40.png" width="30" height="30" class="d-inline-block align-top" alt="E logo"> Emma Sax
+      <img src="/assets/images/e_logo_white_40.png" width="30" height="30"
+        class="d-inline-block align-top" alt="E logo"
+      > Emma Sax
     </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-links" aria-controls="navbar-links" aria-expanded="false" aria-label="Toggle navigation">
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse"
+      data-target="#navbar-links" aria-controls="navbar-links"
+      aria-expanded="false" aria-label="Toggle navigation">
       <span data-feather="menu"></span>
       <span data-feather="x"></span>
     </button>
@@ -143,51 +160,55 @@
 </div>
 
 
-    <div class="text-center" style="margin-bottom: 1rem;">
-      <a href="/feed.xml" target="_blank" class="link-icon-rss">
+<div class="text-center" style="margin-bottom: .5rem;">
+  <a href="/feed.xml" target="_blank" class="link-icon-rss">
   <i data-feather="rss"></i>
 </a>
 
-    </div>
+</div>
 
-    <div class="text-center" style="margin-bottom: 1rem;">
-      
-        
-        
+<div class="text-center">
+  
+
+  
   <span class="post-meta">
     <i style="width: 20px; height: 20px;" data-feather="tag"></i>
     
       
 
-      <a href="/blog/tech">tech</a>
+      <a href="/blog/tech/">
+        tech
+      </a>
       
     
   </span>
 
 
-      
-    </div>
+
+
+</div>
+
+<div class="text-center" style="margin-bottom: -1rem;">
+  <span class="post-meta">
+    Read time: 6 minutes
+  </span>
+</div>
+
   </div>
 
   <div class="col col-12 col-md-10">
-    <h1>
+    <h1 style="padding-bottom: .75rem;">
   <div class="text-center">
     
       Adding Bootstrap to Your Static Content Site
     
   </div>
 
-  <div class="text-center">
-    <span class="post-meta" style="font-style: italic; margin-top: -1rem; margin-bottom: -1rem;">
+  <div class="text-center" style="margin-top: -.5rem;">
+    <span class="post-meta" style="font-style: italic;">
       
         Published December 17, 2019
       
-    </span>
-  </div>
-
-  <div class="text-center" style="margin-top: -1rem; margin-bottom: -1rem;">
-    <span class="post-meta">
-      Read time: 5 minutes
     </span>
   </div>
 </h1>
@@ -204,12 +225,12 @@
 <h2 id="install-bootstrap-into-your-site">Install Bootstrap into your site</h2>
 
 <p>I selected to use the most recent version of Bootstrap (4.4), and wanted to install it via a <code class="highlighter-rouge">&lt;script&gt;</code> and CDN. If you put this line right before where your site links your own stylesheets, then it’ll automatically import this and combine the two CSS’s:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;link
-  rel="stylesheet"
-  href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-  integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-  crossorigin="anonymous"
-&gt;
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;link</span>
+  <span class="na">rel=</span><span class="s">"stylesheet"</span>
+  <span class="na">href=</span><span class="s">"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"</span>
+  <span class="na">integrity=</span><span class="s">"sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"</span>
+  <span class="na">crossorigin=</span><span class="s">"anonymous"</span>
+<span class="nt">&gt;</span>
 </code></pre></div></div>
 
 <p>Your site will take all of Bootstrap’s CSS, and then consider whatever you’ve coded as overrides.</p>
@@ -227,30 +248,30 @@
 <p>After I implemented the basics of the navbar, it worked pretty miraculously. It also turned out to basically be responsive right away, all I had to do was modify a few more <code class="highlighter-rouge">class</code> names. Then, it was time to make the navbar look like mine (with similar colors, sizing, etc).</p>
 
 <p>I did an <code class="highlighter-rouge">Inspect element</code> on Bootstrap’s website to see what I should name the CSS class in my own repo: <code class="highlighter-rouge">nav.navbar</code>. Then, I simply copied over my color scheme:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nav.navbar {
-  background-color: rgb(27, 14, 172);
-  background: linear-gradient(to right, rgb(27, 14, 172), rgb(107, 208, 245));
-}
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">nav</span><span class="nc">.navbar</span> <span class="p">{</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="nb">rgb</span><span class="p">(</span><span class="m">27</span><span class="p">,</span> <span class="m">14</span><span class="p">,</span> <span class="m">172</span><span class="p">);</span>
+  <span class="nl">background</span><span class="p">:</span> <span class="n">linear-gradient</span><span class="p">(</span><span class="n">to</span> <span class="nb">right</span><span class="p">,</span> <span class="nb">rgb</span><span class="p">(</span><span class="m">27</span><span class="p">,</span> <span class="m">14</span><span class="p">,</span> <span class="m">172</span><span class="p">),</span> <span class="nb">rgb</span><span class="p">(</span><span class="m">107</span><span class="p">,</span> <span class="m">208</span><span class="p">,</span> <span class="m">245</span><span class="p">));</span>
+<span class="p">}</span>
 </code></pre></div></div>
 
 <p>Then, right away I could delete all of the old navbar CSS code! This included a solid chunk of lines!</p>
 
 <p>Next, I wanted to make it so the menu button (also known as a hamburger 🍔 icon) would turn into an ❌ button when the navbar expanded. This took more time, and to be honest, if not for <a href="https://github.com/brianMitchL" class="user-mention">@brianMitchL</a>’s help, I may still be struggling. In order to save you from struggling, I’ll give you some code:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nav.navbar {
-  &gt; .navbar-toggler {
-    // The toggle button
-  }
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">nav</span><span class="nc">.navbar</span> <span class="p">{</span>
+  <span class="err">&gt;</span> <span class="err">.navbar-toggler</span> <span class="err">{</span>
+    <span class="err">//</span> <span class="err">The</span> <span class="err">toggle</span> <span class="err">button</span>
+  <span class="p">}</span>
 
-  .navbar-toggler[aria-expanded="false"] &gt; .x {
-    // ❌ icon
-    display: none;
-  }
+  <span class="nc">.navbar-toggler</span><span class="o">[</span><span class="nt">aria-expanded</span><span class="o">=</span><span class="s1">"false"</span><span class="o">]</span> <span class="o">&gt;</span> <span class="nc">.x</span> <span class="p">{</span>
+    <span class="err">//</span> <span class="err">❌</span> <span class="err">icon</span>
+    <span class="nl">display</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+  <span class="p">}</span>
 
-  .navbar-toggler[aria-expanded="true"] &gt; .menu {
-    // 🍔 icon
-    display: none;
-  }
-}
+  <span class="nc">.navbar-toggler</span><span class="o">[</span><span class="nt">aria-expanded</span><span class="o">=</span><span class="s1">"true"</span><span class="o">]</span> <span class="o">&gt;</span> <span class="nc">.menu</span> <span class="p">{</span>
+    <span class="err">//</span> <span class="err">🍔</span> <span class="err">icon</span>
+    <span class="nl">display</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="err">}</span>
 </code></pre></div></div>
 
 <p>Now, with only 20 minutes of work, I have a fully-functioning navbar that fits Accessibility standards, too!</p>
@@ -266,11 +287,11 @@
 </ol>
 
 <p>Same process with the columns. To do the page layouts and responsive breakpoints, the only piece of knowledge that I didn’t know (until Brian came along), was that Bootstrap’s automatically going to expect:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;body&gt;
-  &lt;main class="container"&gt;
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;body&gt;</span>
+  <span class="nt">&lt;main</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
 
-  &lt;/main&gt;
-&lt;/body&gt;
+  <span class="nt">&lt;/main&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
 </code></pre></div></div>
 
 <p>Previously, I was running that second line without the <code class="highlighter-rouge">class="container"</code>. But, once we added that, suddenly the entire site’s body was fully responsive! Now, everything word-wrapped appropriately from a huge screen, right down to 320px wide (the size of an iPhone 5/SE). It’s brilliant!</p>
@@ -289,15 +310,20 @@
   
     <div class="text-center" style="margin-bottom: 1rem;">
       <button id="show-comments-button" class="btn btn-lg btn-outline-secondary" onclick="loadComments();return false;">
-        Load Comments
-        <i data-feather="message-circle"></i>
-      </button>
+  Load Comments
+  <i data-feather="message-circle"></i>
+</button>
+
     </div>
 
     <div id="disqus_thread"></div>
 
-    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
-</noscript>
+    <noscript>
+      Please enable JavaScript to view the
+      <a href="https://disqus.com/?ref_noscript" rel="nofollow">
+        comments powered by Disqus.
+      </a>
+    </noscript>
 
     <script type="text/javascript">
       var disqus_loaded = false;
@@ -328,8 +354,9 @@
   </body>
 
   <footer>
-  &copy; <script>new Date().getFullYear()>2010&&document.write(" "+new Date().getFullYear());</script> by
-    <a href="https://github.com/emma-sax4">Emma Sax</a>.
+  &copy;
+  <script>new Date().getFullYear()>2010&&document.write(" "+new Date().getFullYear());</script>
+  by <a href="https://github.com/emma-sax4">Emma Sax</a>.
   All rights reserved.
   View on <a href="https://github.com/emma-sax4/emma-sax4.github.io">GitHub</a>.
 </footer>
