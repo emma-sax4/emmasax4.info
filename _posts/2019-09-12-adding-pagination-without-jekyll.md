@@ -17,12 +17,12 @@ Of course, I started with the things I know how to do best: copy-paste 💁🏻�
 </div>
 
 So, I went on a mission to figure out how to make a prettier pagination bar. After a couple of hours, and a good night's sleep, I realized that the answer lies in the `css/main.scss` file. Specifically, this line:
-```
+```css
 @import "core/index.scss";
 ```
 
 Prior to adding that line, the whole Jekyll build would break. When I tried to load the project locally, my server would give me this error back:
-```
+```css
 ".pagination .active .page" failed to
 @extend ".selected". The selector ".selected"
 was not found.
@@ -47,7 +47,7 @@ After everything, I ended up having to add, remove, re-add, re-remove, and re-re
 Also, note that there is no easy way to remove a submodule. I'm just glad that I attempted this inside of a pull request because then I could `git reset` when things weren't going my way.
 
 After I finished succesfully adding the `primer` submodule 😌, all I had to do was re-add
-```
+```css
 @import "core/index.scss";
 ```
 back to my `main.scss`, and finally the pagination was beautiful:
@@ -59,13 +59,13 @@ back to my `main.scss`, and finally the pagination was beautiful:
 I was thrilled with the outcome of this pagination (even though it wasn't Jekyll's officially supported pagination), and I committed to master. However, perhaps a day later, I noticed something wrong with my CSS formatting. Perhaps you can notice it if you compare the before-pretty-pagination and the after-pretty-pagination pictures... I'll give you a hint: it has to do with the indentation and spacing of the words. Somehow, making the pagination bar pretty messed up my CSS formatting!
 
 I was upset. I wanted to have both a pretty pagination bar and proper formatting of the text. So, I went back in my commit changes and commented out everything from when the site last worked as expected. I slowly uncommented line after line until I found the problem line... of course it happened to be with the same line that makes the pagination work:
-```
+```css
 @import "core/index.scss";
 ```
 Are we even surprised 😤🙄?
 
 So, I went on a mini-adventure through the `primer` code to see what that line was doing. Apparently, it ends up installing a bunch of CSS files through other nested CSS files. Let's be real, even if I have the time to go through each one looking for what may be conflicting with my `main.scss` file, I don't want to do that. So, I did an entire repository-wide file search for: `primer/pagination/index`, found the single pagination CSS page I needed (since that's all I'm using `primer` for), and switched to import just that:
-```
+```css
 @import "pagination/index.scss";
 ```
 
