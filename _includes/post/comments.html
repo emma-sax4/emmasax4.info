@@ -1,16 +1,17 @@
 <div style="margin-top: 3rem;">
   {% if page.comments != false and jekyll.environment == "production" %}
     <div class="text-center" style="margin-bottom: 1rem;">
-      <button id="show-comments-button" class="btn btn-lg btn-outline-secondary"
-      onclick="loadComments();return false;">
-        Load Comments
-        <i data-feather="message-circle"></i>
-      </button>
+      {% include elements/comments_button.html %}
     </div>
 
     <div id="disqus_thread"></div>
 
-    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+    <noscript>
+      Please enable JavaScript to view the
+      <a href="https://disqus.com/?ref_noscript" rel="nofollow">
+        comments powered by Disqus.
+      </a>
+    </noscript>
 
     <script type="text/javascript">
       var disqus_loaded = false;
