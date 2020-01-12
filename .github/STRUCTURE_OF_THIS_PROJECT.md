@@ -19,19 +19,22 @@ Here are all of the parts of this project associated with running this applicati
 |   └── layout-02.html
 ├── _pages
 |   ├── blog
-|   |   ├── another_category_name.md
-|   |   ├── another_tag_name.md
-|   |   ├── category_name.md
-|   |   └── tag_name.md
+|   |   ├── category_one.md
+|   |   ├── category_two.md
+|   |   ├── tag1.md
+|   |   └── tag2.md
 |   ├── page-01.md
 |   ├── page-02.md
 |   └── page-03.md
 ├── _posts
-|   ├── posts-category
-|   |   ├── 2001-01-01-categorized-post-01.md
-|   |   └── 2001-01-02-categorized-post-02.md
-|   ├── 2001-01-03-post-01.md
-|   └── 2001-01-04-post-02.md
+|   ├── category-one
+|   |   ├── 2001-01-01-post-a.md
+|   |   └── 2001-01-02-post-b.md
+|   ├── category-two
+|   |   ├── 2003-01-01-post-a.md
+|   |   └── 2004-01-02-post-b.md
+|   ├── 2001-01-03-post-a.md
+|   └── 2001-01-04-post-b.md
 ├── assets
 |   ├── css
 |   |   ├── css_file_01.scss
@@ -52,9 +55,10 @@ Here are all of the parts of this project associated with running this applicati
 └── index.md
 ```
 
-## A note about the blog
+## Collections, categories, and tags. Oh my!
 
-Please notice that in the code, we need to call a collection of related posts a `category`. This is in order to make the pagination work as expected. A user of the site will view the collection no differently than with a tag. The difference between a `tag` and a `category`/collection is that a post can have multiple tags, but can only be a part of one collection/`category`.
+Please notice that in the code, we need to call a collection of related posts a `category`. This is in order to make the pagination work as expected. A user of the site will view the collection no differently than with a tag. The biggest difference between a `tag` and a `category` is that a post can have multiple tags, but can only be a part of one `category`. Currently, the code is not set up to handle posts that are part of a collection _and_ contain tags.
+
 
 ## `_includes/`
 
@@ -68,7 +72,7 @@ HTML files in this directory are for page elements, such as buttons, icons, imag
 HTML files in this directory are for the skeletons of a specific page. The `default.html` is the plainest of the plain. It includes the head, header, footer, and necessary scripts, and defines the body and main content of the page. The other HTML files in the directory are for more detailed pages, such as the home page and blogs page. To specify that a certain page should use a specific layout, write that as the `layout` in the top of any other Markdown/HTML file:
 ```yml
 ---
-layout: home
+layout: layout-01
 .
 .
 .
@@ -83,9 +87,9 @@ These are the general pages in the top navigation bar of the site, and they're f
 ```yml
 ---
 layout: page # the layout HTML to use (required for almost every page)
-title: Page 1 # the title of this page (optional if the page is NOT in the nav bar)
+title: Page 01 # the title of this page (optional if the page is NOT in the nav bar)
 order: 3 # the order of this page in the navigation bar (delete if the page is NOT in the nav bar)
-permalink: /page1/ # the static link this page should have (required for EACH page in this directory)
+permalink: /page-01/ # the static link this page should have (required for EACH page in this directory)
 ---
 ```
 
@@ -111,43 +115,39 @@ This site uses [`jekyll-paginate-v2`](https://github.com/sverrirs/jekyll-paginat
 
 The first index blog page we paginate is `_pages/blog.md`. The front matter of this file is sort of repetitive, but by specifying titles and URLs, we are able to have more flexibility with our directory structure.
 
-In addition to that page, we also paginate the `tag` and `category`/collection filtered pages. We specify these blog pages in its own directory, titled `_pages/blog/`, where each `tag` and `category`/collection needs to have its own page. An example would be `_pages/blog/tag_name.md`.
+In addition to that page, we also paginate the `tag` and `category` filtered pages. We specify these blog pages in its own directory, titled `_pages/blog/`, where each `tag` and `category` needs to have its own page. A `tag` should be one word, and should not require camelcase or capitalization, ex: `"tag1"` or `"tag"`. An example would be `_pages/blog/tag1.md`.
 
 For a tag, the front matter should look like this:
 ```yml
 ---
 layout: blog
-permalink: /blog/tag-name/
-url_shortname: /tag-name
+permalink: /blog/tag1/
 pagination:
   enabled: true
   collection: posts
   permalink: /:num/
-  title: Posts about Tag Name
-  tag: tag-name
+  title: Tag1
+  tag: tag1
 ---
 ```
 
-For a `category`/collection, the front matter should look like this:
+A `category` _can_ be multiple words, and can require capitalization like a title, ex: `"Category One"` or `"Category Two"`. For a `category`, the front matter should look like this:
 ```markdown
 ---
 layout: blog
-permalink: /blog/posts-category-name/
-url_shortname: /posts-category-name
+permalink: /blog/category-one/
 pagination:
   enabled: true
   collection: posts
   permalink: /:num/
-  title: Posts within this Posts Category
-  category: Posts Category
+  title: Category One
+  category: Category One
 ---
 
 Some words describing this collection should go here.
 
 If this page doesn't render correctly when fully paginated on the site, then add `<p></p>` around each paragraph.
 ```
-
-The `url_shortname` section is important. It should start with a `/`, followed by the ending part of the `permalink` without the last `/`. In order for pagination to work, this **must** be included. The `category: Posts Category` or `tag: tag-name` indicates which posts to show on that specific page.
 
 ## `_posts/`
 
@@ -159,37 +159,35 @@ Most of the posts can just go into the general `_posts/` directory, written as M
 ```yml
 ---
 layout: post
-title: Post 1
-tags: [ tag_name, another_tag_name ] # optional
+title: Post A
+tags: [ tag1, tag2 ] # optional
 ---
 ```
 
-Let's talk about the `tags`. The tags determine how we want to categorize each post. If there's no categorization of a post (if it's completely random), then there's no need to specify any `tag(s)`, AKA just leave the line completely out of the front matter. But, if you think the post is a good contestant for a tag, such as `tag_name` or `another_tag_name` in our example, then add those appropriate tags in a list format, as shown above.
+The tags determine how we want to categorize each post. If there's no categorization of a post (if it's completely random), then there's no need to specify any tag(s), AKA just leave the line completely out of the front matter. But, if you think the post is a good contestant for a tag, such as `tag1` or `tag2` in our example, then add those appropriate tags in a list format, as shown above.
 
 ### Posts in a Collection
 
-If I'm going to write a collection of posts that all have a common theme, they can each go into a new nested directory: `_posts/<set-name>/`, and should make use of the `title` and `subtitle` metadata, where the `title` is the name of the collection, and the `subtitle` is the title of that specific post:
+If I'm going to write a collection of posts that all have a common theme, they can each go into a new nested directory: `_posts/category-one/`, and should make use of the `title` and `subtitle` metadata, where the `title` is the name of the collection, and the `subtitle` is the title of that specific post:
 ```yml
 ---
 layout: post
-title: Posts Category
-subtitle: Post Category Post 1
-category: Posts Category
+title: Category One
+subtitle: Post A
+category: Category One
 ---
 ```
 
-Currently, the code is not set up to handle posts that are part of a collection **and** contain tags.
-
 ### Writing Drafts
 
-To write drafts, make a new file in the `_posts/` directory (or in a subdirectory if the post will be part of a category/collection). The new file should be named in the following pattern: `YYYY-MM-DD-test-post-title`. Because this draft hasn't been published yet, I usually just put in either the date I hope to publish the draft, or the day I'm starting the draft. Make sure the date in the title is the most recent date compared to the other posts.
+To write drafts, make a new file in the `_posts/` directory (or in a subdirectory if the post will be part of a category). The new file should be named in the following pattern: `YYYY-MM-DD-test-post-title`. Because this draft hasn't been published yet, I usually just put in either the date I hope to publish the draft, or the day I'm starting the draft. Make sure the date in the title is the most recent date compared to the other posts.
 
 Then, make sure the front matter of the draft looks like this:
 ```yml
 ---
 layout: post
-title: Test Post
-tags: [ tag_name, optional_tag_name ]
+title: Post C
+tags: [ tag1, tag2 ] # optional
 draft: true
 ---
 ```
@@ -198,9 +196,9 @@ If the post is part of a collection, then it should look like this:
 ```yml
 ---
 layout: post
-title: Test Post
-subtitle: Post Subtitle
-category: Posts Category
+title: Category One
+subtitle: Post C
+category: Category One
 draft: true
 ---
 ```
@@ -228,7 +226,6 @@ When calling internal resources like this, it'll automatically open in the same 
 ```markdown
 This is an example sentence, so it will throw a 404. See <a href="/assets/resources/resource-01.pdf" target="_blank">here</a>?
 ```
-
 
 ## `_config.yml`
 

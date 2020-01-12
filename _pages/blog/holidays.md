@@ -1,7 +1,6 @@
 ---
 layout: blog
 permalink: /blog/holidays/
-url_shortname: /holidays
 pagination:
   enabled: true
   collection: posts

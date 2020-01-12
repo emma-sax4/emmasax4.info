@@ -1,7 +1,6 @@
 ---
 layout: blog
 permalink: /blog/welcome-to-kenya/
-url_shortname: /welcome-to-kenya
 pagination:
   enabled: true
   collection: posts
