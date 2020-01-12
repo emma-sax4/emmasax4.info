@@ -55,9 +55,10 @@ Here are all of the parts of this project associated with running this applicati
 └── index.md
 ```
 
-## A note about the blog
+## Collections, categories, and tags. Oh my!
 
-Please notice that in the code, we need to call a collection of related posts a `category`. This is in order to make the pagination work as expected. A user of the site will view the collection no differently than with a tag. The difference between a `tag` and a `category`/collection is that a post can have multiple tags, but can only be a part of one collection/`category`.
+Please notice that in the code, we need to call a collection of related posts a `category`. This is in order to make the pagination work as expected. A user of the site will view the collection no differently than with a tag. The biggest difference between a `tag` and a `category` is that a post can have multiple tags, but can only be a part of one `category`. Currently, the code is not set up to handle posts that are part of a collection _and_ contain tags.
+
 
 ## `_includes/`
 
@@ -114,7 +115,7 @@ This site uses [`jekyll-paginate-v2`](https://github.com/sverrirs/jekyll-paginat
 
 The first index blog page we paginate is `_pages/blog.md`. The front matter of this file is sort of repetitive, but by specifying titles and URLs, we are able to have more flexibility with our directory structure.
 
-In addition to that page, we also paginate the `tag` and `category`/collection filtered pages. We specify these blog pages in its own directory, titled `_pages/blog/`, where each `tag` and `category`/collection needs to have its own page. A `tag` should be one word, and should not require camelcase or capitalization, ex: `"tag1"` or `"tag"`. An example would be `_pages/blog/tag1.md`.
+In addition to that page, we also paginate the `tag` and `category` filtered pages. We specify these blog pages in its own directory, titled `_pages/blog/`, where each `tag` and `category` needs to have its own page. A `tag` should be one word, and should not require camelcase or capitalization, ex: `"tag1"` or `"tag"`. An example would be `_pages/blog/tag1.md`.
 
 For a tag, the front matter should look like this:
 ```yml
@@ -130,7 +131,7 @@ pagination:
 ---
 ```
 
-A `category`/collection _can_ be multiple words, and can require capitalization like a title, ex: `"Category One"` or `"Category Two"`. For a `category`/collection, the front matter should look like this:
+A `category` _can_ be multiple words, and can require capitalization like a title, ex: `"Category One"` or `"Category Two"`. For a `category`, the front matter should look like this:
 ```markdown
 ---
 layout: blog
@@ -167,7 +168,7 @@ The tags determine how we want to categorize each post. If there's no categoriza
 
 ### Posts in a Collection
 
-If I'm going to write a collection of posts that all have a common theme, they can each go into a new nested directory: `_posts/<category-one>/`, and should make use of the `title` and `subtitle` metadata, where the `title` is the name of the collection, and the `subtitle` is the title of that specific post:
+If I'm going to write a collection of posts that all have a common theme, they can each go into a new nested directory: `_posts/category-one/`, and should make use of the `title` and `subtitle` metadata, where the `title` is the name of the collection, and the `subtitle` is the title of that specific post:
 ```yml
 ---
 layout: post
@@ -177,11 +178,9 @@ category: Category One
 ---
 ```
 
-Currently, the code is not set up to handle posts that are part of a collection **and** contain tags.
-
 ### Writing Drafts
 
-To write drafts, make a new file in the `_posts/` directory (or in a subdirectory if the post will be part of a category/collection). The new file should be named in the following pattern: `YYYY-MM-DD-test-post-title`. Because this draft hasn't been published yet, I usually just put in either the date I hope to publish the draft, or the day I'm starting the draft. Make sure the date in the title is the most recent date compared to the other posts.
+To write drafts, make a new file in the `_posts/` directory (or in a subdirectory if the post will be part of a category). The new file should be named in the following pattern: `YYYY-MM-DD-test-post-title`. Because this draft hasn't been published yet, I usually just put in either the date I hope to publish the draft, or the day I'm starting the draft. Make sure the date in the title is the most recent date compared to the other posts.
 
 Then, make sure the front matter of the draft looks like this:
 ```yml
