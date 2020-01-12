@@ -1,7 +1,6 @@
 ---
 layout: blog
 permalink: /blog/skimp-and-splurge/
-url_shortname: /skimp-and-splurge
 pagination:
   enabled: true
   collection: posts
