@@ -21,10 +21,21 @@
             <a class="page-link" href="#">{{ count }}</a>
           </li>
         {% else %}
-          {% if count == 1 %}
-            {% assign blog_url = "/blog" | append: page.url_shortname | append: "/" %}
+          {% if page.pagination.title == "Blog" %}
+            {% assign url_shortname = "/" %}
           {% else %}
-            {% assign blog_url = "/blog" | append: page.url_shortname | append: "/" | append: count %}
+            {% if page.pagination.tag %}
+              {% assign url_shortname = "/" | append: page.pagination.tag | append: "/" %}
+            {% else page.pagination.category %}
+              {% assign category_name = page.pagination.category | downcase | replace: " ", "-" %}
+              {% assign url_shortname = "/" | append: category_name | append: "/" %}
+            {% endif %}
+          {% endif %}
+
+          {% if count == 1 %}
+            {% assign blog_url = "/blog" | append: url_shortname %}
+          {% else %}
+            {% assign blog_url = "/blog" | append: url_shortname | append: count | append: "/" %}
           {% endif %}
 
           <li class="page-item">
