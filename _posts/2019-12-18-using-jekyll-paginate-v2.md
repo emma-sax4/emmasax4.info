@@ -50,7 +50,7 @@ After all of that work, I now have a pagination bar that makes me proud of this 
 
 ---
 
-Haha! You thought the story was over, didn't you? Well... as soon as I merged in my pull request to add the new pagination, I realized something. That paragraph of the installation instructions that I _didn't_ finish? Well, the ending part of it warned that `jekyll-pagination-v2` is _not_ supported by GitHub Pages. This means that when somebody runs the code locally on their computer, they can use `jekyll-pagination-v2` to their hearts' content, and the site will load properly. But GitHub's servers (which normally build the site for me), will not properly execute `jekyll-pagination-v2`, and there's no way to compile the pagination code properly without that.
+Haha! You thought the story was over, didn't you? Well... as soon as I merged in my pull request to add the new pagination, I realized something. That paragraph of the installation instructions that I _didn't_ finish? Well, the ending part of it warned that `jekyll-paginate-v2` is _not_ supported by GitHub Pages. This means that when somebody runs the code locally on their computer, they can use `jekyll-paginate-v2` to their hearts' content, and the site will load properly. But GitHub's servers (which normally build the site for me), will not properly execute `jekyll-paginate-v2`, and there's no way to compile the pagination code properly without that.
 
 If I had just _finished_ that section, I could've saved me a whole 30 minutes where the site wasn't broken, and potentially even saved myself a little headache. But at this point, I've come too far to turn back around and go back to my old-fashioned pagination. So, Google came to the rescue.
 
