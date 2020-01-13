@@ -145,8 +145,6 @@ pagination:
 ---
 
 Some words describing this collection should go here.
-
-If this page doesn't render correctly when fully paginated on the site, then add `<p></p>` around each paragraph.
 ```
 
 ## `_posts/`

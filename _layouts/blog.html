@@ -5,7 +5,7 @@ layout: default
 {% include blog/header.html %}
 
 <div class="page-body">
-  {{ content }}
+  {{ content | markdownify }}
   {% include blog/posts_list.html %}
 </div>
 
