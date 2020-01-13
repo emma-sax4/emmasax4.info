@@ -13,7 +13,7 @@ layout: default
     </div>
 
     <div class="col-md text-center mt-5">
-      {{ content }}
+      {{ content | markdownify }}
       {% include elements/icon_buttons.html %}
     </div>
   </div>
