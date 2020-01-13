@@ -9,10 +9,6 @@ pagination:
   category: Welcome to Kenya
 ---
 
-<p>
-  A complilation of five blog posts revolving around my trip to Kenya in the summer of 2019. You can tell I will remember Kenya with fond memories.
-</p>
+A complilation of five blog posts revolving around my trip to Kenya in the summer of 2019. You can tell I will remember Kenya with fond memories.
 
-<p>
-  I'd like to extend a huge "thank you" to my fellow adventurers: Kristen Correa, Evelyn Kodman, Jennifer Hruska, Impreet Aulakh, Kristal Seckinger, Heather Hubbard, Audrey Boss, Sarah Hawkins, Tami McBride, and Linda McWilliams, for the use of their incredible photos in these posts.
-</p>
+I'd like to extend a huge "thank you" to my fellow adventurers: Kristen Correa, Evelyn Kodman, Jennifer Hruska, Impreet Aulakh, Kristal Seckinger, Heather Hubbard, Audrey Boss, Sarah Hawkins, Tami McBride, and Linda McWilliams, for the use of their incredible photos in these posts.
