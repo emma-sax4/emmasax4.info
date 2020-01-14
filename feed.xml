@@ -4,7 +4,7 @@
   <channel>
     <title>Emma Sax's Blog</title>
     <description></description>
-    <link>https://emmasax4.info/blog/</link>
+    <link>https://emmasax4.info</link>
     <atom:link href="https://emmasax4.info/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
@@ -12,8 +12,8 @@
         <title>2020: A New Years Resolution on Positivity</title>
         <description></description>
         <pubDate>Sun, 05 Jan 2020 00:00:00 +0000</pubDate>
-        <link>https://emmasax4.info/blog//blog/posts/2020-01-05-2020-a-new-years-resolution-on-positivity/</link>
-        <guid isPermaLink="true">https://emmasax4.info/blog//blog/posts/2020-01-05-2020-a-new-years-resolution-on-positivity/</guid>
+        <link>https://emmasax4.info/blog/posts/2020-01-05-2020-a-new-years-resolution-on-positivity/</link>
+        <guid isPermaLink="true">https://emmasax4.info/blog/posts/2020-01-05-2020-a-new-years-resolution-on-positivity/</guid>
       </item>
     
       <item>
@@ -21,8 +21,8 @@
         <title>Email Subscriptions, RSS Feeds, and Feed Readers</title>
         <description></description>
         <pubDate>Mon, 30 Dec 2019 00:00:00 +0000</pubDate>
-        <link>https://emmasax4.info/blog//blog/posts/2019-12-30-email-subscriptions-rss-feeds-and-feed-readers/</link>
-        <guid isPermaLink="true">https://emmasax4.info/blog//blog/posts/2019-12-30-email-subscriptions-rss-feeds-and-feed-readers/</guid>
+        <link>https://emmasax4.info/blog/posts/2019-12-30-email-subscriptions-rss-feeds-and-feed-readers/</link>
+        <guid isPermaLink="true">https://emmasax4.info/blog/posts/2019-12-30-email-subscriptions-rss-feeds-and-feed-readers/</guid>
       </item>
     
       <item>
@@ -30,8 +30,8 @@
         <title>Bootstrap, CSS, and Icons in this Site</title>
         <description></description>
         <pubDate>Sun, 29 Dec 2019 00:00:00 +0000</pubDate>
-        <link>https://emmasax4.info/blog//blog/posts/2019-12-29-bootstrap-css-and-icons-in-this-site/</link>
-        <guid isPermaLink="true">https://emmasax4.info/blog//blog/posts/2019-12-29-bootstrap-css-and-icons-in-this-site/</guid>
+        <link>https://emmasax4.info/blog/posts/2019-12-29-bootstrap-css-and-icons-in-this-site/</link>
+        <guid isPermaLink="true">https://emmasax4.info/blog/posts/2019-12-29-bootstrap-css-and-icons-in-this-site/</guid>
       </item>
     
       <item>
@@ -39,8 +39,8 @@
         <title>Skimp and Splurge → Part 3: From Others' Perspectives</title>
         <description></description>
         <pubDate>Sat, 28 Dec 2019 00:00:00 +0000</pubDate>
-        <link>https://emmasax4.info/blog//blog/posts/skimp-and-splurge/2019-12-28-from-others-perspectives/</link>
-        <guid isPermaLink="true">https://emmasax4.info/blog//blog/posts/skimp-and-splurge/2019-12-28-from-others-perspectives/</guid>
+        <link>https://emmasax4.info/blog/posts/skimp-and-splurge/2019-12-28-from-others-perspectives/</link>
+        <guid isPermaLink="true">https://emmasax4.info/blog/posts/skimp-and-splurge/2019-12-28-from-others-perspectives/</guid>
       </item>
     
       <item>
@@ -48,8 +48,8 @@
         <title>DNS, Domains, and Personal Websites</title>
         <description></description>
         <pubDate>Fri, 20 Dec 2019 00:00:00 +0000</pubDate>
-        <link>https://emmasax4.info/blog//blog/posts/2019-12-20-dns-domains-and-personal-websites/</link>
-        <guid isPermaLink="true">https://emmasax4.info/blog//blog/posts/2019-12-20-dns-domains-and-personal-websites/</guid>
+        <link>https://emmasax4.info/blog/posts/2019-12-20-dns-domains-and-personal-websites/</link>
+        <guid isPermaLink="true">https://emmasax4.info/blog/posts/2019-12-20-dns-domains-and-personal-websites/</guid>
       </item>
     
   </channel>
