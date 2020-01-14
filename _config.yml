@@ -85,11 +85,9 @@ pagination:
 feed:
   production:
     title: Emma Sax's Blog
-    site_url: https://emmasax4.info
-    url: https://emmasax4.info/blog/
+    url: https://emmasax4.info
     items: 5
   development:
     title: LOCAL Emma's Blog
-    site_url: https://127.0.0.1:4000
-    url: https://127.0.0.1:4000/blog/
+    url: https://127.0.0.1:4000
     items: 5
