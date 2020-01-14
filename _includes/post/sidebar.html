@@ -4,7 +4,7 @@
   {% include elements/rss_button.html %}
 </div>
 
-<div class="text-center">
+<div class="text-center" style="margin-bottom: .5rem;">
   {% if page.category %}
     {% assign category_to_show = page.category %}
     {% assign tags_to_show = nil %}
@@ -16,7 +16,7 @@
   {% include post/categorization.html %}
 </div>
 
-<div class="text-center" style="margin-bottom: -1rem;">
+<div class="text-center" style="margin-bottom: 1rem;">
   <span class="post-meta">
     Read time: {{ content | markdownify | reading_time_as_i }}
   </span>
