@@ -38,7 +38,7 @@ And with either of the solutions, GitHub does this weird raw text italisizing th
 So, neither of these options are perfect, and I don't like either of them. I want to be able to easily type a link, with the traditional Markdown format (`[link](url)`), and I want the link to open in a new tab on my website (converted to HTML from kramdown), and to read in GitHub properly (not include the `{:target="_blank"}`).
 
 And here's where Javascript comes in. Static sites (like mine) can use Javascript to do view-based logic and methods right in front of the user. It's unwise to incorporate _a lot_ of Javascript on a single page because it'll start slowing down loading and operation times, but it's how I did simply functionality, like showing the comments on the bottom of each page, loading the Feather icons, etc. And so of course, somebody has written [this blog post](https://html.com/attributes/a-target/) which nicely provides a Javascript solution for opening every external URL in a new tab. The final solution looks like this:
-```javascript
+```html
 <script type="text/javascript">
   function externalLinks() {
     for(var c = document.getElementsByTagName('a'), a = 0; a < c.length; a++) {
