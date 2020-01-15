@@ -1,6 +1,6 @@
 # Contributing
 
-#### Table of Contents
+### Table of Contents
 - [Contribution Process](#contribution-process)
 - [Running Locally](#running-locally)
 - [Running Tests & Deployments](#running-tests--deployments)
