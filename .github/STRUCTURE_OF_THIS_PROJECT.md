@@ -1,6 +1,6 @@
 # Structure of this Project
 
-#### Table of Contents
+### Table of Contents
 - [Directory/File Structure](#directoryfile-structure)
 - [Collections, categories, and tags. Oh my!](#collections-categories-and-tags-oh-my)
 - [`_includes/`](#_includes)
