@@ -1,5 +1,10 @@
 # Contributing
 
+#### Table of Contents
+- [Contribution Process](#contribution-process)
+- [Running Locally](#running-locally)
+- [Running Tests & Deployments](#running-tests--deployments)
+
 ## Contribution Process
 
 1. Fork this repository: https://github.com/emma-sax4/emma-sax4.github.io/fork.
