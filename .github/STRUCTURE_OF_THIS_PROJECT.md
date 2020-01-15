@@ -1,5 +1,24 @@
 # Structure of this Project
 
+#### Table of Contents
+- [Directory/File Structure](#directoryfile-structure)
+- [Collections, categories, and tags. Oh my!](#collections-categories-and-tags-oh-my)
+- [`_includes/`](#_includes)
+- [`_layouts/`](#_layouts)
+- [`_pages/`](#_pages)
+- [`_pages/blog/`](#_pagesblog)
+- [`_posts/`](#_posts)
+  * [Posts with and without Tags](#posts-with-and-without-tags)
+  * [Posts in a Collection](#posts-in-a-collection)
+  * [Writing Drafts](#writing-drafts)
+- [`assets/`](#assets)
+- [`_config.yml`](#_configyml)
+- [`feed.xml`](#feedxml)
+- [`Gemfile` and `Gemfile.lock`](#gemfile-and-gemfilelock)
+- [`index.md`](#indexmd)
+
+## Directory/File Structure
+
 Here are all of the parts of this project associated with running this application. This list does not include files/directories related to GitHub, Travis CI, and Git.
 ```
 .
