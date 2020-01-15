@@ -154,7 +154,7 @@
     <main class="container">
       
   <div class="row" style="display: flex">
-    <div class="col col-12 col-md-2 text-center">
+    <div class="col col-12 col-md-2 text-center" style="margin-bottom: 1rem;">
       <div class="container" style="padding-bottom: 1rem;">
   <a href="/blog" class="btn btn-lg btn-outline-secondary">All Posts</a>
 </div>
@@ -180,6 +180,33 @@
 
   <div id="posts">
   <ul class="list" style="list-style: none">
+    
+      <li>
+  
+  
+
+  <div class="container" style="padding-left: 0; padding-right: 0; padding-bottom: 2rem;">
+    <span class="post-meta">
+      <div>
+        
+            January 14, 2020
+        
+      </div>
+    </span>
+
+    <a href="/blog/posts/2020-01-14-opening-links-in-new-tabs-via-javascript/">Opening Links in New Tabs via Javascript</a>
+
+    <div>
+      
+
+      
+
+
+
+    </div>
+  </div>
+</li>
+
     
       <li>
   
@@ -289,33 +316,6 @@
 </li>
 
     
-      <li>
-  
-  
-
-  <div class="container" style="padding-left: 0; padding-right: 0; padding-bottom: 2rem;">
-    <span class="post-meta">
-      <div>
-        
-            December 17, 2019
-        
-      </div>
-    </span>
-
-    <a href="/blog/posts/2019-12-17-adding-bootstrap-to-your-static-content-site/">Adding Bootstrap to Your Static Content Site</a>
-
-    <div>
-      
-
-      
-
-
-
-    </div>
-  </div>
-</li>
-
-    
   </ul>
 
   
@@ -379,12 +379,23 @@
   View on <a href="https://github.com/emma-sax4/emma-sax4.github.io">GitHub</a>.
 </footer>
 
-  <script type="text/javascript">
+  <!--
+To open an EXTERNAL link in the CURRENT tab, write your link like this:
+  <a href="https://github.com" target="_self">GitHub</a>
+
+To open an INTERNAL link in a NEW tab, write your link like this:
+  <a href="https://emmasax4.info" target="_blank">My website</a>
+-->
+<script type="text/javascript">
   function externalLinks() {
     for(var c = document.getElementsByTagName('a'), a = 0; a < c.length; a++) {
       var b = c[a];
-      b.getAttribute('href') && b.hostname !== location.hostname && (b.target = '_blank')
-    }
+      if (b.target == '_self') {
+        b.getAttribute('href') && b.hostname !== location.hostname && (b.target = '_self');
+      } else {
+        b.getAttribute('href') && b.hostname !== location.hostname && (b.target = '_blank');
+      };
+    };
   };
   externalLinks();
 </script>

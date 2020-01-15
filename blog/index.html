@@ -179,6 +179,43 @@
     <span class="post-meta">
       <div>
         
+            January 14, 2020
+        
+      </div>
+    </span>
+
+    <a href="/blog/posts/2020-01-14-opening-links-in-new-tabs-via-javascript/">Opening Links in New Tabs via Javascript</a>
+
+    <div>
+      
+
+      
+  <span class="post-meta">
+    <i style="width: 20px; height: 20px;" data-feather="tag"></i>
+    
+      <a href="/blog/tech/">
+        tech
+      </a>
+      
+    
+  </span>
+
+
+
+
+    </div>
+  </div>
+</li>
+
+    
+      <li>
+  
+  
+
+  <div class="container" style="padding-left: 0; padding-right: 0; padding-bottom: 2rem;">
+    <span class="post-meta">
+      <div>
+        
             January 5, 2020
         
       </div>
@@ -307,43 +344,6 @@
 </li>
 
     
-      <li>
-  
-  
-
-  <div class="container" style="padding-left: 0; padding-right: 0; padding-bottom: 2rem;">
-    <span class="post-meta">
-      <div>
-        
-            December 20, 2019
-        
-      </div>
-    </span>
-
-    <a href="/blog/posts/2019-12-20-dns-domains-and-personal-websites/">DNS, Domains, and Personal Websites</a>
-
-    <div>
-      
-
-      
-  <span class="post-meta">
-    <i style="width: 20px; height: 20px;" data-feather="tag"></i>
-    
-      <a href="/blog/tech/">
-        tech
-      </a>
-      
-    
-  </span>
-
-
-
-
-    </div>
-  </div>
-</li>
-
-    
   </ul>
 
   
@@ -434,12 +434,23 @@
   View on <a href="https://github.com/emma-sax4/emma-sax4.github.io">GitHub</a>.
 </footer>
 
-  <script type="text/javascript">
+  <!--
+To open an EXTERNAL link in the CURRENT tab, write your link like this:
+  <a href="https://github.com" target="_self">GitHub</a>
+
+To open an INTERNAL link in a NEW tab, write your link like this:
+  <a href="https://emmasax4.info" target="_blank">My website</a>
+-->
+<script type="text/javascript">
   function externalLinks() {
     for(var c = document.getElementsByTagName('a'), a = 0; a < c.length; a++) {
       var b = c[a];
-      b.getAttribute('href') && b.hostname !== location.hostname && (b.target = '_blank')
-    }
+      if (b.target == '_self') {
+        b.getAttribute('href') && b.hostname !== location.hostname && (b.target = '_self');
+      } else {
+        b.getAttribute('href') && b.hostname !== location.hostname && (b.target = '_blank');
+      };
+    };
   };
   externalLinks();
 </script>

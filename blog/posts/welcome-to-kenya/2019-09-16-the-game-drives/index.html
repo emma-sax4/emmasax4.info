@@ -167,7 +167,7 @@
 
 </div>
 
-<div class="text-center">
+<div class="text-center" style="margin-bottom: .5rem;">
   
 
   
@@ -184,7 +184,7 @@
 
 </div>
 
-<div class="text-center" style="margin-bottom: -1rem;">
+<div class="text-center" style="margin-bottom: 1rem;">
   <span class="post-meta">
     Read time: 10 minutes
   </span>
@@ -406,12 +406,23 @@
   View on <a href="https://github.com/emma-sax4/emma-sax4.github.io">GitHub</a>.
 </footer>
 
-  <script type="text/javascript">
+  <!--
+To open an EXTERNAL link in the CURRENT tab, write your link like this:
+  <a href="https://github.com" target="_self">GitHub</a>
+
+To open an INTERNAL link in a NEW tab, write your link like this:
+  <a href="https://emmasax4.info" target="_blank">My website</a>
+-->
+<script type="text/javascript">
   function externalLinks() {
     for(var c = document.getElementsByTagName('a'), a = 0; a < c.length; a++) {
       var b = c[a];
-      b.getAttribute('href') && b.hostname !== location.hostname && (b.target = '_blank')
-    }
+      if (b.target == '_self') {
+        b.getAttribute('href') && b.hostname !== location.hostname && (b.target = '_self');
+      } else {
+        b.getAttribute('href') && b.hostname !== location.hostname && (b.target = '_blank');
+      };
+    };
   };
   externalLinks();
 </script>

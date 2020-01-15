@@ -180,6 +180,41 @@
     <span class="post-meta">
       <div>
         
+            November 12, 2019
+        
+      </div>
+    </span>
+
+    <a href="/blog/posts/skimp-and-splurge/2019-11-12-three-years-later/">Skimp and Splurge → Part 2: Three Years Later</a>
+
+    <div>
+      
+
+      
+
+
+  
+  <span class="post-meta">
+    <i style="width: 20px; height: 20px;" data-feather="tag"></i>
+    <a href="/blog/skimp-and-splurge/">
+      Skimp and Splurge
+    </a>
+  </span>
+
+
+    </div>
+  </div>
+</li>
+
+    
+      <li>
+  
+  
+
+  <div class="container" style="padding-left: 0; padding-right: 0; padding-bottom: 2rem;">
+    <span class="post-meta">
+      <div>
+        
             November 5, 2019
         
       </div>
@@ -313,41 +348,6 @@
 </li>
 
     
-      <li>
-  
-  
-
-  <div class="container" style="padding-left: 0; padding-right: 0; padding-bottom: 2rem;">
-    <span class="post-meta">
-      <div>
-        
-            October 1, 2019
-        
-      </div>
-    </span>
-
-    <a href="/blog/posts/welcome-to-kenya/2019-10-01-the-journey-home/">Welcome to Kenya → Part 4: The Journey Home</a>
-
-    <div>
-      
-
-      
-
-
-  
-  <span class="post-meta">
-    <i style="width: 20px; height: 20px;" data-feather="tag"></i>
-    <a href="/blog/welcome-to-kenya/">
-      Welcome to Kenya
-    </a>
-  </span>
-
-
-    </div>
-  </div>
-</li>
-
-    
   </ul>
 
   
@@ -438,12 +438,23 @@
   View on <a href="https://github.com/emma-sax4/emma-sax4.github.io">GitHub</a>.
 </footer>
 
-  <script type="text/javascript">
+  <!--
+To open an EXTERNAL link in the CURRENT tab, write your link like this:
+  <a href="https://github.com" target="_self">GitHub</a>
+
+To open an INTERNAL link in a NEW tab, write your link like this:
+  <a href="https://emmasax4.info" target="_blank">My website</a>
+-->
+<script type="text/javascript">
   function externalLinks() {
     for(var c = document.getElementsByTagName('a'), a = 0; a < c.length; a++) {
       var b = c[a];
-      b.getAttribute('href') && b.hostname !== location.hostname && (b.target = '_blank')
-    }
+      if (b.target == '_self') {
+        b.getAttribute('href') && b.hostname !== location.hostname && (b.target = '_self');
+      } else {
+        b.getAttribute('href') && b.hostname !== location.hostname && (b.target = '_blank');
+      };
+    };
   };
   externalLinks();
 </script>
