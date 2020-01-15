@@ -101,6 +101,7 @@ DEPENDENCIES
   jekyll-sitemap (~> 1.4.0)
   jekyll-time-to-read (~> 0.1.2)
   jekyll-titles-from-headings (~> 0.5.3)
+  rouge (~> 3.14.0)
 
 BUNDLED WITH
    2.1.4
