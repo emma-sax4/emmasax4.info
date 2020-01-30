@@ -8,7 +8,7 @@ GIT
 
 GIT
   remote: https://github.com/emma-sax4/jekyll-seo-tag.git
-  revision: 76b56c52fd2c7212a9f4273c4fcbfb722aabaed7
+  revision: 4cc8ea6008fff7eb6c625cbea19c6957a87a7a5c
   specs:
     jekyll-seo-tag (2.6.1)
       jekyll (>= 3.3, < 5.0)
