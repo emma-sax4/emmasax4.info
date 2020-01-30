@@ -8,8 +8,8 @@ GIT
 
 GIT
   remote: https://github.com/emma-sax4/jekyll-seo-tag.git
-  revision: 94f8485557193995ab483ae75b94a2846e4054ac
-  branch: make_custom_seo_titles
+  revision: 1d418de168aa69fb4752bc720e38740f13c49d42
+  branch: emmasax4.info-custom-titles
   specs:
     jekyll-seo-tag (2.6.1)
       jekyll (>= 3.3, < 5.0)
