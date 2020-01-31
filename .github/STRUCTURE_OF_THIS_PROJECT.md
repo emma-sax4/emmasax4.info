@@ -199,28 +199,16 @@ category: Category One
 
 To write drafts, make a new file in the `_posts/` directory (or in a subdirectory if the post will be part of a category). The new file should be named in the following pattern: `YYYY-MM-DD-test-post-title`. Because this draft hasn't been published yet, I usually just put in the date I hope to publish the draft (usually a few days in the future).
 
-Then, make sure the front matter of the draft looks like this:
-```yml
----
-layout: post
-title: Post C
-tags: [ tag1, tag2 ] # optional
----
-```
+Then, when you run `jekyll serve --future` locally, the draft post(s) should appear at the top of the list of posts, and should show as "Unpublished".
 
-If the post is part of a collection, then it should look like this:
-```yml
----
-layout: post
-title: Category One
-subtitle: Post C
-category: Category One
----
-```
-
-Then, when you run `jekyll serve --future` locally, any drafts should appear at the top of the list of posts, and should show as "Unpublished".
-
-When it's time to publish the post, rename the file to have today's publishing date in the title (instead of whatever date was there previously).
+When it's time to publish the post, you can either:
+* Publish the post today:
+  * Rename the file to have today's date in the title instead of whatever future date was there previously
+  * Re-add and commit those files to the pull request
+  * Merge the pull request into the `release` branch
+* Publish the post on the future date in the blog post filename:
+  * Merge your pull request into the `release` branch
+  * Rebuild the Jekyll server on Travis CI on the date of publishing (rerun the latest `release` build [here](https://travis-ci.com/emma-sax4/emma-sax4.github.io/builds))
 
 ## `assets/`
 
