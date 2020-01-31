@@ -197,7 +197,7 @@ category: Category One
 
 ### Writing Drafts
 
-To write drafts, make a new file in the `_posts/` directory (or in a subdirectory if the post will be part of a category). The new file should be named in the following pattern: `YYYY-MM-DD-test-post-title`. Because this draft hasn't been published yet, I usually just put in either the date I hope to publish the draft, or the day I'm starting the draft. Make sure the date in the title is the most recent date compared to the other posts.
+To write drafts, make a new file in the `_posts/` directory (or in a subdirectory if the post will be part of a category). The new file should be named in the following pattern: `YYYY-MM-DD-test-post-title`. Because this draft hasn't been published yet, I usually just put in the date I hope to publish the draft (usually a few days in the future).
 
 Then, make sure the front matter of the draft looks like this:
 ```yml
@@ -205,7 +205,6 @@ Then, make sure the front matter of the draft looks like this:
 layout: post
 title: Post C
 tags: [ tag1, tag2 ] # optional
-draft: true
 ---
 ```
 
@@ -216,13 +215,12 @@ layout: post
 title: Category One
 subtitle: Post C
 category: Category One
-draft: true
 ---
 ```
 
-Then, when you run `jekyll serve` locally, any drafts should appear at the top of the list of posts, and should show as "Unpublished".
+Then, when you run `jekyll serve --future` locally, any drafts should appear at the top of the list of posts, and should show as "Unpublished".
 
-When it's time to publish a draft, rename the file to include today's publishing date in the title (instead of whatever date was there previously), and remove the `draft: true` line from the front matter.
+When it's time to publish the post, rename the file to have today's publishing date in the title (instead of whatever date was there previously).
 
 ## `assets/`
 

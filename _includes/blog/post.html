@@ -13,10 +13,12 @@
   <div class="container" style="padding-left: 0; padding-right: 0; padding-bottom: 2rem;">
     <span class="post-meta">
       <div>
-        {% if post.draft == true %}
-            Unpublished
+        {% assign now = "now" | date: "%s" %}
+        {% assign date = post.date | date: "%s" %}
+        {% if date <= now %}
+          Published {{ post.date | date: "%B %-d, %Y" }}
         {% else %}
-            {{ post.date | date: "%B %-d, %Y" }}
+          Unpublished
         {% endif %}
       </div>
     </span>
