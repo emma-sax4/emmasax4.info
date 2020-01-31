@@ -21,7 +21,7 @@ deploy:
   local_dir: ./site
   token: $GITHUB_TOKEN
   keep_history: true
-  cleanup: false
+  skip_cleanup: true
   on:
     branch: release
     condition: $TRAVIS_EVENT_TYPE != cron
