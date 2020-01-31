@@ -30,3 +30,5 @@ notifications:
   email:
     on_success: never
     on_failure: always
+    recipients:
+      - emma.sax4@gmail.com
