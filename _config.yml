@@ -18,7 +18,7 @@ title: Emma Sax
 description: Emma Sax's personal website and blog. Includes information about my social media profiles, résumé, and hobbies.
 url: https://emmasax4.info
 
-future: true
+future: false
 highlighter: rouge
 jekyll-mentions: https://github.com
 markdown: kramdown
