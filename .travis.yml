@@ -11,6 +11,8 @@ install:
 
 script:
   - JEKYLL_ENV=production bundle exec jekyll build --destination ./site
+  - echo "running changes"
+  - echo $(github/travis_changes.sh)
 
 deploy:
   provider: pages
