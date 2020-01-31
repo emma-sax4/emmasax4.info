@@ -12,11 +12,11 @@ install:
 script:
   - JEKYLL_ENV=production bundle exec jekyll build --destination ./site
   - echo "running changes"
+  - git diff
   - echo $(.github/travis_changes.sh)
 
 deploy:
   provider: pages
-  os: linux
   local_dir: ./site
   target_branch: master
   email: deploy@travis-ci.org
