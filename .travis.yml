@@ -15,13 +15,13 @@ script:
 
 deploy:
   provider: pages
-  local_dir: ./site
-  target_branch: master
   email: deploy@travis-ci.org
   name: Deployment Bot
-  cleanup: false
-  github_token: $TOKEN
+  target_branch: master
+  local_dir: ./site
+  token: $GITHUB_TOKEN
   keep_history: true
+  cleanup: false
   on:
     branch: release
     condition: $TRAVIS_EVENT_TYPE != cron
