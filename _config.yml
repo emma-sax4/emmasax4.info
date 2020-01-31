@@ -29,8 +29,8 @@ github:
 
 kramdown:
   smart_quotes:
-    - rdquo
-    - rsquo
+    - apos
+    - apos
     - quot
     - quot
 
