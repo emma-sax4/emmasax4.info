@@ -36,8 +36,8 @@
 <meta name="generator" content="Jekyll v3.8.6" />
 <meta property="og:title" content="Emma Sax | My First Blog Post" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="I’ve been wanting to start a blog for myself for a while, but I’ve been having trouble figuring out where to start. But, there’s no time like the present, so I thought I might as well just go for it!" />
-<meta property="og:description" content="I’ve been wanting to start a blog for myself for a while, but I’ve been having trouble figuring out where to start. But, there’s no time like the present, so I thought I might as well just go for it!" />
+<meta name="description" content="I&#39;ve been wanting to start a blog for myself for a while, but I&#39;ve been having trouble figuring out where to start. But, there&#39;s no time like the present, so I thought I might as well just go for it!" />
+<meta property="og:description" content="I&#39;ve been wanting to start a blog for myself for a while, but I&#39;ve been having trouble figuring out where to start. But, there&#39;s no time like the present, so I thought I might as well just go for it!" />
 <link rel="canonical" href="https://emmasax4.info/blog/posts/2019-09-06-my-first-blog-post/" />
 <meta property="og:url" content="https://emmasax4.info/blog/posts/2019-09-06-my-first-blog-post/" />
 <meta property="og:site_name" content="Emma Sax" />
@@ -49,7 +49,7 @@
 <meta name="msvalidate.01" content="89B2B19FF966341B78EF64EDADE6DF81" />
 <meta name="yandex-verification" content="c2741887f8c30dd1" />
 <script type="application/ld+json">
-{"description":"I’ve been wanting to start a blog for myself for a while, but I’ve been having trouble figuring out where to start. But, there’s no time like the present, so I thought I might as well just go for it!","@type":"BlogPosting","headline":"My First Blog Post","dateModified":"2019-09-06T00:00:00+00:00","datePublished":"2019-09-06T00:00:00+00:00","url":"https://emmasax4.info/blog/posts/2019-09-06-my-first-blog-post/","mainEntityOfPage":{"@type":"WebPage","@id":"https://emmasax4.info/blog/posts/2019-09-06-my-first-blog-post/"},"@context":"https://schema.org"}</script>
+{"description":"I&#39;ve been wanting to start a blog for myself for a while, but I&#39;ve been having trouble figuring out where to start. But, there&#39;s no time like the present, so I thought I might as well just go for it!","@type":"BlogPosting","headline":"My First Blog Post","dateModified":"2019-09-06T00:00:00+00:00","datePublished":"2019-09-06T00:00:00+00:00","url":"https://emmasax4.info/blog/posts/2019-09-06-my-first-blog-post/","mainEntityOfPage":{"@type":"WebPage","@id":"https://emmasax4.info/blog/posts/2019-09-06-my-first-blog-post/"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -204,6 +204,8 @@
   <div class="text-center" style="margin-top: -.5rem;">
     <span class="post-meta" style="font-style: italic;">
       
+      
+      
         Published September 6, 2019
       
     </span>
@@ -211,21 +213,21 @@
 </h1>
 
     <div class="page-body">
-      <p>I’ve been wanting to start a blog for myself for a while, but I’ve been having trouble figuring out where to start. But, there’s no time like the present, so I thought I might as well just go for it!</p>
+      <p>I've been wanting to start a blog for myself for a while, but I've been having trouble figuring out where to start. But, there's no time like the present, so I thought I might as well just go for it!</p>
 
-<p>The very first blog I started, used Ruby On Rails… you can check it out <a href="https://github.com/emma-sax4/blog">here</a>. Needless to say, it didn’t go very well.</p>
+<p>The very first blog I started, used Ruby On Rails… you can check it out <a href="https://github.com/emma-sax4/blog">here</a>. Needless to say, it didn't go very well.</p>
 
 <p>But since I started to beef up this little website (which, 🤫, is actually just a bunch of static HTML files), I decided that I could probably just add the blog functionality to this site.</p>
 
-<p>I originally wanted to try to use layouts, Jekyll, and javascript-like styles to store the blogs as Markdown files. In that case, the main "Blog" page would just use a fancy little loop to show each of the blog posts. But that turned out to be more difficult than I thought it would be. In all honesty, I could figure it all out myself… there’s plenty of examples out there in GitHub. But I had a limited amount of time I wanted to spend putting the blog together, and tbh, I had a limited amount of patience as well.</p>
+<p>I originally wanted to try to use layouts, Jekyll, and javascript-like styles to store the blogs as Markdown files. In that case, the main "Blog" page would just use a fancy little loop to show each of the blog posts. But that turned out to be more difficult than I thought it would be. In all honesty, I could figure it all out myself… there's plenty of examples out there in GitHub. But I had a limited amount of time I wanted to spend putting the blog together, and tbh, I had a limited amount of patience as well.</p>
 
-<p>Instead, I figured… I’m afraid of neither a little bit of HTML nor a little bit of duplicated code (I know the code isn’t as "pretty", and if there was actual functionality on this website, I would try harder to avoid it). So, I realized that I could make a decently good blog function by simply being smart about my HTML, CSS, and <code class="highlighter-rouge">href</code> linking. At the very least, it would look professional, and like I knew what I was doing, even if the skeleton of the code is a little ugly.</p>
+<p>Instead, I figured… I'm afraid of neither a little bit of HTML nor a little bit of duplicated code (I know the code isn't as "pretty", and if there was actual functionality on this website, I would try harder to avoid it). So, I realized that I could make a decently good blog function by simply being smart about my HTML, CSS, and <code class="highlighter-rouge">href</code> linking. At the very least, it would look professional, and like I knew what I was doing, even if the skeleton of the code is a little ugly.</p>
 
-<p>Then, I went a step further. I added a <code class="highlighter-rouge">.htaccess</code> file (even though GitHub Pages normally doesn’t play nice with that file), so that the URLs of this website could hide the <code class="highlighter-rouge">.html</code> endings of the HTML pages. In this way, the website wouldn’t show up as obviously just a compilation of HTML files… aka it makes it look like the whole website is served using RoR or something like that. And then, using a little bit of directory-magic, I can add a bunch of posts in a <code class="highlighter-rouge">_posts/</code> directory — and link to them appropriately. Add in a <code class="highlighter-rouge">Back</code> button, and voilà… here we are!</p>
+<p>Then, I went a step further. I added a <code class="highlighter-rouge">.htaccess</code> file (even though GitHub Pages normally doesn't play nice with that file), so that the URLs of this website could hide the <code class="highlighter-rouge">.html</code> endings of the HTML pages. In this way, the website wouldn't show up as obviously just a compilation of HTML files… aka it makes it look like the whole website is served using RoR or something like that. And then, using a little bit of directory-magic, I can add a bunch of posts in a <code class="highlighter-rouge">_posts/</code> directory — and link to them appropriately. Add in a <code class="highlighter-rouge">Back</code> button, and voilà… here we are!</p>
 
-<p>Now I have a blog feature that I can edit as I choose (as long as I’m willing to duplicate my code). I’m excited to add my next blog post to the list. Let’s see how long it takes for this blog to stop being updated… it may just be a phase.</p>
+<p>Now I have a blog feature that I can edit as I choose (as long as I'm willing to duplicate my code). I'm excited to add my next blog post to the list. Let's see how long it takes for this blog to stop being updated… it may just be a phase.</p>
 
-<p>** It’s come to my attention that there are a few aspects of a <em>blog</em> that this doesn’t include. Mainly, the ability to comment, converse with others, and have notes regarding each blog post.</p>
+<p>** It's come to my attention that there are a few aspects of a <em>blog</em> that this doesn't include. Mainly, the ability to comment, converse with others, and have notes regarding each blog post.</p>
 
       <div style="margin-top: 3rem;">
   
