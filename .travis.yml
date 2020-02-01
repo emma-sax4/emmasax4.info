@@ -33,6 +33,7 @@ jobs:
         - htmlproofer --assume-extension --allow-hash-href --internal-domains "/emmasax4.info/" --url-ignore "/linkedin/,/digikey/" ./site
 
     - stage: Deploy
+      if: (type NOT IN (pull_request)) AND (branch = release)
       name: GitHub Pages
       before_deploy:
         - JEKYLL_ENV=production bundle exec jekyll build --destination ./site
@@ -47,4 +48,3 @@ jobs:
           skip_cleanup: true
           on:
             branch: release
-      if: (type NOT IN (pull_request)) AND (branch = release)
