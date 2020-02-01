@@ -13,27 +13,20 @@ install:
   - bundle config set without 'development'
   - bundle install
 
+script:
+  - JEKYLL_ENV=production bundle exec jekyll build --destination ./site
+
 jobs:
   include:
     - stage: Test
-      name: Jekyll Build
-      script: JEKYLL_ENV=production bundle exec jekyll build --destination ./site
-    - stage: Test
       name: External Link Check
-      script:
-        - JEKYLL_ENV=production bundle exec jekyll build --destination ./site
-        - htmlproofer --assume-extension --url-ignore "/linkedin/,/digikey/" --external-only
-          --internal-domains "/emmasax4.info/" ./site
+      script: htmlproofer --assume-extension --url-ignore "/linkedin/,/digikey/" --external-only --internal-domains         "/emmasax4.info/" ./site
     - stage: Test
       name: Internal Link Check
-      script:
-        - JEKYLL_ENV=production bundle exec jekyll build --destination ./site
-        - echo $(htmlproofer --assume-extension --allow-hash-href --url-ignore "/linkedin/,/digikey/" ./site)
-
+      script: htmlproofer --assume-extension --allow-hash-href --url-ignore "/linkedin/,/digikey/" ./site; exit 0
 
     - stage: Deploy
       if: (type NOT IN (pull_request)) AND (branch = release)
-      script: JEKYLL_ENV=production bundle exec jekyll build --destination ./site
       deploy:
         provider: pages
         email: deploy@travis-ci.org
