@@ -55,7 +55,7 @@ NOTE: Running this process locally will most likely create at least one director
 
 This repository doesn't really have any unit or integration tests (Jekyll sites are just a host of static site files, so there's not really any functionality to test). However, Travis CI does check that `bundler` can install the necessary dependencies and that Jekyll can properly build the site on each pull request and each commit to the `release` branch (the default branch in this repository).
 
-### Deployments with Travis CI
+## Deployments with Travis CI
 
 Because of the use of Jekyll gems that GitHub doesn't support, this site needs to use a 3rd Party instead of GitHub Pages to compile the code. So, when Travis CI runs on the `release` branch, not only does it bundle all of the dependencies and build the site, but it also puts it into a special `./site` directory. Then, Travis CI will run a Travis Deployment to upload that directory to the `master` branch of this GitHub repository. Then, GitHub Pages automatically deploys the commits in the `master` branch. In this way, we develop the site on a pull request, we merge source code into the `release` branch, and then Travis CI builds the code and commits that automagically to the `master` branch. Then GitHub Pages does their thing.
 
