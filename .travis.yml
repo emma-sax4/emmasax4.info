@@ -6,12 +6,12 @@ branches:
   only:
     - release
 
+before_install:
+  - export TZ=America/Chicago
+
 install:
   - bundle config set without 'development'
   - bundle install
-
-before_script:
-  - echo 'US/Central' | sudo tee /etc/timezone
 
 script:
   - JEKYLL_ENV=production bundle exec jekyll build --destination ./site
