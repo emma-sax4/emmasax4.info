@@ -27,13 +27,14 @@ jobs:
         - JEKYLL_ENV=production bundle exec jekyll build --destination ./site
     - stage: Test
       name: HTML Proofer
-      script:
+      before_script:
         - JEKYLL_ENV=production bundle exec jekyll build --destination ./site
+      script:
         - htmlproofer --assume-extension --allow-hash-href --internal-domains "/emmasax4.info/" --url-ignore "/linkedin/,/digikey/" ./site
 
     - stage: Deploy
       name: GitHub Pages
-      script:
+      before_deploy:
         - JEKYLL_ENV=production bundle exec jekyll build --destination ./site
       deploy:
         - provider: pages
@@ -44,4 +45,6 @@ jobs:
           token: $GITHUB_TOKEN
           keep_history: true
           skip_cleanup: true
+          on:
+            branch: release
       if: (type NOT IN (pull_request)) AND (branch = release)
