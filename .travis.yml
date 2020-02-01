@@ -22,12 +22,24 @@ install:
 
 jobs:
   include:
-    - stage: Jekyll Build and HTML Proofer
+    - stage: Jekyll Build and HTML Proofers
       script:
         - JEKYLL_ENV=production bundle exec jekyll build --destination ./site
         - htmlproofer --url-ignore "/linkedin/,/digikey/" --external-only --internal-domains "/emmasax4.info/" ./site
-      after_script: # INTERNAL HTML Proofer can fail
+    - stage: Jekyll Build and HTML Proofers
+      name: Internal HTML Proofer
+      if: (type IN (pull_request))
+      script:
+        - JEKYLL_ENV=production bundle exec jekyll build --destination ./site
         - htmlproofer --assume-extension --allow-hash-href --url-ignore "/linkedin/,/digikey/" ./site
+    - stage: Jekyll Build and HTML Proofers
+      name: Internal HTML Proofer
+      if: (type NOT IN (pull_request))
+      script:
+        - JEKYLL_ENV=production bundle exec jekyll build --destination ./site
+      after_script:
+        - htmlproofer --assume-extension --allow-hash-href --url-ignore "/linkedin/,/digikey/" ./site
+
     - stage: GitHub Pages Deploy
       if: (type NOT IN (pull_request)) AND (branch = release)
       script:
