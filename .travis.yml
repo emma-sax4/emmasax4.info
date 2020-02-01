@@ -23,10 +23,10 @@ install:
 jobs:
   include:
     - stage: Test
-      name: Jekyll Build and External HTML Proofer
+      name: Jekyll Build # and External HTML Proofer
       script:
         - JEKYLL_ENV=production bundle exec jekyll build --destination ./site
-        - htmlproofer --url-ignore "/linkedin/,/digikey/" --external-only --internal-domains "/emmasax4.info/" ./site
+        # - htmlproofer --url-ignore "/linkedin/,/digikey/" --external-only --internal-domains "/emmasax4.info/" ./site
     - stage: Test
       name: HTML Proofer
       # if: (type IN (pull_request))
