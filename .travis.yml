@@ -25,7 +25,7 @@ jobs:
     - stage: Test
       script:
         - JEKYLL_ENV=production bundle exec jekyll build --destination ./site
-        - htmlproofer --assume-extension --url-ignore "/linkedin/,/digikey/" --external-only --internal-domains       "/emmasax4.info/" ./site
+        - htmlproofer --url-ignore "/linkedin/,/digikey/" --external-only --internal-domains "/emmasax4.info/" ./site
         - htmlproofer --assume-extension --allow-hash-href --url-ignore "/linkedin/,/digikey/" ./site; return 0
     - stage: Deploy
       if: (type NOT IN (pull_request)) AND (branch = release)
