@@ -13,8 +13,8 @@ notifications:
     recipients:
       - emma.sax4@gmail.com
 
-# before_install:
-#   - export TZ=America/Chicago
+before_install:
+  - export TZ=America/Chicago
 
 install:
   - bundle config set without 'development'
@@ -22,12 +22,12 @@ install:
 
 jobs:
   include:
-    - stage: Test
+    - stage: Jekyll Build and HTML Proofer
       script:
         - JEKYLL_ENV=production bundle exec jekyll build --destination ./site
         - htmlproofer --url-ignore "/linkedin/,/digikey/" --external-only --internal-domains "/emmasax4.info/" ./site
         - htmlproofer --assume-extension --allow-hash-href --url-ignore "/linkedin/,/digikey/" ./site; return 0
-    - stage: Deploy
+    - stage: GitHub Pages Deploy
       if: (type NOT IN (pull_request)) AND (branch = release)
       script: JEKYLL_ENV=production bundle exec jekyll build --destination ./site
       deploy:
