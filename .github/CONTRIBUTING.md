@@ -3,7 +3,9 @@
 ### Table of Contents
 - [Contribution Process](#contribution-process)
 - [Running Locally](#running-locally)
-- [Running Tests & Deployments](#running-tests--deployments)
+- [Tests with Travis CI](#tests-with-travis-ci)
+- [Deployments with Travis CI](#deployments-with-travis-ci)
+- [Using HTML Proofer](#using-html-proofer)
 
 ## Contribution Process
 
@@ -32,33 +34,43 @@ Happy coding! 🤗
 To run this application locally, following these steps:
 1. Be sure you have Ruby installed on your machine; the `.ruby-version` file specifies ruby 2.6.5 because that's the latest stable version of Ruby.
 2. First, bundle install and install all of the gems specified in the Gemfile:
-    ```
+    ```bash
     gem install bundler
     bundle install
     ```
-3. Then build the site using Jekyll:
+3. Then build and serve the site using Jekyll:
+    ```bash
+    bundle exec jekyll serve # with optional --future flag
     ```
-    bundle exec jekyll build
-    ```
-4. Serve it up:
-    ```
-    bundle exec jekyll serve
-    ```
-5. Navigate to the local URL Jekyll provides (`http://127.0.0.1:4000` on my machine).
+4. Navigate to the local URL Jekyll provides (`http://127.0.0.1:4000` on my machine).
 
-To view Disqus comments and comment loading locally, run Jekyll in the `production` environment (for local development—where the environment is automatically `development`—the default does not show comments):
-```
-JEKYLL_ENV=production bundle exec jekyll serve
+To view Disqus comments and comment loading locally, run Jekyll in the `production` environment (local development, where the environment is automatically `development`, does not show comments):
+```bash
+JEKYLL_ENV=production bundle exec jekyll serve # with optional --future flag
 ```
 
 NOTE: Running this process locally will most likely create at least one directory locally on your machine, such as `_site/` and `.sass-cache/`, and potentially others. All of these are already in the `.gitignore`, but feel free to add others as necessary.
 
-## Running Tests & Deployments
+## Tests with Travis CI
 
-This repository doesn't really have any tests at all (Jekyll sites are just a host of static site files, so there's no functionality to test). However, I do want to check that `bundler` can install the necessary dependencies and that Jekyll can properly build the site on each pull request and commit to `release` branch (the default branch in this repository).
+This repository doesn't really have any unit or integration tests (Jekyll sites are just a host of static site files, so there's not really any functionality to test). However, Travis CI does check that `bundler` can install the necessary dependencies and that Jekyll can properly build the site on each pull request and each commit to the `release` branch (the default branch in this repository).
 
-Because of the use of Jekyll gems that GitHub doesn't support, this site needs to use a 3rd Party instead of GitHub Pages to compile the code. So, here comes Travis CI to the rescue.
+## Deployments with Travis CI
 
-When Travis CI runs on the `release` branch, not only does it bundle all of the dependencies and build the site, but it also puts it into a special `./site` directory. Then, Travis CI will run a Travis Deployment to upload that directory to the `master` branch of this GitHub repository. Then, GitHub automatically deploys the commits (in the `master` branch) to GitHub Pages. In this way, we develop the site on a pull request, we merge source code into the `release` branch, and then Travis CI builds the code and commits that automagically to the `master` branch. Then GitHub Pages does their thing.
+Because of the use of Jekyll gems that GitHub doesn't support, this site needs to use a 3rd Party instead of GitHub Pages to compile the code. So, when Travis CI runs on the `release` branch, not only does it bundle all of the dependencies and build the site, but it also puts it into a special `./site` directory. Then, Travis CI will run a Travis Deployment to upload that directory to the `master` branch of this GitHub repository. Then, GitHub Pages automatically deploys the commits in the `master` branch. In this way, we develop the site on a pull request, we merge source code into the `release` branch, and then Travis CI builds the code and commits that automagically to the `master` branch. Then GitHub Pages does their thing.
 
-A full deployment only takes about five minutes, but depending on what was changed (HTML files, images, etc), it can take up to about ten minutes to propagate the changes. To make the changes appear faster, you can reload the entire website in incognito mode.
+A full deployment only takes about five to ten minutes, but depending on what was changed (HTML files, images, etc), it can take up to about fifteen minutes to propagate the changes. To make the changes appear faster, you can reload the entire website in incognito mode.
+
+## Using HTML Proofer
+
+We can check periodically that all of the HTML links in this website load correctly:
+```bash
+bundle exec jekyll build # with optional --future flag
+htmlproofer --assume-extension --allow-hash-href ./_site
+```
+
+External links to LinkedIn typically return an error code, as explained [here](https://github.com/gjtorikian/html-proofer/issues/215). The other link that I typically see returning error codes is one to Digi-Key. I haven't quite figured out why that is.
+
+If you're in the process of creating a new blog post, then most likely (if you ran your build command with `--future`) the external link to that new blog post will fail. This makes sense—the blog post isn't live online yet, and that's what the link is checking for.
+
+Travis CI also runs a special version of the HTML Proofer, which skips over all internal domains and ignores LinkedIn and Digi-Key domains.
