@@ -208,7 +208,7 @@ When it's time to publish the post, you can either:
   * Merge the pull request into the `release` branch
 * Publish the post on the future date in the blog post filename:
   * Merge your pull request into the `release` branch
-  * Rebuild the Jekyll server on Travis CI on the date of publishing (rerun the latest `release` build [here](https://travis-ci.com/emma-sax4/emma-sax4.github.io/builds))
+  * Wait until Travis CI builds the newest version around midnight on the day of publishing (or rerun the latest `release` build [here](https://travis-ci.com/emma-sax4/emma-sax4.github.io/builds) on the day of publishing)
 
 ## `assets/`
 
