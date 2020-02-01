@@ -26,10 +26,12 @@ jobs:
       script:
         - JEKYLL_ENV=production bundle exec jekyll build --destination ./site
         - htmlproofer --url-ignore "/linkedin/,/digikey/" --external-only --internal-domains "/emmasax4.info/" ./site
-        - htmlproofer --assume-extension --allow-hash-href --url-ignore "/linkedin/,/digikey/" ./site; return 0
+      after_script:
+        - htmlproofer --assume-extension --allow-hash-href --url-ignore "/linkedin/,/digikey/" ./site
     - stage: GitHub Pages Deploy
       if: (type NOT IN (pull_request)) AND (branch = release)
-      script: JEKYLL_ENV=production bundle exec jekyll build --destination ./site
+      script:
+        - JEKYLL_ENV=production bundle exec jekyll build --destination ./site
       deploy:
         - provider: pages
           email: deploy@travis-ci.org
