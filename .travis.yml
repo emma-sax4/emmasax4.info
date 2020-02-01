@@ -22,25 +22,27 @@ install:
 
 jobs:
   include:
-    - stage: Jekyll Build and HTML Proofers
+    - stage: Test
+      name: Jekyll Build and External HTML Proofer
       script:
         - JEKYLL_ENV=production bundle exec jekyll build --destination ./site
         - htmlproofer --url-ignore "/linkedin/,/digikey/" --external-only --internal-domains "/emmasax4.info/" ./site
-    - stage: Jekyll Build and HTML Proofers
-      name: Internal HTML Proofer
-      if: (type IN (pull_request))
+    - stage: Test
+      name: HTML Proofer
+      # if: (type IN (pull_request))
       script:
         - JEKYLL_ENV=production bundle exec jekyll build --destination ./site
         - htmlproofer --assume-extension --allow-hash-href --url-ignore "/linkedin/,/digikey/" ./site
-    - stage: Jekyll Build and HTML Proofers
-      name: Internal HTML Proofer
-      if: (type NOT IN (pull_request))
-      script:
-        - JEKYLL_ENV=production bundle exec jekyll build --destination ./site
-      after_script:
-        - htmlproofer --assume-extension --allow-hash-href --url-ignore "/linkedin/,/digikey/" ./site
+    # - stage: Test
+    #   name: Internal HTML Proofer
+    #   if: (type NOT IN (pull_request))
+    #   script:
+    #     - JEKYLL_ENV=production bundle exec jekyll build --destination ./site
+    #   after_script:
+    #     - htmlproofer --assume-extension --allow-hash-href --url-ignore "/linkedin/,/digikey/" ./site
 
-    - stage: GitHub Pages Deploy
+    - stage: Deploy
+      name: GitHub Pages
       if: (type NOT IN (pull_request)) AND (branch = release)
       script:
         - JEKYLL_ENV=production bundle exec jekyll build --destination ./site
