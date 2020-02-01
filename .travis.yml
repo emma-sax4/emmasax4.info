@@ -1,29 +1,9 @@
 os: linux
 language: ruby
 cache: bundler
-
 branches:
   only:
     - release
-
-install:
-  - bundle config set without 'development'
-  - bundle install
-
-script:
-  - JEKYLL_ENV=production bundle exec jekyll build --destination ./site
-
-deploy:
-  provider: pages
-  email: deploy@travis-ci.org
-  name: Deployment Bot
-  target_branch: master
-  local_dir: ./site
-  token: $GITHUB_TOKEN
-  keep_history: true
-  skip_cleanup: true
-  on:
-    branch: release
 
 notifications:
   email:
@@ -31,3 +11,37 @@ notifications:
     on_failure: always
     recipients:
       - emma.sax4@gmail.com
+
+before_install:
+  - export TZ=America/Chicago
+
+install:
+  - bundle config set without 'development'
+  - bundle install
+
+jobs:
+  include:
+    - stage: Test
+      name: Jekyll Build
+      script:
+        - JEKYLL_ENV=production bundle exec jekyll build --destination ./site
+    - stage: Test
+      name: HTML Proofer
+      script:
+        - JEKYLL_ENV=production bundle exec jekyll build --destination ./site
+        - htmlproofer --assume-extension --allow-hash-href --internal-domains "/emmasax4.info/" --url-ignore "/linkedin/,/digikey/" ./site
+
+    - stage: Deploy
+      name: GitHub Pages
+      script:
+        - JEKYLL_ENV=production bundle exec jekyll build --destination ./site
+      deploy:
+        - provider: pages
+          email: deploy@travis-ci.org
+          name: Deployment Bot
+          target_branch: master
+          local_dir: ./site
+          token: $GITHUB_TOKEN
+          keep_history: true
+          skip_cleanup: true
+      if: (type NOT IN (pull_request)) AND (branch = release)
