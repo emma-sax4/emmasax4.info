@@ -23,7 +23,7 @@ jobs:
         - htmlproofer --assume-extension --url-ignore "/linkedin/,/digikey/" --external-only
           --internal-domains "/emmasax4.info/" ./site
     - name: GitHub Pages Deploy
-      if: branch = release
+      if: branch = release AND type != PULL_REQUEST
       script: JEKYLL_ENV=production bundle exec jekyll build --destination ./site
       deploy:
         provider: pages
@@ -37,7 +37,7 @@ jobs:
 
   allow_failures:
     - name: Internal Link Check
-      if: branch = release OR type = PULL_REQUEST
+      if: branch = release OR type == PULL_REQUEST
       script:
         - JEKYLL_ENV=production bundle exec jekyll build --destination ./site
         - htmlproofer --assume-extension --allow-hash-href --url-ignore "/linkedin/,/digikey/" ./site
