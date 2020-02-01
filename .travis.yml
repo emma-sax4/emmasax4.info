@@ -12,6 +12,7 @@ install:
 
 script:
   - JEKYLL_ENV=production bundle exec jekyll build --destination ./site
+  - htmlproofer --assume-extension --allow-hash-href --url-ignore "/linkedin/,/digikey/" ./_site
 
 deploy:
   provider: pages
