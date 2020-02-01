@@ -15,14 +15,23 @@ install:
 
 jobs:
   include:
-    - name: Jekyll Build
+    - stage: Test
+      name: Jekyll Build
       script: JEKYLL_ENV=production bundle exec jekyll build --destination ./site
-    - name: External Link Check
+    - stage: Test
+      name: External Link Check
       script:
         - JEKYLL_ENV=production bundle exec jekyll build --destination ./site
         - htmlproofer --assume-extension --url-ignore "/linkedin/,/digikey/" --external-only
           --internal-domains "/emmasax4.info/" ./site
-    - name: GitHub Pages Deploy
+    - stage: Test
+      name: Internal Link Check
+      script:
+        - JEKYLL_ENV=production bundle exec jekyll build --destination ./site
+        - echo $(htmlproofer --assume-extension --allow-hash-href --url-ignore "/linkedin/,/digikey/" ./site)
+
+
+    - stage: Deploy
       if: (type NOT IN (pull_request)) AND (branch = release)
       script: JEKYLL_ENV=production bundle exec jekyll build --destination ./site
       deploy:
@@ -35,12 +44,6 @@ jobs:
         keep_history: true
         skip_cleanup: true
 
-  allow_failures:
-    - name: Internal Link Check
-      if: (type IN (pull_request)) OR (branch = release)
-      script:
-        - JEKYLL_ENV=production bundle exec jekyll build --destination ./site
-        - htmlproofer --assume-extension --allow-hash-href --url-ignore "/linkedin/,/digikey/" ./site
 
 notifications:
   email:
