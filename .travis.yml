@@ -29,7 +29,7 @@ jobs:
       name: HTML Proofer
       script:
         - JEKYLL_ENV=production bundle exec jekyll build --destination ./site
-        - htmlproofer --assume-extension --allow-hash-href --internal-domains "/emmasax4.info/" --url-ignore "/linkedin/,/digikey/" ./site
+        - htmlproofer --assume-extension --allow-hash-href --url-ignore "/linkedin/,/digikey/" ./site
 
     - stage: Deploy
       name: GitHub Pages
