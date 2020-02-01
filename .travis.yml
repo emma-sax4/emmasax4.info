@@ -6,29 +6,41 @@ branches:
   only:
     - release
 
-before_install:
-  - export TZ=America/Chicago
+# before_install:
+#   - export TZ=America/Chicago
 
 install:
   - bundle config set without 'development'
   - bundle install
 
-script:
-  - JEKYLL_ENV=production bundle exec jekyll build --destination ./site
-  - htmlproofer --assume-extension --url-ignore "/linkedin/,/digikey/" --external-only --internal-domains "/emmasax4.info/" ./site # EXTERNAL - must succeed
-  - { htmlproofer --assume-extension --allow-hash-href --url-ignore "/linkedin/,/digikey/" ./site; exit 0; } # INTERNAL - may fail
+jobs:
+  include:
+    - name: Jekyll Build
+      script: JEKYLL_ENV=production bundle exec jekyll build --destination ./site
+    - name: External Link Check
+      script:
+        - JEKYLL_ENV=production bundle exec jekyll build --destination ./site
+        - htmlproofer --assume-extension --url-ignore "/linkedin/,/digikey/" --external-only
+          --internal-domains "/emmasax4.info/" ./site
+    - name: GitHub Pages Deploy
+      if: branch = release
+      script: JEKYLL_ENV=production bundle exec jekyll build --destination ./site
+      deploy:
+        provider: pages
+        email: deploy@travis-ci.org
+        name: Deployment Bot
+        target_branch: master
+        local_dir: ./site
+        token: $GITHUB_TOKEN
+        keep_history: true
+        skip_cleanup: true
 
-deploy:
-  provider: pages
-  email: deploy@travis-ci.org
-  name: Deployment Bot
-  target_branch: master
-  local_dir: ./site
-  token: $GITHUB_TOKEN
-  keep_history: true
-  skip_cleanup: true
-  on:
-    branch: release
+  allow_failures:
+    - name: Internal Link Check
+      if: branch = release OR type = PULL_REQUEST
+      script:
+        - JEKYLL_ENV=production bundle exec jekyll build --destination ./site
+        - htmlproofer --assume-extension --allow-hash-href --url-ignore "/linkedin/,/digikey/" ./site
 
 notifications:
   email:
