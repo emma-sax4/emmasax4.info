@@ -10,6 +10,9 @@ install:
   - bundle config set without 'development'
   - bundle install
 
+before_script:
+  - echo 'US/Central' | sudo tee /etc/timezone
+
 script:
   - JEKYLL_ENV=production bundle exec jekyll build --destination ./site
   - htmlproofer --assume-extension --allow-hash-href --url-ignore "/linkedin/,/digikey/" ./site
