@@ -38,13 +38,13 @@ To run this application locally, following these steps:
     gem install bundler
     bundle install
     ```
-3. Then build and serve the site using Jekyll (with optional `--future` flag if wanting to show future blog posts):
+3. Then build and serve the site using Jekyll:
     ```bash
     bundle exec jekyll serve # with optional --future flag
     ```
 4. Navigate to the local URL Jekyll provides (`http://127.0.0.1:4000` on my machine).
 
-To view Disqus comments and comment loading locally, run Jekyll in the `production` environment (local development—where the environment is automatic'ally `development`—does not show comments):
+To view Disqus comments and comment loading locally, run Jekyll in the `production` environment (local development, where the environment is automatically `development`, does not show comments):
 ```bash
 JEKYLL_ENV=production bundle exec jekyll serve # with optional --future flag
 ```
