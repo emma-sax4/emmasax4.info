@@ -16,7 +16,6 @@ before_install:
   - export TZ=America/Chicago
 
 install:
-  - bundle config set without 'development'
   - bundle install
 
 script:
