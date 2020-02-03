@@ -30,5 +30,6 @@ deploy:
   local_dir: ./site
   token: $GITHUB_TOKEN
   keep_history: true
+  edge: true
   on:
     branch: release
