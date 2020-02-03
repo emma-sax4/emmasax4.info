@@ -15,6 +15,9 @@ notifications:
 before_install:
   - export TZ=America/Chicago
 
+install:
+  - bundle install
+
 script:
   - JEKYLL_ENV=production bundle exec jekyll build --destination ./site
   - htmlproofer --assume-extension --allow-hash-href --internal-domains "/emmasax4.info/" --url-ignore "/linkedin/,/digikey/" ./site
