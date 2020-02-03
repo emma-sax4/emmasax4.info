@@ -83,5 +83,5 @@ feed:
     items: 5
   development:
     title: LOCAL Emma's Blog
-    url: https://127.0.0.1:4000
+    url: http://127.0.0.1:4000
     items: 5
