@@ -65,12 +65,12 @@ A full deployment only takes about five to ten minutes, but depending on what wa
 
 We can check periodically that all of the HTML links in this website load correctly:
 ```bash
-bundle exec jekyll build # with optional --future flag
+JEKYLL_ENV=production bundle exec jekyll build
 htmlproofer --assume-extension --allow-hash-href ./_site
 ```
 
-External links to LinkedIn typically return an error code, as explained [here](https://github.com/gjtorikian/html-proofer/issues/215). The other link that I typically see returning error codes is one to Digi-Key. I haven't quite figured out why that is.
+External links to LinkedIn typically return an error code, as explained [here](https://github.com/gjtorikian/html-proofer/issues/215). The other link that I usually see returning error codes is one to Digi-Key. I haven't quite figured out why that is.
 
-If you're in the process of creating a new blog post, then most likely (if you ran your build command with `--future`) the external link to that new blog post will fail. This makes sense—the blog post isn't live online yet, and that's what the link is checking for.
+If you're in the process of creating a new blog post, then most likely the external link to the new blog post will fail. This makes sense—the blog post isn't live online yet, and that's what the link is checking for.
 
-Travis CI also runs a special version of the HTML Proofer, which skips over all internal domains and ignores LinkedIn and Digi-Key domains.
+Travis CI also runs a version of the HTML Proofer which skips over all internal domains and ignores LinkedIn and Digi-Key domains.
