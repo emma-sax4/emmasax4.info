@@ -2,6 +2,10 @@
 layout: post
 title: DNS, Domains, and Personal Websites
 tags: [ tech ]
+permalink: /blog/posts/dns-domains-and-personal-websites/
+redirect_from:
+  - /blog/posts/2019-12-20-dns-domains-and-personal-websites/
+date: 2019-12-20 00:00:00 -06:00
 ---
 
 There's many companies that provide the ability for individuals to have their own websites. They include [GitHub Pages](https://pages.github.com/) (where this site is hosted), [GitLab Pages](https://about.gitlab.com/product/pages/), [WordPress](https://wordpress.com/), [Blogger](https://www.blogger.com/about/?r=2), [Wix](https://www.wix.com/), [Google Sites](https://support.google.com/a/users/answer/9314941?hl=en), [Weebly](https://www.weebly.com/), [HostGator](https://www.hostgator.com/), [GoDaddy](https://www.godaddy.com/websites/website-builder), and even [The Knot](https://www.theknot.com/gs/wedding-websites). That's only naming a few. Every single site has their own pros and cons. Some provide more themes. Some provide more flexibility but require the user to know how to code. Some are completely free but usually sacrifice flexibility and theme options. Some start as free but then have payment plans to get more features.

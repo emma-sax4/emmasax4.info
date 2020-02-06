@@ -3,6 +3,10 @@ layout: post
 title: Welcome to Kenya
 subtitle: "Part 3: The Cuisine and the Lodging"
 category: Welcome to Kenya
+permalink: /blog/posts/welcome-to-kenya/the-cuisine-and-lodging/
+redirect_from:
+  - /blog/posts/welcome-to-kenya/2019-09-26-the-cuisine-and-lodging/
+date: 2019-09-26 00:00:00 -05:00
 ---
 
 ## Overall
