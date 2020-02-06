@@ -187,7 +187,7 @@ The tags determine how we want to categorize each post. If there's no categoriza
 
 Without the `permalink` link in the front matter, the URL will most likely default to including the publishing date. This is not ideal, so instead, we'll set a custom permalink for each blog post.
 
-The `date` front matter indicates the published date and time. Usually, it's totally fine with blog posts being published at midnight (usually in America/Central time zone, because that's where Minnesota is). On rare occasions when two posts are published on the same date, it's important to specify a time so that they sort properly. The entire site will show in a readers' local time, but the data will be stored in the system (and will be reflected in the `feed.xml` and `sitemap.xml`) in UTC. From a human's perspective, we want time zones to be a non-issue, so we can write our date/time as the author is seeing it within the post. For Jekyll to properly interpret it, we must specify the author's current hour offset from UTC at the time of publishing.
+The `date` front matter indicates the published date and time. Usually, it's totally fine with blog posts being published at midnight (usually in America/Central time zone, because that's where Minnesota is). On rare occasions when two posts are published on the same date, it's important to specify a time so they sort properly. The entire site will show in a readers' local time, but the data will be stored in the system (and will be reflected in the `feed.xml` and `sitemap.xml`) in UTC. From a human's perspective, we want time zones to be a non-issue, so we can write our date/time as the author is seeing it within the post. For Jekyll to properly interpret it, we must specify the author's current hour offset from UTC at the time of publishing.
 
 ### Posts in a Collection
 
@@ -218,7 +218,7 @@ When it's time to publish the post, you can either:
   * Re-add and commit those files to the pull request
   * Merge the pull request into the `release` branch
 * Publish the post on a future date:
-  * Add the future publishing date/time (typically 00:00 in the author's local time zone, properly identifying current the hour offset from UTC) to the post's front matter in the `date` value
+  * Add the future publishing date/time (typically 00:00:00 in the author's local time zone, properly identifying current the hour offset from UTC) to the post's front matter in the `date` value
   * Rename the file to have the publishing date in the title instead of whatever was there previously
   * Merge your pull request into the `release` branch
   * Wait until Travis CI builds the newest version around midnight in CST on the day of publishing (or rerun the latest `release` build [here](https://travis-ci.com/emma-sax4/emma-sax4.github.io/builds) on the day of publishing)
