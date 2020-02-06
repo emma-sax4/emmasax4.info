@@ -6,7 +6,7 @@ category: Welcome to Kenya
 permalink: /blog/posts/welcome-to-kenya/the-journey-home/
 redirect_from:
   - /blog/posts/welcome-to-kenya/2019-10-01-the-journey-home/
-date: 2019-10-01 00:00:00 -05:00
+date: 2019-10-01 00:00:00 -0500
 ---
 
 At the end of the trip, we ended in the Maasai Mara, approximately six hours away from Nairobi. So, we had a long day of travel ahead of us to start our journey home. But, our trip planners didn't want to have a boring last day, so they planned a few extra stops. Here's what our original itinerary for the day looked like:

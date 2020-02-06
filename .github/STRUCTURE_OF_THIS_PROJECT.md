@@ -179,7 +179,7 @@ layout: post
 title: Post A
 tags: [ tag1, tag2 ] # optional
 permalink: /blog/posts/post-a
-date: 2001-12-14 00:00:00 -06:00 # 2001-12-14 06:00:00 UTC
+date: 2001-12-14 00:00:00 -0600 # 2001-12-14 06:00:00 UTC
 ---
 ```
 
@@ -199,7 +199,7 @@ title: Category One
 subtitle: Post A
 category: Category One
 permalink: /blog/posts/category-one/post-a
-date: 2001-06-27 20:30:00 -05:00 # 2001-06-28 01:30:00 UTC
+date: 2001-06-27 20:30:00 -0500 # 2001-06-28 01:30:00 UTC
 ---
 ```
 
