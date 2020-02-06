@@ -47,7 +47,7 @@
 <meta name="msvalidate.01" content="89B2B19FF966341B78EF64EDADE6DF81" />
 <meta name="yandex-verification" content="c2741887f8c30dd1" />
 <script type="application/ld+json">
-{"description":"Emma Sax’s personal website and blog. Includes information about my social media profiles, résumé, and hobbies.","@type":"WebPage","headline":"Contact Me","url":"https://emmasax4.info/contact-me/","@context":"https://schema.org"}</script>
+{"headline":"Contact Me","description":"Emma Sax’s personal website and blog. Includes information about my social media profiles, résumé, and hobbies.","@type":"WebPage","url":"https://emmasax4.info/contact-me/","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -188,6 +188,46 @@
 </footer>
 
   <!--
+This will take all of the dates for the blog posts (written with the class 'post-meta'),
+and will render them in the readers' local time, instead of in UTC.
+
+An incoming date/time will be formatted like this:
+  2019-12-29 03:00:00 +0000
+
+And it will be turned into this (CST):
+  Sat Dec 28 2019 21:00:00 GMT-0600
+
+And written like this:
+  December 28, 2019
+-->
+<script type="text/javascript">
+  function formatDate(date) {
+    var monthNames = ['January', 'February', 'March', 'April', 'May', 'June',
+                      'July','August', 'September', 'October','November', 'December'
+    ];
+    var day = date.getDate();
+    var monthIndex = date.getMonth();
+    var year = date.getFullYear();
+
+    return monthNames[monthIndex] + ' ' + day + ', ' + year;
+  };
+
+  function showDatesInLocalTime() {
+    for(var c = document.getElementsByClassName('post-meta'), a = 0; a < c.length; a++) {
+      var b = c[a];
+
+      if (b.innerHTML.match(/[A-Za-z]+/)) {
+        // Skip because the item is not a date
+      } else {
+        var date = new Date(b.innerHTML);
+        b.innerHTML = formatDate(date) + '<br>';
+      };
+    };
+  };
+  showDatesInLocalTime();
+</script>
+
+<!--
 To open an EXTERNAL link in the CURRENT tab, write your link like this:
   <a href="https://github.com" target="_self">GitHub</a>
 
@@ -195,7 +235,7 @@ To open an INTERNAL link in a NEW tab, write your link like this:
   <a href="https://emmasax4.info" target="_blank">My website</a>
 -->
 <script type="text/javascript">
-  function externalLinks() {
+  function openExternalLinksInNewTabs() {
     for(var c = document.getElementsByTagName('a'), a = 0; a < c.length; a++) {
       var b = c[a];
       if (b.target == '_self') {
@@ -205,7 +245,7 @@ To open an INTERNAL link in a NEW tab, write your link like this:
       };
     };
   };
-  externalLinks();
+  openExternalLinksInNewTabs();
 </script>
 
 <script src="https://unpkg.com/feather-icons"></script>

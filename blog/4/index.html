@@ -49,7 +49,7 @@
 <meta name="msvalidate.01" content="89B2B19FF966341B78EF64EDADE6DF81" />
 <meta name="yandex-verification" content="c2741887f8c30dd1" />
 <script type="application/ld+json">
-{"description":"Emma Sax’s personal website and blog. Includes information about my social media profiles, résumé, and hobbies.","@type":"WebPage","headline":"Blog","url":"https://emmasax4.info/blog/4/","@context":"https://schema.org"}</script>
+{"headline":"Blog","description":"Emma Sax’s personal website and blog. Includes information about my social media profiles, résumé, and hobbies.","@type":"WebPage","url":"https://emmasax4.info/blog/4/","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -176,17 +176,18 @@
   
 
   <div class="container" style="padding-left: 0; padding-right: 0; padding-bottom: 2rem;">
-    <span class="post-meta">
-      <div>
+    <div>
+      <span class="post-meta">
         
         
         
-          October 9, 2019
+          2019-10-09 05:00:00 +0000
         
-      </div>
-    </span>
+      </span>
+    </div>
 
-    <a href="/blog/posts/welcome-to-kenya/2019-10-09-kwaheri/">Welcome to Kenya → Part 5: Kwaheri</a>
+
+    <a href="/blog/posts/welcome-to-kenya/kwaheri/">Welcome to Kenya → Part 5: Kwaheri</a>
 
     <div>
       
@@ -213,17 +214,18 @@
   
 
   <div class="container" style="padding-left: 0; padding-right: 0; padding-bottom: 2rem;">
-    <span class="post-meta">
-      <div>
+    <div>
+      <span class="post-meta">
         
         
         
-          October 1, 2019
+          2019-10-01 05:00:00 +0000
         
-      </div>
-    </span>
+      </span>
+    </div>
 
-    <a href="/blog/posts/welcome-to-kenya/2019-10-01-the-journey-home/">Welcome to Kenya → Part 4: The Journey Home</a>
+
+    <a href="/blog/posts/welcome-to-kenya/the-journey-home/">Welcome to Kenya → Part 4: The Journey Home</a>
 
     <div>
       
@@ -250,17 +252,18 @@
   
 
   <div class="container" style="padding-left: 0; padding-right: 0; padding-bottom: 2rem;">
-    <span class="post-meta">
-      <div>
+    <div>
+      <span class="post-meta">
         
         
         
-          September 26, 2019
+          2019-09-26 05:00:00 +0000
         
-      </div>
-    </span>
+      </span>
+    </div>
 
-    <a href="/blog/posts/welcome-to-kenya/2019-09-26-the-cuisine-and-the-lodging/">Welcome to Kenya → Part 3: The Cuisine and the Lodging</a>
+
+    <a href="/blog/posts/welcome-to-kenya/the-cuisine-and-the-lodging/">Welcome to Kenya → Part 3: The Cuisine and the Lodging</a>
 
     <div>
       
@@ -287,17 +290,18 @@
   
 
   <div class="container" style="padding-left: 0; padding-right: 0; padding-bottom: 2rem;">
-    <span class="post-meta">
-      <div>
+    <div>
+      <span class="post-meta">
         
         
         
-          September 16, 2019
+          2019-09-16 05:00:00 +0000
         
-      </div>
-    </span>
+      </span>
+    </div>
 
-    <a href="/blog/posts/welcome-to-kenya/2019-09-16-the-game-drives/">Welcome to Kenya → Part 2: The Game Drives</a>
+
+    <a href="/blog/posts/welcome-to-kenya/the-game-drives/">Welcome to Kenya → Part 2: The Game Drives</a>
 
     <div>
       
@@ -324,17 +328,18 @@
   
 
   <div class="container" style="padding-left: 0; padding-right: 0; padding-bottom: 2rem;">
-    <span class="post-meta">
-      <div>
+    <div>
+      <span class="post-meta">
         
         
         
-          September 13, 2019
+          2019-09-13 05:00:00 +0000
         
-      </div>
-    </span>
+      </span>
+    </div>
 
-    <a href="/blog/posts/2019-09-13-hyphen-versus-em-versus-en-versus-everything-else/">Hyphen vs. Em vs. En vs. Everything Else</a>
+
+    <a href="/blog/posts/hyphen-versus-em-versus-en-versus-everything-else/">Hyphen vs. Em vs. En vs. Everything Else</a>
 
     <div>
       
@@ -439,6 +444,46 @@
 </footer>
 
   <!--
+This will take all of the dates for the blog posts (written with the class 'post-meta'),
+and will render them in the readers' local time, instead of in UTC.
+
+An incoming date/time will be formatted like this:
+  2019-12-29 03:00:00 +0000
+
+And it will be turned into this (CST):
+  Sat Dec 28 2019 21:00:00 GMT-0600
+
+And written like this:
+  December 28, 2019
+-->
+<script type="text/javascript">
+  function formatDate(date) {
+    var monthNames = ['January', 'February', 'March', 'April', 'May', 'June',
+                      'July','August', 'September', 'October','November', 'December'
+    ];
+    var day = date.getDate();
+    var monthIndex = date.getMonth();
+    var year = date.getFullYear();
+
+    return monthNames[monthIndex] + ' ' + day + ', ' + year;
+  };
+
+  function showDatesInLocalTime() {
+    for(var c = document.getElementsByClassName('post-meta'), a = 0; a < c.length; a++) {
+      var b = c[a];
+
+      if (b.innerHTML.match(/[A-Za-z]+/)) {
+        // Skip because the item is not a date
+      } else {
+        var date = new Date(b.innerHTML);
+        b.innerHTML = formatDate(date) + '<br>';
+      };
+    };
+  };
+  showDatesInLocalTime();
+</script>
+
+<!--
 To open an EXTERNAL link in the CURRENT tab, write your link like this:
   <a href="https://github.com" target="_self">GitHub</a>
 
@@ -446,7 +491,7 @@ To open an INTERNAL link in a NEW tab, write your link like this:
   <a href="https://emmasax4.info" target="_blank">My website</a>
 -->
 <script type="text/javascript">
-  function externalLinks() {
+  function openExternalLinksInNewTabs() {
     for(var c = document.getElementsByTagName('a'), a = 0; a < c.length; a++) {
       var b = c[a];
       if (b.target == '_self') {
@@ -456,7 +501,7 @@ To open an INTERNAL link in a NEW tab, write your link like this:
       };
     };
   };
-  externalLinks();
+  openExternalLinksInNewTabs();
 </script>
 
 <script src="https://unpkg.com/feather-icons"></script>

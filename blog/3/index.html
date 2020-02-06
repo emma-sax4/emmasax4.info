@@ -49,7 +49,7 @@
 <meta name="msvalidate.01" content="89B2B19FF966341B78EF64EDADE6DF81" />
 <meta name="yandex-verification" content="c2741887f8c30dd1" />
 <script type="application/ld+json">
-{"description":"Emma Sax’s personal website and blog. Includes information about my social media profiles, résumé, and hobbies.","@type":"WebPage","headline":"Blog","url":"https://emmasax4.info/blog/3/","@context":"https://schema.org"}</script>
+{"headline":"Blog","description":"Emma Sax’s personal website and blog. Includes information about my social media profiles, résumé, and hobbies.","@type":"WebPage","url":"https://emmasax4.info/blog/3/","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -176,17 +176,18 @@
   
 
   <div class="container" style="padding-left: 0; padding-right: 0; padding-bottom: 2rem;">
-    <span class="post-meta">
-      <div>
+    <div>
+      <span class="post-meta">
         
         
         
-          November 20, 2019
+          2019-11-20 06:00:00 +0000
         
-      </div>
-    </span>
+      </span>
+    </div>
 
-    <a href="/blog/posts/welcome-to-kenya/2019-11-20-can-the-northern-white-rhinocerous-come-back/">Welcome to Kenya → Special: Can the Northern White Rhinoceros come back?</a>
+
+    <a href="/blog/posts/welcome-to-kenya/can-the-northern-white-rhinocerous-come-back/">Welcome to Kenya → Special: Can the Northern White Rhinoceros come back?</a>
 
     <div>
       
@@ -213,17 +214,18 @@
   
 
   <div class="container" style="padding-left: 0; padding-right: 0; padding-bottom: 2rem;">
-    <span class="post-meta">
-      <div>
+    <div>
+      <span class="post-meta">
         
         
         
-          November 12, 2019
+          2019-11-12 06:00:00 +0000
         
-      </div>
-    </span>
+      </span>
+    </div>
 
-    <a href="/blog/posts/skimp-and-splurge/2019-11-12-three-years-later/">Skimp and Splurge → Part 2: Three Years Later</a>
+
+    <a href="/blog/posts/skimp-and-splurge/three-years-later/">Skimp and Splurge → Part 2: Three Years Later</a>
 
     <div>
       
@@ -250,17 +252,18 @@
   
 
   <div class="container" style="padding-left: 0; padding-right: 0; padding-bottom: 2rem;">
-    <span class="post-meta">
-      <div>
+    <div>
+      <span class="post-meta">
         
         
         
-          November 5, 2019
+          2019-11-05 06:00:00 +0000
         
-      </div>
-    </span>
+      </span>
+    </div>
 
-    <a href="/blog/posts/2019-11-05-more-websites-jekyll-and-dns/">More Websites, Jekyll, and DNS</a>
+
+    <a href="/blog/posts/more-websites-jekyll-and-dns/">More Websites, Jekyll, and DNS</a>
 
     <div>
       
@@ -296,17 +299,18 @@
   
 
   <div class="container" style="padding-left: 0; padding-right: 0; padding-bottom: 2rem;">
-    <span class="post-meta">
-      <div>
+    <div>
+      <span class="post-meta">
         
         
         
-          October 19, 2019
+          2019-10-19 05:00:00 +0000
         
-      </div>
-    </span>
+      </span>
+    </div>
 
-    <a href="/blog/posts/skimp-and-splurge/2019-10-19-the-art-of-saving-money/">Skimp and Splurge → Part 1: The Art of Saving Money</a>
+
+    <a href="/blog/posts/skimp-and-splurge/the-art-of-saving-money/">Skimp and Splurge → Part 1: The Art of Saving Money</a>
 
     <div>
       
@@ -333,17 +337,18 @@
   
 
   <div class="container" style="padding-left: 0; padding-right: 0; padding-bottom: 2rem;">
-    <span class="post-meta">
-      <div>
+    <div>
+      <span class="post-meta">
         
         
         
-          October 18, 2019
+          2019-10-18 05:00:00 +0000
         
-      </div>
-    </span>
+      </span>
+    </div>
 
-    <a href="/blog/posts/2019-10-18-my-time-with-two-jobs/">My Time with Two Jobs</a>
+
+    <a href="/blog/posts/my-time-with-two-jobs/">My Time with Two Jobs</a>
 
     <div>
       
@@ -448,6 +453,46 @@
 </footer>
 
   <!--
+This will take all of the dates for the blog posts (written with the class 'post-meta'),
+and will render them in the readers' local time, instead of in UTC.
+
+An incoming date/time will be formatted like this:
+  2019-12-29 03:00:00 +0000
+
+And it will be turned into this (CST):
+  Sat Dec 28 2019 21:00:00 GMT-0600
+
+And written like this:
+  December 28, 2019
+-->
+<script type="text/javascript">
+  function formatDate(date) {
+    var monthNames = ['January', 'February', 'March', 'April', 'May', 'June',
+                      'July','August', 'September', 'October','November', 'December'
+    ];
+    var day = date.getDate();
+    var monthIndex = date.getMonth();
+    var year = date.getFullYear();
+
+    return monthNames[monthIndex] + ' ' + day + ', ' + year;
+  };
+
+  function showDatesInLocalTime() {
+    for(var c = document.getElementsByClassName('post-meta'), a = 0; a < c.length; a++) {
+      var b = c[a];
+
+      if (b.innerHTML.match(/[A-Za-z]+/)) {
+        // Skip because the item is not a date
+      } else {
+        var date = new Date(b.innerHTML);
+        b.innerHTML = formatDate(date) + '<br>';
+      };
+    };
+  };
+  showDatesInLocalTime();
+</script>
+
+<!--
 To open an EXTERNAL link in the CURRENT tab, write your link like this:
   <a href="https://github.com" target="_self">GitHub</a>
 
@@ -455,7 +500,7 @@ To open an INTERNAL link in a NEW tab, write your link like this:
   <a href="https://emmasax4.info" target="_blank">My website</a>
 -->
 <script type="text/javascript">
-  function externalLinks() {
+  function openExternalLinksInNewTabs() {
     for(var c = document.getElementsByTagName('a'), a = 0; a < c.length; a++) {
       var b = c[a];
       if (b.target == '_self') {
@@ -465,7 +510,7 @@ To open an INTERNAL link in a NEW tab, write your link like this:
       };
     };
   };
-  externalLinks();
+  openExternalLinksInNewTabs();
 </script>
 
 <script src="https://unpkg.com/feather-icons"></script>
