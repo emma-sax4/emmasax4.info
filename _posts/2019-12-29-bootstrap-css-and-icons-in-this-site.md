@@ -5,7 +5,7 @@ tags: [ tech ]
 permalink: /blog/posts/bootstrap-css-and-icons-in-this-site/
 redirect_from:
   - /blog/posts/2019-12-29-bootstrap-css-and-icons-in-this-site/
-date: 2019-12-29 00:00:00 -06:00
+date: 2019-12-29 00:00:00 -0600
 ---
 
 ## Bootstrap

@@ -6,7 +6,7 @@ category: Skimp and Splurge
 permalink: /blog/posts/skimp-and-splurge/three-years-later/
 redirect_from:
   - /blog/posts/skimp-and-splurge/2019-11-12-three-years-later/
-date: 2019-11-12 00:00:00 -06:00
+date: 2019-11-12 00:00:00 -0600
 ---
 
 When I dug out the original post [Skimp and Splurge: The Art of Saving Money](/blog/posts/skimp-and-splurge/the-art-of-saving-money) from my Google Drive, I was immediately humored by my original intent to create a blog. As you can probably tell, that never actually came to fruition... Until I decided to adventure with GitHub Pages. Although, most of that is another story.

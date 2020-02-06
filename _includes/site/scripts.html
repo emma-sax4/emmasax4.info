@@ -12,18 +12,11 @@ And written like this:
   December 28, 2019
 -->
 <script type="text/javascript">
-  function formatDate(date) {
+  function showDatesInLocalTime() {
     var monthNames = ['January', 'February', 'March', 'April', 'May', 'June',
                       'July','August', 'September', 'October','November', 'December'
     ];
-    var day = date.getDate();
-    var monthIndex = date.getMonth();
-    var year = date.getFullYear();
 
-    return monthNames[monthIndex] + ' ' + day + ', ' + year;
-  };
-
-  function showDatesInLocalTime() {
     for(var c = document.getElementsByClassName('post-meta'), a = 0; a < c.length; a++) {
       var b = c[a];
 
@@ -31,7 +24,11 @@ And written like this:
         // Skip because the item is not a date
       } else {
         var date = new Date(b.innerHTML);
-        b.innerHTML = formatDate(date) + '<br>';
+        var day = date.getDate();
+        var year = date.getFullYear();
+        var monthIndex = date.getMonth();
+
+        b.innerHTML = monthNames[monthIndex] + ' ' + day + ', ' + year;
       };
     };
   };
