@@ -10,7 +10,7 @@ Have you ever noticed that some websites you visit have links that open to new t
 
 ## Introduction
 
-First, let's make sure we're all on the same page when I say "opening in a new tab" versus "opening in the current tab". The first example is of a link opening in the current tab. The second is of a link opening in a new tab:
+First, let's make sure we're all on the same page when I say "opening in a new tab" versus "opening in the current tab." The first example is of a link opening in the current tab. The second is of a link opening in a new tab:
 
 > This will be a link to <a href="https://github.com/" target="_self">GitHub</a>.
 

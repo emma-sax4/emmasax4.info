@@ -30,9 +30,9 @@ After I got home and cooled off a bit, I realized I was curious to learn a bit m
 
 The internet has a mixed bag of people that recommend Landmark Forum, and people that were creeped out. But let's start with some basic history.
 
-Landmark Forum is the child of Werner Erhard's [Erhard Seminars Training](https://en.wikipedia.org/wiki/Erhard_Seminars_Training) (EST). EST aims to "transform one's ability to experience living so that the situations one had been trying to change or had been putting up with, clear up just in the process of life itself". It sounds great. In fact, I completely agree that this sounds great. These types of fundamental shifts in how we think about our life and the world around us would have the possibility of completely "transforming" our life. But, then I started reading some blog posts and reviews of what people experienced while doing Landmark Forum (I even read blogs of people that recommend Landmark Forum).
+Landmark Forum is the child of Werner Erhard's [Erhard Seminars Training](https://en.wikipedia.org/wiki/Erhard_Seminars_Training) (EST). EST aims to "transform one's ability to experience living so that the situations one had been trying to change or had been putting up with, clear up just in the process of life itself." It sounds great. In fact, I completely agree that this sounds great. These types of fundamental shifts in how we think about our life and the world around us would have the possibility of completely "transforming" our life. But, then I started reading some blog posts and reviews of what people experienced while doing Landmark Forum (I even read blogs of people that recommend Landmark Forum).
 
-According to what I read, they bring you (a participant) in at 9am, and keep you there until 10 or 11pm. So 13–14 hours. You get one 30 minute bathroom "break" every 3–4 hours. It isn't even a break, because they give you assignments, such as calling a friend or family member, during the time. You get one meal break in the afternoon. And they don't even provide you food. You cannot snack at your seat, and you can't text or browse the internet (you may be lucky to get signal from the building basement). You can only speak when the leader allows you to. You can't be late in the morning, or when coming back from "breaks". Immediately, this sounds like torture.
+According to what I read, they bring you (a participant) in at 9am, and keep you there until 10 or 11pm. So 13–14 hours. You get one 30 minute bathroom "break" every 3–4 hours. It isn't even a break, because they give you assignments, such as calling a friend or family member, during the time. You get one meal break in the afternoon. And they don't even provide you food. You cannot snack at your seat, and you can't text or browse the internet (you may be lucky to get signal from the building basement). You can only speak when the leader allows you to. You can't be late in the morning, or when coming back from "breaks." Immediately, this sounds like torture.
 
 Furthermore, the stories of being publicly humiliated in front of the group of people, and of being insulted, astound me even more. From reading these stories, perhaps Bill thought he was letting me off easy. Here's an example from [Laura McClure](https://www.motherjones.com/politics/2009/08/landmark-42-hours-500-65-breakdowns/):
 
@@ -59,13 +59,13 @@ As you can guess, I have decided **_not_** to sign up for Landmark Forum at this
 ---
 
 To read more about Landmark Forum, and some of the experiences of people who have done Landmark Forum, check out these links:
-* [Wikipedia: Erhard Seminars Training](https://en.wikipedia.org/wiki/Erhard_Seminars_Training)
-* [Yelp: Landmark Corporate](https://www.yelp.com/biz/landmark-corporate-san-francisco)
+* [wikipedia.org: Erhard Seminars Training](https://en.wikipedia.org/wiki/Erhard_Seminars_Training)
+* [yelp.com: Landmark Corporate](https://www.yelp.com/biz/landmark-corporate-san-francisco)
 * [landmarkworldwide.com](https://www.landmarkworldwide.com/)
-* [Huffpost: Inside the Landmark Forum](https://www.huffpost.com/entry/inside-the-landmark-forum_b_90028)
-* [The Numinous: Is Landmark a cult](https://www.the-numinous.com/2015/04/05/is-landmark-a-cult/)
-* [The Guardian: I thought I'd be brainwashed, but how wrong I could be](https://www.theguardian.com/uk/2003/dec/14/ameliahill.theobserver)
-* [Art of Wellbeing: Landmark Forum](http://www.artofwellbeing.com/2017/06/21/landmark-forum/)
-* [MotherJones: Landmark: 42 hours, $500, 65 breakdowns](https://www.motherjones.com/politics/2009/08/landmark-42-hours-500-65-breakdowns/)
-* [Cult Education: Landmark is Brainwashing](https://culteducation.com/group/1020-landmark-education/12439-landmarkis-brainwashing.html)
-* [Growth Guided: The Landmark Forum – Don't Do It](https://www.growthguided.com/the-landmark-forum-dont-do-it-top-five-fails-of-landmark-forum/)
+* [huffpost.com: Inside the Landmark Forum](https://www.huffpost.com/entry/inside-the-landmark-forum_b_90028)
+* [the-numinous.com: Is Landmark a cult](https://www.the-numinous.com/2015/04/05/is-landmark-a-cult/)
+* [theguardian.com: I thought I'd be brainwashed, but how wrong I could be](https://www.theguardian.com/uk/2003/dec/14/ameliahill.theobserver)
+* [artofwellbeing.com: Landmark Forum](http://www.artofwellbeing.com/2017/06/21/landmark-forum/)
+* [motherjones.com: Landmark: 42 hours, $500, 65 breakdowns](https://www.motherjones.com/politics/2009/08/landmark-42-hours-500-65-breakdowns/)
+* [culteducation.com: Landmark is Brainwashing](https://culteducation.com/group/1020-landmark-education/12439-landmarkis-brainwashing.html)
+* [growthguided.com: The Landmark Forum – Don't Do It](https://www.growthguided.com/the-landmark-forum-dont-do-it-top-five-fails-of-landmark-forum/)
