@@ -15,7 +15,7 @@
       {% assign now = "now" | date: "%s" %}
       {% assign date = page.date | date: "%s" %}
       {% if date <= now %}
-        Published {{ page.date | date: "%B %-d, %Y" }}
+        {{ page.date }}
       {% else %}
         Unpublished
       {% endif %}
