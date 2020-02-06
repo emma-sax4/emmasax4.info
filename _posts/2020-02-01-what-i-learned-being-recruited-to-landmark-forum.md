@@ -5,7 +5,7 @@ tags: [ self-improvement ]
 permalink: /blog/posts/what-i-learned-being-recruited-to-landmark-forum/
 redirect_from:
   - /blog/posts/2020-02-01-what-i-learned-being-recruited-to-landmark-forum/
-date: 2020-02-01 00:00:00 -06:00
+date: 2020-02-01 00:00:00 -0600
 ---
 
 The other day, an acquaintance of mine, let's call them Alex (intentionally gender-neutral), sent me a text message. Alex explained that they recently completed a three-day workshop that was all about bettering themselves and releasing their pasts in order to give room for new possibilities. They explained to me that they were "graduating," and would love it if I could join them in celebrating at their graduation. My first thought was that I didn't really want to go, but I wanted to support my friend. So, I said that I could go with them. I'd even drive.

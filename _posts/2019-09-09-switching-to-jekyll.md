@@ -5,7 +5,7 @@ tags: [ tech, jekyll ]
 permalink: /blog/posts/switching-to-jekyll/
 redirect_from:
   - /blog/posts/2019-09-09-switching-to-jekyll/
-date: 2019-09-09 00:00:00 -05:00
+date: 2019-09-09 00:00:00 -0500
 ---
 
 A few days ago, I published another blog post (read it [here](/blog/posts/my-first-blog-post/)), in which I stated that although I wanted to originally try to use Jekyll more, I gave up, instead favoring raw HTML files, hard-coding the headers and links.

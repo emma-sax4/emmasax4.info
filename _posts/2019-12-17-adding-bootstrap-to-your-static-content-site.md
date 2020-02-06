@@ -5,7 +5,7 @@ tags: [ tech ]
 permalink: /blog/posts/adding-bootstrap-to-your-static-content-site/
 redirect_from:
   - /blog/posts/2019-12-17-adding-bootstrap-to-your-static-content-site/
-date: 2019-12-17 00:00:00 -06:00
+date: 2019-12-17 00:00:00 -0600
 ---
 
 Between when I originally turned this website into a Jekyll site and a couple of weeks ago, a decent amount of CSS in the site had been slowly changing. First of all, the navigation bar had gone from a whole quarter of the screen to just a small top bar. The navigation words had moved to the right of the screen. But most importantly, I was attempting to make the site responsive to different screen widths (particularly mobile vs. computer). And there was a point when I realized that there were certain limitations my CSS/HTML knowledge had.

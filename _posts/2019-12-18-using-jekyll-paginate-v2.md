@@ -5,7 +5,7 @@ tags: [ jekyll, tech ]
 permalink: /blog/posts/using-jekyll-paginate-v2/
 redirect_from:
   - /blog/posts/2019-12-18-using-jekyll-paginate-v2/
-date: 2019-12-18 00:00:00 -06:00
+date: 2019-12-18 00:00:00 -0600
 ---
 
 A couple of weeks ago, I started the endeavor of adding Bootstrap to this website. You can read more about how this repository uses Bootstrap, and how to add Bootstrap to a static content site [here](/blog/posts/adding-bootstrap-to-your-static-content-site/).
