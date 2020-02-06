@@ -2,6 +2,10 @@
 layout: post
 title: Adding Bootstrap to Your Static Content Site
 tags: [ tech ]
+permalink: /blog/posts/adding-bootstrap-to-your-static-content-site/
+redirect_from:
+  - /blog/posts/2019-12-17-adding-bootstrap-to-your-static-content-site/
+date: 2019-12-17 00:00:00 -06:00
 ---
 
 Between when I originally turned this website into a Jekyll site and a couple of weeks ago, a decent amount of CSS in the site had been slowly changing. First of all, the navigation bar had gone from a whole quarter of the screen to just a small top bar. The navigation words had moved to the right of the screen. But most importantly, I was attempting to make the site responsive to different screen widths (particularly mobile vs. computer). And there was a point when I realized that there were certain limitations my CSS/HTML knowledge had.
@@ -96,4 +100,4 @@ At the end of the day (or a few days), my repo ended up going from over 650 line
 
 Thank you so much for getting to the bottom of that rather technical blog post. I hope it's enough compelling evidence to remember that using a 3rd party tool to make your website's CSS better is worth it. If I (a back-end coder with very little CSS experience) can make it happen, then so can you 😉.
 
-For more information about how my site uses Bootstrap, please see [this blog post](/blog/posts/2019-12-29-bootstrap-css-and-icons-in-this-site/). To learn more about Bootstrap, please read their documentation [here](https://getbootstrap.com/docs/4.4/getting-started/introduction/).
+For more information about how my site uses Bootstrap, please see [this blog post](/blog/posts/bootstrap-css-and-icons-in-this-site/). To learn more about Bootstrap, please read their documentation [here](https://getbootstrap.com/docs/4.4/getting-started/introduction/).

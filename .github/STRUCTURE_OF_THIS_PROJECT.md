@@ -178,10 +178,16 @@ Most of the posts can just go into the general `_posts/` directory, written as M
 layout: post
 title: Post A
 tags: [ tag1, tag2 ] # optional
+permalink: /blog/posts/post-a
+date: 2001-12-14 00:00:00 -06:00 # 2001-12-14 06:00:00 UTC
 ---
 ```
 
 The tags determine how we want to categorize each post. If there's no categorization of a post (if it's completely random), then there's no need to specify any tag(s), AKA just leave the line completely out of the front matter. But, if you think the post is a good contestant for a tag, such as `tag1` or `tag2` in our example, then add those appropriate tags in a list format, as shown above.
+
+Without the `permalink` link in the front matter, the URL will most likely default to including the publishing date. This is not ideal, so instead, we'll set a custom permalink for each blog post.
+
+The `date` front matter indicates the published date and time. Usually, it's totally fine with blog posts being published at midnight (usually in America/Central time zone, because that's where Minnesota is). On rare occasions when two posts are published on the same date, it's important to specify a time so they sort properly. The entire site will show in a readers' local time, but the data will be stored in the system (and will be reflected in the `feed.xml` and `sitemap.xml`) in UTC. From a human's perspective, we want time zones to be a non-issue, so we can write our date/time as the author is seeing it within the post. For Jekyll to properly interpret it, we must specify the author's current hour offset from UTC at the time of publishing.
 
 ### Posts in a Collection
 
@@ -192,6 +198,8 @@ layout: post
 title: Category One
 subtitle: Post A
 category: Category One
+permalink: /blog/posts/category-one/post-a
+date: 2001-06-27 20:30:00 -05:00 # 2001-06-28 01:30:00 UTC
 ---
 ```
 
@@ -199,16 +207,23 @@ category: Category One
 
 To write drafts, make a new file in the `_posts/` directory (or in a subdirectory if the post will be part of a category). The new file should be named in the following pattern: `YYYY-MM-DD-test-post-title`. Because this draft hasn't been published yet, I usually just put in the date I hope to publish the draft (usually a few days in the future).
 
+To the front matter, make sure to add the `layout`, `title`, and `permalink` (`subtitle`, `category`, and `tags` are all optional).
+
 Then, when you run `jekyll serve --future` locally, the draft post(s) should appear at the top of the list of posts, and should show as "Unpublished."
 
 When it's time to publish the post, you can either:
-* Publish the post today:
-  * Rename the file to have today's date in the title instead of whatever future date was there previously
+* Publish the post now:
+  * Add the current date/time (in the author's local time zone, properly identifying the current hour offset from UTC) to the post's front matter in the `date` value
+  * Rename the file to have the current date instead of whatever was there previously
   * Re-add and commit those files to the pull request
   * Merge the pull request into the `release` branch
-* Publish the post on the future date in the blog post filename:
+* Publish the post on a future date:
+  * Add the future publishing date/time (typically 00:00:00 in the author's local time zone, properly identifying current the hour offset from UTC) to the post's front matter in the `date` value
+  * Rename the file to have the publishing date in the title instead of whatever was there previously
   * Merge your pull request into the `release` branch
-  * Wait until Travis CI builds the newest version around midnight on the day of publishing (or rerun the latest `release` build [here](https://travis-ci.com/emma-sax4/emma-sax4.github.io/builds) on the day of publishing)
+  * Wait until Travis CI builds the newest version around midnight in CST on the day of publishing (or rerun the latest `release` build [here](https://travis-ci.com/emma-sax4/emma-sax4.github.io/builds) on the day of publishing)
+
+To identify the current hour offset from UTC, look up the time zone offset based on your location [here](https://www.timeanddate.com/time/zone/).
 
 ## `assets/`
 
