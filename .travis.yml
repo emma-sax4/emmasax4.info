@@ -12,9 +12,6 @@ notifications:
     recipients:
       - emma.sax4@gmail.com
 
-before_install:
-  - export TZ=America/Chicago
-
 install:
   - bundle install
 

@@ -3,6 +3,10 @@ layout: post
 title: Welcome to Kenya
 subtitle: "Part 4: The Journey Home"
 category: Welcome to Kenya
+permalink: /blog/posts/welcome-to-kenya/the-journey-home/
+redirect_from:
+  - /blog/posts/welcome-to-kenya/2019-10-01-the-journey-home/
+date: 2019-10-01 00:00:00 -05:00
 ---
 
 At the end of the trip, we ended in the Maasai Mara, approximately six hours away from Nairobi. So, we had a long day of travel ahead of us to start our journey home. But, our trip planners didn't want to have a boring last day, so they planned a few extra stops. Here's what our original itinerary for the day looked like:
@@ -16,7 +20,8 @@ However, hardly anything we planned actually came to fruition. And here's why...
 
 ## The Optional Activity
 
-At 8:30am, we loaded up our safari trucks for the last time. However, this time, we split up into different groups than we normally did. My partner and I were separated for the first time during the trip, as he decided to go on a morning-long game drive, and I opted to do a half game drive + half village visit. You can read more about the Maasai village visit [here](/blog/posts/welcome-to-kenya/2019-09-26-the-cuisine-and-the-lodging/). Instead, my safari truck filled with two other travellers in our group, and we left the Fig Tree Camp.
+At 8:30am, we loaded up our safari trucks for the last time. However, this time, we split up into different groups than we normally did. My partner and I were separated for the first time during the trip, as he decided to go on a morning-long game drive, and I opted to do a half game drive + half village visit. You can read more about the Maasai village visit
+[here](/blog/posts/welcome-to-kenya/the-cuisine-and-the-lodging/). Instead, my safari truck filled with two other travellers in our group, and we left the Fig Tree Camp.
 
 While on this safari, we did manage to see several more animals, including a pack of cheetahs (which is rare, since cheetahs are usually solitary animals). About halfway through the game drive, we left and continued to the Maasai village. While at this village, I did have a unique experience where I asked where I could go to the bathroom, and one of the members of the village started leading me away from the rest of the group. I originally thought they were just leading me to a secluded bush, but as we continued walking farther and farther away from the rest of the group, I was a bit concerned that I might be kidnapped. But eventually (after walking through a poop-filled pasture), the man led me to a locked metal hut. This "washroom" was really just a hole in the ground, with a metal slab that we could use to scoop and shovel 💩 with. All-in-all, it was very kind of the man to take me to use the restroom, since it was so far away, but I'd be lying if I said that I wasn't a little nervous about the whole ordeal.
 
