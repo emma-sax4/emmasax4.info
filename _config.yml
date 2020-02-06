@@ -51,6 +51,7 @@ plugins:
   - jekyll-default-layout
   - jekyll-mentions
   - jekyll-paginate-v2
+  - jekyll-redirect-from
   - jekyll-relative-links
   - jekyll-seo-tag
   - jekyll-sitemap
@@ -64,7 +65,6 @@ relative_links:
 collections:
   posts:
     output: true
-    permalink: /blog/posts/:path/
 
 pagination:
   enabled: true
