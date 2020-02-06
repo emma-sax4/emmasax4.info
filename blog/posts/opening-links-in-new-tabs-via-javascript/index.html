@@ -328,7 +328,7 @@ To open an INTERNAL link in a NEW tab, write your link like this:
   &lt;a href="https://emmasax4.info" target="_blank"&gt;My website&lt;/a&gt;
 --&gt;</span>
 <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
-  <span class="kd">function</span> <span class="nx">externalLinks</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kd">function</span> <span class="nx">openExternalLinksInNewTabs</span><span class="p">()</span> <span class="p">{</span>
     <span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">c</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="dl">'</span><span class="s1">a</span><span class="dl">'</span><span class="p">),</span> <span class="nx">a</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">a</span> <span class="o">&lt;</span> <span class="nx">c</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">a</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
       <span class="kd">var</span> <span class="nx">b</span> <span class="o">=</span> <span class="nx">c</span><span class="p">[</span><span class="nx">a</span><span class="p">];</span>
       <span class="k">if</span> <span class="p">(</span><span class="nx">b</span><span class="p">.</span><span class="nx">target</span> <span class="o">==</span> <span class="dl">'</span><span class="s1">_self</span><span class="dl">'</span><span class="p">)</span> <span class="p">{</span>
@@ -338,7 +338,7 @@ To open an INTERNAL link in a NEW tab, write your link like this:
       <span class="p">};</span>
     <span class="p">};</span>
   <span class="p">};</span>
-  <span class="nx">externalLinks</span><span class="p">();</span>
+  <span class="nx">openExternalLinksInNewTabs</span><span class="p">();</span>
 <span class="nt">&lt;/script&gt;</span>
 </code></pre></div></div>
 
@@ -424,26 +424,24 @@ And written like this:
   December 28, 2019
 -->
 <script type="text/javascript">
-  function formatDate(date) {
+  function showDatesInLocalTime() {
     var monthNames = ['January', 'February', 'March', 'April', 'May', 'June',
                       'July','August', 'September', 'October','November', 'December'
     ];
-    var day = date.getDate();
-    var monthIndex = date.getMonth();
-    var year = date.getFullYear();
 
-    return monthNames[monthIndex] + ' ' + day + ', ' + year;
-  };
-
-  function showDatesInLocalTime() {
     for(var c = document.getElementsByClassName('post-meta'), a = 0; a < c.length; a++) {
       var b = c[a];
 
       if (b.innerHTML.match(/[A-Za-z]+/)) {
-        // Skip because the item is not a date
+        // Skip because the content is not a date
       } else {
-        var date = new Date(b.innerHTML);
-        b.innerHTML = formatDate(date) + '<br>';
+        var d = b.innerHTML.trim().split(/[^0-9]/);
+        var date = new Date(Date.UTC(d[0], d[1]-1, d[2], d[3], d[4], d[5]));
+        var day = date.getDate();
+        var year = date.getFullYear();
+        var monthIndex = date.getMonth();
+
+        b.innerHTML = monthNames[monthIndex] + ' ' + day + ', ' + year;
       };
     };
   };

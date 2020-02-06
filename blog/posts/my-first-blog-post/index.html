@@ -299,26 +299,24 @@ And written like this:
   December 28, 2019
 -->
 <script type="text/javascript">
-  function formatDate(date) {
+  function showDatesInLocalTime() {
     var monthNames = ['January', 'February', 'March', 'April', 'May', 'June',
                       'July','August', 'September', 'October','November', 'December'
     ];
-    var day = date.getDate();
-    var monthIndex = date.getMonth();
-    var year = date.getFullYear();
 
-    return monthNames[monthIndex] + ' ' + day + ', ' + year;
-  };
-
-  function showDatesInLocalTime() {
     for(var c = document.getElementsByClassName('post-meta'), a = 0; a < c.length; a++) {
       var b = c[a];
 
       if (b.innerHTML.match(/[A-Za-z]+/)) {
-        // Skip because the item is not a date
+        // Skip because the content is not a date
       } else {
-        var date = new Date(b.innerHTML);
-        b.innerHTML = formatDate(date) + '<br>';
+        var d = b.innerHTML.trim().split(/[^0-9]/);
+        var date = new Date(Date.UTC(d[0], d[1]-1, d[2], d[3], d[4], d[5]));
+        var day = date.getDate();
+        var year = date.getFullYear();
+        var monthIndex = date.getMonth();
+
+        b.innerHTML = monthNames[monthIndex] + ' ' + day + ', ' + year;
       };
     };
   };
