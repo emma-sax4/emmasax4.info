@@ -5,7 +5,7 @@ tags: [ tech ]
 permalink: /blog/posts/my-first-blog-post/
 redirect_from:
   - /blog/posts/2019-09-06-my-first-blog-post/
-date: 2019-09-06 00:00:00 -05:00
+date: 2019-09-06 00:00:00 -0500
 ---
 
 I've been wanting to start a blog for myself for a while, but I've been having trouble figuring out where to start. But, there's no time like the present, so I thought I might as well just go for it!
