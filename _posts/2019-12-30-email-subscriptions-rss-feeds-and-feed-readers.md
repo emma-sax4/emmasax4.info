@@ -25,13 +25,11 @@ I added these values to my `_config.yml`:
 feed:
   production:
     title: Emma Sax's Blog
-    site_url: https://emmasax4.info
-    url: https://emmasax4.info/blog/
+    url: https://emmasax4.info
     items: 5
   development:
     title: LOCAL Emma's Blog
-    site_url: https://127.0.0.1:4000
-    url: https://127.0.0.1:4000/blog/
+    url: http://127.0.0.1:4000
     items: 5
 ```
 and added this file to the root of my repository:
@@ -47,7 +45,7 @@ layout: none
     <title>{{ feed.title | xml_escape }}</title>
     <description>{{ feed.description | xml_escape }}</description>
     <link>{{ feed.url }}</link>
-    <atom:link href="{{ feed.site_url }}/feed.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="{{ feed.url }}/feed.xml" rel="self" type="application/rss+xml" />
     {% for post in site.posts limit: feed.items %}
       <item>
         {% if post.subtitle %}
