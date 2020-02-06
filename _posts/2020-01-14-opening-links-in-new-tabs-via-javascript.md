@@ -2,6 +2,10 @@
 layout: post
 title: Opening Links in New Tabs via Javascript
 tags: [ tech ]
+permalink: /blog/posts/opening-links-in-new-tabs-via-javascript/
+redirect_from:
+  - /blog/posts/2020-01-14-opening-links-in-new-tabs-via-javascript/
+date: 2020-01-14 00:00:00 -06:00
 ---
 
 Have you ever noticed that some websites you visit have links that open to new tabs in your browser, and some open to the current tab in your browser? Does that inconsistency confuse or annoy you? Which do you prefer? Do you ever wonder _why_ that is? Well, since the websites of the internet can't quite seem to agree and make a choice, let's discuss how I've approached this topic, and what I've done to make an easy decision about the important question of new tab... or not to new tab.

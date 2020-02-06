@@ -11,17 +11,18 @@
   {% endif %}
 
   <div class="container" style="padding-left: 0; padding-right: 0; padding-bottom: 2rem;">
-    <span class="post-meta">
-      <div>
+    <div>
+      <span class="post-meta">
         {% assign now = "now" | date: "%s" %}
         {% assign date = post.date | date: "%s" %}
         {% if date <= now %}
-          {{ post.date | date: "%B %-d, %Y" }}
+          {{ post.date }}
         {% else %}
           Unpublished
         {% endif %}
-      </div>
-    </span>
+      </span>
+    </div>
+
 
     <a href="{{ site.baseurl }}{{ post_url }}">{{ short_title }}</a>
 

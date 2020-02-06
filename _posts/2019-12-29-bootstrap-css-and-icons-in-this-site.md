@@ -2,6 +2,10 @@
 layout: post
 title: Bootstrap, CSS, and Icons in this Site
 tags: [ tech ]
+permalink: /blog/posts/bootstrap-css-and-icons-in-this-site/
+redirect_from:
+  - /blog/posts/2019-12-29-bootstrap-css-and-icons-in-this-site/
+date: 2019-12-29 00:00:00 -06:00
 ---
 
 ## Bootstrap
@@ -77,4 +81,4 @@ See them in action [here](https://github.com/emma-sax4/emma-sax4.github.io/blob/
 
 ## Conclusion
 
-Now that you've seen how Bootstrap and Feather Icons have improved my website, it's your turn! Check out my blog post [here](/blog/posts/2019-12-17-adding-bootstrap-to-your-static-content-site/) for more information on how to get Bootstrap started on your site.
+Now that you've seen how Bootstrap and Feather Icons have improved my website, it's your turn! Check out my blog post [here](/blog/posts/adding-bootstrap-to-your-static-content-site/) for more information on how to get Bootstrap started on your site.
