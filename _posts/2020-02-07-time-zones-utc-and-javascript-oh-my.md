@@ -8,7 +8,7 @@ date: 2020-02-07 00:00:00 -0600
 
 On my latest blog post, I wanted to try something new. When publishing, I wanted to publish on a future date (specifically at midnight the next day). I set up the date of the post to include the next day, and then planned to go onto Travis at midnight to build the newest version of the site... with the new blog post. And then I continued working on my website for the night.
 
-But what ended up happening was Travis CI built on my release branch at 6:15pm... and suddenly my new blog post was live 😱! What happened? Well, Travis CI by default runs in UTC. So, since at 6:00pm in CST is midnight in UTC, Travis CI determined it was time to publish the blog post. I quickly reverted that commit on my `master` branch to hide the new post once again, and then worked to find a solution to make Travis CI behave for the next week.
+But what ended up happening was Travis CI built on my release branch at 6:15pm... and suddenly my new blog post was live 😱! What happened? Well, Travis CI by default runs in UTC. So, since 6:00pm in CST is midnight in UTC, Travis CI determined it was time to publish the blog post. I quickly reverted that commit on my `master` branch to hide the new post once again, and then worked to find a solution to make Travis CI behave for the remainder of the night.
 
 What I ended up finding was this. By adding these lines to the `.travis.yml` file, we can override Travis CI's default time zone and have it bundle in CST.
 
@@ -17,13 +17,13 @@ before_install:
   - export TZ=America/Chicago
 ```
 
-I thought I would be satisfied with this. I develop my site in CST (or CDT in the summer), and now Travis will also bundle in that time zone. But, after more thought, I realized that this is really just a bandaid fix 🤕. What if I move across the country and now live in a different time zone permanently? What if I'm traveling internationally (say in France), and I'm blogging while I'm there. I'm no longer going to be thinking in terms of `America/Chicago` time zone... say I publish a blog post at 12pm noon in France. When I get home to Minneapolis, should the blog post still show up as having been published at 12pm noon? Or should it properly show a 6–7 hour difference?
+I thought I would be satisfied with this. I develop my site in CST (or CDT in the summer), and now Travis will also bundle in that time zone. But, after more thought, I realized that this is really just a bandaid fix 🤕. What if I move across the country and now live in a different time zone permanently? What if I'm traveling internationally (say in France), and I'm blogging while I'm there. I'm no longer going to be thinking in terms of `America/Chicago` time zone... say I publish a blog post at 12pm noon in France. When I get home to Minneapolis, should the blog post still show up as having been published at 12pm noon? Or should it properly show a 6–7 hour time difference?
 
 So after a lot of thinking, I decided that the best (and most sustainable) way to design a website is so that all dates/times are UTC in the database (Jekyll doesn't have a DB, so just in the HTML, `feed.xml`, and `sitemap.xml`). Then, we can convert all UTC date/times to become in a user's local time when they navigate to my site ⏱.
 
 ## The Goal
 
-I made a time zone hefty goal for myself 🥴. When I publish a blog post, I can specify the publish date/time in _my_ local time zone. Jekyll will build the blog post as having been published at the corresponding UTC time. And when a reader looks at the blog post on the website, it'll give the date/time in their local time zone (which may be _my_ time zone, but it could also be different).
+Time zones are complicated. I've dabbled with them a little bit, but they tend to make my head spin 💫. So, I made hefty goal for myself 🥴. When I publish a blog post, I can specify the publish date/time in _my_ local time zone. Jekyll will build the blog post as having been published at the corresponding UTC time. And when a reader looks at the blog post on the website, it'll give the date/time in their local time zone (which may be _my_ time zone, but it could also be different).
 
 Let's look at an example. I publish a blog post at 10:15pm in CST on Jan. 17, 2020:
 ```
@@ -68,7 +68,7 @@ This was also pretty easy. You can just add the date to the front matter of each
 date: 2020-01-17 22:15:00 -0600
 ```
 
-YOu can specify the time the post should be published as well, although, as I stated above, I normally just use `00:00:00`, or midnight. For what I'm working with, the last part is important. That's the time zone offset. In Minnesota, that'll be `-0600` in the winter time (CST), or `-0500` in the summer (CDT)—I always get those two mixed up. But, I've decided that I want this to be easy for me to use going forward... so I should always write the date/time as I'm looking at my clock (in 24 hour time of course) with my current time zone offset 📝.
+You can specify the time the post should be published as well, although, as I stated above, I normally just use `00:00:00`, or midnight. For what I'm working with, the last part is important. That's the time zone offset. In Minnesota, that'll be `-0600` in the winter time (CST), or `-0500` in the summer (CDT)—I always used to get those two mixed up. But, I've decided that I want this to be easy for me to use going forward... so I should always write the date/time as I'm looking at my clock (in 24 hour time of course) with my current time zone offset 📝.
 
 ### 3️⃣ Jekyll will store the blog post as being published in UTC
 
@@ -78,9 +78,9 @@ When I put both of these pieces together, the result was immediate. As soon as I
 
 This was by far the most challenging part. I played with a Jekyll plugin first, to see if there was an easy way to convert the UTC date/time to be in a different time zone. This would've worked, if I wanted to hard-code the new time zone (which defeats the purpose of it being flexible to the readers' location). So, after much googling, I realized the only good way to understand the readers' location and time zone offset is to use Javascript. Yay.... 😰
 
-I'm not really a Javascript person. But, I jumped in anyway, and wanted to find a solution. Using some loop syntax from another slice of Javascript I use (read more about that [here](/blog/posts/opening-links-in-new-tabs-via-javascript/)), I started cracking away. I want the Javascript to go through the HTML, find all of the dates, and then convert them to the readers' local time and print that back out again.
+I'm not really a Javascript person. But, I jumped in anyway, and wanted to find a solution. Using some loop syntax from another slice of Javascript I use (read more about that [here](/blog/posts/opening-links-in-new-tabs-via-javascript/)), I started typing away. I want the Javascript to go through the HTML, find all of the dates, and then convert them to the readers' local time and print that back out again.
 
-Finding the elements that all matched the class `post-meta` wasn't too bad, and looping through them was easy. Figuring out whether they were a date or not wasa the most difficult part. I ended up defining this regex `/[A-Za-z]+/` to determine if it was a date... it's not perfect, but pretty much if the content includes letters, then we're probably not looking at a date.
+Finding the elements that all matched the class `post-meta` wasn't too bad, and looping through them was easy. Figuring out whether they were a date or not was the most difficult part. I ended up defining this regex `/[A-Za-z]+/` to determine if it was a date... it's not perfect, but pretty much if the content includes letters, then we're probably not looking at a date.
 
 Then once I've located all of the dates, Javascript makes it easy to change time zones:
 
