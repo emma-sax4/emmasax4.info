@@ -29,7 +29,7 @@ The way I described this to my interviewees is that there's three ways to buy cl
 
 1. Buy cheap clothes in higher quantity: you'll have plenty of clothes, but they'll wear out faster so they will soon need replacement by other cheap clothes.
 2. Buy more expensive clothes in lower quantity: they'll last longer, but you won't have as many items in your closet.
-3. Buy higher quality clothes used at a discount: they won't be the newest fashion or "in-season", and they may not fit perfectly, but they'll last a while, and they'll save you some cash.
+3. Buy higher quality clothes used at a discount: they won't be the newest fashion or "in-season," and they may not fit perfectly, but they'll last a while, and they'll save you some cash.
 
 One of my interviewees opted for the third option. The other interviewee opted for the second option. The reason for choosing the third option is that you can have a closet with more options for outfits, without sacrificing the quality of the clothing. Makes sense. The reasoning for choosing the second option is for somebody that maybe doesn't need a _lot_ of suits in the closet, only one or two. Get decent quality of them even if they were more expensive, so that you don't need to replace them every year.
 

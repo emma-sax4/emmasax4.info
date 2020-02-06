@@ -71,7 +71,7 @@ On iPhones, press and hold the `-`, and a window will pop up that lets you selec
 
 ## The En
 
-The en dash is slightly longer than a hyphen, but shorter than an em dash (the width of the en dash should be almost exactly the width of the letter "N", while the width of the em dash is the width of the letter "M"). The en dash means "through":
+The en dash is slightly longer than a hyphen, but shorter than an em dash (the width of the en dash should be almost exactly the width of the letter "N," while the width of the em dash is the width of the letter "M"). The en dash means "through":
 * 1992–2004
 * Page 36–91
 * May 6–17
