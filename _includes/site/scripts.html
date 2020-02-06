@@ -31,7 +31,6 @@ And written like this:
         // Skip because the item is not a date
       } else {
         var date = new Date(b.innerHTML);
-        console.log(date);
         b.innerHTML = formatDate(date) + '<br>';
       };
     };
