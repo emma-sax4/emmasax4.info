@@ -6,7 +6,7 @@ category: Welcome to Kenya
 permalink: /blog/posts/welcome-to-kenya/the-cuisine-and-the-lodging/
 redirect_from:
   - /blog/posts/welcome-to-kenya/2019-09-26-the-cuisine-and-the-lodging/
-date: 2019-09-26 00:00:00 -05:00
+date: 2019-09-26 00:00:00 -0500
 ---
 
 ## Overall
