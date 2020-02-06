@@ -3,9 +3,13 @@ layout: post
 title: Welcome to Kenya
 subtitle: "Special: Can the Northern White Rhinoceros come back?"
 category: Welcome to Kenya
+permalink: /blog/posts/welcome-to-kenya/can-the-northern-white-rhinocerous-come-back/
+redirect_from:
+  - /blog/posts/welcome-to-kenya/2019-11-20-can-the-northern-white-rhinocerous-come-back/
+date: 2019-11-20 00:00:00 -06:00
 ---
 
-Over two months ago I wrote my second installment of the [Welcome to Kenya](/blog/welcome-to-kenya/) blog collection. In it, I told the shortened version of the story of the northern white rhinos. Please read about it [here](/blog/posts/welcome-to-kenya/2019-09-16-the-game-drives/) for context before continuing.
+Over two months ago I wrote my second installment of the [Welcome to Kenya](/blog/welcome-to-kenya/) blog collection. In it, I told the shortened version of the story of the northern white rhinos. Please read about it [here](/blog/posts/welcome-to-kenya/the-game-drives/) for context before continuing.
 
 ---
 

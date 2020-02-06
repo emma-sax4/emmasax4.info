@@ -2,6 +2,10 @@
 layout: post
 title: More Websites, Jekyll, and DNS
 tags: [ tech, jekyll ]
+permalink: /blog/posts/more-websites-jekyll-and-dns/
+redirect_from:
+  - /blog/posts/2019-11-05-more-websites-jekyll-and-dns/
+date: 2019-11-05 00:00:00 -06:00
 ---
 
 Last week, for the first time in a couple of months, I felt the need to do more with my Jekyll website(s). GitHub Pages provides an opportunity to host as many sites as I wish, as long as their repository code is public and I'm okay with the resulting site being public. I wasn't really okay with that situation, so instead, I opted to look at GitHub Pro. GitHub Pro offered to host my GitHub Pages site on repositories that were private, which was basically exactly what I wanted. I know that GitLab Pages could provide me with that same setup for free, but my whole world is on GitHub, and I didn't quite feel the need to switch that up yet.

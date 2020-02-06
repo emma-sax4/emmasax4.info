@@ -2,9 +2,13 @@
 layout: post
 title: Using <header-code>jekyll-paginate-v2</header-code>
 tags: [ jekyll, tech ]
+permalink: /blog/posts/using-jekyll-paginate-v2/
+redirect_from:
+  - /blog/posts/2019-12-18-using-jekyll-paginate-v2/
+date: 2019-12-18 00:00:00 -06:00
 ---
 
-A couple of weeks ago, I started the endeavor of adding Bootstrap to this website. You can read more about how this repository uses Bootstrap, and how to add Bootstrap to a static content site [here](/blog/posts/2019-12-17-adding-bootstrap-to-your-static-content-site/).
+A couple of weeks ago, I started the endeavor of adding Bootstrap to this website. You can read more about how this repository uses Bootstrap, and how to add Bootstrap to a static content site [here](/blog/posts/adding-bootstrap-to-your-static-content-site/).
 
 But, soon after I started getting an upgrade in my CSS game, I realized that my pagination bar on my blog site was sorely outdated 😢. At one point, I had the nerve to call this pagination bar beautiful:
 
@@ -16,7 +20,7 @@ But since completely revamping the whole looks of the site, this pagination bar 
 
 I build and serve this site with GitHub Pages. Their built-in pagination suggestion is [`jekyll-paginate`](https://github.com/jekyll/jekyll-paginate). But, it very clearly states that `jekyll-paginate` is no longer supported. The recommended newer version of Jekyll pagination is [`jekyll-paginate-v2`](https://github.com/sverrirs/jekyll-paginate-v2).
 
-I had considered `jekyll-paginate-v2` before, and I briefly mentioned it in [this blog post](/blog/posts/2019-09-12-adding-pagination-without-jekyll/). At that time, I didn't want to make the necessary changes to my directory structure, and I'd have to be willing to either add a trailing `/` to the end of my URLs, or I'd have to be okay with some of my pages having that trailing `/`, and some not to, which I wasn't okay with.
+I had considered `jekyll-paginate-v2` before, and I briefly mentioned it in [this blog post](/blog/posts/adding-pagination-without-jekyll/). At that time, I didn't want to make the necessary changes to my directory structure, and I'd have to be willing to either add a trailing `/` to the end of my URLs, or I'd have to be okay with some of my pages having that trailing `/`, and some not to, which I wasn't okay with.
 
 From a technical standpoint, it doesn't really matter to the browser whether you write a `/` on the end of your URL or not; they resolve to the same host. There's more detailed reasons why or why to have a trailing `/` on a URL, but the gist is that the `/` delineates a directory, which then would have files in it: `https://example.com/directory/` and then `https://example.com/directory/file.html` 🤷🏻‍♀️.
 

@@ -2,9 +2,13 @@
 layout: post
 title: Switching to Jekyll
 tags: [ tech, jekyll ]
+permalink: /blog/posts/switching-to-jekyll/
+redirect_from:
+  - /blog/posts/2019-09-09-switching-to-jekyll/
+date: 2019-09-09 00:00:00 -05:00
 ---
 
-A few days ago, I published another blog post (read it [here](/blog/posts/2019-09-06-my-first-blog-post/)), in which I stated that although I wanted to originally try to use Jekyll more, I gave up, instead favoring raw HTML files, hard-coding the headers and links.
+A few days ago, I published another blog post (read it [here](/blog/posts/my-first-blog-post/)), in which I stated that although I wanted to originally try to use Jekyll more, I gave up, instead favoring raw HTML files, hard-coding the headers and links.
 
 After reflecting on this decision (after publishing that post of course), I changed my mind. I don't want to consider myself a giver-upper, and I certainly don't want to shy away from learning new coding frameworks, all because I don't want to spend a few more hours in front of the computer 💻. In fact, in the long run, utilizing Jekyll on this site will actually _save_ me time (and code) as I continue to add more posts and content to the site. However, if I'm completely honest, the biggest thing that made me want to switch to Jekyll was the ugly pagination that would have to be hard-coded and change frequently as more posts were added to the site. By switching to be Jekyll-based, this could be avoided.
 

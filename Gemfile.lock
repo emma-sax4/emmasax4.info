@@ -72,6 +72,8 @@ GEM
       jekyll (~> 3.0)
     jekyll-paginate-v2 (2.0.0)
       jekyll (~> 3.0)
+    jekyll-redirect-from (0.16.0)
+      jekyll (>= 3.3, < 5.0)
     jekyll-relative-links (0.6.1)
       jekyll (>= 3.3, < 5.0)
     jekyll-sass-converter (1.5.2)
@@ -126,6 +128,7 @@ DEPENDENCIES
   jekyll-default-layout (~> 0.1.4)
   jekyll-mentions!
   jekyll-paginate-v2 (~> 2.0.0)
+  jekyll-redirect-from (~> 0.16.0)
   jekyll-relative-links (~> 0.6.1)
   jekyll-seo-tag!
   jekyll-sitemap!
