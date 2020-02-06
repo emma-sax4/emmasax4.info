@@ -28,6 +28,7 @@ webmaster_verifications:
   yandex: c2741887f8c30dd1
 
 future: false
+timezone: UTC
 highlighter: rouge
 jekyll-mentions: https://github.com
 markdown: kramdown
