@@ -187,7 +187,7 @@ The tags determine how we want to categorize each post. If there's no categoriza
 
 Without the `permalink` link in the front matter, the URL will most likely default to including the publishing date. This is not ideal, so instead, we'll set a custom permalink for each blog post.
 
-The `date` front matter indicates the published date and time. Usually, it's totally fine with blog posts being published at midnight (usually in America/Central time zone, because that's where Minnesota is). On rare occasions when two posts are published on the same date, it's important to specify a time so that they sort properly. The entire site shows in UTC time, but we want to write our date/time as the author is seeing it within the post. So, we must specify the author's current hour offset from UTC at the time of publishing.
+The `date` front matter indicates the published date and time. Usually, it's totally fine with blog posts being published at midnight (usually in America/Central time zone, because that's where Minnesota is). On rare occasions when two posts are published on the same date, it's important to specify a time so that they sort properly. The entire site will show in a readers' local time, but the data will be stored in the system (and will be reflected in the `feed.xml` and `sitemap.xml`) in UTC. From a human's perspective, we want time zones to be a non-issue, so we can write our date/time as the author is seeing it within the post. For Jekyll to properly interpret it, we must specify the author's current hour offset from UTC at the time of publishing.
 
 ### Posts in a Collection
 
@@ -199,7 +199,7 @@ title: Category One
 subtitle: Post A
 category: Category One
 permalink: /blog/posts/category-one/post-a
-date: 2001-06-27 13:30:00 -05:00 # 2001-06-27 18:30:00 UTC
+date: 2001-06-27 20:30:00 -05:00 # 2001-06-28 01:30:00 UTC
 ---
 ```
 
