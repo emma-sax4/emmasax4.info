@@ -3,7 +3,7 @@
   <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link
     rel="shortcut icon"
@@ -221,7 +221,7 @@
 
 <p>I originally wanted to try to use layouts, Jekyll, and javascript-like styles to store the blogs as Markdown files. In that case, the main “Blog” page would just use a fancy little loop to show each of the blog posts. But that turned out to be more difficult than I thought it would be. In all honesty, I could figure it all out myself… there’s plenty of examples out there in GitHub. But I had a limited amount of time I wanted to spend putting the blog together, and tbh, I had a limited amount of patience as well.</p>
 
-<p>Instead, I figured… I’m afraid of neither a little bit of HTML nor a little bit of duplicated code (I know the code isn’t as “pretty”, and if there was actual functionality on this website, I would try harder to avoid it). So, I realized that I could make a decently good blog function by simply being smart about my HTML, CSS, and <code class="highlighter-rouge">href</code> linking. At the very least, it would look professional, and like I knew what I was doing, even if the skeleton of the code is a little ugly.</p>
+<p>Instead, I figured… I’m afraid of neither a little bit of HTML nor a little bit of duplicated code (I know the code isn’t as “pretty,” and if there was actual functionality on this website, I would try harder to avoid it). So, I realized that I could make a decently good blog function by simply being smart about my HTML, CSS, and <code class="highlighter-rouge">href</code> linking. At the very least, it would look professional, and like I knew what I was doing, even if the skeleton of the code is a little ugly.</p>
 
 <p>Then, I went a step further. I added a <code class="highlighter-rouge">.htaccess</code> file (even though GitHub Pages normally doesn’t play nice with that file), so that the URLs of this website could hide the <code class="highlighter-rouge">.html</code> endings of the HTML pages. In this way, the website wouldn’t show up as obviously just a compilation of HTML files… aka it makes it look like the whole website is served using RoR or something like that. And then, using a little bit of directory-magic, I can add a bunch of posts in a <code class="highlighter-rouge">_posts/</code> directory — and link to them appropriately. Add in a <code class="highlighter-rouge">Back</code> button, and voilà… here we are!</p>
 
