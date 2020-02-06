@@ -21,7 +21,7 @@ So, in honor of it being almost exactly three years after that original post, le
 
 I still don't drink coffee. When I was in high school, everyone would tell me: "You may not need the caffeine yet, but just wait until college." When I got to college, everyone said: "You're a young freshman. Just wait until you're a senior." When I became a senior, people said: "It's amazing you don't need coffee right now, but just wait until after you graduate and start working full-time." And yet, here I am, 2.5 years after graduation, working full-time, and I _still_ don't drink coffee.
 
-I believe I've had maybe three cups of coffee in my entire life, and each one of those had to be loaded up with sugars and creams to hide the bitter taste. In fact, one time my mom came over to my apartment and I offered her a cup of coffee. She said "that would be great", and then I offered to take my car to Starbucks—I don't own a coffee maker.
+I believe I've had maybe three cups of coffee in my entire life, and each one of those had to be loaded up with sugars and creams to hide the bitter taste. In fact, one time my mom came over to my apartment and I offered her a cup of coffee. She said "that would be great," and then I offered to take my car to Starbucks—I don't own a coffee maker.
 
 ### 2.
 
