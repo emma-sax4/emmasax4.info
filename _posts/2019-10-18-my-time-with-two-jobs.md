@@ -4,7 +4,7 @@ title: My Time with Two Jobs
 permalink: /blog/posts/my-time-with-two-jobs/
 redirect_from:
   - /blog/posts/2019-10-18-my-time-with-two-jobs/
-date: 2019-10-18 00:00:00 -05:00
+date: 2019-10-18 00:00:00 -0500
 ---
 
 A couple years ago, after I started working full-time, I thought about pursuing a second job. Perhaps something in retail or serving. I eventually decided not to go through with that—I really didn't need the additional money, since I work full-time as a software engineer. But this past January, I decided to make a change and take a second job anyway.

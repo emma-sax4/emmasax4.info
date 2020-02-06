@@ -5,7 +5,7 @@ tags: [ tech, jekyll ]
 permalink: /blog/posts/adding-pagination-without-jekyll/
 redirect_from:
   - /blog/posts/2019-09-12-adding-pagination-without-jekyll/
-date: 2019-09-12 00:00:00 -05:00
+date: 2019-09-12 00:00:00 -0500
 ---
 
 As I stated in my original [_Switching to Jekyll_](/blog/posts/switching-to-jekyll/) post, one of the original reasons I wanted to move to a Jekyll-based site was so that I could implement pagination on my "Blog" page(s). Converting my site to Jekyll was definitely challenging, and it involved me learning a new framework and a new language (Liquid). And therefore, the [pull request that made the switch](https://github.com/emma-sax4/emma-sax4.github.io/pull/6) was massive, and took a while—it had 54 changed files and 19 commits. Because of this, I decided that pagination should come in a separate pull request. And then, because I'm in my "website-phase," I thought I'd write a blog post about it 🤷🏻‍♀️😂.

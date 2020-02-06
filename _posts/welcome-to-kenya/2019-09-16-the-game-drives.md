@@ -6,7 +6,7 @@ category: Welcome to Kenya
 permalink: /blog/posts/welcome-to-kenya/the-game-drives/
 redirect_from:
   - /blog/posts/welcome-to-kenya/2019-09-16-the-game-drives/
-date: 2019-09-16 00:00:00 -05:00
+date: 2019-09-16 00:00:00 -0500
 ---
 
 ## The Big 5
