@@ -13,6 +13,8 @@
   * [Writing Drafts](#writing-drafts)
 - [`assets/`](#assets)
 - [`_config.yml`](#_configyml)
+- [`.travis.yml`](#travisyml)
+- [`favicon.ico`](#faviconico)
 - [`feed.xml`](#feedxml)
 - [`Gemfile` and `Gemfile.lock`](#gemfile-and-gemfilelock)
 - [`index.md`](#indexmd)
@@ -68,6 +70,8 @@ Here are all of the parts of this project associated with running this applicati
 |   |   ├── resource-01.pdf
 |   └── └── resource-02.pdf
 ├── _config.yml
+├── .travis.yml
+├── favicon.ico
 ├── feed.xml
 ├── Gemfile
 ├── Gemfile.lock
@@ -248,6 +252,14 @@ This is an example sentence, so it will throw a 404. See <a href="/assets/resour
 ## `_config.yml`
 
 This is where we tell Jekyll all of the configurations for this project. Each time this file is changed, restart your local Jekyll server to get the new changes.
+
+## `.travis.yml`
+
+This site builds and "deploys" through Travis CI. Read more about how this repository uses Travis CI [here](https://github.com/emma-sax4/emma-sax4.github.io/blob/release/.github/CONTRIBUTING.md).
+
+## `favicon.ico`
+
+The favicon of the site is the main image associated with the site. It's the small square image that we see on the browser tab, and it's the general logo on this site. It's placed in the root directory so that browser crawlers and bots can easily locate it and show it on search results. It improves this site's SEO.
 
 ## `feed.xml`
 

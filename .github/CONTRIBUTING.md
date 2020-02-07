@@ -5,7 +5,8 @@
 - [Running Locally](#running-locally)
 - [Tests with Travis CI](#tests-with-travis-ci)
 - [Deployments with Travis CI](#deployments-with-travis-ci)
-- [Using HTML Proofer](#using-html-proofer)
+- [Notifications with Travis CI](#notifications-with-travis-ci)
+- [HTML Proofer](#html-proofer)
 
 ## Contribution Process
 
@@ -61,7 +62,11 @@ Because of the use of Jekyll gems that GitHub doesn't support, this site needs t
 
 A full deployment only takes about five to ten minutes, but depending on what was changed (HTML files, images, etc), it can take up to about fifteen minutes to propagate the changes. To make the changes appear faster, you can reload the entire website in incognito mode.
 
-## Using HTML Proofer
+## Notifications with Travis CI
+
+Travis CI sends a Slack notification indicating the build status after each build finishes (even on pull requests). The Slack notifications are sent to the Slack workspace [emmasax4](https://emmasax4.slack.com). You can ask for an invite to that workspace, but a final invite is not guaranteed. The workspace and notifications are set up for my personal usage, not for communciational purposes.
+
+## HTML Proofer
 
 We can check periodically that all of the HTML links in this website load correctly:
 ```bash
@@ -73,4 +78,4 @@ External links to LinkedIn typically return an error code, as explained [here](h
 
 If you're in the process of creating a new blog post, then most likely the external link to the new blog post will fail. This makes sense—the blog post isn't live online yet, and that's what the link is checking for.
 
-Travis CI also runs a version of the HTML Proofer which skips over all internal domains and ignores LinkedIn and Digi-Key domains.
+Travis CI also runs a version of the HTML Proofer which skips over all internal domains and ignores LinkedIn and Digi-Key domains. Travis CI runs this line as an `after_success`, meaning if it breaks for any reason (timeouts, moved URLs, etc), it won't hold up any deploys.
