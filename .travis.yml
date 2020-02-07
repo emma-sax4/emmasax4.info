@@ -6,11 +6,11 @@ branches:
     - release
 
 notifications:
-  email:
-    on_success: never
+  slack:
+    on_success: always
     on_failure: always
-    recipients:
-      - emma.sax4@gmail.com
+    rooms:
+      - veaPpsL4FrPhhHAaHf4j77PpJsBz3R33K1cVDVz/TtBvbBojfWNHNwIcQFzRdmhX0zVv8PA7AdNxM0VZYbt/A9ebzk/Ws6WbyNLUyraazGsj13uUyPp9zpmAt0czh1U0RfoJ8bDR6ySveRtUdTLPIEqa/LCAK0nfK3pqeff1hr2g2T6WJf6YecKQGv9uC8fMWJeNxRcIvApT4K3xXfiizWlLkVZpAhT242364xWcOMe4onpAmdzUPTdvE8iji7Zhct7XLLGKMorIoD6j9R/TI3rf60K1VBZT9CDeTkdyHC692WnQBh2b4n82Ps7G1Ys5WX7GiCCbITakhrzIXDpFljzXrAvIP0Dhyk2faKut6jh5eMkqHAKdCQfhu/dPK8tlS91PfokzwBWBCGeJEYljTCRBewv3r2QQ8Tu3iFAuozcz+LYXf2yhDjQoSyykw2+mmj1vEGJyKpQwI7y+fcVkpWnCKTlMLIOCROCJrOJmQGGx2I6FPGhMXDv0y3HkytECj67Jon1/Lcsph73A0Z1FAjvui5aZMsLe37e0uwmAbxhEjPTXsxuZLo8jhskBTrtwZdDEEu79H5c+8M2vV8uFE0dolI6FIHVg+E/fhxVBE2T9pRnmwPl/V5YSgXYqQBy2/3HMQ751IPomxsjhpiXeyzHFf8Z4RjOkhdUZkcoyvC4=
 
 install:
   - bundle install
