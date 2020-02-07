@@ -5,7 +5,8 @@
 - [Running Locally](#running-locally)
 - [Tests with Travis CI](#tests-with-travis-ci)
 - [Deployments with Travis CI](#deployments-with-travis-ci)
-- [Using HTML Proofer](#using-html-proofer)
+- [Notifications with Travis CI](#notifications-with-travis-ci)
+- [HTML Proofer](#html-proofer)
 
 ## Contribution Process
 

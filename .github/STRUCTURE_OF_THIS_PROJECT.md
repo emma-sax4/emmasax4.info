@@ -13,6 +13,8 @@
   * [Writing Drafts](#writing-drafts)
 - [`assets/`](#assets)
 - [`_config.yml`](#_configyml)
+- [`.travis.yml`](#travisyml)
+- [`favicon.ico`](#faviconico)
 - [`feed.xml`](#feedxml)
 - [`Gemfile` and `Gemfile.lock`](#gemfile-and-gemfilelock)
 - [`index.md`](#indexmd)
