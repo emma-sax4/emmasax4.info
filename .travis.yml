@@ -12,10 +12,6 @@ notifications:
     on_success: always
     on_failure: always
     on_pull_requests: true
-    template:
-      - Build <%{build_url}|#%{build_number}> for *%{repository_slug}* `%{result}`.
-      - Commit <%{compare_url}|%{commit}>, PR <%{pull_request_url}|#%{pull_request_number}>, branch `%{branch}`.
-      - Build ran for *%{duration}*.
 
 install:
   - bundle install
