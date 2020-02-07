@@ -61,6 +61,11 @@ Here are all of the parts of this project associated with running this applicati
 |   |   ├── css_file_01.scss
 |   |   ├── css_file_02.scss
 |   |   └── style.scss
+|   ├── favicon
+|   |   ├── android-chrome.png
+|   |   ├── apple-touch-icon.png
+|   |   ├── browserconfig.xml
+|   |   └── site.webmanifest
 |   ├── images
 |   |   ├── picture-01.jpg
 |   |   ├── picture-02.jpg
@@ -231,7 +236,9 @@ To identify the current hour offset from UTC, look up the time zone offset based
 
 ## `assets/`
 
-This directory has three directories, `css/`, `images/`, and `resources/`. The `css/` directory contains all of the CSS files in this site. They're all called together in `style.scss`. The CSS in the project is loaded inside the `_includes/head.html`. This site also uses [Bootstrap](https://getbootstrap.com/docs/4.4/getting-started/introduction/) for a lot of its CSS, including the navigation bar, headers, responsive page, etc.
+This directory has four directories, `css/`, `favicon/`, `images/`, and `resources/`. The `css/` directory contains all of the CSS files in this site. They're all called together in `style.scss`. The CSS in the project is loaded inside the `_includes/head.html`. This site also uses [Bootstrap](https://getbootstrap.com/docs/4.4/getting-started/introduction/) for a lot of its CSS, including the navigation bar, headers, responsive page, etc.
+
+The `favicon/` directory contains files and multiple icons of different names for favicon displays on Android, iOS, Safari, Chrome, Firefox, IE, and Edge.
 
 The `images/` directory gives me a place to store all of the images this site uses. To call a specific image, you can either ask for it in HTML:
 ```html
