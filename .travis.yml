@@ -6,10 +6,15 @@ branches:
     - release
 
 notifications:
+  email: false
   slack:
     on_success: always
     on_failure: always
     secure: HYwSCisi7UHQcQbBgv/YjjlfMvjmjacuLy9XSChssUIZ9Ypr2vkdeCCb80JZpH1ZIG9uUlmphQhH4h+MWGH8lniXbaachBCcvna1ogmrf/+iXABOhVlSxR5vOy7+AHb68OetStrdbkS9EcGFfchmV3l2R7+xmC20KVwSIivWU+FIsVNT7uU7GFs30ClUujDfbfe3s7hIGjhjX+X23BjbfPUjFS/2Kr1LFYu5ZvXYbdLrWMOi9CkU4XasJjsyPU618fRsTmaHqmbnZL5MVHBEIulqbYY2pwgfHPabrZqLq7+oOzzcH35jNjoc6a+IBt0dfbSf+bIttUKl+gHLgReoolPgyBdyR71KbiBYdF7ngwHQzXpKaIlxsc0ZXg4bT0v3gfF7acbYk/81bs/WGsB3YivyJ+oheysNrfwuTY4qJ1Xgf/rB/vidfysoxkzU8RTGfbGMV/cYzh9CVwfsfzhO5xYnw+NLP4851ZkQiFFGO7DapMc7HqbVLiAw010Mvr6E3UP5dAI4utScpCCJcMbRYhLeDnfhBGk8NOdDDZW/0FVbBda4yJhkE+WxbAwoiveWPO98mAQjE/NrGEdF3QWA7PMsT6jZ8USCSfiu7QwKfN8Yf/ltxi8ubHSdEf5IJUfTlzQQb94ZdT6W1tweEnfFn0LhSxzkG4QT7My67KXgchI=
+    template:
+      - "Repo `%{repository_slug}` *%{result}* build (<%{build_url}|#%{build_number}>) for commit (<%{compare_url}|%{commit}>) on branch `%{branch}`."
+      - "Execution time: *%{duration}*"
+      - "Message: %{message}"
 
 install:
   - bundle install
