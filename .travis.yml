@@ -14,9 +14,9 @@ notifications:
     on_failure: always
     on_pull_requests: true
     template:
-      - "Build (<%{build_url}|#%{build_number}>) for *%{repository_slug}* `%{result}`."
-      - if type IN (pull_request); then "Commit (<%{compare_url}|%{commit}>) in PR <%{pull_request_url}|#%{pull_request_number}>."; else "Commit (<%{compare_url}|%{commit}>) on branch `%{branch}`."; fi
-      - "Execution time: *%{duration}*."
+      - Build (<%{build_url}|#%{build_number}>) for *%{repository_slug}* `%{result}`.
+      - Commit (<%{compare_url}|%{commit}>), PR <%{pull_request_url}|#%{pull_request_number}>, branch `%{branch}`.
+      - Execution time: *%{duration}*.
 
 install:
   - bundle install
