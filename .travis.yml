@@ -6,17 +6,20 @@ branches:
     - release
 
 notifications:
-  email:
-    on_success: never
+  email: false
+  slack:
+    rooms:
+      - secure: YyQu7D1XaL43GcigvjVEjx+GGfvfvPcKR87kJNVf55/X9F47M/3zNtckrvQoIu4gDdwGC/UBe/mhywpO9xUiGNaE9S/ZW9clvwE0IAleji/+YKlPJWw61P+NM8cGlffMFW5ti5SnOb1X9iPICnMGYa1kxB501iFBRp+47CUVKuqgkgiT7NJTokoytybjpy84NZtwo5xw2TmizmW2vbxsfFidWwbIIKa6BWq+7xPMukdDg9Cy6/WUfQ9iJ5WJBwVKu6VOLLSI1S0fodxHsCbFhgmQxFfjsZ67Wv66VwkTIU8T7qCvf/8kk4B8Wt+VdipQQx24pr2yfkRQC+nUG6WYTTGiBAAAh7xvmwgsfxsExjOWwO+SJItpD4HHzqcmKr7l3ECiQ1/FpOGX4tLY0Agni9diEKbe0gL/KJWgnhhQcKvRNzY13Er8Y9dQRWTLH2+94RgHL4L+F/NvYfGtfkAsO4nysM8n+eV+IGV0rMyNd3OoEdRSmLetxK9GQqNZDEGWDuETux+PGwLvurXEZ9bIH7cJXwlS5CJ0v2JnHbZPqoHphsCzcsDN3ASH48sqcAOZwjibICYAxPh7BM3HHCYi1z2EC1UsrFsx6HaCOA6/1SvuCBYOERzWhIAkvcvbAiHs0ctxxM9Bl9NrBSy5ujyEL3MfQq9HYbqlCQoZtw2oe6Y=
+    on_success: always
     on_failure: always
-    recipients:
-      - emma.sax4@gmail.com
 
 install:
   - bundle install
 
 script:
   - JEKYLL_ENV=production bundle exec jekyll build --destination ./site
+
+after_success:
   - htmlproofer --assume-extension --allow-hash-href --internal-domains "/emmasax4.info/" --url-ignore "/linkedin/,/digikey/" ./site
 
 deploy:
