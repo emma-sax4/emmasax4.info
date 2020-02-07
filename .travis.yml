@@ -8,9 +8,11 @@ branches:
 notifications:
   email: false
   slack:
-    secure: "Qj3eZ5hELdiP0HKLoN/UdDxHhUw9VQV98drqSb2sgjQRS/hjMSovaKvQh2qicx6+gCpFPVWHT5OXVdElIKtRB92HDLA7aJmOCKmYRsZrg3dTglTXenLTaxDZgtYmUPjTX3XB7QFcvxcErC2aAUN3z5KteHsEmb4ji9OIkfmS0TIq1WPweJZput5u7tIVBVAiuYSudzQTbCAIZysxBR0wE+dK1VCGIZ5mSWe2EWFr/HBGaQAl5Z/X9J2nhI9mZ4h8qnvnDfkjuJBIGDFFE7RUg1mAqbSUje7aa9p2ocYASuj9yQzXI9tkIAyFRngg07SaRQ5h1Cm5Cnm+iKXHu62fYFHRTSUmj4AmfIZHdJSDpxRffOGL/O+JRXA6Wz+RzGDBv2rmbPd+wFj06+vmFeYbS1Zeijz96vam+5SeOoNaMdztgD25uWIF+B1Vj1RIA6/lcZZUcoMOXi434rZU7IBjs6SN9KEFrdgjmb/U27HibsJl3XxQtmJdtGR7JwYOHQZPzfmfiH2PpYeuHth0usVIp+8/cua9wL9S0L1elHMIK/0HlC0A1l5651VNWNyftXCJpqpdkP6IsOW93rdnsuFo6zn9N5XZGgoYd55tJRoophJaIAlz/8qnmp4h0ZYKGHmBuFDdXHAi9aSVlxOhtpIG1hYBkhg2PXMaeEiXXcpK1iA="
+    rooms:
+      - emmasax4:Cyvo08l3YdvxR3hrXizDUsOk
     on_success: always
     on_failure: always
+    on_pull_requests: true
 
 install:
   - bundle install
