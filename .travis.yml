@@ -18,16 +18,15 @@ script:
   - JEKYLL_ENV=production bundle exec jekyll build --destination ./site
 
 after_script:
-  - htmlproofer --assume-extension --allow-hash-href --internal-domains "/emmasax4.info/"
-  --url-ignore "/linkedin/,/digikey/" ./site
+  - htmlproofer --assume-extension --allow-hash-href --internal-domains "/emmasax4.info/" --url-ignore "/linkedin/,/digikey/" ./site
 
 deploy:
   provider: pages
   email: deploy@travis-ci.org
   name: Deployment Bot
   target_branch: master
-  local_dir: "./site"
-  token: "$GITHUB_TOKEN"
+  local_dir: ./site
+  token: $GITHUB_TOKEN
   keep_history: true
   edge: true
   on:
