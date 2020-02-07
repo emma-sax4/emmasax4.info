@@ -10,6 +10,7 @@ notifications:
   slack:
     on_success: always
     on_failure: always
+    on_pull_requests: true
     template:
       - Repo `%{repository_slug}` *%{result}* build (<%{build_url}|#%{build_number}>)
         for commit (<%{compare_url}|%{commit}>) on branch `%{branch}`.
