@@ -9,12 +9,13 @@ notifications:
   email: false
   slack:
     rooms:
-      - emmasax4:Cyvo08l3YdvxR3hrXizDUsOk
+      - KZ4nEKcqFvvvpMHosZ4YJ7NBz0TW2oaBYNi+wVEXQSc/tt+Q7LdL6kJB5szJtlUCMcDomggJGX3gen+GphxLSFa0cq9eMh2cFakpCa5z3X1C4I8BjEI7moGGygXzwnqtSNKJnXOapy3/JNNMLF8+Gj+ooDO+MyVbI15gh0gwfhaiq99o40doJPVnQzeZRzqINcY9jjbmchIse9NV/v3YoFPhZ3en5EgQu/loR4iMWSxKjgthXgoYxGagclYQZC92Dqin2YyuXR2ImELAyVum0WzzApkd3NMHRi4eMTnUKLY91nwKr8LlZPQeI7xENsUy4yiOK/ymh64uVSb3gJu7AJXzIwd5LDOEoAG/Z5ZFeiH9K0NUOv8BCTdEnKqnj/o3aW12DMK2uCWJOc4qz7S96JP5boYtCBZteIWEG15fuLe+ooa+6j8NO/AC9CuWXJzjylm7Kyzp4GM7vlo6KoQc97QlkJ1rB5IVQTljbL0q7lH8OvKnv/fKnbHDBePbRAQOPtAiebYa4uR435PvEO6bCkvXCJqPwSjEEe01myisgJ3iOAprjEFnqQFHquTvJj5rvysWeX6w3yYZEfnN2/wvAJYIAQKXsKdzB7t+hZiP7gX9U7548ylKsXCSaWW5gdMlNesk0QETBDgK3fU536h9qf04G7tyGNjMkX/DC4eNdYQ=
     on_success: always
     on_failure: always
     on_pull_requests: true
     template:
-      - "*%{result}* build for `%{repository_slug}`: build (<%{build_url}|#%{build_number}>) for commit (<%{compare_url}|%{commit}>) on branch `%{branch}`."
+      - "Build (<%{build_url}|#%{build_number}>) for *%{repository_slug}* `%{result}`."
+      - "Commit (<%{compare_url}|%{commit}>) on branch `%{branch}`."
       - "Execution time: *%{duration}*."
       - "Message: %{message}"
 
