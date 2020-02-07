@@ -10,11 +10,13 @@ notifications:
   slack:
     on_success: always
     on_failure: always
-    secure: HYwSCisi7UHQcQbBgv/YjjlfMvjmjacuLy9XSChssUIZ9Ypr2vkdeCCb80JZpH1ZIG9uUlmphQhH4h+MWGH8lniXbaachBCcvna1ogmrf/+iXABOhVlSxR5vOy7+AHb68OetStrdbkS9EcGFfchmV3l2R7+xmC20KVwSIivWU+FIsVNT7uU7GFs30ClUujDfbfe3s7hIGjhjX+X23BjbfPUjFS/2Kr1LFYu5ZvXYbdLrWMOi9CkU4XasJjsyPU618fRsTmaHqmbnZL5MVHBEIulqbYY2pwgfHPabrZqLq7+oOzzcH35jNjoc6a+IBt0dfbSf+bIttUKl+gHLgReoolPgyBdyR71KbiBYdF7ngwHQzXpKaIlxsc0ZXg4bT0v3gfF7acbYk/81bs/WGsB3YivyJ+oheysNrfwuTY4qJ1Xgf/rB/vidfysoxkzU8RTGfbGMV/cYzh9CVwfsfzhO5xYnw+NLP4851ZkQiFFGO7DapMc7HqbVLiAw010Mvr6E3UP5dAI4utScpCCJcMbRYhLeDnfhBGk8NOdDDZW/0FVbBda4yJhkE+WxbAwoiveWPO98mAQjE/NrGEdF3QWA7PMsT6jZ8USCSfiu7QwKfN8Yf/ltxi8ubHSdEf5IJUfTlzQQb94ZdT6W1tweEnfFn0LhSxzkG4QT7My67KXgchI=
     template:
-      - "Repo `%{repository_slug}` *%{result}* build (<%{build_url}|#%{build_number}>) for commit (<%{compare_url}|%{commit}>) on branch `%{branch}`."
-      - "Execution time: *%{duration}*"
-      - "Message: %{message}"
+      - Repo `%{repository_slug}` *%{result}* build (<%{build_url}|#%{build_number}>)
+        for commit (<%{compare_url}|%{commit}>) on branch `%{branch}`.
+      - 'Execution time: *%{duration}*'
+      - 'Message: %{message}'
+    rooms:
+      secure: YyQu7D1XaL43GcigvjVEjx+GGfvfvPcKR87kJNVf55/X9F47M/3zNtckrvQoIu4gDdwGC/UBe/mhywpO9xUiGNaE9S/ZW9clvwE0IAleji/+YKlPJWw61P+NM8cGlffMFW5ti5SnOb1X9iPICnMGYa1kxB501iFBRp+47CUVKuqgkgiT7NJTokoytybjpy84NZtwo5xw2TmizmW2vbxsfFidWwbIIKa6BWq+7xPMukdDg9Cy6/WUfQ9iJ5WJBwVKu6VOLLSI1S0fodxHsCbFhgmQxFfjsZ67Wv66VwkTIU8T7qCvf/8kk4B8Wt+VdipQQx24pr2yfkRQC+nUG6WYTTGiBAAAh7xvmwgsfxsExjOWwO+SJItpD4HHzqcmKr7l3ECiQ1/FpOGX4tLY0Agni9diEKbe0gL/KJWgnhhQcKvRNzY13Er8Y9dQRWTLH2+94RgHL4L+F/NvYfGtfkAsO4nysM8n+eV+IGV0rMyNd3OoEdRSmLetxK9GQqNZDEGWDuETux+PGwLvurXEZ9bIH7cJXwlS5CJ0v2JnHbZPqoHphsCzcsDN3ASH48sqcAOZwjibICYAxPh7BM3HHCYi1z2EC1UsrFsx6HaCOA6/1SvuCBYOERzWhIAkvcvbAiHs0ctxxM9Bl9NrBSy5ujyEL3MfQq9HYbqlCQoZtw2oe6Y=
 
 install:
   - bundle install
@@ -30,8 +32,8 @@ deploy:
   email: deploy@travis-ci.org
   name: Deployment Bot
   target_branch: master
-  local_dir: ./site
-  token: $GITHUB_TOKEN
+  local_dir: "./site"
+  token: "$GITHUB_TOKEN"
   keep_history: true
   edge: true
   on:
