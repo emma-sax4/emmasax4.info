@@ -282,9 +282,11 @@
 
       <div style="margin-top: 3rem;">
   
+    <script src="/js/show-comments.js" type="text/javascript"></script>
+
     <div class="text-center" style="margin-bottom: 1rem;">
       <button id="show-comments-button" class="btn btn-lg btn-outline-secondary"
-  onclick="loadComments();return false;">
+  onclick="loadComments('emmasax4');return false;">
   Load Comments
   <i data-feather="message-circle"></i>
 </button>
@@ -299,25 +301,6 @@
         comments powered by Disqus.
       </a>
     </noscript>
-
-    <script type="text/javascript">
-      var disqus_loaded = false;
-      var disqus_shortname = 'emmasax4';
-
-      function loadComments() {
-        if (!disqus_loaded) {
-          disqus_loaded = true;
-          (function() {
-            var d = document,
-              s = d.createElement('script');
-            s.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
-            s.setAttribute('data-timestamp', +new Date());
-            (d.head || d.body).appendChild(s);
-          })();
-          document.getElementById('show-comments-button').remove();
-        }
-      }
-    </script>
   
 </div>
 
@@ -329,72 +312,14 @@
   </body>
 
   <footer>
-  &copy;
-  <script>new Date().getFullYear()>2010&&document.write(" "+new Date().getFullYear());</script>
+  &copy;<script src="/js/full-year.js"></script>
   by <a href="https://github.com/emma-sax4">Emma Sax</a>.
   All rights reserved.
   View on <a href="https://github.com/emma-sax4/emma-sax4.github.io">GitHub</a>.
 </footer>
 
-  <!--
-This will take all of the dates for the blog posts (written with the class 'post-meta'),
-and will render them in the readers' local time, instead of in UTC.
-
-An incoming date/time will be formatted like this:
-  2019-12-29 03:00:00 +0000
-
-And it will be turned into this (CST):
-  Sat Dec 28 2019 21:00:00 GMT-0600
-
-And written like this:
-  December 28, 2019
--->
-<script type="text/javascript">
-  function showDatesInLocalTime() {
-    var monthNames = ['January', 'February', 'March', 'April', 'May', 'June',
-                      'July','August', 'September', 'October','November', 'December'
-    ];
-
-    for(var c = document.getElementsByClassName('post-meta'), a = 0; a < c.length; a++) {
-      var b = c[a];
-
-      if (b.innerHTML.match(/[A-Za-z]+/)) {
-        // Skip because the content is not a date
-      } else {
-        var d = b.innerHTML.trim().split(/[^0-9]/);
-        var date = new Date(Date.UTC(d[0], d[1]-1, d[2], d[3], d[4], d[5]));
-        var day = date.getDate();
-        var year = date.getFullYear();
-        var monthIndex = date.getMonth();
-
-        b.innerHTML = monthNames[monthIndex] + ' ' + day + ', ' + year;
-      };
-    };
-  };
-  showDatesInLocalTime();
-</script>
-
-<!--
-To open an EXTERNAL link in the CURRENT tab, write your link like this:
-  <a href="https://github.com" target="_self">GitHub</a>
-
-To open an INTERNAL link in a NEW tab, write your link like this:
-  <a href="https://emmasax4.info" target="_blank">My website</a>
--->
-<script type="text/javascript">
-  function openExternalLinksInNewTabs() {
-    for(var c = document.getElementsByTagName('a'), a = 0; a < c.length; a++) {
-      var b = c[a];
-      if (b.target == '_self') {
-        b.getAttribute('href') && b.hostname !== location.hostname && (b.target = '_self');
-      } else {
-        b.getAttribute('href') && b.hostname !== location.hostname && (b.target = '_blank');
-      };
-    };
-  };
-  openExternalLinksInNewTabs();
-</script>
-
+  <script src="/js/show-dates.js" type="text/javascript"></script>
+<script src="/js/external-links.js" type="text/javascript"></script>
 <script src="https://unpkg.com/feather-icons@4.25.0/dist/feather.min.js"></script>
 <script>feather.replace()</script>
 
