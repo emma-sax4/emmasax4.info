@@ -74,6 +74,10 @@ Here are all of the parts of this project associated with running this applicati
 |   ├── resources
 |   |   ├── resource-01.pdf
 |   └── └── resource-02.pdf
+├── js
+|   ├── another-script.js
+|   ├── one-more-script.js
+|   └── script.js
 ├── _config.yml
 ├── .travis.yml
 ├── favicon.ico
@@ -255,6 +259,10 @@ When calling internal resources like this, it'll automatically open in the same 
 ```markdown
 This is an example sentence, so it will throw a 404. See <a href="/assets/resources/resource-01.pdf" target="_blank">here</a>?
 ```
+
+## `js/`
+
+This directory is where we store all of our javascript files for the site. Some of them are called at the bottom of every page. Others are called in specific places in the code. All of these are parsed by Code Climate.
 
 ## `_config.yml`
 
