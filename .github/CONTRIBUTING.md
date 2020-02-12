@@ -3,11 +3,12 @@
 ### Table of Contents
 - [Contribution Process](#contribution-process)
 - [Running Locally](#running-locally)
-- [Tests with Travis CI](#tests-with-travis-ci)
-- [Deployments with Travis CI](#deployments-with-travis-ci)
-- [Notifications with Travis CI](#notifications-with-travis-ci)
 - [HTML Proofer](#html-proofer)
-- [Collections, Categories, and Tags](#collections-categories-and-tags)
+- [Travis CI](#travis-ci)
+  * [Tests](#tests)
+  * [Deployments](#deployments)
+  * [Notifications](#notifications)
+- [Collections vs. Categories vs. Tags](#collections-vs-categories-vs-tags)
 - [Directory/File Structure](#directoryfile-structure)
   * [`_includes/`](#_includes)
   * [`_layouts/`](#_layouts)
@@ -18,6 +19,7 @@
     - [Posts in a Collection](#posts-in-a-collection)
     - [Writing Drafts](#writing-drafts)
   * [`assets/`](#assets)
+  * [`js/`](#js)
   * [`_config.yml`](#_configyml)
   * [`.travis.yml`](#travisyml)
   * [`favicon.ico`](#faviconico)
@@ -43,7 +45,7 @@
 5. Check the site looks like how you expect it to look. Follow the instructions below to get your computer running the site locally. If you've been working on GitHub UI up until this point, you may need to switch over to a computer and clone the repository and branch to do this.
 6. When you're absolutely ready for me to look at your pull request, please request a Code Review from me in the pull request. If I don't comment or start looking at the pull request in a few days, feel free to [send me an email](mailto:emma.sax4@gmail.com).
 
-\* If you're getting stuck on understanding this project or its file structure, see [STRUCTURE_OF_THIS_PROJECT.md](https://github.com/emma-sax4/emma-sax4.github.io/blob/release/.github/STRUCTURE_OF_THIS_PROJECT.md).
+\* If you're getting stuck on understanding this project or its file structure, take a peek [here](#directoryfile-structure).
 
 Happy coding! 🤗
 
@@ -69,20 +71,6 @@ JEKYLL_ENV=production bundle exec jekyll serve # with optional --future flag
 
 NOTE: Running this process locally will most likely create at least one directory locally on your machine, such as `_site/` and `.sass-cache/`, and potentially others. All of these are already in the `.gitignore`, but feel free to add others as necessary.
 
-## Tests with Travis CI
-
-This repository doesn't really have any unit or integration tests (Jekyll sites are just a host of static site files, so there's not really any functionality to test). However, Travis CI does check that `bundler` can install the necessary dependencies and that Jekyll can properly build the site on each pull request and each commit to the `release` branch (the default branch in this repository).
-
-## Deployments with Travis CI
-
-Because of the use of Jekyll gems that GitHub doesn't support, this site needs to use a 3rd Party instead of GitHub Pages to compile the code. So, when Travis CI runs on the `release` branch, not only does it bundle all of the dependencies and build the site, but it also puts it into a special `./site` directory. Then, Travis CI will run a Travis Deployment to upload that directory to the `master` branch of this GitHub repository. Then, GitHub Pages automatically deploys the commits in the `master` branch. In this way, we develop the site on a pull request, we merge source code into the `release` branch, and then Travis CI builds the code and commits that automagically to the `master` branch. Then GitHub Pages does their thing.
-
-A full deployment only takes about five to ten minutes, but depending on what was changed (HTML files, images, etc), it can take up to about fifteen minutes to propagate the changes. To make the changes appear faster, you can reload the entire website in incognito mode.
-
-## Notifications with Travis CI
-
-Travis CI sends a Slack notification indicating the build status after each build finishes (even on pull requests). The Slack notifications are sent to the Slack workspace [emmasax4](https://emmasax4.slack.com). You can ask for an invite to that workspace, but a final invite is not guaranteed. The workspace and notifications are set up for my personal usage, not for communciational purposes.
-
 ## HTML Proofer
 
 We can check periodically that all of the HTML links in this website load correctly:
@@ -97,7 +85,25 @@ If you're in the process of creating a new blog post, then most likely the exter
 
 Travis CI also runs a version of the HTML Proofer which skips over all internal domains and ignores LinkedIn and Digi-Key domains. Travis CI runs this line as an `after_success`, meaning if it breaks for any reason (timeouts, moved URLs, etc), it won't hold up any deploys.
 
-## Collections, Categories, and Tags
+## Travis CI
+
+This repository uses Travis CI for several continuous integration tools. See the full `.travis.yml` [here](https://github.com/emma-sax4/emma-sax4.github.io/blob/release/.travis.yml).
+
+### Tests
+
+This repository doesn't really have any unit or integration tests (Jekyll sites are just a host of static site files, so there's not really any functionality to test). However, Travis CI does check that `bundler` can install the necessary dependencies and that Jekyll can properly build the site on each pull request and each commit to the `release` branch (the default branch in this repository).
+
+### Deployments
+
+Because of the use of Jekyll gems that GitHub doesn't support, this site needs to use a 3rd Party instead of GitHub Pages to compile the code. So, when Travis CI runs on the `release` branch, not only does it bundle all of the dependencies and build the site, but it also puts it into a special `./site` directory. Then, Travis CI will run a Travis Deployment to upload that directory to the `master` branch of this GitHub repository. Then, GitHub Pages automatically deploys the commits in the `master` branch. In this way, we develop the site on a pull request, we merge source code into the `release` branch, and then Travis CI builds the code and commits that automagically to the `master` branch. Then GitHub Pages does their thing.
+
+A full deployment only takes about five to ten minutes, but depending on what was changed (HTML files, images, etc), it can take up to about fifteen minutes to propagate the changes. To make the changes appear faster, you can reload the entire website in incognito mode.
+
+### Notifications
+
+Travis CI sends a Slack notification indicating the build status after each build finishes (even on pull requests). The Slack notifications are sent to the Slack workspace [emmasax4](https://emmasax4.slack.com). You can ask for an invite to that workspace, but a final invite is not guaranteed. The workspace and notifications are set up for my personal usage, not for communciational purposes.
+
+## Collections vs. Categories vs. Tags
 
 Please notice that in the code, we need to call a collection of related posts a `category`. This is in order to make the pagination work as expected. A user of the site will view the collection no differently than with a tag. The biggest difference between a `tag` and a `category` is that a post can have multiple tags, but can only be a part of one `category`. Currently, the code is not set up to handle posts that are part of a collection _and_ contain tags.
 
@@ -347,7 +353,7 @@ This is where we tell Jekyll all of the configurations for this project. Each ti
 
 ### `.travis.yml`
 
-This site builds and "deploys" through Travis CI. Read more about how this repository uses Travis CI [here](https://github.com/emma-sax4/emma-sax4.github.io/blob/release/.github/CONTRIBUTING.md).
+This site builds and "deploys" through Travis CI. Read more about how this repository uses Travis CI [here](#travis-ci).
 
 ### `favicon.ico`
 
@@ -359,7 +365,7 @@ This site implements a basic RSS feed for subscribers to keep an eye on the blog
 
 ### `Gemfile` and `Gemfile.lock`
 
-The Gemfile is where the application defines which Ruby gems are important to run the application. To learn how to use these files, see this [section](https://github.com/emma-sax4/emma-sax4.github.io/blob/release/.github/CONTRIBUTING.md#running-locally).
+The Gemfile is where the application defines which Ruby gems are important to run the application. To learn how to use these files, see this [section](#running-locally).
 
 ### `index.md`
 
