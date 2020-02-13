@@ -5,5 +5,9 @@
     {% endfor %}
   </ul>
 
-  {% include blog/pagination.html %}
+  {% if paginator.total_pages >= 9 %}
+    {% include blog/pagination_trail.html %}
+  {% elsif paginator.total_pages > 1 %}
+    {% include blog/pagination.html %}
+  {% endif %}
 </div>
