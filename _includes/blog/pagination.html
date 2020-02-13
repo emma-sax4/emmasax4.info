@@ -9,11 +9,10 @@
 
     <!-- Loop through the pages -->
     {% for count in (1..paginator.total_pages) %}
+      {% assign number = count %}
       {% if count == paginator.page %}
-        {% assign number = count %}
         {% include elements/pagination/active_page.html %}
       {% else %}
-        {% assign number = count %}
         {% include elements/pagination/numbered_page.html %}
       {% endif %}
     {% endfor %}
