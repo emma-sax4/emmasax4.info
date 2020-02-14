@@ -1,62 +1,27 @@
-{% if paginator.total_pages > 1 %}
-  <nav aria-label="Blog post navigation">
-    <ul class="pagination justify-content-center">
-      {% if paginator.previous_page %}
-        <li class="page-item">
-          <a class="page-link" href="{{ paginator.previous_page_path }}">
-            <i style="width: 18px; height: 18px;" data-feather="skip-back"></i>
-          </a>
-        </li>
+<nav aria-label="Blog post navigation">
+  <ul class="pagination justify-content-center">
+    <!-- Show the button to the previous page -->
+    {% if paginator.previous_page %}
+      {% include elements/pagination/previous_page.html %}
+    {% else %}
+      {% include elements/pagination/disabled_x.html %}
+    {% endif %}
+
+    <!-- Loop through the pages -->
+    {% for count in (1..paginator.total_pages) %}
+      {% assign number = count %}
+      {% if count == paginator.page %}
+        {% include elements/pagination/active_page.html %}
       {% else %}
-        <li class="page-item disabled">
-          <a class="page-link" href="#">
-            <i style="width: 18px; height: 18px;" data-feather="x-octagon"></i>
-          </a>
-        </li>
+        {% include elements/pagination/numbered_page.html %}
       {% endif %}
+    {% endfor %}
 
-      {% for count in (1..paginator.total_pages) %}
-        {% if count == paginator.page %}
-          <li class="page-item active">
-            <a class="page-link" href="#">{{ count }}</a>
-          </li>
-        {% else %}
-          {% if page.pagination.title == "Blog" %}
-            {% assign url_shortname = "/" %}
-          {% else %}
-            {% if page.pagination.tag %}
-              {% assign url_shortname = "/" | append: page.pagination.tag | append: "/" %}
-            {% else page.pagination.category %}
-              {% assign category_name = page.pagination.category | downcase | replace: " ", "-" %}
-              {% assign url_shortname = "/" | append: category_name | append: "/" %}
-            {% endif %}
-          {% endif %}
-
-          {% if count == 1 %}
-            {% assign blog_url = "/blog" | append: url_shortname %}
-          {% else %}
-            {% assign blog_url = "/blog" | append: url_shortname | append: count | append: "/" %}
-          {% endif %}
-
-          <li class="page-item">
-            <a class="page-link" href="{{ blog_url }}">{{ count }}</a>
-          </li>
-        {% endif %}
-      {% endfor %}
-
-      {% if paginator.next_page %}
-        <li class="page-item">
-          <a class="page-link" href="{{ paginator.next_page_path }}">
-            <i style="width: 18px; height: 18px;" data-feather="skip-forward"></i>
-          </a>
-        </li>
-      {% else %}
-        <li class="page-item disabled">
-          <a class="page-link" href="#">
-            <i style="width: 18px; height: 18px;" data-feather="x-octagon"></i>
-          </a>
-        </li>
-      {% endif %}
-    </ul>
-  </div>
-{% endif %}
+    <!-- Show the button to the next page -->
+    {% if paginator.next_page %}
+      {% include elements/pagination/next_page.html %}
+    {% else %}
+      {% include elements/pagination/disabled_x.html %}
+    {% endif %}
+  </ul>
+</div>
