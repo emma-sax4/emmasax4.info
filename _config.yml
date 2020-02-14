@@ -74,8 +74,8 @@ pagination:
   sort_field: date
   sort_reverse: true
   trail:
-    before: 2
-    after: 2
+    before: 1
+    after: 1
 
 feed:
   production:

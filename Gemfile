@@ -3,7 +3,7 @@ source "https://rubygems.org"
 gem 'html-proofer',                '~> 3.15.1'
 gem 'jekyll',                      '~> 3.8.5'
 gem 'jekyll-default-layout',       '~> 0.1.4'
-gem 'jekyll-paginate-v2',          '~> 2.0.0'
+gem 'jekyll-paginate-v2',          '~> 3.0.0'
 gem 'jekyll-redirect-from',        '~> 0.16.0'
 gem 'jekyll-relative-links',       '~> 0.6.1'
 gem 'jekyll-time-to-read',         '~> 0.1.2'
