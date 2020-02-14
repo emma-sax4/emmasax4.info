@@ -22,8 +22,7 @@ after_success:
   - htmlproofer --assume-extension --allow-hash-href --internal-domains /emmasax4.info/ --url-ignore /linkedin/,/digikey/ ./site
 
 deploy:
-  provider: pages:git
-  token: cRnLkJQhgHWUqw9Cjoq6C5oyh2gjrM8yWnYpzRBhqhCtLBBkwdPduBEfIkvGkUcPz26sEsLnnpSUZrg56cS47APbYV3qePqpHKskRovbQWo7SeokBTetGuOUfEyrJ3G2+dHM+uZSzUV0wstl+6TsUnh+GdkjAiVaiISo3gScPNgK9qKbGEC+zeLJ0N5LEZfbmOJt3JJXp6Ke9oNBr1e/nqFSsjZBlOIxZ0VVKGB/4EFOON5AUmOnB6XxuM/59DOwiTatCX2JoxUP4PuuqQE7we2/PZ3ydYMHpPBFAZxUTDmNXvvNYuR1ErzGmTSsKGuoRX5l20xMnqKOnribukYy1K7qYKa544h73fTYJDorG4qISKV0MDRaBjhD0w3lxEIBJkFmWQaJ8gZ6wJ5xAl+s+v/d0AKIXJEyZ4Tk635WTeh8DqshpJEVR85bmo/2l56xRVLyjAa2hLaEyk9yH/0DzOwEJF910oX7c+UJWWyFaTFDaZF62gzm1rFUSO0nv5pOfWedNapNGlgQQVjfnI4aa1BVKvK4enhgNsBEWTOcIPNhKBtaFRbMXlWnUntm9EdOX8b5JH5qWPhiqq2+cmV0X0//t5F+i7YJ2HwbO/Xb6Z/1JTGBoB0iDf0NAkwp1LJ1PMC6DmRyIf9TEZiOUhgLSg7nrlU3F6pvAJHF2IUi+hE=
+  provider: pages
   name: Deployment Bot
   email: deploy@travis-ci.org
   target_branch: master
@@ -31,5 +30,7 @@ deploy:
   local_dir: ./site
   keep_history: true
   edge: true
+  token:
+    secure: cRnLkJQhgHWUqw9Cjoq6C5oyh2gjrM8yWnYpzRBhqhCtLBBkwdPduBEfIkvGkUcPz26sEsLnnpSUZrg56cS47APbYV3qePqpHKskRovbQWo7SeokBTetGuOUfEyrJ3G2+dHM+uZSzUV0wstl+6TsUnh+GdkjAiVaiISo3gScPNgK9qKbGEC+zeLJ0N5LEZfbmOJt3JJXp6Ke9oNBr1e/nqFSsjZBlOIxZ0VVKGB/4EFOON5AUmOnB6XxuM/59DOwiTatCX2JoxUP4PuuqQE7we2/PZ3ydYMHpPBFAZxUTDmNXvvNYuR1ErzGmTSsKGuoRX5l20xMnqKOnribukYy1K7qYKa544h73fTYJDorG4qISKV0MDRaBjhD0w3lxEIBJkFmWQaJ8gZ6wJ5xAl+s+v/d0AKIXJEyZ4Tk635WTeh8DqshpJEVR85bmo/2l56xRVLyjAa2hLaEyk9yH/0DzOwEJF910oX7c+UJWWyFaTFDaZF62gzm1rFUSO0nv5pOfWedNapNGlgQQVjfnI4aa1BVKvK4enhgNsBEWTOcIPNhKBtaFRbMXlWnUntm9EdOX8b5JH5qWPhiqq2+cmV0X0//t5F+i7YJ2HwbO/Xb6Z/1JTGBoB0iDf0NAkwp1LJ1PMC6DmRyIf9TEZiOUhgLSg7nrlU3F6pvAJHF2IUi+hE=
   on:
     branch: release
