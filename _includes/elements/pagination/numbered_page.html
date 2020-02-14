@@ -9,12 +9,12 @@
   {% endif %}
 {% endif %}
 
-{% if number == 1 %}
+{% if page_number == 1 %}
   {% assign blog_url = "/blog" | append: url_shortname %}
 {% else %}
-  {% assign blog_url = "/blog" | append: url_shortname | append: number | append: "/" %}
+  {% assign blog_url = "/blog" | append: url_shortname | append: page_number | append: "/" %}
 {% endif %}
 
 <li class="page-item">
-  <a class="page-link" href="{{ blog_url }}">{{ number }}</a>
+  <a class="page-link" href="{{ blog_url }}">{{ page_number }}</a>
 </li>
