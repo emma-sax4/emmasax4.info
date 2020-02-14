@@ -1,0 +1,55 @@
+<nav aria-label="Blog post navigation">
+  <ul class="pagination justify-content-center">
+    {% assign second_to_last = paginator.total_pages | times: 1 | minus: 1 %}
+    {% assign trail_numbers = "" | split: ',' %}
+    {% for trail in paginator.page_trail %}
+      {% assign trail_numbers = trail_numbers | push: trail.num %}
+    {% endfor %}
+
+    <!-- Show the button to the previous page -->
+    {% if paginator.previous_page %}
+      {% include elements/pagination/previous_page.html %}
+    {% else %}
+      {% include elements/pagination/disabled_x.html %}
+    {% endif %}
+
+    <!-- Always show the first page -->
+    {% unless trail_numbers contains 1 %}
+      {% assign number = 1 %}
+      {% include elements/pagination/numbered_page.html %}
+    {% endunless %}
+
+    <!-- If there's space between the trail and the first page, then show ... -->
+    {% unless trail_numbers contains 2 %}
+      {% include elements/pagination/empty_ellipsis.html %}
+    {% endunless %}
+
+    <!-- Loop through the trail -->
+    {% for trail in paginator.page_trail %}
+      {% assign number = trail.num %}
+      {% if trail.num == paginator.page %}
+        {% include elements/pagination/active_page.html %}
+      {% else %}
+        {% include elements/pagination/numbered_page.html %}
+      {% endif %}
+    {% endfor %}
+
+    <!-- If there's space between the trail and the last page, then show ... -->
+    {% unless trail_numbers contains second_to_last %}
+      {% include elements/pagination/empty_ellipsis.html %}
+    {% endunless %}
+
+    <!-- Always show the last page -->
+    {% unless trail_numbers contains paginator.total_pages %}
+      {% assign number = paginator.total_pages %}
+      {% include elements/pagination/numbered_page.html %}
+    {% endunless %}
+
+    <!-- Show the button to the next page -->
+    {% if paginator.next_page %}
+      {% include elements/pagination/next_page.html %}
+    {% else %}
+      {% include elements/pagination/disabled_x.html %}
+    {% endif %}
+  </ul>
+</div>
