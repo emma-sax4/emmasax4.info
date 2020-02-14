@@ -1,9 +1,9 @@
 <nav aria-label="Blog post navigation">
   <ul class="pagination justify-content-center">
-    {% assign second_to_last = paginator.total_pages | times: 1 | minus: 1 %}
-    {% assign trail_numbers = "" | split: ',' %}
+    {% assign second_to_last_page_number = paginator.total_pages | times: 1 | minus: 1 %}
+    {% assign trail_page_numbers = "" | split: ',' %}
     {% for trail in paginator.page_trail %}
-      {% assign trail_numbers = trail_numbers | push: trail.num %}
+      {% assign trail_page_numbers = trail_page_numbers | push: trail.num %}
     {% endfor %}
 
     <!-- Show the button to the previous page -->
@@ -14,19 +14,19 @@
     {% endif %}
 
     <!-- Always show the first page -->
-    {% unless trail_numbers contains 1 %}
-      {% assign number = 1 %}
+    {% unless trail_page_numbers contains 1 %}
+      {% assign page_number = 1 %}
       {% include elements/pagination/numbered_page.html %}
     {% endunless %}
 
     <!-- If there's space between the trail and the first page, then show ... -->
-    {% unless trail_numbers contains 2 %}
+    {% unless trail_page_numbers contains 2 %}
       {% include elements/pagination/empty_ellipsis.html %}
     {% endunless %}
 
     <!-- Loop through the trail -->
     {% for trail in paginator.page_trail %}
-      {% assign number = trail.num %}
+      {% assign page_number = trail.num %}
       {% if trail.num == paginator.page %}
         {% include elements/pagination/active_page.html %}
       {% else %}
@@ -35,13 +35,13 @@
     {% endfor %}
 
     <!-- If there's space between the trail and the last page, then show ... -->
-    {% unless trail_numbers contains second_to_last %}
+    {% unless trail_page_numbers contains second_to_last_page_number %}
       {% include elements/pagination/empty_ellipsis.html %}
     {% endunless %}
 
     <!-- Always show the last page -->
-    {% unless trail_numbers contains paginator.total_pages %}
-      {% assign number = paginator.total_pages %}
+    {% unless trail_page_numbers contains paginator.total_pages %}
+      {% assign page_number = paginator.total_pages %}
       {% include elements/pagination/numbered_page.html %}
     {% endunless %}
 
