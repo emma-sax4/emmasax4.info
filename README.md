@@ -1,6 +1,6 @@
 # emma-sax4.github.io [![Build Status](https://travis-ci.com/emma-sax4/emma-sax4.github.io.svg?branch=release)](https://travis-ci.com/emma-sax4/emma-sax4.github.io) [![Maintainability](https://api.codeclimate.com/v1/badges/a9161347b2a122a15ec3/maintainability)](https://codeclimate.com/github/emma-sax4/emma-sax4.github.io/maintainability)
 
-**Live site at: [https://emmasax4.info](https://emmasax4.info)**
+**Live site: [https://emmasax4.info](https://emmasax4.info)**
 
 For more information on deployments, tests, running Jekyll locally, contributing to this project, and more, please see [CONTRIBUTING.md](https://github.com/emma-sax4/emma-sax4.github.io/blob/release/.github/CONTRIBUTING.md).
 
