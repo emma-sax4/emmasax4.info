@@ -87,7 +87,7 @@ But there's one piece missing. That's for exceptions. Every now and then—such 
 ```javascript
 var links = document.getElementsByTagName('a');
 
-for(var counter = 0; counter < c.length; counter++) {
+for(counter = 0; counter < c.length; counter++) {
   var link = links[counter];
 
   if (link.target == '_self') {
@@ -122,7 +122,7 @@ To open an INTERNAL link in a NEW tab, write your link like this:
   function openExternalLinksInNewTabs() {
     var links = document.getElementsByTagName('a');
 
-    for(var counter = 0; counter < c.length; counter++) {
+    for(counter = 0; counter < c.length; counter++) {
       var link = links[counter];
 
       if (link.target == '_self') {

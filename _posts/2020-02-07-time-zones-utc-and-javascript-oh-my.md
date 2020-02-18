@@ -88,12 +88,12 @@ var monthNames = ['January', 'February', 'March', 'April', 'May', 'June',
 ];
 var dateArray = '2020-01-18 04:15:00 +0000'.split(/[^0-9]/);
 //  date = Fri Jan 17 2020 22:15:00 GMT-0600 (Central Standard Time)
-var date = new Date(
+var localDate = new Date(
   Date.UTC(dateArray[0], dateArray[1]-1, dateArray[2], dateArray[3], dateArray[4], dateArray[5])
 );
-var day = date.getDate(); // 17
-var year = date.getFullYear(); // 2020
-var monthIndex = date.getMonth(); // 0
+var day = localDate.getDate(); // 17
+var year = localDate.getFullYear(); // 2020
+var monthIndex = localDate.getMonth(); // 0
 return monthNames[monthIndex] + ' ' + day + ', ' + year; // January 17, 2020
 ```
 
@@ -107,7 +107,7 @@ All together, this now looks like this:
                       'July','August', 'September', 'October','November', 'December'
     ];
 
-    for(var counter = 0; counter < dates.length; counter++) {
+    for(counter = 0; counter < dates.length; counter++) {
       var htmlDate = dates[counter];
       var dateArray = htmlDate.innerHTML.trim().split(/[^0-9]/);
       var localDate = new Date(

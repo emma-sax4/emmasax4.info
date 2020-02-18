@@ -7,7 +7,7 @@ To open an INTERNAL link in a NEW tab, write your link like this:
 */
 var links = document.getElementsByTagName('a');
 
-for(var counter = 0; counter < c.length; counter++) {
+for(counter = 0; counter < c.length; counter++) {
   var link = links[counter];
 
   if (link.target == '_self') {

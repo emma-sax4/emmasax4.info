@@ -17,7 +17,7 @@ var monthNames = ['January', 'February', 'March', 'April', 'May', 'June',
                   'July','August', 'September', 'October','November', 'December'
 ];
 
-for(var counter = 0; counter < dates.length; counter++) {
+for(counter = 0; counter < dates.length; counter++) {
   var htmlDate = dates[counter];
   var dateArray = htmlDate.innerHTML.trim().split(/[^0-9]/);
   var localDate = new Date(
