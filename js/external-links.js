@@ -5,12 +5,14 @@ To open an EXTERNAL link in the CURRENT tab, write your link like this:
 To open an INTERNAL link in a NEW tab, write your link like this:
   <a href="https://emmasax4.info" target="_blank">My website</a>
 */
+var links = document.getElementsByTagName('a');
 
-for(var c = document.getElementsByTagName('a'), a = 0; a < c.length; a++) {
-  var b = c[a];
-  if (b.target == '_self') {
-    b.getAttribute('href') && b.hostname !== location.hostname && (b.target = '_self');
+for(var counter = 0; counter < c.length; counter++) {
+  var link = links[counter];
+
+  if (link.target == '_self') {
+    link.getAttribute('href') && link.hostname !== location.hostname && (link.target = '_self');
   } else {
-    b.getAttribute('href') && b.hostname !== location.hostname && (b.target = '_blank');
+    link.getAttribute('href') && link.hostname !== location.hostname && (link.target = '_blank');
   };
 };
