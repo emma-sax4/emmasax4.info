@@ -80,21 +80,20 @@ This was by far the most challenging part. I played with a Jekyll plugin first, 
 
 I'm not really a Javascript person. But, I jumped in anyway, and wanted to find a solution. Using some loop syntax from another slice of Javascript I use (read more about that [here](/blog/posts/opening-links-in-new-tabs-via-javascript/)), I started typing away. I want the Javascript to go through the HTML, find all of the dates, and then convert them to the readers' local time and print that back out again.
 
-Finding the elements that all matched the class `post-meta` wasn't too bad, and looping through them was easy. Figuring out whether they were a date or not was the most difficult part. I ended up defining this regex `/[A-Za-z]+/` to determine if it was a date... it's not perfect, but pretty much if the content includes letters, then we're probably not looking at a date.
-
-Then once I've located all of the dates, Javascript makes it easy to change time zones:
+The entire script locates all of the HTML elements with the class `date-meta` (assuming that it is indeed a UTC date), and then Javascript makes it easy to change time zones:
 
 ```javascript
 var monthNames = ['January', 'February', 'March', 'April', 'May', 'June',
                   'July','August', 'September', 'October','November', 'December'
 ];
-var d = '2020-01-18 04:15:00 +0000'.split(/[^0-9]/);
-var date = new Date(Date.UTC(d[0], d[1]-1, d[2], d[3], d[4], d[5]));
-// date = Fri Jan 17 2020 22:15:00 GMT-0600 (Central Standard Time)
+var dateArray = '2020-01-18 04:15:00 +0000'.split(/[^0-9]/);
+//  date = Fri Jan 17 2020 22:15:00 GMT-0600 (Central Standard Time)
+var date = new Date(
+  Date.UTC(dateArray[0], dateArray[1]-1, dateArray[2], dateArray[3], dateArray[4], dateArray[5])
+);
 var day = date.getDate(); // 17
 var year = date.getFullYear(); // 2020
 var monthIndex = date.getMonth(); // 0
-
 return monthNames[monthIndex] + ' ' + day + ', ' + year; // January 17, 2020
 ```
 
@@ -103,24 +102,21 @@ All together, this now looks like this:
 ```html
 <script type="text/javascript">
   function showDatesInLocalTime() {
+    var dates = document.getElementsByClassName('date-meta');
     var monthNames = ['January', 'February', 'March', 'April', 'May', 'June',
                       'July','August', 'September', 'October','November', 'December'
     ];
 
-    for(var c = document.getElementsByClassName('post-meta'), a = 0; a < c.length; a++) {
-      var b = c[a];
-
-      if (b.innerHTML.match(/[A-Za-z]+/)) {
-        // Skip because the content is not a date
-      } else {
-        var d = b.innerHTML.trim().split(/[^0-9]/);
-        var date = new Date(Date.UTC(d[0], d[1]-1, d[2], d[3], d[4], d[5]));
-        var day = date.getDate();
-        var year = date.getFullYear();
-        var monthIndex = date.getMonth();
-
-        b.innerHTML = monthNames[monthIndex] + ' ' + day + ', ' + year;
-      };
+    for(var counter = 0; counter < dates.length; counter++) {
+      var htmlDate = dates[counter];
+      var dateArray = htmlDate.innerHTML.trim().split(/[^0-9]/);
+      var localDate = new Date(
+        Date.UTC(dateArray[0], dateArray[1]-1, dateArray[2], dateArray[3], dateArray[4], dateArray[5])
+      );
+      var day = localDate.getDate();
+      var year = localDate.getFullYear();
+      var monthIndex = localDate.getMonth();
+      htmlDate.innerHTML = monthNames[monthIndex] + ' ' + day + ', ' + year;
     };
   };
   showDatesInLocalTime();

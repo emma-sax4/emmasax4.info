@@ -12,22 +12,19 @@ And written like this:
   December 28, 2019
 */
 
+var dates = document.getElementsByClassName('date-meta');
 var monthNames = ['January', 'February', 'March', 'April', 'May', 'June',
                   'July','August', 'September', 'October','November', 'December'
 ];
 
-for(var c = document.getElementsByClassName('post-meta'), a = 0; a < c.length; a++) {
-  var b = c[a];
-
-  if (b.innerHTML.match(/[A-Za-z]+/)) {
-    // Skip because the content is not a date
-  } else {
-    var d = b.innerHTML.trim().split(/[^0-9]/);
-    var date = new Date(Date.UTC(d[0], d[1]-1, d[2], d[3], d[4], d[5]));
-    var day = date.getDate();
-    var year = date.getFullYear();
-    var monthIndex = date.getMonth();
-
-    b.innerHTML = monthNames[monthIndex] + ' ' + day + ', ' + year;
-  };
+for(var counter = 0; counter < dates.length; counter++) {
+  var htmlDate = dates[counter];
+  var dateArray = htmlDate.innerHTML.trim().split(/[^0-9]/);
+  var localDate = new Date(
+    Date.UTC(dateArray[0], dateArray[1]-1, dateArray[2], dateArray[3], dateArray[4], dateArray[5])
+  );
+  var day = localDate.getDate();
+  var year = localDate.getFullYear();
+  var monthIndex = localDate.getMonth();
+  htmlDate.innerHTML = monthNames[monthIndex] + ' ' + day + ', ' + year;
 };
