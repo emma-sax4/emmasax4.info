@@ -3,13 +3,15 @@ function loadComments(disqus_shortname) {
 
   if (!disqus_loaded) {
     disqus_loaded = true;
+
     (function() {
-      var d = document,
-        s = d.createElement('script');
-      s.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
-      s.setAttribute('data-timestamp', +new Date());
-      (d.head || d.body).appendChild(s);
+      var doc = document;
+      var scripts = doc.createElement('script');
+      scripts.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+      scripts.setAttribute('data-timestamp', +new Date());
+      (doc.head || doc.body).appendChild(scripts);
     })();
+
     document.getElementById('show-comments-button').remove();
   };
 };
