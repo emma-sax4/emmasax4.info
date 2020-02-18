@@ -1,5 +1,5 @@
 /*
-This will take all of the dates for the blog posts (written with the class 'post-meta'),
+This will take all of the dates for the blog posts (written with the class 'date-meta'),
 and will render them in the readers' local time, instead of in UTC.
 
 An incoming date/time will be formatted like this:
