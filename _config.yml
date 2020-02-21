@@ -17,10 +17,7 @@
 title: Emma Sax
 description: Emma Sax's personal website and blog. Includes information about my social media profiles, résumé, and hobbies.
 url: https://emmasax4.info
-
-github:
-  repo: https://github.com/emma-sax4/emma-sax4.github.io
-  owner: https://github.com/emma-sax4
+github_repo: https://github.com/emma-sax4/emma-sax4.github.io
 
 webmaster_verifications:
   google: v04az8eo-0UcZrWCJr7SKAvM6hw90qTCBQoKx3PlXCA
