@@ -12,15 +12,13 @@
 
   <div class="container" style="padding-left: 0; padding-right: 0; padding-bottom: 2rem;">
     <div>
-      <span class="post-meta">
-        {% assign now = "now" | date: "%s" %}
-        {% assign date = post.date | date: "%s" %}
-        {% if date <= now %}
-          {{ post.date }}
-        {% else %}
-          Unpublished
-        {% endif %}
-      </span>
+      {% assign now = "now" | date: "%s" %}
+      {% assign date = post.date | date: "%s" %}
+      {% if date <= now %}
+        <span class="date-meta">{{ post.date }}</span>
+      {% else %}
+        <span class="post-meta">Unpublished</span>
+      {% endif %}
     </div>
 
     <a href="{{ site.baseurl }}{{ post_url }}">{{ short_title }}</a>
