@@ -87,7 +87,7 @@ var monthNames = ['January', 'February', 'March', 'April', 'May', 'June',
                   'July','August', 'September', 'October','November', 'December'
 ];
 var dateArray = '2020-01-18 04:15:00 +0000'.split(/[^0-9]/);
-//  date = Fri Jan 17 2020 22:15:00 GMT-0600 (Central Standard Time)
+//  localDate = Fri Jan 17 2020 22:15:00 GMT-0600 (Central Standard Time)
 var localDate = new Date(
   Date.UTC(dateArray[0], dateArray[1]-1, dateArray[2], dateArray[3], dateArray[4], dateArray[5])
 );
