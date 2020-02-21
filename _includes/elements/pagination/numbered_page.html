@@ -1,0 +1,20 @@
+{% if page.pagination.title == "Blog" %}
+  {% assign url_shortname = "/" %}
+{% else %}
+  {% if page.pagination.tag %}
+    {% assign url_shortname = "/" | append: page.pagination.tag | append: "/" %}
+  {% else page.pagination.category %}
+    {% assign category_name = page.pagination.category | downcase | replace: " ", "-" %}
+    {% assign url_shortname = "/" | append: category_name | append: "/" %}
+  {% endif %}
+{% endif %}
+
+{% if page_number == 1 %}
+  {% assign blog_url = "/blog" | append: url_shortname %}
+{% else %}
+  {% assign blog_url = "/blog" | append: url_shortname | append: page_number | append: "/" %}
+{% endif %}
+
+<li class="page-item">
+  <a class="page-link" href="{{ blog_url }}">{{ page_number }}</a>
+</li>

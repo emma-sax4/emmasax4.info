@@ -85,12 +85,15 @@ It's very simple, but yet, it covers almost exactly what I need. On every page t
 But there's one piece missing. That's for exceptions. Every now and then—such as writing this blog post—I want an EXTERNAL link that will open in the current tab. So, I need a way to exclude those few links from opening in a new tab. The answer comes from changing the `for` loop to look like this:
 
 ```javascript
-for(var c = document.getElementsByTagName('a'), a = 0; a < c.length; a++) {
-  var b = c[a];
-  if (b.target == '_self') {
-    b.getAttribute('href') && b.hostname !== location.hostname && (b.target = '_self');
+var links = document.getElementsByTagName('a');
+
+for(counter = 0; counter < c.length; counter++) {
+  var link = links[counter];
+
+  if (link.target == '_self') {
+    link.getAttribute('href') && link.hostname !== location.hostname && (link.target = '_self');
   } else {
-    b.getAttribute('href') && b.hostname !== location.hostname && (b.target = '_blank');
+    link.getAttribute('href') && link.hostname !== location.hostname && (link.target = '_blank');
   };
 };
 ```
@@ -117,12 +120,15 @@ To open an INTERNAL link in a NEW tab, write your link like this:
 -->
 <script type="text/javascript">
   function openExternalLinksInNewTabs() {
-    for(var c = document.getElementsByTagName('a'), a = 0; a < c.length; a++) {
-      var b = c[a];
-      if (b.target == '_self') {
-        b.getAttribute('href') && b.hostname !== location.hostname && (b.target = '_self');
+    var links = document.getElementsByTagName('a');
+
+    for(counter = 0; counter < c.length; counter++) {
+      var link = links[counter];
+
+      if (link.target == '_self') {
+        link.getAttribute('href') && link.hostname !== location.hostname && (link.target = '_self');
       } else {
-        b.getAttribute('href') && b.hostname !== location.hostname && (b.target = '_blank');
+        link.getAttribute('href') && link.hostname !== location.hostname && (link.target = '_blank');
       };
     };
   };
