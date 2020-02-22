@@ -2,7 +2,7 @@
 layout: post
 title: The Benefits of Gratitude
 tags: [ self-improvement ]
-permalink: /blog/posts/benefits-of-gratitude/
+permalink: /blog/posts/the-benefits-of-gratitude/
 date: 2020-03-03 23:30:00 -0600
 ---
 
