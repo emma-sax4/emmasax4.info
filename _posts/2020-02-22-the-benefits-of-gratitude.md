@@ -3,7 +3,7 @@ layout: post
 title: The Benefits of Gratitude
 tags: [ self-improvement ]
 permalink: /blog/posts/the-benefits-of-gratitude/
-date: 2020-03-03 23:30:00 -0600
+date: 2020-02-22 23:30:00 -0600
 ---
 
 Within the past couple months, I've been trying a new daily routine of practicing gratitude. I've known for quite a while that continually practicing gratitude will naturally make me happier—acknowledging the things that are going well in my life will make it easier for me to appreciate my life and the people in it, instead of dwelling on what isn't going well. But it turns out that gratitude may have more benefits besides just self-happiness. So, psychologists and scientists have started to dive deeper into gratitude and its benefits.
@@ -16,7 +16,7 @@ At its core, gratitude is all about noticing the good things in life. This doesn
 
 ### It makes us feel closer to each other 👭👩‍👧‍👦👨‍👦👫👨‍👩‍👧‍👧
 
-Noticing the good things that our coworkers, friends, and family have given to us reminds us that there are those that love us and want us to be happy and healthy. We can feel gratitude for material things, such as the chocolate that our friend brought us when we were sick in bed. But, we can also focus our gratitude on less tangible things, or things that weren't necessarily "gifted" to us by a person, such as a place to sleep tonight or food on the table.
+Noticing the good things that our coworkers, friends, and family have given to us reminds us that there are those that love us and want us to be happy and healthy. We can feel gratitude for material things, such as the chocolate that our friend brought us when we were sick in bed. But we can also focus our gratitude on less tangible things, or things that weren't necessarily "gifted" to us by a person, such as a place to sleep tonight or food on the table.
 
 ### It reminds us not to take things for granted 🎁😇🍻
 
@@ -32,7 +32,7 @@ When we practice gratitude, we are more easily able to see the good in the world
 
 ### It keeps the "feel-goods" in our minds longer 🤔😊👍🏼
 
-Recognizing the good things in the world keeps those "feel-goods" in our minds longer. Let's say you get a congratulatory note from your boss at work at 9am. Most likely that will lead to some additional motivation and happy feelings. But by 7pm when you get home, you may have forgotten about this. But if you sit down and make a gratitude list before bed, this note will come back to your mind, prompting you to recall those happy emotions you felt earlier in the day. Then perhaps you'll tell your significant other about the note, which is sharing the happy emotions... we all just got happier again, from that one note!
+Recognizing the good things in the world keeps those happy feelings in our bodies longer. Let's say you get a congratulatory note from your boss at work at 9am. Most likely that will lead to some additional motivation and happy feelings. But by 7pm when you get home, you may have forgotten about this. But if you sit down and make a gratitude list before bed, this note will come back to your mind, prompting you to recall those happy emotions you felt earlier in the day. Then perhaps you'll tell your significant other about the note, which is sharing the happy emotions... we all just got happier again, from that one note!
 
 ### It helps remove negative feelings 💩→🗑
 
@@ -40,7 +40,7 @@ Being aware of the good in the world, the ways you are very fortunate in your li
 
 ## How Does Gratitude Work?
 
-Although my post is titled "The Science of Gratitude," I'm not going to try to explain our brains. So, I'll just quote Karen Young at Hey Sigmund:
+My post was originally titled _The Science of Gratitude_. But as it turns out, I don't really feel comfortable trying to explain our brains. So, I renamed the post, and instead, I'll just quote Karen Young at Hey Sigmund:
 
 > When the brain feels gratitude, the parts of the brain that are activated include the ventral and dorsal medial pre-frontal cortex. These areas are involved in feelings of reward (the reward when stress is removed), morality, interpersonal bonding and positive social interactions, and the ability to understand what other people are thinking or feeling.
 >
@@ -48,9 +48,9 @@ Although my post is titled "The Science of Gratitude," I'm not going to try to e
 >
 > Gratitude also has the capacity to increase important neurochemicals. When thinking shifts from negative to positive, there is a surging of feel-good chemicals such as dopamine, serotonin and oxytocin. These all contribute to the feelings of closeness, connection and happiness that come with gratitude.
 
-But here's the catch: long-term positive affects of gratitude all depend on consistency. It's like going the gym. If I walk into the gym one day for a hardcore workout, I'm not going to be able to deadlift 130 pounds in one session. No matter how much I push myself that one day, it's just not going to happen. Gratitude is the exact same way. Even if you spend a whole day focusing on what you're grateful for, unless you take that practice back home with you, it won't help you long-term.
+But here's the catch: long-term positive effects of gratitude all depend on consistency. It's like going the gym. If I walk into the gym one day for a hardcore workout, I'm not going to be able to deadlift 130 pounds in one session. No matter how much I push myself that one day, it's just not going to happen. Gratitude is the exact same way. Even if you spend a whole day focusing on what you're grateful for, unless you take that practice back home with you, it won't help you long-term.
 
-As I wrote in my blog post [_2020: A New Years Resolution on Positivity_](/blog/posts/2020-a-new-years-resolution-on-positivity/), science has proven that humans have a natural negativity bias. This means that focusing on positivity is not a natural practice for humans. So, we need to train our brains to focus on positivity for as long as possible. In this way, we get to re-live in the positive vibes that came from one experience multiple times, as long as we possibly can. Remember that note from your boss on your desk? We lived the positive vibes once. When we made our nightly gratitude list, we lived them again. And then we lived them a third time when we shared them with our SO.
+As I wrote in my blog post [_2020: A New Years Resolution on Positivity_](/blog/posts/2020-a-new-years-resolution-on-positivity/), science has proven that humans have a natural negativity bias. This means that focusing on positivity is not a natural practice for humans. So, we need to train our brains to focus on positivity for as long as possible. In this way, we get to re-live the positive vibes that came from one experience multiple times, as long as we possibly can. Remember that note from your boss on your desk? We lived the positive vibes once. When we made our nightly gratitude list, we lived them again. And then we lived them a third time when we shared them with our SO.
 
 Alternatively, instead of reviewing all the good things from one whole day at once, we could just sit in the gratitude in the moment it happens. If we move forward with this method, it's recommended we sit in the state of gratefulness for at least 20 seconds before moving on.
 
@@ -58,7 +58,7 @@ Alternatively, instead of reviewing all the good things from one whole day at on
 
 ### Three things a day, for 21 days 3️⃣✍🏼🗓
 
-At the end of every day (or beginning of the day, if you have a good memory), write down three things that happened that day that you are grateful for. This is the one I do. Sometimes I do more than three things, if I had a really good day. Other days, it can be more challenging to crank three out. Sometimes my list looks like this:
+At the end of every day (or beginning of the day, if you have a good memory), write down three things that happened that day that you are grateful for. This is the one I do. Sometimes I write more than three things, if I had a really good day. Other days, it can be more challenging to crank three out. Sometimes my list looks like this:
 
 > 1. I'm grateful I woke up this morning.
 > 2. I'm grateful it's the weekend.
@@ -66,12 +66,11 @@ At the end of every day (or beginning of the day, if you have a good memory), wr
 
 AKA, sometimes my lists are sort of, ahem, surface level. But other days, my lists are insightful, loving, and truly joyous... it just depends on the day. Personally, I've noticed that my lists will be more surface level if my day was tiring, boring, and long. This doesn't mean my list for the day doesn't count in my 21, just that the next day, maybe I need to work a bit harder to find explicit examples of the good.
 
-And after 21 days, this becomes a habit. It doesn't mean you stop making your list... still do it! If I stop going to the gym, I'm going to lose all that muscle. It's the same with gratitude. You keep doing it, and it just gets easier and easier, and slowly, your brain will start to do it more naturally.
+And after 21 days, this becomes a habit. It doesn't mean you stop making your lists... still do it! If I stop going to the gym, I'm going to lose all that muscle. It's the same with gratitude. You keep doing it, and it just gets easier and easier, and slowly, your brain will start to do it more naturally.
 
 ### Sit in the gratefulness of positive experiences 🧘🏻‍♀️😌🗓
 
-I briefly touched on this method of gratitude earlier. The idea here is that when a postiive thing happens to you, you sit with the gratefulness for at least 20 seconds. If you're able to, grab a pen and paper and write down all of the happy emotions that it led you to feel. Try to put real words to those emotions, to describe them, or to describe how they make you feel. Example:
-
+I briefly touched on this method of gratitude earlier. The idea here is that when a positive thing happens to you, you sit with the gratefulness for at least 20 seconds. If you're able to, grab a pen and paper and write down all of the happy emotions associated. Try to put real words to those emotions, to describe them, or to describe how they make you feel. Example:
 
 > Your boss gives you a congratulatory note at work. This makes you feel:
 > * Appreciated
@@ -97,7 +96,7 @@ Once a week or so, write a letter or two to somebody in your life that you are g
 
 ## Conclusion
 
-The act of practicing gratitude is all about increasing awareness of the good in the world. Over time, regularly practicing gratitude is scientifically proven to rewire our brain to see more positives in the world around us. But the effects of gratitude don't just need to come after 21 days. When I started regularly practicing gratitude, I started seeing benefits as soon as three days in. I was happier, more reflective of my life around me, and was more able to see the good people I surround myself with and able to see how much they care about me. Practicing gratitude won't hide the negative parts in our life... we still have coronovirus, and we haven't made any more money than yesterday. But, we'll wake up tomorrow with a little more perspective, remembering there is good in the world, and we are loved ❤️.
+The act of practicing gratitude is all about increasing awareness of the good in the world. Over time, regularly practicing gratitude is scientifically proven to rewire our brain to see more positives in the world around us. But the effects of gratitude don't just need to come after 21 days. When I started regularly practicing gratitude, I started seeing benefits as soon as three days in. I was happier, more reflective of my life, and more able to see the good people I surround myself with and able to see how much they care about me. Practicing gratitude won't hide the negative parts in our life... we still have coronovirus, and we haven't made any more money than yesterday. But, we'll wake up tomorrow with a little more perspective, remembering there is good in the world, and remembering we are loved ❤️.
 
 ## References
 
