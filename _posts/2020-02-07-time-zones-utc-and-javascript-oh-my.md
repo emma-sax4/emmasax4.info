@@ -51,7 +51,7 @@ Most of the time, I publish my blog posts at midnight on a specific date. This m
 
 So, with this as my final goal, I went ahead to try to implement this in five steps:
 
-### 1️⃣ The entire Jekyll site must build in UTC
+### 1️. The entire Jekyll site must build in UTC
 
 This was easy. I set the following in my `_config.yml`:
 ```yml
@@ -60,7 +60,7 @@ timezone: UTC
 
 I also took this opportunity to remove the `export TZ=America/Chicago` from my `.travis.yml`, since now the Jekyll site and Travis CI will naturally be on the same wavelength.
 
-### 2️⃣ Add the specific date/time of each blog posts' publish time
+### 2️. Add the specific date/time of each blog posts' publish time
 
 This was also pretty easy. You can just add the date to the front matter of each blog post:
 
@@ -70,11 +70,11 @@ date: 2020-01-17 22:15:00 -0600
 
 You can specify the time the post should be published as well, although, as I stated above, I normally just use `00:00:00`, or midnight. For what I'm working with, the last part is important. That's the time zone offset. In Minnesota, that'll be `-0600` in the winter time (CST), or `-0500` in the summer (CDT)—I always used to get those two mixed up. But, I've decided that I want this to be easy for me to use going forward... so I should always write the date/time as I'm looking at my clock (in 24 hour time of course) with my current time zone offset 📝.
 
-### 3️⃣ Jekyll will store the blog post as being published in UTC
+### 3️. Jekyll will store the blog post as being published in UTC
 
 When I put both of these pieces together, the result was immediate. As soon as I ran `jekyll serve` on my website, I noticed that the `feed.xml` and `sitemap.xml` label the published date/time as in UTC! Yes! Nice and quick.
 
-### 4️⃣ Show the users the published date/time in their local time zones
+### 4️. Show the users the published date/time in their local time zones
 
 This was by far the most challenging part. I played with a Jekyll plugin first, to see if there was an easy way to convert the UTC date/time to be in a different time zone. This would've worked, if I wanted to hard-code the new time zone (which defeats the purpose of it being flexible to the readers' location). So, after much googling, I realized the only good way to understand the readers' location and time zone offset is to use Javascript. Yay.... 😰
 
@@ -125,7 +125,7 @@ All together, this now looks like this:
 
 I'm hiding a lot of the effort this took me... don't get me wrong, it took me what felt like _hours_ to develop this method, and I'm still finding bugs in it 🦟.
 
-### 5️⃣ Don't show the published date in the URL of the blog posts
+### 5️. Don't show the published date in the URL of the blog posts
 
 In our example, I published a post on the 17th of January at night in CST. But we see now, that if I travel to France and look back at past blog posts, it'll look as if it was published on the 18th of January. BUT, the URL of the blog post will include the published date. See an example below:
 
