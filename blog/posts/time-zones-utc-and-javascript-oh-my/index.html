@@ -208,13 +208,11 @@
   </div>
 
   <div class="text-center" style="margin-top: -.5rem;">
-    <span class="date-meta" style="font-style: italic;">
-      
-      
-      
-        2020-02-07 06:00:00 +0000
-      
-    </span>
+    
+    
+    
+      <span class="date-meta" style="font-style: italic;">2020-02-07 06:00:00 +0000</span>
+    
   </div>
 </h1>
 
@@ -260,7 +258,7 @@ January 18, 2020 05:15
 
 <p>So, with this as my final goal, I went ahead to try to implement this in five steps:</p>
 
-<h3 id="1️⃣-the-entire-jekyll-site-must-build-in-utc">1️⃣ The entire Jekyll site must build in UTC</h3>
+<h3 id="1️-the-entire-jekyll-site-must-build-in-utc">1️. The entire Jekyll site must build in UTC</h3>
 
 <p>This was easy. I set the following in my <code class="highlighter-rouge">_config.yml</code>:</p>
 <div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">timezone</span><span class="pi">:</span> <span class="s">UTC</span>
@@ -268,7 +266,7 @@ January 18, 2020 05:15
 
 <p>I also took this opportunity to remove the <code class="highlighter-rouge">export TZ=America/Chicago</code> from my <code class="highlighter-rouge">.travis.yml</code>, since now the Jekyll site and Travis CI will naturally be on the same wavelength.</p>
 
-<h3 id="2️⃣-add-the-specific-datetime-of-each-blog-posts-publish-time">2️⃣ Add the specific date/time of each blog posts’ publish time</h3>
+<h3 id="2️-add-the-specific-datetime-of-each-blog-posts-publish-time">2️. Add the specific date/time of each blog posts’ publish time</h3>
 
 <p>This was also pretty easy. You can just add the date to the front matter of each blog post:</p>
 
@@ -277,11 +275,11 @@ January 18, 2020 05:15
 
 <p>You can specify the time the post should be published as well, although, as I stated above, I normally just use <code class="highlighter-rouge">00:00:00</code>, or midnight. For what I’m working with, the last part is important. That’s the time zone offset. In Minnesota, that’ll be <code class="highlighter-rouge">-0600</code> in the winter time (CST), or <code class="highlighter-rouge">-0500</code> in the summer (CDT)—I always used to get those two mixed up. But, I’ve decided that I want this to be easy for me to use going forward… so I should always write the date/time as I’m looking at my clock (in 24 hour time of course) with my current time zone offset 📝.</p>
 
-<h3 id="3️⃣-jekyll-will-store-the-blog-post-as-being-published-in-utc">3️⃣ Jekyll will store the blog post as being published in UTC</h3>
+<h3 id="3️-jekyll-will-store-the-blog-post-as-being-published-in-utc">3️. Jekyll will store the blog post as being published in UTC</h3>
 
 <p>When I put both of these pieces together, the result was immediate. As soon as I ran <code class="highlighter-rouge">jekyll serve</code> on my website, I noticed that the <code class="highlighter-rouge">feed.xml</code> and <code class="highlighter-rouge">sitemap.xml</code> label the published date/time as in UTC! Yes! Nice and quick.</p>
 
-<h3 id="4️⃣-show-the-users-the-published-datetime-in-their-local-time-zones">4️⃣ Show the users the published date/time in their local time zones</h3>
+<h3 id="4️-show-the-users-the-published-datetime-in-their-local-time-zones">4️. Show the users the published date/time in their local time zones</h3>
 
 <p>This was by far the most challenging part. I played with a Jekyll plugin first, to see if there was an easy way to convert the UTC date/time to be in a different time zone. This would’ve worked, if I wanted to hard-code the new time zone (which defeats the purpose of it being flexible to the readers’ location). So, after much googling, I realized the only good way to understand the readers’ location and time zone offset is to use Javascript. Yay…. 😰</p>
 
@@ -330,7 +328,7 @@ January 18, 2020 05:15
 
 <p>I’m hiding a lot of the effort this took me… don’t get me wrong, it took me what felt like <em>hours</em> to develop this method, and I’m still finding bugs in it 🦟.</p>
 
-<h3 id="5️⃣-dont-show-the-published-date-in-the-url-of-the-blog-posts">5️⃣ Don’t show the published date in the URL of the blog posts</h3>
+<h3 id="5️-dont-show-the-published-date-in-the-url-of-the-blog-posts">5️. Don’t show the published date in the URL of the blog posts</h3>
 
 <p>In our example, I published a post on the 17th of January at night in CST. But we see now, that if I travel to France and look back at past blog posts, it’ll look as if it was published on the 18th of January. BUT, the URL of the blog post will include the published date. See an example below:</p>
 
@@ -391,9 +389,8 @@ January 18, 2020 05:15
   </body>
 
   <footer>
-  &copy;<script src="/js/full-year.js"></script>
-  by <a href="https://github.com/emma-sax4">Emma Sax</a>.
-  All rights reserved.
+  &copy; 2015–<script>document.write(new Date().getFullYear());</script>
+  by Emma Sax. All rights reserved.
   View on <a href="https://github.com/emma-sax4/emma-sax4.github.io">GitHub</a>.
 </footer>
 
