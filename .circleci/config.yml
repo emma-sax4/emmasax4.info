@@ -9,8 +9,11 @@ jobs:
     steps:
       - checkout
       - run:
+          name: Install Bundler
+          command: gem install bundler -v 2.1.4
+      - run:
           name: Bundle Install
-          command: gem install bundler && bundle install
+          command: bundle install
       - run:
           name: Build
           command: JEKYLL_ENV=production bundle exec jekyll build --destination ./site
