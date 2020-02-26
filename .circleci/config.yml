@@ -49,7 +49,7 @@ jobs:
             export SLACK_MESSAGE
             echo $SLACK_MESSAGE
       - slack/status:
-          success_message: "${SLACK_MESSAGE} passed."
-          failure_message: "${SLACK_MESSAGE} failed."
+          success_message: "$SLACK_MESSAGE passed."
+          failure_message: "$SLACK_MESSAGE failed."
           include_job_number_field: false
           include_project_field: false
