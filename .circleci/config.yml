@@ -35,4 +35,4 @@ jobs:
       - slack/status:
           success_message: 'A job has succeeded!'
           failure_message: 'A job has failed!'
-          webhook: https://hooks.slack.com/services/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
+          webhook: webhook
