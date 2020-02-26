@@ -12,13 +12,17 @@ jobs:
       - run:
           name: Set Up Custom Environment Variables
           command: |
-            echo 'export SLACK_MESSAGE="Test"' >> $BASH_ENV; source $BASH_ENV
+            if [ -z ${CIRCLE_PULL_REQUEST} ]; then
+              MESSAGE="Build #$CIRCLE_BUILD_NUM of $CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME@$CIRCLE_BRANCH by $CIRCLE_USERNAME"
+            else
+              MESSAGE="Build #$CIRCLE_BUILD_NUM of $CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME@$CIRCLE_BRANCH in PR $CIRCLE_PULL_REQUEST by $CIRCLE_USERNAME"
+            fi
+            echo 'export SLACK_MESSAGE=$MESSAGE' >> $BASH_ENV; source $BASH_ENV
       - checkout
       - run:
           name: Configure Bundler
           command: |
-            BUNDLER_VERSION=$(cat Gemfile.lock | tail -1 | tr -d ' ')
-            echo "export BUNDLER_VERSION" >> $BASH_ENV; source $BASH_ENV
+            echo "export BUNDLER_VERSION=$(cat Gemfile.lock | tail -1 | tr -d ' ')" >> $BASH_ENV; source $BASH_ENV
             gem install bundler
       - restore_cache:
           key: bundler-cache-{{ checksum "Gemfile.lock" }}
@@ -44,7 +48,7 @@ jobs:
             || echo "HTML Proofer failed. Please investigate the failures."
       - run:
           name: Test Variables
-          command: echo ${SLACK_MESSAGE}
+          command: echo $SLACK_MESSAGE
       - slack/status:
           success_message: "$SLACK_MESSAGE passed."
           failure_message: "$SLACK_MESSAGE failed."
