@@ -9,18 +9,32 @@ jobs:
     docker:
       - image: circleci/ruby:2.6.0-node
     steps:
+      - run:
+          name: Set Up Custom Environment Variables
+          command: |
+            if [ -z ${CIRCLE_PULL_REQUEST} ]; then
+              SLACK_MESSAGE="Build #${CIRCLE_BUILD_NUM} of ${CIRCLE_PROJECT_USERNAME}/${CIRCLE_PROJECT_REPONAME}@${CIRCLE_BRANCH} by ${CIRCLE_USERNAME}"
+            else
+              SLACK_MESSAGE="Build #${CIRCLE_BUILD_NUM} of ${CIRCLE_PROJECT_USERNAME}/${CIRCLE_PROJECT_REPONAME}@${CIRCLE_BRANCH} in PR ${CIRCLE_PULL_REQUEST} by ${CIRCLE_USERNAME}"
+            fi
+            echo $SLACK_MESSAGE
+            BUNDLER_VERSION=$(cat Gemfile.lock | tail -1 | tr -d ' ')
+
+            echo "export SLACK_MESSAGE" >> $BASH_ENV
+            echo "export BUNDLER_VERSION" >> $BASH_ENV
+            source $BASH_ENV
       - checkout
       - run:
           name: Configure Bundler
-          command: |
-            BUNDLER_VERSION=$(cat Gemfile.lock | tail -1 | tr -d ' ')
-            echo "export BUNDLER_VERSION" >> $BASH_ENV; source $BASH_ENV
-            gem install bundler
+          command: gem install bundler
       - restore_cache:
           key: bundler-cache-{{ checksum "Gemfile.lock" }}
       - run:
           name: Bundle Install
-          command: bundle install --path vendor/bundle
+          command: |
+            gem install bundler
+            bundle config set path 'vendor/bundle'
+            bundle install
       - save_cache:
           key: bundler-cache-{{ checksum "Gemfile.lock" }}
           paths:
@@ -38,17 +52,6 @@ jobs:
             --url-ignore /linkedin/,/digikey/ \
             ./site \
             || echo "HTML Proofer failed. Please investigate the failures."
-      - run:
-          name: Generate Custom Slack Message
-          command: |
-            if [ -z ${CIRCLE_PULL_REQUEST} ]; then
-              SLACK_MESSAGE="Build #${CIRCLE_BUILD_NUM} of ${CIRCLE_PROJECT_USERNAME}/${CIRCLE_PROJECT_REPONAME}@${CIRCLE_BRANCH} by ${CIRCLE_USERNAME}"
-            else
-              SLACK_MESSAGE="Build #${CIRCLE_BUILD_NUM} of ${CIRCLE_PROJECT_USERNAME}/${CIRCLE_PROJECT_REPONAME}@${CIRCLE_BRANCH} in PR ${CIRCLE_PULL_REQUEST} by ${CIRCLE_USERNAME}"
-            fi
-            echo $SLACK_MESSAGE
-            echo "export SLACK_MESSAGE" >> $BASH_ENV; source $BASH_ENV
-            echo $BASH_ENV
       - slack/status:
           success_message: "$SLACK_MESSAGE passed."
           failure_message: "$SLACK_MESSAGE failed."
