@@ -17,7 +17,6 @@ jobs:
             else
               MESSAGE="Build #$CIRCLE_BUILD_NUM of $CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME@$CIRCLE_BRANCH in PR $CIRCLE_PULL_REQUEST by $CIRCLE_USERNAME"
             fi
-            echo $MESSAGE
             echo "export SLACK_MESSAGE='$MESSAGE'" >> $BASH_ENV; source $BASH_ENV
       - checkout
       - run:
@@ -37,19 +36,16 @@ jobs:
       - run:
           name: Jekyll Build
           command: JEKYLL_ENV=production bundle exec jekyll build --destination ./site
-      # - run:
-      #     name: HTML Proofer
-      #     command: |
-      #       bundle exec htmlproofer \
-      #       --assume-extension \
-      #       --allow-hash-href \
-      #       --internal-domains /emmasax4.info/ \
-      #       --url-ignore /linkedin/,/digikey/ \
-      #       ./site \
-      #       || echo "HTML Proofer failed. Please investigate the failures."
       - run:
-          name: Test Variables
-          command: echo $SLACK_MESSAGE
+          name: HTML Proofer
+          command: |
+            bundle exec htmlproofer \
+            --assume-extension \
+            --allow-hash-href \
+            --internal-domains /emmasax4.info/ \
+            --url-ignore /linkedin/,/digikey/ \
+            ./site \
+            || echo "HTML Proofer failed. Please investigate the failures."
       - slack/status:
           success_message: "$SLACK_MESSAGE passed."
           failure_message: "$SLACK_MESSAGE failed."
