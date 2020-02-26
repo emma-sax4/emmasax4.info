@@ -71,3 +71,14 @@ jobs:
           failure_message: $SLACK_MESSAGE failed.
           include_job_number_field: false
           include_project_field: false
+workflows:
+  version: 2
+  fiveminutes:
+    triggers:
+      - schedule:
+          cron: "0/5 * * * *"
+          filters:
+            branches:
+              only:
+                - release
+                - add_crons
