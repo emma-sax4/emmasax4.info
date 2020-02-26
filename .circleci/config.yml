@@ -42,9 +42,9 @@ jobs:
           name: Generate Custom Slack Message
           command: |
             if [ -z ${CIRCLE_PULL_REQUEST} ]; then
-              SLACK_MESSAGE="Build #${CIRCLE_BUILD_NUM} of ${CIRCLE_PROJECT_USERNAME}/${CIRCLE_PROJECT_REPONAME}@${CIRCLE_BRANCH} in PR ${CIRCLE_PULL_REQUEST} by ${CIRCLE_USERNAME}"
-            else
               SLACK_MESSAGE="Build #${CIRCLE_BUILD_NUM} of ${CIRCLE_PROJECT_USERNAME}/${CIRCLE_PROJECT_REPONAME}@${CIRCLE_BRANCH} by ${CIRCLE_USERNAME}"
+            else
+              SLACK_MESSAGE="Build #${CIRCLE_BUILD_NUM} of ${CIRCLE_PROJECT_USERNAME}/${CIRCLE_PROJECT_REPONAME}@${CIRCLE_BRANCH} in PR ${CIRCLE_PULL_REQUEST} by ${CIRCLE_USERNAME}"
             fi
             echo $SLACK_MESSAGE
             echo "export $SLACK_MESSAGE" >> $BASH_ENV
