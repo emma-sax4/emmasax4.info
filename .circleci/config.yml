@@ -23,6 +23,11 @@ jobs:
           key: bundler-cache-{{ checksum "Gemfile.lock" }}
           paths:
             - vendor/bundle
+  test:
+    working_directory: ~/emma-sax4.github.io
+    docker:
+      - image: circleci/ruby:2.6.0-node
+    steps:
       - run:
           name: Jekyll Build
           command: JEKYLL_ENV=production bundle exec jekyll build --destination ./site
@@ -36,6 +41,14 @@ jobs:
             --url-ignore /linkedin/,/digikey/ \
             ./site \
             || echo "HTML Proofer failed. Please investigate the failures."
+  deploy:
+    working_directory: ~/emma-sax4.github.io
+    docker:
+      - image: circleci/ruby:2.6.0-node
+    branches:
+      only:
+        - release
+    steps:
       - deploy:
           name: Deploy to GitHub Pages
           command: |
@@ -60,10 +73,10 @@ jobs:
       - run:
           name: Slack - Creating Custom Message
           command: |
-            if [ -z ${CIRCLE_PULL_REQUEST} ]; then
+            if [ -z $CIRCLE_PULL_REQUESTS ]; then
               m="Build #$CIRCLE_BUILD_NUM of $CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME@$CIRCLE_BRANCH by $CIRCLE_USERNAME"
             else
-              m="Build #$CIRCLE_BUILD_NUM of $CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME@$CIRCLE_BRANCH in PR $CIRCLE_PULL_REQUEST by $CIRCLE_USERNAME"
+              m="Build #$CIRCLE_BUILD_NUM of $CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME@$CIRCLE_BRANCH in PR $CIRCLE_PULL_REQUESTS by $CIRCLE_USERNAME"
             fi
             echo "export SLACK_MESSAGE='$m'" >> $BASH_ENV; source $BASH_ENV
       - slack/status:
@@ -76,9 +89,13 @@ workflows:
   build_and_test:
     jobs:
       - build
+      - test
+      - deploy
   nightly_cron:
     jobs:
       - build
+      - test
+      - deploy
     triggers:
       - schedule:
           cron: "48 * * * *"
