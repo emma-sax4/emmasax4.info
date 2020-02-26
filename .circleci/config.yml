@@ -1,7 +1,7 @@
 version: 2.1
 orbs:
   ruby: circleci/ruby@0.1.2
-  slack: circleci/slack@1.0.0/*
+  slack: circleci/slack@x.y.z/*
 
 jobs:
   build:
@@ -33,5 +33,6 @@ jobs:
             ./site \
             || echo 'HTML Proofer failed. Please investigate the failures.'
       - slack/status:
-          success_message: "A job has succeeded!"
-          failure_message: "A job has failed!"
+          success_message: 'A job has succeeded!'
+          failure_message: 'A job has failed!'
+          webhook: https://hooks.slack.com/services/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
