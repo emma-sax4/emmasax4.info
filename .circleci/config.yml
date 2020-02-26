@@ -17,12 +17,12 @@ jobs:
             source $BASH_ENV
             gem install bundler
       - restore_cache:
-          key: bundle-cache-{{ checksum "Gemfile.lock" }}
+          key: bundler-cache-{{ checksum "Gemfile.lock" }}
       - run:
           name: Bundle Install
           command: bundle install --path vendor/bundle
       - save_cache:
-          key: bundle-cache-{{ checksum "Gemfile.lock" }}
+          key: bundler-cache-{{ checksum "Gemfile.lock" }}
           paths:
             - vendor/bundle
       - run:
@@ -39,7 +39,7 @@ jobs:
             ./site \
             || echo "HTML Proofer failed. Please investigate the failures."
       - slack/status:
-          success_message: "Build #${CIRCLE_BUILD_NUM} of branch `${CIRCLE_BRANCH}` succeeded."
-          failure_message: "Build #${CIRCLE_BUILD_NUM} of branch `${CIRCLE_BRANCH}` failed."
+          success_message: "Build #${CIRCLE_BUILD_NUM} of branch **${CIRCLE_BRANCH}** succeeded."
+          failure_message: "Build #${CIRCLE_BUILD_NUM} of branch **${CIRCLE_BRANCH}** failed."
           include_job_number_field: false
           include_project_field: false
