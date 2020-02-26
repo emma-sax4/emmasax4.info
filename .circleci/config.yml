@@ -74,6 +74,8 @@ jobs:
 workflows:
   version: 2
   fiveminutes:
+    jobs:
+      - build
     triggers:
       - schedule:
           cron: "0/5 * * * *"
