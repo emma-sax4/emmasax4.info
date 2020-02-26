@@ -9,33 +9,29 @@ jobs:
     docker:
       - image: circleci/ruby:2.6.0-node
     steps:
-      - run: exit 1
+      - checkout
+      - run:
+          name: Configure Bundler
+          command: |
+            echo 'export BUNDLER_VERSION=$(cat Gemfile.lock | tail -1 | tr -d " ")' >> $BASH_ENV
+            source $BASH_ENV
+            gem install bundler
+      - run:
+          name: Bundle Install
+          command: bundle install
+      - run:
+          name: Jekyll Build
+          command: JEKYLL_ENV=production bundle exec jekyll build --destination ./site
+      - run:
+          name: HTML Proofer
+          command: |
+            bundle exec htmlproofer \
+            --assume-extension \
+            --allow-hash-href \
+            --internal-domains /emmasax4.info/ \
+            --url-ignore /linkedin/,/digikey/ \
+            ./site \
+            || echo 'HTML Proofer failed. Please investigate the failures.'
       - slack/status:
           success_message: 'A job has succeeded!'
           failure_message: 'A job has failed!'
-      # - checkout
-      # - run:
-      #     name: Configure Bundler
-      #     command: |
-      #       echo 'export BUNDLER_VERSION=$(cat Gemfile.lock | tail -1 | tr -d " ")' >> $BASH_ENV
-      #       source $BASH_ENV
-      #       gem install bundler
-      # - run:
-      #     name: Bundle Install
-      #     command: bundle install
-      # - run:
-      #     name: Jekyll Build
-      #     command: JEKYLL_ENV=production bundle exec jekyll build --destination ./site
-      # - run:
-      #     name: HTML Proofer
-      #     command: |
-      #       bundle exec htmlproofer \
-      #       --assume-extension \
-      #       --allow-hash-href \
-      #       --internal-domains /emmasax4.info/ \
-      #       --url-ignore /linkedin/,/digikey/ \
-      #       ./site \
-      #       || echo 'HTML Proofer failed. Please investigate the failures.'
-      # - slack/status:
-      #     success_message: 'A job has succeeded!'
-      #     failure_message: 'A job has failed!'
