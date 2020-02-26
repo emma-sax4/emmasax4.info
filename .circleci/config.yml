@@ -3,14 +3,14 @@ orbs:
   ruby: circleci/ruby@0.1.2
 jobs:
   build:
+    working_directory: ~/emma-sax4.github.io
     docker:
       - image: circleci/ruby:2.4.2-jessie-node
     steps:
       - checkout
       - run:
-          name: Which bundler?
-          command: bundle -v
-      - ruby/bundle-install
+          name: Bundle Install
+          command: gem install bundler && bundle install
       - run:
           name: Build
           command: JEKYLL_ENV=production bundle exec jekyll build --destination ./site
