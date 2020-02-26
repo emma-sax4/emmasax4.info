@@ -32,6 +32,6 @@ jobs:
             --url-ignore /linkedin/,/digikey/ \
             ./site \
             || echo 'HTML Proofer failed. Please investigate the failures.'
-      - slack/notify:
+      - slack/status:
           success_message: "A job has succeeded!"
           failure_message: "A job has failed!"
