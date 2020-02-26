@@ -45,7 +45,7 @@ jobs:
               echo "This build is for a pull request. Skipping deploy."
             fi
       - run:
-          name: Create Custom Slack Message
+          name: Slack - Creating Custom Message
           command: |
             if [ -z ${CIRCLE_PULL_REQUEST} ]; then
               VAR="Build #$CIRCLE_BUILD_NUM of $CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME@$CIRCLE_BRANCH by $CIRCLE_USERNAME"
