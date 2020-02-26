@@ -1,12 +1,10 @@
-version: 2.0
+version: 2.1
 orbs:
   ruby: circleci/ruby@0.1.2
   slack: circleci/slack@1.0.0/*
 
 jobs:
   build:
-    # branches:
-    #   ignore: master
     working_directory: ~/emma-sax4.github.io
     docker:
       - image: circleci/ruby:2.6.0-node
