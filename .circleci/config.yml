@@ -5,14 +5,19 @@ jobs:
   build:
     working_directory: ~/emma-sax4.github.io
     docker:
-      - image: circleci/ruby:2.4.2-jessie-node
+      - image: circleci/ruby:2.6.0-node
+        environment:
+          BUNDLER_VERSION: 2.1.4
     steps:
       - checkout
       - run:
           name: Install Dependencies
           command: |
-            gem update --system
-            gem install bundler
+            sudo gem update --system
+            sudo gem uninstall bundler
+            sudo rm /usr/local/bin/bundle
+            sudo rm /usr/local/bin/bundler
+            sudo gem install bundler
       - run:
           name: Bundle Install
           command: bundle install
