@@ -39,7 +39,7 @@ jobs:
             ./site \
             || echo "HTML Proofer failed. Please investigate the failures."
       - slack/status:
-          success_message: "Build #${CIRCLE_BUILD_NUM} of ${CIRCLE_PROJECT_USERNAME}/${CIRCLE_PROJECT_REPONAME}@${CIRCLE_BRANCH} in PR #${CIRCLE_PULL_REQUEST} by ${CIRCLE_USERNAME} passed."
-          failure_message: "Build #${CIRCLE_BUILD_NUM} of ${CIRCLE_PROJECT_USERNAME}/${CIRCLE_PROJECT_REPONAME}@${CIRCLE_BRANCH} in PR #${CIRCLE_PULL_REQUEST} by ${CIRCLE_USERNAME} failed."
+          success_message: "Build #${CIRCLE_BUILD_NUM} of ${CIRCLE_PROJECT_USERNAME}/${CIRCLE_PROJECT_REPONAME}@${CIRCLE_BRANCH} in PR ${CIRCLE_PULL_REQUEST} by ${CIRCLE_USERNAME} passed."
+          failure_message: "Build #${CIRCLE_BUILD_NUM} of ${CIRCLE_PROJECT_USERNAME}/${CIRCLE_PROJECT_REPONAME}@${CIRCLE_BRANCH} in PR ${CIRCLE_PULL_REQUEST} by ${CIRCLE_USERNAME} failed."
           include_job_number_field: false
           include_project_field: false
