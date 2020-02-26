@@ -6,23 +6,27 @@ jobs:
     working_directory: ~/emma-sax4.github.io
     docker:
       - image: circleci/ruby:2.6.0-node
-        environment:
-          BUNDLER_VERSION: 2.1.4
     steps:
       - checkout
+      # - run:
+      #     name: Install Dependencies
+      #     command: |
+      #       sudo gem update --system
+      #       sudo gem uninstall bundler
+      #       sudo rm /usr/local/bin/bundle
+      #       sudo rm /usr/local/bin/bundler
+      #       sudo gem install bundler
       - run:
-          name: Install Dependencies
+          name: Configure Bundler
           command: |
-            sudo gem update --system
-            sudo gem uninstall bundler
-            sudo rm /usr/local/bin/bundle
-            sudo rm /usr/local/bin/bundler
-            sudo gem install bundler
+            echo 'export BUNDLER_VERSION=$(cat Gemfile.lock | tail -1 | tr -d " ")' >> $BASH_ENV
+            source $BASH_ENV
+            gem install bundler
       - run:
           name: Bundle Install
           command: bundle install
       - run:
-          name: Build
+          name: Jekyll Build
           command: JEKYLL_ENV=production bundle exec jekyll build --destination ./site
       - run:
           name: HTML Proofer
