@@ -10,7 +10,7 @@ mv ./site/* .
 rm -R ./site/
 
 git add -fA
-git commit -m "Deploy to github.com/emma-sax4/emma-sax4.github.io.git:master via CircleCI"
+git commit -m "Deploy to emma-sax4/emma-sax4.github.io.git:master via CircleCI"
 git push origin master
 
 echo "GitHub Pages deploy completed successfully."
