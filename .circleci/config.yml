@@ -18,21 +18,19 @@ jobs:
               SLACK_MESSAGE="Build #${CIRCLE_BUILD_NUM} of ${CIRCLE_PROJECT_USERNAME}/${CIRCLE_PROJECT_REPONAME}@${CIRCLE_BRANCH} in PR ${CIRCLE_PULL_REQUEST} by ${CIRCLE_USERNAME}"
             fi
             echo $SLACK_MESSAGE
-            BUNDLER_VERSION=$(cat Gemfile.lock | tail -1 | tr -d ' ')
-
-            echo "export SLACK_MESSAGE" >> $BASH_ENV
-            echo "export BUNDLER_VERSION" >> $BASH_ENV
-            source $BASH_ENV
+            echo "export SLACK_MESSAGE" >> $BASH_ENV; source $BASH_ENV
       - checkout
       - run:
           name: Configure Bundler
-          command: gem install bundler
+          command: |
+            BUNDLER_VERSION=$(cat Gemfile.lock | tail -1 | tr -d ' ')
+            echo "export BUNDLER_VERSION" >> $BASH_ENV
+            gem install bundler
       - restore_cache:
           key: bundler-cache-{{ checksum "Gemfile.lock" }}
       - run:
           name: Bundle Install
           command: |
-            gem install bundler
             bundle config set path 'vendor/bundle'
             bundle install
       - save_cache:
