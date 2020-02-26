@@ -3,9 +3,8 @@ orbs:
   ruby: circleci/ruby@0.1.2
 jobs:
   build:
-    machine:
-      image: ubuntu-1604:201903-01
-    executor: default
+    docker:
+      - image: circleci/ruby:2.4.2-jessie-node
     steps:
       - checkout
       - run:
