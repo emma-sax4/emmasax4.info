@@ -11,43 +11,43 @@ jobs:
     steps:
       - checkout
       - run:
-        name: Configure Bundler
-        command: |
-          echo "export BUNDLER_VERSION=$(cat Gemfile.lock | tail -1 | tr -d ' ')" >> $BASH_ENV; source $BASH_ENV
-          gem install bundler
+          name: Configure Bundler
+          command: |
+            echo "export BUNDLER_VERSION=$(cat Gemfile.lock | tail -1 | tr -d ' ')" >> $BASH_ENV; source $BASH_ENV
+            gem install bundler
       - restore_cache:
-        key: bundler-cache-{{ checksum "Gemfile.lock" }}
+          key: bundler-cache-{{ checksum "Gemfile.lock" }}
       - run:
-        name: Bundle Install
-        command: bundle install --path vendor/bundle
+          name: Bundle Install
+          command: bundle install --path vendor/bundle
       - save_cache:
-        key: bundler-cache-{{ checksum "Gemfile.lock" }}
-        paths:
-          - vendor/bundle
+          key: bundler-cache-{{ checksum "Gemfile.lock" }}
+          paths:
+            - vendor/bundle
       - run:
-        name: Jekyll Build
-        command: JEKYLL_ENV=production bundle exec jekyll build --destination ./site
+          name: Jekyll Build
+          command: JEKYLL_ENV=production bundle exec jekyll build --destination ./site
       - run:
-        name: HTML Proofer
-        command: |
-          bundle exec htmlproofer \
-          --assume-extension \
-          --allow-hash-href \
-          --internal-domains /emmasax4.info/ \
-          --url-ignore /linkedin/,/digikey/ \
-          ./site \
-          || echo "HTML Proofer failed. Please investigate the failures."
+          name: HTML Proofer
+          command: |
+            bundle exec htmlproofer \
+            --assume-extension \
+            --allow-hash-href \
+            --internal-domains /emmasax4.info/ \
+            --url-ignore /linkedin/,/digikey/ \
+            ./site \
+            || echo "HTML Proofer failed. Please investigate the failures."
       - run:
-        name: Create Custom Slack Message
-        command: |
-          if [ -z ${CIRCLE_PULL_REQUEST} ]; then
-            MESSAGE="Build #$CIRCLE_BUILD_NUM of $CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME@$CIRCLE_BRANCH by $CIRCLE_USERNAME"
-          else
-            MESSAGE="Build #$CIRCLE_BUILD_NUM of $CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME@$CIRCLE_BRANCH in PR $CIRCLE_PULL_REQUEST by $CIRCLE_USERNAME"
-          fi
-          echo "export SLACK_MESSAGE='$MESSAGE'" >> $BASH_ENV; source $BASH_ENV
+          name: Create Custom Slack Message
+          command: |
+            if [ -z ${CIRCLE_PULL_REQUEST} ]; then
+              MESSAGE="Build #$CIRCLE_BUILD_NUM of $CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME@$CIRCLE_BRANCH by $CIRCLE_USERNAME"
+            else
+              MESSAGE="Build #$CIRCLE_BUILD_NUM of $CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME@$CIRCLE_BRANCH in PR $CIRCLE_PULL_REQUEST by $CIRCLE_USERNAME"
+            fi
+            echo "export SLACK_MESSAGE='$MESSAGE'" >> $BASH_ENV; source $BASH_ENV
       - slack/status:
-        success_message: "$SLACK_MESSAGE passed."
-        failure_message: "$SLACK_MESSAGE failed."
-        include_job_number_field: false
-        include_project_field: false
+          success_message: $SLACK_MESSAGE passed.
+          failure_message: $SLACK_MESSAGE failed.
+          include_job_number_field: false
+          include_project_field: false
