@@ -13,7 +13,7 @@ jobs:
       - slack/status:
           success_message: 'A job has succeeded!'
           failure_message: 'A job has failed!'
-          webhook: '${SLACK_WEBHOOK}'
+          webhook: ${SLACK_WEBHOOK}
       # - checkout
       # - run:
       #     name: Configure Bundler
