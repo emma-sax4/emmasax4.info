@@ -48,11 +48,11 @@ jobs:
           name: Create Custom Slack Message
           command: |
             if [ -z ${CIRCLE_PULL_REQUEST} ]; then
-              MESSAGE="Build #$CIRCLE_BUILD_NUM of $CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME@$CIRCLE_BRANCH by $CIRCLE_USERNAME"
+              VAR="Build #$CIRCLE_BUILD_NUM of $CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME@$CIRCLE_BRANCH by $CIRCLE_USERNAME"
             else
-              MESSAGE="Build #$CIRCLE_BUILD_NUM of $CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME@$CIRCLE_BRANCH in PR $CIRCLE_PULL_REQUEST by $CIRCLE_USERNAME"
+              VAR="Build #$CIRCLE_BUILD_NUM of $CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME@$CIRCLE_BRANCH in PR $CIRCLE_PULL_REQUEST by $CIRCLE_USERNAME"
             fi
-            echo "export SLACK_MESSAGE='$MESSAGE'" >> $BASH_ENV; source $BASH_ENV
+            echo "export SLACK_MESSAGE='$VAR'" >> $BASH_ENV; source $BASH_ENV
       - slack/status:
           success_message: $SLACK_MESSAGE passed.
           failure_message: $SLACK_MESSAGE failed.
