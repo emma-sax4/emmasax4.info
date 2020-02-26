@@ -46,7 +46,7 @@ jobs:
             else
               SLACK_MESSAGE="Build #${CIRCLE_BUILD_NUM} of ${CIRCLE_PROJECT_USERNAME}/${CIRCLE_PROJECT_REPONAME}@${CIRCLE_BRANCH} by ${CIRCLE_USERNAME}"
             fi
-            export $SLACK_MESSAGE
+            export SLACK_MESSAGE
             echo $SLACK_MESSAGE
       - slack/status:
           success_message: "${SLACK_MESSAGE} passed."
