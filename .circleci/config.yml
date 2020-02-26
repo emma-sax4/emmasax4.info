@@ -46,6 +46,7 @@ jobs:
             else
               SLACK_MESSAGE="Build #${CIRCLE_BUILD_NUM} of ${CIRCLE_PROJECT_USERNAME}/${CIRCLE_PROJECT_REPONAME}@${CIRCLE_BRANCH} by ${CIRCLE_USERNAME}"
             fi
+            echo $SLACK_MESSAGE
             echo "export $SLACK_MESSAGE" >> $BASH_ENV
             source $BASH_ENV
       - slack/status:
