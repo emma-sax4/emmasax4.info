@@ -73,7 +73,10 @@ jobs:
           include_project_field: false
 workflows:
   version: 2
-  fiveminutes:
+  build_and_test:
+    jobs:
+      - build
+  nightly_cron:
     jobs:
       - build
     triggers:
