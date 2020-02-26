@@ -4,7 +4,8 @@ orbs:
 jobs:
   build:
     branches:
-      only: [ release ]
+      only:
+        - release
     working_directory: ~/emma-sax4.github.io
     docker: [ image: circleci/ruby:2.6.0-node ]
     steps:
