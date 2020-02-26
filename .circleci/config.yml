@@ -18,13 +18,13 @@ jobs:
               SLACK_MESSAGE="Build #${CIRCLE_BUILD_NUM} of ${CIRCLE_PROJECT_USERNAME}/${CIRCLE_PROJECT_REPONAME}@${CIRCLE_BRANCH} in PR ${CIRCLE_PULL_REQUEST} by ${CIRCLE_USERNAME}"
             fi
             echo $SLACK_MESSAGE
-            echo "export SLACK_MESSAGE" >> $BASH_ENV
+            echo "export SLACK_MESSAGE" >> $BASH_ENV; source $BASH_ENV
       - checkout
       - run:
           name: Configure Bundler
           command: |
             BUNDLER_VERSION=$(cat Gemfile.lock | tail -1 | tr -d ' ')
-            echo "export BUNDLER_VERSION" >> $BASH_ENV
+            echo "export BUNDLER_VERSION" >> $BASH_ENV; source $BASH_ENV
             gem install bundler
       - restore_cache:
           key: bundler-cache-{{ checksum "Gemfile.lock" }}
@@ -52,7 +52,7 @@ jobs:
           name: Test Variables
           command: echo ${SLACK_MESSAGE}
       - slack/status:
-          success_message: $SLACK_MESSAGE
-          failure_message: $SLACK_MESSAGE
+          success_message: "$SLACK_MESSAGE passed."
+          failure_message: "$SLACK_MESSAGE failed."
           include_job_number_field: false
           include_project_field: false
