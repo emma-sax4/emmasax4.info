@@ -11,7 +11,8 @@ jobs:
     steps:
       - run: exit 1
       - slack/status:
-          webhook: 'https://hooks.slack.com/services/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'
+          success_message: 'A job has succeeded!'
+          failure_message: 'A job has failed!'
       # - checkout
       # - run:
       #     name: Configure Bundler
@@ -38,4 +39,3 @@ jobs:
       # - slack/status:
       #     success_message: 'A job has succeeded!'
       #     failure_message: 'A job has failed!'
-        # https://hooks.slack.com/services/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
