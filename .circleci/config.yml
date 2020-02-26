@@ -1,11 +1,10 @@
 version: 2.1
-orbs:
-  ruby: circleci/ruby@0.1.2
-
+# orbs:
+#   ruby: circleci/ruby@0.1.2
 jobs:
   build:
-    docker:
-      - image: circleci/ruby:2.6.3-stretch-node
+    machine:
+      image: ubuntu-1604:201903-01
     executor: default
     steps:
       - checkout
@@ -13,3 +12,9 @@ jobs:
           name: Which bundler?
           command: bundle -v
       - ruby/bundle-install
+      - run:
+          name: Build
+          command: JEKYLL_ENV=production bundle exec jekyll build --destination ./site
+      - run:
+          name: HTML Proofer
+          command: htmlproofer --assume-extension --allow-hash-href --internal-domains /emmasax4.info/ --url-ignore /linkedin/,/digikey/ ./site
