@@ -36,6 +36,14 @@ jobs:
             --url-ignore /linkedin/,/digikey/ \
             ./site \
             || echo "HTML Proofer failed. Please investigate the failures."
+      - deploy:
+          name: Deploy to GitHub Pages
+          command: |
+            if [ $CIRCLE_BRANCH == 'release' ]; then
+              bash .circleci/github-pages-deploy.sh
+            else
+              echo "This build is for a pull request. Skipping deploy."
+            fi
       - run:
           name: Create Custom Slack Message
           command: |
