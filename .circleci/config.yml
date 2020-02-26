@@ -17,7 +17,7 @@ jobs:
             else
               MESSAGE="Build #$CIRCLE_BUILD_NUM of $CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME@$CIRCLE_BRANCH in PR $CIRCLE_PULL_REQUEST by $CIRCLE_USERNAME"
             fi
-            echo 'export SLACK_MESSAGE=$MESSAGE' >> $BASH_ENV; source $BASH_ENV
+            echo 'export SLACK_MESSAGE=$(echo $MESSAGE)' >> $BASH_ENV; source $BASH_ENV
       - checkout
       - run:
           name: Configure Bundler
