@@ -7,7 +7,7 @@ jobs:
   build_and_test:
     working_directory: ~/emma-sax4.github.io
     docker:
-      - image: circleci/ruby:2.6-node
+      - image: circleci/2.6-buster
     steps:
       - checkout
       - run:
@@ -26,7 +26,7 @@ jobs:
           command: JEKYLL_ENV=production bundle exec jekyll build --destination ./site
       - run:
           name: HTML Proofer
-          command: bash .circleci/html-proofer.sh
+          command: bash .circleci/html-proofer.sh || echo "HTML Proofer failed. Please investigate the failures."
       - run:
           name: Slack - Generating Custom Message
           command: bash .circleci/generate-slack-message.sh
@@ -39,7 +39,7 @@ jobs:
   deploy:
     working_directory: ~/emma-sax4.github.io
     docker:
-      - image: circleci/ruby:2.6-node
+      - image: circleci/2.6-buster
     steps:
       - checkout
       - run:
