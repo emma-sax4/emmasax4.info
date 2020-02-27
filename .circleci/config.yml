@@ -6,88 +6,88 @@ jobs:
   build_and_test_and_deploy:
     working_directory: ~/emma-sax4.github.io
     docker:
-    - image: circleci/ruby:2.6.0-node
+      - image: circleci/ruby:2.6.0-node
     steps:
-    - checkout
-    - run:
-        name: Configure Bundler
-        command: |
-          echo "export BUNDLER_VERSION=$(cat Gemfile.lock | tail -1 | tr -d ' ')" >> $BASH_ENV; source $BASH_ENV
-          gem install bundler
-    - restore_cache:
-        key: bundler-cache-{{ checksum "Gemfile.lock" }}
-    - run:
-        name: Bundle Install
-        command: bundle install --path vendor/bundle
-    - save_cache:
-        key: bundler-cache-{{ checksum "Gemfile.lock" }}
-        paths:
-          - vendor/bundle
-    - run:
-        name: Jekyll Build
-        command: JEKYLL_ENV=production bundle exec jekyll build --destination ./site
-    - run:
-        name: HTML Proofer
-        command: |
-          bundle exec htmlproofer \
-          --assume-extension \
-          --allow-hash-href \
-          --internal-domains /emmasax4.info/ \
-          --url-ignore /linkedin/,/digikey/ \
-          ./site \
-          || echo "HTML Proofer failed. Please investigate the failures."
-    - deploy:
-        name: Deploy to GitHub Pages
-        command: |
-          if [ $CIRCLE_BRANCH == "release" ]; then
-            git config user.name "$USER_NAME"
-            git config user.email "$USER_EMAIL"
+      - checkout
+      - run:
+          name: Configure Bundler
+          command: |
+            echo "export BUNDLER_VERSION=$(cat Gemfile.lock | tail -1 | tr -d ' ')" >> $BASH_ENV; source $BASH_ENV
+            gem install bundler
+      - restore_cache:
+          key: bundler-cache-{{ checksum "Gemfile.lock" }}
+      - run:
+          name: Bundle Install
+          command: bundle install --path vendor/bundle
+      - save_cache:
+          key: bundler-cache-{{ checksum "Gemfile.lock" }}
+          paths:
+            - vendor/bundle
+      - run:
+          name: Jekyll Build
+          command: JEKYLL_ENV=production bundle exec jekyll build --destination ./site
+      - run:
+          name: HTML Proofer
+          command: |
+            bundle exec htmlproofer \
+            --assume-extension \
+            --allow-hash-href \
+            --internal-domains /emmasax4.info/ \
+            --url-ignore /linkedin/,/digikey/ \
+            ./site \
+            || echo "HTML Proofer failed. Please investigate the failures."
+      - deploy:
+          name: Deploy to GitHub Pages
+          command: |
+            if [ $CIRCLE_BRANCH == "release" ]; then
+              git config user.name "$USER_NAME"
+              git config user.email "$USER_EMAIL"
 
-            git checkout master
-            git pull origin master
+              git checkout master
+              git pull origin master
 
-            find . -maxdepth 1 ! -name "site" ! -name ".git" -exec rm -rf {} \;
-            mv ./site/* .
-            rm -R ./site/
+              find . -maxdepth 1 ! -name "site" ! -name ".git" -exec rm -rf {} \;
+              mv ./site/* .
+              rm -R ./site/
 
-            git add -fA
-            git commit -m "Deploy to emma-sax4/emma-sax4.github.io.git:master via CircleCI"
-            git push origin master
-            echo "GitHub Pages deployed successfully."
-          else
-            echo "This build is for a pull request. Skipping deploy."
-          fi
-    - run:
-        name: Slack - Creating Custom Message
-        command: |
-          if [ -z $CIRCLE_PULL_REQUESTS ]; then
-            m="Build #$CIRCLE_BUILD_NUM of $CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME@$CIRCLE_BRANCH by $CIRCLE_USERNAME"
-          else
-            m="Build #$CIRCLE_BUILD_NUM of $CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME@$CIRCLE_BRANCH in PR $CIRCLE_PULL_REQUESTS by $CIRCLE_USERNAME"
-          fi
-          echo "export SLACK_MESSAGE='$m'" >> $BASH_ENV; source $BASH_ENV
-    - slack/status:
-        success_message: $SLACK_MESSAGE passed.
-        failure_message: $SLACK_MESSAGE failed.
-        include_job_number_field: false
-        include_project_field: false
+              git add -fA
+              git commit -m "Deploy to emma-sax4/emma-sax4.github.io.git:master via CircleCI"
+              git push origin master
+              echo "GitHub Pages deployed successfully."
+            else
+              echo "This build is for a pull request. Skipping deploy."
+            fi
+      - run:
+          name: Slack - Creating Custom Message
+          command: |
+            if [ -z $CIRCLE_PULL_REQUESTS ]; then
+              m="Build #$CIRCLE_BUILD_NUM of $CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME@$CIRCLE_BRANCH by $CIRCLE_USERNAME"
+            else
+              m="Build #$CIRCLE_BUILD_NUM of $CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME@$CIRCLE_BRANCH in PR $CIRCLE_PULL_REQUESTS by $CIRCLE_USERNAME"
+            fi
+            echo "export SLACK_MESSAGE='$m'" >> $BASH_ENV; source $BASH_ENV
+      - slack/status:
+          success_message: $SLACK_MESSAGE passed.
+          failure_message: $SLACK_MESSAGE failed.
+          include_job_number_field: false
+          include_project_field: false
 workflows:
   version: 2
   develop:
     jobs:
-    - build_and_test_and_deploy
+      - build_and_test_and_deploy
   release:
     jobs:
-    - build_and_test_and_deploy:
-        filters:
-          branches:
-            only: [ release ]
+      - build_and_test_and_deploy:
+          filters:
+            branches:
+              only: [ release ]
   nightly_cron:
     jobs:
-    - build_and_test_and_deploy
+      - build_and_test_and_deploy
     triggers:
-    - schedule:
-        cron: "6 * * * *" # this is midnight in CST
-        filters:
-          branches:
-            only: [ release ]
+      - schedule:
+          cron: "6 * * * *" # this is midnight in CST
+          filters:
+            branches:
+              only: [ release ]
