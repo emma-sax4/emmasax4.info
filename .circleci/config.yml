@@ -8,7 +8,7 @@ commands:
     steps:
       - run:
           name: Slack - Generating Custom Message
-          command: bash .circleci/generate-slack-message.sh
+          command: bash ~/emma-sax4.github.io/.circleci/generate-slack-message.sh
   configure_bundler:
     steps:
       - run:
