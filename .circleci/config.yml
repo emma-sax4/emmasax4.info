@@ -29,6 +29,8 @@ commands:
           command: bash .circleci/html-proofer.sh || echo "HTML Proofer failed. Please investigate the failures."
   github_pages_deploy:
     steps:
+      - add_ssh_keys:
+          fingerprints: [ d3:10:c9:11:e9:8b:7f:09:ce:29:d5:38:81:da:ef:bb ]
       - deploy:
           name: Deploy to GitHub Pages
           command: bash .circleci/github-pages-deploy.sh
