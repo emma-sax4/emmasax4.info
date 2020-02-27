@@ -32,11 +32,6 @@ commands:
       - run:
           name: HTML Proofer
           command: bash .circleci/html-proofer.sh || echo "HTML Proofer failed. Please investigate the failures."
-  markdown_proofer:
-    steps:
-      - run:
-          name: "Markdown Proofer"
-          command: bash .circleci/markdown-proofer.sh
   github_pages_deploy:
     steps:
       - add_ssh_keys:
@@ -70,7 +65,6 @@ jobs:
       - configure_bundler
       - jekyll_build
       - html_proofer
-      - markdown_proofer
       - slack_build_notification
   deploy:
     working_directory: ~/emma-sax4.github.io
