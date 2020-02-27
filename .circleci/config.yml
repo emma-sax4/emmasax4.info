@@ -89,8 +89,8 @@ jobs:
             git commit -m "Deploy to emma-sax4/emma-sax4.github.io.git:master via CircleCI"
             git push origin master
       - slack/status:
-          success_message: GitHub Pages deployed successfully.
-          failure_message: GitHub Pages deployed erred.
+          success_message: Successfully deployed to GitHub Pages.
+          failure_message: Error deploying to GitHub Pages.
           include_job_number_field: false
           include_project_field: false
 
