@@ -72,13 +72,14 @@ jobs:
           key: bundler-cache-{{ checksum "Gemfile.lock" }}
           paths:
             - vendor/bundle
+      - run:
+          name: Jekyll Build
+          command: JEKYLL_ENV=production bundle exec jekyll build --destination ./
       - deploy:
           name: Deploy to GitHub Pages
           command: |
             git config user.name "$USER_NAME"
             git config user.email "$USER_EMAIL"
-
-            JEKYLL_ENV=production bundle exec jekyll build --destination ./site
 
             git checkout master
             git pull origin master
