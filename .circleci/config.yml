@@ -75,7 +75,10 @@ workflows:
   version: 2
   develop:
     jobs:
-      - build_and_test_and_deploy
+      - build_and_test_and_deploy:
+          filters:
+            branches:
+              ignore: [ release ]
   release:
     jobs:
       - build_and_test_and_deploy:
