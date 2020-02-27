@@ -6,7 +6,7 @@ jobs:
   build_and_test_and_deploy:
     working_directory: ~/emma-sax4.github.io
     docker:
-      - image: circleci/ruby:2.6.0-node
+      - image: circleci/ruby:2.6-node
     steps:
       - checkout
       - run:
