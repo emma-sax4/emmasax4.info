@@ -70,6 +70,7 @@ jobs:
       - configure_bundler
       - jekyll_build
       - html_proofer
+      - markdown_proofer
       - slack_build_notification
   deploy:
     working_directory: ~/emma-sax4.github.io
