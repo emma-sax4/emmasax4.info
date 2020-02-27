@@ -126,7 +126,24 @@ workflows:
               only: [ release ]
     triggers:
       - schedule:
-          cron: "6 * * * *" # this is midnight in CST
+          cron: "0 6 * * *" # 06:00 UTC => 00:00 CST
+          filters:
+            branches:
+              only: [ release ]
+  evening_cron:
+    jobs:
+      - build_and_test:
+          filters:
+            branches:
+              only: [ release ]
+      - deploy:
+          requires: [ build_and_test ]
+          filters:
+            branches:
+              only: [ release ]
+    triggers:
+      - schedule:
+          cron: "0 1 * * *" # 01:00 UTC => 19:00 CST
           filters:
             branches:
               only: [ release ]
