@@ -32,6 +32,11 @@ commands:
       - run:
           name: HTML Proofer
           command: bash .circleci/html-proofer.sh || echo "HTML Proofer failed. Please investigate the failures."
+  markdown_proofer:
+    steps:
+      - run:
+          name: "Markdown Proofer"
+          command: bash .circleci/markdown-proofer.sh
   github_pages_deploy:
     steps:
       - add_ssh_keys:
