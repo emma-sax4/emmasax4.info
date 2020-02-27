@@ -7,7 +7,7 @@ jobs:
   build_and_test:
     working_directory: ~/emma-sax4.github.io
     docker:
-      - image: circleci/ruby:2.6-node
+      - image: circleci/ruby:2.6-jessie
     steps:
       - checkout
       - run:
