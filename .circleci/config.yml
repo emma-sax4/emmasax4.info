@@ -78,6 +78,8 @@ jobs:
             git config user.name "$USER_NAME"
             git config user.email "$USER_EMAIL"
 
+            JEKYLL_ENV=production bundle exec jekyll build --destination ./site
+
             git checkout master
             git pull origin master
 
