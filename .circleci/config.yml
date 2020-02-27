@@ -78,7 +78,7 @@ workflows:
       - build_and_test_and_deploy:
           filters:
             branches:
-              ignore: [ release ]
+              ignore: [ release, master ]
   release:
     jobs:
       - build_and_test_and_deploy:
