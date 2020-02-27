@@ -7,7 +7,7 @@ jobs:
   build_and_test:
     working_directory: ~/emma-sax4.github.io
     docker:
-      - image: circleci/2.6-buster
+      - image: circleci/2.6-node
     steps:
       - checkout
       - run:
@@ -39,7 +39,7 @@ jobs:
   deploy:
     working_directory: ~/emma-sax4.github.io
     docker:
-      - image: circleci/2.6-buster
+      - image: circleci/2.6-node
     steps:
       - checkout
       - run:
