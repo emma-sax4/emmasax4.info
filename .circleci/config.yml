@@ -22,6 +22,33 @@ commands:
       - run:
           name: Jekyll Build
           command: JEKYLL_ENV=production bundle exec jekyll build --destination ./site
+  html_proofer:
+    steps:
+      - run:
+          name: HTML Proofer
+          command: bash .circleci/html-proofer.sh || echo "HTML Proofer failed. Please investigate the failures."
+  github_pages_deploy:
+    steps:
+      - deploy:
+          name: Deploy to GitHub Pages
+          command: bash .circleci/github-pages-deploy.sh
+  slack_build_notification:
+    steps:
+      - run:
+          name: Slack - Generating Custom Message
+          command: bash .circleci/generate-slack-message.sh
+      - slack/status:
+          success_message: $SLACK_MESSAGE passed.
+          failure_message: $SLACK_MESSAGE failed.
+          include_job_number_field: false
+          include_project_field: false
+  slack_deploy_notification:
+    steps:
+      - slack/status:
+          success_message: Successfully deployed to GitHub Pages.
+          failure_message: Error deploying to GitHub Pages.
+          include_job_number_field: false
+          include_project_field: false
 
 jobs:
   test:
@@ -32,18 +59,8 @@ jobs:
       - checkout
       - configure_bundler
       - jekyll_build
-      - run:
-          name: HTML Proofer
-          command: bash .circleci/html-proofer.sh || echo "HTML Proofer failed. Please investigate the failures."
-      - run:
-          name: Slack - Generating Custom Message
-          command: bash .circleci/generate-slack-message.sh
-      - slack/status:
-          success_message: $SLACK_MESSAGE passed.
-          failure_message: $SLACK_MESSAGE failed.
-          include_job_number_field: false
-          include_project_field: false
-
+      - html_proofer
+      - slack_build_notification
   deploy:
     working_directory: ~/emma-sax4.github.io
     docker:
@@ -52,14 +69,8 @@ jobs:
       - checkout
       - configure_bundler
       - jekyll_build
-      - deploy:
-          name: Deploy to GitHub Pages
-          command: bash .circleci/github-pages-deploy.sh
-      - slack/status:
-          success_message: Successfully deployed to GitHub Pages.
-          failure_message: Error deploying to GitHub Pages.
-          include_job_number_field: false
-          include_project_field: false
+      - github_pages_deploy
+      - slack_deploy_notification
 
 workflows:
   version: 2
