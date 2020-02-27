@@ -3,10 +3,10 @@ orbs:
   ruby: circleci/ruby@0.1.2
   slack: circleci/slack@3.4.2
 jobs:
-  build:
+  build_and_test_and_deploy:
     working_directory: ~/emma-sax4.github.io
     docker:
-      - image: circleci/ruby:2.6.0-node
+      - image: circleci/ruby:2.6-node
     steps:
       - checkout
       - run:
@@ -39,22 +39,55 @@ jobs:
       - deploy:
           name: Deploy to GitHub Pages
           command: |
-            if [ $CIRCLE_BRANCH == 'release' ]; then
-              bash .circleci/github-pages-deploy.sh
+            if [ $CIRCLE_BRANCH == "release" ]; then
+              git config user.name "$USER_NAME"
+              git config user.email "$USER_EMAIL"
+
+              git checkout master
+              git pull origin master
+
+              find . -maxdepth 1 ! -name "site" ! -name ".git" -exec rm -rf {} \;
+              mv ./site/* .
+              rm -R ./site/
+
+              git add -fA
+              git commit -m "Deploy to emma-sax4/emma-sax4.github.io.git:master via CircleCI"
+              git push origin master
+              echo "GitHub Pages deployed successfully."
             else
               echo "This build is for a pull request. Skipping deploy."
             fi
       - run:
-          name: Create Custom Slack Message
+          name: Slack - Creating Custom Message
           command: |
-            if [ -z ${CIRCLE_PULL_REQUEST} ]; then
-              VAR="Build #$CIRCLE_BUILD_NUM of $CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME@$CIRCLE_BRANCH by $CIRCLE_USERNAME"
+            if [ -z $CIRCLE_PULL_REQUESTS ]; then
+              m="Build #$CIRCLE_BUILD_NUM of $CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME@$CIRCLE_BRANCH by $CIRCLE_USERNAME"
             else
-              VAR="Build #$CIRCLE_BUILD_NUM of $CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME@$CIRCLE_BRANCH in PR $CIRCLE_PULL_REQUEST by $CIRCLE_USERNAME"
+              m="Build #$CIRCLE_BUILD_NUM of $CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME@$CIRCLE_BRANCH in PR $CIRCLE_PULL_REQUESTS by $CIRCLE_USERNAME"
             fi
-            echo "export SLACK_MESSAGE='$VAR'" >> $BASH_ENV; source $BASH_ENV
+            echo "export SLACK_MESSAGE='$m'" >> $BASH_ENV; source $BASH_ENV
       - slack/status:
           success_message: $SLACK_MESSAGE passed.
           failure_message: $SLACK_MESSAGE failed.
           include_job_number_field: false
           include_project_field: false
+workflows:
+  version: 2
+  develop:
+    jobs:
+      - build_and_test_and_deploy
+  release:
+    jobs:
+      - build_and_test_and_deploy:
+          filters:
+            branches:
+              only: [ release ]
+  nightly_cron:
+    jobs:
+      - build_and_test_and_deploy
+    triggers:
+      - schedule:
+          cron: "6 * * * *" # this is midnight in CST
+          filters:
+            branches:
+              only: [ release ]
