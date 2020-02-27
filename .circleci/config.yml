@@ -88,16 +88,9 @@ jobs:
             git add -fA
             git commit -m "Deploy to emma-sax4/emma-sax4.github.io.git:master via CircleCI"
             git push origin master
-
-            echo "GitHub Pages deployed successfully."
-      - run:
-          name: Slack - Creating Custom Message
-          command: |
-            m="Deploy to $CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME:master "
-            echo "export SLACK_MESSAGE='$m'" >> $BASH_ENV; source $BASH_ENV
       - slack/status:
-          success_message: $SLACK_MESSAGE passed.
-          failure_message: $SLACK_MESSAGE failed.
+          success_message: GitHub Pages deployed successfully.
+          failure_message: GitHub Pages deployed erred.
           include_job_number_field: false
           include_project_field: false
 
