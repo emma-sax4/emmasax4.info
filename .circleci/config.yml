@@ -2,8 +2,9 @@ version: 2.1
 orbs:
   ruby: circleci/ruby@0.1.2
   slack: circleci/slack@3.4.2
+
 jobs:
-  build_and_test_and_deploy:
+  build_and_test:
     working_directory: ~/emma-sax4.github.io
     docker:
       - image: circleci/ruby:2.6-node
@@ -36,27 +37,6 @@ jobs:
             --url-ignore /linkedin/,/digikey/ \
             ./site \
             || echo "HTML Proofer failed. Please investigate the failures."
-      - deploy:
-          name: Deploy to GitHub Pages
-          command: |
-            if [ $CIRCLE_BRANCH == "release" ]; then
-              git config user.name "$USER_NAME"
-              git config user.email "$USER_EMAIL"
-
-              git checkout master
-              git pull origin master
-
-              find . -maxdepth 1 ! -name "site" ! -name ".git" -exec rm -rf {} \;
-              mv ./site/* .
-              rm -R ./site/
-
-              git add -fA
-              git commit -m "Deploy to emma-sax4/emma-sax4.github.io.git:master via CircleCI"
-              git push origin master
-              echo "GitHub Pages deployed successfully."
-            else
-              echo "This build is for a pull request. Skipping deploy."
-            fi
       - run:
           name: Slack - Creating Custom Message
           command: |
@@ -71,23 +51,87 @@ jobs:
           failure_message: $SLACK_MESSAGE failed.
           include_job_number_field: false
           include_project_field: false
+
+  deploy:
+    working_directory: ~/emma-sax4.github.io
+    docker:
+      - image: circleci/ruby:2.6-node
+    steps:
+      - checkout
+      - run:
+          name: Configure Bundler
+          command: |
+            echo "export BUNDLER_VERSION=$(cat Gemfile.lock | tail -1 | tr -d ' ')" >> $BASH_ENV; source $BASH_ENV
+            gem install bundler
+      - restore_cache:
+          key: bundler-cache-{{ checksum "Gemfile.lock" }}
+      - run:
+          name: Bundle Install
+          command: bundle install --path vendor/bundle
+      - save_cache:
+          key: bundler-cache-{{ checksum "Gemfile.lock" }}
+          paths:
+            - vendor/bundle
+      - deploy:
+          name: Deploy to GitHub Pages
+          command: |
+            git config user.name "$USER_NAME"
+            git config user.email "$USER_EMAIL"
+
+            git checkout master
+            git pull origin master
+
+            find . -maxdepth 1 ! -name "site" ! -name ".git" -exec rm -rf {} \;
+            mv ./site/* .
+            rm -R ./site/
+
+            git add -fA
+            git commit -m "Deploy to emma-sax4/emma-sax4.github.io.git:master via CircleCI"
+            git push origin master
+      - slack/status:
+          success_message: Successfully deployed to GitHub Pages.
+          failure_message: Error deploying to GitHub Pages.
+          include_job_number_field: false
+          include_project_field: false
+
 workflows:
   version: 2
   develop:
     jobs:
-      - build_and_test_and_deploy
+      - build_and_test:
+          filters:
+            branches:
+              ignore: [ release, master ]
   release:
     jobs:
-      - build_and_test_and_deploy:
+      - build_and_test:
+          filters:
+            branches:
+              only: [ release ]
+      - deploy:
+          requires: [ build_and_test ]
           filters:
             branches:
               only: [ release ]
   nightly_cron:
     jobs:
-      - build_and_test_and_deploy
+      - build_and_test
+      - deploy:
+          requires: [ build_and_test ]
     triggers:
       - schedule:
-          cron: "6 * * * *" # this is midnight in CST
+          cron: "0 6 * * *" # 06:00 UTC => 00:00 CST
+          filters:
+            branches:
+              only: [ release ]
+  evening_cron:
+    jobs:
+      - build_and_test
+      - deploy:
+          requires: [ build_and_test ]
+    triggers:
+      - schedule:
+          cron: "0 1 * * *" # 01:00 UTC => 19:00 CST
           filters:
             branches:
               only: [ release ]
