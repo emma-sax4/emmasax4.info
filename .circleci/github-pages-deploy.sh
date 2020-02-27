@@ -5,7 +5,7 @@ git config user.email "$USER_EMAIL"
 git checkout master
 git pull origin master
 
-find . -maxdepth 1 ! -name "site" ! -name ".git" -exec rm -rf {} \;
+find . -maxdepth 1 ! -name "site" ! -name ".git" ! -name ".circleci" -exec rm -rf {} \;
 mv ./site/* .
 rm -R ./site/
 
