@@ -4,6 +4,11 @@ orbs:
   slack: circleci/slack@3.4.2
 
 commands:
+  set_slack_message:
+    steps:
+      - run:
+          name: Slack - Generating Custom Message
+          command: bash .circleci/generate-slack-message.sh
   configure_bundler:
     steps:
       - run:
@@ -36,9 +41,6 @@ commands:
           command: bash .circleci/github-pages-deploy.sh
   slack_build_notification:
     steps:
-      - run:
-          name: Slack - Generating Custom Message
-          command: bash .circleci/generate-slack-message.sh
       - slack/status:
           success_message: $SLACK_MESSAGE passed.
           failure_message: $SLACK_MESSAGE failed.
@@ -59,6 +61,7 @@ jobs:
       - image: circleci/ruby:2.6.5
     steps:
       - checkout
+      - set_slack_message
       - configure_bundler
       - jekyll_build
       - html_proofer
