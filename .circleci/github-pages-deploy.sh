@@ -11,7 +11,7 @@ rm -R ./site/
 
 git add -fA
 git commit -m "Deploy to emma-sax4/emma-sax4.github.io.git:master via CircleCI"
-PUSH_STATUS="$(git push origin master)"
+PUSH_STATUS=$(git push origin master 2>&1)
 
 if [[ $PUSH_STATUS == "Everything up-to-date" ]]; then
   m="Nothing to commit to master. Skipped deploy to GitHub Pages"
