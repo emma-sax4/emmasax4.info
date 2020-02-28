@@ -98,15 +98,12 @@ workflows:
               only: [ release ]
   cron:
     jobs:
-      - test:
-          filters:
-            branches:
-              only: [ release, more_circleci_improvements ]
+      - test
       - deploy:
           requires: [ test ]
-          filters:
-            branches:
-              only: [ release, more_circleci_improvements ]
     triggers:
       - schedule:
           cron: "25 * * * *" # 06:00 UTC => 00:00 CST
+          filters:
+            branches:
+              only: [ release, more_circleci_improvements ]
