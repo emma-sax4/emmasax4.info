@@ -84,7 +84,7 @@ workflows:
       - test:
           filters:
             branches:
-              ignore: [ release, master ]
+              ignore: [ release ]
   release:
     jobs:
       - test:
@@ -96,7 +96,7 @@ workflows:
           filters:
             branches:
               only: [ release ]
-  nightly_cron:
+  cron:
     jobs:
       - test
       - deploy:
@@ -104,6 +104,11 @@ workflows:
     triggers:
       - schedule:
           cron: "0 6 * * *" # 06:00 UTC => 00:00 CST
+          filters:
+            branches:
+              only: [ release ]
+      - schedule:
+          cron: "0 18 * * *" # 18:00 UTC => 12:00 CST
           filters:
             branches:
               only: [ release ]
