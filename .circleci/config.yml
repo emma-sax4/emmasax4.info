@@ -42,8 +42,8 @@ commands:
   slack_build_notification:
     steps:
       - slack/status:
-          success_message: $SLACK_MESSAGE passed.
-          failure_message: $SLACK_MESSAGE failed.
+          success_message: $SLACK_MESSAGE passed ($CIRCLE_JOB).
+          failure_message: $SLACK_MESSAGE failed ($CIRCLE_JOB).
           include_job_number_field: false
           include_project_field: false
   slack_deploy_notification:
@@ -99,11 +99,16 @@ workflows:
   cron:
     jobs:
       - test
-      - deploy:
-          requires: [ test ]
+      # - deploy:
+      #     requires: [ test ]
     triggers:
       - schedule:
-          cron: "25 * * * *" # 06:00 UTC => 00:00 CST
+          cron: "31 * * * *" # 06:00 UTC => 00:00 CST
           filters:
             branches:
-              only: [ release, more_circleci_improvements ]
+              only: [ more_circleci_improvements ]
+      - schedule:
+          cron: "29 * * * *"
+          filters:
+            branches:
+              only: [ more_circleci_improvements ]
