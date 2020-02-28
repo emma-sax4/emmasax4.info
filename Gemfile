@@ -1,6 +1,5 @@
 source "https://rubygems.org"
 
-gem 'html-proofer',                '~> 3.15.1'
 gem 'jekyll',                      '~> 3.8.5'
 gem 'jekyll-default-layout',       '~> 0.1.4'
 gem 'jekyll-paginate-v2',          '~> 3.0.0'
@@ -13,11 +12,11 @@ gem 'rouge',                       '~> 3.14.0'
 gem 'jekyll-mentions',
   git: 'https://github.com/emma-sax4/jekyll-mentions.git',
   branch: 'override_mentions_in_front_matter'
-
 gem 'jekyll-seo-tag',
   git: 'https://github.com/emma-sax4/jekyll-seo-tag.git',
   branch: 'emmasax4_seo_tag'
-
 gem 'jekyll-sitemap',
   git: 'https://github.com/emma-sax4/jekyll-sitemap.git',
   branch: 'optional_file_modified_at'
+
+gem 'html-proofer', '~> 3.15.1', :group => [ :test, :development ]
