@@ -1,5 +1,5 @@
 #!/bin/bash
-if [ -z $CIRCLE_PULL_REQUESTS ]; then
+if [ -z $CIRCLE_PULL_REQUEST ]; then
   if [ -z $CIRCLE_USERNAME ]; then
     m="Build <$CIRCLE_BUILD_URL|#$CIRCLE_BUILD_NUM> of $CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME on branch \`$CIRCLE_BRANCH\`"
   else
@@ -15,6 +15,5 @@ else
   fi
 fi
 
-echo $m
 echo "export SLACK_MESSAGE='$m'" >> $BASH_ENV
 source $BASH_ENV
