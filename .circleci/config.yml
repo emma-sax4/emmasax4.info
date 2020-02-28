@@ -42,15 +42,15 @@ commands:
   slack_build_notification:
     steps:
     - slack/status:
-        success_message: $SLACK_MESSAGE passed.
-        failure_message: $SLACK_MESSAGE failed.
+        success_message: "$SLACK_MESSAGE passed."
+        failure_message: "$SLACK_MESSAGE failed."
         include_job_number_field: false
         include_project_field: false
   slack_deploy_notification:
     steps:
     - slack/status:
-        success_message: $SLACK_MESSAGE passed. Successfully deployed to GitHub Pages.
-        failure_message: $SLACK_MESSAGE failed. Error deploying to GitHub Pages.
+        success_message: "$SLACK_MESSAGE passed\n. $DEPLOY_MESSAGE."
+        failure_message: "$SLACK_MESSAGE failed\n. Unable to deploy to GitHub Pages."
         include_job_number_field: false
         include_project_field: false
 
