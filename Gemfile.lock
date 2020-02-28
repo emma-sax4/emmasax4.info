@@ -119,7 +119,7 @@ GEM
       ethon (>= 0.9.0)
     tzinfo (1.2.6)
       thread_safe (~> 0.1)
-    yell (2.2.1)
+    yell (2.2.2)
     zeitwerk (2.2.2)
 
 PLATFORMS
