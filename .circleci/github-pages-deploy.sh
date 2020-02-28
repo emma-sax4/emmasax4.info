@@ -14,9 +14,9 @@ git commit -m "Deploy to emma-sax4/emma-sax4.github.io.git:master via CircleCI"
 PUSH_STATUS=$(git push origin master 2>&1)
 
 if [[ $PUSH_STATUS == "Everything up-to-date" ]]; then
-  m="Nothing to commit to master. Deploy to GitHub Pages was **skipped**"
+  m="Nothing to commit to master. Deploy to GitHub Pages was *skipped*"
 else
-  m="Deploy to GitHub Pages was **successful**"
+  m="Deploy to GitHub Pages was *successful*"
 fi
 
 echo "export DEPLOY_MESSAGE='$m'" >> $BASH_ENV
