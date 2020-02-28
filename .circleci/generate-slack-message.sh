@@ -13,5 +13,6 @@ else # pull request does exist
   fi
 fi
 
+echo $m
 echo "export SLACK_MESSAGE='$m'" >> $BASH_ENV
 source $BASH_ENV
