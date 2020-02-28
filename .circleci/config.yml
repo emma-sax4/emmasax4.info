@@ -42,7 +42,7 @@ commands:
   slack_build_notification:
     steps:
     - slack/status:
-        success_message: "$SLACK_MESSAGE *passed*."
+        success_message: "$SLACK_MESSAGE *passed*. `$CIRCLE_BRANCH`"
         failure_message: "$SLACK_MESSAGE *failed*."
         include_job_number_field: false
         include_project_field: false
