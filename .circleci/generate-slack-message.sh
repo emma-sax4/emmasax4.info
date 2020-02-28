@@ -22,14 +22,14 @@ if [[ $CIRCLE_BRANCH != "release" ]]; then
 fi
 
 if [ -z $CIRCLE_USERNAME ]; then
-  # empty
+  echo ""
 else
   PR_NUM=$(echo $CIRCLE_PULL_REQUEST | sed 's/.*\///')
   m="$m in PR <$CIRCLE_PULL_REQUEST|#$PR_NUM>"
 fi
 
 if [ -z $CIRCLE_USERNAME ]; then
-  # empty
+  echo ""
 else
   m="$m by $CIRCLE_USERNAME"
 fi
