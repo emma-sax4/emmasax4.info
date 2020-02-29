@@ -36,7 +36,7 @@ commands:
     steps:
     - run:
         name: Xcop
-        command: bundle exec xcop site/sitemap.xml && bundle exec xcop site/feed.xml || echo "xcop failed. Please investigate the failures."
+        command: bash .circleci/xcop.sh || echo "xcop failed. Please investigate the failures."
   github_pages_deploy:
     steps:
     - add_ssh_keys:
