@@ -94,15 +94,13 @@ workflows:
           branches:
             only: [ release ]
   cron:
-    jobs: [ test_and_deploy ]
+    jobs:
+    - test_and_deploy:
+        filters:
+          branches:
+            only: [ release ]
     triggers:
     - schedule:
         cron: "0 6 * * *" # 06:00 UTC => 00:00 CST
-        filters:
-          branches:
-            only: [ release ]
     - schedule:
         cron: "0 18 * * *" # 18:00 UTC => 12:00 CST
-        filters:
-          branches:
-            only: [ release ]
