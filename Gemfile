@@ -12,8 +12,7 @@ gem 'rouge',                       '~> 3.14.0'
 
 # Gems from GitHub that are required for all environments
 gem 'jekyll-mentions',
-  git: 'https://github.com/emma-sax4/jekyll-mentions.git',
-  branch: 'override_mentions_in_front_matter'
+  git: 'https://github.com/jekyll/jekyll-mentions.git'
 gem 'jekyll-seo-tag',
   git: 'https://github.com/emma-sax4/jekyll-seo-tag.git',
   branch: 'emmasax4_seo_tag'
