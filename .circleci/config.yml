@@ -67,7 +67,7 @@ jobs:
     - jekyll_build
     - html_proofer
     - slack_build_notification
-  test_and_deploy:
+  test-and-deploy:
     working_directory: ~/emma-sax4.github.io
     docker: [ image: circleci/ruby:2.6.5 ]
     steps:
@@ -89,12 +89,12 @@ workflows:
             ignore: [ release ]
   release:
     jobs:
-    - test_and_deploy:
+    - test-and-deploy:
         filters:
           branches:
             only: [ release ]
   cron:
-    jobs: [ test_and_deploy ]
+    jobs: [ test-and-deploy ]
     triggers:
     - schedule:
         cron: "0 6 * * *" # 06:00 UTC => 00:00 CST
