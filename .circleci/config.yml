@@ -32,6 +32,11 @@ commands:
     - run:
         name: HTML Proofer
         command: bash .circleci/html-proofer.sh || echo "HTML Proofer failed. Please investigate the failures."
+  xcop:
+    steps:
+    - run:
+        name: Xcop
+        command: xcop site/sitemap.xml && xcop site/feed.xml || echo "xcop failed. Please investigate the failures."
   github_pages_deploy:
     steps:
     - add_ssh_keys:
@@ -66,6 +71,7 @@ jobs:
     - configure_bundler
     - jekyll_build
     - html_proofer
+    - xcop
     - slack_build_notification
   test-and-deploy:
     working_directory: ~/emma-sax4.github.io
