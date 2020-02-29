@@ -24,14 +24,14 @@ commands:
         paths: [ vendor/bundle ]
   jekyll_build:
     steps:
-      - run:
-          name: Jekyll Build
-          command: JEKYLL_ENV=production bundle exec jekyll build --destination ./site
+    - run:
+        name: Jekyll Build
+        command: JEKYLL_ENV=production bundle exec jekyll build --destination ./site
   html_proofer:
     steps:
-      - run:
-          name: HTML Proofer
-          command: bash .circleci/html-proofer.sh || echo "HTML Proofer failed. Please investigate the failures."
+    - run:
+        name: HTML Proofer
+        command: bash .circleci/html-proofer.sh || echo "HTML Proofer failed. Please investigate the failures."
   github_pages_deploy:
     steps:
     - add_ssh_keys:
@@ -83,7 +83,7 @@ workflows:
   version: 2
   develop:
     jobs:
-    - test_and_deploy:
+    - test:
         filters:
           branches:
             ignore: [ release ]
