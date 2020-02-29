@@ -24,5 +24,4 @@ gem 'jekyll-sitemap',
 # Gems for only test/development environment
 group :test, :development do
   gem 'html-proofer', '~> 3.15.1'
-  gem 'xcop', '~> 0.6'
 end
