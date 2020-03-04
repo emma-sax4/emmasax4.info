@@ -114,8 +114,8 @@ Here are all of the parts of this project associated with running this applicati
 .
 ├── _includes
 |   ├── elements
-|   |   ├── button_one.html
-|   |   └── button_two.html
+|   |   ├── button-one.html
+|   |   └── button-two.html
 |   ├── other
 |   |   ├── pagination.html
 |   |   └── sidebar.html
