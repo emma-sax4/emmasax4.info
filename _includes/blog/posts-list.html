@@ -6,7 +6,7 @@
   </ul>
 
   {% if paginator.total_pages >= 8 %}
-    {% include blog/pagination_trail.html %}
+    {% include blog/pagination-trail.html %}
   {% elsif paginator.total_pages > 1 %}
     {% include blog/pagination.html %}
   {% endif %}
