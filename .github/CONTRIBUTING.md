@@ -128,8 +128,8 @@ Here are all of the parts of this project associated with running this applicati
 |   └── layout-02.html
 ├── _pages
 |   ├── blog
-|   |   ├── category_one.md
-|   |   ├── category_two.md
+|   |   ├── category-one.md
+|   |   ├── category-two.md
 |   |   ├── tag1.md
 |   |   └── tag2.md
 |   ├── page-01.md
@@ -146,8 +146,8 @@ Here are all of the parts of this project associated with running this applicati
 |   └── 2001-01-04-post-b.md
 ├── assets
 |   ├── css
-|   |   ├── css_file_01.scss
-|   |   ├── css_file_02.scss
+|   |   ├── css-file-01.scss
+|   |   ├── css-file-02.scss
 |   |   └── style.scss
 |   ├── favicon
 |   |   ├── android-chrome.png
