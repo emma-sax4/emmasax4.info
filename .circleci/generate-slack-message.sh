@@ -14,5 +14,5 @@ if [ ! -z $CIRCLE_USERNAME ]; then
   m="$m by $CIRCLE_USERNAME"
 fi
 
-echo "export SLACK_MESSAGE='$m Nothing to commit to \`master\` branch'" >> $BASH_ENV
+echo "export SLACK_MESSAGE='$m'" >> $BASH_ENV
 source $BASH_ENV
