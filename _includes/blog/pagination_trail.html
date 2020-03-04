@@ -7,7 +7,7 @@
     {% endfor %}
 
     <!-- Show the button to the previous page -->
-    {% if paginator.previous-page %}
+    {% if paginator.previous_page %}
       {% include elements/pagination/previous-page.html %}
     {% else %}
       {% include elements/pagination/disabled-x.html %}
@@ -46,7 +46,7 @@
     {% endunless %}
 
     <!-- Show the button to the next page -->
-    {% if paginator.next-page %}
+    {% if paginator.next_page %}
       {% include elements/pagination/next-page.html %}
     {% else %}
       {% include elements/pagination/disabled-x.html %}
