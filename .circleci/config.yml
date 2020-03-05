@@ -87,7 +87,7 @@ jobs:
     - configure_bundler
     - jekyll_build
     - html_proofer
-    - slack/status
+    - slack/status: { fail_only: true }
 
 workflows:
   version: 2
