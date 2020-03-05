@@ -104,10 +104,10 @@ workflows:
           branches:
             only: [ release ]
   cron:
-    jobs: [ cron ]
+    jobs: [ test ]
     triggers:
     - schedule:
-        cron: "21 17 * * *"
+        cron: "23 17 * * *"
         filters:
           branches:
             only: [ fix_broken_circleci_cron ]
