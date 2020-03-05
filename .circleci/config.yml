@@ -14,14 +14,14 @@ commands:
     - run:
         name: Configure Bundler
         command: bash .circleci/configure-bundler.sh
-    # - restore_cache:
-    #     key: bundler-cache-{{ checksum "Gemfile.lock" }}
+    - restore_cache:
+        key: bundler-cache-{{ checksum "Gemfile.lock" }}
     - run:
         name: Bundle Install
         command: bundle install --path vendor/bundle
-    # - save_cache:
-    #     key: bundler-cache-{{ checksum "Gemfile.lock" }}
-    #     paths: [ vendor/bundle ]
+    - save_cache:
+        key: bundler-cache-{{ checksum "Gemfile.lock" }}
+        paths: [ vendor/bundle ]
   jekyll_build:
     steps:
     - run:
