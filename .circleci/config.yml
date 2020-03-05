@@ -31,7 +31,7 @@ commands:
     steps:
     - run:
         name: HTML Proofer
-        command: gem install html-proofer && ruby .circleci/html-proofer.rb
+        command: bash .circleci/install-html-proofer.sh && ruby .circleci/html-proofer.rb
   github_pages_deploy:
     steps:
     - add_ssh_keys:
