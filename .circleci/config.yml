@@ -87,7 +87,7 @@ jobs:
       - configure_bundler
       - jekyll_build
       - html_proofer
-      - slack/notify
+      - slack/notify-on-failure
 
 workflows:
   version: 2
