@@ -97,7 +97,7 @@ workflows:
     jobs: [ test-and-deploy ]
     triggers:
     - schedule:
-        cron: "42 17 * * *" # 06:00 UTC => 00:00 CST
+        cron: "44 17 * * *" # 06:00 UTC => 00:00 CST
         filters:
           branches:
             only: [ fix_broken_circleci_cron ]
