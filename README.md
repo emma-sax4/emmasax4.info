@@ -2,7 +2,7 @@
 
 **Live site: [https://emmasax4.info](https://emmasax4.info)**
 
-For more information on deployments, tests, running Jekyll locally, contributing to this project, and more, please see [CONTRIBUTING.md](https://github.com/emma-sax4/emma-sax4.github.io/blob/release/.github/CONTRIBUTING.md).
+For more information on deployments, tests, running Jekyll locally, contributing to this project, and more, please see [contributing.md](https://github.com/emma-sax4/emma-sax4.github.io/blob/release/.github/contributing.md).
 
 To submit a feature request or a bug ticket, please submit an official [GitHub Issue](https://github.com/emma-sax4/emma-sax4.github.io/issues/new/choose).
 
