@@ -6,8 +6,8 @@ git checkout master
 git pull origin master
 
 find . -maxdepth 1 ! -name "site" ! -name ".git" ! -name ".circleci" -exec rm -rf {} \;
-mv ./site/* .
-rm -R ./site/
+mv ./_site/* .
+rm -R ./_site/
 
 git add -fA
 git commit -m "Deploy to emma-sax4/emma-sax4.github.io.git:master via CircleCI"
