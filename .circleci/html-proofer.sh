@@ -4,4 +4,4 @@ bundle exec htmlproofer \
   --allow-hash-href \
   --internal-domains /emmasax4.info/ \
   --url-ignore /linkedin/,/digikey/,/maasaimara/ \
-  ./_site
+  ./_site/

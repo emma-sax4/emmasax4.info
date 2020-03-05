@@ -5,13 +5,13 @@ git config user.email "$USER_EMAIL"
 git checkout master
 git pull origin master
 
-find . -maxdepth 1 ! -name "site" ! -name ".git" ! -name ".circleci" -exec rm -rf {} \;
+find . -maxdepth 1 ! -name "_site" ! -name ".git" ! -name ".circleci" -exec rm -rf {} \;
 mv ./_site/* .
 rm -R ./_site/
 
 git add -fA
 git commit -m "Deploy to emma-sax4/emma-sax4.github.io.git:master via CircleCI"
-PUSH_STATUS=$(git push origin master 2>&1)
+PUSH_STATUS='notuptodate'  # $(git push origin master 2>&1)
 
 if [[ $PUSH_STATUS == "Everything up-to-date" ]]; then
   m="Nothing to commit to \`master\` branch. Deploy to GitHub Pages was *skipped*"
