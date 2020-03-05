@@ -82,12 +82,12 @@ jobs:
     working_directory: ~/emma-sax4.github.io
     docker: [ image: circleci/ruby@sha256:0e8e315f7eca307b9379166e611d250fea785d5151de7100cc44e4a12c4ecb7e ]
     steps:
-      - checkout
-      - set_slack_message
-      - configure_bundler
-      - jekyll_build
-      - html_proofer
-      - slack/notify-on-failure
+    - checkout
+    - set_slack_message
+    - configure_bundler
+    - jekyll_build
+    - html_proofer
+    - slack/status
 
 workflows:
   version: 2
@@ -107,7 +107,7 @@ workflows:
     jobs: [ cron ]
     triggers:
     - schedule:
-        cron: "46 16 * * *"
+        cron: "56 16 * * *"
         filters:
           branches:
             only: [ fix_broken_circleci_cron ]
