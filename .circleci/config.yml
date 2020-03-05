@@ -110,7 +110,15 @@ workflows:
               only: [ release ]
 =======
   master:
+<<<<<<< HEAD
     branches:
       ignore: [ master ]
     steps: [ checkout ]
 >>>>>>> f8d78f0... Add an empty steps list so that CircleCI doesn't fail
+=======
+    jobs:
+    - skip:
+        filters:
+          branches:
+            ignore: [ master ]
+>>>>>>> fd9001a... Now ignore master
