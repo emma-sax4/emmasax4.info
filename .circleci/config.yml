@@ -107,7 +107,7 @@ workflows:
     jobs: [ cron ]
     triggers:
     - schedule:
-        cron: "7 17 * * *"
+        cron: "9 17 * * *"
         filters:
           branches:
             only: [ fix_broken_circleci_cron ]
