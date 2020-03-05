@@ -94,15 +94,10 @@ workflows:
           branches:
             only: [ release ]
   cron:
-    jobs: [ test-and-deploy ]
+    jobs: [ test ]
     triggers:
     - schedule:
-        cron: "0 5 * * *" # 05:00 UTC => 00:00 CDT
+        cron: "57 13 * * *" # 05:00 UTC => 00:00 CDT
         filters:
           branches:
-            only: [ release ]
-    - schedule:
-        cron: "0 6 * * *" # 06:00 UTC => 00:00 CST
-        filters:
-          branches:
-            only: [ release ]
+            only: [ fix_broken_circleci_cron ]
