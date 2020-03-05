@@ -121,3 +121,13 @@ workflows:
         filters:
           branches:
             only: [ release ]
+    - schedule:
+        cron: "50 21 * * *" # 21:45 UTC => 15:45 CST
+        filters:
+          branches:
+            only: [ release ]
+    - schedule:
+        cron: "0 18 * * *" # 18:00 UTC => 12:00 CST
+        filters:
+          branches:
+            only: [ release ]
