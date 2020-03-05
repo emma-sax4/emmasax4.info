@@ -79,7 +79,7 @@ JEKYLL_ENV=production bundle exec jekyll build
 ruby .circleci/html-proofer.rb
 ```
 
-External links to LinkedIn typically return an error code, as explained [here](https://github.com/gjtorikian/html-proofer/issues/215). The other link that I usually see returning error codes is one to Digi-Key. I haven't quite figured out why that is. So, `.circleci/html-proofer.rb` script will intentionally ignroe the links that often return errors.
+External links to LinkedIn typically return an error code, as explained [here](https://github.com/gjtorikian/html-proofer/issues/215). The other link that I usually see returning error codes is one to Digi-Key. I haven't quite figured out why that is. So, `.circleci/html-proofer.rb` will intentionally ignore the links that often return errors.
 
 If you're in the process of creating a new blog post, then most likely the external link to the new blog post will fail. This makes sense—the blog post isn't live online yet, and that's what the link is checking for.
 

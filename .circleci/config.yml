@@ -66,7 +66,7 @@ jobs:
     - configure_bundler
     - jekyll_build
     - html_proofer
-    - slack_deploy_notification
+    - slack_build_notification
   test-and-deploy:
     working_directory: ~/emma-sax4.github.io
     docker: [ image: circleci/ruby@sha256:0e8e315f7eca307b9379166e611d250fea785d5151de7100cc44e4a12c4ecb7e ]
