@@ -76,7 +76,7 @@ NOTE: Running this process locally will most likely create at least one director
 We can check periodically that all of the HTML links in this website load correctly:
 ```bash
 JEKYLL_ENV=production bundle exec jekyll build
-htmlproofer --assume-extension --allow-hash-href ./_site
+bundle exec htmlproofer --assume-extension --allow-hash-href ./_site
 ```
 
 External links to LinkedIn typically return an error code, as explained [here](https://github.com/gjtorikian/html-proofer/issues/215). The other link that I usually see returning error codes is one to Digi-Key. I haven't quite figured out why that is.
@@ -114,8 +114,8 @@ Here are all of the parts of this project associated with running this applicati
 .
 ├── _includes
 |   ├── elements
-|   |   ├── button_one.html
-|   |   └── button_two.html
+|   |   ├── button-one.html
+|   |   └── button-two.html
 |   ├── other
 |   |   ├── pagination.html
 |   |   └── sidebar.html
@@ -128,8 +128,8 @@ Here are all of the parts of this project associated with running this applicati
 |   └── layout-02.html
 ├── _pages
 |   ├── blog
-|   |   ├── category_one.md
-|   |   ├── category_two.md
+|   |   ├── category-one.md
+|   |   ├── category-two.md
 |   |   ├── tag1.md
 |   |   └── tag2.md
 |   ├── page-01.md
@@ -146,8 +146,8 @@ Here are all of the parts of this project associated with running this applicati
 |   └── 2001-01-04-post-b.md
 ├── assets
 |   ├── css
-|   |   ├── css_file_01.scss
-|   |   ├── css_file_02.scss
+|   |   ├── css-file-01.scss
+|   |   ├── css-file-02.scss
 |   |   └── style.scss
 |   ├── favicon
 |   |   ├── android-chrome.png
