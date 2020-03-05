@@ -87,7 +87,7 @@ jobs:
     - configure_bundler
     - jekyll_build
     - html_proofer
-    - slack/status: { fail_only: true }
+    - slack/status: { success_message: "$SLACK_MESSAGE *passed*." }
 
 workflows:
   version: 2
