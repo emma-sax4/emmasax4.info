@@ -78,16 +78,6 @@ jobs:
     - html_proofer
     - github_pages_deploy
     - slack_deploy_notification
-  # cron:
-  #   working_directory: ~/emma-sax4.github.io
-  #   docker: [ image: circleci/ruby@sha256:0e8e315f7eca307b9379166e611d250fea785d5151de7100cc44e4a12c4ecb7e ]
-  #   steps:
-  #   - checkout
-  #   - set_slack_message
-  #   - configure_bundler
-  #   - jekyll_build
-  #   - html_proofer
-  #   - slack_build_notification
 
 workflows:
   version: 2
@@ -107,7 +97,7 @@ workflows:
     jobs: [ test-and-deploy ]
     triggers:
     - schedule:
-        cron: "28 17 * * *"
+        cron: "0 6 * * *" # 06:00 UTC => 00:00 CST
         filters:
           branches:
-            only: [ fix_broken_circleci_cron ]
+            only: [ release ]
