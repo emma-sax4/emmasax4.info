@@ -8,12 +8,12 @@ commands:
     steps:
     - run:
         name: Slack - Generating Custom Message
-        command: bash .circleci/generate-slack-message.sh
+        command: .circleci/generate-slack-message.sh
   configure_bundler:
     steps:
     - run:
         name: Configure Bundler
-        command: bash .circleci/configure-bundler.sh
+        command: .circleci/configure-bundler.sh
     - restore_cache:
         key: bundler-cache-{{ checksum "Gemfile.lock" }}
     - run:
@@ -26,19 +26,19 @@ commands:
     steps:
     - run:
         name: Jekyll Build
-        command: JEKYLL_ENV=production bundle exec jekyll build --destination ./site
+        command: JEKYLL_ENV=production bundle exec jekyll build --destination ./_site/
   html_proofer:
     steps:
     - run:
         name: HTML Proofer
-        command: bash .circleci/html-proofer.sh || echo "HTML Proofer failed. Please investigate the failures."
+        command: .circleci/html-proofer.sh
   github_pages_deploy:
     steps:
     - add_ssh_keys:
         fingerprints: [ d3:10:c9:11:e9:8b:7f:09:ce:29:d5:38:81:da:ef:bb ]
     - deploy:
         name: Deploy to GitHub Pages
-        command: bash .circleci/github-pages-deploy.sh
+        command: .circleci/github-pages-deploy.sh
   slack_build_notification:
     steps:
     - slack/status:
@@ -74,7 +74,7 @@ commands:
 jobs:
   test:
     working_directory: ~/emma-sax4.github.io
-    docker: [ image: circleci/ruby:2.6.5 ]
+    docker: [ image: circleci/ruby@sha256:0e8e315f7eca307b9379166e611d250fea785d5151de7100cc44e4a12c4ecb7e ]
     steps:
     - checkout
     - set_slack_message
@@ -84,7 +84,7 @@ jobs:
     - slack_build_notification
   test-and-deploy:
     working_directory: ~/emma-sax4.github.io
-    docker: [ image: circleci/ruby:2.6.5 ]
+    docker: [ image: circleci/ruby@sha256:0e8e315f7eca307b9379166e611d250fea785d5151de7100cc44e4a12c4ecb7e ]
     steps:
     - checkout
     - set_slack_message
