@@ -66,7 +66,11 @@ jobs:
     - configure_bundler
     - jekyll_build
     - html_proofer
-    - slack/notify
+    - slack/notify:
+        message: "$SLACK_MESSAGE *passed*."
+        include_job_number_field: false
+        include_project_field: false
+        include_visit_job_action: false
   test-and-deploy:
     working_directory: ~/emma-sax4.github.io
     docker: [ image: circleci/ruby:2.6.5 ]
@@ -97,7 +101,7 @@ workflows:
     jobs: [ test ]
     triggers:
     - schedule:
-        cron: "0 14 * * *" # 05:00 UTC => 00:00 CDT
+        cron: "4 14 * * *" # 05:00 UTC => 00:00 CDT
         filters:
           branches:
             only: [ fix_broken_circleci_cron ]
