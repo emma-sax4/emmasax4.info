@@ -6,5 +6,5 @@ HTMLProofer.check_directory('./_site', {
   allow_hash_href: true,
   internal_domains: [ /emmasax4.info/ ],
   url_ignore: [ /linkedin/, /digikey/ ],
-  typhoeus: { timeout: 30 }
+  typhoeus: { timeout: 60 }
 }).run
