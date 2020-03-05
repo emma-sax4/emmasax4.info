@@ -76,7 +76,7 @@ NOTE: Running this process locally will most likely create at least one director
 We can check periodically that all of the HTML links in this website load correctly:
 ```bash
 JEKYLL_ENV=production bundle exec jekyll build
-htmlproofer --assume-extension --allow-hash-href ./_site
+bundle exec htmlproofer --assume-extension --allow-hash-href ./_site
 ```
 
 External links to LinkedIn typically return an error code, as explained [here](https://github.com/gjtorikian/html-proofer/issues/215). The other link that I usually see returning error codes is one to Digi-Key. I haven't quite figured out why that is.
