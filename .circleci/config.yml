@@ -8,12 +8,12 @@ commands:
     steps:
     - run:
         name: Slack - Generating Custom Message
-        command: bash .circleci/generate-slack-message.sh
+        command: .circleci/generate-slack-message.sh
   configure_bundler:
     steps:
     - run:
         name: Configure Bundler
-        command: bash .circleci/configure-bundler.sh
+        command: .circleci/configure-bundler.sh
     - restore_cache:
         key: bundler-cache-{{ checksum "Gemfile.lock" }}
     - run:
@@ -31,14 +31,14 @@ commands:
     steps:
     - run:
         name: HTML Proofer
-        command: bash .circleci/html-proofer.sh
+        command: .circleci/html-proofer.sh
   github_pages_deploy:
     steps:
     - add_ssh_keys:
         fingerprints: [ d3:10:c9:11:e9:8b:7f:09:ce:29:d5:38:81:da:ef:bb ]
     - deploy:
         name: Deploy to GitHub Pages
-        command: bash .circleci/github-pages-deploy.sh
+        command: .circleci/github-pages-deploy.sh
   slack_build_notification:
     steps:
     - slack/status:
