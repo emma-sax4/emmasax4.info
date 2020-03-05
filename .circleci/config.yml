@@ -55,6 +55,7 @@ commands:
           include_project_field: false
 
 jobs:
+<<<<<<< HEAD
   test:
     working_directory: ~/emma-sax4.github.io
     docker:
@@ -107,3 +108,9 @@ workflows:
           filters:
             branches:
               only: [ release ]
+=======
+  master:
+    branches:
+      ignore: [ master ]
+    steps: [ checkout ]
+>>>>>>> f8d78f0... Add an empty steps list so that CircleCI doesn't fail
