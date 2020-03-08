@@ -35,7 +35,7 @@ commands:
   github_pages_deploy:
     steps:
     - add_ssh_keys:
-        fingerprints: [ d3:10:c9:11:e9:8b:7f:09:ce:29:d5:38:81:da:ef:bb ]
+        fingerprints: [ a9:a3:eb:ac:cc:c1:2c:10:30:f8:be:0b:47:aa:88:d7 ]
     - deploy:
         name: Deploy to GitHub Pages
         command: .circleci/github-pages-deploy.sh
