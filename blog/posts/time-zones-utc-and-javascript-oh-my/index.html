@@ -195,7 +195,7 @@
 
 <div class="text-center" style="margin-bottom: 1rem;">
   <span class="post-meta">
-    Read time: 11 minutes
+    Read time: 12 minutes
   </span>
 </div>
 
@@ -221,7 +221,7 @@
     <div class="page-body">
       <p>On my latest blog post, I wanted to try something new. When publishing, I wanted to publish on a future date (specifically at midnight the next day). I set up the date of the post to include the next day, and then planned to go onto Travis at midnight to build the newest version of the site… with the new blog post. And then I continued working on my website for the night.</p>
 
-<p>But what ended up happening was Travis CI built on my release branch at 6:15pm… and suddenly my new blog post was live 😱! What happened? Well, Travis CI by default runs in UTC. So, since 6:00pm in CST is midnight in UTC, Travis CI determined it was time to publish the blog post. I quickly reverted that commit on my <code class="highlighter-rouge">master</code> branch to hide the new post once again, and then worked to find a solution to make Travis CI behave for the remainder of the night.</p>
+<p>But what ended up happening was Travis CI built on my <code class="highlighter-rouge">release</code> branch at 6:15pm… and suddenly my new blog post was live 😱! What happened? Well, Travis CI by default runs in UTC. So, since 6:00pm in CST is midnight in UTC, Travis CI determined it was time to publish the blog post. I quickly reverted that commit on my <code class="highlighter-rouge">master</code> branch to hide the new post once again, and then worked to find a solution to make Travis CI behave for the remainder of the night.</p>
 
 <p>What I ended up finding was this. By adding these lines to the <code class="highlighter-rouge">.travis.yml</code> file, we can override Travis CI’s default time zone and have it bundle in CST.</p>
 
@@ -358,6 +358,10 @@ January 18, 2020 05:15
 <p>The moral of the story is that time zones are complicated, but the most robust websites will take them into account. If your website has date/times, then you should show them to your users in their local times, if possible. And you should be careful when storing data with date/times to make sure they are all stored in the same time zone, so they don’t get conflicted.</p>
 
 <p>I’m still working on perfecting my time zone processing. It’s complicated, and not all browsers react the same way to Javascript (who knew, right ¯\_(ツ)_/¯). But, I’d strongly urge to you take the plunge on your website… it’ll be worth it when your blog becomes internationally popular 😜.</p>
+
+<hr />
+
+<p>EDIT: Since writing this blog post, I’ve moved my default branch to be <code class="highlighter-rouge">source</code>, instead of <code class="highlighter-rouge">release</code>. I originally named it <code class="highlighter-rouge">release</code> because the documentation I was following named it that, but realized later that the name <code class="highlighter-rouge">source</code> fit my workflow better.</p>
 
       <div style="margin-top: 3rem;">
   
