@@ -10,6 +10,7 @@
   * [Notifications](#notifications)
 - [Collections vs. Categories vs. Tags](#collections-vs-categories-vs-tags)
 - [Directory/File Structure](#directoryfile-structure)
+  * [`.circleci/`](#circleci-1)
   * [`_includes/`](#_includes)
   * [`_layouts/`](#_layouts)
   * [`_pages/`](#_pages)
@@ -21,7 +22,6 @@
   * [`assets/`](#assets)
   * [`js/`](#js)
   * [`_config.yml`](#_configyml)
-  * [`.circleci`](#circleci)
   * [`favicon.ico`](#faviconico)
   * [`feed.xml`](#feedxml)
   * [`Gemfile` and `Gemfile.lock`](#gemfile-and-gemfilelock)
@@ -178,7 +178,7 @@ Here are all of the parts of this project associated with running this applicati
 └── index.md
 ```
 
-### `.circleci`
+### `.circleci/`
 
 This site builds and "deploys" through CircleCI. Read more about how this repository uses CircleCI [here](#circleci). The additional script files are bash scripts to be used throughout the CircleCI workflows. They're pulled out into separate scripts for easier reading and understanding, and to help keep the CircleCI config file shorter and concise.
 
