@@ -30,7 +30,7 @@
 ## Contribution Process
 
 1. Fork this repository: https://github.com/emma-sax4/emma-sax4.github.io/fork.
-2. Triple check you're currently on the `release` branch.
+2. Triple check you're currently on the `source` branch.
 3. Make your changes on a feature branch:
 
   | With GitHub UI | On your computer with Git |
@@ -41,7 +41,7 @@
   | Make a new pull request for your new branch (GitHub UI should automatically direct you to do this). | Continue making changes and committing/pushing them (unless you leave your feature branch, all new commits will be automatically added to your branch). |
   | Continue making changes to your pull request/branch (navigate to the main repository page, switch to your feature branch, and then continue making whatever changes you'd like). | When you're satisfied, make a pull request to this repository in the GitHub UI. |
 
-4. Verify CircleCI passes on your pull request. The test configuration lives inside the [`.circleci/config.yml`](https://github.com/emma-sax4/emma-sax4.github.io/blob/release/.circleci/config.yml) file. Read more about this repository's tests below.
+4. Verify CircleCI passes on your pull request. The test configuration lives inside the [`.circleci/config.yml`](https://github.com/emma-sax4/emma-sax4.github.io/blob/source/.circleci/config.yml) file. Read more about this repository's tests below.
 5. Check the site looks like how you expect it to look. Follow the instructions below to get your computer running the site locally. If you've been working on GitHub UI up until this point, you may need to switch over to a computer and clone the repository and branch to do this.
 6. When you're absolutely ready for me to look at your pull request, please request a Code Review from me in the pull request. If I don't comment or start looking at the pull request in a few days, feel free to [send me an email](mailto:emma.sax4@gmail.com).
 
@@ -87,15 +87,15 @@ CircleCI also runs a version of the HTML Proofer which skips over all internal d
 
 ## CircleCI
 
-This repository uses CircleCI for several continuous integration tools. See the full `.circleci/config.yml` [here](https://github.com/emma-sax4/emma-sax4.github.io/blob/release/.circleci/config.yml).
+This repository uses CircleCI for several continuous integration tools. See the full `.circleci/config.yml` [here](https://github.com/emma-sax4/emma-sax4.github.io/blob/source/.circleci/config.yml).
 
 ### Tests
 
-This repository doesn't really have any unit or integration tests (Jekyll sites are just a host of static site files, so there's not really any functionality to test). However, CircleCI does check that `bundler` can install the necessary dependencies and that Jekyll can properly build the site on each pull request and each commit to the `release` branch (the default branch in this repository).
+This repository doesn't really have any unit or integration tests (Jekyll sites are just a host of static site files, so there's not really any functionality to test). However, CircleCI does check that `bundler` can install the necessary dependencies and that Jekyll can properly build the site on each pull request and each commit to the `source` branch (the default branch in this repository).
 
 ### Deployments
 
-Because of the use of Jekyll gems that GitHub doesn't support, this site needs to use a 3rd Party instead of GitHub Pages to compile the code. So, when CircleCI runs on the `release` branch, not only does it bundle all of the dependencies and build the site, but it also puts it into a special `./_site` directory. Then, CircleCI will run a "deployment" to GitHub to upload that directory to the `master` branch of this GitHub repository. Then, GitHub Pages automatically deploys the commits in the `master` branch. In this way, we develop the site on a pull request, we merge source code into the `release` branch, and then CircleCI builds the code and commits that automagically to the `master` branch. Then GitHub Pages does their thing.
+Because of the use of Jekyll gems that GitHub doesn't support, this site needs to use a 3rd Party instead of GitHub Pages to compile the code. So, when CircleCI runs on the `source` branch, not only does it bundle all of the dependencies and build the site, but it also puts it into a special `./_site` directory. Then, CircleCI will run a "deployment" to GitHub to upload that directory to the `master` branch of this GitHub repository. Then, GitHub Pages automatically deploys the commits in the `master` branch. In this way, we develop the site on a pull request, we merge source code into the `source` branch, and then CircleCI builds the code and commits that automagically to the `master` branch. Then GitHub Pages does their thing.
 
 A full deployment only takes about five to ten minutes, but depending on what was changed (HTML files, images, etc), it can take up to about fifteen minutes to propagate the changes. To make the changes appear faster, you can reload the entire website in incognito mode.
 
@@ -319,12 +319,12 @@ When it's time to publish the post, you can either:
   * Add the current date/time (in the author's local time zone, properly identifying the current hour offset from UTC) to the post's front matter in the `date` value
   * Rename the file to have the current date instead of whatever was there previously
   * Re-add and commit those files to the pull request
-  * Merge the pull request into the `release` branch
+  * Merge the pull request into the `source` branch
 * Publish the post on a future date:
   * Add the future publishing date/time (typically 00:00:00 in the author's local time zone, properly identifying current the hour offset from UTC) to the post's front matter in the `date` value
   * Rename the file to have the publishing date in the title instead of whatever was there previously
-  * Merge your pull request into the `release` branch
-  * Wait until CircleCI builds the newest version around midnight in CST on the day of publishing (or rerun the latest `release` build [here](https://circleci.com/gh/emma-sax4/emma-sax4.github.io/tree/release) on the day of publishing)
+  * Merge your pull request into the `source` branch
+  * Wait until CircleCI builds the newest version around midnight in CST on the day of publishing (or rerun the latest `source` build [here](https://circleci.com/gh/emma-sax4/emma-sax4.github.io/tree/source) on the day of publishing)
 
 To identify the current hour offset from UTC, look up the time zone offset based on your location [here](https://www.timeanddate.com/time/zone/).
 
@@ -364,7 +364,7 @@ The favicon of the site is the main image associated with the site. It's the sma
 
 ### `feed.xml`
 
-This site implements a basic RSS feed for subscribers to keep an eye on the blog posts on this site. This file automatically updates whenever CircleCI will build on the `release` branch builds. A subscriber should use a feed reader to watch the feed.
+This site implements a basic RSS feed for subscribers to keep an eye on the blog posts on this site. This file automatically updates whenever CircleCI will build on the `source` branch builds. A subscriber should use a feed reader to watch the feed.
 
 ### `Gemfile` and `Gemfile.lock`
 
