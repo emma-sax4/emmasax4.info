@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # emmasax1.github.io
 =======
 # emma-sax4.github.io [![Build Status](https://travis-ci.com/emma-sax4/emma-sax4.github.io.svg?branch=release)](https://travis-ci.com/emma-sax4/emma-sax4.github.io)
@@ -14,6 +15,9 @@
 =======
 # emma-sax4.github.io [![Build Status](https://travis-ci.com/emma-sax4/emma-sax4.github.io.svg?branch=release)](https://travis-ci.com/emma-sax4/emma-sax4.github.io) [![CircleCI](https://circleci.com/gh/emma-sax4/emma-sax4.github.io/tree/release.svg?style=shield)](https://circleci.com/gh/emma-sax4/emma-sax4.github.io/tree/release) [![Maintainability](https://api.codeclimate.com/v1/badges/a9161347b2a122a15ec3/maintainability)](https://codeclimate.com/github/emma-sax4/emma-sax4.github.io/maintainability)
 >>>>>>> cc96ce5... Deploy to emma-sax4/emma-sax4.github.io.git:master via CircleCI
+=======
+# emma-sax4.github.io [![CircleCI](https://circleci.com/gh/emma-sax4/emma-sax4.github.io/tree/release.svg?style=shield)](https://circleci.com/gh/emma-sax4/emma-sax4.github.io/tree/release) [![Maintainability](https://api.codeclimate.com/v1/badges/a9161347b2a122a15ec3/maintainability)](https://codeclimate.com/github/emma-sax4/emma-sax4.github.io/maintainability)
+>>>>>>> bb81d04... Deploy to emma-sax4/emma-sax4.github.io.git:master via CircleCI
 
 **Live site: [https://emmasax4.info](https://emmasax4.info)**
 
