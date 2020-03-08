@@ -4,12 +4,13 @@
 - [Contribution Process](#contribution-process)
 - [Running Locally](#running-locally)
 - [HTML Proofer](#html-proofer)
-- [Travis CI](#travis-ci)
+- [CircleCI](#circleci)
   * [Tests](#tests)
   * [Deployments](#deployments)
   * [Notifications](#notifications)
 - [Collections vs. Categories vs. Tags](#collections-vs-categories-vs-tags)
 - [Directory/File Structure](#directoryfile-structure)
+  * [`.circleci/`](#circleci-1)
   * [`_includes/`](#_includes)
   * [`_layouts/`](#_layouts)
   * [`_pages/`](#_pages)
@@ -21,7 +22,6 @@
   * [`assets/`](#assets)
   * [`js/`](#js)
   * [`_config.yml`](#_configyml)
-  * [`.travis.yml`](#travisyml)
   * [`favicon.ico`](#faviconico)
   * [`feed.xml`](#feedxml)
   * [`Gemfile` and `Gemfile.lock`](#gemfile-and-gemfilelock)
@@ -41,7 +41,7 @@
   | Make a new pull request for your new branch (GitHub UI should automatically direct you to do this). | Continue making changes and committing/pushing them (unless you leave your feature branch, all new commits will be automatically added to your branch). |
   | Continue making changes to your pull request/branch (navigate to the main repository page, switch to your feature branch, and then continue making whatever changes you'd like). | When you're satisfied, make a pull request to this repository in the GitHub UI. |
 
-4. Verify Travis CI passes on your pull request. The test configuration lives inside the [`.travis.yml`](https://github.com/emma-sax4/emma-sax4.github.io/blob/release/.travis.yml) file. Read more about this repository's tests below.
+4. Verify CircleCI passes on your pull request. The test configuration lives inside the [`.circleci/config.yml`](https://github.com/emma-sax4/emma-sax4.github.io/blob/release/.circleci/config.yml) file. Read more about this repository's tests below.
 5. Check the site looks like how you expect it to look. Follow the instructions below to get your computer running the site locally. If you've been working on GitHub UI up until this point, you may need to switch over to a computer and clone the repository and branch to do this.
 6. When you're absolutely ready for me to look at your pull request, please request a Code Review from me in the pull request. If I don't comment or start looking at the pull request in a few days, feel free to [send me an email](mailto:emma.sax4@gmail.com).
 
@@ -83,25 +83,25 @@ External links to LinkedIn typically return an error code, as explained [here](h
 
 If you're in the process of creating a new blog post, then most likely the external link to the new blog post will fail. This makes sense—the blog post isn't live online yet, and that's what the link is checking for.
 
-Travis CI also runs a version of the HTML Proofer which skips over all internal domains and ignores LinkedIn and Digi-Key domains. Travis CI runs this line as an `after_success`, meaning if it breaks for any reason (timeouts, moved URLs, etc), it won't hold up any deploys.
+CircleCI also runs a version of the HTML Proofer which skips over all internal domains and ignores LinkedIn, Maasai Mara, and Digi-Key domains. CircleCI runs this step after building, just verifying that links are accurate. If a build breaks because of this, the failures can probably be solved by just rerunning the workflow.
 
-## Travis CI
+## CircleCI
 
-This repository uses Travis CI for several continuous integration tools. See the full `.travis.yml` [here](https://github.com/emma-sax4/emma-sax4.github.io/blob/release/.travis.yml).
+This repository uses CircleCI for several continuous integration tools. See the full `.circleci/config.yml` [here](https://github.com/emma-sax4/emma-sax4.github.io/blob/release/.circleci/config.yml).
 
 ### Tests
 
-This repository doesn't really have any unit or integration tests (Jekyll sites are just a host of static site files, so there's not really any functionality to test). However, Travis CI does check that `bundler` can install the necessary dependencies and that Jekyll can properly build the site on each pull request and each commit to the `release` branch (the default branch in this repository).
+This repository doesn't really have any unit or integration tests (Jekyll sites are just a host of static site files, so there's not really any functionality to test). However, CircleCI does check that `bundler` can install the necessary dependencies and that Jekyll can properly build the site on each pull request and each commit to the `release` branch (the default branch in this repository).
 
 ### Deployments
 
-Because of the use of Jekyll gems that GitHub doesn't support, this site needs to use a 3rd Party instead of GitHub Pages to compile the code. So, when Travis CI runs on the `release` branch, not only does it bundle all of the dependencies and build the site, but it also puts it into a special `./site` directory. Then, Travis CI will run a Travis Deployment to upload that directory to the `master` branch of this GitHub repository. Then, GitHub Pages automatically deploys the commits in the `master` branch. In this way, we develop the site on a pull request, we merge source code into the `release` branch, and then Travis CI builds the code and commits that automagically to the `master` branch. Then GitHub Pages does their thing.
+Because of the use of Jekyll gems that GitHub doesn't support, this site needs to use a 3rd Party instead of GitHub Pages to compile the code. So, when CircleCI runs on the `release` branch, not only does it bundle all of the dependencies and build the site, but it also puts it into a special `./_site` directory. Then, CircleCI will run a "deployment" to GitHub to upload that directory to the `master` branch of this GitHub repository. Then, GitHub Pages automatically deploys the commits in the `master` branch. In this way, we develop the site on a pull request, we merge source code into the `release` branch, and then CircleCI builds the code and commits that automagically to the `master` branch. Then GitHub Pages does their thing.
 
 A full deployment only takes about five to ten minutes, but depending on what was changed (HTML files, images, etc), it can take up to about fifteen minutes to propagate the changes. To make the changes appear faster, you can reload the entire website in incognito mode.
 
 ### Notifications
 
-Travis CI sends a Slack notification indicating the build status after each build finishes (even on pull requests). The Slack notifications are sent to the Slack workspace [emmasax4](https://emmasax4.slack.com). You can ask for an invite to that workspace, but a final invite is not guaranteed. The workspace and notifications are set up for my personal usage, not for communciational purposes.
+CircleCI sends a Slack notification indicating the build status after each build finishes (even on pull requests). The Slack notifications are sent to the Slack workspace [emmasax4](https://emmasax4.slack.com). You can ask for an invite to that workspace, but a final invite is not guaranteed. The workspace and notifications are set up for my personal usage, not for communciational purposes.
 
 ## Collections vs. Categories vs. Tags
 
@@ -109,9 +109,13 @@ Please notice that in the code, we need to call a collection of related posts a 
 
 ## Directory/File Structure
 
-Here are all of the parts of this project associated with running this application. This list does not include files/directories related to GitHub, Travis CI, and Git.
+Here are all of the parts of this project associated with running this application. This list does not include files/directories related to GitHub, CircleCI, and Git.
 ```
 .
+├── .circleci
+|   ├── another-helpful-script.sh
+|   ├── config.yml
+|   └── helpful-script.sh
 ├── _includes
 |   ├── elements
 |   |   ├── button-one.html
@@ -167,13 +171,16 @@ Here are all of the parts of this project associated with running this applicati
 |   ├── one-more-script.js
 |   └── script.js
 ├── _config.yml
-├── .travis.yml
 ├── favicon.ico
 ├── feed.xml
 ├── Gemfile
 ├── Gemfile.lock
 └── index.md
 ```
+
+### `.circleci/`
+
+This site builds and "deploys" through CircleCI. Read more about how this repository uses CircleCI [here](#circleci). The additional script files are bash scripts to be used throughout the CircleCI workflows. They're pulled out into separate scripts for easier reading and understanding, and to help keep the CircleCI config file shorter and concise.
 
 ### `_includes/`
 
@@ -317,7 +324,7 @@ When it's time to publish the post, you can either:
   * Add the future publishing date/time (typically 00:00:00 in the author's local time zone, properly identifying current the hour offset from UTC) to the post's front matter in the `date` value
   * Rename the file to have the publishing date in the title instead of whatever was there previously
   * Merge your pull request into the `release` branch
-  * Wait until Travis CI builds the newest version around midnight in CST on the day of publishing (or rerun the latest `release` build [here](https://travis-ci.com/emma-sax4/emma-sax4.github.io/builds) on the day of publishing)
+  * Wait until CircleCI builds the newest version around midnight in CST on the day of publishing (or rerun the latest `release` build [here](https://circleci.com/gh/emma-sax4/emma-sax4.github.io/tree/release) on the day of publishing)
 
 To identify the current hour offset from UTC, look up the time zone offset based on your location [here](https://www.timeanddate.com/time/zone/).
 
@@ -351,17 +358,13 @@ This directory is where we store all of our javascript files for the site. Some 
 
 This is where we tell Jekyll all of the configurations for this project. Each time this file is changed, restart your local Jekyll server to get the new changes.
 
-### `.travis.yml`
-
-This site builds and "deploys" through Travis CI. Read more about how this repository uses Travis CI [here](#travis-ci).
-
 ### `favicon.ico`
 
 The favicon of the site is the main image associated with the site. It's the small square image that we see on the browser tab, and it's the general logo on this site. It's placed in the root directory so that browser crawlers and bots can easily locate it and show it on search results. It improves this site's SEO.
 
 ### `feed.xml`
 
-This site implements a basic RSS feed for subscribers to keep an eye on the blog posts on this site. This file automatically updates whenever Travis CI will build on the `release` branch builds. A subscriber should use a feed reader to watch the feed.
+This site implements a basic RSS feed for subscribers to keep an eye on the blog posts on this site. This file automatically updates whenever CircleCI will build on the `release` branch builds. A subscriber should use a feed reader to watch the feed.
 
 ### `Gemfile` and `Gemfile.lock`
 
