@@ -88,7 +88,7 @@ deploy:
   name: Deployment Bot
 ```
 
-The `script` section asks Travis CI to build the site to the `site` destination directory. The `deploy` section tells Travis CI to run a deploy to the GitHub Pages provider with the `./site` directory, on the target branch `master`, and which GitHub user to use (in this case, `Deployment Bot` with the email `deploy@travis-ci.org`). There are a few other little pieces to get it working properly, but you can check out my [`.travis.yml` file](https://github.com/emma-sax4/emma-sax4.github.io/blob/release/.travis.yml) if you want to see more. I did need to make a new branch in GitHub—the `release` branch. The idea here is that the `release` branch is used for me to store my source code for this site, and the `master` branch is for GitHub Pages to deploy. Only the fully compiled and bundled site lives on the `master` branch.
+The `script` section asks Travis CI to build the site to the `site` destination directory. The `deploy` section tells Travis CI to run a deploy to the GitHub Pages provider with the `./site` directory, on the target branch `master`, and which GitHub user to use (in this case, `Deployment Bot` with the email `deploy@travis-ci.org`). There are a few other little pieces to get it working properly, but you can check out my completed [`.travis.yml` file](https://github.com/emma-sax4/emma-sax4.github.io/blob/d4c71986f709fd9d341410cf4974ad34424905a6/.travis.yml) if you want to see more. I did need to make a new branch in GitHub—the `release` branch. The idea here is that the `release` branch is used for me to store my source code for this site, and the `master` branch is for GitHub Pages to deploy. Only the fully compiled and bundled site lives on the `master` branch.
 
 It's a little complicated, but, one deploy from Travis CI later, and the site was up and running again. _AND_ I had the pagination option of my choosing that had all of the functionality I could ever want.
 
@@ -105,3 +105,7 @@ It's a little complicated, but, one deploy from Travis CI later, and the site wa
 * [gist.github.com: alialo/2255511](https://gist.github.com/alialo/2255511)
 * [medium.com: supercharge github pages with jekyll and travis ci](https://medium.com/@mcred/supercharge-github-pages-with-jekyll-and-travis-ci-699bc0bde075)
 * [docs.travis-ci.com: for beginners](https://docs.travis-ci.com/user/for-beginners/)
+
+---
+
+EDIT: Since writing this blog post, my website has switched to using CircleCI for all continuous integration tools, including building this project. Keep an eye out for an upcoming blog post about the switch and why I did it.
