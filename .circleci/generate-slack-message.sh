@@ -1,7 +1,7 @@
 #!/bin/bash
 m="Build <$CIRCLE_BUILD_URL|#$CIRCLE_BUILD_NUM> of $CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME"
 
-if [[ $CIRCLE_BRANCH != "release" ]]; then
+if [[ $CIRCLE_BRANCH != "source" ]]; then
   m="$m on branch \`$CIRCLE_BRANCH\`"
 fi
 
