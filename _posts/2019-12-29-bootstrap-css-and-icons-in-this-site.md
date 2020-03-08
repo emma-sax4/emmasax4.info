@@ -77,7 +77,7 @@ Lastly, as long as these two lines are at the bottom of the file, the icons appe
 <script>feather.replace()</script>
 ```
 
-See them in action [here](https://github.com/emma-sax4/emma-sax4.github.io/blob/129867d8135a930f4d364fe026db123d655b5ca8/_includes/site/scripts.html#L3-L4.
+See them in action [here](https://github.com/emma-sax4/emma-sax4.github.io/blob/129867d8135a930f4d364fe026db123d655b5ca8/_includes/site/scripts.html#L3-L4).
 
 ## Conclusion
 
