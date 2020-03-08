@@ -34,7 +34,7 @@ This site uses [Bootstrap's buttons](https://getbootstrap.com/docs/4.0/component
 
 ## CSS
 
-Using Bootstrap for the entire layout of this website, as well as for specific elements means there's so much less CSS in this repository. I started with over 600 lines of CSS, and now I have about 220 lines. But, there are still some pieces that I've chosen to override from Bootstrap's defaults. All of my custom CSS is in [this directory](https://github.com/emma-sax4/emma-sax4.github.io/tree/release/assets/css).
+Using Bootstrap for the entire layout of this website, as well as for specific elements means there's so much less CSS in this repository. I started with over 600 lines of CSS, and now I have about 220 lines. But, there are still some pieces that I've chosen to override from Bootstrap's defaults. All of my custom CSS is in [this directory](https://github.com/emma-sax4/emma-sax4.github.io/tree/62b1cc916f71d07f5935b31ae218a0805edf56c8/assets/css).
 
 The pieces I'm overriding are:
 * Blockquotes
