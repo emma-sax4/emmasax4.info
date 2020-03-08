@@ -86,13 +86,13 @@ workflows:
     - test:
         filters:
           branches:
-            ignore: [ release ]
+            ignore: [ source ]
   release:
     jobs:
     - test-and-deploy:
         filters:
           branches:
-            only: [ release ]
+            only: [ source ]
   cron:
     jobs: [ test-and-deploy ]
     triggers:
@@ -100,4 +100,4 @@ workflows:
         cron: "30 5 * * *" # 05:30 UTC => 00:30 CDT / 23:30 CST
         filters:
           branches:
-            only: [ release ]
+            only: [ source ]
