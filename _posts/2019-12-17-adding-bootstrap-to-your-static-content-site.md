@@ -43,7 +43,7 @@ To do this part, I started with the biggest single element I could find: my navb
 After I implemented the basics of the navbar, it worked pretty miraculously. It also turned out to basically be responsive right away, all I had to do was modify a few more `class` names. Then, it was time to make the navbar look like mine (with similar colors, sizing, etc).
 
 I did an `Inspect element` on Bootstrap's website to see what I should name the CSS class in my own repo: `nav.navbar`. Then, I simply copied over my color scheme:
-```css
+```scss
 nav.navbar {
   background-color: rgb(27, 14, 172);
   background: linear-gradient(to right, rgb(27, 14, 172), rgb(107, 208, 245));
@@ -53,7 +53,7 @@ nav.navbar {
 Then, right away I could delete all of the old navbar CSS code! This included a solid chunk of lines!
 
 Next, I wanted to make it so the menu button (also known as a hamburger 🍔 icon) would turn into an ❌ button when the navbar expanded. This took more time, and to be honest, if not for @brianMitchL's help, I may still be struggling. In order to save you from struggling, I'll give you some code:
-```css
+```scss
 nav.navbar {
   > .navbar-toggler {
     // The toggle button
