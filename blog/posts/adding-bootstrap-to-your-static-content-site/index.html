@@ -55,14 +55,14 @@
 <meta name="msvalidate.01" content="89B2B19FF966341B78EF64EDADE6DF81" />
 <meta name="yandex-verification" content="c2741887f8c30dd1" />
 <script type="application/ld+json">
-{"description":"Between when I originally turned this website into a Jekyll site and a couple of weeks ago, a decent amount of CSS in the site had been slowly changing. First of all, the navigation bar had gone from a whole quarter of the screen to just a small top bar. The navigation words had moved to the right of the screen. But most importantly, I was attempting to make the site responsive to different screen widths (particularly mobile vs. computer). And there was a point when I realized that there were certain limitations my CSS/HTML knowledge had.","@type":"BlogPosting","url":"https://emmasax4.info/blog/posts/adding-bootstrap-to-your-static-content-site/","headline":"Adding Bootstrap to Your Static Content Site","datePublished":"2019-12-17T06:00:00+00:00","dateModified":"2019-12-17T06:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emmasax4.info/blog/posts/adding-bootstrap-to-your-static-content-site/"},"@context":"https://schema.org"}</script>
+{"mainEntityOfPage":{"@type":"WebPage","@id":"https://emmasax4.info/blog/posts/adding-bootstrap-to-your-static-content-site/"},"description":"Between when I originally turned this website into a Jekyll site and a couple of weeks ago, a decent amount of CSS in the site had been slowly changing. First of all, the navigation bar had gone from a whole quarter of the screen to just a small top bar. The navigation words had moved to the right of the screen. But most importantly, I was attempting to make the site responsive to different screen widths (particularly mobile vs. computer). And there was a point when I realized that there were certain limitations my CSS/HTML knowledge had.","@type":"BlogPosting","url":"https://emmasax4.info/blog/posts/adding-bootstrap-to-your-static-content-site/","headline":"Adding Bootstrap to Your Static Content Site","dateModified":"2019-12-17T06:00:00+00:00","datePublished":"2019-12-17T06:00:00+00:00","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
 
   <header>
   <nav class="navbar navbar-expand-md navbar-dark">
-    <a class="navbar-brand mb-0" href="https://emmasax4.info">
+    <a class="navbar-brand mb-0" href="https://emmasax4.info" target="_self">
       <img src="/assets/images/logos/e-logo-white-40.png" width="30" height="30"
         class="d-inline-block align-top" alt="E logo"
       > Emma Sax
@@ -253,30 +253,30 @@
 <p>After I implemented the basics of the navbar, it worked pretty miraculously. It also turned out to basically be responsive right away, all I had to do was modify a few more <code class="highlighter-rouge">class</code> names. Then, it was time to make the navbar look like mine (with similar colors, sizing, etc).</p>
 
 <p>I did an <code class="highlighter-rouge">Inspect element</code> on Bootstrap’s website to see what I should name the CSS class in my own repo: <code class="highlighter-rouge">nav.navbar</code>. Then, I simply copied over my color scheme:</p>
-<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">nav</span><span class="nc">.navbar</span> <span class="p">{</span>
-  <span class="nl">background-color</span><span class="p">:</span> <span class="nb">rgb</span><span class="p">(</span><span class="m">27</span><span class="p">,</span> <span class="m">14</span><span class="p">,</span> <span class="m">172</span><span class="p">);</span>
-  <span class="nl">background</span><span class="p">:</span> <span class="n">linear-gradient</span><span class="p">(</span><span class="n">to</span> <span class="nb">right</span><span class="p">,</span> <span class="nb">rgb</span><span class="p">(</span><span class="m">27</span><span class="p">,</span> <span class="m">14</span><span class="p">,</span> <span class="m">172</span><span class="p">),</span> <span class="nb">rgb</span><span class="p">(</span><span class="m">107</span><span class="p">,</span> <span class="m">208</span><span class="p">,</span> <span class="m">245</span><span class="p">));</span>
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">nav</span><span class="nc">.navbar</span> <span class="p">{</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="nf">rgb</span><span class="p">(</span><span class="m">27</span><span class="o">,</span> <span class="m">14</span><span class="o">,</span> <span class="m">172</span><span class="p">);</span>
+  <span class="nl">background</span><span class="p">:</span> <span class="nf">linear-gradient</span><span class="p">(</span><span class="n">to</span> <span class="nb">right</span><span class="o">,</span> <span class="nf">rgb</span><span class="p">(</span><span class="m">27</span><span class="o">,</span> <span class="m">14</span><span class="o">,</span> <span class="m">172</span><span class="p">)</span><span class="o">,</span> <span class="nf">rgb</span><span class="p">(</span><span class="m">107</span><span class="o">,</span> <span class="m">208</span><span class="o">,</span> <span class="m">245</span><span class="p">));</span>
 <span class="p">}</span>
 </code></pre></div></div>
 
 <p>Then, right away I could delete all of the old navbar CSS code! This included a solid chunk of lines!</p>
 
 <p>Next, I wanted to make it so the menu button (also known as a hamburger 🍔 icon) would turn into an ❌ button when the navbar expanded. This took more time, and to be honest, if not for <a href="https://github.com/brianMitchL" class="user-mention">@brianMitchL</a>’s help, I may still be struggling. In order to save you from struggling, I’ll give you some code:</p>
-<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">nav</span><span class="nc">.navbar</span> <span class="p">{</span>
-  <span class="err">&gt;</span> <span class="err">.navbar-toggler</span> <span class="err">{</span>
-    <span class="err">//</span> <span class="err">The</span> <span class="err">toggle</span> <span class="err">button</span>
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">nav</span><span class="nc">.navbar</span> <span class="p">{</span>
+  <span class="o">&gt;</span> <span class="nc">.navbar-toggler</span> <span class="p">{</span>
+    <span class="c1">// The toggle button</span>
   <span class="p">}</span>
 
-  <span class="nc">.navbar-toggler</span><span class="o">[</span><span class="nt">aria-expanded</span><span class="o">=</span><span class="s1">"false"</span><span class="o">]</span> <span class="o">&gt;</span> <span class="nc">.x</span> <span class="p">{</span>
-    <span class="err">//</span> <span class="err">❌</span> <span class="err">icon</span>
+  <span class="nc">.navbar-toggler</span><span class="o">[</span><span class="nt">aria-expanded</span><span class="o">=</span><span class="s2">"false"</span><span class="o">]</span> <span class="o">&gt;</span> <span class="nc">.x</span> <span class="p">{</span>
+    <span class="c1">// ❌ icon</span>
     <span class="nl">display</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
   <span class="p">}</span>
 
-  <span class="nc">.navbar-toggler</span><span class="o">[</span><span class="nt">aria-expanded</span><span class="o">=</span><span class="s1">"true"</span><span class="o">]</span> <span class="o">&gt;</span> <span class="nc">.menu</span> <span class="p">{</span>
-    <span class="err">//</span> <span class="err">🍔</span> <span class="err">icon</span>
+  <span class="nc">.navbar-toggler</span><span class="o">[</span><span class="nt">aria-expanded</span><span class="o">=</span><span class="s2">"true"</span><span class="o">]</span> <span class="o">&gt;</span> <span class="nc">.menu</span> <span class="p">{</span>
+    <span class="c1">// 🍔 icon</span>
     <span class="nl">display</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
   <span class="p">}</span>
-<span class="err">}</span>
+<span class="p">}</span>
 </code></pre></div></div>
 
 <p>Now, with only 20 minutes of work, I have a fully-functioning navbar that fits Accessibility standards, too!</p>
