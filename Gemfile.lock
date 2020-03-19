@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/emma-sax4/jekyll-seo-tag.git
-  revision: 6a99c906a0c26f47577456a27aa9cb2a19174c28
+  revision: 9a8aa9f543a09f9cd409289c58c3c1c3ea8a7db6
   branch: emmasax4_seo_tag
   specs:
     jekyll-seo-tag (2.6.1)
@@ -8,7 +8,7 @@ GIT
 
 GIT
   remote: https://github.com/emma-sax4/jekyll-sitemap.git
-  revision: 039caebd145153f3be0ffd1b2ad49280f1ba1f7c
+  revision: 8e604e16d0bb0f88fd949f55ccc425d3ee33b77d
   branch: optional_file_modified_at
   specs:
     jekyll-sitemap (1.4.0)
