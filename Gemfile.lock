@@ -8,8 +8,8 @@ GIT
 
 GIT
   remote: https://github.com/emma-sax4/jekyll-sitemap.git
-  revision: 8e604e16d0bb0f88fd949f55ccc425d3ee33b77d
-  branch: optional_file_modified_at
+  revision: 4ccefadeda5cea10a70d3d67f6e4d9188364af18
+  branch: emmasax4_sitemap
   specs:
     jekyll-sitemap (1.4.0)
       jekyll (>= 3.7, < 5.0)
