@@ -25,7 +25,6 @@
   * [`favicon.ico`](#faviconico)
   * [`feed.xml`](#feedxml)
   * [`Gemfile` and `Gemfile.lock`](#gemfile-and-gemfilelock)
-  * [`index.md`](#indexmd)
 
 ## Contribution Process
 
@@ -174,8 +173,7 @@ Here are all of the parts of this project associated with running this applicati
 ├── favicon.ico
 ├── feed.xml
 ├── Gemfile
-├── Gemfile.lock
-└── index.md
+└── Gemfile.lock
 ```
 
 ### `.circleci/`
@@ -369,7 +367,3 @@ This site implements a basic RSS feed for subscribers to keep an eye on the blog
 ### `Gemfile` and `Gemfile.lock`
 
 The Gemfile is where the application defines which Ruby gems are important to run the application. To learn how to use these files, see this [section](#running-locally).
-
-### `index.md`
-
-This is the first page that the site sees. Because of the way GitHub pages and Jekyll work, this is the only page that needs to be in the root directory of the project, and needs to be titled `index.md`. However, it's symlinked to the `_pages/home.md` file, so the only real place to edit that page should be through editing the `_pages/home.md` instead of the `index.md` file.
