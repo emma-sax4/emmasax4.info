@@ -23,7 +23,6 @@
   * [`js/`](#js)
   * [`_config.yml`](#_configyml)
   * [`favicon.ico`](#faviconico)
-  * [`feed.xml`](#feedxml)
   * [`Gemfile` and `Gemfile.lock`](#gemfile-and-gemfilelock)
 
 ## Contribution Process
@@ -171,7 +170,6 @@ Here are all of the parts of this project associated with running this applicati
 |   └── script.js
 ├── _config.yml
 ├── favicon.ico
-├── feed.xml
 ├── Gemfile
 └── Gemfile.lock
 ```
@@ -359,10 +357,6 @@ This is where we tell Jekyll all of the configurations for this project. Each ti
 ### `favicon.ico`
 
 The favicon of the site is the main image associated with the site. It's the small square image that we see on the browser tab, and it's the general logo on this site. It's placed in the root directory so that browser crawlers and bots can easily locate it and show it on search results. It improves this site's SEO.
-
-### `feed.xml`
-
-This site implements a basic RSS feed for subscribers to keep an eye on the blog posts on this site. This file automatically updates whenever CircleCI will build on the `source` branch builds. A subscriber should use a feed reader to watch the feed.
 
 ### `Gemfile` and `Gemfile.lock`
 
