@@ -1,124 +1,15 @@
 version: 2.1
-orbs:
-  ruby: circleci/ruby@0.1.2
-  slack: circleci/slack@3.4.2
-
-commands:
-  set_slack_message:
-    steps:
-      - run:
-          name: Slack - Generating Custom Message
-          command: bash .circleci/generate-slack-message.sh
-  configure_bundler:
-    steps:
-      - run:
-          name: Configure Bundler
-          command: bash .circleci/configure-bundler.sh
-      - restore_cache:
-          key: bundler-cache-{{ checksum "Gemfile.lock" }}
-      - run:
-          name: Bundle Install
-          command: bundle install --path vendor/bundle
-      - save_cache:
-          key: bundler-cache-{{ checksum "Gemfile.lock" }}
-          paths: [ vendor/bundle ]
-  jekyll_build:
-    steps:
-      - run:
-          name: Jekyll Build
-          command: JEKYLL_ENV=production bundle exec jekyll build --destination ./site
-  html_proofer:
-    steps:
-      - run:
-          name: HTML Proofer
-          command: bash .circleci/html-proofer.sh || echo "HTML Proofer failed. Please investigate the failures."
-  github_pages_deploy:
-    steps:
-      - add_ssh_keys:
-          fingerprints: [ d3:10:c9:11:e9:8b:7f:09:ce:29:d5:38:81:da:ef:bb ]
-      - deploy:
-          name: Deploy to GitHub Pages
-          command: bash .circleci/github-pages-deploy.sh
-  slack_build_notification:
-    steps:
-      - slack/status:
-          success_message: $SLACK_MESSAGE passed.
-          failure_message: $SLACK_MESSAGE failed.
-          include_job_number_field: false
-          include_project_field: false
-  slack_deploy_notification:
-    steps:
-      - slack/status:
-          success_message: Successfully deployed to GitHub Pages.
-          failure_message: Error deploying to GitHub Pages.
-          include_job_number_field: false
-          include_project_field: false
-
 jobs:
-<<<<<<< HEAD
-  test:
+  skip:
     working_directory: ~/emma-sax4.github.io
-    docker:
-      - image: circleci/ruby:2.6.5
-    steps:
-      - checkout
-      - set_slack_message
-      - configure_bundler
-      - jekyll_build
-      - html_proofer
-      - slack_build_notification
-  deploy:
-    working_directory: ~/emma-sax4.github.io
-    docker:
-      - image: circleci/ruby:2.6.5
-    steps:
-      - checkout
-      - configure_bundler
-      - jekyll_build
-      - github_pages_deploy
-      - slack_deploy_notification
-
+    docker: [ image: circleci/ruby:2.6.5 ]
+    steps: [ checkout ]
 workflows:
   version: 2
-  develop:
+  BRANCH_TO_IGNORE:
     jobs:
-      - test:
+      - skip:
           filters:
             branches:
-              ignore: [ release, master ]
-  release:
-    jobs:
-      - test:
-          filters:
-            branches:
-              only: [ release ]
-      - deploy:
-          requires: [ test ]
-          filters:
-            branches:
-              only: [ release ]
-  nightly_cron:
-    jobs:
-      - test
-      - deploy:
-          requires: [ test ]
-    triggers:
-      - schedule:
-          cron: "0 6 * * *" # 06:00 UTC => 00:00 CST
-          filters:
-            branches:
-              only: [ release ]
-=======
-  master:
-<<<<<<< HEAD
-    branches:
-      ignore: [ master ]
-    steps: [ checkout ]
->>>>>>> f8d78f0... Add an empty steps list so that CircleCI doesn't fail
-=======
-    jobs:
-    - skip:
-        filters:
-          branches:
-            ignore: [ master ]
->>>>>>> fd9001a... Now ignore master
+              ignore: [ master ]
+
