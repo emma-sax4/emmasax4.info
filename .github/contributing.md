@@ -23,9 +23,7 @@
   * [`js/`](#js)
   * [`_config.yml`](#_configyml)
   * [`favicon.ico`](#faviconico)
-  * [`feed.xml`](#feedxml)
   * [`Gemfile` and `Gemfile.lock`](#gemfile-and-gemfilelock)
-  * [`index.md`](#indexmd)
 
 ## Contribution Process
 
@@ -172,10 +170,8 @@ Here are all of the parts of this project associated with running this applicati
 |   └── script.js
 ├── _config.yml
 ├── favicon.ico
-├── feed.xml
 ├── Gemfile
-├── Gemfile.lock
-└── index.md
+└── Gemfile.lock
 ```
 
 ### `.circleci/`
@@ -362,14 +358,6 @@ This is where we tell Jekyll all of the configurations for this project. Each ti
 
 The favicon of the site is the main image associated with the site. It's the small square image that we see on the browser tab, and it's the general logo on this site. It's placed in the root directory so that browser crawlers and bots can easily locate it and show it on search results. It improves this site's SEO.
 
-### `feed.xml`
-
-This site implements a basic RSS feed for subscribers to keep an eye on the blog posts on this site. This file automatically updates whenever CircleCI will build on the `source` branch builds. A subscriber should use a feed reader to watch the feed.
-
 ### `Gemfile` and `Gemfile.lock`
 
 The Gemfile is where the application defines which Ruby gems are important to run the application. To learn how to use these files, see this [section](#running-locally).
-
-### `index.md`
-
-This is the first page that the site sees. Because of the way GitHub pages and Jekyll work, this is the only page that needs to be in the root directory of the project, and needs to be titled `index.md`. However, it's symlinked to the `_pages/home.md` file, so the only real place to edit that page should be through editing the `_pages/home.md` instead of the `index.md` file.
