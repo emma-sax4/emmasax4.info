@@ -3,6 +3,7 @@ source "https://rubygems.org"
 # Gems from RubyGems that are required for all environments
 gem 'jekyll',                      '~> 3.8'
 gem 'jekyll-default-layout',       '~> 0.1.4'
+gem 'jekyll-last-modified-at',     '~> 1.2.1'
 gem 'jekyll-mentions',             '~> 1.6.0'
 gem 'jekyll-paginate-v2',          '~> 3.0.0'
 gem 'jekyll-redirect-from',        '~> 0.16.0'
