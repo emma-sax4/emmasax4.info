@@ -12,8 +12,9 @@ gem 'jekyll-titles-from-headings', '~> 0.5.3'
 gem 'rouge',                       '~> 3.17'
 
 # Gems from GitHub that are required for all environments
+gem 'jekyll-feed',    git: 'https://github.com/emma-sax4/jekyll-feed.git',    branch: 'emmasax4_feed'
 gem 'jekyll-seo-tag', git: 'https://github.com/emma-sax4/jekyll-seo-tag.git', branch: 'emmasax4_seo_tag'
-gem 'jekyll-sitemap', git: 'https://github.com/emma-sax4/jekyll-sitemap.git', branch: 'optional_file_modified_at'
+gem 'jekyll-sitemap', git: 'https://github.com/emma-sax4/jekyll-sitemap.git', branch: 'emmasax4_sitemap'
 
 # Gems for only test/development environment
 group :test, :development do
