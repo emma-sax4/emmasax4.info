@@ -15,7 +15,7 @@
 
     <div class="collapse navbar-collapse" id="navbar-links">
       <ul class="navbar-nav ml-auto mt-2 mt-md-0">
-        {% assign sorted_pages = site.pages | where_exp: "item", "item.order" | sort: "order" | shift %}
+        {% assign sorted_pages = site.pages | where_exp: "item", "item.order" | sort: "order" %}
 
         {% for node in sorted_pages %}
           {% unless node.autogen == "jekyll-paginate-v2" %}
