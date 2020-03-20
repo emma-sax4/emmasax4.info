@@ -43,6 +43,7 @@ exclude:
 
 plugins:
   - jekyll-default-layout
+  - jekyll-feed
   - jekyll-mentions
   - jekyll-paginate-v2
   - jekyll-redirect-from
@@ -60,6 +61,9 @@ collections:
   posts:
     output: true
 
+feed:
+  items: 5
+
 pagination:
   enabled: true
   per_page: 5
@@ -69,13 +73,3 @@ pagination:
   trail:
     before: 1
     after: 1
-
-feed:
-  production:
-    title: Emma Sax's Blog
-    url: https://emmasax4.info
-    items: 5
-  development:
-    title: LOCAL Emma's Blog
-    url: http://127.0.0.1:4000
-    items: 5
