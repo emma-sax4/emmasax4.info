@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/emma-sax4/jekyll-feed.git
-  revision: 22154a24695acf101dace7202567a1b4396932e4
+  revision: 5238554d9833aec81981454a066cd59e590858a8
   branch: emmasax4_feed
   specs:
     jekyll-feed (0.13.0)
@@ -72,6 +72,9 @@ GEM
       safe_yaml (~> 1.0)
     jekyll-default-layout (0.1.4)
       jekyll (~> 3.0)
+    jekyll-last-modified-at (1.2.1)
+      jekyll (>= 3.7, < 5.0)
+      posix-spawn (~> 0.3.9)
     jekyll-mentions (1.6.0)
       html-pipeline (~> 2.3)
       jekyll (>= 3.7, < 5.0)
@@ -104,6 +107,7 @@ GEM
     parallel (1.19.1)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
+    posix-spawn (0.3.13)
     public_suffix (4.0.3)
     rainbow (3.0.0)
     rb-fsevent (0.10.3)
@@ -132,6 +136,7 @@ DEPENDENCIES
   jekyll (~> 3.8)
   jekyll-default-layout (~> 0.1.4)
   jekyll-feed!
+  jekyll-last-modified-at (~> 1.2.1)
   jekyll-mentions (~> 1.6.0)
   jekyll-paginate-v2 (~> 3.0.0)
   jekyll-redirect-from (~> 0.16.0)
