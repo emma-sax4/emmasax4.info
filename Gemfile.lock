@@ -1,6 +1,14 @@
 GIT
+  remote: https://github.com/emma-sax4/jekyll-feed.git
+  revision: 5238554d9833aec81981454a066cd59e590858a8
+  branch: emmasax4_feed
+  specs:
+    jekyll-feed (0.13.0)
+      jekyll (>= 3.7, < 5.0)
+
+GIT
   remote: https://github.com/emma-sax4/jekyll-seo-tag.git
-  revision: 9a8aa9f543a09f9cd409289c58c3c1c3ea8a7db6
+  revision: 8b053787794ab482089b40d6befa4597c9da65b9
   branch: emmasax4_seo_tag
   specs:
     jekyll-seo-tag (2.6.1)
@@ -8,8 +16,8 @@ GIT
 
 GIT
   remote: https://github.com/emma-sax4/jekyll-sitemap.git
-  revision: 8e604e16d0bb0f88fd949f55ccc425d3ee33b77d
-  branch: optional_file_modified_at
+  revision: 4ccefadeda5cea10a70d3d67f6e4d9188364af18
+  branch: emmasax4_sitemap
   specs:
     jekyll-sitemap (1.4.0)
       jekyll (>= 3.7, < 5.0)
@@ -64,6 +72,9 @@ GEM
       safe_yaml (~> 1.0)
     jekyll-default-layout (0.1.4)
       jekyll (~> 3.0)
+    jekyll-last-modified-at (1.2.1)
+      jekyll (>= 3.7, < 5.0)
+      posix-spawn (~> 0.3.9)
     jekyll-mentions (1.6.0)
       html-pipeline (~> 2.3)
       jekyll (>= 3.7, < 5.0)
@@ -96,6 +107,7 @@ GEM
     parallel (1.19.1)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
+    posix-spawn (0.3.13)
     public_suffix (4.0.3)
     rainbow (3.0.0)
     rb-fsevent (0.10.3)
@@ -123,6 +135,8 @@ DEPENDENCIES
   html-proofer (~> 3.15.1)
   jekyll (~> 3.8)
   jekyll-default-layout (~> 0.1.4)
+  jekyll-feed!
+  jekyll-last-modified-at (~> 1.2.1)
   jekyll-mentions (~> 1.6.0)
   jekyll-paginate-v2 (~> 3.0.0)
   jekyll-redirect-from (~> 0.16.0)
