@@ -10,7 +10,7 @@ mv ./_site/* .
 rm -R ./_site/
 
 git add -fA
-git commit -m "Deploy to emma-sax4/emma-sax4.github.io.git:master via CircleCI"
+git commit -m "Deploy to $CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME.git:master via CircleCI"
 PUSH_STATUS=$(git push origin master 2>&1)
 
 if [[ $PUSH_STATUS == "Everything up-to-date" ]]; then
