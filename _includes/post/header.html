@@ -14,9 +14,9 @@
     {% assign now = "now" | date: "%s" %}
     {% assign date = page.date | date: "%s" %}
     {% if date <= now %}
-      <span class="date-meta" style="font-style: italic;">{{ page.date }}</span>
+      <span class="date-meta">{{ page.date }}</span>
     {% else %}
-      <span class="post-meta" style="font-style: italic;">Unpublished</span>
+      <span class="post-meta">Unpublished</span>
     {% endif %}
   </div>
 </h1>
