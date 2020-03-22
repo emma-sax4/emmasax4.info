@@ -70,7 +70,9 @@ Now, I'm not a fan of needing my site to have to be built on a person's computer
 Basically what Derek Smart (I wonder if that's his real name 🧐) suggests is to go with the first approach, but don't bundle the project on _your_ machine... use a continuous deployment tool. And here comes Travis CI.
 
 From Travis CI's documentation,
-> Continuous Integration is the practice of merging in small code changes frequently - rather than merging in a large change at the end of a development cycle. The goal is to build healthier software by developing and testing in smaller increments. This is where Travis CI comes in.<br><br>As a continuous integration platform, Travis CI supports your development process by automatically building and testing code changes, providing immediate feedback on the success of the change. Travis CI can also automate other parts of your development process by managing deployments and notifications.
+> Continuous Integration is the practice of merging in small code changes frequently - rather than merging in a large change at the end of a development cycle. The goal is to build healthier software by developing and testing in smaller increments. This is where Travis CI comes in.
+>
+> As a continuous integration platform, Travis CI supports your development process by automatically building and testing code changes, providing immediate feedback on the success of the change. Travis CI can also automate other parts of your development process by managing deployments and notifications.
 
 The ending part of that statement is important:
 > Travis CI can... [manage] deployments and notifications.
