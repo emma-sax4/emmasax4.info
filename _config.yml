@@ -11,20 +11,20 @@
 ###################################################################################################
 
 title: Emma Sax
+author: Emma Sax
 description: Emma Sax's personal website and blog. Includes information about my social media profiles, résumé, and hobbies.
 url: https://emmasax4.info
 github_repo: https://github.com/emma-sax4/emma-sax4.github.io
-
-webmaster_verifications:
-  google: v04az8eo-0UcZrWCJr7SKAvM6hw90qTCBQoKx3PlXCA
-  bing: 89B2B19FF966341B78EF64EDADE6DF81
-  yandex: c2741887f8c30dd1
-
 future: false
 timezone: UTC
 highlighter: rouge
 jekyll-mentions: https://github.com
 markdown: kramdown
+
+webmaster_verifications:
+  google: v04az8eo-0UcZrWCJr7SKAvM6hw90qTCBQoKx3PlXCA
+  bing: 89B2B19FF966341B78EF64EDADE6DF81
+  yandex: c2741887f8c30dd1
 
 disqus:
   shortname: emmasax4
