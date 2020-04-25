@@ -97,7 +97,7 @@ workflows:
     jobs: [ test-and-deploy ]
     triggers:
     - schedule:
-        cron: "30 5 * * *" # 05:30 UTC => 00:30 CDT / 23:30 CST
+        cron: "30 5 * * 1" # 05:30 UTC => 00:30 CDT / 23:30 CST
         filters:
           branches:
             only: [ source ]
