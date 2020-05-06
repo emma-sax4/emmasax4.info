@@ -175,3 +175,11 @@ I love to travel, especially to international locations. I try to go to a new co
 * **Piano** — Annette Helder, Deborah Hanna
 * **Clarinet** — Todd Boyd, Eric Dollerschell
 * **University of Minnesota Morris Concert Choir** — Bradley Miller, Christina Armendarez
+
+## Legos
+
+In April 2020, I started to get involved more with LEGOs. I think a huge part of this is because we're all stuck inside from the COVID-19 epidemic. But, I discovered a tool called LEGO Digital Designer (LDD), and you can use it to build your own LEGO sets. So, I thought I'd share some of the LEGO sets I've built and designed.
+
+### <a href="/assets/resources/LEGO-building-instructions-car.pdf" target="_blank">Four Seater Car</a>
+
+This 164 brick piece creates a one-of-a-kind minifigure scale car. This car is unique in LEGO land because it can seat four LEGO minifigures at once; two in the front seat, and two in the backseat. Most LEGO cars for purchase only can seat one or two minifigures, one right behind each other. The roof is removable, so you can have easy access to the inside of the car. However, the car isn't too realistic—the wheels don't turn left/right. Lastly, although there is no trunk or frunk, there's plenty of room in the main part of the car for your minifigure's accessories.
