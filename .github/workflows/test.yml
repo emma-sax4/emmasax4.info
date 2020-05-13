@@ -12,6 +12,11 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v2
+    - name: Configure Bundler
+      run: |
+        echo "export BUNDLER_VERSION=$(cat Gemfile.lock | tail -1 | tr -d ' ')" >> $BASH_ENV
+        source $BASH_ENV
+        gem install bundler
     - name: Install Dependencies
       run: bundle install --path vendor/bundle
     # - name:
@@ -23,11 +28,6 @@ jobs:
 
 
 
-    # - name: Configure Bundler
-    #   run: |
-    #     echo "export BUNDLER_VERSION=$(cat Gemfile.lock | tail -1 | tr -d ' ')" >> $BASH_ENV
-    #     source $BASH_ENV
-    #     gem install bundler
     # - name: Configure Gem Cache
     #   uses: actions/cache@v1
     #   with:
