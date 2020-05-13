@@ -2,6 +2,8 @@ name: Test
 on:
 - pull_request:
     branches: [ source ]
+- push:
+    branches: [ source ]
 
 jobs:
   build:
