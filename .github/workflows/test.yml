@@ -33,4 +33,5 @@ jobs:
           --allow-hash-href \
           --internal-domains /emmasax4.info/ \
           --url-ignore /linkedin/,/digikey/,/maasaimara/ \
-          ./_site/ || echo "HTML Proofer failed"
+          --http_status_ignore /0/
+          ./_site/
