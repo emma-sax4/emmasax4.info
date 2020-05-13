@@ -21,7 +21,7 @@ jobs:
       uses: actions/cache@v1
       with:
         path: vendor/bundle
-        key: bundler-cache-${{ checksum 'Gemfile.lock' }}
+        key: bundler-cache-${{ hashFiles('**/Gemfile.lock') }}
         restore-keys: bundler-cache-
     - name: Install Dependencies
       if: steps.cache.outputs.cache-hit != 'true'
