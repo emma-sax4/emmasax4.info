@@ -21,9 +21,6 @@ jobs:
         key: bundler-cache-${{ hashFiles('**/Gemfile.lock') }}
         restore-keys: bundler-cache-
     - name: Install Dependencies
-      run: bundle install --path vendor/bundle
-    # - name:
-      # uses: meitar/jekyll-builder-for-github-pages-action@v1
-      # with:
-      #   who-to-greet: 'Mona the Octocat'
-      # id: hello
+      run: |
+        bundle config set path 'vendor/bundle'
+        bundle install
