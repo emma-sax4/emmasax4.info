@@ -33,5 +33,5 @@ jobs:
           --allow-hash-href \
           --internal-domains /emmasax4.info/ \
           --url-ignore /linkedin/,/digikey/,/maasaimara/ \
-          --http_status_ignore /0/
+          --only_4xx \
           ./_site/
