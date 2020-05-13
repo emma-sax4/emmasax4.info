@@ -1,0 +1,33 @@
+name: Test
+# This workflow is triggered on pushes to the repository.
+on:
+- pull_request:
+    branches: [ source ]
+
+jobs:
+  build:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Configure Bundler
+      uses: actions/cache@v1
+      with:
+        path: vendor/bundle
+        key: bundler-cache-${{ hashFiles('**/Gemfile.lock') }}
+        restore-keys: bundler-cache-
+    - name: Install Dependencies
+      if: steps.cache.outputs.cache-hit != 'true'
+      run: |
+        echo "export BUNDLER_VERSION=$(cat Gemfile.lock | tail -1 | tr -d ' ')" >> $BASH_ENV
+        source $BASH_ENV
+        gem install bundler
+    # - name:
+      # uses: meitar/jekyll-builder-for-github-pages-action@v1
+      # with:
+      #   who-to-greet: 'Mona the Octocat'
+      # id: hello
+    # This step prints an output (time) from the previous step's action.
+    # - name: Echo the greeting's time
+    #   run: echo 'The time was ${{ steps.hello.outputs.time }}.'
