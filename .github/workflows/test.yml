@@ -43,4 +43,4 @@ jobs:
         status: ${{ job.status }}
         color: good
       env:
-        SLACK_BOT_TOKEN: ${{ secrets.SLACK_WEBHOOK }}
+        SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
