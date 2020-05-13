@@ -40,7 +40,7 @@ jobs:
       if: success()
       with:
         channel: general
-        status: ${{ job.status }}
+        status: SUCCESS
         color: good
       env:
         SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
