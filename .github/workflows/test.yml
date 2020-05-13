@@ -16,7 +16,6 @@ jobs:
       uses: actions/setup-ruby@v1
       with:
         ruby-version: $(cat .ruby-version | tail -1 | tr -d 'ruby-')
-      run: ruby hello.rb
     - name: Configure Bundler
       run: sudo gem install bundler -v $(cat Gemfile.lock | tail -1 | tr -d ' ')
     - name: Install Dependencies
