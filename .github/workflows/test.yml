@@ -12,10 +12,6 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v2
-    - name: Set Up Ruby
-      uses: actions/setup-ruby@v1
-      with:
-        ruby-version: '2.6' # hard-code this from .ruby-version
     - name: Configure Bundler
       run: sudo gem install bundler -v $(cat Gemfile.lock | tail -1 | tr -d ' ')
     - name: Install Dependencies
