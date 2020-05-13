@@ -36,10 +36,10 @@ jobs:
           --only_4xx \
           ./_site/
     - name: Notify Slack
-      uses: rtCamp/action-slack-notify@v2.0.2
+      uses: rtCamp/action-slack-notify@1.5
       env:
-        SLACK_CHANNEL: general
-        SLACK_ICON: https://img.icons8.com/ios-filled/50/000000/github.png
-        SLACK_MESSAGE: "Build #$GITHUB_RUN_ID of $GITHUB_REPOSITORY on branch `$GITHUB_REF` by $GITHUB_ACTOR *completed*."
-        SLACK_USERNAME: GitHub Actions
-        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+        CHANNEL: general
+        ICON: https://img.icons8.com/ios-filled/50/000000/github.png
+        MESSAGE: "Build #$GITHUB_RUN_ID of $GITHUB_REPOSITORY on branch `$GITHUB_REF` by $GITHUB_ACTOR *completed*."
+        USERNAME: GitHub Actions
+        WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK }}
