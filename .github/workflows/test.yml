@@ -13,7 +13,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
     - name: Configure Bundler
-      run: gem install bundler -v $(cat Gemfile.lock | tail -1 | tr -d ' ')
+      run: sudo gem install bundler -v $(cat Gemfile.lock | tail -1 | tr -d ' ')
     - name: Install Dependencies
       run: bundle install --path vendor/bundle
     # - name:
