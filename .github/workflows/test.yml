@@ -35,3 +35,11 @@ jobs:
           --url-ignore /linkedin/,/digikey/,/maasaimara/ \
           --only_4xx \
           ./_site/
+    - name: Notify Slack
+      uses: rtCamp/action-slack-notify@v2.0.2
+      env:
+        SLACK_CHANNEL: general
+        SLACK_ICON: https://1000logos.net/github-logo/
+        SLACK_MESSAGE: "$SLACK_MESSAGE *completed*."
+        SLACK_USERNAME: GitHub Actions
+        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
