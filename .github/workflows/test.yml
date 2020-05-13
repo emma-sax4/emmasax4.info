@@ -39,8 +39,8 @@ jobs:
       uses: innocarpe/actions-slack@v1
       with:
         status: ${{ job.status }}
-        success_text: "Build #${{ github.run_id }} of ${{ github.repository }} on branch `${{ github.ref }}` by ${{ github.actor }} *passed*."
-        failure_text: "Build #${{ github.run_id }} of ${{ github.repository }} on branch `${{ github.ref }}` by ${{ github.actor }} *failed*."
+        success_text: "Build #${{ github.run_id }} of ${{ github.repository }} from event ${{ github.event_name }} on branch `${{ github.ref }}` by ${{ github.actor }} *passed*."
+        failure_text: "Build #${{ github.run_id }} of ${{ github.repository }} from event ${{ github.event_name }}on branch `${{ github.ref }}` by ${{ github.actor }} *failed*."
       env:
         SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK }}
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
