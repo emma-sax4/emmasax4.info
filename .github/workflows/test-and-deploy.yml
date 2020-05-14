@@ -43,12 +43,26 @@ jobs:
 
     - name: GitHub Pages Deploy
       uses: JamesIves/github-pages-deploy-action@releases/v3
+      id: deploy
       with:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         BRANCH: master
         FOLDER: _site
         COMMIT_MESSAGE: 'Deploy to ${{ github.repository }}.git:master via GitHub Actions'
         CLEAN_EXCLUDE: '[".git", ".circleci", ".github"]'
+
+    - name: Determine Deploy Status
+      id: deploy_status
+      run: |
+        if [[ ${{ steps.deploy.outputs.skipped }} == "true" ]]; then
+          echo "::set-env name=status::skipped"
+        else
+          if [[ ${{ steps.deploy.outputs.status }} == "success" ]]; then
+            echo "::set-env name=status::successful"
+          else
+            echo "::set-env name=status::unsuccessful"
+          fi
+        fi
 
     - name: Notify Slack on Success
       if: success()
@@ -65,7 +79,7 @@ jobs:
         author_name: ${{ github.actor }}
         author_link: https://github.com/${{ github.actor }}
         author_icon: https://github.com/${{ github.actor }}.png
-        text: 'Build #${{ github.run_id }} for event ${{ github.event_name }} *passed*. Deploy to GitHub Pages was *successful*.'
+        text: 'Build #${{ github.run_id }} for event ${{ github.event_name }} *passed*. Deploy to GitHub Pages was *${{ steps.deploy_status.status }}*.'
         footer: 'Ref: ${{ github.ref }}'
 
     - name: Notify Slack on Failure
@@ -83,5 +97,5 @@ jobs:
         author_name: ${{ github.actor }}
         author_link: https://github.com/${{ github.actor }}
         author_icon: https://github.com/${{ github.actor }}.png
-        text: 'Build #${{ github.run_id }} for event ${{ github.event_name }} *failed*. Deploy to GitHub Pages was *skipped*.'
+        text: 'Build #${{ github.run_id }} for event ${{ github.event_name }} *failed*. Deploy to GitHub Pages was *${{ steps.deploy_status.status }}*.'
         footer: 'Ref: ${{ github.ref }}'
