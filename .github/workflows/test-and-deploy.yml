@@ -60,7 +60,7 @@ jobs:
         author_name: ${{ github.actor }}
         author_link: https://github.com/${{ github.actor }}
         author_icon: https://github.com/${{ github.actor }}.png
-        text: 'Build #${{ github.run_id }} for event ${{ github.event_name }} *passed*. Deploy to GitHub Pages: *${{ env.DEPLOYMENT_STATUS }}*.'
+        text: 'Build #${{ github.run_id }} for event `${{ github.event_name }}` *passed*. Deploy to GitHub Pages: *${{ env.DEPLOYMENT_STATUS }}*.'
         footer: 'Ref: ${{ github.ref }}'
 
     - name: Notify Slack on Failure
@@ -78,5 +78,5 @@ jobs:
         author_name: ${{ github.actor }}
         author_link: https://github.com/${{ github.actor }}
         author_icon: https://github.com/${{ github.actor }}.png
-        text: 'Build #${{ github.run_id }} for event ${{ github.event_name }} *failed*. Deploy to GitHub Pages: *${{ env.DEPLOYMENT_STATUS }}*.'
+        text: 'Build #${{ github.run_id }} for event `${{ github.event_name }}` *failed*. Deploy to GitHub Pages: *${{ env.DEPLOYMENT_STATUS }}*.'
         footer: 'Ref: ${{ github.ref }}'
