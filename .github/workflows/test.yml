@@ -37,7 +37,7 @@ jobs:
           ./_site/
     - name: Notify Slack
       if: success()
-      uses: cemkiy/action-slacker@master
+      uses: emma-sax4/action-slacker@emmasax4_action_slacker
       with:
         channel: '#general'
         icon_url: https://img.icons8.com/ios-filled/50/000000/github.png
