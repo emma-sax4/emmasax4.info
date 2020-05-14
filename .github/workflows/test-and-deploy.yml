@@ -35,12 +35,6 @@ jobs:
     - name: HTML Proofer
       run: bundle exec htmlproofer --assume-extension --allow-hash-href --internal-domains /emmasax4.info/ --only_4xx ./_site/
 
-    - name: Upload Artifact
-      uses: actions/upload-artifact@v2
-      with:
-        name: Jekyll Site
-        path: _site/
-
     - name: GitHub Pages Deploy
       uses: JamesIves/github-pages-deploy-action@releases/v3
       id: deploy
