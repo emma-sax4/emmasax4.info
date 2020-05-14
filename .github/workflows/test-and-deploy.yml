@@ -51,19 +51,6 @@ jobs:
         COMMIT_MESSAGE: 'Deploy to ${{ github.repository }}.git:master via GitHub Actions'
         CLEAN_EXCLUDE: '[".git", ".circleci", ".github"]'
 
-    - name: Determine Deploy Status
-      id: deploy_status
-      run: |
-        if [[ ${{ steps.deploy.outputs.skipped }} == "true" ]]; then
-          echo "::set-env name=status::skipped"
-        else
-          if [[ ${{ steps.deploy.outputs.status }} == "success" ]]; then
-            echo "::set-env name=status::successful"
-          else
-            echo "::set-env name=status::unsuccessful"
-          fi
-        fi
-
     - name: Notify Slack on Success
       if: success()
       uses: emma-sax4/action-slacker@emmasax4_action_slacker
@@ -79,7 +66,7 @@ jobs:
         author_name: ${{ github.actor }}
         author_link: https://github.com/${{ github.actor }}
         author_icon: https://github.com/${{ github.actor }}.png
-        text: 'Build #${{ github.run_id }} for event ${{ github.event_name }} *passed*. Deploy to GitHub Pages was *${{ steps.deploy_status.status }}*.'
+        text: 'Build #${{ github.run_id }} for event ${{ github.event_name }} *passed*. GitHub Pages deployment *${{ steps.deploy.DEPLOYMENT_STATUS }}*.'
         footer: 'Ref: ${{ github.ref }}'
 
     - name: Notify Slack on Failure
@@ -97,5 +84,5 @@ jobs:
         author_name: ${{ github.actor }}
         author_link: https://github.com/${{ github.actor }}
         author_icon: https://github.com/${{ github.actor }}.png
-        text: 'Build #${{ github.run_id }} for event ${{ github.event_name }} *failed*. Deploy to GitHub Pages was *${{ steps.deploy_status.status }}*.'
+        text: 'Build #${{ github.run_id }} for event ${{ github.event_name }} *failed*. GitHub Pages deployment *${{ steps.deploy.DEPLOYMENT_STATUS }}*.'
         footer: 'Ref: ${{ github.ref }}'

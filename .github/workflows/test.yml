@@ -39,6 +39,16 @@ jobs:
         name: Jekyll Site
         path: _site/
 
+    - name: GitHub Pages Deploy
+      uses: JamesIves/github-pages-deploy-action@status-output
+      id: deploy
+      with:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        BRANCH: master
+        FOLDER: _site
+        COMMIT_MESSAGE: 'Deploy to ${{ github.repository }}.git:master via GitHub Actions'
+        CLEAN_EXCLUDE: '[".git", ".circleci", ".github"]'
+
     - name: Notify Slack on Success
       if: success()
       uses: emma-sax4/action-slacker@emmasax4_action_slacker
@@ -54,7 +64,7 @@ jobs:
         author_name: ${{ github.actor }}
         author_link: https://github.com/${{ github.actor }}
         author_icon: https://github.com/${{ github.actor }}.png
-        text: 'Build #${{ github.run_id }} for event ${{ github.event_name }} *passed*.'
+        text: 'Build #${{ github.run_id }} for event ${{ github.event_name }} *passed*. GitHub Pages deployment: *${{ steps.deploy.DEPLOYMENT_STATUS }}*.'
         footer: 'Ref: ${{ github.ref }}'
 
     - name: Notify Slack on Failure
@@ -72,5 +82,41 @@ jobs:
         author_name: ${{ github.actor }}
         author_link: https://github.com/${{ github.actor }}
         author_icon: https://github.com/${{ github.actor }}.png
-        text: 'Build #${{ github.run_id }} for event ${{ github.event_name }} *failed*.'
+        text: 'Build #${{ github.run_id }} for event ${{ github.event_name }} *failed*. GitHub Pages deployment: *${{ steps.deploy.DEPLOYMENT_STATUS }}*.'
         footer: 'Ref: ${{ github.ref }}'
+
+    # - name: Notify Slack on Success
+    #   if: success()
+    #   uses: emma-sax4/action-slacker@emmasax4_action_slacker
+    #   env:
+    #     SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+    #   with:
+    #     channel: '#general'
+    #     icon_url: https://img.icons8.com/ios-filled/50/000000/github.png
+    #     username: GitHub Actions
+    #     color: '#23c22e'
+    #     title: ${{ github.repository }}
+    #     title_link: https://github.com/${{ github.repository }}
+    #     author_name: ${{ github.actor }}
+    #     author_link: https://github.com/${{ github.actor }}
+    #     author_icon: https://github.com/${{ github.actor }}.png
+    #     text: 'Build #${{ github.run_id }} for event ${{ github.event_name }} *passed*.'
+    #     footer: 'Ref: ${{ github.ref }}'
+
+    # - name: Notify Slack on Failure
+    #   if: failure()
+    #   uses: emma-sax4/action-slacker@emmasax4_action_slacker
+    #   env:
+    #     SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+    #   with:
+    #     channel: '#general'
+    #     icon_url: https://img.icons8.com/ios-filled/50/000000/github.png
+    #     username: GitHub Actions
+    #     color: '#bd2222'
+    #     title: ${{ github.repository }}
+    #     title_link: https://github.com/${{ github.repository }}
+    #     author_name: ${{ github.actor }}
+    #     author_link: https://github.com/${{ github.actor }}
+    #     author_icon: https://github.com/${{ github.actor }}.png
+    #     text: 'Build #${{ github.run_id }} for event ${{ github.event_name }} *failed*.'
+    #     footer: 'Ref: ${{ github.ref }}'
