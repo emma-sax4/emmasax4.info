@@ -10,8 +10,12 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v1
-    - name: Prepare Repository
-      run: git checkout "$(echo ${{ github.ref }} | sed -E 's|refs/[a-zA-Z]+/||')"
+    - name: Reattach HEAD to Head Ref
+      run: git checkout $(echo ${{ github.head_ref }} | sed -E 's|refs/[a-zA-Z]+/||')
+      if: github.head_ref != ''
+    - name: Reattach HEAD to Head Ref
+      run: git checkout $(echo ${{ github.ref }} | sed -E 's|refs/[a-zA-Z]+/||')
+      if: github.head_ref == ''
     - name: Configure Bundler
       run: sudo gem install bundler -v $(cat Gemfile.lock | tail -1 | tr -d ' ')
     - name: Configure Gem Cache
