@@ -32,6 +32,11 @@ jobs:
       run: JEKYLL_ENV=production bundle exec jekyll build --destination ./_site/
     - name: HTML Proofer
       run: .github/workflows/html-proofer.sh
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: Jekyll Site
+        path: _site/
     - name: GitHub Pages Deploy
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
