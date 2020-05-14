@@ -35,12 +35,6 @@ jobs:
     - name: HTML Proofer
       run: bundle exec htmlproofer --assume-extension --allow-hash-href --internal-domains /emmasax4.info/ --only_4xx ./_site/
 
-    - name: Upload Artifact
-      uses: actions/upload-artifact@v2
-      with:
-        name: Jekyll Site
-        path: _site/
-
     - name: GitHub Pages Deploy
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
@@ -48,6 +42,8 @@ jobs:
         BRANCH: master
         FOLDER: _site
         COMMIT_MESSAGE: 'Deploy to ${{ github.repository }}.git:master via GitHub Actions'
+        GIT_CONFIG_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
+        GIT_CONFIG_NAME: github-actions[bot]
         CLEAN_EXCLUDE: '[".git", ".circleci", ".github"]'
 
     - name: Notify Slack on Success
@@ -65,7 +61,7 @@ jobs:
         author_name: ${{ github.actor }}
         author_link: https://github.com/${{ github.actor }}
         author_icon: https://github.com/${{ github.actor }}.png
-        text: 'Build #${{ github.run_id }} for event ${{ github.event_name }} *passed*. Deploy to GitHub Pages was *successful*.'
+        text: 'Build #${{ github.run_id }} for event ${{ github.event_name }} *passed*. GitHub Pages deployment: *${{ env.DEPLOYMENT_STATUS }}*.'
         footer: 'Ref: ${{ github.ref }}'
 
     - name: Notify Slack on Failure
@@ -83,5 +79,5 @@ jobs:
         author_name: ${{ github.actor }}
         author_link: https://github.com/${{ github.actor }}
         author_icon: https://github.com/${{ github.actor }}.png
-        text: 'Build #${{ github.run_id }} for event ${{ github.event_name }} *failed*. Deploy to GitHub Pages was *skipped*.'
+        text: 'Build #${{ github.run_id }} for event ${{ github.event_name }} *failed*. GitHub Pages deployment: *${{ env.DEPLOYMENT_STATUS }}*.'
         footer: 'Ref: ${{ github.ref }}'
