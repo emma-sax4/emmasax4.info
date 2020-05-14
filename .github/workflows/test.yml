@@ -19,9 +19,7 @@ jobs:
         key: bundler-cache-${{ hashFiles('**/Gemfile.lock') }}
         restore-keys: bundler-cache-
     - name: Install Dependencies
-      run: |
-        bundle config set path 'vendor/bundle'
-        bundle install
+      run: .github/workflows/bundle-install.sh
     - name: Jekyll Build
       run: JEKYLL_ENV=production bundle exec jekyll build --destination ./_site/
     - name: HTML Proofer
@@ -29,6 +27,7 @@ jobs:
     - name: Notify Slack on Success
       if: success()
       uses: emma-sax4/action-slacker@emmasax4_action_slacker
+      env: { SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }} }
       with:
         channel: '#general'
         icon_url: https://img.icons8.com/ios-filled/50/000000/github.png
@@ -41,11 +40,10 @@ jobs:
         author_icon: https://github.com/${{ github.actor }}.png
         text: 'Build #${{ github.run_id }} on `${{ github.ref }}` *passed*.'
         footer: 'Event: ${{ github.event_name }}'
-      env:
-        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
     - name: Notify Slack on Failure
       if: failure()
       uses: emma-sax4/action-slacker@emmasax4_action_slacker
+      env: { SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }} }
       with:
         channel: '#general'
         icon_url: https://img.icons8.com/ios-filled/50/000000/github.png
@@ -58,5 +56,3 @@ jobs:
         author_icon: https://github.com/${{ github.actor }}.png
         text: 'Build #${{ github.run_id }} on `${{ github.ref }}` *failed*.'
         footer: 'Event: ${{ github.event_name }}'
-      env:
-        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
