@@ -1,8 +1,8 @@
-name: Test
+name: Develop
 on:
-- pull_request:
+  pull_request:
     branches: [ source ]
-- push:
+  push:
     branches: [ source ]
 
 jobs:
@@ -13,24 +13,59 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
     - name: Configure Bundler
-      run: |
-        echo "export BUNDLER_VERSION=$(cat Gemfile.lock | tail -1 | tr -d ' ')" >> $BASH_ENV
-        source $BASH_ENV
-        gem install bundler
+      run: sudo gem install bundler -v $(cat Gemfile.lock | tail -1 | tr -d ' ')
     - name: Configure Gem Cache
       uses: actions/cache@v1
       with:
         path: vendor/bundle
-        key: bundler-cache-${{ checksum 'Gemfile.lock' }}
+        key: bundler-cache-${{ hashFiles('**/Gemfile.lock') }}
         restore-keys: bundler-cache-
     - name: Install Dependencies
-      if: steps.cache.outputs.cache-hit != 'true'
-      run: bundle install --path vendor/bundle
-    # - name:
-      # uses: meitar/jekyll-builder-for-github-pages-action@v1
-      # with:
-      #   who-to-greet: 'Mona the Octocat'
-      # id: hello
-    # This step prints an output (time) from the previous step's action.
-    # - name: Echo the greeting's time
-    #   run: echo 'The time was ${{ steps.hello.outputs.time }}.'
+      run: |
+        bundle config set path 'vendor/bundle'
+        bundle install
+    - name: Jekyll Build
+      run: JEKYLL_ENV=production bundle exec jekyll build --destination ./_site/
+    - name: HTML Proofer
+      run: |
+        bundle exec htmlproofer \
+          --assume-extension \
+          --allow-hash-href \
+          --internal-domains /emmasax4.info/ \
+          --url-ignore /linkedin/,/digikey/,/maasaimara/ \
+          --only_4xx \
+          ./_site/
+    - name: Notify Slack on Success
+      if: success()
+      uses: emma-sax4/action-slacker@emmasax4_action_slacker
+      with:
+        channel: '#general'
+        icon_url: https://img.icons8.com/ios-filled/50/000000/github.png
+        username: GitHub Actions
+        color: '#17e625'
+        title: ${{ github.repository }}
+        title_link: https://github.com/${{ github.repository }}
+        author_name: ${{ github.actor }}
+        author_link: https://github.com/${{ github.actor }}
+        author_icon: https://github.com/${{ github.actor }}.png
+        text: 'Build #${{ github.run_id }} on `${{ github.ref }}` *passed*.'
+        footer: 'Event: ${{ github.event_name }}'
+      env:
+        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+    - name: Notify Slack on Failure
+      if: failure()
+      uses: emma-sax4/action-slacker@emmasax4_action_slacker
+      with:
+        channel: '#general'
+        icon_url: https://img.icons8.com/ios-filled/50/000000/github.png
+        username: GitHub Actions
+        color: '#d11515'
+        title: ${{ github.repository }}
+        title_link: https://github.com/${{ github.repository }}
+        author_name: ${{ github.actor }}
+        author_link: https://github.com/${{ github.actor }}
+        author_icon: https://github.com/${{ github.actor }}.png
+        text: 'Build #${{ github.run_id }} on `${{ github.ref }}` *failed*.'
+        footer: 'Event: ${{ github.event_name }}'
+      env:
+        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
