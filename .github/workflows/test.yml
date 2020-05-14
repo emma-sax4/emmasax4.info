@@ -43,6 +43,9 @@ jobs:
         icon_url: https://img.icons8.com/ios-filled/50/000000/github.png
         username: 'GitHub Actions'
         color: '#17e625'
+        title: '${{ github.repository }}'
+        title_link: 'https://github.com/${{ github.repository }}'
+        author_name: '${{ github.actor }}'
         text: 'Build #${{ github.run_id }} of ${{ github.repository }} from event ${{ github.event_name }} on branch `${{ github.ref }}` by ${{ github.actor }} *passed*.'
       env:
         SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
