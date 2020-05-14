@@ -10,7 +10,7 @@
   * [Notifications](#notifications)
 - [Collections vs. Categories vs. Tags](#collections-vs-categories-vs-tags)
 - [Directory/File Structure](#directoryfile-structure)
-  * [`.circleci/`](#circleci-1)
+  * [`.github/`](#github)
   * [`_includes/`](#_includes)
   * [`_layouts/`](#_layouts)
   * [`_pages/`](#_pages)
@@ -39,7 +39,7 @@
   | Make a new pull request for your new branch (GitHub UI should automatically direct you to do this). | Continue making changes and committing/pushing them (unless you leave your feature branch, all new commits will be automatically added to your branch). |
   | Continue making changes to your pull request/branch (navigate to the main repository page, switch to your feature branch, and then continue making whatever changes you'd like). | When you're satisfied, make a pull request to this repository in the GitHub UI. |
 
-4. Verify CircleCI passes on your pull request. The test configuration lives inside the [`.circleci/config.yml`](https://github.com/emma-sax4/emma-sax4.github.io/blob/source/.circleci/config.yml) file. Read more about this repository's tests below.
+4. Verify tests passes on your pull request. The test configuration lives inside the [`..github/workflows/config.yml`](https://github.com/emma-sax4/emma-sax4.github.io/blob/source/.github/workflows/config.yml) file. Read more about this repository's tests below.
 5. Check the site looks like how you expect it to look. Follow the instructions below to get your computer running the site locally. If you've been working on GitHub UI up until this point, you may need to switch over to a computer and clone the repository and branch to do this.
 6. When you're absolutely ready for me to look at your pull request, please request a Code Review from me in the pull request. If I don't comment or start looking at the pull request in a few days, feel free to [send me an email](mailto:emma.sax4@gmail.com).
 
@@ -74,32 +74,32 @@ NOTE: Running this process locally will most likely create at least one director
 We can check periodically that all of the HTML links in this website load correctly:
 ```bash
 JEKYLL_ENV=production bundle exec jekyll build
-.circleci/html-proofer.sh
+bundle exec htmlproofer --assume-extension --allow-hash-href --internal-domains /emmasax4.info/ --only_4xx ./_site/
 ```
-
-External links to LinkedIn typically return an error code, as explained [here](https://github.com/gjtorikian/html-proofer/issues/215). The other link that I usually see returning error codes is one to Digi-Key. I haven't quite figured out why that is. So, `.circleci/html-proofer.sh` will intentionally ignore the links that often return errors.
 
 If you're in the process of creating a new blog post, then most likely the external link to the new blog post will fail. This makes sense—the blog post isn't live online yet, and that's what the link is checking for.
 
-CircleCI also runs a version of the HTML Proofer which skips over all internal domains and ignores LinkedIn, Maasai Mara, and Digi-Key domains. CircleCI runs this step after building, just verifying that links are accurate. If a build breaks because of this, the failures can probably be solved by just rerunning the workflow.
+GitHub Actions also runs a version of the HTML Proofer which skips over all internal domains and ignores LinkedIn, Maasai Mara, and Digi-Key domains. GitHub Actions runs this step after building, just verifying that links are accurate. If a build breaks because of this, the failures can probably be solved by just rerunning the workflow.
 
-## CircleCI
+## Continuous Integration
+
+### CircleCI is deprecated. We are switching to GitHub Actions, which is defined in the [`.github/workflows/config.yml`](https://github.com/emma-sax4/emma-sax4.github.io/blob/source/.github/workflows/config.yml).
 
 This repository uses CircleCI for several continuous integration tools. See the full `.circleci/config.yml` [here](https://github.com/emma-sax4/emma-sax4.github.io/blob/source/.circleci/config.yml).
 
 ### Tests
 
-This repository doesn't really have any unit or integration tests (Jekyll sites are just a host of static site files, so there's not really any functionality to test). However, CircleCI does check that `bundler` can install the necessary dependencies and that Jekyll can properly build the site on each pull request and each commit to the `source` branch (the default branch in this repository).
+This repository doesn't really have any unit or integration tests (Jekyll sites are just a host of static site files, so there's not really any functionality to test). However, GitHub Actions does check that `bundler` can install the necessary dependencies and that Jekyll can properly build the site on each pull request and each commit to the `source` branch (the default branch in this repository).
 
 ### Deployments
 
-Because of the use of Jekyll gems that GitHub doesn't support, this site needs to use a 3rd Party instead of GitHub Pages to compile the code. So, when CircleCI runs on the `source` branch, not only does it bundle all of the dependencies and build the site, but it also puts it into a special `./_site` directory. Then, CircleCI will run a "deployment" to GitHub to upload that directory to the `master` branch of this GitHub repository. Then, GitHub Pages automatically deploys the commits in the `master` branch. In this way, we develop the site on a pull request, we merge source code into the `source` branch, and then CircleCI builds the code and commits that automagically to the `master` branch. Then GitHub Pages does their thing.
+Because of the use of Jekyll gems that GitHub doesn't support, this site needs to use a 3rd Party instead of GitHub Pages to compile the code. So, when GitHub Actions runs on the `source` branch, not only does it bundle all of the dependencies and build the site, but it also puts it into a special `./_site` directory. Then, GitHub Actions will run a "deployment" to GitHub to upload that directory to the `master` branch of this GitHub repository. Then, GitHub Pages automatically deploys the commits in the `master` branch. In this way, we develop the site on a pull request, we merge source code into the `source` branch, and then GitHub Actions builds the code and commits that automagically to the `master` branch. Then GitHub Pages does their thing.
 
 A full deployment only takes about five to ten minutes, but depending on what was changed (HTML files, images, etc), it can take up to about fifteen minutes to propagate the changes. To make the changes appear faster, you can reload the entire website in incognito mode.
 
 ### Notifications
 
-CircleCI sends a Slack notification indicating the build status after each build finishes (even on pull requests). The Slack notifications are sent to the Slack workspace [emmasax4](https://emmasax4.slack.com). You can ask for an invite to that workspace, but a final invite is not guaranteed. The workspace and notifications are set up for my personal usage, not for communciational purposes.
+GitHub Actions sends a Slack notification indicating the build status after each build finishes (even on pull requests). The Slack notifications are sent to the Slack workspace [emmasax4](https://emmasax4.slack.com). You can ask for an invite to that workspace, but a final invite is not guaranteed. The workspace and notifications are set up for my personal usage, not for communciational purposes.
 
 ## Collections vs. Categories vs. Tags
 
@@ -107,13 +107,17 @@ Please notice that in the code, we need to call a collection of related posts a 
 
 ## Directory/File Structure
 
-Here are all of the parts of this project associated with running this application. This list does not include files/directories related to GitHub, CircleCI, and Git.
+Here are all of the parts of this project associated with running this application. This list does not include files/directories related to Git.
 ```
 .
-├── .circleci
-|   ├── another-helpful-script.sh
-|   ├── config.yml
-|   └── helpful-script.sh
+├── .github
+|   ├── ISSUE_TEMPLATE
+|   |   └── template.md
+|   ├── workflows
+|   |   └── main.yml
+|   ├── another-file.md
+|   ├── file.md
+|   └── template.md
 ├── _includes
 |   ├── elements
 |   |   ├── button-one.html
@@ -174,9 +178,9 @@ Here are all of the parts of this project associated with running this applicati
 └── Gemfile.lock
 ```
 
-### `.circleci/`
+### `.github/`
 
-This site builds and "deploys" through CircleCI. Read more about how this repository uses CircleCI [here](#circleci). The additional script files are bash scripts to be used throughout the CircleCI workflows. They're pulled out into separate scripts for easier reading and understanding, and to help keep the CircleCI config file shorter and concise.
+This site builds and "deploys" through GitHub Actions.
 
 ### `_includes/`
 
@@ -320,7 +324,7 @@ When it's time to publish the post, you can either:
   * Add the future publishing date/time (typically 00:00:00 in the author's local time zone, properly identifying current the hour offset from UTC) to the post's front matter in the `date` value
   * Rename the file to have the publishing date in the title instead of whatever was there previously
   * Merge your pull request into the `source` branch
-  * Wait until CircleCI builds the newest version around midnight in CST on the day of publishing (or rerun the latest `source` build [here](https://circleci.com/gh/emma-sax4/emma-sax4.github.io/tree/source) on the day of publishing)
+  * Wait until GitHub Actions builds the newest version around midnight in CST on the day of publishing (or rerun the latest `source` build on the day of publishing)
 
 To identify the current hour offset from UTC, look up the time zone offset based on your location [here](https://www.timeanddate.com/time/zone/).
 
