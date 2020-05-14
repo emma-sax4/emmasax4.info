@@ -44,7 +44,8 @@ jobs:
         CLEAN_EXCLUDE: '[".git", ".circleci", ".github"]'
 
     - name: Check status
-      run: echo ${{ steps.deployment.env.DEPLOYMENT_STATUS }}
+      run: |
+        echo "Status is: ${{ steps.deployment.outputs.DEPLOYMENT_STATUS }}"
 
     - name: Notify Slack on Success
       if: success()
