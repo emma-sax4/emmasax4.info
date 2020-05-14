@@ -26,6 +26,14 @@ jobs:
       run: JEKYLL_ENV=production bundle exec jekyll build --destination ./_site/
     - name: HTML Proofer
       run: .github/workflows/html-proofer.sh
+    - name: GitHub Pages Deploy
+      uses: JamesIves/github-pages-deploy-action@releases/v3
+      with:
+        ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        BRANCH: master
+        FOLDER: _site
+        COMMIT_MESSAGE: 'Deploy to ${{ github.repository }}.git:master via GitHub Actions'
+        CLEAN_EXCLUDE: '[".git", ".circleci", ".github"]'
     - name: Notify Slack on Success
       if: success()
       uses: emma-sax4/action-slacker@emmasax4_action_slacker
