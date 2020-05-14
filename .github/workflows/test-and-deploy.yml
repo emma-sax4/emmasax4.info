@@ -54,7 +54,7 @@ jobs:
         channel: '#general'
         icon_url: https://img.icons8.com/ios-filled/50/000000/github.png
         username: GitHub Actions
-        color: '#17e625'
+        color: '#23c22e'
         title: ${{ github.repository }}
         title_link: https://github.com/${{ github.repository }}
         author_name: ${{ github.actor }}
@@ -71,7 +71,7 @@ jobs:
         channel: '#general'
         icon_url: https://img.icons8.com/ios-filled/50/000000/github.png
         username: GitHub Actions
-        color: '#d11515'
+        color: '#bd2222'
         title: ${{ github.repository }}
         title_link: https://github.com/${{ github.repository }}
         author_name: ${{ github.actor }}
