@@ -16,7 +16,6 @@ jobs:
       uses: actions/checkout@v1
 
     - name: Switch to Current Branch
-      if: github.head_ref != ''
       run: git checkout $(echo ${{ github.head_ref }} | sed -E 's|refs/[a-zA-Z]+/||')
 
     - name: Configure Bundler
@@ -95,7 +94,6 @@ jobs:
       uses: actions/checkout@v1
 
     - name: Switch to Current Branch
-      if: github.head_ref == ''
       run: git checkout $(echo ${{ github.ref }} | sed -E 's|refs/[a-zA-Z]+/||')
 
     - name: Configure Bundler
