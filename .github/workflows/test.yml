@@ -45,6 +45,9 @@ jobs:
         GIT_CONFIG_NAME: github-actions[bot]
         CLEAN_EXCLUDE: '[".git", ".circleci", ".github"]'
 
+    - name: Verify Deploy Status
+      run: echo "::set-env name=DEPLOYMENT_STATUS::$DEPLOYMENT_STATUS"
+
     - name: Notify Slack on Success
       if: success()
       uses: emma-sax4/action-slacker@emmasax4_action_slacker
