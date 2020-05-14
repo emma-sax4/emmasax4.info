@@ -10,6 +10,8 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v1
+    - name: Prepare Repository
+      run: git checkout "${GITHUB_REF:11}"
     - name: Configure Bundler
       run: sudo gem install bundler -v $(cat Gemfile.lock | tail -1 | tr -d ' ')
     - name: Configure Gem Cache
@@ -24,6 +26,11 @@ jobs:
       run: JEKYLL_ENV=production bundle exec jekyll build --destination ./_site/
     - name: HTML Proofer
       run: .github/workflows/html-proofer.sh
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: Jekyll Site
+        path: _site/
     - name: Notify Slack on Success
       if: success()
       uses: emma-sax4/action-slacker@emmasax4_action_slacker
