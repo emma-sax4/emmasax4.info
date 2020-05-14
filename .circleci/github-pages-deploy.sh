@@ -10,14 +10,14 @@ mv ./_site/* .
 rm -R ./_site/
 
 git add -fA
-git commit -m "Deploy to $CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME.git:master via CircleCI"
-PUSH_STATUS=$(git push origin master 2>&1)
+# git commit -m "Deploy to $CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME.git:master via CircleCI"
+# PUSH_STATUS=$(git push origin master 2>&1)
 
-if [[ $PUSH_STATUS == "Everything up-to-date" ]]; then
+# if [[ $PUSH_STATUS == "Everything up-to-date" ]]; then
   m="Nothing to commit to \`master\` branch. Deploy to GitHub Pages was *skipped*"
-else
-  m="Deploy to GitHub Pages was *successful*"
-fi
+# else
+#   m="Deploy to GitHub Pages was *successful*"
+# fi
 
 echo "export DEPLOY_MESSAGE='$m'" >> $BASH_ENV
 source $BASH_ENV
