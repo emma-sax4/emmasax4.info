@@ -40,7 +40,7 @@ jobs:
     - name: GitHub Pages Deploy
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
-        ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         BRANCH: master
         FOLDER: _site
         COMMIT_MESSAGE: 'Deploy to ${{ github.repository }}.git:master via GitHub Actions'
