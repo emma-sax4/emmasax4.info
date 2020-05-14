@@ -41,7 +41,7 @@ jobs:
 
     - name: GitHub Pages Deploy
       uses: JamesIves/github-pages-deploy-action@releases/v3
-      id: deploy
+      id: deployment
       with:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         BRANCH: master
@@ -64,7 +64,7 @@ jobs:
         author_name: ${{ github.actor }}
         author_link: https://github.com/${{ github.actor }}
         author_icon: https://github.com/${{ github.actor }}.png
-        text: 'Build #${{ github.run_id }} for event ${{ github.event_name }} *passed*. GitHub Pages deployment: *${{ steps.deploy.outputs.DEPLOYMENT_STATUS }}*.'
+        text: 'Build #${{ github.run_id }} for event ${{ github.event_name }} *passed*. GitHub Pages deployment: ${{ steps.deployment.outputs.DEPLOYMENT_STATUS }}.'
         footer: 'Ref: ${{ github.ref }}'
 
     - name: Notify Slack on Failure
@@ -82,7 +82,7 @@ jobs:
         author_name: ${{ github.actor }}
         author_link: https://github.com/${{ github.actor }}
         author_icon: https://github.com/${{ github.actor }}.png
-        text: 'Build #${{ github.run_id }} for event ${{ github.event_name }} *failed*. GitHub Pages deployment: *${{ steps.deploy.outputs.DEPLOYMENT_STATUS }}*.'
+        text: 'Build #${{ github.run_id }} for event ${{ github.event_name }} *failed*. GitHub Pages deployment: ${{ steps.deployment.outputs.DEPLOYMENT_STATUS }}.'
         footer: 'Ref: ${{ github.ref }}'
 
     # - name: Notify Slack on Success
