@@ -45,7 +45,7 @@ jobs:
 
     - name: Check status
       run: |
-        echo "Status is: ${{ deployment.DEPLOYMENT_STATUS }}"
+        echo "Status is: ${{ steps.deployment.DEPLOYMENT_STATUS }}"
 
     - name: Notify Slack on Success
       if: success()
