@@ -1,9 +1,9 @@
-name: Develop
+name: Release
 on:
   push:
     branches: [ source ]
   schedule:
-  - cron: '30 5 * * 1' # On Mondays: 05:30 UTC => 00:30 CDT / 23:30 CST
+    - cron: '30 5 * * 1' # On Mondays: 05:30 UTC => 00:30 CDT / 23:30 CST
 
 jobs:
   build:
@@ -49,7 +49,7 @@ jobs:
         author_name: ${{ github.actor }}
         author_link: https://github.com/${{ github.actor }}
         author_icon: https://github.com/${{ github.actor }}.png
-        text: 'Build #${{ github.run_id }} on `${{ github.ref }}` *passed*.'
+        text: 'Build #${{ github.run_id }} on `${{ github.ref }}` *passed*. Deploy to GitHub Pages was *successful*.'
         footer: 'Event: ${{ github.event_name }}'
     - name: Notify Slack on Failure
       if: failure()
@@ -66,5 +66,5 @@ jobs:
         author_name: ${{ github.actor }}
         author_link: https://github.com/${{ github.actor }}
         author_icon: https://github.com/${{ github.actor }}.png
-        text: 'Build #${{ github.run_id }} on `${{ github.ref }}` *failed*.'
+        text: 'Build #${{ github.run_id }} on `${{ github.ref }}` *failed*. Deploy to GitHub Pages was *skipped*.'
         footer: 'Event: ${{ github.event_name }}'
