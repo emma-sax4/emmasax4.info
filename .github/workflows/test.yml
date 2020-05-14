@@ -50,8 +50,8 @@ jobs:
         author_name: ${{ github.actor }}
         author_link: https://github.com/${{ github.actor }}
         author_icon: https://github.com/${{ github.actor }}.png
-        text: 'Build #${{ github.run_id }} on `${{ github.ref }}` *passed*.'
-        footer: 'Event: ${{ github.event_name }}'
+        text: 'Build #${{ github.run_id }} for event ${{ github.event_name }} *passed*.'
+        footer: 'Ref: ${{ github.ref }}'
     - name: Notify Slack on Failure
       if: failure()
       uses: emma-sax4/action-slacker@emmasax4_action_slacker
@@ -67,5 +67,5 @@ jobs:
         author_name: ${{ github.actor }}
         author_link: https://github.com/${{ github.actor }}
         author_icon: https://github.com/${{ github.actor }}.png
-        text: 'Build #${{ github.run_id }} on `${{ github.ref }}` *failed*.'
-        footer: 'Event: ${{ github.event_name }}'
+        text: 'Build #${{ github.run_id }} for event ${{ github.event_name }} *failed*.'
+        footer: 'Ref: ${{ github.ref }}'
