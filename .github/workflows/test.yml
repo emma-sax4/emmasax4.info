@@ -41,11 +41,9 @@ jobs:
         BRANCH: master
         FOLDER: _site
         COMMIT_MESSAGE: 'Deploy to ${{ github.repository }}.git:master via GitHub Actions'
+        GIT_CONFIG_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
+        GIT_CONFIG_NAME: github-actions[bot]
         CLEAN_EXCLUDE: '[".git", ".circleci", ".github"]'
-
-    - name: Check status
-      run: |
-        echo "Status is: $DEPLOYMENT_STATUS"
 
     - name: Notify Slack on Success
       if: success()
@@ -62,7 +60,7 @@ jobs:
         author_name: ${{ github.actor }}
         author_link: https://github.com/${{ github.actor }}
         author_icon: https://github.com/${{ github.actor }}.png
-        text: 'Build #${{ github.run_id }} for event ${{ github.event_name }} *passed*. GitHub Pages deployment: ${{ steps.deployment.outputs.deployment_status }}.'
+        text: 'Build #${{ github.run_id }} for event ${{ github.event_name }} *passed*. GitHub Pages deployment: *$DEPLOYMENT_STATUS*.'
         footer: 'Ref: ${{ github.ref }}'
 
     - name: Notify Slack on Failure
@@ -80,7 +78,7 @@ jobs:
         author_name: ${{ github.actor }}
         author_link: https://github.com/${{ github.actor }}
         author_icon: https://github.com/${{ github.actor }}.png
-        text: 'Build #${{ github.run_id }} for event ${{ github.event_name }} *failed*. GitHub Pages deployment: ${{ steps.deployment.outputs.deployment_status }}.'
+        text: 'Build #${{ github.run_id }} for event ${{ github.event_name }} *failed*. GitHub Pages deployment: *$DEPLOYMENT_STATUS*.'
         footer: 'Ref: ${{ github.ref }}'
 
     # - name: Notify Slack on Success
