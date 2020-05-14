@@ -40,7 +40,7 @@ jobs:
         path: _site/
 
     - name: GitHub Pages Deploy
-      uses: JamesIves/github-pages-deploy-action@dev
+      uses: JamesIves/github-pages-deploy-action@releases/v3
       id: deploy
       with:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
