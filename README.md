@@ -1,4 +1,4 @@
-# emma-sax4.github.io [![CircleCI](https://circleci.com/gh/emma-sax4/emma-sax4.github.io.svg?style=shield)](https://circleci.com/gh/emma-sax4/emma-sax4.github.io) [![Maintainability](https://api.codeclimate.com/v1/badges/a9161347b2a122a15ec3/maintainability)](https://codeclimate.com/github/emma-sax4/emma-sax4.github.io/maintainability)
+# emma-sax4.github.io ![Release](https://github.com/emma-sax4/emma-sax4.github.io/workflows/Release/badge.svg?branch=source&event=push) [![CircleCI](https://circleci.com/gh/emma-sax4/emma-sax4.github.io.svg?style=shield)](https://circleci.com/gh/emma-sax4/emma-sax4.github.io) [![Maintainability](https://api.codeclimate.com/v1/badges/a9161347b2a122a15ec3/maintainability)](https://codeclimate.com/github/emma-sax4/emma-sax4.github.io/maintainability)
 
 **Live site: [https://emmasax4.info](https://emmasax4.info)**
 
