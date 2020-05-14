@@ -37,10 +37,12 @@ jobs:
           ./_site/
     - name: Notify Slack
       if: success()
-      env:
-        SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
-      uses: voxmedia/github-action-slack-notify-build@v1
+      uses: cemkiy/action-slacker@master
       with:
-        channel: general
-        status: SUCCESS
-        color: good
+        channel: '#general'
+        icon_url: https://img.icons8.com/ios-filled/50/000000/github.png
+        username: 'GitHub Actions'
+        color: '#17e625'
+        text: 'Build #${{ github.run_id }} of ${{ github.repository }} from event ${{ github.event_name }} on branch `${{ github.ref }}` by ${{ github.actor }} *passed*.'
+      env:
+        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
