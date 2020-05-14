@@ -10,6 +10,12 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v1
+    - name: Reattach HEAD to Head Ref
+      run: git checkout $(echo ${{ github.head_ref }} | sed -E 's|refs/[a-zA-Z]+/||')
+      if: github.head_ref != ''
+    - name: Reattach HEAD to Head Ref
+      run: git checkout $(echo ${{ github.ref }} | sed -E 's|refs/[a-zA-Z]+/||')
+      if: github.head_ref == ''
     - name: Configure Bundler
       run: sudo gem install bundler -v $(cat Gemfile.lock | tail -1 | tr -d ' ')
     - name: Configure Gem Cache
@@ -24,6 +30,11 @@ jobs:
       run: JEKYLL_ENV=production bundle exec jekyll build --destination ./_site/
     - name: HTML Proofer
       run: .github/workflows/html-proofer.sh
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: Jekyll Site
+        path: _site/
     - name: Notify Slack on Success
       if: success()
       uses: emma-sax4/action-slacker@emmasax4_action_slacker
@@ -33,14 +44,14 @@ jobs:
         channel: '#general'
         icon_url: https://img.icons8.com/ios-filled/50/000000/github.png
         username: GitHub Actions
-        color: '#17e625'
+        color: '#23c22e'
         title: ${{ github.repository }}
         title_link: https://github.com/${{ github.repository }}
         author_name: ${{ github.actor }}
         author_link: https://github.com/${{ github.actor }}
         author_icon: https://github.com/${{ github.actor }}.png
-        text: 'Build #${{ github.run_id }} on `${{ github.ref }}` *passed*.'
-        footer: 'Event: ${{ github.event_name }}'
+        text: 'Build #${{ github.run_id }} for event ${{ github.event_name }} *passed*.'
+        footer: 'Ref: ${{ github.ref }}'
     - name: Notify Slack on Failure
       if: failure()
       uses: emma-sax4/action-slacker@emmasax4_action_slacker
@@ -50,11 +61,11 @@ jobs:
         channel: '#general'
         icon_url: https://img.icons8.com/ios-filled/50/000000/github.png
         username: GitHub Actions
-        color: '#d11515'
+        color: '#bd2222'
         title: ${{ github.repository }}
         title_link: https://github.com/${{ github.repository }}
         author_name: ${{ github.actor }}
         author_link: https://github.com/${{ github.actor }}
         author_icon: https://github.com/${{ github.actor }}.png
-        text: 'Build #${{ github.run_id }} on `${{ github.ref }}` *failed*.'
-        footer: 'Event: ${{ github.event_name }}'
+        text: 'Build #${{ github.run_id }} for event ${{ github.event_name }} *failed*.'
+        footer: 'Ref: ${{ github.ref }}'
