@@ -1,11 +1,11 @@
 name: Develop
 on:
-  pull_request:
+  push:
     branches: [ source ]
 
 jobs:
   build:
-    name: Test
+    name: Test and Deploy
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
