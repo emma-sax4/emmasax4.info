@@ -27,7 +27,8 @@ jobs:
     - name: Notify Slack on Success
       if: success()
       uses: emma-sax4/action-slacker@emmasax4_action_slacker
-      env: { SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }} }
+      env:
+        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
       with:
         channel: '#general'
         icon_url: https://img.icons8.com/ios-filled/50/000000/github.png
@@ -43,7 +44,8 @@ jobs:
     - name: Notify Slack on Failure
       if: failure()
       uses: emma-sax4/action-slacker@emmasax4_action_slacker
-      env: { SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }} }
+      env:
+        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
       with:
         channel: '#general'
         icon_url: https://img.icons8.com/ios-filled/50/000000/github.png
