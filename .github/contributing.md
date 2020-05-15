@@ -79,7 +79,7 @@ bundle exec htmlproofer --assume-extension --allow-hash-href --internal-domains 
 
 If you're in the process of creating a new blog post, then most likely the external link to the new blog post will fail. This makes sense—the blog post isn't live online yet, and that's what the link is checking for.
 
-GitHub Actions also runs a version of the HTML Proofer which skips over all internal domains and ignores LinkedIn, Maasai Mara, and Digi-Key domains. GitHub Actions runs this step after building, just verifying that links are accurate. If a build breaks because of this, the failures can probably be solved by just rerunning the workflow.
+GitHub Actions also runs a version of the HTML Proofer which skips over all internal domains. GitHub Actions runs this step after building, just verifying that links are accurate. If a build breaks because of this, the failures can probably be solved by just rerunning the workflow.
 
 ## Continuous Integration
 
@@ -323,8 +323,11 @@ When it's time to publish the post, you can either:
 * Publish the post on a future date:
   * Add the future publishing date/time (typically 00:00:00 in the author's local time zone, properly identifying current the hour offset from UTC) to the post's front matter in the `date` value
   * Rename the file to have the publishing date in the title instead of whatever was there previously
-  * Merge your pull request into the `source` branch
-  * Wait until GitHub Actions builds the newest version around midnight in CST on the day of publishing (or rerun the latest `source` build on the day of publishing)
+  * Re-add and commit those files to the pull request
+  * Change the `.github/workflows/auto_merge_pull_requests.yml` cron schedule to be the publish date/time in UTC (you can set the day of the week, day of the month, and the month to run your merge)
+  * Re-add and commit that file to the pull request
+  * Add the `auto-merge` label to the pull request
+  * Wait until GitHub Actions auto-merges your pull request, and then will trigger a build and deploy of your changes
 
 To identify the current hour offset from UTC, look up the time zone offset based on your location [here](https://www.timeanddate.com/time/zone/).
 
