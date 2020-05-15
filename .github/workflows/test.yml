@@ -53,13 +53,7 @@ jobs:
 
     - name: Set Deploy Notification Message
       run: |
-        if [[ ${{ env.DEPLOYMENT_STATUS }} == skipped ]]; then
-          echo "::set-env name=DEPLOY_MESSAGE::$(echo Deploy to GitHub Pages was *skipped*)"
-        elsif [[ ${{ env.DEPLOYMENT_STATUS }} == success ]]; then
-          echo "::set-env name=DEPLOY_MESSAGE::$(echo Deploy to GitHub Pages was *successful*)"
-        elsif [[ ${{ env.DEPLOYMENT_STATUS }} == failed ]]; then
-          echo "::set-env name=DEPLOY_MESSAGE::$(echo Deploy to GitHub Pages was *unsuccessful*)"
-        fi
+        if [[ ${{ env.DEPLOYMENT_STATUS }} == skipped ]]; then echo "::set-env name=DEPLOY_MESSAGE::$(echo Deploy to GitHub Pages was *skipped*)"; elsif [[ ${{ env.DEPLOYMENT_STATUS }} == success ]]; then echo "::set-env name=DEPLOY_MESSAGE::$(echo Deploy to GitHub Pages was *successful*)"; elsif [[ ${{ env.DEPLOYMENT_STATUS }} == failed ]]; then echo "::set-env name=DEPLOY_MESSAGE::$(echo Deploy to GitHub Pages was *unsuccessful*)"; fi
 
     - name: Notify Slack on Success
       if: success()
@@ -79,7 +73,6 @@ jobs:
         text: >-
           Build <${{ env.BUILD_URL }}|${{ github.run_id }}> on branch `${{ env.BRANCH }}`
           in PR <${{ env.PULL_URL }}|#${{ env.PULL_ID }}> *passed*. ${{ env.DEPLOY_MESSAGE }}.
-        footer: 'GitHub SHA: ${{ github.sha }}'
 
     - name: Notify Slack on Failure
       if: failure()
@@ -99,4 +92,3 @@ jobs:
         text: >-
           Build <${{ env.BUILD_URL }}|${{ github.run_id }}> on branch `${{ env.BRANCH }}`
           in PR <${{ env.PULL_URL }}|#${{ env.PULL_ID }}> *failed*. ${{ env.DEPLOY_MESSAGE }}.
-        footer: 'GitHub SHA: ${{ github.sha }}'

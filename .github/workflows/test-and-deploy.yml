@@ -13,8 +13,13 @@ jobs:
     - name: Checkout Code
       uses: actions/checkout@v1
 
+    - name: Define Variables
+      run: |
+        echo "::set-env name=BRANCH::$(echo ${{ github.ref }} | sed -E 's|refs/[a-zA-Z]+/||')"
+        echo "::set-env name=BUILD_URL::$(echo https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})"
+
     - name: Switch to Current Branch
-      run: git checkout $(echo ${{ github.ref }} | sed -E 's|refs/[a-zA-Z]+/||')
+      run: git checkout ${{ env.BRANCH }}
 
     - name: Configure Bundler
       run: sudo gem install bundler -v $(cat Gemfile.lock | tail -1 | tr -d ' ')
@@ -45,6 +50,16 @@ jobs:
         GIT_CONFIG_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
         GIT_CONFIG_NAME: github-actions[bot]
 
+    - name: Set Slack Deploy Notification
+      run: |
+        if [[ ${{ env.DEPLOYMENT_STATUS }} == "skipped" ]]; then
+          echo "::set-env name=DEPLOY_MESSAGE::$(echo Deploy to GitHub Pages was *skipped*)"
+        elsif [[ ${{ env.DEPLOYMENT_STATUS }} == "success" ]]; then
+          echo "::set-env name=DEPLOY_MESSAGE::$(echo Deploy to GitHub Pages was *successful*)"
+        elsif [[ ${{ env.DEPLOYMENT_STATUS }} == "success" ]]; then
+          echo "::set-env name=DEPLOY_MESSAGE::$(echo Deploy to GitHub Pages was *unsuccessful*)"
+        fi
+
     - name: Notify Slack on Success
       if: success()
       uses: emma-sax4/action-slacker@emmasax4_action_slacker
@@ -60,8 +75,8 @@ jobs:
         author_name: ${{ github.actor }}
         author_link: https://github.com/${{ github.actor }}
         author_icon: https://github.com/${{ github.actor }}.png
-        text: 'Build #${{ github.run_id }} for event `${{ github.event_name }}` *passed*. Deploy to GitHub Pages: *${{ env.DEPLOYMENT_STATUS }}*.'
-        footer: 'Ref: ${{ github.ref }}'
+        text: >-
+          Build <${{ env.BUILD_URL }}|${{ github.run_id }}> on branch `${{ env.BRANCH }}` *passed*. ${{ env.DEPLOY_MESSAGE }}.
 
     - name: Notify Slack on Failure
       if: failure()
@@ -78,5 +93,5 @@ jobs:
         author_name: ${{ github.actor }}
         author_link: https://github.com/${{ github.actor }}
         author_icon: https://github.com/${{ github.actor }}.png
-        text: 'Build #${{ github.run_id }} for event `${{ github.event_name }}` *failed*. Deploy to GitHub Pages: *${{ env.DEPLOYMENT_STATUS }}*.'
-        footer: 'Ref: ${{ github.ref }}'
+        text: >-
+          Build <${{ env.BUILD_URL }}|${{ github.run_id }}> on branch `${{ env.BRANCH }}` *failed*. ${{ env.DEPLOY_MESSAGE }}.
