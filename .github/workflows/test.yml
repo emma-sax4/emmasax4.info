@@ -57,9 +57,8 @@ jobs:
         author_link: https://github.com/${{ github.actor }}
         author_icon: https://github.com/${{ github.actor }}.png
         text: >-
-          Build <${{ env.BUILD_URL }}|${{ github.run_id }}>
-          on branch `${{ env.BRANCH }}` in PR <${{ env.PULL_URL }}|${{ env.PULL_ID }}>
-          *passed*.
+          Build <${{ env.BUILD_URL }}|${{ github.run_id }}> on branch `${{ env.BRANCH }}`
+          in PR <${{ env.PULL_URL }}|#${{ env.PULL_ID }}> *passed*.
         footer: 'GitHub SHA: ${{ github.sha }}'
 
     - name: Notify Slack on Failure
@@ -78,7 +77,6 @@ jobs:
         author_link: https://github.com/${{ github.actor }}
         author_icon: https://github.com/${{ github.actor }}.png
         text: >-
-          Build <${{ env.BUILD_URL }}|${{ github.run_id }}>
-          on branch `${{ env.BRANCH }}` in PR <${{ env.PULL_URL }}|${{ env.PULL_ID }}>
-          *failed*.
+          Build <${{ env.BUILD_URL }}|${{ github.run_id }}> on branch `${{ env.BRANCH }}`
+          in PR <${{ env.PULL_URL }}|#${{ env.PULL_ID }}> *failed*.
         footer: 'GitHub SHA: ${{ github.sha }}'
