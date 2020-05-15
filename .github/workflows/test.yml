@@ -3,7 +3,7 @@ on:
   pull_request:
     branches: [ source ]
 
-base: &slack_info
+slack_info: &slack_info
   channel: '#general'
   icon_url: https://img.icons8.com/ios-filled/50/000000/github.png
   username: GitHub Actions
@@ -53,8 +53,7 @@ jobs:
 
     - name: Set Slack Message
       run: |
-        echo "::set-env name=MESSAGE::$(echo Build <${{ env.BUILD_URL }}|${{ github.run_id }}> on branch `${{ env.BRANCH }}`
-          in PR <${{ env.PULL_URL }}|#${{ env.PULL_ID }}>)"
+        echo "::set-env name=MESSAGE::$(echo Build <${{ env.BUILD_URL }}|${{ github.run_id }}> on branch `${{ env.BRANCH }}` in PR <${{ env.PULL_URL }}|#${{ env.PULL_ID }}>)"
 
     - name: Notify Slack on Success
       if: success()
