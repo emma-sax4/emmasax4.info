@@ -13,8 +13,8 @@ jobs:
 
     - name: Switch to Current Branch
       run: |
-        echo "::set-env name=BRANCH::$(${{ github.head_ref }} | sed -E 's|refs/[a-zA-Z]+/||')"
-        git checkout ${{ env.BRANCH }}
+        echo "::set-env name=BRANCH::$(echo ${{ github.head_ref }} | sed -E 's|refs/[a-zA-Z]+/||')"
+        git checkout $(echo ${{ github.head_ref }} | sed -E 's|refs/[a-zA-Z]+/||')
 
     - name: Configure Bundler
       run: sudo gem install bundler -v $(cat Gemfile.lock | tail -1 | tr -d ' ')
