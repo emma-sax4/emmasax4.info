@@ -13,10 +13,11 @@ jobs:
 
     - name: Define Variables
       run: |
+        pull_id=$(echo ${{ github.ref }} | sed -E 's|refs/pull/||' | sed -E 's|/merge||')
+        echo "::set-env name=PULL_ID::$pull_id"
+        echo "::set-env name=PULL_URL::$(echo https://github.com/${{ github.repository }}/pull/$pull_id)"
         echo "::set-env name=BRANCH::$(echo ${{ github.head_ref }} | sed -E 's|refs/[a-zA-Z]+/||')"
         echo "::set-env name=BUILD_URL::$(echo https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})"
-        echo "::set-env name=PULL_ID::$(echo ${{ github.ref }} | sed -E 's|refs/||' | sed -E 's|/merge||')"
-        echo "::set-env name=PULL_URL::$(echo https://github.com/${{ github.repository }}/${{ env.PULL_ID }})"
 
     - name: Switch to Current Branch
       run: git checkout ${{ env.BRANCH }}
@@ -57,9 +58,9 @@ jobs:
         author_icon: https://github.com/${{ github.actor }}.png
         text: >-
           Build <${{ env.BUILD_URL }}|${{ github.run_id }}>
-          on branch `${{ env.BRANCH }}` in PR <${{ env.PULL_URL }}|${{ ENV.PULL_ID }}>
+          on branch `${{ env.BRANCH }}` in PR <${{ env.PULL_URL }}|${{ env.PULL_ID }}>
           *passed*.
-        footer: 'Ref: ${{ github.sha }}'
+        footer: 'GitHub SHA: ${{ github.sha }}'
 
     - name: Notify Slack on Failure
       if: failure()
@@ -78,6 +79,6 @@ jobs:
         author_icon: https://github.com/${{ github.actor }}.png
         text: >-
           Build <${{ env.BUILD_URL }}|${{ github.run_id }}>
-          on branch `${{ env.BRANCH }}` in PR <${{ env.PULL_URL }}|${{ ENV.PULL_ID }}>
+          on branch `${{ env.BRANCH }}` in PR <${{ env.PULL_URL }}|${{ env.PULL_ID }}>
           *failed*.
-        footer: 'Ref: ${{ github.sha }}'
+        footer: 'GitHub SHA: ${{ github.sha }}'
