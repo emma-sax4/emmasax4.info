@@ -4,7 +4,7 @@
 - [Contribution Process](#contribution-process)
 - [Running Locally](#running-locally)
 - [HTML Proofer](#html-proofer)
-- [CircleCI](#circleci)
+- [Continuous Integration](#continuous-integration)
   * [Tests](#tests)
   * [Deployments](#deployments)
   * [Notifications](#notifications)
@@ -83,23 +83,21 @@ GitHub Actions also runs a version of the HTML Proofer which skips over all inte
 
 ## Continuous Integration
 
-### CircleCI is deprecated. We are switching to GitHub Actions, which is defined in the [`.github/workflows/config.yml`](https://github.com/emma-sax4/emma-sax4.github.io/blob/source/.github/workflows/config.yml).
-
-This repository uses CircleCI for several continuous integration tools. See the full `.circleci/config.yml` [here](https://github.com/emma-sax4/emma-sax4.github.io/blob/source/.circleci/config.yml).
+This repository uses GitHub Actions for continuous integration tools. See the full workflows [here](https://github.com/emma-sax4/emma-sax4.github.io/blob/source/.github/workflows).
 
 ### Tests
 
-This repository doesn't really have any unit or integration tests (Jekyll sites are just a host of static site files, so there's not really any functionality to test). However, GitHub Actions does check that `bundler` can install the necessary dependencies and that Jekyll can properly build the site on each pull request and each commit to the `source` branch (the default branch in this repository).
+This repository doesn't really have any unit or integration tests (Jekyll sites are just a host of static site files, so there's not really any functionality to test). However, GitHub Actions does check that Bundler can install the necessary dependencies and that Jekyll can properly build the site on each pull request and each commit to the `source` branch (the default branch in this repository). The tests are also run on a weekly cron (on Monday mornings) as a way of testing that the building continues to function as expected.
 
 ### Deployments
 
-Because of the use of Jekyll gems that GitHub doesn't support, this site needs to use a 3rd Party instead of GitHub Pages to compile the code. So, when GitHub Actions runs on the `source` branch, not only does it bundle all of the dependencies and build the site, but it also puts it into a special `./_site` directory. Then, GitHub Actions will run a "deployment" to GitHub to upload that directory to the `master` branch of this GitHub repository. Then, GitHub Pages automatically deploys the commits in the `master` branch. In this way, we develop the site on a pull request, we merge source code into the `source` branch, and then GitHub Actions builds the code and commits that automagically to the `master` branch. Then GitHub Pages does their thing.
+Because of the use of Jekyll gems that GitHub Pages doesn't support, this site needs to use a "3rd party" instead of GitHub Pages to compile the code. So, when GitHub Actions runs on the `source` branch, not only does it bundle all of the dependencies and build the site, but it also puts it into a special `./_site` directory. Then, GitHub Actions will run a "deployment" to GitHub Pages to upload that directory to the `master` branch of this GitHub repository. Then, GitHub Pages automatically deploys the commits in the `master` branch. In this way, we develop the site on a pull request, we merge pull request into the `source` branch, and then GitHub Actions builds the code and commits that automagically to the `master` branch. Then GitHub Pages does their thing.
 
-A full deployment only takes about five to ten minutes, but depending on what was changed (HTML files, images, etc), it can take up to about fifteen minutes to propagate the changes. To make the changes appear faster, you can reload the entire website in incognito mode.
+A full deployment (including GitHub Actions and GitHub Pages) only takes about five to ten minutes, but depending on what was changed (HTML files, images, etc), it can take up to about fifteen minutes to propagate the changes. To make the changes appear faster, you can reload the entire website in incognito mode.
 
 ### Notifications
 
-GitHub Actions sends a Slack notification indicating the build status after each build finishes (even on pull requests). The Slack notifications are sent to the Slack workspace [emmasax4](https://emmasax4.slack.com). You can ask for an invite to that workspace, but a final invite is not guaranteed. The workspace and notifications are set up for my personal usage, not for communciational purposes.
+GitHub Actions sends a Slack notification indicating the build status after each action build finishes (even on pull requests). The Slack notifications are sent to the Slack workspace [emmasax4](https://emmasax4.slack.com). You can ask for an invite to that workspace, but a final invite is not guaranteed. The workspace and notifications are set up for my personal usage, not for communciational purposes.
 
 ## Collections vs. Categories vs. Tags
 
@@ -323,10 +321,12 @@ When it's time to publish the post, you can either:
 * Publish the post on a future date:
   * Add the future publishing date/time (typically 00:00:00 in the author's local time zone, properly identifying current the hour offset from UTC) to the post's front matter in the `date` value
   * Rename the file to have the publishing date in the title instead of whatever was there previously
-  * Re-add and commit those files to the pull request
-  * Change the `.github/workflows/auto_merge_pull_requests.yml` cron schedule to be the publish date/time in UTC (you can set the day of the week, day of the month, and the month to run your merge)
   * Re-add and commit that file to the pull request
+  * Wait for your pull request's tests to finish
   * Add the `auto-merge` label to the pull request
+  * Switch to the `source` branch
+  * Change the `.github/workflows/auto_merge_pull_requests.yml` cron schedule to be the publish date/time in UTC (you can set the day of the week, day of the month, and the month to run your merge)
+  * Re-add and commit that file to the default branch directly
   * Wait until GitHub Actions auto-merges your pull request, and then will trigger a build and deploy of your changes
 
 To identify the current hour offset from UTC, look up the time zone offset based on your location [here](https://www.timeanddate.com/time/zone/).
