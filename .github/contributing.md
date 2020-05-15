@@ -79,7 +79,7 @@ bundle exec htmlproofer --assume-extension --allow-hash-href --internal-domains 
 
 If you're in the process of creating a new blog post, then most likely the external link to the new blog post will fail. This makes sense—the blog post isn't live online yet, and that's what the link is checking for.
 
-GitHub Actions also runs a version of the HTML Proofer which skips over all internal domains and ignores LinkedIn, Maasai Mara, and Digi-Key domains. GitHub Actions runs this step after building, just verifying that links are accurate. If a build breaks because of this, the failures can probably be solved by just rerunning the workflow.
+GitHub Actions also runs a version of the HTML Proofer which skips over all internal domains. GitHub Actions runs this step after building, just verifying that links are accurate. If a build breaks because of this, the failures can probably be solved by just rerunning the workflow.
 
 ## Continuous Integration
 
