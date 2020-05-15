@@ -1,13 +1,11 @@
-name: Release
+name: Cron
 on:
-  push:
-    branches: [ source ]
   schedule:
     - cron: '30 5 * * 1' # On Mondays: 05:30 UTC => 00:30 CDT / 23:30 CST
 
 jobs:
-  test-and-deploy:
-    name: Test and Deploy
+  test:
+    name: Test
     runs-on: ubuntu-latest
     steps:
     - name: Checkout Code
@@ -40,26 +38,6 @@ jobs:
     - name: HTML Proofer
       run: bundle exec htmlproofer --assume-extension --allow-hash-href --internal-domains /emmasax4.info/ --only_4xx ./_site/
 
-    - name: GitHub Pages Deploy
-      uses: JamesIves/github-pages-deploy-action@releases/v3
-      with:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        BRANCH: master
-        FOLDER: _site
-        COMMIT_MESSAGE: 'Deploy to ${{ github.repository }}.git:master'
-        GIT_CONFIG_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
-        GIT_CONFIG_NAME: github-actions[bot]
-
-    - name: Set Deploy Status Message
-      run: |
-        if [[ ${{ env.DEPLOYMENT_STATUS }} == skipped ]]; then
-          echo "::set-env name=DEPLOY_MESSAGE::$(echo Deploy to GitHub Pages was *skipped*)"
-        elif [[ ${{ env.DEPLOYMENT_STATUS }} == success ]]; then
-          echo "::set-env name=DEPLOY_MESSAGE::$(echo Deploy to GitHub Pages was *successful*)"
-        elif [[ ${{ env.DEPLOYMENT_STATUS }} == failed ]]; then
-          echo "::set-env name=DEPLOY_MESSAGE::$(echo Deploy to GitHub Pages was *unsuccessful*)"
-        fi
-
     - name: Notify Slack on Success
       if: success()
       uses: emma-sax4/action-slacker@emmasax4_action_slacker
@@ -75,9 +53,7 @@ jobs:
         author_name: ${{ github.actor }}
         author_link: https://github.com/${{ github.actor }}
         author_icon: https://github.com/${{ github.actor }}.png
-        text: >-
-          Build <${{ env.BUILD_URL }}|${{ github.run_id }}> on branch `${{ env.BRANCH }}`
-          *passed*. ${{ env.DEPLOY_MESSAGE }}.
+        text: Build <${{ env.BUILD_URL }}|${{ github.run_id }}> on branch `${{ env.BRANCH }}` *passed*.
 
     - name: Notify Slack on Failure
       if: failure()
@@ -94,6 +70,4 @@ jobs:
         author_name: ${{ github.actor }}
         author_link: https://github.com/${{ github.actor }}
         author_icon: https://github.com/${{ github.actor }}.png
-        text: >-
-          Build <${{ env.BUILD_URL }}|${{ github.run_id }}> on branch `${{ env.BRANCH }}`
-          *failed*. ${{ env.DEPLOY_MESSAGE }}.
+        text: Build <${{ env.BUILD_URL }}|${{ github.run_id }}> on branch `${{ env.BRANCH }}` *failed*.
