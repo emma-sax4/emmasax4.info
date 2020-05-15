@@ -43,7 +43,7 @@ jobs:
 
     - name: Set Slack Message
       run: |
-        echo "::set-env name=MESSAGE::$(echo Build <${{ env.BUILD_URL }}|${{ github.run_id }}> on branch `${{ env.BRANCH }}` in PR <${{ env.PULL_URL }}|#${{ env.PULL_ID }}>)"
+        echo "::set-env name=MESSAGE::$(echo Build <${{ env.BUILD_URL }}|${{ github.run_id }}> on branch \`${{ env.BRANCH }}\` in PR <${{ env.PULL_URL }}|#${{ env.PULL_ID }}>)"
 
     - name: Notify Slack on Success
       if: success()
