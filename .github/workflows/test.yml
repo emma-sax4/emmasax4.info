@@ -41,10 +41,6 @@ jobs:
     - name: HTML Proofer
       run: bundle exec htmlproofer --assume-extension --allow-hash-href --internal-domains /emmasax4.info/ --only_4xx ./_site/
 
-    - name: Set Slack Message
-      run: |
-        echo "::set-env name=MESSAGE::$(echo Build <${{ env.BUILD_URL }}|${{ github.run_id }}> on branch \`${{ env.BRANCH }}\` in PR <${{ env.PULL_URL }}|#${{ env.PULL_ID }}>)"
-
     - name: Notify Slack on Success
       if: success()
       uses: emma-sax4/action-slacker@emmasax4_action_slacker
@@ -60,7 +56,9 @@ jobs:
         author_link: https://github.com/${{ github.actor }}
         author_icon: https://github.com/${{ github.actor }}.png
         color: '#23c22e'
-        text: ${{ env.MESSAGE }} *passed*.
+        text: >-
+          Build <${{ env.BUILD_URL }}|${{ github.run_id }}> on branch `${{ env.BRANCH }}`
+          in PR <${{ env.PULL_URL }}|#${{ env.PULL_ID }}> *passed*.
 
     - name: Notify Slack on Failure
       if: failure()
@@ -77,4 +75,6 @@ jobs:
         author_link: https://github.com/${{ github.actor }}
         author_icon: https://github.com/${{ github.actor }}.png
         color: '#bd2222'
-        text: ${{ env.MESSAGE }} *failed*.
+        text: >-
+          Build <${{ env.BUILD_URL }}|${{ github.run_id }}> on branch `${{ env.BRANCH }}`
+          in PR <${{ env.PULL_URL }}|#${{ env.PULL_ID }}> *failed*.
