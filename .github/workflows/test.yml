@@ -53,7 +53,13 @@ jobs:
 
     - name: Set Deploy Notification Message
       run: |
-        if [[ ${{ env.DEPLOYMENT_STATUS }} == skipped ]]; then echo "::set-env name=DEPLOY_MESSAGE::$(echo Deploy to GitHub Pages was *skipped*)"; elsif [[ ${{ env.DEPLOYMENT_STATUS }} == success ]]; then echo "::set-env name=DEPLOY_MESSAGE::$(echo Deploy to GitHub Pages was *successful*)"; elsif [[ ${{ env.DEPLOYMENT_STATUS }} == failed ]]; then echo "::set-env name=DEPLOY_MESSAGE::$(echo Deploy to GitHub Pages was *unsuccessful*)"; fi
+        if [[ ${{ env.DEPLOYMENT_STATUS }} == skipped ]]; then
+          echo "::set-env name=DEPLOY_MESSAGE::$(echo Deploy to GitHub Pages was *skipped*)"
+        elif [[ ${{ env.DEPLOYMENT_STATUS }} == success ]]; then
+          echo "::set-env name=DEPLOY_MESSAGE::$(echo Deploy to GitHub Pages was *successful*)"
+        elif [[ ${{ env.DEPLOYMENT_STATUS }} == failed ]]; then
+          echo "::set-env name=DEPLOY_MESSAGE::$(echo Deploy to GitHub Pages was *unsuccessful*)"
+        fi
 
     - name: Notify Slack on Success
       if: success()
