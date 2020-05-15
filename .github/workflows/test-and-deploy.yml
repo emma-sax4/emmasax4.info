@@ -4,6 +4,7 @@ on:
     branches: [ source ]
   schedule:
     - cron: '30 5 * * 1' # On Mondays: 05:30 UTC => 00:30 CDT / 23:30 CST
+    - cron: '00 5 * * 5' # On Fridays: 05:00 UTC => 00:00 CDT
 
 jobs:
   test-and-deploy:
@@ -50,7 +51,7 @@ jobs:
         GIT_CONFIG_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
         GIT_CONFIG_NAME: github-actions[bot]
 
-    - name: Set Deploy Notification Message
+    - name: Set Deploy Status Message
       run: |
         if [[ ${{ env.DEPLOYMENT_STATUS }} == skipped ]]; then
           echo "::set-env name=DEPLOY_MESSAGE::$(echo Deploy to GitHub Pages was *skipped*)"
