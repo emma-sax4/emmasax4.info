@@ -1,24 +1,19 @@
 name: Auto-Merge Pull Requests
 on:
-  # Add a cron to determine what time you want to auto-merge your pull request(s). Crons are written in UTC:
-  # https://help.github.com/en/actions/reference/events-that-trigger-workflows#scheduled-events-schedule.
+  pull_request:
+    types:
+      - opened
+      - edited
   schedule:
-    - cron: '15 18 * * 5' # Friday at 1:15pm CDT
+    # Add a cron to determine what time you want to auto-merge your pull request(s). Crons are written in UTC:
+    # https://help.github.com/en/actions/reference/events-that-trigger-workflows#scheduled-events-schedule.
+    - cron: 0 * * * *
 
 jobs:
-  auto-merge:
+  merge-schedule:
     name: Auto-Merge
     runs-on: ubuntu-latest
     steps:
-      - name: Auto-Merge Pull Requests
-        uses: pascalgn/automerge-action@80acb0f883348dcfd0e526288f7d27a12b9333be
+      - uses: gr2m/merge-schedule-action@v1.x
         env:
           GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
-          MERGE_LABELS: auto-merge
-          MERGE_METHOD: squash
-          MERGE_COMMIT_MESSAGE: automatic
-          MERGE_FORKS: false
-          MERGE_RETRIES: 6
-          MERGE_RETRY_SLEEP: 10000
-          UPDATE_LABELS: auto-merge
-          UPDATE_METHOD: merge
