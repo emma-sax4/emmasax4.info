@@ -11,10 +11,13 @@ jobs:
     - name: Checkout Code
       uses: actions/checkout@v1
 
-    - name: Switch to Current Branch
+    - name: Define Variables
       run: |
         echo "::set-env name=BRANCH::$(echo ${{ github.head_ref }} | sed -E 's|refs/[a-zA-Z]+/||')"
-        git checkout $(echo ${{ github.head_ref }} | sed -E 's|refs/[a-zA-Z]+/||')
+        echo "::set-env name=BUILD_URL::$(echo https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})"
+
+    - name: Switch to Current Branch
+      run: git checkout ${{ env.BRANCH }}
 
     - name: Configure Bundler
       run: sudo gem install bundler -v $(cat Gemfile.lock | tail -1 | tr -d ' ')
@@ -51,7 +54,8 @@ jobs:
         author_link: https://github.com/${{ github.actor }}
         author_icon: https://github.com/${{ github.actor }}.png
         text: >-
-          Build <https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}|${{ github.run_id }}> on branch ${{ env.BRANCH }}
+          Build <${{ env.BUILD_URL }}|${{ github.run_id }}>
+          on branch `${{ env.BRANCH }}`
           *passed*.
         footer: 'Ref: ${{ github.ref }}'
 
@@ -71,6 +75,7 @@ jobs:
         author_link: https://github.com/${{ github.actor }}
         author_icon: https://github.com/${{ github.actor }}.png
         text: >-
-          Build <https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}|${{ github.run_id }}> on branch ${{ env.BRANCH }}
+          Build <${{ env.BUILD_URL }}|${{ github.run_id }}>
+          on branch `${{ env.BRANCH }}`
           *failed*.
         footer: 'Ref: ${{ github.ref }}'
