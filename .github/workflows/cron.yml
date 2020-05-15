@@ -2,6 +2,7 @@ name: Cron
 on:
   schedule:
     - cron: '30 5 * * 1' # On Mondays: 05:30 UTC => 00:30 CDT / 23:30 CST
+    - cron: '20 17 * * 5' # On Fridays: 17:20 UTC => 12:20 CDT
 
 jobs:
   test:
