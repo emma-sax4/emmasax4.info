@@ -7,7 +7,7 @@ on:
   schedule:
     # Add a cron to determine what time you want to auto-merge your pull request(s). Crons are written in UTC:
     # https://help.github.com/en/actions/reference/events-that-trigger-workflows#scheduled-events-schedule.
-    - cron: 0 * * * *
+    - cron: '*/5 * * * *'
 
 jobs:
   merge-schedule:
