@@ -3,16 +3,6 @@ on:
   pull_request:
     branches: [ source ]
 
-slack_info: &slack_info
-  channel: '#general'
-  icon_url: https://img.icons8.com/ios-filled/50/000000/github.png
-  username: GitHub Actions
-  title: ${{ github.repository }}
-  title_link: https://github.com/${{ github.repository }}
-  author_name: ${{ github.actor }}
-  author_link: https://github.com/${{ github.actor }}
-  author_icon: https://github.com/${{ github.actor }}.png
-
 jobs:
   test:
     name: Test
@@ -61,7 +51,14 @@ jobs:
       env:
         SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
       with:
-        <<: *slack_info
+        channel: '#general'
+        icon_url: https://img.icons8.com/ios-filled/50/000000/github.png
+        username: GitHub Actions
+        title: ${{ github.repository }}
+        title_link: https://github.com/${{ github.repository }}
+        author_name: ${{ github.actor }}
+        author_link: https://github.com/${{ github.actor }}
+        author_icon: https://github.com/${{ github.actor }}.png
         color: '#23c22e'
         text: ${{ env.MESSAGE }} *passed*.
 
@@ -71,6 +68,13 @@ jobs:
       env:
         SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
       with:
-        <<: *slack_info
+        channel: '#general'
+        icon_url: https://img.icons8.com/ios-filled/50/000000/github.png
+        username: GitHub Actions
+        title: ${{ github.repository }}
+        title_link: https://github.com/${{ github.repository }}
+        author_name: ${{ github.actor }}
+        author_link: https://github.com/${{ github.actor }}
+        author_icon: https://github.com/${{ github.actor }}.png
         color: '#bd2222'
         text: ${{ env.MESSAGE }} *failed*.
