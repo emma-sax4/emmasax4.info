@@ -10,8 +10,8 @@ on:
     - cron: '*/5 * * * *'
 
 jobs:
-  merge-schedule:
-    name: Auto-Merge
+  auto-merge-and-schedule:
+    name: Auto-Merge and Schedule
     runs-on: ubuntu-latest
     steps:
       - uses: gr2m/merge-schedule-action@v1.x
