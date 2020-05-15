@@ -11,8 +11,16 @@ jobs:
     - name: Checkout Code
       uses: actions/checkout@v1
 
+    - name: Define Variables
+      run: |
+        pull_id=$(echo ${{ github.ref }} | sed -E 's|refs/pull/||' | sed -E 's|/merge||')
+        echo "::set-env name=PULL_ID::$pull_id"
+        echo "::set-env name=PULL_URL::$(echo https://github.com/${{ github.repository }}/pull/$pull_id)"
+        echo "::set-env name=BRANCH::$(echo ${{ github.head_ref }} | sed -E 's|refs/[a-zA-Z]+/||')"
+        echo "::set-env name=BUILD_URL::$(echo https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})"
+
     - name: Switch to Current Branch
-      run: git checkout $(echo ${{ github.head_ref }} | sed -E 's|refs/[a-zA-Z]+/||')
+      run: git checkout ${{ env.BRANCH }}
 
     - name: Configure Bundler
       run: sudo gem install bundler -v $(cat Gemfile.lock | tail -1 | tr -d ' ')
@@ -48,8 +56,9 @@ jobs:
         author_name: ${{ github.actor }}
         author_link: https://github.com/${{ github.actor }}
         author_icon: https://github.com/${{ github.actor }}.png
-        text: 'Build #${{ github.run_id }} for event `${{ github.event_name }}` *passed*.'
-        footer: 'Ref: ${{ github.ref }}'
+        text: >-
+          Build <${{ env.BUILD_URL }}|${{ github.run_id }}> on branch `${{ env.BRANCH }}`
+          in PR <${{ env.PULL_URL }}|#${{ env.PULL_ID }}> *passed*.
 
     - name: Notify Slack on Failure
       if: failure()
@@ -66,5 +75,6 @@ jobs:
         author_name: ${{ github.actor }}
         author_link: https://github.com/${{ github.actor }}
         author_icon: https://github.com/${{ github.actor }}.png
-        text: 'Build #${{ github.run_id }} for event `${{ github.event_name }}` *failed*.'
-        footer: 'Ref: ${{ github.ref }}'
+        text: >-
+          Build <${{ env.BUILD_URL }}|${{ github.run_id }}> on branch `${{ env.BRANCH }}`
+          in PR <${{ env.PULL_URL }}|#${{ env.PULL_ID }}> *failed*.
