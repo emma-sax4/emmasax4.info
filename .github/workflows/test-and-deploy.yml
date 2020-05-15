@@ -50,13 +50,13 @@ jobs:
         GIT_CONFIG_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
         GIT_CONFIG_NAME: github-actions[bot]
 
-    - name: Set Slack Deploy Notification
+    - name: Set Deploy Notification Message
       run: |
-        if [[ ${{ env.DEPLOYMENT_STATUS }} == "skipped" ]]; then
+        if [[ ${{ env.DEPLOYMENT_STATUS }} == skipped ]]; then
           echo "::set-env name=DEPLOY_MESSAGE::$(echo Deploy to GitHub Pages was *skipped*)"
-        elsif [[ ${{ env.DEPLOYMENT_STATUS }} == "success" ]]; then
+        elif [[ ${{ env.DEPLOYMENT_STATUS }} == success ]]; then
           echo "::set-env name=DEPLOY_MESSAGE::$(echo Deploy to GitHub Pages was *successful*)"
-        elsif [[ ${{ env.DEPLOYMENT_STATUS }} == "success" ]]; then
+        elif [[ ${{ env.DEPLOYMENT_STATUS }} == failed ]]; then
           echo "::set-env name=DEPLOY_MESSAGE::$(echo Deploy to GitHub Pages was *unsuccessful*)"
         fi
 
@@ -76,7 +76,8 @@ jobs:
         author_link: https://github.com/${{ github.actor }}
         author_icon: https://github.com/${{ github.actor }}.png
         text: >-
-          Build <${{ env.BUILD_URL }}|${{ github.run_id }}> on branch `${{ env.BRANCH }}` *passed*. ${{ env.DEPLOY_MESSAGE }}.
+          Build <${{ env.BUILD_URL }}|${{ github.run_id }}> on branch `${{ env.BRANCH }}`
+          *passed*. ${{ env.DEPLOY_MESSAGE }}.
 
     - name: Notify Slack on Failure
       if: failure()
@@ -94,4 +95,5 @@ jobs:
         author_link: https://github.com/${{ github.actor }}
         author_icon: https://github.com/${{ github.actor }}.png
         text: >-
-          Build <${{ env.BUILD_URL }}|${{ github.run_id }}> on branch `${{ env.BRANCH }}` *failed*. ${{ env.DEPLOY_MESSAGE }}.
+          Build <${{ env.BUILD_URL }}|${{ github.run_id }}> on branch `${{ env.BRANCH }}`
+          *failed*. ${{ env.DEPLOY_MESSAGE }}.
