@@ -1,0 +1,16 @@
+name: Merge Scheduler
+on:
+  pull_request:
+    types: [edited]
+  schedule:
+    # Add a cron to determine what time you want to auto-merge your pull request(s). Crons are written in UTC:
+    # https://help.github.com/en/actions/reference/events-that-trigger-workflows#scheduled-events-schedule.
+    - cron: '*/5 * * * *'
+
+jobs:
+  merge-scheduler:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: gr2m/merge-schedule-action@v1.x
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
