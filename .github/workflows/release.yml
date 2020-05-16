@@ -38,7 +38,7 @@ jobs:
       run: bundle exec htmlproofer --assume-extension --allow-hash-href --internal-domains /emmasax4.info/ --only_4xx ./_site/
 
     - name: GitHub Pages Deploy
-      uses: JamesIves/github-pages-deploy-action@releases/v3
+      uses: emma-sax4/github-pages-deploy-action@emmasax4_github_pages_deploy_action
       with:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         BRANCH: master
