@@ -115,6 +115,7 @@ Here are all of the parts of this project associated with running this applicati
 |   |   └── main.yml
 |   ├── another-file.md
 |   ├── file.md
+|   ├── PULL_REQUEST_TEMPLATE.md
 |   └── template.md
 ├── _includes
 |   ├── elements

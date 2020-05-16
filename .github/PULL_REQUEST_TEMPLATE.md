@@ -18,4 +18,3 @@
 > ```
 > /schedule YYYY-MM-DD HH:MM:SS
 > ```
-<br>
