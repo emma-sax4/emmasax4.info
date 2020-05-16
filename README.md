@@ -11,6 +11,3 @@ For information on licensing, please see [LICENSE](https://github.com/emma-sax4/
 This repository does have a standard [Code of Conduct](https://github.com/emma-sax4/emma-sax4.github.io/blob/source/.github/code_of_conduct.md).
 
 This website was originally generated using the [Cayman theme](https://github.com/jasonlong/cayman-theme) by [Jason Long](https://twitter.com/jasonlong).
-
-
-<!-- Making changes to the README. -->
