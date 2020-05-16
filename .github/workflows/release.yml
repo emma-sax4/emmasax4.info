@@ -4,7 +4,8 @@ on:
     branches: [ source ]
 
 jobs:
-  test_and_deploy:
+  test-and-deploy:
+    name: Test and Deploy
     runs-on: ubuntu-latest
     steps:
     - name: Checkout Code
