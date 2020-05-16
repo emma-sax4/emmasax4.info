@@ -1,4 +1,4 @@
-name: Merge Schedule
+name: Merge Scheduler
 on:
   pull_request:
     types:
@@ -9,7 +9,7 @@ on:
     - cron: '*/5 * * * *'
 
 jobs:
-  merge_schedule:
+  merge-scheduler:
     runs-on: ubuntu-latest
     steps:
       - uses: gr2m/merge-schedule-action@v1.x
