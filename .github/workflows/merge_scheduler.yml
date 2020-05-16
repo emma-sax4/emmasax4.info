@@ -9,7 +9,7 @@ on:
     - cron: '*/5 * * * *'
 
 jobs:
-  merge-scheduler:
+  merge_scheduler:
     runs-on: ubuntu-latest
     steps:
       - uses: gr2m/merge-schedule-action@v1.x
