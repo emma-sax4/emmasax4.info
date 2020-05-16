@@ -324,10 +324,12 @@ When it's time to publish the post, you can either:
   * Rename the file to have the publishing date in the title instead of whatever was there previously
   * Re-add and commit that file to the pull request
   * Wait for your pull request's tests to finish
-  * Add the `auto-merge` label to the pull request
-  * Switch to the `source` branch
-  * Change the `.github/workflows/auto_merge_pull_requests.yml` cron schedule to be the publish date/time in UTC (you can set the day of the week, day of the month, and the month to run your merge)
-  * Re-add and commit that file to the default branch directly
+  * Add a block to the end of the pull request description with the publishing date/time in UTC:
+    ```
+    /schedule YYYY-MM-DD HH:MM:SS
+    ```
+  * Wait for the pull request merge scheduler to be run, and to verify that it is scheduling the merge time
+  * Wait for the pull request merger pull request check to show up as yellow 'in-progress'
   * Wait until GitHub Actions auto-merges your pull request, and then will trigger a build and deploy of your changes
 
 To identify the current hour offset from UTC, look up the time zone offset based on your location [here](https://www.timeanddate.com/time/zone/).
