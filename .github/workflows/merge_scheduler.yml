@@ -11,6 +11,6 @@ jobs:
   merge-scheduler:
     runs-on: ubuntu-latest
     steps:
-      - uses: emma-sax4/merge-schedule-action@emmasax4_merge_scheduler
+      - uses: emma-sax4/merge-schedule-action@emmasax4_experimentation
         env:
           GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
