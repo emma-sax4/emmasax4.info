@@ -39,8 +39,9 @@ jobs:
 
     - name: GitHub Pages Deploy
       uses: emma-sax4/github-pages-deploy-action@emmasax4_github_pages_deploy_action
-      with:
+      env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
         BRANCH: master
         FOLDER: _site
         COMMIT_MESSAGE: 'Deploy to ${{ github.repository }}.git:master'

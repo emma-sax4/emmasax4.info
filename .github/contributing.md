@@ -331,7 +331,7 @@ When it's time to publish the post, you can either:
     ```
   * Wait for the PR Merge Scheduler status check to run and pass
   * Wait for the PR Merger status check to show up as yellow 'in-progress'
-  * Wait until GitHub Actions auto-merges your pull request, and then will trigger a build and deploy of your changes
+  * Now, the PR Merger will automatically merge your pull request at or shortly after the time specified in the pull request; GitHub Actions will then trigger a build and deploy of your changes
 
 To identify the current hour offset from UTC, look up the time zone offset based on your location [here](https://www.timeanddate.com/time/zone/).
 
