@@ -315,20 +315,23 @@ Then, when you run `jekyll serve --future` locally, the draft post(s) should app
 
 When it's time to publish the post, you can either:
 * Publish the post now:
-  * Add the current date/time (in the author's local time zone, properly identifying the current hour offset from UTC) to the post's front matter in the `date` value
+  * Add the current date/time in `YYYY-MM-DD HH:MM:SS -0X00` format (in the author's local time zone, properly identifying the current hour offset from UTC) to the post's front matter in the `date` value
   * Rename the file to have the current date instead of whatever was there previously
-  * Re-add and commit those files to the pull request
+  * Re-add and commit that file to the pull request
+  * Wait for all status checks to pass on the pull request
   * Merge the pull request into the `source` branch
 * Publish the post on a future date:
-  * Add the future publishing date/time (typically 00:00:00 in the author's local time zone, properly identifying current the hour offset from UTC) to the post's front matter in the `date` value
+  * Add the future publishing date/time in `YYYY-MM-DD HH:MM:SS -0X00` format (in the author's local time zone, properly identifying current the hour offset from UTC) to the post's front matter in the `date` value
   * Rename the file to have the publishing date in the title instead of whatever was there previously
   * Re-add and commit that file to the pull request
-  * Wait for your pull request's tests to finish
-  * Add the `auto-merge` label to the pull request
-  * Switch to the `source` branch
-  * Change the `.github/workflows/auto_merge_pull_requests.yml` cron schedule to be the publish date/time in UTC (you can set the day of the week, day of the month, and the month to run your merge)
-  * Re-add and commit that file to the default branch directly
-  * Wait until GitHub Actions auto-merges your pull request, and then will trigger a build and deploy of your changes
+  * Wait for all status checks to pass on the pull request
+  * Add a block to the end of the pull request description with the publishing date/time in UTC:
+    ```
+    /schedule YYYY-MM-DD HH:MM:SS
+    ```
+  * Wait for the PR Merge Scheduler status check to run and pass
+  * Wait for the PR Merger status check to show up as yellow 'in-progress'
+  * Now, the PR Merger will automatically merge your pull request at or shortly after the time specified in the pull request; GitHub Actions will then trigger a build and deploy of your changes
 
 To identify the current hour offset from UTC, look up the time zone offset based on your location [here](https://www.timeanddate.com/time/zone/).
 
