@@ -20,7 +20,6 @@
     - [Posts in a Collection](#posts-in-a-collection)
     - [Writing Drafts](#writing-drafts)
   * [`assets/`](#assets)
-  * [`js/`](#js)
   * [`_config.yml`](#_configyml)
   * [`favicon.ico`](#faviconico)
   * [`Gemfile` and `Gemfile.lock`](#gemfile-and-gemfilelock)
@@ -154,23 +153,26 @@ Here are all of the parts of this project associated with running this applicati
 |   |   ├── css-file-01.scss
 |   |   ├── css-file-02.scss
 |   |   └── style.scss
-|   ├── favicon
-|   |   ├── android-chrome.png
-|   |   ├── apple-touch-icon.png
-|   |   ├── browserconfig.xml
-|   |   └── site.webmanifest
 |   ├── images
+|   |   ├── favicon
+|   |   |   ├── android-chrome.png
+|   |   |   ├── apple-touch-icon.png
+|   |   |   ├── browserconfig.xml
+|   |   |   └── site.webmanifest
+|   |   ├── logos
+|   |   |   ├── logo1.png
+|   |   |   └── logo2.png
 |   |   ├── picture-01.jpg
 |   |   ├── picture-02.jpg
 |   |   ├── picture-03.png
 |   |   └── picture-04.jpg
+|   ├── js
+|   |   ├── another-script.js
+|   |   ├── one-more-script.js
+|   |   └── script.js
 |   ├── resources
 |   |   ├── resource-01.pdf
 |   └── └── resource-02.pdf
-├── js
-|   ├── another-script.js
-|   ├── one-more-script.js
-|   └── script.js
 ├── _config.yml
 ├── favicon.ico
 ├── Gemfile
@@ -348,6 +350,8 @@ The `images/` directory gives me a place to store all of the images this site us
 </div>
 ```
 
+The `js/` directory is where we store all of our javascript files for the site. Some of them are called at the bottom of every page. Others are called in specific places in the code. All of these are parsed by Code Climate.
+
 The `resources/` directory gives me a place to keep PDF documents that are linked in this site. You can put a link to it in Markdown:
 ```markdown
 This is an example sentence, so it will throw a 404. See [here](/assets/resources/resource-01.pdf)?
@@ -356,10 +360,6 @@ When calling internal resources like this, it'll automatically open in the same 
 ```markdown
 This is an example sentence, so it will throw a 404. See <a href="/assets/resources/resource-01.pdf" target="_blank">here</a>?
 ```
-
-### `js/`
-
-This directory is where we store all of our javascript files for the site. Some of them are called at the bottom of every page. Others are called in specific places in the code. All of these are parsed by Code Climate.
 
 ### `_config.yml`
 

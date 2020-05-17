@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Why I Switched from Travis CI to CircleCI
-tags: [ tech, jekyll ]
+tags: [ tech ]
 permalink: /blog/posts/why-i-switched-from-travis-ci-to-circleci/
 date: 2020-03-22 12:51:00 -0500
 ---
