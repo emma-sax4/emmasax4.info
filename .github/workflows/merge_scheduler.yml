@@ -1,7 +1,6 @@
 name: Pull Request Merge Scheduler
 on:
   pull_request:
-    types: [opened, edited]
 
 jobs:
   merge-scheduler:
