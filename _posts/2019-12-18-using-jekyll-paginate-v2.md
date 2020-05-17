@@ -110,4 +110,4 @@ It's a little complicated, but, one deploy from Travis CI later, and the site wa
 
 ---
 
-EDIT: Since writing this blog post, my website has switched to using CircleCI for all continuous integration tools, including building this project. Keep an eye out for an upcoming blog post about the switch and why I did it. I've also moved my default branch to be `source`, instead of `release`. I originally named it `release` because the documentation I was following named it that, but realized later that the name `source` fit my workflow better.
+EDIT: Since writing this blog post, my website has switched to using CircleCI, and then to GitHub Actions, for all continuous integration tools. I wrote a blog post [here](/blog/posts/why-i-switched-from-travis-ci-to-circleci/) about why I switched to CircleCI, and keep an eye out for an upcoming post about why I later switched to GitHub Actions. I've also moved my default branch to be `source`, instead of `release`. I originally named it `release` because the documentation I was following named it that, but realized later that the name `source` fit my workflow better.
