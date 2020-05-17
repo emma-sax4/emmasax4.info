@@ -2,7 +2,7 @@
   <span class="post-meta">
     <i style="width: 20px; height: 20px;" data-feather="tag"></i>
     {% for tag in tags_to_show %}
-      <a href="{{ "/blog/" | append: tag | append: "/" | relative_url }}">
+      <a href="{{ "/blog/" | append: tag | append: "/" }}">
         {{ tag }}
       </a>
       {% unless tag == tags_to_show.last %}
@@ -16,7 +16,7 @@
   {% assign category = category_to_show | downcase | replace: " ", "-" %}
   <span class="post-meta">
     <i style="width: 20px; height: 20px;" data-feather="tag"></i>
-    <a href="{{ "/blog/" | append: category | append: "/" | relative_url }}">
+    <a href="{{ "/blog/" | append: category | append: "/" }}">
       {{ category_to_show }}
     </a>
   </span>
