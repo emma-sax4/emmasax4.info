@@ -327,13 +327,13 @@ When it's time to publish the post, you can either:
   * Rename the file to have the publishing date in the title instead of whatever was there previously
   * Re-add and commit that file to the pull request
   * Wait for all status checks to pass on the pull request
-  * Add a block to the end of the pull request description with the publishing date/time in UTC:
+  * Add a comment to the pull request with the publishing date/time in UTC:
     ```
-    /schedule YYYY-MM-DD HH:MM:SS
+    example: 18-05-2020T17:58 => May 18, 2020 at 17:58 UTC
+    @prscheduler DD-MM-YYYYTHH:MM
     ```
-  * Wait for the PR Merge Scheduler status check to run and pass
-  * Wait for the PR Merger status check to show up as yellow 'in-progress'
-  * Now, the PR Merger will automatically merge your pull request at or shortly after the time specified in the pull request; GitHub Actions will then trigger a build and deploy of your changes
+  * Wait for the `pr-scheduler` to respond saying the merge was scheduled
+  * Now, the PR Merger will automatically merge your pull request at the time specified in the pull request; GitHub Actions will then trigger a build and deploy of your changes
 
 To identify the current hour offset from UTC, look up the time zone offset based on your location [here](https://www.timeanddate.com/time/zone/).
 
