@@ -1,5 +1,5 @@
 <li>
-  {% assign post_url = post.url | downcase | replace: ".html", "" | relative_url %}
+  {% assign post_url = post.url | downcase | replace: ".html", "" %}
   {% if post.subtitle %}
     {% if page.pagination.title == "Blog" %}
       {% assign short_title = post.title | append: " → " | append: post.subtitle %}

@@ -1,0 +1,12 @@
+name: Pull Request Merger
+on:
+  schedule:
+    - cron: '*/5 * * * *'
+
+jobs:
+  merger:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: emma-sax4/merge-schedule-action@emmasax4_merge_scheduler
+      env:
+        GITHUB_TOKEN: ${{ secrets.MERGER_TOKEN }}
