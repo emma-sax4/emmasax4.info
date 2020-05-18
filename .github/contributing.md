@@ -329,7 +329,9 @@ When it's time to publish the post, you can either:
   * Wait for all status checks to pass on the pull request
   * Add a comment to the pull request with the publishing date/time in UTC:
     ```
-    example: 18-05-2020T17:58 => May 18, 2020 at 17:58 UTC
+    example (May 18, 2020 at 17:58 UTC):
+    @prscheduler 18-05-2020T17:58
+
     @prscheduler DD-MM-YYYYTHH:MM
     ```
   * Wait for the `pr-scheduler` to respond saying the merge was scheduled
