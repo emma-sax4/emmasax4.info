@@ -42,7 +42,7 @@ jobs:
 
     - name: Notify Slack on Success
       if: success()
-      uses: emma-sax4/slack-notifier-action@emmasax4_action_slacker
+      uses: emma-sax4/slack-notifier-action@emmasax4_slack_notifier_action
       env:
         SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
       with:
@@ -61,7 +61,7 @@ jobs:
 
     - name: Notify Slack on Failure
       if: failure()
-      uses: emma-sax4/slack-notifier-action@emmasax4_action_slacker
+      uses: emma-sax4/slack-notifier-action@emmasax4_slack_notifier_action
       env:
         SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
       with:
