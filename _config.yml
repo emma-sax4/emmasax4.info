@@ -35,6 +35,7 @@ sass:
 
 include:
   - _pages
+  - _legos
 
 exclude:
   - Gemfile
@@ -60,6 +61,8 @@ relative_links:
 
 collections:
   posts:
+    output: true
+  legos:
     output: true
 
 feed:
