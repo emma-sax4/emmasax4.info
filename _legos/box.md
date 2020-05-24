@@ -1,5 +1,6 @@
 ---
 title: Box
+date: 2020-03-24 00:00:00 -0500
 ---
 
 This little box is the ideal size for keeping personal items on the go. It can be used as a jewelry box, storage for other LEGO pieces, and is small and portable. Although my LDD designer didn't quite have all of the colors I'd like to use, the design is flexible, so you can use whatever color pieces you have in your storage.

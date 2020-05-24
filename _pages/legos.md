@@ -1,6 +1,5 @@
 ---
 layout: legos
-title: Legos
-order: 6
+title: LEGO Sets and MOCs
 permalink: /legos/
 ---
