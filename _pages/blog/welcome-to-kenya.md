@@ -3,7 +3,7 @@ layout: blog
 permalink: /blog/welcome-to-kenya/
 pagination:
   enabled: true
-  collection: posts
+  collection: collections
   permalink: /:num/
   title: Welcome to Kenya
   category: Welcome to Kenya
