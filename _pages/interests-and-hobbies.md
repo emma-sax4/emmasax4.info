@@ -1,13 +1,13 @@
 ---
 layout: page
-title: Outside the Office
+title: Interests & Hobbies
 order: 3
-permalink: /outside-the-office/
+permalink: /interests-and-hobbies/
 redirect_from:
   - /around-town/
 ---
 
-My tagline claims that I love swimming, reading, Netflix, and traveling. While all of these are true, here's some other activities and interests I participate in.
+My tagline claims that I love swimming, reading, Netflix, and traveling. While all of these are true, here's some other interests and activities I participate in outside the office.
 
 ## Volunteering
 
