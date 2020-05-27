@@ -186,11 +186,14 @@ This site builds and "deploys" through GitHub Actions.
 
 ### `_collections/`
 
-These are all of blog posts I've written.
+These are items on the website that are collections. This means that the website somewhere loops over all of the items in the collection and makes a big list of items. Each type of collection should have its own `layout` that can be used to filter the loop:
+```html
+{% assign posts_list = site.collections | where: "layout", "post" %}
+```
 
 #### `_collections/posts/`
 
-##### Posts with and without Tags
+#### Posts with and without Tags
 
 Most of the posts can just go into the general `_collections/posts/` directory, written as Markdown files. For a generic post, the front matter could look like this:
 ```yml
@@ -209,7 +212,7 @@ Without the `permalink` link in the front matter, the URL will most likely defau
 
 The `date` front matter indicates the published date and time. Usually, it's totally fine with blog posts being published at midnight (usually in America/Central time zone, because that's where Minnesota is). On rare occasions when two posts are published on the same date, it's important to specify a time so they sort properly. The entire site will show in a readers' local time, but the data will be stored in the system (and will be reflected in the `feed.xml` and `sitemap.xml`) in UTC. From a human's perspective, we want time zones to be a non-issue, so we can write our date/time as the author is seeing it within the post. For Jekyll to properly interpret it, we must specify the author's current hour offset from UTC at the time of publishing.
 
-##### Posts in a Collection
+#### Posts in a Collection
 
 If I'm going to write a collection of posts that all have a common theme, they can each go into a new nested directory: `_collections/posts/category-one/`, and should make use of the `title` and `subtitle` metadata, where the `title` is the name of the collection, and the `subtitle` is the title of that specific post:
 ```yml
@@ -223,7 +226,7 @@ date: 2001-06-27 20:30:00 -0500 # 2001-06-28 01:30:00 UTC
 ---
 ```
 
-##### Writing Drafts
+#### Writing Drafts
 
 To write drafts, make a new file in the `_collections/posts/` directory (or in a subdirectory if the post will be part of a category). The new file should be named in the following pattern: `test-post-title.md`. Because this draft hasn't been published yet, I usually just put in the date I hope to publish the draft (usually a few days in the future).
 
