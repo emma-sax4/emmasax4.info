@@ -12,12 +12,16 @@
 
   <div class="container" style="padding-left: 0; padding-right: 0; padding-bottom: 2rem;">
     <div>
-      {% assign now = "now" | date: "%s" %}
-      {% assign date = post.date | date: "%s" %}
-      {% if date <= now %}
-        <span class="date-meta">{{ post.date }}</span>
-      {% else %}
+      {% if post.draft %}
         <span class="post-meta">Unpublished</span>
+      {% else %}
+        {% assign now = "now" | date: "%s" %}
+        {% assign date = post.date | date: "%s" %}
+        {% if date <= now %}
+          <span class="date-meta">{{ post.date }}</span>
+        {% else %}
+          <span class="post-meta">Unpublished</span>
+        {% endif %}
       {% endif %}
     </div>
 
