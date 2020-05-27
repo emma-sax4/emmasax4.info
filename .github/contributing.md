@@ -231,16 +231,26 @@ date: 2001-06-27 20:30:00 -0500 # 2001-06-28 01:30:00 UTC
 
 To write drafts, make a new file in the `_collections/posts/` directory (or in a subdirectory if the post will be part of a category). The new file should be named in the following pattern: `test-post-title.md`. Because this draft hasn't been published yet, I usually just put in the date I hope to publish the draft (usually a few days in the future).
 
-To the front matter, make sure to add the `layout`, `title`, and `permalink` (`subtitle`, `category`, and `tags` are all optional). Add a `date` to the front matter which should be some random date in the future (think like `3000-01-01 00:00:00 -0500`). Then, when you run `jekyll serve --future` locally, the draft post(s) should appear at the top of the list of posts, and should show as "Unpublished."
+To the front matter, make sure to add the `layout`, `title`, and `permalink` (`subtitle`, `category`, and `tags` are all optional). Add the following front matter to the new blog post draft:
+```yml
+layout: post
+title: Test Post Title
+permalink: /blog/posts/test-post-title/
+draft: true
+```
+
+Optionally add `subtitle`, `category`, and `tags` to the front matter. Now, when you run `jekyll serve` locally, the draft post(s) should appear at the top of the list of posts, and should show as "Unpublished."
 
 When it's time to publish the post, you can either:
 * Publish the post now:
-  * Add the current date/time in `YYYY-MM-DD HH:MM:SS -0X00` format (in the author's local time zone, properly identifying the current hour offset from UTC) to the post's front matter in the `date` value
+  * Remove the `draft: true` front matter
+  * Add the current date/time (in the author's local time zone, properly identifying the current hour offset from UTC) to the front matter: `date: YYYY-MM-DD HH:MM:SS -0X00`
   * Re-add and commit that file to the pull request
   * Wait for all status checks to pass on the pull request
   * Merge the pull request into the `source` branch
 * Publish the post on a future date:
-  * Add the future publishing date/time in `YYYY-MM-DD HH:MM:SS -0X00` format (in the author's local time zone, properly identifying current the hour offset from UTC) to the post's front matter in the `date` value
+  * Remove the `draft: true` front matter
+  * Add the current date/time (in the author's local time zone, properly identifying the current hour offset from UTC) to the front matter: `date: YYYY-MM-DD HH:MM:SS -0X00`
   * Re-add and commit that file to the pull request
   * Wait for all status checks to pass on the pull request
   * Add a comment to the pull request with the publishing date/time in UTC:

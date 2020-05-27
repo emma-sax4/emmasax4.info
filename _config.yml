@@ -34,6 +34,7 @@ sass:
   sass_dir: assets/css/
 
 include:
+  - _collections
   - _pages
 
 exclude:
