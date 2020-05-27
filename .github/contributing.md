@@ -99,9 +99,9 @@ A full deployment (including GitHub Actions and GitHub Pages) only takes about f
 
 GitHub Actions sends a Slack notification indicating the build status after each action build finishes (even on pull requests). The Slack notifications are sent to the Slack workspace [emmasax4](https://emmasax4.slack.com). You can ask for an invite to that workspace, but a final invite is not guaranteed. The workspace and notifications are set up for my personal usage, not for communciational purposes.
 
-## Collections vs. Categories vs. Tags
+## Categories vs. Tags
 
-Please notice that in the code, we need to call a collection of related posts a `category`. This is in order to make the pagination work as expected. A user of the site will view the collection no differently than with a tag. The biggest difference between a `tag` and a `category` is that a post can have multiple tags, but can only be a part of one `category`. Currently, the code is not set up to handle posts that are part of a collection _and_ contain tags.
+There's two ways of sorting blog posts. The first way is with a `tag`. A blog post can have as many `tag`s as desired, and each `tag` has its own page with all posts with that `tag`. The second way is with a `category`. A blog post can only be a part of a single `category`, so it makes sense for the small group of blog posts that are all related with a single theme. Each `category` also has its own page. A user of the site will view the category of posts no differently than posts with tag(s). Currently, the code is not set up to handle posts that are part of a `category` _and_ contain `tag`s.
 
 ## Directory/File Structure
 
@@ -213,9 +213,9 @@ Without the `permalink` link in the front matter, the URL will most likely defau
 
 The `date` front matter indicates the published date and time. Usually, it's totally fine with blog posts being published at midnight (usually in America/Central time zone, because that's where Minnesota is). On rare occasions when two posts are published on the same date, it's important to specify a time so they sort properly. The entire site will show in a readers' local time, but the data will be stored in the system (and will be reflected in the `feed.xml` and `sitemap.xml`) in UTC. From a human's perspective, we want time zones to be a non-issue, so we can write our date/time as the author is seeing it within the post. For Jekyll to properly interpret it, we must specify the author's current hour offset from UTC at the time of publishing.
 
-#### Posts in a Collection
+#### Posts in a Category
 
-If I'm going to write a collection of posts that all have a common theme, they can each go into a new nested directory: `_collections/posts/category-one/`, and should make use of the `title` and `subtitle` metadata, where the `title` is the name of the collection, and the `subtitle` is the title of that specific post:
+If I'm going to write a group of posts that all have a common theme, they can each go into a new nested directory: `_collections/posts/category-one/`, and should make use of the `title` and `subtitle` metadata, where the `title` is the name of the `category`, and the `subtitle` is the title of that specific post:
 ```yml
 ---
 layout: post
@@ -349,7 +349,7 @@ pagination:
   category: Category One
 ---
 
-Some words describing this collection should go here.
+Some words describing this category should go here.
 ```
 
 ### `assets/`
