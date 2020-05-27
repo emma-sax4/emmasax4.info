@@ -11,14 +11,14 @@
 - [Collections vs. Categories vs. Tags](#collections-vs-categories-vs-tags)
 - [Directory/File Structure](#directoryfile-structure)
   * [`.github/`](#github)
+  * [`_blog_posts/`](#_blog_posts)
+    - [Posts with and without Tags](#posts-with-and-without-tags)
+    - [Posts in a Collection](#posts-in-a-collection)
+    - [Writing Drafts](#writing-drafts)
   * [`_includes/`](#_includes)
   * [`_layouts/`](#_layouts)
   * [`_pages/`](#_pages)
     - [`_pages/blog/`](#_pagesblog)
-  * [`_posts/`](#_posts)
-    - [Posts with and without Tags](#posts-with-and-without-tags)
-    - [Posts in a Collection](#posts-in-a-collection)
-    - [Writing Drafts](#writing-drafts)
   * [`assets/`](#assets)
   * [`_config.yml`](#_configyml)
   * [`favicon.ico`](#faviconico)
@@ -116,6 +116,15 @@ Here are all of the parts of this project associated with running this applicati
 |   ├── file.md
 |   ├── PULL_REQUEST_TEMPLATE.md
 |   └── template.md
+├── _blog_posts
+|   ├── category-one
+|   |   ├── post-a.md
+|   |   └── post-b.md
+|   ├── category-two
+|   |   ├── post-a.md
+|   |   └── post-b.md
+|   ├── post-a.md
+|   └── post-b.md
 ├── _includes
 |   ├── elements
 |   |   ├── button-one.html
@@ -139,15 +148,6 @@ Here are all of the parts of this project associated with running this applicati
 |   ├── page-01.md
 |   ├── page-02.md
 |   └── page-03.md
-├── _posts
-|   ├── category-one
-|   |   ├── 2001-01-01-post-a.md
-|   |   └── 2001-01-02-post-b.md
-|   ├── category-two
-|   |   ├── 2003-01-01-post-a.md
-|   |   └── 2004-01-02-post-b.md
-|   ├── 2001-01-03-post-a.md
-|   └── 2001-01-04-post-b.md
 ├── assets
 |   ├── css
 |   |   ├── css-file-01.scss
@@ -247,7 +247,7 @@ layout: blog
 permalink: /blog/tag1/
 pagination:
   enabled: true
-  collection: posts
+  collection: blog_posts
   permalink: /:num/
   title: Tag1
   tag: tag1
@@ -261,7 +261,7 @@ layout: blog
 permalink: /blog/category-one/
 pagination:
   enabled: true
-  collection: posts
+  collection: blog_posts
   permalink: /:num/
   title: Category One
   category: Category One
@@ -270,13 +270,13 @@ pagination:
 Some words describing this collection should go here.
 ```
 
-### `_posts/`
+### `_blog_posts/`
 
 These are all of blog posts I've written.
 
 ### Posts with and without Tags
 
-Most of the posts can just go into the general `_posts/` directory, written as Markdown files. For a generic post, the front matter could look like this:
+Most of the posts can just go into the general `_blog_posts/` directory, written as Markdown files. For a generic post, the front matter could look like this:
 ```yml
 ---
 layout: post
@@ -295,7 +295,7 @@ The `date` front matter indicates the published date and time. Usually, it's tot
 
 ### Posts in a Collection
 
-If I'm going to write a collection of posts that all have a common theme, they can each go into a new nested directory: `_posts/category-one/`, and should make use of the `title` and `subtitle` metadata, where the `title` is the name of the collection, and the `subtitle` is the title of that specific post:
+If I'm going to write a collection of posts that all have a common theme, they can each go into a new nested directory: `_blog_posts/category-one/`, and should make use of the `title` and `subtitle` metadata, where the `title` is the name of the collection, and the `subtitle` is the title of that specific post:
 ```yml
 ---
 layout: post
@@ -309,7 +309,7 @@ date: 2001-06-27 20:30:00 -0500 # 2001-06-28 01:30:00 UTC
 
 ### Writing Drafts
 
-To write drafts, make a new file in the `_posts/` directory (or in a subdirectory if the post will be part of a category). The new file should be named in the following pattern: `YYYY-MM-DD-test-post-title`. Because this draft hasn't been published yet, I usually just put in the date I hope to publish the draft (usually a few days in the future).
+To write drafts, make a new file in the `_blog_posts/` directory (or in a subdirectory if the post will be part of a category). The new file should be named in the following pattern: `test-post-title.md`. Because this draft hasn't been published yet, I usually just put in the date I hope to publish the draft (usually a few days in the future).
 
 To the front matter, make sure to add the `layout`, `title`, and `permalink` (`subtitle`, `category`, and `tags` are all optional).
 
@@ -318,13 +318,11 @@ Then, when you run `jekyll serve --future` locally, the draft post(s) should app
 When it's time to publish the post, you can either:
 * Publish the post now:
   * Add the current date/time in `YYYY-MM-DD HH:MM:SS -0X00` format (in the author's local time zone, properly identifying the current hour offset from UTC) to the post's front matter in the `date` value
-  * Rename the file to have the current date instead of whatever was there previously
   * Re-add and commit that file to the pull request
   * Wait for all status checks to pass on the pull request
   * Merge the pull request into the `source` branch
 * Publish the post on a future date:
   * Add the future publishing date/time in `YYYY-MM-DD HH:MM:SS -0X00` format (in the author's local time zone, properly identifying current the hour offset from UTC) to the post's front matter in the `date` value
-  * Rename the file to have the publishing date in the title instead of whatever was there previously
   * Re-add and commit that file to the pull request
   * Wait for all status checks to pass on the pull request
   * Add a comment to the pull request with the publishing date/time in UTC:

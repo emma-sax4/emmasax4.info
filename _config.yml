@@ -35,6 +35,7 @@ sass:
 
 include:
   - _pages
+  - _blogs
 
 exclude:
   - Gemfile
@@ -59,13 +60,14 @@ relative_links:
   collections: true
 
 collections:
-  posts:
+  blog_posts:
     output: true
 
 feed:
   items: 5
 
 pagination:
+  collection: 'blog_posts'
   enabled: true
   per_page: 5
   limit: 0
