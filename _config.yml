@@ -36,7 +36,6 @@ sass:
 include:
   - _collections
   - _pages
-  - _legos
 
 exclude:
   - Gemfile
