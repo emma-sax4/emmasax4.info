@@ -1,20 +1,13 @@
 ---
 layout: page
-title: Around Town
+title: Outside the Office
 order: 3
-permalink: /around-town/
+permalink: /outside-the-office/
+redirect_from:
+  - /around-town/
 ---
 
-## Talks
-
-* _What We Learn from Reviewing Others' Work_, DevOpsDays MSP 2019 (<a href="/assets/resources/DevOpsDays-MSP-20190806.pdf" target="_blank">slides</a>, [recording](https://devopsdays.org/events/2019-minneapolis/program/emma-sax/))
-* _DevOps in Education: A Virtually Non-Existent Course_, DevOpsDays MSP 2017 (<a href="/assets/resources/DevOpsDays-MSP-20170725.pdf" target="_blank">slides</a>, [recording](https://devopsdays.org/events/2017-minneapolis/program/emma-sax/))
-
-## Programming Competitions
-
-* 3rd place in the 2015 [Digi-Key Collegiate Computing Competition](https://www.digikey.com/en/resources/edu/dkc3-computing-competition) (DKC<sup>3</sup>)
-* 4th place in the 2015 UMM Annual [Sorting Competition](https://github.com/elenam/SortingCompetitionMaterials2015)
-
+My tagline claims that I love swimming, reading, Netflix, and traveling. While all of these are true, here's some other activities and fun interests I have when I'm not working.
 
 ## Volunteering
 
@@ -23,34 +16,22 @@ permalink: /around-town/
 * Volunteer at [RailsConf](https://railsconf.org/) 2019
 * Volunteer at various nonprofit organizations, such as [Arc Value Village](https://www.arcsvaluevillage.org/volunteer/), [Perspectives](https://www.perspectives-family.org/get-involved), and [Feed My Starving Children](https://www.fmsc.org/get-involved/) in the Twin Cities
 
-## While in College
-
-* Calculus 1 [Peer Assisted Learning](https://academics.morris.umn.edu/office-academic-success/peer-assisted-learning-pal) (PAL) tutor at UMM
-* Dance teacher to children at a local dance studio
-
-### Undergraduate Research
-
-* Presented in the UMM [Undergraduate Research Symposium 2015](http://www.morris.umn.edu/urs/)
-* [URSA Major](https://github.com/emma-sax4/UMM3601ursamajor) Developer
-* Research assistant for [Clojure research](https://github.com/Clojure-Intro-Course) at UMM
-
-### Volunteering
+## In College
 
 * [UMM Open Hatch](https://github.com/OH-UMM/2015/wiki) event leader
+* Calculus 1 [Peer Assisted Learning](https://academics.morris.umn.edu/office-academic-success/peer-assisted-learning-pal) (PAL) tutor at UMM
 * Student Campus Ambassador at UMM
 * Orientation Group Leader at UMM in 2016
 * Participant in the UMM [Honors Program](https://academics.morris.umn.edu/honors)
-
-### Extracurricular Activities
-
 * UMM [Concert Choir](https://academics.morris.umn.edu/ensembles/concert-choir) Dress Manager
 * UMM Dance Ensemble Treasurer
+* Dance teacher to children at a local dance studio
 * Participant in the [NATS Competition](http://www.nats.org/competitions.html) 2014
 * Participant in a [Senior Recital](http://events.morris.umn.edu/event/student_senior_recital_amy_kuller_voice#.Xb7-40VKjOQ) in April 2017
 
 ## Traveling
 
-I love to travel, especially to international locations. I try to go to a new country every year. Here's a list of some of the foreign countries I've been to:
+Although I already claimed I love traveling, I thought it'd be cool to share this list. I try to go to a new country every year. So here's a list of some of the foreign countries I've been to:
 <ol start="0">
   <li>China 🇨🇳</li>
   <li>France 🇫🇷</li>
