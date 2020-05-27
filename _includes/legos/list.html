@@ -1,4 +1,4 @@
-{% assign lego_list = site.legos | sort: "date" | reverse %}
+{% assign lego_list = site.collections | where: "layout", "lego" | sort: "date" | reverse %}
 <ul class="list" style="list-style: none">
   {% for lego in lego_list %}
     <details>

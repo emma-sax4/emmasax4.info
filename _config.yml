@@ -34,6 +34,7 @@ sass:
   sass_dir: assets/css/
 
 include:
+  - _collections
   - _pages
   - _legos
 
@@ -55,20 +56,14 @@ plugins:
   - jekyll-time-to-read
   - jekyll-titles-from-headings
 
-relative_links:
-  enabled: true
-  collections: true
-
 collections:
-  posts:
-    output: true
-  legos:
-    output: true
+  collections: {}
 
 feed:
   items: 5
 
 pagination:
+  collection: collections
   enabled: true
   per_page: 5
   limit: 0

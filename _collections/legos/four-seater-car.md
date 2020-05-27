@@ -1,4 +1,5 @@
 ---
+layout: lego
 title: Four-Seater Car
 date: 2020-04-20 00:00:00 -0500
 ---
