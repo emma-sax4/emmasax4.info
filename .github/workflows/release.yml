@@ -44,6 +44,7 @@ jobs:
       with:
         BRANCH: master
         FOLDER: _site
+        CLEAN: true
         COMMIT_MESSAGE: 'Deploy to ${{ github.repository }}.git:master'
         GIT_CONFIG_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
         GIT_CONFIG_NAME: github-actions[bot]
