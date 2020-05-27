@@ -8,7 +8,7 @@
   * [Tests](#tests)
   * [Deployments](#deployments)
   * [Notifications](#notifications)
-- [Collections vs. Categories vs. Tags](#collections-vs-categories-vs-tags)
+- [Categories vs. Tags](#categories-vs-tags)
 - [Directory/File Structure](#directoryfile-structure)
   * [`.github/`](#github)
   * [`_collections/`](#_collections)
