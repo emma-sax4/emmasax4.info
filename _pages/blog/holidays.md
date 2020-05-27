@@ -3,7 +3,7 @@ layout: blog
 permalink: /blog/holidays/
 pagination:
   enabled: true
-  collection: blog_posts
+  collection: collections
   permalink: /:num/
   title: Holidays
   tag: holidays

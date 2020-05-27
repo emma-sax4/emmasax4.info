@@ -5,7 +5,7 @@ order: 4
 permalink: /blog/
 pagination:
   enabled: true
-  collection: blog_posts
+  collection: collections
   permalink: /:num/
   title: Blog
 ---

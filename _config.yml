@@ -35,7 +35,6 @@ sass:
 
 include:
   - _pages
-  - _blogs
 
 exclude:
   - Gemfile
@@ -55,19 +54,14 @@ plugins:
   - jekyll-time-to-read
   - jekyll-titles-from-headings
 
-relative_links:
-  enabled: true
-  collections: true
-
 collections:
-  blog_posts:
-    output: true
+  collections: {}
 
 feed:
   items: 5
 
 pagination:
-  collection: 'blog_posts'
+  collection: collections
   enabled: true
   per_page: 5
   limit: 0

@@ -1,6 +1,7 @@
 <div id="posts">
+  {% assign posts_list = paginator.posts | where:"layout","post" | sort: "date" | reverse %}
   <ul class="list" style="list-style: none">
-    {% for post in paginator.posts %}
+    {% for post in posts_list %}
       {% include blog/post.html %}
     {% endfor %}
   </ul>

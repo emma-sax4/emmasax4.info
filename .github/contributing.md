@@ -11,7 +11,7 @@
 - [Collections vs. Categories vs. Tags](#collections-vs-categories-vs-tags)
 - [Directory/File Structure](#directoryfile-structure)
   * [`.github/`](#github)
-  * [`_blog_posts/`](#_blog_posts)
+  * [`_collections/posts/`](#_collections/posts)
     - [Posts with and without Tags](#posts-with-and-without-tags)
     - [Posts in a Collection](#posts-in-a-collection)
     - [Writing Drafts](#writing-drafts)
@@ -116,15 +116,16 @@ Here are all of the parts of this project associated with running this applicati
 |   ├── file.md
 |   ├── PULL_REQUEST_TEMPLATE.md
 |   └── template.md
-├── _blog_posts
-|   ├── category-one
+├── _collections
+|   ├── posts
+|   |   ├── category-one
+|   |   |   ├── post-a.md
+|   |   |   └── post-b.md
+|   |   ├── category-two
+|   |   |   ├── post-a.md
+|   |   |   └── post-b.md
 |   |   ├── post-a.md
-|   |   └── post-b.md
-|   ├── category-two
-|   |   ├── post-a.md
-|   |   └── post-b.md
-|   ├── post-a.md
-|   └── post-b.md
+|   └── └── post-b.md
 ├── _includes
 |   ├── elements
 |   |   ├── button-one.html
@@ -182,6 +183,73 @@ Here are all of the parts of this project associated with running this applicati
 ### `.github/`
 
 This site builds and "deploys" through GitHub Actions.
+
+### `_collections/`
+
+These are all of blog posts I've written.
+
+#### `_collections/posts/`
+
+##### Posts with and without Tags
+
+Most of the posts can just go into the general `_collections/posts/` directory, written as Markdown files. For a generic post, the front matter could look like this:
+```yml
+---
+layout: post
+title: Post A
+tags: [ tag1, tag2 ] # optional
+permalink: /blog/posts/post-a
+date: 2001-12-14 00:00:00 -0600 # 2001-12-14 06:00:00 UTC
+---
+```
+
+The tags determine how we want to categorize each post. If there's no categorization of a post (if it's completely random), then there's no need to specify any tag(s), AKA just leave the line completely out of the front matter. But, if you think the post is a good contestant for a tag, such as `tag1` or `tag2` in our example, then add those appropriate tags in a list format, as shown above.
+
+Without the `permalink` link in the front matter, the URL will most likely default to including the publishing date. This is not ideal, so instead, we'll set a custom permalink for each blog post.
+
+The `date` front matter indicates the published date and time. Usually, it's totally fine with blog posts being published at midnight (usually in America/Central time zone, because that's where Minnesota is). On rare occasions when two posts are published on the same date, it's important to specify a time so they sort properly. The entire site will show in a readers' local time, but the data will be stored in the system (and will be reflected in the `feed.xml` and `sitemap.xml`) in UTC. From a human's perspective, we want time zones to be a non-issue, so we can write our date/time as the author is seeing it within the post. For Jekyll to properly interpret it, we must specify the author's current hour offset from UTC at the time of publishing.
+
+##### Posts in a Collection
+
+If I'm going to write a collection of posts that all have a common theme, they can each go into a new nested directory: `_collections/posts/category-one/`, and should make use of the `title` and `subtitle` metadata, where the `title` is the name of the collection, and the `subtitle` is the title of that specific post:
+```yml
+---
+layout: post
+title: Category One
+subtitle: Post A
+category: Category One
+permalink: /blog/posts/category-one/post-a
+date: 2001-06-27 20:30:00 -0500 # 2001-06-28 01:30:00 UTC
+---
+```
+
+##### Writing Drafts
+
+To write drafts, make a new file in the `_collections/posts/` directory (or in a subdirectory if the post will be part of a category). The new file should be named in the following pattern: `test-post-title.md`. Because this draft hasn't been published yet, I usually just put in the date I hope to publish the draft (usually a few days in the future).
+
+To the front matter, make sure to add the `layout`, `title`, and `permalink` (`subtitle`, `category`, and `tags` are all optional). Add a `date` to the front matter which should be some random date in the future (think like `3000-01-01 00:00:00 -0500`). Then, when you run `jekyll serve --future` locally, the draft post(s) should appear at the top of the list of posts, and should show as "Unpublished."
+
+When it's time to publish the post, you can either:
+* Publish the post now:
+  * Add the current date/time in `YYYY-MM-DD HH:MM:SS -0X00` format (in the author's local time zone, properly identifying the current hour offset from UTC) to the post's front matter in the `date` value
+  * Re-add and commit that file to the pull request
+  * Wait for all status checks to pass on the pull request
+  * Merge the pull request into the `source` branch
+* Publish the post on a future date:
+  * Add the future publishing date/time in `YYYY-MM-DD HH:MM:SS -0X00` format (in the author's local time zone, properly identifying current the hour offset from UTC) to the post's front matter in the `date` value
+  * Re-add and commit that file to the pull request
+  * Wait for all status checks to pass on the pull request
+  * Add a comment to the pull request with the publishing date/time in UTC:
+    ```
+    example (May 18, 2020 at 17:58 UTC):
+    @prscheduler 18-05-2020T17:58
+
+    @prscheduler DD-MM-YYYYTHH:MM
+    ```
+  * Wait for the `pr-scheduler` to respond saying the merge was scheduled
+  * Now, the PR Merger will automatically merge your pull request at the time specified in the pull request; GitHub Actions will then trigger a build and deploy of your changes
+
+To identify the current hour offset from UTC, look up the time zone offset based on your location [here](https://www.timeanddate.com/time/zone/).
 
 ### `_includes/`
 
@@ -247,7 +315,7 @@ layout: blog
 permalink: /blog/tag1/
 pagination:
   enabled: true
-  collection: blog_posts
+  collection: collections
   permalink: /:num/
   title: Tag1
   tag: tag1
@@ -261,7 +329,7 @@ layout: blog
 permalink: /blog/category-one/
 pagination:
   enabled: true
-  collection: blog_posts
+  collection: collections
   permalink: /:num/
   title: Category One
   category: Category One
@@ -269,73 +337,6 @@ pagination:
 
 Some words describing this collection should go here.
 ```
-
-### `_blog_posts/`
-
-These are all of blog posts I've written.
-
-### Posts with and without Tags
-
-Most of the posts can just go into the general `_blog_posts/` directory, written as Markdown files. For a generic post, the front matter could look like this:
-```yml
----
-layout: post
-title: Post A
-tags: [ tag1, tag2 ] # optional
-permalink: /blog/posts/post-a
-date: 2001-12-14 00:00:00 -0600 # 2001-12-14 06:00:00 UTC
----
-```
-
-The tags determine how we want to categorize each post. If there's no categorization of a post (if it's completely random), then there's no need to specify any tag(s), AKA just leave the line completely out of the front matter. But, if you think the post is a good contestant for a tag, such as `tag1` or `tag2` in our example, then add those appropriate tags in a list format, as shown above.
-
-Without the `permalink` link in the front matter, the URL will most likely default to including the publishing date. This is not ideal, so instead, we'll set a custom permalink for each blog post.
-
-The `date` front matter indicates the published date and time. Usually, it's totally fine with blog posts being published at midnight (usually in America/Central time zone, because that's where Minnesota is). On rare occasions when two posts are published on the same date, it's important to specify a time so they sort properly. The entire site will show in a readers' local time, but the data will be stored in the system (and will be reflected in the `feed.xml` and `sitemap.xml`) in UTC. From a human's perspective, we want time zones to be a non-issue, so we can write our date/time as the author is seeing it within the post. For Jekyll to properly interpret it, we must specify the author's current hour offset from UTC at the time of publishing.
-
-### Posts in a Collection
-
-If I'm going to write a collection of posts that all have a common theme, they can each go into a new nested directory: `_blog_posts/category-one/`, and should make use of the `title` and `subtitle` metadata, where the `title` is the name of the collection, and the `subtitle` is the title of that specific post:
-```yml
----
-layout: post
-title: Category One
-subtitle: Post A
-category: Category One
-permalink: /blog/posts/category-one/post-a
-date: 2001-06-27 20:30:00 -0500 # 2001-06-28 01:30:00 UTC
----
-```
-
-### Writing Drafts
-
-To write drafts, make a new file in the `_blog_posts/` directory (or in a subdirectory if the post will be part of a category). The new file should be named in the following pattern: `test-post-title.md`. Because this draft hasn't been published yet, I usually just put in the date I hope to publish the draft (usually a few days in the future).
-
-To the front matter, make sure to add the `layout`, `title`, and `permalink` (`subtitle`, `category`, and `tags` are all optional).
-
-Then, when you run `jekyll serve --future` locally, the draft post(s) should appear at the top of the list of posts, and should show as "Unpublished."
-
-When it's time to publish the post, you can either:
-* Publish the post now:
-  * Add the current date/time in `YYYY-MM-DD HH:MM:SS -0X00` format (in the author's local time zone, properly identifying the current hour offset from UTC) to the post's front matter in the `date` value
-  * Re-add and commit that file to the pull request
-  * Wait for all status checks to pass on the pull request
-  * Merge the pull request into the `source` branch
-* Publish the post on a future date:
-  * Add the future publishing date/time in `YYYY-MM-DD HH:MM:SS -0X00` format (in the author's local time zone, properly identifying current the hour offset from UTC) to the post's front matter in the `date` value
-  * Re-add and commit that file to the pull request
-  * Wait for all status checks to pass on the pull request
-  * Add a comment to the pull request with the publishing date/time in UTC:
-    ```
-    example (May 18, 2020 at 17:58 UTC):
-    @prscheduler 18-05-2020T17:58
-
-    @prscheduler DD-MM-YYYYTHH:MM
-    ```
-  * Wait for the `pr-scheduler` to respond saying the merge was scheduled
-  * Now, the PR Merger will automatically merge your pull request at the time specified in the pull request; GitHub Actions will then trigger a build and deploy of your changes
-
-To identify the current hour offset from UTC, look up the time zone offset based on your location [here](https://www.timeanddate.com/time/zone/).
 
 ### `assets/`
 
