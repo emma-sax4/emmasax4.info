@@ -60,6 +60,9 @@ collections:
 
 feed:
   items: 5
+  collections:
+    collections:
+      path: feed.xml
 
 pagination:
   collection: collections
