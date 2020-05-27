@@ -11,12 +11,16 @@
   </div>
 
   <div class="text-center" style="margin-top: -.5rem;">
-    {% assign now = "now" | date: "%s" %}
-    {% assign date = page.date | date: "%s" %}
-    {% if date <= now %}
-      <span class="date-meta">{{ page.date }}</span>
-    {% else %}
+    {% if post.draft %}
       <span class="post-meta">Unpublished</span>
+    {% else %}
+      {% assign now = "now" | date: "%s" %}
+      {% assign date = page.date | date: "%s" %}
+      {% if date <= now %}
+        <span class="date-meta">{{ page.date }}</span>
+      {% else %}
+        <span class="post-meta">Unpublished</span>
+      {% endif %}
     {% endif %}
   </div>
 </h1>
