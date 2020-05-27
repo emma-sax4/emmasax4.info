@@ -7,7 +7,7 @@ redirect_from:
   - /around-town/
 ---
 
-My tagline claims that I love swimming, reading, Netflix, and traveling. While all of these are true, here's some other activities and fun interests I have when I'm not working.
+My tagline claims that I love swimming, reading, Netflix, and traveling. While all of these are true, here's some other activities and interests I participate in.
 
 ## Volunteering
 
@@ -22,16 +22,16 @@ My tagline claims that I love swimming, reading, Netflix, and traveling. While a
 * Calculus 1 [Peer Assisted Learning](https://academics.morris.umn.edu/office-academic-success/peer-assisted-learning-pal) (PAL) tutor at UMM
 * Student Campus Ambassador at UMM
 * Orientation Group Leader at UMM in 2016
-* Participant in the UMM [Honors Program](https://academics.morris.umn.edu/honors)
-* UMM [Concert Choir](https://academics.morris.umn.edu/ensembles/concert-choir) Dress Manager
-* UMM Dance Ensemble Treasurer
+* Participant in the [UMM Honors Program](https://academics.morris.umn.edu/honors)
+* [UMM Concert Choir](https://academics.morris.umn.edu/ensembles/concert-choir) Dress Manager
+* [UMM Dance Ensemble](https://umnmorris.campuslabs.com/engage/organization/danceensemble) Treasurer
 * Dance teacher to children at a local dance studio
 * Participant in the [NATS Competition](http://www.nats.org/competitions.html) 2014
 * Participant in a [Senior Recital](http://events.morris.umn.edu/event/student_senior_recital_amy_kuller_voice#.Xb7-40VKjOQ) in April 2017
 
 ## Traveling
 
-Although I already claimed I love traveling, I thought it'd be cool to share this list. I try to go to a new country every year. So here's a list of some of the foreign countries I've been to:
+I know I already claimed to love traveling, but since I try to go to a new country every year, here's a cool list of all of the foreign countries I've been to:
 <ol start="0">
   <li>China 🇨🇳</li>
   <li>France 🇫🇷</li>
