@@ -101,7 +101,7 @@ GitHub Actions sends a Slack notification indicating the build status after each
 
 ## Categories vs. Tags
 
-There's two ways of sorting blog posts. The first way is with a `tag`. A blog post can have as many `tag`s as desired, and each `tag` has its own page with all posts with that `tag`. The second way is with a `category`. A blog post can only be a part of a single `category`, so it makes sense for the small group of blog posts that are all related with a single theme. Each `category` also has its own page. A user of the site will view the category of posts no differently than posts with tag(s). Currently, the code is not set up to handle posts that are part of a `category` _and_ contain `tag`s.
+There's two ways of sorting blog posts. The first way is with a `tag`. A blog post can have as many tags as desired, and each tag has its own page with all posts with that tag. The second way is with a `category`. A blog post can only be a part of a single category, so it makes sense for the small group of blog posts that are all related with a single theme. Each category also has its own page. A user of the site will view the category of posts no differently than posts with tag(s). Currently, the code is not set up to handle posts that are part of a category _and_ contain tags.
 
 ## Directory/File Structure
 
