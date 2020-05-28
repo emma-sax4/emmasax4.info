@@ -8,7 +8,7 @@
   * [Tests](#tests)
   * [Deployments](#deployments)
   * [Notifications](#notifications)
-- [Collections vs. Categories vs. Tags](#collections-vs-categories-vs-tags)
+- [Categories vs. Tags](#categories-vs-tags)
 - [Directory/File Structure](#directoryfile-structure)
   * [`.github/`](#github)
   * [`_collections/`](#_collections)
@@ -101,7 +101,7 @@ GitHub Actions sends a Slack notification indicating the build status after each
 
 ## Categories vs. Tags
 
-There's two ways of sorting blog posts. The first way is with a `tag`. A blog post can have as many `tag`s as desired, and each `tag` has its own page with all posts with that `tag`. The second way is with a `category`. A blog post can only be a part of a single `category`, so it makes sense for the small group of blog posts that are all related with a single theme. Each `category` also has its own page. A user of the site will view the category of posts no differently than posts with tag(s). Currently, the code is not set up to handle posts that are part of a `category` _and_ contain `tag`s.
+There's two ways of sorting blog posts. The first way is with a `tag`. A blog post can have as many tags as desired, and each tag has its own page with all posts with that tag. The second way is with a `category`. A blog post can only be a part of a single category, so it makes sense for the small group of blog posts that are all related with a single theme. Each category also has its own page. A user of the site will view the category of posts no differently than posts with tag(s). Currently, the code is not set up to handle posts that are part of a category _and_ contain tags.
 
 ## Directory/File Structure
 
@@ -255,7 +255,7 @@ When it's time to publish the post, you can either:
   * Wait for all status checks to pass on the pull request
   * Add a comment to the pull request with the publishing date/time in UTC:
     ```
-    example (May 18, 2020 at 17:58 UTC):
+    # example (May 18, 2020 at 17:58 UTC):
     @prscheduler 18-05-2020T17:58
 
     @prscheduler DD-MM-YYYYTHH:MM
