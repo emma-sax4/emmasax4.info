@@ -87,6 +87,9 @@
     
     
   
+    
+    
+  
 
   
   
@@ -205,7 +208,7 @@
     <url>
       <loc>https://emmasax4.info/blog/posts/more-websites-jekyll-and-dns/</loc>
       
-        <lastmod>2020-05-27T22:16:20+00:00</lastmod>
+        <lastmod>2020-05-28T05:00:04+00:00</lastmod>
       
     </url>
   
@@ -233,7 +236,7 @@
     <url>
       <loc>https://emmasax4.info/blog/posts/switching-to-jekyll/</loc>
       
-        <lastmod>2020-05-27T22:16:20+00:00</lastmod>
+        <lastmod>2020-05-28T05:00:04+00:00</lastmod>
       
     </url>
   
@@ -304,6 +307,13 @@
       <loc>https://emmasax4.info/blog/posts/what-i-learned-being-recruited-to-landmark-forum/</loc>
       
         <lastmod>2020-05-27T22:16:20+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://emmasax4.info/blog/posts/why-i-switched-from-circleci-to-github-actions/</loc>
+      
+        <lastmod>2020-05-28T05:00:04+00:00</lastmod>
       
     </url>
   

@@ -4,7 +4,7 @@
   <link href="https://emmasax4.info/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://emmasax4.info/" rel="alternate" type="text/html" />
 
-  <updated>2020-05-27T23:20:04+00:00</updated>
+  <updated>2020-05-28T05:00:04+00:00</updated>
   <id>https://emmasax4.info/feed.xml</id>
 
   <title type="html">Emma Sax</title>
@@ -12,6 +12,17 @@
   <author>
         <name>Emma Sax</name>
       </author>
+  <entry>
+      <title type="html">Why I Switched from CircleCI to GitHub Actions</title>
+      <link href="https://emmasax4.info/blog/posts/why-i-switched-from-circleci-to-github-actions/" rel="alternate" type="text/html" title="Why I Switched from CircleCI to GitHub Actions" />
+      <published>2020-05-28T05:00:00+00:00</published>
+      <updated>2020-05-28T05:00:04+00:00</updated>
+      <id>https://emmasax4.info/blog/posts/why-i-switched-from-circleci-to-github-actions</id>
+
+      <author>
+        <name>Emma Sax</name>
+        </author>
+    </entry>
   <entry>
       <title type="html">Why I Switched from Travis CI to CircleCI</title>
       <link href="https://emmasax4.info/blog/posts/why-i-switched-from-travis-ci-to-circleci/" rel="alternate" type="text/html" title="Why I Switched from Travis CI to CircleCI" />
@@ -51,17 +62,6 @@
       <published>2020-02-07T06:00:00+00:00</published>
       <updated>2020-05-27T22:16:20+00:00</updated>
       <id>https://emmasax4.info/blog/posts/time-zones-utc-and-javascript-oh-my</id>
-
-      <author>
-        <name>Emma Sax</name>
-        </author>
-    </entry>
-  <entry>
-      <title type="html">What I Learned From Being Recruited to Landmark Forum</title>
-      <link href="https://emmasax4.info/blog/posts/what-i-learned-being-recruited-to-landmark-forum/" rel="alternate" type="text/html" title="What I Learned From Being Recruited to Landmark Forum" />
-      <published>2020-02-01T06:00:00+00:00</published>
-      <updated>2020-05-27T22:16:20+00:00</updated>
-      <id>https://emmasax4.info/blog/posts/what-i-learned-being-recruited-to-landmark-forum</id>
 
       <author>
         <name>Emma Sax</name>

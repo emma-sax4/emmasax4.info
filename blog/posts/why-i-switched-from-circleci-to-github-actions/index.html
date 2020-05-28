@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="msapplication-TileColor" content="#2d89ef">
+  <meta name="msapplication-TileImage" content="/assets/images/favicon/mstile-150x150.png">
+  <meta name="msapplication-config" content="/assets/images/favicon/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon/android-chrome-96x96.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="/assets/images/favicon/favicon-48x48.png">
+  <link rel="icon" type="image/png" sizes="196x196" href="/assets/images/favicon/favicon-196x196.png">
+  <link rel="manifest" href="/assets/images/favicon/site.webmanifest">
+  <link rel="mask-icon" href="/assets/images/favicon/safari-pinned-tab.svg" color="#1144ef">
+  <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="alternate" href="https://emmasax4.info/feed.xml" type="application/rss+xml">
+  <!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Emma Sax | Why I Switched from CircleCI to GitHub Actions</title>
+<meta name="generator" content="Jekyll v3.8.7" />
+<meta property="og:title" content="Emma Sax | Why I Switched from CircleCI to GitHub Actions" />
+<meta name="author" content="Emma Sax" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Emma Sax’s personal website and blog. Includes information about my social media profiles, résumé, and hobbies." />
+<meta property="og:description" content="Emma Sax’s personal website and blog. Includes information about my social media profiles, résumé, and hobbies." />
+<link rel="canonical" href="https://emmasax4.info/blog/posts/why-i-switched-from-circleci-to-github-actions/" />
+<meta property="og:url" content="https://emmasax4.info/blog/posts/why-i-switched-from-circleci-to-github-actions/" />
+<meta property="og:site_name" content="Emma Sax" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-05-28T05:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Why I Switched from CircleCI to GitHub Actions" />
+<meta name="google-site-verification" content="v04az8eo-0UcZrWCJr7SKAvM6hw90qTCBQoKx3PlXCA" />
+<meta name="msvalidate.01" content="89B2B19FF966341B78EF64EDADE6DF81" />
+<meta name="yandex-verification" content="c2741887f8c30dd1" />
+<script type="application/ld+json">
+{"description":"Emma Sax’s personal website and blog. Includes information about my social media profiles, résumé, and hobbies.","headline":"Why I Switched from CircleCI to GitHub Actions","dateModified":"2020-05-28T05:00:04+00:00","datePublished":"2020-05-28T05:00:00+00:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://emmasax4.info/blog/posts/why-i-switched-from-circleci-to-github-actions/"},"url":"https://emmasax4.info/blog/posts/why-i-switched-from-circleci-to-github-actions/","author":{"@type":"Person","name":"Emma Sax"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+  <header>
+  <nav class="navbar navbar-expand-md navbar-dark">
+    <a class="navbar-brand mb-0" href="https://emmasax4.info" target="_self">
+      <img src="/assets/images/logos/e-logo-white-40.png" width="30" height="30"
+        class="d-inline-block align-top" alt="E logo"
+      > Emma Sax
+    </a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse"
+      data-target="#navbar-links" aria-controls="navbar-links"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <i data-feather="menu"></i>
+      <i data-feather="x"></i>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbar-links">
+      <ul class="navbar-nav ml-auto mt-2 mt-md-0">
+        
+
+        
+          
+            
+
+            
+
+            <li class="nav-item ">
+              <a class="nav-link" href="/">Home
+                
+              </a>
+            </li>
+          
+        
+          
+            
+
+            
+
+            <li class="nav-item ">
+              <a class="nav-link" href="/about-me/">About Me
+                
+              </a>
+            </li>
+          
+        
+          
+            
+
+            
+
+            <li class="nav-item ">
+              <a class="nav-link" href="/interests-and-hobbies/">Interests & Hobbies
+                
+              </a>
+            </li>
+          
+        
+          
+            
+
+            
+
+            <li class="nav-item active">
+              <a class="nav-link" href="/blog">Blog
+                
+                  <span class="sr-only">(current)</span>
+                
+              </a>
+            </li>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            
+
+            
+
+            <li class="nav-item ">
+              <a class="nav-link" href="/contact-me/">Contact Me
+                
+              </a>
+            </li>
+          
+        
+      </ul>
+    </div>
+  </nav>
+</header>
+
+
+  <body>
+    <main class="container">
+      <div class="row">
+  <div class="col col-12 col-md-2 text-center">
+    <div class="container" style="padding-bottom: 1rem;">
+  <a href="/blog/" class="btn btn-lg btn-outline-secondary">All Posts</a>
+</div>
+
+
+<div class="text-center" style="margin-bottom: .5rem;">
+  <a href="/feed.xml" target="_blank" class="link-icon-rss">
+  <i data-feather="rss"></i>
+</a>
+
+</div>
+
+<div class="text-center" style="margin-bottom: .5rem;">
+  
+
+  
+  <span class="post-meta">
+    <i style="width: 20px; height: 20px;" data-feather="tag"></i>
+    
+      <a href="/blog/tech/">
+        tech
+      </a>
+      
+    
+  </span>
+
+
+
+
+</div>
+
+<div class="text-center" style="margin-bottom: 1rem;">
+  <span class="post-meta">
+    Read time: 16 minutes
+  </span>
+</div>
+
+  </div>
+
+  <div class="col col-12 col-md-10">
+    <h1 style="padding-bottom: .75rem;">
+  <div class="text-center">
+    
+      Why I Switched from CircleCI to GitHub Actions
+    
+  </div>
+
+  <div class="text-center" style="margin-top: -.5rem;">
+    
+      
+      
+      
+        <span class="date-meta">2020-05-28 00:00:00 -0500</span>
+      
+    
+  </div>
+</h1>
+
+    <div class="page-body">
+      <p>A couple of months ago, I made a decision to explore <a href="https://circleci.com/">CircleCI</a> as a continuous integration (CI) platform. After my exploration, I decided to fully switch over my website from <a href="https://travis-ci.org/">Travis CI</a> to CircleCI. I wrote a blog post about <em>why</em> I switched <a href="/blog/posts/why-i-switched-from-travis-ci-to-circleci/">here</a>. But two months later, although I was still content overall, something happened that made me think about cutting back on dependencies for my site.</p>
+
+<p>I know my website was still dependent on a lot of things: <a href="https://pages.github.com/">GitHub Pages</a> to serve my site, <a href="https://circleci.com/">CircleCI</a> to build and deploy my site, <a href="https://getbootstrap.com/docs/4.4/getting-started/introduction/">Bootstrap4</a> for its buttons and CSS, <a href="https://feathericons.com/">Feather</a> for its beautiful icons, <a href="https://jquery.com/">Jquery</a> for its javascript responsive CSS, etc. So, I made a plan to remove all of those dependencies (crazy, right?!).</p>
+
+<p>If we make the assumption that I’ve successfully removed all Bootstrap4, Jquery, Feather, and Google Fonts dependencies (by downloading them all raw to my GitHub repository… I know, I’m crazy), then I’m left with one big gaping dependency hole. My site relies on GitHub and CircleCI. And this leads me to describe what prompted me to do all of this.</p>
+
+<ul id="markdown-toc">
+  <li><a href="#the-story-behind-this-extreme-decision" id="markdown-toc-the-story-behind-this-extreme-decision">The Story Behind this Extreme Decision</a></li>
+  <li><a href="#how-i-use-ci-tools" id="markdown-toc-how-i-use-ci-tools">How I Use CI Tools</a></li>
+  <li><a href="#here-enters-github-actions" id="markdown-toc-here-enters-github-actions">Here Enters GitHub Actions</a>    <ul>
+      <li><a href="#1-building-my-website" id="markdown-toc-1-building-my-website">1. Building my website</a></li>
+      <li><a href="#2-notifying-slack" id="markdown-toc-2-notifying-slack">2. Notifying Slack</a></li>
+      <li><a href="#3-deploying-to-github-pages" id="markdown-toc-3-deploying-to-github-pages">3. “Deploying” to GitHub Pages</a></li>
+      <li><a href="#4-running-daily-crons" id="markdown-toc-4-running-daily-crons">4. Running daily crons</a></li>
+    </ul>
+  </li>
+  <li><a href="#conclusion" id="markdown-toc-conclusion">Conclusion</a></li>
+</ul>
+
+<h2 id="the-story-behind-this-extreme-decision">The Story Behind this Extreme Decision</h2>
+
+<p>A few weeks ago, Travis CI had a problem delivering notification webhooks. At my work, we send Travis CI webhooks to one of our internal websites, which then sends Slack notifications and starts deployments to our staging and production environments. And when Travis CI stopped sending our webhooks, we lost all notifications and all deployments—for half a day.</p>
+
+<p>None of us particularly noticed anything was amiss until a few hours had gone by, and the developers realized none of their code had been deployed to our staging environment. After they reported that to my team, I dove into a two-hour tailspin to figure out why our deployments and notifications never arrived. Did our internal website break? Did notification formats change? Was AWS having blips throughout the day? And what we realized was that the issue wasn’t ours—it was Travis CI’s issue.</p>
+
+<p>After we sent Travis CI support an email, they promptly had the issue tracked on their Status Page, and it was fixed within the hour.</p>
+
+<p>At my workplace, at most this was just a few hours’ time and frustration, and a little bit of slowed down development time; annoying, but recoverable. But it prompted my team to think about how interwoven our development process is with multiple third party platforms. We’ve had similar issues when GitHub has outages, since it prevents us from doing code reviews and deployments. Now, it’s happened again with our build and testing tool: Travis CI. If AWS started to have issues, then wouldn’t be able to run deployments (ignoring the fact that all of our platforms are hosted through AWS).</p>
+
+<p>If any of our development process tools have an outage, then we are unable to develop.</p>
+
+<p>So, how does this relate to my project? After thinking about it for a while, I didn’t like how my website was dependent on GitHub <em>and</em> CircleCI. Up until now, CircleCI has only had one half-outage which caused me a little bit of grief. And when I emailed them, their support help was phenomenal. They took responsibility, explained what went wrong, and fixed it right up. But, I thought that it could be worth it to be brave and try something new: <a href="https://github.blog/2019-08-08-github-actions-now-supports-ci-cd/">GitHub Actions</a>.</p>
+
+<p>Up until now, I’ve heard of GitHub Actions, but I’ve been a little bit scared to try it out. I figured that there was no time like the present to give it a shot. If it doesn’t work, then I have a CI solution that I’m really perfectly satisfied with and okay sticking with. If it does work out, then I’ve got a CI solution I’m happy with that <em>also</em> cuts out a third party platform. I won’t need to pass secure tokens and secrets around, and I won’t need webhooks. GitHub would handle everything, from storing my source code, to building, to deploying, to hosting. And if GitHub has an outage, well my whole site is down anyway, so as long as they’re working on fixing it for me, then I’m satisfied 👍🏼.</p>
+
+<h2 id="how-i-use-ci-tools">How I Use CI Tools</h2>
+
+<p>As I originally outlined in <a href="/blog/posts/why-i-switched-from-travis-ci-to-circleci/">this blog post</a>, I use CI tools for four main things:</p>
+<blockquote>
+  <ol>
+    <li>Build my Jekyll website quickly, run HTML Proofer on it, and have room to grow my test suite if I desire to do so</li>
+    <li>Notify a Slack channel when the build was done</li>
+    <li>“Deploy” my website by making a commit back to my <a href="https://github.com/emma-sax4/emma-sax4.github.io/tree/master"><code class="highlighter-rouge">master</code> branch in GitHub</a> (which GitHub Pages will then deploy for me)</li>
+    <li>Run a daily cron so that I can automate the build to run whenever I want (ideal for when I’d like to publish a blog post at a specific time or to check that my site still builds and loads properly every now and then, since my site doesn’t get consistent updates all the time)</li>
+  </ol>
+</blockquote>
+
+<p>This list of four requirements hasn’t changed. CircleCI can do all of these things beautifully, although if I’m honest, I had to do some of my own personal fidgeting around to get #3 working as expected and #2 with a custom Slack message. All of this is fine. I put the time and effort in once, and it’s paid off countless times since. #automation #computers. Now it’s time to see if GitHub Actions can do the same things for me.</p>
+
+<h2 id="here-enters-github-actions">Here Enters GitHub Actions</h2>
+
+<p>On the surface, GitHub Actions is <em>very</em> similar to CircleCI. Both of them use Yaml, and both of them use workflows which have multiple jobs, and jobs have multiple steps/commands. Both of them require a <code class="highlighter-rouge">checkout</code> step, and both of them have capabilities to run on a schedule or on <code class="highlighter-rouge">push</code>.</p>
+
+<p>The immediate first thing I noticed was that GitHub Actions requires you to have a separate file for each workflow. In concept this idea is fine, but this is made 10x worse by the fact that you can’t have steps that are shared between jobs/workflows. So each workflow I define must define each job on its own. This is sort of annoying given the fact that my three workflows <code class="highlighter-rouge">Develop</code>, <code class="highlighter-rouge">Release</code>, and <code class="highlighter-rouge">Cron</code> all share nine steps. This means that those three workflow files have <em>a lot</em> of duplicated code on them. This would be cumbersome if I changed my workflow files a lot, so the good news is that I don’t forsee them changing every week.</p>
+
+<p>So besides needing a separate workflow file for each workflow, let’s jump in to each requirement individually.</p>
+
+<h3 id="1-building-my-website">1. Building my website</h3>
+
+<p>The first step in each workflow is to <code class="highlighter-rouge">checkout</code> the code. GitHub Actions provides a <a href="https://github.com/actions/checkout">Checkout Action</a> that’s made to do exactly that. So there, we have our first few steps:</p>
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">jobs</span><span class="pi">:</span>
+  <span class="na">job-name</span><span class="pi">:</span>
+    <span class="na">runs-on</span><span class="pi">:</span> <span class="s">ubuntu-latest</span> <span class="c1"># Linux is the best</span>
+    <span class="na">steps</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Checkout Code</span>
+      <span class="na">uses</span><span class="pi">:</span> <span class="s">actions/checkout@v1</span>
+
+    <span class="c1"># we'll see the other custom defined environment variables later</span>
+    <span class="c1"># get the current branch based off github.head_ref OR github.ref (if we're running this on a branch vs. a PR)</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Define Variables</span>
+      <span class="na">run</span><span class="pi">:</span> <span class="s">echo "::set-env name=BRANCH::$(echo ${{ github.head_ref }} | sed -E 's|refs/[a-zA-Z]+/||')"</span>
+
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Switch to Current Branch</span>
+      <span class="na">run</span><span class="pi">:</span> <span class="s">git checkout ${{ env.BRANCH }}</span>
+</code></pre></div></div>
+
+<p>Technically the Checkout Action provides a <code class="highlighter-rouge">v2</code> to use, but I found that it doesn’t work for what I wanted. I’ll explain more about that later. So to bypass those issues, I paired the checkout step with the <code class="highlighter-rouge">Switch to Current Branch</code> step to get around that issue.</p>
+
+<p>The next few steps are to set up Bundler, install gems, and build the site. I’ll just give these steps instead of explaining:</p>
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># install the exact version of bundler that the Gemfile.lock uses</span>
+<span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Configure Bundler</span>
+  <span class="na">run</span><span class="pi">:</span> <span class="s">sudo gem install bundler -v $(cat Gemfile.lock | tail -1 | tr -d ' ')</span>
+
+<span class="c1"># use https://github.com/actions/cache to set a gem cache</span>
+<span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Configure Gem Cache</span>
+  <span class="na">uses</span><span class="pi">:</span> <span class="s">actions/cache@v1</span>
+  <span class="na">with</span><span class="pi">:</span>
+    <span class="na">path</span><span class="pi">:</span> <span class="s">vendor/bundle</span>
+    <span class="na">key</span><span class="pi">:</span> <span class="s">bundler-cache-${{ hashFiles('**/Gemfile.lock') }}</span>
+    <span class="na">restore-keys</span><span class="pi">:</span> <span class="s">bundler-cache-</span>
+
+<span class="c1"># install all gems or use the cached gems</span>
+<span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Install Gems</span>
+  <span class="na">run</span><span class="pi">:</span> <span class="s">bundle config set path 'vendor/bundle' &amp;&amp; bundle install</span>
+
+<span class="c1"># build the site</span>
+<span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Jekyll Build</span>
+  <span class="na">run</span><span class="pi">:</span> <span class="s">JEKYLL_ENV=production bundle exec jekyll build --destination ./_site/</span>
+
+<span class="c1"># run HTML proofer</span>
+<span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">HTML Proofer</span>
+  <span class="na">run</span><span class="pi">:</span> <span class="s">bundle exec htmlproofer --assume-extension --allow-hash-href --internal-domains /emmasax4.info/ --only_4xx ./_site/</span>
+</code></pre></div></div>
+
+<p>Bam! Not too shabby. This now looks <em>very</em> familiar to CircleCI.</p>
+
+<h3 id="2-notifying-slack">2. Notifying Slack</h3>
+
+<p>It turns out that GitHub Actions uses actions similarly to how CircleCI uses orbs. So, I went and hunted down the perfect action for slack notifications. I ended up finding <a href="https://github.com/marketplace/actions/action-slacker"><code class="highlighter-rouge">action-slacker</code></a>.</p>
+
+<p>Note: Since deciding to use this action, I’ve forked my own version of <code class="highlighter-rouge">action-slacker</code> and renamed it <code class="highlighter-rouge">slack-notifier-action</code>, and made a few changes for my personal usage. Those aren’t anything that my readers need to pay attention to, but just know that I use personalized versions of almost all of my actions.</p>
+
+<p>To use <code class="highlighter-rouge">action-slacker</code>/<code class="highlighter-rouge">slack-notifier-action</code> the way I wanted to, I needed to make two different actions: one runs on successful builds, and the other runs on failed builds. They pass in different messages and colors based on the state of the build:</p>
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Notify Slack on Success</span>
+  <span class="na">if</span><span class="pi">:</span> <span class="s">success()</span>
+  <span class="na">uses</span><span class="pi">:</span> <span class="s">emma-sax4/slack-notifier-action@emmasax4_slack_notifier_action</span>
+  <span class="na">env</span><span class="pi">:</span>
+    <span class="c1"># I got this from my Slack account and added it as a secret to GitHub</span>
+    <span class="na">SLACK_WEBHOOK</span><span class="pi">:</span> <span class="s">${{ secrets.SLACK_WEBHOOK }}</span>
+  <span class="na">with</span><span class="pi">:</span>
+    <span class="na">channel</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#general'</span>
+    <span class="na">icon_url</span><span class="pi">:</span> <span class="s">https://img.icons8.com/ios-filled/50/000000/github.png</span>
+    <span class="na">username</span><span class="pi">:</span> <span class="s">GitHub Actions</span>
+    <span class="na">color</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#23c22e'</span>
+    <span class="na">title</span><span class="pi">:</span> <span class="s">${{ github.repository }}</span>
+    <span class="na">title_link</span><span class="pi">:</span> <span class="s">https://github.com/${{ github.repository }}</span>
+    <span class="na">author_name</span><span class="pi">:</span> <span class="s">${{ github.actor }}</span>
+    <span class="na">author_link</span><span class="pi">:</span> <span class="s">https://github.com/${{ github.actor }}</span>
+    <span class="na">author_icon</span><span class="pi">:</span> <span class="s">https://github.com/${{ github.actor }}.png</span>
+    <span class="na">text</span><span class="pi">:</span> <span class="pi">&gt;-</span>
+      <span class="s">Build &lt;${{ env.BUILD_URL }}|${{ github.run_id }}&gt; on branch `${{ env.BRANCH }}`</span>
+      <span class="s">in PR &lt;${{ env.PULL_URL }}|#${{ env.PULL_ID }}&gt; *passed*.</span>
+
+<span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Notify Slack on Failure</span>
+  <span class="na">if</span><span class="pi">:</span> <span class="s">failure()</span>
+  <span class="na">uses</span><span class="pi">:</span> <span class="s">emma-sax4/slack-notifier-action@emmasax4_slack_notifier_action</span>
+  <span class="na">env</span><span class="pi">:</span>
+    <span class="na">SLACK_WEBHOOK</span><span class="pi">:</span> <span class="s">${{ secrets.SLACK_WEBHOOK }}</span>
+  <span class="na">with</span><span class="pi">:</span>
+    <span class="na">channel</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#general'</span>
+    <span class="na">icon_url</span><span class="pi">:</span> <span class="s">https://img.icons8.com/ios-filled/50/000000/github.png</span>
+    <span class="na">username</span><span class="pi">:</span> <span class="s">GitHub Actions</span>
+    <span class="na">color</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#bd2222'</span>
+    <span class="na">title</span><span class="pi">:</span> <span class="s">${{ github.repository }}</span>
+    <span class="na">title_link</span><span class="pi">:</span> <span class="s">https://github.com/${{ github.repository }}</span>
+    <span class="na">author_name</span><span class="pi">:</span> <span class="s">${{ github.actor }}</span>
+    <span class="na">author_link</span><span class="pi">:</span> <span class="s">https://github.com/${{ github.actor }}</span>
+    <span class="na">author_icon</span><span class="pi">:</span> <span class="s">https://github.com/${{ github.actor }}.png</span>
+    <span class="na">text</span><span class="pi">:</span> <span class="pi">&gt;-</span>
+      <span class="s">Build &lt;${{ env.BUILD_URL }}|${{ github.run_id }}&gt; on branch `${{ env.BRANCH }}`</span>
+      <span class="s">in PR &lt;${{ env.PULL_URL }}|#${{ env.PULL_ID }}&gt; *failed*.</span>
+</code></pre></div></div>
+
+<p>Ah, I almost forgot… I missed the new environment variables. By default, <code class="highlighter-rouge">BUILD_URL</code>, <code class="highlighter-rouge">BRANCH</code>, <code class="highlighter-rouge">PULL_URL</code>, and <code class="highlighter-rouge">PULL_ID</code> aren’t real things. We’ve already seen defining <code class="highlighter-rouge">BRANCH</code> above. But how about the others? This is how the the rest of the <code class="highlighter-rouge">Define Variables</code> step looks:</p>
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Define Variables</span>
+  <span class="na">run</span><span class="pi">:</span> <span class="pi">|</span>
+    <span class="s">pull_id=$(echo ${{ github.ref }} | sed -E 's|refs/pull/||' | sed -E 's|/merge||')</span>
+    <span class="s">echo "::set-env name=PULL_ID::$pull_id"</span>
+    <span class="s">echo "::set-env name=PULL_URL::$(echo https://github.com/${{ github.repository }}/pull/$pull_id)"</span>
+    <span class="s">echo "::set-env name=BUILD_URL::$(echo https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})"</span>
+</code></pre></div></div>
+
+<p>And that’s it. Add those few steps, and now one of the slack steps will always run, depending on the rest of the build.</p>
+
+<h3 id="3-deploying-to-github-pages">3. “Deploying” to GitHub Pages</h3>
+
+<p>With GitHub Actions’ marketplace, it made it simple to find the perfect action to “deploy” to GitHub Pages: <a href="https://github.com/marketplace/actions/deploy-to-github-pages"><code class="highlighter-rouge">Deploy to GitHub Pages</code></a>. This action was ideal, since it didn’t require me to pass a lot of environment variables or inputs in to get it working correctly. Here’s what I needed:</p>
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">GitHub Pages Deploy</span>
+  <span class="na">uses</span><span class="pi">:</span> <span class="s">emma-sax4/github-pages-deploy-action@emmasax4_github_pages_deploy_action</span>
+  <span class="na">env</span><span class="pi">:</span>
+    <span class="na">GITHUB_TOKEN</span><span class="pi">:</span> <span class="s">${{ secrets.GITHUB_TOKEN }}</span>
+  <span class="na">with</span><span class="pi">:</span>
+    <span class="na">BRANCH</span><span class="pi">:</span> <span class="s">master</span>
+    <span class="na">FOLDER</span><span class="pi">:</span> <span class="s">_site</span>
+    <span class="na">CLEAN</span><span class="pi">:</span> <span class="no">true</span>
+    <span class="na">COMMIT_MESSAGE</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Deploy</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">${{</span><span class="nv"> </span><span class="s">github.repository</span><span class="nv"> </span><span class="s">}}.git:master'</span>
+    <span class="na">GIT_CONFIG_EMAIL</span><span class="pi">:</span> <span class="s">41898282+github-actions[bot]@users.noreply.github.com</span>
+    <span class="na">GIT_CONFIG_NAME</span><span class="pi">:</span> <span class="s">github-actions[bot]</span>
+</code></pre></div></div>
+
+<p>The <code class="highlighter-rouge">${{ secrets.GITHUB_TOKEN }}</code> is something that’s built into GitHub Actions, and is automatically provided with exactly the permissions required, so there was no passing around of permissions or tokens to obtain this.</p>
+
+<p>The <code class="highlighter-rouge">CLEAN: true</code> was something that I added in later, when I realized that without it, deleted directories wouldn’t be automatically deleted from my <code class="highlighter-rouge">master</code> branch. One other thing that I had to take note of was that for some reason, the deploy wouldn’t work properly with <code class="highlighter-rouge">actions/checkout@v2</code> (it rewrites the files upon deploy, meaning each page on my site would receive a new <code class="highlighter-rouge">updated_at</code> or <code class="highlighter-rouge">lastModifiedAt</code> date upon each deploy), so I switched to <code class="highlighter-rouge">actions/checkout@v1</code>. Of course, <code class="highlighter-rouge">v1</code> of the checkout step had its own cross to bear, but that was fine for me to compromise with. I think that I could’ve gotten <code class="highlighter-rouge">v2</code> to work properly, had I finished reading the documentation for the deploy action originally.</p>
+
+<p>One super cool thing that I actually suggested to the author of this action was to have a deployment status that is outputted at the end of the whole thing. It’s described a bit <a href="https://github.com/marketplace/actions/deploy-to-github-pages#deployment-status">here</a>, but with this, I was able to custom create a Slack message specifically about the deployment:</p>
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Set Deploy Status Message</span>
+  <span class="na">run</span><span class="pi">:</span> <span class="pi">|</span>
+    <span class="s">if [[ ${{ env.DEPLOYMENT_STATUS }} == skipped ]]; then</span>
+      <span class="s">echo "::set-env name=DEPLOY_MESSAGE::$(echo Deploy to GitHub Pages was *skipped*)"</span>
+    <span class="s">elif [[ ${{ env.DEPLOYMENT_STATUS }} == success ]]; then</span>
+      <span class="s">echo "::set-env name=DEPLOY_MESSAGE::$(echo Deploy to GitHub Pages was *successful*)"</span>
+    <span class="s">elif [[ ${{ env.DEPLOYMENT_STATUS }} == failed ]]; then</span>
+      <span class="s">echo "::set-env name=DEPLOY_MESSAGE::$(echo Deploy to GitHub Pages was *unsuccessful*)"</span>
+    <span class="s">fi</span>
+</code></pre></div></div>
+
+<p>And then I can call that new message by using this: <code class="highlighter-rouge">${{ env.DEPLOY_MESSAGE }}</code>.</p>
+
+<p>Important note: when using the generic version of this action, you’ll need to pass the <code class="highlighter-rouge">GITHUB_TOKEN</code> as a <code class="highlighter-rouge">with</code> variable instead of an <code class="highlighter-rouge">env</code> variable; I have a specific version of this action that takes it in as an <code class="highlighter-rouge">env</code> variable.</p>
+
+<h3 id="4-running-daily-crons">4. Running daily crons</h3>
+
+<p>If I’m completely honest, running daily crons is about the simplest part of this entire process. Either GitHub Actions supports crons, or it doesn’t. In this case… it totally does. The <a href="https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions#onschedule">documentation for GitHub Actions schedules</a> clearly defines that we should submit our crons in UTC in Posix format:</p>
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">name</span><span class="pi">:</span> <span class="s">Cron</span>
+<span class="na">on</span><span class="pi">:</span>
+  <span class="na">schedule</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">cron</span><span class="pi">:</span> <span class="s1">'</span><span class="s">30</span><span class="nv"> </span><span class="s">5</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">1'</span> <span class="c1"># On Mondays: 05:30 UTC =&gt; 00:30 CDT / 23:30 CST</span>
+</code></pre></div></div>
+
+<p>And that’s it. The cron takes a couple of minutes longer to begin than it does with CircleCI, but that’s close enough for me.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>After what’s probably about 8 hours of work, my new CI solution is complete. My site now completely uses GitHub Actions to build and deploy, and there’s only a couple things I compromised.</p>
+
+<ol>
+  <li>Builds take little bit longer (maybe 30 seconds longer… still shorter than with Travis CI)</li>
+  <li>More lines of duplicated workflow code</li>
+  <li>Crons don’t exactly start on the dot… they make take about 2 minutes to be triggered (still better than the 1 hour that Travis CI warned about)</li>
+</ol>
+
+<p>But these cons are worth it, given that my site now completely runs on GitHub Actions and doesn’t need any other tooling.</p>
+
+<p>If somebody were to ask me whether to use GitHub Actions, Travis CI, or CircleCI, I’d give different responses based on the use case. If the person wants something supported, familiar, and common, then I’d say to use Travis CI. In an enterprise setting, Travis CI probably has some of the best abilities to connect to AWS, Heroku, Jenkins, etc. If the person wants something that’s still formally supported, and potentially willing to try new things, then CircleCI may be the way to go. It’s fast, simple, and relatively easy to use (if you are willing to make additional bash scripts). And if the person wants something natively built into GitHub, is okay duplicating some code, and is willing to poke around more open source code, then GitHub Actions can be a powerful tool. Also, with either Travis CI or GitHub Actions, if you don’t want builds running on a few select branches, you don’t need to explicitly ignore them, like with CircleCI. It’s worth noting that for all three of these CI solutions, you’ll have to start spending money if you want to use them heavily with private repositories.</p>
+
+<p>And as for me, I think I’m going to have to cut myself off from new CI solutions for now. GitHub Actions does everything I want it to, and now that it’s all set up, it’s fast, easy to maintain, and of course, I’ve got that one big bonus… I’ve eliminated a third party development dependency.</p>
+
+      <div style="margin-top: 3rem;">
+  
+    <script src="/assets/js/show-comments.js" type="text/javascript"></script>
+
+    <div class="text-center" style="margin-bottom: 1rem;">
+      <button id="show-comments-button" class="btn btn-lg btn-outline-secondary"
+  onclick="loadComments('emmasax4');return false;">
+  Load Comments
+  <i data-feather="message-circle"></i>
+</button>
+
+    </div>
+
+    <div id="disqus_thread"></div>
+
+    <noscript>
+      Please enable JavaScript to view the
+      <a href="https://disqus.com/?ref_noscript" rel="nofollow">
+        comments powered by Disqus.
+      </a>
+    </noscript>
+  
+</div>
+
+    </div>
+  </div>
+</div>
+
+    </main>
+  </body>
+
+  <footer>
+  &copy; 2015–<script>document.write(new Date().getFullYear());</script>
+  Emma Sax. All rights reserved.
+  View on <a href="https://github.com/emma-sax4/emma-sax4.github.io">GitHub</a>.
+</footer>
+
+  <script src="/assets/js/show-dates.js" type="text/javascript"></script>
+<script src="/assets/js/external-links.js" type="text/javascript"></script>
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+<script src="/assets/js/feather.min.js"></script>
+<script>feather.replace()</script>
+
+</html>
