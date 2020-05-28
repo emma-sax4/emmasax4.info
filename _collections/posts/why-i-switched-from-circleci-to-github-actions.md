@@ -27,9 +27,9 @@ At my workplace, at most this was just a few hours' time and frustration, and a 
 
 If any of our development process tools have an outage, then we are unable to develop.
 
-So, how does this relate to my project? After thinking about it for a while, I didn't like how my website was dependent on GitHub **and** CircleCI. Up until now, CircleCI has only had one half-outage which caused me a little bit of grief. And when I emailed them, their support help was phenomenal. They took responsibility, explained what went wrong, and fixed it right up. But, I thought that it could be worth it to be brave and try something new: [GitHub Actions](https://github.blog/2019-08-08-github-actions-now-supports-ci-cd/).
+So, how does this relate to my project? After thinking about it for a while, I didn't like how my website was dependent on GitHub _and_ CircleCI. Up until now, CircleCI has only had one half-outage which caused me a little bit of grief. And when I emailed them, their support help was phenomenal. They took responsibility, explained what went wrong, and fixed it right up. But, I thought that it could be worth it to be brave and try something new: [GitHub Actions](https://github.blog/2019-08-08-github-actions-now-supports-ci-cd/).
 
-Up until now, I've heard of GitHub Actions, but I've been a little bit scared to try it out. I figured that there was no time like the present to give it a shot. If it doesn't work, then I have a CI solution that I'm really perfectly satisfied with and okay sticking with. If it does work out, then I've got a CI solution I'm happy with that _also_ cuts out on a third party platform. I won't need to pass secure tokens and secrets around, and I won't need webhooks. GitHub would handle everything, from storing my source code, to building, to deploying, to hosting. And if GitHub has an outage, well my whole site is down anyway, so as long as they're working on fixing it for me, then I'm satisfied 👍🏼.
+Up until now, I've heard of GitHub Actions, but I've been a little bit scared to try it out. I figured that there was no time like the present to give it a shot. If it doesn't work, then I have a CI solution that I'm really perfectly satisfied with and okay sticking with. If it does work out, then I've got a CI solution I'm happy with that _also_ cuts out a third party platform. I won't need to pass secure tokens and secrets around, and I won't need webhooks. GitHub would handle everything, from storing my source code, to building, to deploying, to hosting. And if GitHub has an outage, well my whole site is down anyway, so as long as they're working on fixing it for me, then I'm satisfied 👍🏼.
 
 ## How I Use CI Tools
 
@@ -45,7 +45,7 @@ This list of four requirements hasn't changed. CircleCI can do all of these thin
 
 On the surface, GitHub Actions is _very_ similar to CircleCI. Both of them use Yaml, and both of them use workflows which have multiple jobs, and jobs have multiple steps/commands. Both of them require a `checkout` step, and both of them have capabilities to run on a schedule or on `push`.
 
-The immediate first thing I noticed was that GitHub Actions requires you to have a separate file for each workflow. In concept this idea is fine, but this is made 10x worse by the fact that you can't have steps that are shared between jobs/workflows. So each workflow I define must define each of job on its own. This is sort of annoying given the fact that my three workflows `Develop`, `Release`, and `Cron` all share nine steps. This means that those three workflow files have _a lot_ of duplicated code on them. This would cumbersome if I changed my workflow files a lot, so the good news is that I don't forsee them changing every week.
+The immediate first thing I noticed was that GitHub Actions requires you to have a separate file for each workflow. In concept this idea is fine, but this is made 10x worse by the fact that you can't have steps that are shared between jobs/workflows. So each workflow I define must define each job on its own. This is sort of annoying given the fact that my three workflows `Develop`, `Release`, and `Cron` all share nine steps. This means that those three workflow files have _a lot_ of duplicated code on them. This would be cumbersome if I changed my workflow files a lot, so the good news is that I don't forsee them changing every week.
 
 So besides needing a separate workflow file for each workflow, let's jump in to each requirement individually.
 
@@ -69,7 +69,7 @@ The first step in each workflow is to `checkout` the code. GitHub Actions provid
       run: git checkout ${{ env.BRANCH }}{% endraw %}
 ```
 
-Technically the Checkout Action provides a `v2` to use, but I found that it doesn't work for what I wanted (it rewrites the files upon deploy, meaning each page on my site would receive a new `updated_at` or `lastModifiedAt` date upon each deploy). So, I paired the checkout step with the `Switch to Current Branch` step to get around that issue.
+Technically the Checkout Action provides a `v2` to use, but I found that it doesn't work for what I wanted. I'll explain more about that later. So to bypass those issues, I paired the checkout step with the `Switch to Current Branch` step to get around that issue.
 
 The next few steps are to set up Bundler, install gems, and build the site. I'll just give these steps instead of explaining:
 ```yml
@@ -162,6 +162,42 @@ And that's it. Add those few steps, and now one of the slack steps will always r
 
 ### 3. "Deploying" to GitHub Pages
 
+With GitHub Actions' marketplace, it made it simple to find the perfect action to "deploy" to GitHub Pages: [`Deploy to GitHub Pages`](https://github.com/marketplace/actions/deploy-to-github-pages). This action was ideal, since it didn't require me to pass a lot of environment variables or inputs in to get it working correctly. Here's what I needed:
+```yml
+{% raw %}- name: GitHub Pages Deploy
+  uses: emma-sax4/github-pages-deploy-action@emmasax4_github_pages_deploy_action
+  env:
+    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  with:
+    BRANCH: master
+    FOLDER: _site
+    CLEAN: true
+    COMMIT_MESSAGE: 'Deploy to ${{ github.repository }}.git:master'
+    GIT_CONFIG_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
+    GIT_CONFIG_NAME: github-actions[bot]{% endraw %}
+```
+
+The `{% raw %}${{ secrets.GITHUB_TOKEN }}{% endraw %}` is something that's built into GitHub Actions, and is automatically provided with exactly the permissions required, so there was no passing around of permissions or tokens to obtain this.
+
+The `CLEAN: true` was something that I added in later, when I realized that without it, deleted directories wouldn't be automatically deleted from my `master` branch. One other thing that I had to take note of was that for some reason, the deploy wouldn't work properly with `actions/checkout@v2` (it rewrites the files upon deploy, meaning each page on my site would receive a new `updated_at` or `lastModifiedAt` date upon each deploy), so I switched to `actions/checkout@v1`. Of course, `v1` of the checkout step had its own cross to bear, but that was fine for me to compromise with. I think that I could've gotten `v2` to work properly, had I finished reading the documentation for the deploy action originally.
+
+One super cool thing that I actually suggested to the author of this action was to have a deployment status that is outputted at the end of the whole thing. It's described a bit [here](https://github.com/marketplace/actions/deploy-to-github-pages#deployment-status), but with this, I was able to custom create a Slack message specifically about the deployment:
+```yml
+{%raw%}- name: Set Deploy Status Message
+  run: |
+    if [[ ${{ env.DEPLOYMENT_STATUS }} == skipped ]]; then
+      echo "::set-env name=DEPLOY_MESSAGE::$(echo Deploy to GitHub Pages was *skipped*)"
+    elif [[ ${{ env.DEPLOYMENT_STATUS }} == success ]]; then
+      echo "::set-env name=DEPLOY_MESSAGE::$(echo Deploy to GitHub Pages was *successful*)"
+    elif [[ ${{ env.DEPLOYMENT_STATUS }} == failed ]]; then
+      echo "::set-env name=DEPLOY_MESSAGE::$(echo Deploy to GitHub Pages was *unsuccessful*)"
+    fi{% endraw %}
+```
+
+And then I can call that new message by using this: `{% raw %}${{ env.DEPLOY_MESSAGE }}{% endraw %}`.
+
+Important note: when using the generic version of this action, you'll need to pass the `GITHUB_TOKEN` as a `with` variable instead of an `env` variable; I have a specific version of this action that takes it in as an `env` variable.
+
 ### 4. Running daily crons
 
 If I'm completely honest, running daily crons is about the simplest part of this entire process. Either GitHub Actions supports crons, or it doesn't. In this case... it totally does. The [documentation for GitHub Actions schedules](https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions#onschedule) clearly defines that we should submit our crons in UTC in Posix format:
@@ -172,9 +208,7 @@ on:
     - cron: '30 5 * * 1' # On Mondays: 05:30 UTC => 00:30 CDT / 23:30 CST
 ```
 
-And that's it. Now, at the time of me writing this, I've yet to see the cron in action. But I have no doubt that it'll trigger at or within a couple minutes after 12:30am tonight (since I'm writing on a Sunday night).
-
-### Bonus: Setting automatic pull request merges based on a schedule
+And that's it. The cron takes a couple of minutes longer to begin than it does with CircleCI, but that's close enough for me.
 
 ## Conclusion
 
@@ -183,6 +217,9 @@ After what's probably about 8 hours of work, my new CI solution is complete. My 
 1. Builds take little bit longer (maybe 30 seconds longer... still shorter than with Travis CI)
 2. More lines of duplicated workflow code
 3. Crons don't exactly start on the dot... they make take about 2 minutes to be triggered (still better than the 1 hour that Travis CI warned about)
-4. GitHub Pages deploy doesn't quite delete all deleted files/directories as it should–I opened an issue and am still investigating this one
 
-But these cons are worth it, given that my site now completely runs on GitHub Actions and doesn't need any other tooling, and I get that bonus pull request merge scheduler that I never got with CircleCI.
+But these cons are worth it, given that my site now completely runs on GitHub Actions and doesn't need any other tooling.
+
+If somebody were to ask me whether to use GitHub Actions, Travis CI, or CircleCI, I'd give different responses based on the use case. If the person wants something supported, familiar, and common, then I'd say to use Travis CI. In an enterprise setting, Travis CI probably has some of the best abilities to connect to AWS, Heroku, Jenkins, etc. If the person wants something that's still formally supported, and potentially willing to try new things, then CircleCI may be the way to go. It's fast, simple, and relatively easy to use (if you are willing to make additional bash scripts). And if the person wants something natively built into GitHub, is okay duplicating some code, and is willing to poke around more open source code, then GitHub Actions can be a powerful tool. Also, with either Travis CI or GitHub Actions, if you don't want builds running on a few select branches, you don't need to explicitly ignore them, like with CircleCI. It's worth noting that for all three of these CI solutions, you'll have to start spending money if you want to use them heavily with private repositories.
+
+And as for me, I think I'm going to have to cut myself off from new CI solutions for now. GitHub Actions does everything I want it to, and now that it's all set up, it's fast, easy to maintain, and of course, I've got that one big bonus... I've eliminated a third party development dependency.
