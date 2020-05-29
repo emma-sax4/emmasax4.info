@@ -1,0 +1,9 @@
+{% assign lego_list = site.collections | where: "layout", "lego" %}
+<ul class="list" style="list-style: none">
+  {% for lego in lego_list %}
+    <details>
+      <summary style="font-size: 32px; margin-bottom: 10px;">{{ lego.title }}</summary>
+      {{ lego.content }}
+    </details>
+  {% endfor %}
+</ul>

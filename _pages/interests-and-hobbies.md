@@ -44,6 +44,10 @@ I know I already claimed to love traveling, but since I try to go to a new count
   <li>Kenya 🇰🇪</li>
 </ol>
 
+## LEGO Sets and MOCs
+
+In April 2020, I started to get involved more with LEGO. I think a huge part of this is because we're all stuck inside from the COVID-19 epidemic. But, I discovered a tool called [LEGO Digital Designer (LDD)](https://www.lego.com/en-us/ldd), and you can use it to build your own LEGO sets. So, I thought I'd share some of the LEGO sets I've built and designed (also called MOCs—or My Own Creations), as well as some LEGO sets I've purchased and played around with. See my [dedicated LEGO page](/legos/) for more!
+
 ## Theatre
 
 ### On Stage
