@@ -3,7 +3,7 @@ layout: blog
 permalink: /blog/skimp-and-splurge/
 pagination:
   enabled: true
-  collection: collections
+  collection: blog_posts
   permalink: /:num/
   title: Skimp and Splurge
   category: Skimp and Splurge

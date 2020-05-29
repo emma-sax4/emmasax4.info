@@ -329,7 +329,7 @@ layout: blog
 permalink: /blog/tag1/
 pagination:
   enabled: true
-  collection: collections
+  collection: blog_posts
   permalink: /:num/
   title: Tag1
   tag: tag1
@@ -343,7 +343,7 @@ layout: blog
 permalink: /blog/category-one/
 pagination:
   enabled: true
-  collection: collections
+  collection: blog_posts
   permalink: /:num/
   title: Category One
   category: Category One

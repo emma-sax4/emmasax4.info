@@ -34,7 +34,6 @@ sass:
   sass_dir: assets/css/
 
 include:
-  - _collections
   - _pages
 
 exclude:
@@ -56,16 +55,14 @@ plugins:
   - jekyll-titles-from-headings
 
 collections:
-  collections: {}
+  blog_posts: {}
+  legos: {}
 
 feed:
   items: 5
-  collections:
-    collections:
-      path: feed.xml
 
 pagination:
-  collection: collections
+  collection: blog_posts
   enabled: true
   per_page: 5
   limit: 0
