@@ -33,9 +33,6 @@ sass:
   style: compressed
   sass_dir: assets/css/
 
-include:
-  - _pages
-
 plugins:
   - jekyll-default-layout
   - jekyll-feed
@@ -49,9 +46,12 @@ plugins:
   - jekyll-time-to-read
   - jekyll-titles-from-headings
 
+include:
+  - _pages
+
 collections:
-  blog_posts: {}
-  legos: {}
+  - blog_posts
+  - legos
 
 feed:
   items: 5
