@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/emma-sax4/jekyll-feed.git
-  revision: 5056ebe3ec547680f32cb0ddcecb161f251a1022
+  revision: 281a53ed7f501c8ced42317e1a1734ee57607596
   branch: emmasax4_feed
   specs:
     jekyll-feed (0.13.0)

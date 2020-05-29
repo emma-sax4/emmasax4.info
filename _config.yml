@@ -1,15 +1,3 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# "bundle exec jekyll serve". If you change this file, please restart the server process.
-#
-###################################################################################################
-
 title: Emma Sax
 author: Emma Sax
 description: Emma Sax's personal website and blog. Includes information about my social media profiles, résumé, and hobbies.
@@ -33,15 +21,6 @@ sass:
   style: compressed
   sass_dir: assets/css/
 
-include:
-  - _collections
-  - _pages
-
-exclude:
-  - Gemfile
-  - Gemfile.lock
-  - vendor/
-
 plugins:
   - jekyll-default-layout
   - jekyll-feed
@@ -55,17 +34,22 @@ plugins:
   - jekyll-time-to-read
   - jekyll-titles-from-headings
 
+# We don't need `_legos` here because we're technically never calling a page for each lego element;
+#   we're only calling the `{{ element.content }}` of each element. If we viewed a page of each
+#   element individually, we'd need to add `_legos` to this list.
+include:
+  - _blog_posts
+  - _pages
+
 collections:
-  collections: {}
+  - blog_posts
+  - legos
 
 feed:
   items: 5
-  collections:
-    collections:
-      path: feed.xml
 
 pagination:
-  collection: collections
+  collection: blog_posts
   enabled: true
   per_page: 5
   limit: 0

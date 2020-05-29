@@ -1,14 +1,11 @@
-<div id="posts">
-  {% assign posts_list = paginator.posts | where: "layout", "post" %}
-  <ul class="list" style="list-style: none">
-    {% for post in posts_list %}
-      {% include blog/post.html %}
-    {% endfor %}
-  </ul>
+<ul class="list" style="list-style: none">
+  {% for post in paginator.posts %}
+    {% include blog/post.html %}
+  {% endfor %}
+</ul>
 
-  {% if paginator.total_pages >= 8 %}
-    {% include blog/pagination-trail.html %}
-  {% elsif paginator.total_pages > 1 %}
-    {% include blog/pagination.html %}
-  {% endif %}
-</div>
+{% if paginator.total_pages >= 8 %}
+  {% include blog/pagination-trail.html %}
+{% elsif paginator.total_pages > 1 %}
+  {% include blog/pagination.html %}
+{% endif %}
