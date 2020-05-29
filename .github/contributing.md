@@ -11,13 +11,13 @@
 - [Categories vs. Tags](#categories-vs-tags)
 - [Directory/File Structure](#directoryfile-structure)
   * [`.github/`](#github)
-  * [`_collections/`](#_collections)
-    - [`_collections/posts/`](#_collectionsposts)
-      * [Posts with and without Tags](#posts-with-and-without-tags)
-      * [Posts in a Collection](#posts-in-a-collection)
-      * [Writing Drafts](#writing-drafts)
+  * [`_blog_posts/`](#_blog_posts)
+    - [Posts with and without Tags](#posts-with-and-without-tags)
+    - [Posts in a Category](#posts-in-a-category)
+    - [Writing Drafts](#writing-drafts)
   * [`_includes/`](#_includes)
   * [`_layouts/`](#_layouts)
+  * [`_legos/`](#_legos)
   * [`_pages/`](#_pages)
     - [`_pages/blog/`](#_pagesblog)
   * [`assets/`](#assets)
@@ -117,16 +117,15 @@ Here are all of the parts of this project associated with running this applicati
 |   ├── file.md
 |   ├── PULL_REQUEST_TEMPLATE.md
 |   └── template.md
-├── _collections
-|   ├── posts
-|   |   ├── category-one
-|   |   |   ├── post-a.md
-|   |   |   └── post-b.md
-|   |   ├── category-two
-|   |   |   ├── post-a.md
-|   |   |   └── post-b.md
+├── _blog_posts
+|   ├── category-one
 |   |   ├── post-a.md
-|   └── └── post-b.md
+|   |   └── post-b.md
+|   ├── category-two
+|   |   ├── post-a.md
+|   |   └── post-b.md
+|   ├── post-a.md
+|   └── post-b.md
 ├── _includes
 |   ├── elements
 |   |   ├── button-one.html
@@ -141,6 +140,10 @@ Here are all of the parts of this project associated with running this applicati
 |   ├── default.html
 |   ├── layout-01.html
 |   └── layout-02.html
+├── _legos
+|   ├── lego-design-01.md
+|   ├── lego-design-02.md
+|   └── lego-design-03.md
 ├── _pages
 |   ├── blog
 |   |   ├── category-one.md
@@ -185,18 +188,11 @@ Here are all of the parts of this project associated with running this applicati
 
 This site builds and "deploys" through GitHub Actions.
 
-### `_collections/`
-
-These are items on the website that are collections. This means that the website somewhere loops over all of the items in the collection and makes a big list of items. Each type of collection should have its own `layout` that can be used to filter the loop:
-```html
-{% assign posts_list = site.collections | where: "layout", "post" %}
-```
-
-#### `_collections/posts/`
+### `_blog_posts/`
 
 #### Posts with and without Tags
 
-Most of the posts can just go into the general `_collections/posts/` directory, written as Markdown files. For a generic post, the front matter could look like this:
+Most of the posts can just go into the general `_blog_posts/` directory, written as Markdown files. For a generic post, the front matter could look like this:
 ```yml
 ---
 layout: post
@@ -215,7 +211,7 @@ The `date` front matter indicates the published date and time. Usually, it's tot
 
 #### Posts in a Category
 
-If I'm going to write a group of posts that all have a common theme, they can each go into a new nested directory: `_collections/posts/category-one/`, and should make use of the `title` and `subtitle` metadata, where the `title` is the name of the `category`, and the `subtitle` is the title of that specific post:
+If I'm going to write a group of posts that all have a common theme, they can each go into a new nested directory: `_blog_posts/category-one/`, and should make use of the `title` and `subtitle` metadata, where the `title` is the name of the `category`, and the `subtitle` is the title of that specific post:
 ```yml
 ---
 layout: post
@@ -229,7 +225,7 @@ date: 2001-06-27 20:30:00 -0500 # 2001-06-28 01:30:00 UTC
 
 #### Writing Drafts
 
-To write drafts, make a new file in the `_collections/posts/` directory (or in a subdirectory if the post will be part of a category). The new file should be named in the following pattern: `test-post-title.md`. Because this draft hasn't been published yet, I usually just put in the date I hope to publish the draft (usually a few days in the future).
+To write drafts, make a new file in the `_blog_posts/` directory (or in a subdirectory if the post will be part of a category). The new file should be named in the following pattern: `test-post-title.md`. Because this draft hasn't been published yet, I usually just put in the date I hope to publish the draft (usually a few days in the future).
 
 To the front matter, make sure to add the `layout`, `title`, and `permalink` (`subtitle`, `category`, and `tags` are all optional). Add the following front matter to the new blog post draft:
 ```yml
@@ -286,6 +282,19 @@ layout: layout-01
 
 Layout files should be short (20 lines at the longest) and should not contain any Jekyll/Liquid logic.
 
+### `_legos/`
+
+This directory is a collection of different LEGO sets and MOCs that I've written. My special LEGO page (which is only linked from the "Interests & Hobbies" page), loops through all of the LEGO entries. The front matter layout of one of these entries looks like this:
+```yml
+---
+layout: lego
+title: Cool LEGO Title
+date: 2020-05-29 00:00:00 -0500  # 2020-05-29 05:00:00 UTC
+---
+```
+
+With the LEGO entries, it matters less exactly what date is presented, since the page never shows the date to the readers of the site. The dates are only there for sorting.
+
 ### `_pages/`
 
 These are the general pages in the top navigation bar of the site, and they're for the main content of the site. They're written in Markdown, but Jekyll and Liquid will use the Markdown content to make HTML files. The front matter of any Markdown/HTML file specifies the settings of the page:
@@ -329,7 +338,7 @@ layout: blog
 permalink: /blog/tag1/
 pagination:
   enabled: true
-  collection: collections
+  collection: blog_posts
   permalink: /:num/
   title: Tag1
   tag: tag1
@@ -343,7 +352,7 @@ layout: blog
 permalink: /blog/category-one/
 pagination:
   enabled: true
-  collection: collections
+  collection: blog_posts
   permalink: /:num/
   title: Category One
   category: Category One
