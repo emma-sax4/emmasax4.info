@@ -1,7 +1,7 @@
 <nav aria-label="Blog post navigation">
   <ul class="pagination justify-content-center">
     {% assign second_to_last_page_number = paginator.total_pages | times: 1 | minus: 1 %}
-    {% assign trail_page_numbers = "" | split: ',' %}
+    {% assign trail_page_numbers = "" | split: "," %}
     {% for trail in paginator.page_trail %}
       {% assign trail_page_numbers = trail_page_numbers | push: trail.num %}
     {% endfor %}
