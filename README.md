@@ -6,6 +6,8 @@ For more information on deployments, tests, running Jekyll locally, contributing
 
 To submit a feature request or a bug ticket, please submit an official [GitHub Issue](https://github.com/emma-sax4/emma-sax4.github.io/issues/new/choose).
 
+To report any security vulnerabilities, please view this project's [Security Policy](https://github.com/emma-sax4/emma-sax4.github.io/security/policy).
+
 For information on licensing, please see [LICENSE](https://github.com/emma-sax4/emma-sax4.github.io/blob/source/LICENSE).
 
 This repository does have a standard [Code of Conduct](https://github.com/emma-sax4/emma-sax4.github.io/blob/source/.github/code_of_conduct.md).
