@@ -14,7 +14,7 @@
 > Add any other context about the problem here.
 
 ## PR Scheduler
-> If you'd like to use the PR Scheduler, then add a comment to this pull request the date/time is written in UTC and the pull request will merged and deployed at the date/time provided. The comment should look like this:
+> If you'd like to use the PR Scheduler, then add a comment to this pull request where the date/time is written in UTC and the pull request will merged and deployed at the date/time provided. The comment should look like this:
 > ```
 > # example (May 18, 2020 at 17:58 UTC):
 > @prscheduler 18-05-2020T17:58
