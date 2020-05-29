@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Why “Tomorrow” Isn't Useful
+title: Why “Tomorrow” Isn’t Useful
 tags: [ self-improvement ]
 permalink: /blog/posts/why-tomorrow-isnt-useful/
 date: 2020-03-04 23:20:00 -0600
