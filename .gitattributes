@@ -1,3 +1,5 @@
 *.md linguist-detectable=true
 README.md linguist-detectable=false
 .github/* linguist-detectable=false
+.github/workflows/* linguist-detectable=true
+_collections/* linguist-detectable=false
