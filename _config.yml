@@ -34,8 +34,11 @@ plugins:
   - jekyll-time-to-read
   - jekyll-titles-from-headings
 
+# I'm not sure why adding `_legos` to this list will add an unnecessary directory to
+#   my destination directory, but `jekyll build` will break without these two here.
 include:
   - _pages
+  - _blog_posts
 
 collections:
   - blog_posts
