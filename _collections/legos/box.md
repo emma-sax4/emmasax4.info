@@ -1,7 +1,7 @@
 ---
 layout: lego
 title: Box
-date: 2020-03-24 00:00:00 -0500
+date: 2020-05-29 00:00:00 -0500
 ---
 
 This little box (10 studs by 9 studs) is the ideal size for keeping personal items on the go. It can be used as a jewelry box, storage for other small LEGO pieces, and is extremely durable and portable. Although my LDD designer didn't quite have all of the colors I'd like to use, the design is flexible, so you can use whatever color pieces you have in your storage bins.
