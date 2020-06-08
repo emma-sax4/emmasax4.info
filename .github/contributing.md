@@ -370,7 +370,7 @@ The `favicon/` directory contains files and multiple icons of different names fo
 The `images/` directory gives me a place to store all of the images this site uses. To call a specific image, you can either ask for it in HTML:
 ```html
 <div>
-  <img class="my-image" src="/assets/images/picture-01.jpg" alt="Picture 1">
+  <img class="custom-image-class" src="/assets/images/picture-01.jpg" alt="Picture 1">
 </div>
 ```
 
