@@ -13,7 +13,7 @@ A couple of weeks ago, I started the endeavor of adding Bootstrap to this websit
 But, soon after I started getting an upgrade in my CSS game, I realized that my pagination bar on my blog site was sorely outdated 😢. At one point, I had the nerve to call this pagination bar beautiful:
 
 <div class="text-center">
-  <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/48741504061/in/album-72157710863695862/" title="lovely_pagination_bar"><img class="my-image" src="https://live.staticflickr.com/65535/48741504061_7ebbd630fa.jpg" width="450" height="311" alt="Lovely pagination bar"></a>
+  <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/48741504061/in/album-72157710863695862/" title="lovely_pagination_bar"><img class="image" src="https://live.staticflickr.com/65535/48741504061_7ebbd630fa.jpg" width="450" height="311" alt="Lovely pagination bar"></a>
 </div>
 
 But since completely revamping the whole looks of the site, this pagination bar was no longer acceptable. It was old fashioned, wouldn't remember the page you were on if you navigated forward and back in your browser, and didn't have pretty buttons. It was time for me to look into alternate pagination options.
@@ -49,7 +49,7 @@ Despite all of this work, now every single tag and category filters blog posts p
 After all of that work, I now have a pagination bar that makes me proud of this website. Just add in a few more pretty icons, and I'm satisfied 😁.
 
 <div class="text-center">
-  <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/49241327792/in/album-72157710863695862/" title="Bootstrap Pagination"><img class="my-image" src="https://live.staticflickr.com/65535/49241327792_44bf877bcb.jpg" width="500" height="304" alt="Bootstrap Pagination"></a>
+  <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/49241327792/in/album-72157710863695862/" title="Bootstrap Pagination"><img class="image" src="https://live.staticflickr.com/65535/49241327792_44bf877bcb.jpg" width="500" height="304" alt="Bootstrap Pagination"></a>
 </div>
 
 ---
@@ -95,7 +95,7 @@ The `script` section asks Travis CI to build the site to the `site` destination 
 It's a little complicated, but, one deploy from Travis CI later, and the site was up and running again. _AND_ I had the pagination option of my choosing that had all of the functionality I could ever want.
 
 <div class="text-center">
-  <iframe class="my-image giphy-embed" src="https://giphy.com/embed/4xpB3eE00FfBm" width="480" height="458" frameBorder="0" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/mrw-week-job-4xpB3eE00FfBm">via GIPHY</a></p>
+  <iframe class="image giphy-embed" src="https://giphy.com/embed/4xpB3eE00FfBm" width="480" height="458" frameBorder="0" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/mrw-week-job-4xpB3eE00FfBm">via GIPHY</a></p>
 </div>
 
 ## References

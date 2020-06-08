@@ -59,7 +59,7 @@ So, I endeavored to find the best way to set my Markdown links to open in new ta
 And with either of the solutions, GitHub does this weird raw text italisizing that makes looking at these files very painful. Here's an example. Do you see how half of the paragraphs have been entirely italisized?
 
 <div class="text-center">
-  <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/49386386903/in/album-72157710863695862/" title="GitHub&#x27;s weird italisizing"><img class="my-image" src="https://live.staticflickr.com/65535/49386386903_198f4cc1e2_z.jpg" width="986" height="962" alt="GitHub&#x27;s weird italisizing"></a>
+  <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/49386386903/in/album-72157710863695862/" title="GitHub&#x27;s weird italisizing"><img class="image" src="https://live.staticflickr.com/65535/49386386903_198f4cc1e2_z.jpg" width="986" height="962" alt="GitHub&#x27;s weird italisizing"></a>
 </div>
 
 So, neither of these options are perfect, and I don't like either of them. I want to be able to easily type a link, with the traditional Markdown format (`[link](url)`), and I want the link to open in a new tab on the browser (converted to HTML from kramdown), and to read in GitHub properly (not include the `{:target="_blank"}`).
