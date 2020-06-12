@@ -8,7 +8,7 @@ date: 2020-02-07 00:00:00 -0600
 
 On my latest blog post, I wanted to try something new. When publishing, I wanted to publish on a future date (specifically at midnight the next day). I set up the date of the post to include the next day, and then planned to go onto Travis at midnight to build the newest version of the site... with the new blog post. And then I continued working on my website for the night.
 
-But what ended up happening was Travis CI built on my `release` branch at 6:15pm... and suddenly my new blog post was live 😱! What happened? Well, Travis CI by default runs in UTC. So, since 6:00pm in CST is midnight in UTC, Travis CI determined it was time to publish the blog post. I quickly reverted that commit on my `master` branch to hide the new post once again, and then worked to find a solution to make Travis CI behave for the remainder of the night.
+But what ended up happening was Travis CI built on my `release` branch at 6:15pm... and suddenly my new blog post was live 😱! What happened? Well, Travis CI by default runs in UTC. So, since 6:00pm in CST is midnight in UTC, Travis CI determined it was time to publish the blog post. I quickly reverted that commit on my `gh-pages` branch to hide the new post once again, and then worked to find a solution to make Travis CI behave for the remainder of the night.
 
 What I ended up finding was this. By adding these lines to the `.travis.yml` file, we can override Travis CI's default time zone and have it bundle in CST.
 
@@ -157,4 +157,4 @@ I'm still working on perfecting my time zone processing. It's complicated, and n
 
 ---
 
-EDIT: Since writing this blog post, I've moved my default branch to be `source`, instead of `release`. I originally named it `release` because the documentation I was following named it that, but realized later that the name `source` fit my workflow better.
+EDIT: Since writing this blog post, I've moved my default branch to be `source`, instead of `release`. I originally named it `release` because the documentation I was following named it that, but realized later that the name `source` fit my workflow better. Also, I've moved my `master` branch to be called `gh-pages`, and I've updated this blog post accordingly.

@@ -16,7 +16,7 @@ About three weeks ago, I started my next goal on this website, and that was to s
 The initial reason why I used Travis CI as my integration tool is outlined in [this blog post](/blog/posts/using-jekyll-paginate-v2/). But, as my website has continued to develop, there are four basic things I want my CI platform to be able to do for me:
 1. Build my Jekyll website quickly, run HTML Proofer on it, and have room to grow my test suite if I desire to do so
 2. Notify a Slack channel when the build was done
-3. "Deploy" my website by making a commit back to my [`master` branch in GitHub](https://github.com/emma-sax4/emmasax4.info/tree/master) (which GitHub Pages will then deploy for me)
+3. "Deploy" my website by making a commit back to my [`gh-pages` branch in GitHub](https://github.com/emma-sax4/emmasax4.info/tree/gh-pages) (which GitHub Pages will then deploy for me)
 4. Run a daily cron so that I can automate the build to run whenever I want (ideal for when I'd like to publish a blog post at a specific time, which involves having my CI tool run a job at that time)
 
 Travis CI can do all four of these things, and some of them were easier to set up than with CircleCI! I'll walk through that in a bit. But there was a big issue that I had with Travis CI. And at the end of the day, that was the reason I searched for other CI solutions. That issue was number four: setting up crons.
@@ -62,13 +62,13 @@ I'm not sure why this was necessary, as my project isn't a private repository. B
 
 ### 3. "Deploying" to GitHub Pages
 
-The [original blog post I found](https://medium.com/@mcred/supercharge-github-pages-with-jekyll-and-travis-ci-699bc0bde075) nicely outlines (in lots of words) how to deploy to GitHub Pages from Travis CI. The gist is that we use a Travis CI deploy to make a GitHub commit to the `master` branch of your project repository. In this way, you'll have at least two main branches on your repository: a `master` branch that GitHub Pages reads from, with only HTML and other site files, and a source code branch (your default branch) which will contain documentation, markdown files, Jekyll configs, etc. [Here's the documentation](https://docs.travis-ci.com/user/deployment-v2/providers/pages/) from Travis CI on GitHub Pages deploys on dpl v2.
+The [original blog post I found](https://medium.com/@mcred/supercharge-github-pages-with-jekyll-and-travis-ci-699bc0bde075) nicely outlines (in lots of words) how to deploy to GitHub Pages from Travis CI. The gist is that we use a Travis CI deploy to make a GitHub commit to the `gh-pages` branch of your project repository. In this way, you'll have at least two main branches on your repository: a `gh-pages` branch that GitHub Pages reads from, with only HTML and other site files, and a source code branch (your default branch) which will contain documentation, markdown files, Jekyll configs, etc. [Here's the documentation](https://docs.travis-ci.com/user/deployment-v2/providers/pages/) from Travis CI on GitHub Pages deploys on dpl v2.
 ```yaml
 deploy:
   provider: pages
   name: Deployment Bot
   email: deploy@travis-ci.org
-  target_branch: master
+  target_branch: gh-pages
   commit_message: Deploy to %{url}:%{target_branch}
   local_dir: ./site
   keep_history: true
@@ -102,7 +102,7 @@ CircleCI builds are also fully configurable in a file called `.circleci/config.y
 
 ### 1. Building my website
 
-To build my website in CircleCI, I set up a simple [workflow](https://circleci.com/docs/2.0/configuration-reference/#workflows). I did this so that I could have separate flow of the build for different branches (development feature branch, source code branch, `master` branch, etc).
+To build my website in CircleCI, I set up a simple [workflow](https://circleci.com/docs/2.0/configuration-reference/#workflows). I did this so that I could have separate flow of the build for different branches (development feature branch, source code branch, `gh-pages` branch, etc).
 
 Here's my first workflow:
 ```yaml
@@ -281,8 +281,8 @@ This workflow titled `release` will only run on the `SOURCE_CODE_BRANCH`. It wil
 git config user.name "$USER_NAME"
 git config user.email "$USER_EMAIL"
 
-git checkout master # or whatever branch GitHub Pages reads from
-git pull origin master
+git checkout gh-pages # or whatever branch GitHub Pages reads from
+git pull origin gh-pages
 
 # NOTE: the Jekyll build command added the entire site to the _site directory...
 # Delete everything except the _site, .git, and .circleci directories
@@ -292,14 +292,14 @@ mv ./_site/* .
 # Delete the _site directory, as it's now empty
 rm -R ./_site/
 
-# Now make a deploy to the master branch and push!
+# Now make a deploy to the gh-pages branch and push!
 git add -fA
-git commit -m "Deploy to $CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME.git:master via CircleCI"
-PUSH_STATUS=$(git push origin master 2>&1)
+git commit -m "Deploy to $CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME.git:gh-pages via CircleCI"
+PUSH_STATUS=$(git push origin gh-pages 2>&1)
 
 # Write a brief message to output to Slack so I know whether this deploy occurred or not
 if [[ $PUSH_STATUS == "Everything up-to-date" ]]; then
-  m="Nothing to commit to \`master\` branch. Deploy to GitHub Pages was *skipped*"
+  m="Nothing to commit to \`gh-pages\` branch. Deploy to GitHub Pages was *skipped*"
 else
   m="Deploy to GitHub Pages was *successful*"
 fi
@@ -310,7 +310,7 @@ source $BASH_ENV
 
 Uffda. That was a big file. And I'd be lying if I said that I didn't accidentally delete the whole site a couple of times while I tried to figure out how this file should work. But at the end of the day, this code works perfectly for what I needed.
 
-The last piece was to set up a GitHub deploy key for my project with read/write permissions. I followed a mixture of the instructions located [here](https://developer.github.com/v3/guides/managing-deploy-keys/#deploy-keys) and [here](https://circleci.com/docs/2.0/gh-bb-integration/#creating-a-github-deploy-key). After I obtained that (it looked like an SSH key), then I could provide that to CircleCI so it'd have proper permissions to commit to `master` branch. Then, I just added the fingerprint to my build and I was ready to go!
+The last piece was to set up a GitHub deploy key for my project with read/write permissions. I followed a mixture of the instructions located [here](https://developer.github.com/v3/guides/managing-deploy-keys/#deploy-keys) and [here](https://circleci.com/docs/2.0/gh-bb-integration/#creating-a-github-deploy-key). After I obtained that (it looked like an SSH key), then I could provide that to CircleCI so it'd have proper permissions to commit to `gh-pages` branch. Then, I just added the fingerprint to my build and I was ready to go!
 ```yaml
 - add_ssh_keys:
     fingerprints: [ a1:a2:a3:a4:a5:a6:a7:a8:a9:b1:b2:b3:b4:b5:b6:b7 ]
@@ -336,9 +336,9 @@ workflows:
 
 Because I already defined the job I needed, I simply added this little cron workflow, and it works brilliantly. And I know that my cron builds start exactly when I want them to because I get a nice Slack notification at exactly 05:30 UTC on the dot (my builds are fast now, remember?). I know when looking at the Slack notification whether it was a cron or not, because when a cron runs, there's no GitHub username in the message. And I can add as many or as few crons as I'd like. I simply add more `schedule`s to the `triggers` array in the yaml. And because my whole site "thinks" in UTC time (see more [here](/blog/posts/time-zones-utc-and-javascript-oh-my/)), it's easy to set the crons to whatever specific time I need to publish all of my blog posts automatically.
 
-### Adding a <header-code>config.yml</header-code> to the <header-code>master</header-code> branch
+### Adding a <header-code>config.yml</header-code> to the <header-code>gh-pages</header-code> branch
 
-In Travis CI, if there's no `.travis.yml` file, then Travis CI will ignore the commit and it won't run anything. This was useful on branches like the `master` branch, where there's no need to run a build on each commit. In CircleCI, if there's no `.circleci/config.yml` on a branch, it'll still try to run a build, and then break and say there's no config file. So, I manually added this `.circleci/config.yml` to my `master` branch, to completely ignore the branch on each commit:
+In Travis CI, if there's no `.travis.yml` file, then Travis CI will ignore the commit and it won't run anything. This was useful on branches like the `gh-pages` branch, where there's no need to run a build on each commit. In CircleCI, if there's no `.circleci/config.yml` on a branch, it'll still try to run a build, and then break and say there's no config file. So, I manually added this `.circleci/config.yml` to my `gh-pages` branch, to completely ignore the branch on each commit:
 ```yaml
 version: 2.1
 jobs:
@@ -356,10 +356,14 @@ workflows:
             ignore: [ BRANCH_TO_IGNORE ]
 ```
 
-Now with this, CircleCI will completely ignore my `master` branch.
+Now with this, CircleCI will completely ignore my `gh-pages` branch.
 
 ## Conclusion
 
 As you can see, setting up CircleCI actually did take longer than setting up Travis CI, but I'm not sure if that's because I use Travis CI at my work, and have never used CircleCI before at all. My CircleCI files do have more lines of code, and that goes to show that making one command in CircleCI is going to be a little bit more complex than one "command" in Travis CI. But overall, the speedier caching of gems and more precise codification of the crons make CircleCI a clear winner for this website. The only huge con of CircleCI is that Travis CI is more popular, and so there's more functionality and online support with Travis CI.
 
 But at the end of the day, what matters is that every project uses the CI solution that works best for their needs and their project. For this website, that answer was CircleCI. But for many, that's Travis CI. As long as projects are running tests, that's what matters most.
+
+---
+
+EDIT: Since writing this blog post, I've moved my `master` branch to be called `gh-pages`, and I've updated this blog post accordingly. I've also switched to using GitHub Actions since this was written, and I've written [this blog post](/blog/posts/why-i-switched-from-circleci-to-github-actions/) about that.
