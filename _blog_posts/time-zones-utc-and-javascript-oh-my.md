@@ -157,4 +157,4 @@ I'm still working on perfecting my time zone processing. It's complicated, and n
 
 ---
 
-EDIT: Since writing this blog post, I've moved my default branch to be `main`, instead of `release`. I originally named it `release` because the documentation I was following named it that, but realized later that the name `main` fit my workflow better. Also, I've moved my `master` branch to be called `gh-pages`, and I've updated this blog post accordingly.
+EDIT: Since writing this blog post, I've moved my default branch to be `main`, instead of `release` and/or `source`. I originally named it `release` because the documentation I was following named it that, but realized later that the name `main` fit my workflow better. Also, I've moved my `master` branch to be called `gh-pages`, and I've updated this blog post accordingly.

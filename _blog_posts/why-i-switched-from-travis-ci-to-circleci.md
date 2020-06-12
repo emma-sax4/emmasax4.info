@@ -366,4 +366,4 @@ But at the end of the day, what matters is that every project uses the CI soluti
 
 ---
 
-EDIT: Since writing this blog post, I've moved my `master` branch to be called `gh-pages`, and I've updated this blog post accordingly. I've also switched to using GitHub Actions since this was written, and I've written [this blog post](/blog/posts/why-i-switched-from-circleci-to-github-actions/) about that.
+EDIT: Since writing this blog post, I've moved my `master` branch to be called `gh-pages` and `source` branch to be called `main`, and I've updated this blog post accordingly. I've also switched to using GitHub Actions since this was written, and I've written [this blog post](/blog/posts/why-i-switched-from-circleci-to-github-actions/) about that.
