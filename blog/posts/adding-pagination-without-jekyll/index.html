@@ -36,7 +36,7 @@
 <meta name="msvalidate.01" content="89B2B19FF966341B78EF64EDADE6DF81" />
 <meta name="yandex-verification" content="c2741887f8c30dd1" />
 <script type="application/ld+json">
-{"description":"Emma Sax’s personal website and blog. Includes information about my social media profiles, résumé, and hobbies.","headline":"Adding Pagination without Jekyll","dateModified":"2020-06-12T15:40:06+00:00","datePublished":"2019-09-12T05:00:00+00:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://emmasax4.info/blog/posts/adding-pagination-without-jekyll/"},"url":"https://emmasax4.info/blog/posts/adding-pagination-without-jekyll/","author":{"@type":"Person","name":"Emma Sax"},"@context":"https://schema.org"}</script>
+{"description":"Emma Sax’s personal website and blog. Includes information about my social media profiles, résumé, and hobbies.","headline":"Adding Pagination without Jekyll","dateModified":"2020-06-12T16:32:57+00:00","datePublished":"2019-09-12T05:00:00+00:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://emmasax4.info/blog/posts/adding-pagination-without-jekyll/"},"url":"https://emmasax4.info/blog/posts/adding-pagination-without-jekyll/","author":{"@type":"Person","name":"Emma Sax"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -260,7 +260,7 @@
   <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/48741504061/in/album-72157710863695862/" title="lovely_pagination_bar"><img class="image" src="https://live.staticflickr.com/65535/48741504061_7ebbd630fa.jpg" width="450" height="311" alt="Lovely pagination bar"></a>
 </div>
 
-<p>I was thrilled with the outcome of this pagination (even though it wasn’t Jekyll’s officially supported pagination), and I committed to master. However, perhaps a day later, I noticed something wrong with my CSS formatting. Perhaps you can notice it if you compare the before-pretty-pagination and the after-pretty-pagination pictures… I’ll give you a hint: it has to do with the indentation and spacing of the words. Somehow, making the pagination bar pretty messed up my CSS formatting!</p>
+<p>I was thrilled with the outcome of this pagination (even though it wasn’t Jekyll’s officially supported pagination), and I committed to <code class="highlighter-rouge">gh-pages</code>. However, perhaps a day later, I noticed something wrong with my CSS formatting. Perhaps you can notice it if you compare the before-pretty-pagination and the after-pretty-pagination pictures… I’ll give you a hint: it has to do with the indentation and spacing of the words. Somehow, making the pagination bar pretty messed up my CSS formatting!</p>
 
 <p>I was upset. I wanted to have both a pretty pagination bar and proper formatting of the text. So, I went back in my commit changes and commented out everything from when the site last worked as expected. I slowly uncommented line after line until I found the problem line… of course it happened to be with the same line that makes the pagination work:</p>
 <div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">@import</span> <span class="s1">"core/index.scss"</span><span class="p">;</span>
@@ -274,6 +274,10 @@
 <p>And it turns out, the answer was as easy as that! Now, I have proper CSS layouts, a lovely pagination bar that works and doesn’t take long to load, and the file structure of my project was able to stay the same. The pagination bar isn’t perfect, but it’s better than anything I had before, and it’s good enough for me—for right now anyway.</p>
 
 <p>Since the pagination part of this project is <em>finally</em> done, I can officially say that I’ve now gotten everything out of Jekyll that I had hoped to, and then some. Not only did I implement a website with a “blog” that I’m proud of, but I learned a new framework and a new coding language. And most importantly, I reminded myself that one of the most important parts of being a coder is being willing to dive in, try something new, and not be afraid to fail.</p>
+
+<hr>
+
+<p>EDIT: Since writing this blog post, I’ve moved my <code class="highlighter-rouge">master</code> branch to be called <code class="highlighter-rouge">gh-pages</code>, and I’ve updated this blog post accordingly.</p>
 
       <div style="margin-top: 3rem;">
   

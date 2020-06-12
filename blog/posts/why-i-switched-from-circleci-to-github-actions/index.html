@@ -36,7 +36,7 @@
 <meta name="msvalidate.01" content="89B2B19FF966341B78EF64EDADE6DF81" />
 <meta name="yandex-verification" content="c2741887f8c30dd1" />
 <script type="application/ld+json">
-{"description":"Emma Sax’s personal website and blog. Includes information about my social media profiles, résumé, and hobbies.","headline":"Why I Switched from CircleCI to GitHub Actions","dateModified":"2020-06-12T15:40:06+00:00","datePublished":"2020-05-28T05:00:00+00:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://emmasax4.info/blog/posts/why-i-switched-from-circleci-to-github-actions/"},"url":"https://emmasax4.info/blog/posts/why-i-switched-from-circleci-to-github-actions/","author":{"@type":"Person","name":"Emma Sax"},"@context":"https://schema.org"}</script>
+{"description":"Emma Sax’s personal website and blog. Includes information about my social media profiles, résumé, and hobbies.","headline":"Why I Switched from CircleCI to GitHub Actions","dateModified":"2020-06-12T16:32:57+00:00","datePublished":"2020-05-28T05:00:00+00:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://emmasax4.info/blog/posts/why-i-switched-from-circleci-to-github-actions/"},"url":"https://emmasax4.info/blog/posts/why-i-switched-from-circleci-to-github-actions/","author":{"@type":"Person","name":"Emma Sax"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -176,7 +176,7 @@
 
 <div class="text-center" style="margin-bottom: 1rem;">
   <span class="post-meta">
-    Read time: 16 minutes
+    Read time: 17 minutes
   </span>
 </div>
 
@@ -244,7 +244,7 @@
   <ol>
     <li>Build my Jekyll website quickly, run HTML Proofer on it, and have room to grow my test suite if I desire to do so</li>
     <li>Notify a Slack channel when the build was done</li>
-    <li>“Deploy” my website by making a commit back to my <a href="https://github.com/emma-sax4/emmasax4.info/tree/master"><code class="highlighter-rouge">master</code> branch in GitHub</a> (which GitHub Pages will then deploy for me)</li>
+    <li>“Deploy” my website by making a commit back to my <a href="https://github.com/emma-sax4/emmasax4.info/tree/gh-pages"><code class="highlighter-rouge">gh-pages</code> branch in GitHub</a> (which GitHub Pages will then deploy for me)</li>
     <li>Run a daily cron so that I can automate the build to run whenever I want (ideal for when I’d like to publish a blog post at a specific time or to check that my site still builds and loads properly every now and then, since my site doesn’t get consistent updates all the time)</li>
   </ol>
 </blockquote>
@@ -374,17 +374,17 @@
   <span class="na">env</span><span class="pi">:</span>
     <span class="na">GITHUB_TOKEN</span><span class="pi">:</span> <span class="s">${{ secrets.GITHUB_TOKEN }}</span>
   <span class="na">with</span><span class="pi">:</span>
-    <span class="na">BRANCH</span><span class="pi">:</span> <span class="s">master</span>
+    <span class="na">BRANCH</span><span class="pi">:</span> <span class="s">gh-pages</span>
     <span class="na">FOLDER</span><span class="pi">:</span> <span class="s">_site</span>
     <span class="na">CLEAN</span><span class="pi">:</span> <span class="no">true</span>
-    <span class="na">COMMIT_MESSAGE</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Deploy</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">${{</span><span class="nv"> </span><span class="s">github.repository</span><span class="nv"> </span><span class="s">}}.git:master'</span>
+    <span class="na">COMMIT_MESSAGE</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Deploy</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">${{</span><span class="nv"> </span><span class="s">github.repository</span><span class="nv"> </span><span class="s">}}.git:gh-pages'</span>
     <span class="na">GIT_CONFIG_EMAIL</span><span class="pi">:</span> <span class="s">41898282+github-actions[bot]@users.noreply.github.com</span>
     <span class="na">GIT_CONFIG_NAME</span><span class="pi">:</span> <span class="s">github-actions[bot]</span>
 </code></pre></div></div>
 
 <p>The <code class="highlighter-rouge">${{ secrets.GITHUB_TOKEN }}</code> is something that’s built into GitHub Actions, and is automatically provided with exactly the permissions required, so there was no passing around of permissions or tokens to obtain this.</p>
 
-<p>The <code class="highlighter-rouge">CLEAN: true</code> was something that I added in later, when I realized that without it, deleted directories wouldn’t be automatically deleted from my <code class="highlighter-rouge">master</code> branch. One other thing that I had to take note of was that for some reason, the deploy wouldn’t work properly with <code class="highlighter-rouge">actions/checkout@v2</code> (it rewrites the files upon deploy, meaning each page on my site would receive a new <code class="highlighter-rouge">updated_at</code> or <code class="highlighter-rouge">lastModifiedAt</code> date upon each deploy), so I switched to <code class="highlighter-rouge">actions/checkout@v1</code>. Of course, <code class="highlighter-rouge">v1</code> of the checkout step had its own cross to bear, but that was fine for me to compromise with. I think that I could’ve gotten <code class="highlighter-rouge">v2</code> to work properly, had I finished reading the documentation for the deploy action originally.</p>
+<p>The <code class="highlighter-rouge">CLEAN: true</code> was something that I added in later, when I realized that without it, deleted directories wouldn’t be automatically deleted from my <code class="highlighter-rouge">gh-pages</code> branch. One other thing that I had to take note of was that for some reason, the deploy wouldn’t work properly with <code class="highlighter-rouge">actions/checkout@v2</code> (it rewrites the files upon deploy, meaning each page on my site would receive a new <code class="highlighter-rouge">updated_at</code> or <code class="highlighter-rouge">lastModifiedAt</code> date upon each deploy), so I switched to <code class="highlighter-rouge">actions/checkout@v1</code>. Of course, <code class="highlighter-rouge">v1</code> of the checkout step had its own cross to bear, but that was fine for me to compromise with. I think that I could’ve gotten <code class="highlighter-rouge">v2</code> to work properly, had I finished reading the documentation for the deploy action originally.</p>
 
 <p>One super cool thing that I actually suggested to the author of this action was to have a deployment status that is outputted at the end of the whole thing. It’s described a bit <a href="https://github.com/marketplace/actions/deploy-to-github-pages#deployment-status">here</a>, but with this, I was able to custom create a Slack message specifically about the deployment:</p>
 <div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Set Deploy Status Message</span>
@@ -428,6 +428,10 @@
 <p>If somebody were to ask me whether to use GitHub Actions, Travis CI, or CircleCI, I’d give different responses based on the use case. If the person wants something supported, familiar, and common, then I’d say to use Travis CI. In an enterprise setting, Travis CI probably has some of the best abilities to connect to AWS, Heroku, Jenkins, etc. If the person wants something that’s still formally supported, and potentially willing to try new things, then CircleCI may be the way to go. It’s fast, simple, and relatively easy to use (if you are willing to make additional bash scripts). And if the person wants something natively built into GitHub, is okay duplicating some code, and is willing to poke around more open source code, then GitHub Actions can be a powerful tool. Also, with either Travis CI or GitHub Actions, if you don’t want builds running on a few select branches, you don’t need to explicitly ignore them, like with CircleCI. It’s worth noting that for all three of these CI solutions, you’ll have to start spending money if you want to use them heavily with private repositories.</p>
 
 <p>And as for me, I think I’m going to have to cut myself off from new CI solutions for now. GitHub Actions does everything I want it to, and now that it’s all set up, it’s fast, easy to maintain, and of course, I’ve got that one big bonus… I’ve eliminated a third party development dependency.</p>
+
+<hr />
+
+<p>EDIT: Since writing this blog post, I’ve moved my <code class="highlighter-rouge">master</code> branch to be called <code class="highlighter-rouge">gh-pages</code>, and I’ve updated this blog post accordingly.</p>
 
       <div style="margin-top: 3rem;">
   
