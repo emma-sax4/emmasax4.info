@@ -42,10 +42,10 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        BRANCH: master
+        BRANCH: gh-pages
         FOLDER: _site
         CLEAN: true
-        COMMIT_MESSAGE: 'Deploy to ${{ github.repository }}.git:master'
+        COMMIT_MESSAGE: 'Deploy to ${{ github.repository }}.git:gh-pages'
         GIT_CONFIG_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
         GIT_CONFIG_NAME: github-actions[bot]
 
