@@ -74,12 +74,12 @@ deploy:
   keep_history: true
   edge: true
   on:
-    branch: SOURCE_CODE_BRANCH
+    branch: MAIN_BRANCH_NAME
   token:
     secure: ENCRYPTED_TOKEN_GOES_HERE
 ```
 
-If all you do is copy my code above, the `SOURCE_CODE_BRANCH` is to reference which branch on GitHub you want Travis to run this command on (in my case, it was my `source` branch). The `ENCRYPTED_TOKEN_GOES_HERE` indicates the encrypted value of your GitHub personal access token, which grants Travis CI permission to deploy to your repository. In order to generate the encrypted token, I ran:
+If all you do is copy my code above, the `MAIN_BRANCH_NAME` is to reference which branch on GitHub you want Travis to run this command on (in my case, it was my `main` branch). The `ENCRYPTED_TOKEN_GOES_HERE` indicates the encrypted value of your GitHub personal access token, which grants Travis CI permission to deploy to your repository. In order to generate the encrypted token, I ran:
 ```bash
 travis encrypt "PERSONAL_ACCESS_TOKEN"
 ```
@@ -113,10 +113,10 @@ workflows:
     - test:
         filters:
           branches:
-            ignore: [ SOURCE_CODE_BRANCH ]
+            ignore: [ MAIN_BRANCH_NAME ]
 ```
 
-Here, I've named a `develop` workflow which will run the job `test`, on any branch that is not the `SOURCE_CODE_BRANCH`. One thing I don't really like about CircleCI's config files is how nested they are. It's yaml, so there's a way to write the code not nested, but it involves a lot of nested brackets and braces. I eventually decided to just deal with the nested yaml, and to move on.
+Here, I've named a `develop` workflow which will run the job `test`, on any branch that is not the `MAIN_BRANCH_NAME`. One thing I don't really like about CircleCI's config files is how nested they are. It's yaml, so there's a way to write the code not nested, but it involves a lot of nested brackets and braces. I eventually decided to just deal with the nested yaml, and to move on.
 
 From there, this is what my `test` job looks like:
 ```yaml
@@ -214,8 +214,8 @@ The orb comes with a default Slack message, but I wanted to customize mine a bit
 # Start with a link to the CircleCI build and the project...
 m="Build <$CIRCLE_BUILD_URL|#$CIRCLE_BUILD_NUM> of $CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME"
 
-# If the branch of the build is NOT the source code branch, then write the branch
-if [[ $CIRCLE_BRANCH != "SOURCE_CODE_BRANCH_NAME" ]]; then
+# If the branch of the build is NOT the main branch, then write the branch
+if [[ $CIRCLE_BRANCH != "MAIN_BRANCH_NAME" ]]; then
   m="$m on branch \`$CIRCLE_BRANCH\`"
 fi
 
@@ -252,7 +252,7 @@ workflows:
     - test-and-deploy:
         filters:
           branches:
-            only: [ SOURCE_CODE_BRANCH ]
+            only: [ MAIN_BRANCH_NAME ]
 jobs:
   test-and-deploy:
     working_directory: ~/PROJECT_NAME
@@ -273,7 +273,7 @@ commands:
         command: {% raw %}.circleci/github-pages-deploy.sh{% endraw %}
 ```
 
-This workflow titled `release` will only run on the `SOURCE_CODE_BRANCH`. It will still build the Jekyll site, so there's something to deploy, and it will still notify Slack upon completion. But, we've defined a new command for the job to run, `github_pages_deploy`, which will call the `.circleci/github-pages-deploy.sh` file:
+This workflow titled `release` will only run on the `MAIN_BRANCH_NAME`. It will still build the Jekyll site, so there's something to deploy, and it will still notify Slack upon completion. But, we've defined a new command for the job to run, `github_pages_deploy`, which will call the `.circleci/github-pages-deploy.sh` file:
 ```bash
 #!/bin/bash
 
@@ -331,7 +331,7 @@ workflows:
         cron: "30 5 * * *" # 05:30 UTC => 00:30 CDT / 23:30 CST
         filters:
           branches:
-            only: [ SOURCE_CODE_BRANCH ]
+            only: [ MAIN_BRANCH_NAME ]
 ```
 
 Because I already defined the job I needed, I simply added this little cron workflow, and it works brilliantly. And I know that my cron builds start exactly when I want them to because I get a nice Slack notification at exactly 05:30 UTC on the dot (my builds are fast now, remember?). I know when looking at the Slack notification whether it was a cron or not, because when a cron runs, there's no GitHub username in the message. And I can add as many or as few crons as I'd like. I simply add more `schedule`s to the `triggers` array in the yaml. And because my whole site "thinks" in UTC time (see more [here](/blog/posts/time-zones-utc-and-javascript-oh-my/)), it's easy to set the crons to whatever specific time I need to publish all of my blog posts automatically.
@@ -366,4 +366,4 @@ But at the end of the day, what matters is that every project uses the CI soluti
 
 ---
 
-EDIT: Since writing this blog post, I've moved my `master` branch to be called `gh-pages`, and I've updated this blog post accordingly. I've also switched to using GitHub Actions since this was written, and I've written [this blog post](/blog/posts/why-i-switched-from-circleci-to-github-actions/) about that.
+EDIT: Since writing this blog post, I've moved my `master` branch to be called `gh-pages` and `source` branch to be called `main`, and I've updated this blog post accordingly. I've also switched to using GitHub Actions since this was written, and I've written [this blog post](/blog/posts/why-i-switched-from-circleci-to-github-actions/) about that.
