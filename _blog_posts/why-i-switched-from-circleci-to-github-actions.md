@@ -36,7 +36,7 @@ Up until now, I've heard of GitHub Actions, but I've been a little bit scared to
 As I originally outlined in [this blog post](/blog/posts/why-i-switched-from-travis-ci-to-circleci/), I use CI tools for four main things:
 > 1. Build my Jekyll website quickly, run HTML Proofer on it, and have room to grow my test suite if I desire to do so
 > 2. Notify a Slack channel when the build was done
-> 3. "Deploy" my website by making a commit back to my [`master` branch in GitHub](https://github.com/emma-sax4/emma-sax4.github.io/tree/master) (which GitHub Pages will then deploy for me)
+> 3. "Deploy" my website by making a commit back to my [`master` branch in GitHub](https://github.com/emma-sax4/emmasax4.info/tree/master) (which GitHub Pages will then deploy for me)
 > 4. Run a daily cron so that I can automate the build to run whenever I want (ideal for when I'd like to publish a blog post at a specific time or to check that my site still builds and loads properly every now and then, since my site doesn't get consistent updates all the time)
 
 This list of four requirements hasn't changed. CircleCI can do all of these things beautifully, although if I'm honest, I had to do some of my own personal fidgeting around to get #3 working as expected and #2 with a custom Slack message. All of this is fine. I put the time and effort in once, and it's paid off countless times since. #automation #computers. Now it's time to see if GitHub Actions can do the same things for me.
