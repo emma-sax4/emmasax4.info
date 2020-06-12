@@ -74,12 +74,12 @@ deploy:
   keep_history: true
   edge: true
   on:
-    branch: MAIN_CODE_BRANCH
+    branch: MAIN_BRANCH_NAME
   token:
     secure: ENCRYPTED_TOKEN_GOES_HERE
 ```
 
-If all you do is copy my code above, the `MAIN_CODE_BRANCH` is to reference which branch on GitHub you want Travis to run this command on (in my case, it was my `main` branch). The `ENCRYPTED_TOKEN_GOES_HERE` indicates the encrypted value of your GitHub personal access token, which grants Travis CI permission to deploy to your repository. In order to generate the encrypted token, I ran:
+If all you do is copy my code above, the `MAIN_BRANCH_NAME` is to reference which branch on GitHub you want Travis to run this command on (in my case, it was my `main` branch). The `ENCRYPTED_TOKEN_GOES_HERE` indicates the encrypted value of your GitHub personal access token, which grants Travis CI permission to deploy to your repository. In order to generate the encrypted token, I ran:
 ```bash
 travis encrypt "PERSONAL_ACCESS_TOKEN"
 ```
@@ -113,10 +113,10 @@ workflows:
     - test:
         filters:
           branches:
-            ignore: [ MAIN_CODE_BRANCH ]
+            ignore: [ MAIN_BRANCH_NAME ]
 ```
 
-Here, I've named a `develop` workflow which will run the job `test`, on any branch that is not the `MAIN_CODE_BRANCH`. One thing I don't really like about CircleCI's config files is how nested they are. It's yaml, so there's a way to write the code not nested, but it involves a lot of nested brackets and braces. I eventually decided to just deal with the nested yaml, and to move on.
+Here, I've named a `develop` workflow which will run the job `test`, on any branch that is not the `MAIN_BRANCH_NAME`. One thing I don't really like about CircleCI's config files is how nested they are. It's yaml, so there's a way to write the code not nested, but it involves a lot of nested brackets and braces. I eventually decided to just deal with the nested yaml, and to move on.
 
 From there, this is what my `test` job looks like:
 ```yaml
@@ -215,7 +215,7 @@ The orb comes with a default Slack message, but I wanted to customize mine a bit
 m="Build <$CIRCLE_BUILD_URL|#$CIRCLE_BUILD_NUM> of $CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME"
 
 # If the branch of the build is NOT the main branch, then write the branch
-if [[ $CIRCLE_BRANCH != "MAIN_CODE_BRANCH_NAME" ]]; then
+if [[ $CIRCLE_BRANCH != "MAIN_BRANCH_NAME" ]]; then
   m="$m on branch \`$CIRCLE_BRANCH\`"
 fi
 
