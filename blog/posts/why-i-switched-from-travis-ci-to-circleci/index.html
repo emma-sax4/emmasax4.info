@@ -36,7 +36,7 @@
 <meta name="msvalidate.01" content="89B2B19FF966341B78EF64EDADE6DF81" />
 <meta name="yandex-verification" content="c2741887f8c30dd1" />
 <script type="application/ld+json">
-{"description":"Emma Sax’s personal website and blog. Includes information about my social media profiles, résumé, and hobbies.","headline":"Why I Switched from Travis CI to CircleCI","dateModified":"2020-06-12T16:32:57+00:00","datePublished":"2020-03-22T17:51:00+00:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://emmasax4.info/blog/posts/why-i-switched-from-travis-ci-to-circleci/"},"url":"https://emmasax4.info/blog/posts/why-i-switched-from-travis-ci-to-circleci/","author":{"@type":"Person","name":"Emma Sax"},"@context":"https://schema.org"}</script>
+{"description":"Emma Sax’s personal website and blog. Includes information about my social media profiles, résumé, and hobbies.","headline":"Why I Switched from Travis CI to CircleCI","dateModified":"2020-06-12T18:23:07+00:00","datePublished":"2020-03-22T17:51:00+00:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://emmasax4.info/blog/posts/why-i-switched-from-travis-ci-to-circleci/"},"url":"https://emmasax4.info/blog/posts/why-i-switched-from-travis-ci-to-circleci/","author":{"@type":"Person","name":"Emma Sax"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -285,12 +285,12 @@
   <span class="na">keep_history</span><span class="pi">:</span> <span class="no">true</span>
   <span class="na">edge</span><span class="pi">:</span> <span class="no">true</span>
   <span class="na">on</span><span class="pi">:</span>
-    <span class="na">branch</span><span class="pi">:</span> <span class="s">SOURCE_CODE_BRANCH</span>
+    <span class="na">branch</span><span class="pi">:</span> <span class="s">MAIN_BRANCH_NAME</span>
   <span class="na">token</span><span class="pi">:</span>
     <span class="na">secure</span><span class="pi">:</span> <span class="s">ENCRYPTED_TOKEN_GOES_HERE</span>
 </code></pre></div></div>
 
-<p>If all you do is copy my code above, the <code class="highlighter-rouge">SOURCE_CODE_BRANCH</code> is to reference which branch on GitHub you want Travis to run this command on (in my case, it was my <code class="highlighter-rouge">source</code> branch). The <code class="highlighter-rouge">ENCRYPTED_TOKEN_GOES_HERE</code> indicates the encrypted value of your GitHub personal access token, which grants Travis CI permission to deploy to your repository. In order to generate the encrypted token, I ran:</p>
+<p>If all you do is copy my code above, the <code class="highlighter-rouge">MAIN_BRANCH_NAME</code> is to reference which branch on GitHub you want Travis to run this command on (in my case, it was my <code class="highlighter-rouge">main</code> branch). The <code class="highlighter-rouge">ENCRYPTED_TOKEN_GOES_HERE</code> indicates the encrypted value of your GitHub personal access token, which grants Travis CI permission to deploy to your repository. In order to generate the encrypted token, I ran:</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>travis encrypt <span class="s2">"PERSONAL_ACCESS_TOKEN"</span>
 </code></pre></div></div>
 
@@ -322,10 +322,10 @@
     <span class="pi">-</span> <span class="na">test</span><span class="pi">:</span>
         <span class="na">filters</span><span class="pi">:</span>
           <span class="na">branches</span><span class="pi">:</span>
-            <span class="na">ignore</span><span class="pi">:</span> <span class="pi">[</span> <span class="nv">SOURCE_CODE_BRANCH</span> <span class="pi">]</span>
+            <span class="na">ignore</span><span class="pi">:</span> <span class="pi">[</span> <span class="nv">MAIN_BRANCH_NAME</span> <span class="pi">]</span>
 </code></pre></div></div>
 
-<p>Here, I’ve named a <code class="highlighter-rouge">develop</code> workflow which will run the job <code class="highlighter-rouge">test</code>, on any branch that is not the <code class="highlighter-rouge">SOURCE_CODE_BRANCH</code>. One thing I don’t really like about CircleCI’s config files is how nested they are. It’s yaml, so there’s a way to write the code not nested, but it involves a lot of nested brackets and braces. I eventually decided to just deal with the nested yaml, and to move on.</p>
+<p>Here, I’ve named a <code class="highlighter-rouge">develop</code> workflow which will run the job <code class="highlighter-rouge">test</code>, on any branch that is not the <code class="highlighter-rouge">MAIN_BRANCH_NAME</code>. One thing I don’t really like about CircleCI’s config files is how nested they are. It’s yaml, so there’s a way to write the code not nested, but it involves a lot of nested brackets and braces. I eventually decided to just deal with the nested yaml, and to move on.</p>
 
 <p>From there, this is what my <code class="highlighter-rouge">test</code> job looks like:</p>
 <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">jobs</span><span class="pi">:</span>
@@ -417,8 +417,8 @@ bundle <span class="nb">exec </span>htmlproofer <span class="se">\</span>
 <span class="c"># Start with a link to the CircleCI build and the project...</span>
 <span class="nv">m</span><span class="o">=</span><span class="s2">"Build &lt;</span><span class="nv">$CIRCLE_BUILD_URL</span><span class="s2">|#</span><span class="nv">$CIRCLE_BUILD_NUM</span><span class="s2">&gt; of </span><span class="nv">$CIRCLE_PROJECT_USERNAME</span><span class="s2">/</span><span class="nv">$CIRCLE_PROJECT_REPONAME</span><span class="s2">"</span>
 
-<span class="c"># If the branch of the build is NOT the source code branch, then write the branch</span>
-<span class="k">if</span> <span class="o">[[</span> <span class="nv">$CIRCLE_BRANCH</span> <span class="o">!=</span> <span class="s2">"SOURCE_CODE_BRANCH_NAME"</span> <span class="o">]]</span><span class="p">;</span> <span class="k">then
+<span class="c"># If the branch of the build is NOT the main branch, then write the branch</span>
+<span class="k">if</span> <span class="o">[[</span> <span class="nv">$CIRCLE_BRANCH</span> <span class="o">!=</span> <span class="s2">"MAIN_BRANCH_NAME"</span> <span class="o">]]</span><span class="p">;</span> <span class="k">then
   </span><span class="nv">m</span><span class="o">=</span><span class="s2">"</span><span class="nv">$m</span><span class="s2"> on branch </span><span class="se">\`</span><span class="nv">$CIRCLE_BRANCH</span><span class="se">\`</span><span class="s2">"</span>
 <span class="k">fi</span>
 
@@ -456,7 +456,7 @@ bundle <span class="nb">exec </span>htmlproofer <span class="se">\</span>
     <span class="pi">-</span> <span class="na">test-and-deploy</span><span class="pi">:</span>
         <span class="na">filters</span><span class="pi">:</span>
           <span class="na">branches</span><span class="pi">:</span>
-            <span class="na">only</span><span class="pi">:</span> <span class="pi">[</span> <span class="nv">SOURCE_CODE_BRANCH</span> <span class="pi">]</span>
+            <span class="na">only</span><span class="pi">:</span> <span class="pi">[</span> <span class="nv">MAIN_BRANCH_NAME</span> <span class="pi">]</span>
 <span class="na">jobs</span><span class="pi">:</span>
   <span class="na">test-and-deploy</span><span class="pi">:</span>
     <span class="na">working_directory</span><span class="pi">:</span> <span class="s">~/PROJECT_NAME</span>
@@ -477,7 +477,7 @@ bundle <span class="nb">exec </span>htmlproofer <span class="se">\</span>
         <span class="na">command</span><span class="pi">:</span> <span class="s">.circleci/github-pages-deploy.sh</span>
 </code></pre></div></div>
 
-<p>This workflow titled <code class="highlighter-rouge">release</code> will only run on the <code class="highlighter-rouge">SOURCE_CODE_BRANCH</code>. It will still build the Jekyll site, so there’s something to deploy, and it will still notify Slack upon completion. But, we’ve defined a new command for the job to run, <code class="highlighter-rouge">github_pages_deploy</code>, which will call the <code class="highlighter-rouge">.circleci/github-pages-deploy.sh</code> file:</p>
+<p>This workflow titled <code class="highlighter-rouge">release</code> will only run on the <code class="highlighter-rouge">MAIN_BRANCH_NAME</code>. It will still build the Jekyll site, so there’s something to deploy, and it will still notify Slack upon completion. But, we’ve defined a new command for the job to run, <code class="highlighter-rouge">github_pages_deploy</code>, which will call the <code class="highlighter-rouge">.circleci/github-pages-deploy.sh</code> file:</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
 
 <span class="c"># These are two variables that I added as CircleCI environment variables</span>
@@ -532,7 +532,7 @@ git commit <span class="nt">-m</span> <span class="s2">"Deploy to </span><span c
         <span class="na">cron</span><span class="pi">:</span> <span class="s2">"</span><span class="s">30</span><span class="nv"> </span><span class="s">5</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*"</span> <span class="c1"># 05:30 UTC =&gt; 00:30 CDT / 23:30 CST</span>
         <span class="na">filters</span><span class="pi">:</span>
           <span class="na">branches</span><span class="pi">:</span>
-            <span class="na">only</span><span class="pi">:</span> <span class="pi">[</span> <span class="nv">SOURCE_CODE_BRANCH</span> <span class="pi">]</span>
+            <span class="na">only</span><span class="pi">:</span> <span class="pi">[</span> <span class="nv">MAIN_BRANCH_NAME</span> <span class="pi">]</span>
 </code></pre></div></div>
 
 <p>Because I already defined the job I needed, I simply added this little cron workflow, and it works brilliantly. And I know that my cron builds start exactly when I want them to because I get a nice Slack notification at exactly 05:30 UTC on the dot (my builds are fast now, remember?). I know when looking at the Slack notification whether it was a cron or not, because when a cron runs, there’s no GitHub username in the message. And I can add as many or as few crons as I’d like. I simply add more <code class="highlighter-rouge">schedule</code>s to the <code class="highlighter-rouge">triggers</code> array in the yaml. And because my whole site “thinks” in UTC time (see more <a href="/blog/posts/time-zones-utc-and-javascript-oh-my/">here</a>), it’s easy to set the crons to whatever specific time I need to publish all of my blog posts automatically.</p>
@@ -566,7 +566,7 @@ git commit <span class="nt">-m</span> <span class="s2">"Deploy to </span><span c
 
 <hr />
 
-<p>EDIT: Since writing this blog post, I’ve moved my <code class="highlighter-rouge">master</code> branch to be called <code class="highlighter-rouge">gh-pages</code>, and I’ve updated this blog post accordingly. I’ve also switched to using GitHub Actions since this was written, and I’ve written <a href="/blog/posts/why-i-switched-from-circleci-to-github-actions/">this blog post</a> about that.</p>
+<p>EDIT: Since writing this blog post, I’ve moved my <code class="highlighter-rouge">master</code> branch to be called <code class="highlighter-rouge">gh-pages</code> and <code class="highlighter-rouge">source</code> branch to be called <code class="highlighter-rouge">main</code>, and I’ve updated this blog post accordingly. I’ve also switched to using GitHub Actions since this was written, and I’ve written <a href="/blog/posts/why-i-switched-from-circleci-to-github-actions/">this blog post</a> about that.</p>
 
       <div style="margin-top: 3rem;">
   
