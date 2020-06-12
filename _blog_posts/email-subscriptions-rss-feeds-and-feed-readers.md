@@ -64,7 +64,7 @@ layout: none
 </rss>{% endraw %}
 ```
 
-And it works! It works locally and in `production`. I can validate my feed [here](https://validator.w3.org/feed/), and I can add my own feed to my feed reader to test it out locally and on master.
+And it works! It works locally and in `production`. I can validate my feed [here](https://validator.w3.org/feed/), and I can add my own feed to my feed reader to test it out locally and on `gh-pages`.
 
 Now we're only left with this question: which feed reader is best? I'm still figuring out the answer to that question. I used [feeder.co](https://feeder.co/reader) for most of my testing while implementing this, but it costs about $10/month, and I was just using a free trial. Granted, it did seem handy and it worked well 🤷🏻‍♀️. So now I've installed the [RSS Feed Reader Chrome extension](https://chrome.google.com/webstore/detail/rss-feed-reader/cdlhhcmmdobckneongkkmgigcimeibpf), and I'll play with this just long enough to see if posting a new blog (this one, actually) will update the feed reader. If it does seem to work, then I'll keep digging for the best feed reader out there (that's free... I'm cheap, remember?).
 
@@ -88,3 +88,7 @@ I believe I've finally found a feed reader that I like! It's called [Feedbro](ht
 * [wikipedia.org: RSS](https://en.wikipedia.org/wiki/RSS)
 * [whatis.techtarget.com: RSS reader](https://whatis.techtarget.com/definition/RSS-reader)
 * [chrome.google.com: webstore, RSS feed reader](https://chrome.google.com/webstore/detail/rss-feed-reader/cdlhhcmmdobckneongkkmgigcimeibpf)
+
+---
+
+EDIT: Since writing this blog post, I've moved my `master` branch to be called `gh-pages`, and I've updated this blog post accordingly.

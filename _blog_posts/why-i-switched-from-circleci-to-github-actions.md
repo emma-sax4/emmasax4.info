@@ -36,7 +36,7 @@ Up until now, I've heard of GitHub Actions, but I've been a little bit scared to
 As I originally outlined in [this blog post](/blog/posts/why-i-switched-from-travis-ci-to-circleci/), I use CI tools for four main things:
 > 1. Build my Jekyll website quickly, run HTML Proofer on it, and have room to grow my test suite if I desire to do so
 > 2. Notify a Slack channel when the build was done
-> 3. "Deploy" my website by making a commit back to my [`master` branch in GitHub](https://github.com/emma-sax4/emmasax4.info/tree/master) (which GitHub Pages will then deploy for me)
+> 3. "Deploy" my website by making a commit back to my [`gh-pages` branch in GitHub](https://github.com/emma-sax4/emmasax4.info/tree/gh-pages) (which GitHub Pages will then deploy for me)
 > 4. Run a daily cron so that I can automate the build to run whenever I want (ideal for when I'd like to publish a blog post at a specific time or to check that my site still builds and loads properly every now and then, since my site doesn't get consistent updates all the time)
 
 This list of four requirements hasn't changed. CircleCI can do all of these things beautifully, although if I'm honest, I had to do some of my own personal fidgeting around to get #3 working as expected and #2 with a custom Slack message. All of this is fine. I put the time and effort in once, and it's paid off countless times since. #automation #computers. Now it's time to see if GitHub Actions can do the same things for me.
@@ -169,17 +169,17 @@ With GitHub Actions' marketplace, it made it simple to find the perfect action t
   env:
     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   with:
-    BRANCH: master
+    BRANCH: gh-pages
     FOLDER: _site
     CLEAN: true
-    COMMIT_MESSAGE: 'Deploy to ${{ github.repository }}.git:master'
+    COMMIT_MESSAGE: 'Deploy to ${{ github.repository }}.git:gh-pages'
     GIT_CONFIG_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
     GIT_CONFIG_NAME: github-actions[bot]{% endraw %}
 ```
 
 The `{% raw %}${{ secrets.GITHUB_TOKEN }}{% endraw %}` is something that's built into GitHub Actions, and is automatically provided with exactly the permissions required, so there was no passing around of permissions or tokens to obtain this.
 
-The `CLEAN: true` was something that I added in later, when I realized that without it, deleted directories wouldn't be automatically deleted from my `master` branch. One other thing that I had to take note of was that for some reason, the deploy wouldn't work properly with `actions/checkout@v2` (it rewrites the files upon deploy, meaning each page on my site would receive a new `updated_at` or `lastModifiedAt` date upon each deploy), so I switched to `actions/checkout@v1`. Of course, `v1` of the checkout step had its own cross to bear, but that was fine for me to compromise with. I think that I could've gotten `v2` to work properly, had I finished reading the documentation for the deploy action originally.
+The `CLEAN: true` was something that I added in later, when I realized that without it, deleted directories wouldn't be automatically deleted from my `gh-pages` branch. One other thing that I had to take note of was that for some reason, the deploy wouldn't work properly with `actions/checkout@v2` (it rewrites the files upon deploy, meaning each page on my site would receive a new `updated_at` or `lastModifiedAt` date upon each deploy), so I switched to `actions/checkout@v1`. Of course, `v1` of the checkout step had its own cross to bear, but that was fine for me to compromise with. I think that I could've gotten `v2` to work properly, had I finished reading the documentation for the deploy action originally.
 
 One super cool thing that I actually suggested to the author of this action was to have a deployment status that is outputted at the end of the whole thing. It's described a bit [here](https://github.com/marketplace/actions/deploy-to-github-pages#deployment-status), but with this, I was able to custom create a Slack message specifically about the deployment:
 ```yml
@@ -223,3 +223,7 @@ But these cons are worth it, given that my site now completely runs on GitHub Ac
 If somebody were to ask me whether to use GitHub Actions, Travis CI, or CircleCI, I'd give different responses based on the use case. If the person wants something supported, familiar, and common, then I'd say to use Travis CI. In an enterprise setting, Travis CI probably has some of the best abilities to connect to AWS, Heroku, Jenkins, etc. If the person wants something that's still formally supported, and potentially willing to try new things, then CircleCI may be the way to go. It's fast, simple, and relatively easy to use (if you are willing to make additional bash scripts). And if the person wants something natively built into GitHub, is okay duplicating some code, and is willing to poke around more open source code, then GitHub Actions can be a powerful tool. Also, with either Travis CI or GitHub Actions, if you don't want builds running on a few select branches, you don't need to explicitly ignore them, like with CircleCI. It's worth noting that for all three of these CI solutions, you'll have to start spending money if you want to use them heavily with private repositories.
 
 And as for me, I think I'm going to have to cut myself off from new CI solutions for now. GitHub Actions does everything I want it to, and now that it's all set up, it's fast, easy to maintain, and of course, I've got that one big bonus... I've eliminated a third party development dependency.
+
+---
+
+EDIT: Since writing this blog post, I've moved my `master` branch to be called `gh-pages`, and I've updated this blog post accordingly.
