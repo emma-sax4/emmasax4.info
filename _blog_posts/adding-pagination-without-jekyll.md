@@ -60,7 +60,7 @@ back to my `main.scss`, and finally the pagination was beautiful:
   <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/48741504061/in/album-72157710863695862/" title="lovely_pagination_bar"><img class="image" src="https://live.staticflickr.com/65535/48741504061_7ebbd630fa.jpg" width="450" height="311" alt="Lovely pagination bar"></a>
 </div>
 
-I was thrilled with the outcome of this pagination (even though it wasn't Jekyll's officially supported pagination), and I committed to master. However, perhaps a day later, I noticed something wrong with my CSS formatting. Perhaps you can notice it if you compare the before-pretty-pagination and the after-pretty-pagination pictures... I'll give you a hint: it has to do with the indentation and spacing of the words. Somehow, making the pagination bar pretty messed up my CSS formatting!
+I was thrilled with the outcome of this pagination (even though it wasn't Jekyll's officially supported pagination), and I committed to `gh-pages`. However, perhaps a day later, I noticed something wrong with my CSS formatting. Perhaps you can notice it if you compare the before-pretty-pagination and the after-pretty-pagination pictures... I'll give you a hint: it has to do with the indentation and spacing of the words. Somehow, making the pagination bar pretty messed up my CSS formatting!
 
 I was upset. I wanted to have both a pretty pagination bar and proper formatting of the text. So, I went back in my commit changes and commented out everything from when the site last worked as expected. I slowly uncommented line after line until I found the problem line... of course it happened to be with the same line that makes the pagination work:
 ```css
@@ -76,3 +76,7 @@ So, I went on a mini-adventure through the `primer` code to see what that line w
 And it turns out, the answer was as easy as that! Now, I have proper CSS layouts, a lovely pagination bar that works and doesn't take long to load, and the file structure of my project was able to stay the same. The pagination bar isn't perfect, but it's better than anything I had before, and it's good enough for me—for right now anyway.
 
 Since the pagination part of this project is _finally_ done, I can officially say that I've now gotten everything out of Jekyll that I had hoped to, and then some. Not only did I implement a website with a "blog" that I'm proud of, but I learned a new framework and a new coding language. And most importantly, I reminded myself that one of the most important parts of being a coder is being willing to dive in, try something new, and not be afraid to fail.
+
+---
+
+EDIT: Since writing this blog post, I've moved my `master` branch to be called `gh-pages`, and I've updated this blog post accordingly.
