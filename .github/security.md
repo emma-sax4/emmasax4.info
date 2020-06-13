@@ -4,7 +4,7 @@
 
 If you happen to find any security vulnerabilities in this project, please let me know! I've turned on GitHub's security advisory and alert suggestions, but it's always possible that I'll miss something.
 
-To let me know there's a security vulnerability, please make a new GitHub Issue as soon as possible. Please use a [blank Issue template](https://github.com/emma-sax4/emmasax4.info/issues/new), and then copy-paste the following into the box, and fill it out:
+To let me know there's a security vulnerability, please make a new GitHub Issue as soon as possible. Please use a [blank Issue template](https://github.com/emmasax4/emmasax4.info/issues/new), and then copy-paste the following into the box, and fill it out:
 ```
 ## What is the alert or vulnerability?
 > A clear and concise description of what the vulnerability is. Ex: The Ruby gem [...] has reported vulnerability CVE-[...].
