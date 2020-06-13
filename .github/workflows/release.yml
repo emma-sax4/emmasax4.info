@@ -38,7 +38,7 @@ jobs:
       run: bundle exec htmlproofer --assume-extension --allow-hash-href --internal-domains /emmasax4.info/ --only_4xx ./_site/
 
     - name: GitHub Pages Deploy
-      uses: emma-sax4/github-pages-deploy-action@emmasax4_github_pages_deploy_action
+      uses: emmasax4/github-pages-deploy-action@emmasax4_github_pages_deploy_action
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
@@ -61,7 +61,7 @@ jobs:
 
     - name: Notify Slack on Success
       if: success()
-      uses: emma-sax4/slack-notifier-action@emmasax4_slack_notifier_action
+      uses: emmasax4/slack-notifier-action@emmasax4_slack_notifier_action
       env:
         SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
       with:
@@ -80,7 +80,7 @@ jobs:
 
     - name: Notify Slack on Failure
       if: failure()
-      uses: emma-sax4/slack-notifier-action@emmasax4_slack_notifier_action
+      uses: emmasax4/slack-notifier-action@emmasax4_slack_notifier_action
       env:
         SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
       with:
