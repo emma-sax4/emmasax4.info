@@ -1,5 +1,5 @@
 GIT
-  remote: https://github.com/emma-sax4/jekyll-feed.git
+  remote: https://github.com/emmasax4/jekyll-feed.git
   revision: 6a6c0e1d2d7b194678a233db9befca6d05ee7460
   branch: emmasax4_feed
   specs:
@@ -7,7 +7,7 @@ GIT
       jekyll (>= 3.7, < 5.0)
 
 GIT
-  remote: https://github.com/emma-sax4/jekyll-seo-tag.git
+  remote: https://github.com/emmasax4/jekyll-seo-tag.git
   revision: 882d914ad065e1bb376faff72540cebbd5199fdc
   branch: emmasax4_seo_tag
   specs:
@@ -15,7 +15,7 @@ GIT
       jekyll (>= 3.3, < 5.0)
 
 GIT
-  remote: https://github.com/emma-sax4/jekyll-sitemap.git
+  remote: https://github.com/emmasax4/jekyll-sitemap.git
   revision: 8a439724c14e8a354ac711d3b7454b8d8655056a
   branch: emmasax4_sitemap
   specs:
