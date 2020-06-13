@@ -5,7 +5,7 @@ order: 2
 permalink: /about-me/
 ---
 
-Since graduating from the [University of Minnesota, Morris (UMM)](https://morris.umn.edu/) with a Bachelor of Arts in [Computer Science](https://academics.morris.umn.edu/computer-science), my entire career has been spent on the Operations side of DevOps. But I dabble in website development in Ruby on Rails and Jekyll/Liquid. For a more detailed version of my experience, please visit my [LinkedIn](https://www.linkedin.com/in/emma-sax4).
+Since graduating from the [University of Minnesota, Morris (UMM)](https://morris.umn.edu/) with a Bachelor of Arts in [Computer Science](https://academics.morris.umn.edu/computer-science), my entire career has been spent on the Operations side of DevOps. But I dabble in website development in Ruby on Rails and Jekyll/Liquid. For a more detailed version of my experience, please visit my [LinkedIn](https://www.linkedin.com/in/emmasax4).
 
 ## Tools, Frameworks, & Languages
 
@@ -38,5 +38,5 @@ Self-motivated, leadership skills, detail-oriented, problem solving skills, pair
 * 3rd place in the 2015 [Digi-Key Collegiate Computing Competition](https://www.digikey.com/en/resources/edu/dkc3-computing-competition) (DKC<sup>3</sup>)
 * 4th place in the 2015 UMM Annual [Sorting Competition](https://github.com/elenam/SortingCompetitionMaterials2015)
 * Presented in the UMM [Undergraduate Research Symposium 2015](http://www.morris.umn.edu/urs/)
-* [URSA Major](https://github.com/emma-sax4/UMM3601ursamajor) Developer
+* [URSA Major](https://github.com/emmasax4/UMM3601ursamajor) Developer
 * Research assistant for [Clojure research](https://github.com/Clojure-Intro-Course) at UMM
