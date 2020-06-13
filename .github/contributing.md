@@ -27,8 +27,8 @@
 
 ## Contribution Process
 
-1. Fork this repository: https://github.com/emma-sax4/emmasax4.info/fork.
-2. Triple check you're currently on the `source` branch.
+1. Fork this repository: https://github.com/emmasax4/emmasax4.info/fork.
+2. Triple check you're currently on the `main` branch.
 3. Make your changes on a feature branch:
 
   | With GitHub UI | On your computer with Git |
@@ -39,7 +39,7 @@
   | Make a new pull request for your new branch (GitHub UI should automatically direct you to do this). | Continue making changes and committing/pushing them (unless you leave your feature branch, all new commits will be automatically added to your branch). |
   | Continue making changes to your pull request/branch (navigate to the main repository page, switch to your feature branch, and then continue making whatever changes you'd like). | When you're satisfied, make a pull request to this repository in the GitHub UI. |
 
-4. Verify tests passes on your pull request. The test configuration lives inside the [`.github/workflows/develop.yml`](https://github.com/emma-sax4/emmasax4.info/blob/source/.github/workflows/develop.yml) file. Read more about this repository's tests below.
+4. Verify tests passes on your pull request. The test configuration lives inside the [`.github/workflows/develop.yml`](https://github.com/emmasax4/emmasax4.info/blob/main/.github/workflows/develop.yml) file. Read more about this repository's tests below.
 5. Check the site looks like how you expect it to look. Follow the instructions below to get your computer running the site locally. If you've been working on GitHub UI up until this point, you may need to switch over to a computer and clone the repository and branch to do this.
 6. When you're absolutely ready for me to look at your pull request, please request a Code Review from me in the pull request. If I don't comment or start looking at the pull request in a few days, feel free to [send me an email](mailto:emma.sax4@gmail.com).
 
@@ -83,15 +83,15 @@ GitHub Actions also runs a version of the HTML Proofer which skips over all inte
 
 ## Continuous Integration
 
-This repository uses GitHub Actions for continuous integration tools. See the full workflows [here](https://github.com/emma-sax4/emmasax4.info/blob/source/.github/workflows).
+This repository uses GitHub Actions for continuous integration tools. See the full workflows [here](https://github.com/emmasax4/emmasax4.info/blob/main/.github/workflows).
 
 ### Tests
 
-This repository doesn't really have any unit or integration tests (Jekyll sites are just a host of static site files, so there's not really any functionality to test). However, GitHub Actions does check that Bundler can install the necessary dependencies and that Jekyll can properly build the site on each pull request and each commit to the `source` branch (the default branch in this repository). The tests are also run on a weekly cron (on Monday mornings) as a way of testing that the building continues to function as expected.
+This repository doesn't really have any unit or integration tests (Jekyll sites are just a host of static site files, so there's not really any functionality to test). However, GitHub Actions does check that Bundler can install the necessary dependencies and that Jekyll can properly build the site on each pull request and each commit to the `main` branch (the default branch in this repository). The tests are also run on a weekly cron (on Monday mornings) as a way of testing that the building continues to function as expected.
 
 ### Deployments
 
-Because of the use of Jekyll gems that GitHub Pages doesn't support, this site needs to use a "3rd party" instead of GitHub Pages to compile the code. So, when GitHub Actions runs on the `source` branch, not only does it bundle all of the dependencies and build the site, but it also puts it into a special `./_site` directory. Then, GitHub Actions will run a "deployment" to GitHub Pages to upload that directory to the `gh-pages` branch of this GitHub repository. Then, GitHub Pages automatically deploys the commits in the `gh-pages` branch. In this way, we develop the site on a pull request, we merge pull request into the `source` branch, and then GitHub Actions builds the code and commits that automagically to the `gh-pages` branch. Then GitHub Pages does their thing.
+Because of the use of Jekyll gems that GitHub Pages doesn't support, this site needs to use a "3rd party" instead of GitHub Pages to compile the code. So, when GitHub Actions runs on the `main` branch, not only does it bundle all of the dependencies and build the site, but it also puts it into a special `./_site` directory. Then, GitHub Actions will run a "deployment" to GitHub Pages to upload that directory to the `gh-pages` branch of this GitHub repository. Then, GitHub Pages automatically deploys the commits in the `gh-pages` branch. In this way, we develop the site on a pull request, we merge pull request into the `source` branch, and then GitHub Actions builds the code and commits that automagically to the `gh-pages` branch. Then GitHub Pages does their thing.
 
 A full deployment (including GitHub Actions and GitHub Pages) only takes about five to ten minutes, but depending on what was changed (HTML files, images, etc), it can take up to about fifteen minutes to propagate the changes. To make the changes appear faster, you can reload the entire website in incognito mode.
 
@@ -243,7 +243,7 @@ When it's time to publish the post, you can either:
   * Add the current date/time (in the author's local time zone, properly identifying the current hour offset from UTC) to the front matter: `date: YYYY-MM-DD HH:MM:SS -0X00`
   * Re-add and commit that file to the pull request
   * Wait for all status checks to pass on the pull request
-  * Merge the pull request into the `source` branch
+  * Merge the pull request into the `main` branch
 * Publish the post on a future date:
   * Remove the `draft: true` front matter
   * Add the current date/time (in the author's local time zone, properly identifying the current hour offset from UTC) to the front matter: `date: YYYY-MM-DD HH:MM:SS -0X00`
