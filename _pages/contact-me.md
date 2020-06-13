@@ -1,7 +1,6 @@
 ---
 layout: page
 title: Contact Me
-order: 5
 permalink: /contact-me/
 ---
 
