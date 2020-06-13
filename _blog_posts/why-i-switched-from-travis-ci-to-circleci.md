@@ -16,7 +16,7 @@ About three weeks ago, I started my next goal on this website, and that was to s
 The initial reason why I used Travis CI as my integration tool is outlined in [this blog post](/blog/posts/using-jekyll-paginate-v2/). But, as my website has continued to develop, there are four basic things I want my CI platform to be able to do for me:
 1. Build my Jekyll website quickly, run HTML Proofer on it, and have room to grow my test suite if I desire to do so
 2. Notify a Slack channel when the build was done
-3. "Deploy" my website by making a commit back to my [`gh-pages` branch in GitHub](https://github.com/emmasax4/emmasax4.info/tree/gh-pages) (which GitHub Pages will then deploy for me)
+3. "Deploy" my website by making a commit back to my [`gh-pages` branch in GitHub]({{ site.github_repo }}/tree/gh-pages) (which GitHub Pages will then deploy for me)
 4. Run a daily cron so that I can automate the build to run whenever I want (ideal for when I'd like to publish a blog post at a specific time, which involves having my CI tool run a job at that time)
 
 Travis CI can do all four of these things, and some of them were easier to set up than with CircleCI! I'll walk through that in a bit. But there was a big issue that I had with Travis CI. And at the end of the day, that was the reason I searched for other CI solutions. That issue was number four: setting up crons.
