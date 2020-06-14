@@ -37,6 +37,6 @@ Self-motivated, leadership skills, detail-oriented, problem solving skills, pair
 
 * 3rd place in the 2015 [Digi-Key Collegiate Computing Competition](https://www.digikey.com/en/resources/edu/dkc3-computing-competition) (DKC<sup>3</sup>)
 * 4th place in the 2015 UMM Annual [Sorting Competition](https://github.com/elenam/SortingCompetitionMaterials2015)
-* Presented in the UMM [Undergraduate Research Symposium 2015](http://www.morris.umn.edu/urs/)
+* Presented in the UMM [Undergraduate Research Symposium 2015](https://academics.morris.umn.edu/opportunities/undergraduate-research-symposium)
 * [URSA Major](https://github.com/emmasax4/UMM3601ursamajor) Developer
 * Research assistant for [Clojure research](https://github.com/Clojure-Intro-Course) at UMM
