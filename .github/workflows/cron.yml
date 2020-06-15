@@ -14,6 +14,7 @@ jobs:
       run: |
         echo "::set-env name=BRANCH::$(echo ${{ github.ref }} | sed -E 's|refs/[a-zA-Z]+/||')"
         echo "::set-env name=BUILD_URL::$(echo https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})"
+
     - name: Switch to Current Branch
       run: git checkout ${{ env.BRANCH }}
 

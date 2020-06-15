@@ -22,8 +22,8 @@ jobs:
         color: '#23c22e'
         title: ${{ github.repository }}
         title_link: https://github.com/${{ github.repository }}
-        author_name: github-actions[bot]
-        author_icon: https://imgur.com/kUxzV44
+        author_name: github-actions
+        author_icon: https://i.imgur.com/kUxzV44s.png
         text: Test build succeeded.
 
     - name: Notify Slack on Failure
@@ -38,6 +38,6 @@ jobs:
         color: '#bd2222'
         title: ${{ github.repository }}
         title_link: https://github.com/${{ github.repository }}
-        author_name: github-actions[bot]
-        author_icon: https://imgur.com/kUxzV44
+        author_name: github-actions
+        author_icon: https://i.imgur.com/kUxzV44s.png
         text: Test build failed.
