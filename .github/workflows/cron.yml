@@ -49,9 +49,8 @@ jobs:
         color: '#23c22e'
         title: ${{ github.repository }}
         title_link: https://github.com/${{ github.repository }}
-        author_name: ${{ github.actor }}
-        author_link: https://github.com/${{ github.actor }}
-        author_icon: https://github.com/${{ github.actor }}.png
+        author_name: github-actions
+        author_icon: https://i.imgur.com/kUxzV44s.png
         text: Build <${{ env.BUILD_URL }}|${{ github.run_id }}> on branch `${{ env.BRANCH }}` *passed*.
 
     - name: Notify Slack on Failure
@@ -66,7 +65,6 @@ jobs:
         color: '#bd2222'
         title: ${{ github.repository }}
         title_link: https://github.com/${{ github.repository }}
-        author_name: ${{ github.actor }}
-        author_link: https://github.com/${{ github.actor }}
-        author_icon: https://github.com/${{ github.actor }}.png
+        author_name: github-actions
+        author_icon: https://i.imgur.com/kUxzV44s.png
         text: Build <${{ env.BUILD_URL }}|${{ github.run_id }}> on branch `${{ env.BRANCH }}` *failed*.
