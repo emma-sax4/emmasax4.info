@@ -1,0 +1,43 @@
+name: Cron
+on:
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v1
+
+    - name: Notify Slack on Success
+      if: success()
+      uses: emmasax4/slack-notifier-action@emmasax4_slack_notifier_action
+      env:
+        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+      with:
+        channel: '#general'
+        icon_url: https://img.icons8.com/ios-filled/50/000000/github.png
+        username: GitHub Actions
+        color: '#23c22e'
+        title: ${{ github.repository }}
+        title_link: https://github.com/${{ github.repository }}
+        author_name: github-actions[bot]
+        author_icon: https://imgur.com/kUxzV44
+        text: Test build succeeded.
+
+    - name: Notify Slack on Failure
+      if: failure()
+      uses: emmasax4/slack-notifier-action@emmasax4_slack_notifier_action
+      env:
+        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+      with:
+        channel: '#general'
+        icon_url: https://img.icons8.com/ios-filled/50/000000/github.png
+        username: GitHub Actions
+        color: '#bd2222'
+        title: ${{ github.repository }}
+        title_link: https://github.com/${{ github.repository }}
+        author_name: github-actions[bot]
+        author_icon: https://imgur.com/kUxzV44
+        text: Test build failed.
