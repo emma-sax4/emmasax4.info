@@ -53,7 +53,6 @@ jobs:
         title: ${{ github.repository }}
         title_link: https://github.com/${{ github.repository }}
         author_name: ${{ github.actor }}
-        author_link: https://github.com/${{ github.actor }}
         author_icon: https://github.com/${{ github.actor }}.png
         text: >-
           Build <${{ env.BUILD_URL }}|${{ github.run_id }}> on branch `${{ env.BRANCH }}`
@@ -72,7 +71,6 @@ jobs:
         title: ${{ github.repository }}
         title_link: https://github.com/${{ github.repository }}
         author_name: ${{ github.actor }}
-        author_link: https://github.com/${{ github.actor }}
         author_icon: https://github.com/${{ github.actor }}.png
         text: >-
           Build <${{ env.BUILD_URL }}|${{ github.run_id }}> on branch `${{ env.BRANCH }}`
