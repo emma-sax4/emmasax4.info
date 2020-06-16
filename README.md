@@ -1,4 +1,4 @@
-# emmasax4.info ![Release](https://github.com/emmasax4/emmasax4.info/workflows/Release/badge.svg) [![Maintainability](https://api.codeclimate.com/v1/badges/07277bde24242f14b22d/maintainability)](https://codeclimate.com/github/emmasax4/emmasax4.info/maintainability)
+# emmasax4.info [![Release](https://github.com/emmasax4/emmasax4.info/workflows/Release/badge.svg)](https://github.com/emmasax4/emmasax4.info/actions?query=workflow%3ARelease) [![Maintainability](https://api.codeclimate.com/v1/badges/07277bde24242f14b22d/maintainability)](https://codeclimate.com/github/emmasax4/emmasax4.info/maintainability) ![Repository Size](https://img.shields.io/github/repo-size/emmasax4/emmasax4.info)
 
 **Live site: [https://emmasax4.info](https://emmasax4.info)**
 
