@@ -17,7 +17,7 @@ jobs:
         if [[ ${{ github.actor }} == pr-scheduler[bot] ]]; then
           echo "::set-env name=ACTOR_ICON::https://i.imgur.com/tmdeggv.png"
         else
-          echo "::set-env name=AUTHOR_ICON::https://github.com/${{ github.actor }}.png"
+          echo "::set-env name=ACTOR_ICON::https://github.com/${{ github.actor }}.png"
         fi
 
     - name: Switch to Current Branch
@@ -77,7 +77,7 @@ jobs:
         title: ${{ github.repository }}
         title_link: https://github.com/${{ github.repository }}
         author_name: ${{ github.actor }}
-        author_icon: ${{ env.AUTHOR_ICON }}
+        author_icon: ${{ env.ACTOR_ICON }}
         text: >-
           Build <${{ env.BUILD_URL }}|${{ github.run_id }}> on branch `${{ env.BRANCH }}`
           *passed*. ${{ env.DEPLOY_MESSAGE }}.
@@ -95,7 +95,7 @@ jobs:
         title: ${{ github.repository }}
         title_link: https://github.com/${{ github.repository }}
         author_name: ${{ github.actor }}
-        author_icon: ${{ env.AUTHOR_ICON }}
+        author_icon: ${{ env.ACTOR_ICON }}
         text: >-
           Build <${{ env.BUILD_URL }}|${{ github.run_id }}> on branch `${{ env.BRANCH }}`
           *failed*. ${{ env.DEPLOY_MESSAGE }}.
