@@ -3,24 +3,24 @@ layout: post
 title: Why and How I Renamed my <header-code>master</header-code> Branch
 tags: [ tech ]
 permalink: /blog/posts/why-and-how-i-renamed-my-master-branch/
-draft: true
+date: 2020-06-17 00:00:00 -0500
 ---
 
 ## What
 
 With the recent focus on the BLM movement, something that's been popping up on my Twitter radar has been renaming the default branch on our git repositories to be `main` instead of `master`. Actually, to be anything else besides `master`. Obviously, this could be a trend. This could just be a funny thing that we do that involves work, and it turns out pointless, or not having benefitted anybody. But it could also be something small that we do now, that actually makes people feel better. It could actually make a difference, and we may not even know it. If there's even a possibility of helping people, then why not do something like this? Who are we hurting by taking this action? Probably not anybody. Who _might_ we be hurting by _not_ taking this action? Possibly lots of people.
 
-At first glance, I thought it was silly. Isn't `master` the original default branch for a reason? It's kind of industry standard, right? Yes, it is industry standard. But just because something is the standard doesn't mean it can never be reevaluated. But, as I saw more people and companies looking into doing this, I realized that maybe it wasn't as silly or as time-consuming as I thought. If companies are automating it to be done in two days, then maybe it's not as disruptive to developer workflow as I thought.
+At first glance, I thought it was silly. Isn't `master` the original default branch for a reason? It's kind of industry standard, right? Yes, it is industry standard. But just because something is the standard doesn't mean it can never be reevaluated. As I saw more people and companies looking into doing this, I realized that maybe it wasn't as silly or as time-consuming as I thought. If companies are automating it to be done in two days, then maybe it's not as disruptive to developer workflow as I thought.
 
 ## Why
 
 So, my research began. From [this Twitter conversation](https://twitter.com/mislav/status/1270388510684598272), it's clear that people are undecided whether it's worth it to make the switch. A lot of people are saying it's a waste of time. This [GitHub issue conversation](https://github.com/pmmmwh/react-refresh-webpack-plugin/issues/113) has people complaining that the switch has broken peoples' projects, and is not actually helping people. But from my recent experience doing the switch (which took this project maybe an hour), it's been pretty painless. I'm not sure if it'll actually help people or not, but it certainly hasn't hurt anybody yet.
 
-For the people that say the use of `master` isn't about "master"/"slave", but more about "master's degree" or "Kung Fu master" context (apparently the word `master` is overloaded in English). However, [this blog post](https://mail.gnome.org/archives/desktop-devel-list/2019-May/msg00066.html) has kindly pointed out that even Linus Torvalds used the word master, which came from BitKeeper's use of `master`, which actually uses the word "slave" in the same sentence with the word "master" in its documentation. So sure, maybe people nowadays don't think of the phrase `master` branch as in the "master"/"slave" context, but that's where it started. And now, for better or worse, when I see a `master` branch, that's what'll pop into my head.
+There are people that say the use of `master` isn't about "master"/"slave", but more about "master's degree" or "Kung Fu master" context (apparently the word "master" is overloaded in English). However, [this blog post](https://mail.gnome.org/archives/desktop-devel-list/2019-May/msg00066.html) has kindly pointed out that even Linus Torvalds used the word master, which came from BitKeeper's use of `master`, which actually uses the word "slave" in the same sentence with the word "master" in its documentation. So sure, maybe people nowadays don't think of the phrase "`master` branch" as in the "master"/"slave" context, but that's where it started. And now, for better or worse, when I see a `master` branch, that's what'll pop into my head.
 
 ## How
 
-Okay, so now we know why I changed my repositories' default branches. For the most part, I decided to go with `main`. This is because it's environment-ambiguous, and it's short and easy. The word "main" has two whole characters less than "master", and it has the benefit that the `ma-` beginning matches the previous `master` branch. How I did the switch:
+Okay, so now we know why I changed my repositories' default branches. For the most part, I decided to go with `main`. This is because it's environment-ambiguous, and it's short and easy. The word "main" has two characters less than "master", and it has the benefit that the `ma-` beginning matches the previous `master` branch. How I did the switch:
 
 ```bash
 $ git branch -m master main
@@ -30,7 +30,7 @@ $ git push -u origin main
 # Delete the master branch.
 ```
 
-If my projects had more clones or had more collaborators, I'd certainly want to write a brief message in the README and/or try to inform them ahead of time so they could prep their repositories. After the switch, here's a suggestion for updating local clones:
+If my projects had more clones or had more collaborators, I'd certainly want to write a brief message in the README and/or try to inform them ahead of time so they could prep their local repositories. After the switch, here's a suggestion for updating local clones from [Scott Hanselman](https://www.hanselman.com/blog/EasilyRenameYourGitDefaultBranchFromMasterToMain.aspx), but don't quote me—I haven't tried it personally:
 
 ```bash
 $ git checkout master
@@ -94,9 +94,8 @@ The truth is that up until now, the concept of a `master` branch has never bothe
 So no, I'm not going to ask _every single repository I ever work on_ be switched to use `main` instead of `master`. But I will support the switch of any repository whose owners want to do it. After all, what have we got to lose?
 
 ## References and Resources
-
-* https://help.github.com/en/github/working-with-github-pages/about-github-pages
-* https://mail.gnome.org/archives/desktop-devel-list/2019-May/msg00066.html
-* https://twitter.com/mislav/status/1270388510684598272
-* https://github.com/pmmmwh/react-refresh-webpack-plugin/issues/113
-* https://www.hanselman.com/blog/EasilyRenameYourGitDefaultBranchFromMasterToMain.aspx
+* [help.github.com: working with GitHub Pages](https://help.github.com/en/github/working-with-github-pages/about-github-pages)
+* [mail.gnome.org: desktop devel list 2019 May](https://mail.gnome.org/archives/desktop-devel-list/2019-May/msg00066.html)
+* [twitter.com: @mislav post](https://twitter.com/mislav/status/1270388510684598272)
+* [github.com: @pmmmwh react refresh webpack plugin issue 113](https://github.com/pmmmwh/react-refresh-webpack-plugin/issues/113)
+* [www.hanselman.com: easily rename your git default branch from master to main](https://www.hanselman.com/blog/EasilyRenameYourGitDefaultBranchFromMasterToMain.aspx)
