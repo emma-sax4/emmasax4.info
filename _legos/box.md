@@ -7,7 +7,7 @@ This little box (10 studs by 9 studs) is the ideal size for keeping personal ite
 
 An important thing to note is that if you're going to follow along with my PDF instructions and parts list, the hinge plate that the instructions show is discontinued, so you won't be able to purchase that part. LEGO has other hinge pieces for purchase that will be the same size.
 
-Here's a link to the instructions and piece list of the box: [LEGO-building-instructions-box](/assets/resources/LEGO-building-instructions-box.pdf)
+Here's a link to the instructions and piece list of the box: <a href="/assets/resources/LEGO-building-instructions-box.pdf" target="_blank">LEGO-building-instructions-box</a>
 
 NOTE: the LDD piece list numbers can sometimes be out of sync with what's in the LEGO Bricks and Pieces database. Sometimes I need to do a more thorough Google search in order to find the correct piece number.
 
