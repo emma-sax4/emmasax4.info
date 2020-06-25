@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Interests & Hobbies
-order: 3
+order: 2
 permalink: /interests-and-hobbies/
 redirect_from:
   - /around-town/
@@ -44,119 +44,10 @@ I know I already claimed to love traveling, but since I try to go to a new count
   <li>Kenya 🇰🇪</li>
 </ol>
 
-## LEGO Sets and MOCs
+## [LEGO Sets and MOCs](/interests-and-hobbies/legos/)
 
-In April 2020, I started to get involved more with LEGO. I think a huge part of this is because we're all stuck inside from the COVID-19 epidemic. But, I discovered a tool called [LEGO Digital Designer (LDD)](https://www.lego.com/en-us/ldd), and you can use it to build your own LEGO sets. So, I thought I'd share some of the LEGO sets I've built and designed (also called MOCs—or My Own Creations), as well as some LEGO sets I've purchased and played around with. See my [dedicated LEGO page](/legos/) for more!
+In April 2020, I started to get involved more with LEGO. I think a huge part of this is because we're all stuck inside from the COVID-19 epidemic. But, I discovered a tool called [LEGO Digital Designer (LDD)](https://www.lego.com/en-us/ldd), and you can use it to build your own LEGO sets. So, I thought I'd share some of the LEGO sets I've built and designed (also called MOCs—or My Own Creations), as well as some LEGO sets I've purchased and played around with. See my [dedicated LEGO page](/interests-and-hobbies/legos/) for more!
 
-## Theatre
+## [Theatre](/interests-and-hobbies/theatre/)
 
-### On Stage
-
-<div class="table-responsive-sm">
-  <table class="table table-hover">
-    <tbody>
-      <tr>
-        <td style="font-style: italic;">Pippi Longstocking</td>
-        <td>Ensemble</td>
-        <td>Children's Theatre Company</td>
-      </tr>
-      <tr>
-        <td style="font-style: italic;">Disney's Mulan Jr.</td>
-        <td>Ensemble</td>
-        <td>Children's Theatre Company</td>
-        </tr>
-      <tr>
-        <td style="font-style: italic;">Princess Academy</td>
-        <td>Frid</td>
-        <td>Stages Theatre Company</td>
-      </tr>
-      <tr>
-        <td style="font-style: italic;">Junie B. in Jingle Bells, Batman Smells</td>
-        <td>José</td>
-        <td>Stages Theatre Company</td>
-      </tr>
-      <tr>
-        <td style="font-style: italic;">'Twas the Night Before Christmas</td>
-        <td>Sugar Plum Fairy</td>
-        <td>Stages Theatre Company</td>
-      </tr>
-      <tr>
-        <td style="font-style: italic;">9 to 5 — The Musical</td>
-        <td>Ensemble</td>
-        <td>Minnetonka Theatre</td>
-      </tr>
-      <tr>
-        <td style="font-style: italic;">Meredith Wilson's The Music Man</td>
-        <td>Ensemble</td>
-        <td>Eat Street Players</td>
-      </tr>
-      <tr>
-        <td style="font-style: italic;">Disney's High School Musical</td>
-        <td>Cheerleader/Ensemble</td>
-        <td>Morris Park Players</td>
-      </tr>
-      <tr>
-        <td style="font-style: italic;">Once Upon a Mattress</td>
-        <td>Ensemble</td>
-        <td>Morris Park Players</td>
-      </tr>
-      <tr>
-        <td style="font-style: italic;">The Wizard of Oz</td>
-        <td>Jitterbug/Ensemble</td>
-        <td>Blue Water Theatre Company</td>
-      </tr>
-      <tr>
-        <td style="font-style: italic;">Annie Get Your Gun</td>
-        <td>Ensemble</td>
-        <td>Blue Water Theatre Company</td>
-      </tr>
-      <tr>
-        <td style="font-style: italic;">Little Women — The Musical</td>
-        <td>Amy March</td>
-        <td>Saint Paul Conservatory for Performing Artists</td>
-      </tr>
-      <tr>
-        <td style="font-style: italic;">Urinetown</td>
-        <td>Little Becky Two-Shoes</td>
-        <td>Saint Paul Conservatory for Performing Artists</td>
-      </tr>
-      <tr>
-        <td style="font-style: italic;">The Uses of Enchantment</td>
-        <td>Claire/Ensemble</td>
-        <td>Saint Paul Conservatory for Performing Artists</td>
-      </tr>
-      <tr>
-        <td style="font-style: italic;">Into the Woods</td>
-        <td>Milky White</td>
-        <td>Saint Paul Conservatory for Performing Artists</td>
-      </tr>
-      <tr>
-        <td style="font-style: italic;">Night at the Opera</td>
-        <td>Ensemble</td>
-        <td>Saint Paul Conservatory for Performing Artists</td>
-      </tr>
-      <tr>
-        <td style="font-style: italic;">Secrets</td>
-        <td>Lily</td>
-        <td>Fine Arts Interdisciplinary Resource School</td>
-      </tr>
-      <tr>
-        <td style="font-style: italic;">West Side Story Jr.</td>
-        <td>Anita</td>
-        <td>Fine Arts Interdisciplinary Resource School</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-### Training
-
-* **Theatre** — Saint Paul Conservatory for Performing Artists, Chanhassen Dinner Theatre, Children's Theatre Company Arts Training, Stages Theatre Camp
-* **Vocal performance and technique** — Ana Miller, Melissa Hanson, Teresa Tierney, Melissa Hart, Justin Staebell, Stacey Stringer
-* **Dance (Ballet, Tap, Jazz, Modern)** — Deuxmensions Dance Theatre and School, Fine Arts Interdisciplinary Resource School
-* **Dance (Hip Hop, Contemporary)** — Saint Paul Conservatory for Performing Artists, University of Minnesota Morris Dance Ensemble
-* **Dance (Musical Theatre)** — Saint Paul Conservatory for Performing Artists, Chanhassen Dinner Theatre, Children's Theatre Company Arts Training, Stages Theatre Camp
-* **Dance (Ballroom, Partnering)** — DanceLife Ballroom
-* **Piano** — Annette Helder, Deborah Hanna
-* **Clarinet** — Todd Boyd, Eric Dollerschell
-* **University of Minnesota Morris Concert Choir** — Bradley Miller, Christina Armendarez
+When I was in middle school and high school, my family and I spent countless hours driving to and from rehearsals from shows. Every show I was a part of was enjoyable, and I loved learning from all of the other cast and crew members I worked with. For a list of the shows I worked with and the training I participated in, see my [dedicated Theatre page](/interests-and-hobbies/theatre/).

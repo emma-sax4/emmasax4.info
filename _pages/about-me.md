@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About Me
-order: 2
+order: 1
 permalink: /about-me/
 ---
 
