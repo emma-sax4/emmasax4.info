@@ -19,16 +19,16 @@
 
         {% for node in sorted_pages %}
           {% unless node.autogen == "jekyll-paginate-v2" %}
-            {% if page.url == node.url or page.url contains "blog" and node.url contains "blog" %}
+            {% assign navigation_url = node.url | remove: "/index.html" %}
+
+            {% if page.url contains navigation_url %}
               {% assign active = "active" %}
             {% else %}
               {% assign active = nil %}
             {% endif %}
 
-            {% assign url = node.url | remove: "/index.html" %}
-
             <li class="nav-item {{ active }}">
-              <a class="nav-link" href="{{ site.baseurl }}{{ url }}">{{ node.title }}
+              <a class="nav-link" href="{{ site.baseurl }}{{ navigation_url }}">{{ node.title }}
                 {% if active == "active" %}
                   <span class="sr-only">(current)</span>
                 {% endif %}
