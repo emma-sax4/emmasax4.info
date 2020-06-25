@@ -1,6 +1,9 @@
 nav.navbar {
-  background-color: rgb(27, 14, 172);
-  background: linear-gradient(to right, rgb(27, 14, 172), rgb(107, 208, 245));
+  background: linear-gradient(to right, rgb(0, 26, 175), rgb(0, 174, 255));
+
+  :focus {
+    outline-color: rgb(255, 58, 58);
+  }
 
   .navbar-brand {
     font-weight: 700;
@@ -28,9 +31,5 @@ nav.navbar {
 
   .navbar-nav > .nav-item.active > .nav-link {
     font-weight: 700;
-  }
-
-  .nav-link:focus {
-    outline-color: hotpink;
   }
 }
