@@ -4,7 +4,7 @@
   <link href="https://emmasax4.info/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://emmasax4.info/" rel="alternate" type="text/html" />
 
-  <updated>2020-06-17T05:00:04+00:00</updated>
+  <updated>2020-06-25T05:00:05+00:00</updated>
   <id>https://emmasax4.info/feed.xml</id>
 
   <title type="html">Emma Sax</title>
@@ -22,7 +22,9 @@
       <author>
         <name>Emma Sax</name>
         </author>
-    </entry>
+
+      <category term="tech" />
+      </entry>
   <entry>
       <title type="html">Why I Switched from CircleCI to GitHub Actions</title>
       <link href="https://emmasax4.info/blog/posts/why-i-switched-from-circleci-to-github-actions/" rel="alternate" type="text/html" title="Why I Switched from CircleCI to GitHub Actions" />
@@ -33,7 +35,9 @@
       <author>
         <name>Emma Sax</name>
         </author>
-    </entry>
+
+      <category term="tech" />
+      </entry>
   <entry>
       <title type="html">Why I Switched from Travis CI to CircleCI</title>
       <link href="https://emmasax4.info/blog/posts/why-i-switched-from-travis-ci-to-circleci/" rel="alternate" type="text/html" title="Why I Switched from Travis CI to CircleCI" />
@@ -44,7 +48,9 @@
       <author>
         <name>Emma Sax</name>
         </author>
-    </entry>
+
+      <category term="tech" />
+      </entry>
   <entry>
       <title type="html">Why “Tomorrow” Isn’t Useful</title>
       <link href="https://emmasax4.info/blog/posts/why-tomorrow-isnt-useful/" rel="alternate" type="text/html" title="Why “Tomorrow” Isn’t Useful" />
@@ -55,7 +61,9 @@
       <author>
         <name>Emma Sax</name>
         </author>
-    </entry>
+
+      <category term="self-improvement" />
+      </entry>
   <entry>
       <title type="html">The Benefits of Gratitude</title>
       <link href="https://emmasax4.info/blog/posts/the-benefits-of-gratitude/" rel="alternate" type="text/html" title="The Benefits of Gratitude" />
@@ -66,5 +74,7 @@
       <author>
         <name>Emma Sax</name>
         </author>
-    </entry>
+
+      <category term="self-improvement" />
+      </entry>
   </feed>
