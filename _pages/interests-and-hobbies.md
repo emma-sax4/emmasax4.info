@@ -50,4 +50,4 @@ In April 2020, I started to get involved more with LEGO. I think a huge part of 
 
 ## [Theatre](/interests-and-hobbies/theatre/)
 
-When I was in middle school and high school, my family and I spent countless hours driving to and from rehearsals from shows. Every show I was a part of was enjoyable, and I loved learning from all of the other cast and crew members I worked with. For a list of the shows I worked with and the training I participated in, see my [dedicated Theatre page](/interests-and-hobbies/theatre/).
+When I was in middle school and high school, my family and I spent countless hours driving to and from rehearsals from shows. Every show I was a part of was enjoyable, and I loved learning from all of the cast and crew members I worked with. For a list of the shows I worked with and the training I participated in, see my [dedicated Theatre page](/interests-and-hobbies/theatre/). Huge shoutout and thank you to my family for always being supportive of my theatre pasttime and for always being willing to help me out.
