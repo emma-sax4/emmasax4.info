@@ -50,7 +50,7 @@ jobs:
         BRANCH: gh-pages
         FOLDER: _site
         CLEAN: true
-        COMMIT_MESSAGE: 'Deploy to ${{ github.repository }} on branch gh-pages'
+        COMMIT_MESSAGE: 'Deploy to ${{ github.repository }}'
         GIT_CONFIG_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
         GIT_CONFIG_NAME: github-actions[bot]
 
