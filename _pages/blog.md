@@ -1,7 +1,7 @@
 ---
 layout: blog
 title: Blog
-order: 4
+order: 3
 permalink: /blog/
 pagination:
   enabled: true

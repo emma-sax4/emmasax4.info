@@ -46,7 +46,7 @@ collections:
   - legos
 
 feed:
-  items: 5
+  posts_limit: 5
 
 pagination:
   collection: blog_posts
