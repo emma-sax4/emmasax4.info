@@ -1,9 +1,11 @@
 {% assign lego_list = site.legos | order: "date" | reverse %}
 <ul class="list" style="list-style: none">
   {% for lego in lego_list %}
-    <details>
-      <summary style="font-size: 32px; margin-bottom: 10px;">{{ lego.title }}</summary>
-      {{ lego.content }}
-    </details>
+
+<details>
+  <summary style="font-size: 32px; margin-bottom: 10px;">{{ lego.title }}</summary>
+  {{ lego.content }}
+</details>
+
   {% endfor %}
 </ul>

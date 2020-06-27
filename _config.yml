@@ -7,7 +7,11 @@ future: false
 timezone: UTC
 highlighter: rouge
 jekyll-mentions: https://github.com
-markdown: kramdown
+markdown: CommonMark
+
+commonmark:
+  options: ["SMART", "UNSAFE"]
+  extensions: ["strikethrough", "autolink", "table"]
 
 webmaster_verifications:
   google: v04az8eo-0UcZrWCJr7SKAvM6hw90qTCBQoKx3PlXCA
@@ -22,6 +26,7 @@ sass:
   sass_dir: assets/css/
 
 plugins:
+  - jekyll-commonmark
   - jekyll-default-layout
   - jekyll-feed
   - jekyll-last-modified-at
