@@ -1,0 +1,8 @@
+require: rubocop-jekyll
+inherit_gem:
+  rubocop-jekyll: .rubocop.yml
+Style/HashSyntax:
+  Enabled: false
+Layout/LineLength:
+  Exclude:
+    - Gemfile

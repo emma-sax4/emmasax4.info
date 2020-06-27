@@ -42,6 +42,9 @@ jobs:
     - name: HTML Proofer
       run: bundle exec htmlproofer --assume-extension --allow-hash-href --internal-domains /emmasax4.info/ --only_4xx ./_site/
 
+    - name: Rubocop
+      run: bundle exec rubocop
+
     - name: GitHub Pages Deploy
       uses: emmasax4/github-pages-deploy-action@emmasax4_github_pages_deploy_action
       env:
