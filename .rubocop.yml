@@ -8,4 +8,4 @@ Layout/LineLength:
     - Gemfile
 AllCops:
   Exclude:
-    - vendor
+    - vendor/**
