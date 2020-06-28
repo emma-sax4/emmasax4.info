@@ -8,5 +8,5 @@ Layout/LineLength:
     - Gemfile
 AllCops:
   Exclude:
-    - vendor/**
+    - vendor/**/*
     - scripts/markdown_toc.rb
