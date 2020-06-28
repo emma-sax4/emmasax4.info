@@ -27,8 +27,6 @@ class ToCWriter
   end
 
   def write
-    # puts "#### Table of contents\n\n"
-
     File.open(@source_file).each_line.with_index(1) do |line, line_number|
       next if line_number == 1
       next unless line.match(/^#/)
