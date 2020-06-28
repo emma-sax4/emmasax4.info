@@ -17,7 +17,7 @@ jobs:
       run: git checkout ${{ env.BRANCH }}
 
     - name: Configure Bundler
-      run: sudo gem update --system && sudo gem install bundler -v $(cat Gemfile.lock | tail -1 | tr -d " ")
+      run: sudo gem update --system 3.0.6 && sudo gem install bundler -v $(cat Gemfile.lock | tail -1 | tr -d " ")
 
     - name: Configure Gem Cache
       uses: actions/cache@v1

@@ -1,14 +1,14 @@
 require: rubocop-jekyll
 inherit_gem:
   rubocop-jekyll: ./.rubocop.yml
-Style/HashSyntax:
-  Enabled: false
-Layout/LineLength:
-  Exclude:
-    - Gemfile
 AllCops:
   Exclude:
     - vendor/**/*
+Layout/LineLength:
+  Exclude:
+    - Gemfile
+Style/HashSyntax:
+  Enabled: false
 Jekyll/NoPutsAllowed:
   Enabled: false
 Style/RegexpLiteral:
