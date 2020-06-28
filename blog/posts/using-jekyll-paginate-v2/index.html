@@ -36,7 +36,7 @@
 <meta name="msvalidate.01" content="89B2B19FF966341B78EF64EDADE6DF81" />
 <meta name="yandex-verification" content="c2741887f8c30dd1" />
 <script type="application/ld+json">
-{"description":"Emma Sax’s personal website and blog. Includes information about my social media profiles, résumé, and hobbies.","mainEntityOfPage":{"@type":"WebPage","@id":"https://emmasax4.info/blog/posts/using-jekyll-paginate-v2/"},"@type":"BlogPosting","url":"https://emmasax4.info/blog/posts/using-jekyll-paginate-v2/","dateModified":"2020-06-13T15:22:30+00:00","datePublished":"2019-12-18T06:00:00+00:00","headline":"Using jekyll-paginate-v2","author":{"@type":"Person","name":"Emma Sax"},"@context":"https://schema.org"}</script>
+{"description":"Emma Sax’s personal website and blog. Includes information about my social media profiles, résumé, and hobbies.","mainEntityOfPage":{"@type":"WebPage","@id":"https://emmasax4.info/blog/posts/using-jekyll-paginate-v2/"},"author":{"@type":"Person","name":"Emma Sax"},"@type":"BlogPosting","url":"https://emmasax4.info/blog/posts/using-jekyll-paginate-v2/","headline":"Using jekyll-paginate-v2","dateModified":"2020-06-13T15:22:30+00:00","datePublished":"2019-12-18T06:00:00+00:00","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -159,7 +159,7 @@
 
 <div class="text-center" style="margin-bottom: 1rem;">
   <span class="post-meta">
-    Read time: 12 minutes
+    Read time: 11 minutes
   </span>
 </div>
 
@@ -186,115 +186,77 @@
 
     <div class="page-body">
       <p>A couple of weeks ago, I started the endeavor of adding Bootstrap to this website. You can read more about how this repository uses Bootstrap, and how to add Bootstrap to a static content site <a href="/blog/posts/adding-bootstrap-to-your-static-content-site/">here</a>.</p>
-
 <p>But, soon after I started getting an upgrade in my CSS game, I realized that my pagination bar on my blog site was sorely outdated 😢. At one point, I had the nerve to call this pagination bar beautiful:</p>
-
 <div class="text-center">
-  <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/48741504061/in/album-72157710863695862/" title="lovely_pagination_bar"><img class="image" src="https://live.staticflickr.com/65535/48741504061_7ebbd630fa.jpg" width="450" height="311" alt="Lovely pagination bar" /></a>
+  <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/48741504061/in/album-72157710863695862/" title="lovely_pagination_bar"><img class="image" src="https://live.staticflickr.com/65535/48741504061_7ebbd630fa.jpg" width="450" height="311" alt="Lovely pagination bar"></a>
 </div>
-
 <p>But since completely revamping the whole looks of the site, this pagination bar was no longer acceptable. It was old fashioned, wouldn’t remember the page you were on if you navigated forward and back in your browser, and didn’t have pretty buttons. It was time for me to look into alternate pagination options.</p>
-
-<p>I build and serve this site with GitHub Pages. Their built-in pagination suggestion is <a href="https://github.com/jekyll/jekyll-paginate"><code class="highlighter-rouge">jekyll-paginate</code></a>. But, it very clearly states that <code class="highlighter-rouge">jekyll-paginate</code> is no longer supported. The recommended newer version of Jekyll pagination is <a href="https://github.com/sverrirs/jekyll-paginate-v2"><code class="highlighter-rouge">jekyll-paginate-v2</code></a>.</p>
-
-<p>I had considered <code class="highlighter-rouge">jekyll-paginate-v2</code> before, and I briefly mentioned it in <a href="/blog/posts/adding-pagination-without-jekyll/">this blog post</a>. At that time, I didn’t want to make the necessary changes to my directory structure, and I’d have to be willing to either add a trailing <code class="highlighter-rouge">/</code> to the end of my URLs, or I’d have to be okay with some of my pages having that trailing <code class="highlighter-rouge">/</code>, and some not to, which I wasn’t okay with.</p>
-
-<p>From a technical standpoint, it doesn’t really matter to the browser whether you write a <code class="highlighter-rouge">/</code> on the end of your URL or not; they resolve to the same host. There’s more detailed reasons why or why to have a trailing <code class="highlighter-rouge">/</code> on a URL, but the gist is that the <code class="highlighter-rouge">/</code> delineates a directory, which then would have files in it: <code class="highlighter-rouge">https://example.com/directory/</code> and then <code class="highlighter-rouge">https://example.com/directory/file.html</code> 🤷🏻‍♀️.</p>
-
-<p>In fact, my reading said that although having URLs without <code class="highlighter-rouge">/</code> is the newer, more popular thing, traditionalists would actually pretty much only have <em>either</em> the trailing <code class="highlighter-rouge">/</code> <em>or</em> the extension (the <code class="highlighter-rouge">.html</code> in the above example) in the URL. So if I’m to follow these guidelines, then I probably should add the trailing <code class="highlighter-rouge">/</code> to the end of all of my URLs except the home page.</p>
-
-<p>I could continue doing research, trying to decide what other pagination options to explore. But I figured that if I wanted to get anything easy done reasonably soon, I’d have to just be okay with compromising on the trailing <code class="highlighter-rouge">/</code>.</p>
-
-<p>So after admitting that I’d need to accept the trailing <code class="highlighter-rouge">/</code>, I proceeded to set up <code class="highlighter-rouge">jekyll-paginate-v2</code> on my repository. How hard could it be? 😆</p>
-
+<p>I build and serve this site with GitHub Pages. Their built-in pagination suggestion is <a href="https://github.com/jekyll/jekyll-paginate"><code>jekyll-paginate</code></a>. But, it very clearly states that <code>jekyll-paginate</code> is no longer supported. The recommended newer version of Jekyll pagination is <a href="https://github.com/sverrirs/jekyll-paginate-v2"><code>jekyll-paginate-v2</code></a>.</p>
+<p>I had considered <code>jekyll-paginate-v2</code> before, and I briefly mentioned it in <a href="/blog/posts/adding-pagination-without-jekyll/">this blog post</a>. At that time, I didn’t want to make the necessary changes to my directory structure, and I’d have to be willing to either add a trailing <code>/</code> to the end of my URLs, or I’d have to be okay with some of my pages having that trailing <code>/</code>, and some not to, which I wasn’t okay with.</p>
+<p>From a technical standpoint, it doesn’t really matter to the browser whether you write a <code>/</code> on the end of your URL or not; they resolve to the same host. There’s more detailed reasons why or why to have a trailing <code>/</code> on a URL, but the gist is that the <code>/</code> delineates a directory, which then would have files in it: <code>https://example.com/directory/</code> and then <code>https://example.com/directory/file.html</code> 🤷🏻‍♀️.</p>
+<p>In fact, my reading said that although having URLs without <code>/</code> is the newer, more popular thing, traditionalists would actually pretty much only have <em>either</em> the trailing <code>/</code> <em>or</em> the extension (the <code>.html</code> in the above example) in the URL. So if I’m to follow these guidelines, then I probably should add the trailing <code>/</code> to the end of all of my URLs except the home page.</p>
+<p>I could continue doing research, trying to decide what other pagination options to explore. But I figured that if I wanted to get anything easy done reasonably soon, I’d have to just be okay with compromising on the trailing <code>/</code>.</p>
+<p>So after admitting that I’d need to accept the trailing <code>/</code>, I proceeded to set up <code>jekyll-paginate-v2</code> on my repository. How hard could it be? 😆</p>
 <p>I started by following the <a href="https://github.com/sverrirs/jekyll-paginate-v2#installation">installation instructions</a>. But, as you’ll understand later, I got only got through the second line in that section; I never finished reading that doc.</p>
-
-<p>Instead, I jumped right into the work, copy-pasting the basics of the needed configuration into my config file, before realizing that although there’s lots of documentation in this repo, they never quite clarify that your main <code class="highlighter-rouge">Blog</code> page needs to be in a <code class="highlighter-rouge">./blog/index.html</code> file. Furthermore, they never actually say that your blog posts need to be in a <code class="highlighter-rouge">_posts/</code> directory. Luckily, I poked around the examples enough to figure that out.</p>
-
-<p>Thanks to <a href="https://gist.github.com/alialo/2255511">this gist</a>, I was able to get the basic code of a simple pagination bar going right away. In fact, getting the main <code class="highlighter-rouge">Blog</code> page paginating wasn’t too hard at all!</p>
-
-<p>But, I also wanted to make sure that I could paginate my sub-pages—basically filtering my posts based on tag names and set names. On my site, an example of a tag name is <code class="highlighter-rouge">tech</code> and an example of a set name is <code class="highlighter-rouge">Welcome to Kenya</code>. The distinction between the two is that a blog post can have multiple tag names, and they should be one word long. But a blog post can only be a part of one set, and the name can be multiple words with capitalization.</p>
-
-<p>Filtering posts proved to be a little bit more complicated than just paginating <em>all</em> of the posts. The documentation for <code class="highlighter-rouge">jekyll-paginate-v2</code> describes filtering based on what they call “tags” and “categories.” So I started with a single tag, because I wasn’t quite sure yet how to deal with the sets. After I added the first bit of code to the tag’s filter, I realized that the documentation never properly mentioned in what <em>directory</em> I should put my filter’s file. I tried at least four different places I should put it. It wasn’t until my last idea when I realized that it had to be placed in the same <code class="highlighter-rouge">blog/</code> directory as the <code class="highlighter-rouge">index.html</code>. But, as soon as I moved my tag file into the directory, so it looked like <code class="highlighter-rouge">blog/tag.html</code>, then it worked miraculously.</p>
-
-<p>It was then easy to move all of the tags to have the same pattern. Moving to the “set,” I had more issues, mainly with 1) figuring out the best way to paginate the filtered pages, and 2) <code class="highlighter-rouge">jekyll-paginate-v2</code> couldn’t be formatted to work with filtering a <code class="highlighter-rouge">set</code> (only <code class="highlighter-rouge">tags</code>, <code class="highlighter-rouge">categories</code>, and <code class="highlighter-rouge">locales</code>, which is languages). So, I had to write my code as if my <code class="highlighter-rouge">set</code> was a <code class="highlighter-rouge">category</code> instead. This meant changing several variable names, and in general renaming files and calls to have the word “category” instead of “set.” In fact, by the end of the night, I had changed almost every reference to a “set” in the whole codebase 😝.</p>
-
-<p>In fact, by the time I was done for the day, I had pretty much decided to just do-away with the whole notion of a “set” and turn it into a “category” instead. Actually I like the word “collection” more than a “category,” so in the codebase it’s a “category,” in my head it’s a “collection,” and to an end user of this site, they all look like “tags.” So then, I did a <em>huge</em> find/replace of the word <code class="highlighter-rouge">set</code> and replaced it with the word <code class="highlighter-rouge">category</code>.</p>
-
-<p>Despite all of this work, now every single tag and category filters blog posts properly. The last secret to getting pagination working on those pages is that I needed to save the URL of the filtered page: aka <code class="highlighter-rouge">/blog/welcome-to-kenya</code> or <code class="highlighter-rouge">/blog/tech</code>. And this way, we could append the page count number to the end of that: <code class="highlighter-rouge">/blog/welcome-to-kenya/4/</code> or <code class="highlighter-rouge">/blog/tech/2/</code>.</p>
-
+<p>Instead, I jumped right into the work, copy-pasting the basics of the needed configuration into my config file, before realizing that although there’s lots of documentation in this repo, they never quite clarify that your main <code>Blog</code> page needs to be in a <code>./blog/index.html</code> file. Furthermore, they never actually say that your blog posts need to be in a <code>_posts/</code> directory. Luckily, I poked around the examples enough to figure that out.</p>
+<p>Thanks to <a href="https://gist.github.com/alialo/2255511">this gist</a>, I was able to get the basic code of a simple pagination bar going right away. In fact, getting the main <code>Blog</code> page paginating wasn’t too hard at all!</p>
+<p>But, I also wanted to make sure that I could paginate my sub-pages—basically filtering my posts based on tag names and set names. On my site, an example of a tag name is <code>tech</code> and an example of a set name is <code>Welcome to Kenya</code>. The distinction between the two is that a blog post can have multiple tag names, and they should be one word long. But a blog post can only be a part of one set, and the name can be multiple words with capitalization.</p>
+<p>Filtering posts proved to be a little bit more complicated than just paginating <em>all</em> of the posts. The documentation for <code>jekyll-paginate-v2</code> describes filtering based on what they call “tags” and “categories.” So I started with a single tag, because I wasn’t quite sure yet how to deal with the sets. After I added the first bit of code to the tag’s filter, I realized that the documentation never properly mentioned in what <em>directory</em> I should put my filter’s file. I tried at least four different places I should put it. It wasn’t until my last idea when I realized that it had to be placed in the same <code>blog/</code> directory as the <code>index.html</code>. But, as soon as I moved my tag file into the directory, so it looked like <code>blog/tag.html</code>, then it worked miraculously.</p>
+<p>It was then easy to move all of the tags to have the same pattern. Moving to the “set,” I had more issues, mainly with 1) figuring out the best way to paginate the filtered pages, and 2) <code>jekyll-paginate-v2</code> couldn’t be formatted to work with filtering a <code>set</code> (only <code>tags</code>, <code>categories</code>, and <code>locales</code>, which is languages). So, I had to write my code as if my <code>set</code> was a <code>category</code> instead. This meant changing several variable names, and in general renaming files and calls to have the word “category” instead of “set.” In fact, by the end of the night, I had changed almost every reference to a “set” in the whole codebase 😝.</p>
+<p>In fact, by the time I was done for the day, I had pretty much decided to just do-away with the whole notion of a “set” and turn it into a “category” instead. Actually I like the word “collection” more than a “category,” so in the codebase it’s a “category,” in my head it’s a “collection,” and to an end user of this site, they all look like “tags.” So then, I did a <em>huge</em> find/replace of the word <code>set</code> and replaced it with the word <code>category</code>.</p>
+<p>Despite all of this work, now every single tag and category filters blog posts properly. The last secret to getting pagination working on those pages is that I needed to save the URL of the filtered page: aka <code>/blog/welcome-to-kenya</code> or <code>/blog/tech</code>. And this way, we could append the page count number to the end of that: <code>/blog/welcome-to-kenya/4/</code> or <code>/blog/tech/2/</code>.</p>
 <p>After all of that work, I now have a pagination bar that makes me proud of this website. Just add in a few more pretty icons, and I’m satisfied 😁.</p>
-
 <div class="text-center">
-  <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/49241327792/in/album-72157710863695862/" title="Bootstrap Pagination"><img class="image" src="https://live.staticflickr.com/65535/49241327792_44bf877bcb.jpg" width="500" height="304" alt="Bootstrap Pagination" /></a>
+  <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/49241327792/in/album-72157710863695862/" title="Bootstrap Pagination"><img class="image" src="https://live.staticflickr.com/65535/49241327792_44bf877bcb.jpg" width="500" height="304" alt="Bootstrap Pagination"></a>
 </div>
-
 <hr />
-
-<p>Haha! You thought the story was over, didn’t you? Well… as soon as I merged in my pull request to add the new pagination, I realized something. That paragraph of the installation instructions that I <em>didn’t</em> finish? Well, the ending part of it warned that <code class="highlighter-rouge">jekyll-paginate-v2</code> is <em>not</em> supported by GitHub Pages. This means that when somebody runs the code locally on their computer, they can use <code class="highlighter-rouge">jekyll-paginate-v2</code> to their hearts’ content, and the site will load properly. But GitHub’s servers (which normally build the site for me), will not properly execute <code class="highlighter-rouge">jekyll-paginate-v2</code>, and there’s no way to compile the pagination code properly without that.</p>
-
+<p>Haha! You thought the story was over, didn’t you? Well… as soon as I merged in my pull request to add the new pagination, I realized something. That paragraph of the installation instructions that I <em>didn’t</em> finish? Well, the ending part of it warned that <code>jekyll-paginate-v2</code> is <em>not</em> supported by GitHub Pages. This means that when somebody runs the code locally on their computer, they can use <code>jekyll-paginate-v2</code> to their hearts’ content, and the site will load properly. But GitHub’s servers (which normally build the site for me), will not properly execute <code>jekyll-paginate-v2</code>, and there’s no way to compile the pagination code properly without that.</p>
 <p>If I had just <em>finished</em> that section, I could’ve saved me a whole 30 minutes where the site wasn’t broken, and potentially even saved myself a little headache. But at this point, I’ve come too far to turn back around and go back to my old-fashioned pagination. So, Google came to the rescue.</p>
-
-<p>It turns out (surprise surprise) I’m not the first person to run into this issue. There’s a <a href="https://github.com/sverrirs/jekyll-paginate-v2/issues/9">whole discussion</a> that’s going on about this topic, and trying to integrate <code class="highlighter-rouge">jekyll-paginate-v2</code> with GitHub Pages eventually, but it hasn’t made any progress lately. But, I did get some ideas from the discussion. Here are my options of how to proceed:</p>
-
+<p>It turns out (surprise surprise) I’m not the first person to run into this issue. There’s a <a href="https://github.com/sverrirs/jekyll-paginate-v2/issues/9">whole discussion</a> that’s going on about this topic, and trying to integrate <code>jekyll-paginate-v2</code> with GitHub Pages eventually, but it hasn’t made any progress lately. But, I did get some ideas from the discussion. Here are my options of how to proceed:</p>
 <ol>
-  <li>After I finish making any changes to my site, I can commit my new source code to GitHub, bundle the project on my own computer, and then upload the bundled site to a <em>separate</em> branch in GitHub and have GitHub Pages deploy only <em>that</em> branch.</li>
-  <li>I can switch to use the GitHub Pages supported <code class="highlighter-rouge">jekyll-paginate</code> and let GitHub Pages properly paginate my blog posts.</li>
+<li>After I finish making any changes to my site, I can commit my new source code to GitHub, bundle the project on my own computer, and then upload the bundled site to a <em>separate</em> branch in GitHub and have GitHub Pages deploy only <em>that</em> branch.</li>
+<li>I can switch to use the GitHub Pages supported <code>jekyll-paginate</code> and let GitHub Pages properly paginate my blog posts.</li>
 </ol>
-
-<p>I started with the second approach. But after some more research, I learned that <code class="highlighter-rouge">jekyll-paginate</code> doesn’t allow for the filtering of tags and collections, which my site was heavily relying on. Therefore, to use <code class="highlighter-rouge">jekyll-paginate</code> would involve completely redoing my site, and several more hours’ work.</p>
-
-<p>Now, I’m not a fan of needing my site to have to be built on a person’s computer to work properly. It’s never a good idea to have a website’s deployment rely on a person’s physical computer (which could break, have compilation issues, or generally just not be available). But I figured that other people had run into this issue with <code class="highlighter-rouge">jekyll-paginate-v2</code> and GitHub Pages, and I’m sure somebody wrote a blog post about it (similarly to like I’m doing now). So I looked up different ways to combat this issue. The blog post I found was <a href="https://medium.com/@mcred/supercharge-github-pages-with-jekyll-and-travis-ci-699bc0bde075">this</a>. I owe my entire pagination to <em>that blog post</em>.</p>
-
+<p>I started with the second approach. But after some more research, I learned that <code>jekyll-paginate</code> doesn’t allow for the filtering of tags and collections, which my site was heavily relying on. Therefore, to use <code>jekyll-paginate</code> would involve completely redoing my site, and several more hours’ work.</p>
+<p>Now, I’m not a fan of needing my site to have to be built on a person’s computer to work properly. It’s never a good idea to have a website’s deployment rely on a person’s physical computer (which could break, have compilation issues, or generally just not be available). But I figured that other people had run into this issue with <code>jekyll-paginate-v2</code> and GitHub Pages, and I’m sure somebody wrote a blog post about it (similarly to like I’m doing now). So I looked up different ways to combat this issue. The blog post I found was <a href="https://medium.com/@mcred/supercharge-github-pages-with-jekyll-and-travis-ci-699bc0bde075">this</a>. I owe my entire pagination to <em>that blog post</em>.</p>
 <p>Basically what Derek Smart (I wonder if that’s his real name 🧐) suggests is to go with the first approach, but don’t bundle the project on <em>your</em> machine… use a continuous deployment tool. And here comes Travis CI.</p>
-
 <p>From Travis CI’s documentation,</p>
 <blockquote>
-  <p>Continuous Integration is the practice of merging in small code changes frequently - rather than merging in a large change at the end of a development cycle. The goal is to build healthier software by developing and testing in smaller increments. This is where Travis CI comes in.</p>
-
-  <p>As a continuous integration platform, Travis CI supports your development process by automatically building and testing code changes, providing immediate feedback on the success of the change. Travis CI can also automate other parts of your development process by managing deployments and notifications.</p>
+<p>Continuous Integration is the practice of merging in small code changes frequently - rather than merging in a large change at the end of a development cycle. The goal is to build healthier software by developing and testing in smaller increments. This is where Travis CI comes in.</p>
+<p>As a continuous integration platform, Travis CI supports your development process by automatically building and testing code changes, providing immediate feedback on the success of the change. Travis CI can also automate other parts of your development process by managing deployments and notifications.</p>
 </blockquote>
-
 <p>The ending part of that statement is important:</p>
 <blockquote>
-  <p>Travis CI can… [manage] deployments and notifications.</p>
+<p>Travis CI can… [manage] deployments and notifications.</p>
 </blockquote>
+<p>So, we could (in theory) make a change to the source code in GitHub, and then have Travis CI build my website and “deploy” it to GitHub Pages. And, it turns out my site was already using Travis CI to test the Jekyll build process on every commit to the <code>gh-pages</code> branch. So, I only had to add a few lines to have Travis CI <em>also</em> deploy my changes:</p>
+<pre><code class="language-yml">script:
+  - JEKYLL_ENV=production bundle exec jekyll build --destination ./site
 
-<p>So, we could (in theory) make a change to the source code in GitHub, and then have Travis CI build my website and “deploy” it to GitHub Pages. And, it turns out my site was already using Travis CI to test the Jekyll build process on every commit to the <code class="highlighter-rouge">gh-pages</code> branch. So, I only had to add a few lines to have Travis CI <em>also</em> deploy my changes:</p>
-<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">script</span><span class="pi">:</span>
-  <span class="pi">-</span> <span class="s">JEKYLL_ENV=production bundle exec jekyll build --destination ./site</span>
-
-<span class="na">deploy</span><span class="pi">:</span>
-  <span class="na">provider</span><span class="pi">:</span> <span class="s">pages</span>
-  <span class="na">local-dir</span><span class="pi">:</span> <span class="s">./site</span>
-  <span class="na">target-branch</span><span class="pi">:</span> <span class="s">gh-pages</span>
-  <span class="na">email</span><span class="pi">:</span> <span class="s">deploy@travis-ci.org</span>
-  <span class="na">name</span><span class="pi">:</span> <span class="s">Deployment Bot</span>
-</code></pre></div></div>
-
-<p>The <code class="highlighter-rouge">script</code> section asks Travis CI to build the site to the <code class="highlighter-rouge">site</code> destination directory. The <code class="highlighter-rouge">deploy</code> section tells Travis CI to run a deploy to the GitHub Pages provider with the <code class="highlighter-rouge">./site</code> directory, on the target branch <code class="highlighter-rouge">gh-pages</code>, and which GitHub user to use (in this case, <code class="highlighter-rouge">Deployment Bot</code> with the email <code class="highlighter-rouge">deploy@travis-ci.org</code>). There are a few other little pieces to get it working properly, but you can check out my completed <a href="https://github.com/emmasax4/emmasax4.info/blob/d4c71986f709fd9d341410cf4974ad34424905a6/.travis.yml"><code class="highlighter-rouge">.travis.yml</code> file</a> if you want to see more. I did need to make a new branch in GitHub—the <code class="highlighter-rouge">release</code> branch. The idea here is that the <code class="highlighter-rouge">release</code> branch is used for me to store my source code for this site, and the <code class="highlighter-rouge">gh-pages</code> branch is for GitHub Pages to deploy. Only the fully compiled and bundled site lives on the <code class="highlighter-rouge">gh-pages</code> branch.</p>
-
+deploy:
+  provider: pages
+  local-dir: ./site
+  target-branch: gh-pages
+  email: deploy@travis-ci.org
+  name: Deployment Bot
+</code></pre>
+<p>The <code>script</code> section asks Travis CI to build the site to the <code>site</code> destination directory. The <code>deploy</code> section tells Travis CI to run a deploy to the GitHub Pages provider with the <code>./site</code> directory, on the target branch <code>gh-pages</code>, and which GitHub user to use (in this case, <code>Deployment Bot</code> with the email <code>deploy@travis-ci.org</code>). There are a few other little pieces to get it working properly, but you can check out my completed <a href="https://github.com/emmasax4/emmasax4.info/blob/d4c71986f709fd9d341410cf4974ad34424905a6/.travis.yml"><code>.travis.yml</code> file</a> if you want to see more. I did need to make a new branch in GitHub—the <code>release</code> branch. The idea here is that the <code>release</code> branch is used for me to store my source code for this site, and the <code>gh-pages</code> branch is for GitHub Pages to deploy. Only the fully compiled and bundled site lives on the <code>gh-pages</code> branch.</p>
 <p>It’s a little complicated, but, one deploy from Travis CI later, and the site was up and running again. <em>AND</em> I had the pagination option of my choosing that had all of the functionality I could ever want.</p>
-
 <div class="text-center">
-  <iframe class="image giphy-embed" src="https://giphy.com/embed/4xpB3eE00FfBm" width="480" height="458" frameborder="0" allowfullscreen=""></iframe><p><a href="https://giphy.com/gifs/mrw-week-job-4xpB3eE00FfBm">via GIPHY</a></p>
+  <iframe class="image giphy-embed" src="https://giphy.com/embed/4xpB3eE00FfBm" width="480" height="458" frameBorder="0" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/mrw-week-job-4xpB3eE00FfBm">via GIPHY</a></p>
 </div>
-
-<h2 id="references">References</h2>
-
+<h2>References</h2>
 <ul>
-  <li><a href="https://github.com/sverrirs/jekyll-paginate-v2/blob/master/README-GENERATOR.md">github.com: jekyll-paginate-v2, README-GENERATOR</a></li>
-  <li><a href="https://github.com/sverrirs/jekyll-paginate-v2">github.com: jekyll-paginate-v2</a></li>
-  <li><a href="https://stackoverflow.com/questions/5948659/when-should-i-use-a-trailing-slash-in-my-url">stackoverflow.com: when should I use a trailing slash in my URL</a></li>
-  <li><a href="https://searchfacts.com/url-trailing-slash/">searchfacts.com: url trailing slash</a></li>
-  <li><a href="https://gist.github.com/alialo/2255511">gist.github.com: alialo/2255511</a></li>
-  <li><a href="https://medium.com/@mcred/supercharge-github-pages-with-jekyll-and-travis-ci-699bc0bde075">medium.com: supercharge github pages with jekyll and travis ci</a></li>
-  <li><a href="https://docs.travis-ci.com/user/for-beginners/">docs.travis-ci.com: for beginners</a></li>
+<li><a href="https://github.com/sverrirs/jekyll-paginate-v2/blob/master/README-GENERATOR.md">github.com: jekyll-paginate-v2, README-GENERATOR</a></li>
+<li><a href="https://github.com/sverrirs/jekyll-paginate-v2">github.com: jekyll-paginate-v2</a></li>
+<li><a href="https://stackoverflow.com/questions/5948659/when-should-i-use-a-trailing-slash-in-my-url">stackoverflow.com: when should I use a trailing slash in my URL</a></li>
+<li><a href="https://searchfacts.com/url-trailing-slash/">searchfacts.com: url trailing slash</a></li>
+<li><a href="https://gist.github.com/alialo/2255511">gist.github.com: alialo/2255511</a></li>
+<li><a href="https://medium.com/@mcred/supercharge-github-pages-with-jekyll-and-travis-ci-699bc0bde075">medium.com: supercharge github pages with jekyll and travis ci</a></li>
+<li><a href="https://docs.travis-ci.com/user/for-beginners/">docs.travis-ci.com: for beginners</a></li>
 </ul>
-
 <hr />
-
-<p>EDIT: Since writing this blog post, my website has switched to using CircleCI, and then to GitHub Actions, for all continuous integration tools. I wrote a blog post <a href="/blog/posts/why-i-switched-from-travis-ci-to-circleci/">here</a> about why I switched to CircleCI, and wrote another post <a href="/blog/posts/why-i-switched-from-circleci-to-github-actions/">here</a> about why I again switched to GitHub Actions. I’ve also moved my default branch to be <code class="highlighter-rouge">main</code>, instead of <code class="highlighter-rouge">release</code> and/or <code class="highlighter-rouge">source</code>. I originally named it <code class="highlighter-rouge">release</code> because the documentation I was following named it that, but realized later that the name <code class="highlighter-rouge">main</code> fit my workflow better. Lastly, I’ve moved my <code class="highlighter-rouge">master</code> branch to be called <code class="highlighter-rouge">gh-pages</code>, and I’ve updated this blog post accordingly.</p>
+<p>EDIT: Since writing this blog post, my website has switched to using CircleCI, and then to GitHub Actions, for all continuous integration tools. I wrote a blog post <a href="/blog/posts/why-i-switched-from-travis-ci-to-circleci/">here</a> about why I switched to CircleCI, and wrote another post <a href="/blog/posts/why-i-switched-from-circleci-to-github-actions/">here</a> about why I again switched to GitHub Actions. I’ve also moved my default branch to be <code>main</code>, instead of <code>release</code> and/or <code>source</code>. I originally named it <code>release</code> because the documentation I was following named it that, but realized later that the name <code>main</code> fit my workflow better. Lastly, I’ve moved my <code>master</code> branch to be called <code>gh-pages</code>, and I’ve updated this blog post accordingly.</p>
 
       
   <script src="/assets/js/show-comments.js" type="text/javascript"></script>

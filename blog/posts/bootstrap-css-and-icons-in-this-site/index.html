@@ -36,7 +36,7 @@
 <meta name="msvalidate.01" content="89B2B19FF966341B78EF64EDADE6DF81" />
 <meta name="yandex-verification" content="c2741887f8c30dd1" />
 <script type="application/ld+json">
-{"description":"Emma Sax’s personal website and blog. Includes information about my social media profiles, résumé, and hobbies.","mainEntityOfPage":{"@type":"WebPage","@id":"https://emmasax4.info/blog/posts/bootstrap-css-and-icons-in-this-site/"},"@type":"BlogPosting","url":"https://emmasax4.info/blog/posts/bootstrap-css-and-icons-in-this-site/","dateModified":"2020-06-13T15:22:30+00:00","datePublished":"2019-12-29T06:00:00+00:00","headline":"Bootstrap, CSS, and Icons in this Site","author":{"@type":"Person","name":"Emma Sax"},"@context":"https://schema.org"}</script>
+{"description":"Emma Sax’s personal website and blog. Includes information about my social media profiles, résumé, and hobbies.","mainEntityOfPage":{"@type":"WebPage","@id":"https://emmasax4.info/blog/posts/bootstrap-css-and-icons-in-this-site/"},"author":{"@type":"Person","name":"Emma Sax"},"@type":"BlogPosting","url":"https://emmasax4.info/blog/posts/bootstrap-css-and-icons-in-this-site/","headline":"Bootstrap, CSS, and Icons in this Site","dateModified":"2020-06-13T15:22:30+00:00","datePublished":"2019-12-29T06:00:00+00:00","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -178,83 +178,60 @@
 </h1>
 
     <div class="page-body">
-      <h2 id="bootstrap">Bootstrap</h2>
-
+      <h2>Bootstrap</h2>
 <p>This site uses Bootstrap for most of its CSS. I have Bootstrap to attribute to the site looking so nice. Here are the “elements” that I’m using from Bootstrap:</p>
-
-<h3 id="layout">Layout</h3>
-
+<h3>Layout</h3>
 <p>My site is responsive because of <a href="https://getbootstrap.com/docs/4.0/layout/overview/">Bootstrap’s responsive layout</a> option! This is what determines the break-points to change the section margins and width size. I use the <a href="https://getbootstrap.com/docs/4.0/layout/grid/">Grid system</a> to make the proper columns.</p>
-
-<h3 id="pagination">Pagination</h3>
-
-<p>To make the pretty pagination bar appear on the blog pages, I use <a href="https://getbootstrap.com/docs/4.0/components/pagination/">Bootstrap’s built-in pagination</a> to create the CSS. Specifically, I use <code class="highlighter-rouge">disabled</code> and <code class="highlighter-rouge">active</code> states, as well as center-page alignment. See where I implement Bootstrap’s pagination bar <a href="https://github.com/emmasax4/emmasax4.info/blob/62b1cc916f71d07f5935b31ae218a0805edf56c8/_includes/blog/pagination.html#L1-L2">here</a>. For the icons, I use <a href="https://github.com/feathericons/feather">Feather Icons</a>.</p>
-
-<h3 id="navbar">Navbar</h3>
-
-<p>The responsive navbar utilized in this site is from <a href="https://getbootstrap.com/docs/4.0/components/navbar/">Bootstrap’s built-in navbar</a> option. Specifically, it uses the <a href="https://getbootstrap.com/docs/4.0/components/navbar/#nav">Navbar</a> which is fully responsive on smaller screens, as well as the <code class="highlighter-rouge">Primary</code> color scheme shown <a href="https://getbootstrap.com/docs/4.0/components/navbar/#color-schemes">here</a>. I do add some custom icons to the drop-down section of the responsive navbar, as well as customizing the color and the font-styles. The navbar is in action <a href="https://github.com/emmasax4/emmasax4.info/blob/62b1cc916f71d07f5935b31ae218a0805edf56c8/_includes/site/header.html">here</a>, and <a href="https://github.com/emmasax4/emmasax4.info/blob/1db304c1b1358bfc47f67783448807f173cb18a2/assets/css/_navigation.scss">here</a> is the overriding CSS for my navbar.</p>
-
-<h3 id="tables">Tables</h3>
-
-<p>For my tables on this site, I use <a href="https://getbootstrap.com/docs/4.0/content/tables/">Bootstrap’s built-in tables</a>, which are responsive, as long as you use <code class="highlighter-rouge">class: "table-responsive"</code> at the top (read more about responsive tables <a href="https://getbootstrap.com/docs/4.0/content/tables/#responsive-tables">here</a>). The tables I’ve selected to use is described in <a href="https://getbootstrap.com/docs/4.0/content/tables/#hoverable-rows">‘Hoverable Rows’</a>. I use the tables in <a href="https://github.com/emmasax4/emmasax4.info/blob/62b1cc916f71d07f5935b31ae218a0805edf56c8/_pages/around-town.md#on-stage">this Markdown file</a> and in <a href="https://github.com/emmasax4/emmasax4.info/blob/a7476415f32185b45321b04a7abf869d37e3e623/_posts/2019-12-20-dns-domains-and-personal-websites.md#domains">this Markdown file</a>. Because it’s Markdown, it may be more helpful to view the ‘Raw’ code.</p>
-
-<h3 id="buttons">Buttons</h3>
-
+<h3>Pagination</h3>
+<p>To make the pretty pagination bar appear on the blog pages, I use <a href="https://getbootstrap.com/docs/4.0/components/pagination/">Bootstrap’s built-in pagination</a> to create the CSS. Specifically, I use <code>disabled</code> and <code>active</code> states, as well as center-page alignment. See where I implement Bootstrap’s pagination bar <a href="https://github.com/emmasax4/emmasax4.info/blob/62b1cc916f71d07f5935b31ae218a0805edf56c8/_includes/blog/pagination.html#L1-L2">here</a>. For the icons, I use <a href="https://github.com/feathericons/feather">Feather Icons</a>.</p>
+<h3>Navbar</h3>
+<p>The responsive navbar utilized in this site is from <a href="https://getbootstrap.com/docs/4.0/components/navbar/">Bootstrap’s built-in navbar</a> option. Specifically, it uses the <a href="https://getbootstrap.com/docs/4.0/components/navbar/#nav">Navbar</a> which is fully responsive on smaller screens, as well as the <code>Primary</code> color scheme shown <a href="https://getbootstrap.com/docs/4.0/components/navbar/#color-schemes">here</a>. I do add some custom icons to the drop-down section of the responsive navbar, as well as customizing the color and the font-styles. The navbar is in action <a href="https://github.com/emmasax4/emmasax4.info/blob/62b1cc916f71d07f5935b31ae218a0805edf56c8/_includes/site/header.html">here</a>, and <a href="https://github.com/emmasax4/emmasax4.info/blob/1db304c1b1358bfc47f67783448807f173cb18a2/assets/css/_navigation.scss">here</a> is the overriding CSS for my navbar.</p>
+<h3>Tables</h3>
+<p>For my tables on this site, I use <a href="https://getbootstrap.com/docs/4.0/content/tables/">Bootstrap’s built-in tables</a>, which are responsive, as long as you use <code>class: &quot;table-responsive&quot;</code> at the top (read more about responsive tables <a href="https://getbootstrap.com/docs/4.0/content/tables/#responsive-tables">here</a>). The tables I’ve selected to use is described in <a href="https://getbootstrap.com/docs/4.0/content/tables/#hoverable-rows">‘Hoverable Rows’</a>. I use the tables in <a href="https://github.com/emmasax4/emmasax4.info/blob/62b1cc916f71d07f5935b31ae218a0805edf56c8/_pages/around-town.md#on-stage">this Markdown file</a> and in <a href="https://github.com/emmasax4/emmasax4.info/blob/a7476415f32185b45321b04a7abf869d37e3e623/_posts/2019-12-20-dns-domains-and-personal-websites.md#domains">this Markdown file</a>. Because it’s Markdown, it may be more helpful to view the ‘Raw’ code.</p>
+<h3>Buttons</h3>
 <p>This site uses <a href="https://getbootstrap.com/docs/4.0/components/buttons/">Bootstrap’s buttons</a> for all of it’s button functionality (unless the button is an icon). Here’s a <a href="https://github.com/emmasax4/emmasax4.info/blob/62b1cc916f71d07f5935b31ae218a0805edf56c8/_includes/elements/github-issue-button.html">button that I’ve made</a> that uses Bootstrap’s design but includes a Feather Icon. I prefer the look of the <a href="https://getbootstrap.com/docs/4.0/components/buttons/#outline-buttons">Outline buttons</a> more than the solid ones, but that’s just my preference.</p>
-
-<h2 id="css">CSS</h2>
-
+<h2>CSS</h2>
 <p>Using Bootstrap for the entire layout of this website, as well as for specific elements means there’s so much less CSS in this repository. I started with over 600 lines of CSS, and now I have about 220 lines. But, there are still some pieces that I’ve chosen to override from Bootstrap’s defaults. All of my custom CSS is in <a href="https://github.com/emmasax4/emmasax4.info/tree/62b1cc916f71d07f5935b31ae218a0805edf56c8/assets/css">this directory</a>.</p>
-
 <p>The pieces I’m overriding are:</p>
 <ul>
-  <li>Blockquotes</li>
-  <li>Preformatted monospace (like code snippets)</li>
-  <li>Links and buttons</li>
-  <li>Navbar settings and colors</li>
-  <li>Other site settings
-    <ul>
-      <li>Font sizes and styles</li>
-      <li>Settings for the <code class="highlighter-rouge">main-content</code> and <code class="highlighter-rouge">body</code></li>
-      <li>Footer</li>
-    </ul>
-  </li>
+<li>Blockquotes</li>
+<li>Preformatted monospace (like code snippets)</li>
+<li>Links and buttons</li>
+<li>Navbar settings and colors</li>
+<li>Other site settings
+<ul>
+<li>Font sizes and styles</li>
+<li>Settings for the <code>main-content</code> and <code>body</code></li>
+<li>Footer</li>
 </ul>
-
-<h2 id="icons">Icons</h2>
-
+</li>
+</ul>
+<h2>Icons</h2>
 <p>The site uses <a href="https://feathericons.com/">Feather Icons</a> for all of its pretty icons, including the</p>
 <ul>
-  <li>GitHub icon</li>
-  <li>LinkedIn icon</li>
-  <li>Twitter icon</li>
-  <li>Mail send icon</li>
-  <li>Forward/backward icons</li>
-  <li>Navbar X and bar icons</li>
-  <li>Feed/RSS icon</li>
+<li>GitHub icon</li>
+<li>LinkedIn icon</li>
+<li>Twitter icon</li>
+<li>Mail send icon</li>
+<li>Forward/backward icons</li>
+<li>Navbar X and bar icons</li>
+<li>Feed/RSS icon</li>
 </ul>
-
 <p>Icons are called like this:</p>
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;i</span> <span class="na">data-feather=</span><span class="s">"twitter"</span><span class="nt">&gt;&lt;/i&gt;</span>
-</code></pre></div></div>
-
-<p>To make the icon into a button, you can write it in an <code class="highlighter-rouge">a href</code> tag:</p>
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://twitter.com/emma_sax4"</span> <span class="na">class=</span><span class="s">"link-icon"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;i</span> <span class="na">data-feather=</span><span class="s">"twitter"</span><span class="nt">&gt;&lt;/i&gt;</span>
-<span class="nt">&lt;/a&gt;</span>
-</code></pre></div></div>
-
-<p>The <code class="highlighter-rouge">link-icon</code> class is something that I’ve created with common link-icon settings. Read more about my custom CSS in the secton above.</p>
-
+<pre><code class="language-html">&lt;i data-feather=&quot;twitter&quot;&gt;&lt;/i&gt;
+</code></pre>
+<p>To make the icon into a button, you can write it in an <code>a href</code> tag:</p>
+<pre><code class="language-html">&lt;a href=&quot;https://twitter.com/emma_sax4&quot; class=&quot;link-icon&quot;&gt;
+  &lt;i data-feather=&quot;twitter&quot;&gt;&lt;/i&gt;
+&lt;/a&gt;
+</code></pre>
+<p>The <code>link-icon</code> class is something that I’ve created with common link-icon settings. Read more about my custom CSS in the secton above.</p>
 <p>Lastly, as long as these two lines are at the bottom of the file, the icons appear magically!</p>
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://unpkg.com/feather-icons"</span><span class="nt">&gt;&lt;/script&gt;</span>
-<span class="nt">&lt;script&gt;</span><span class="nx">feather</span><span class="p">.</span><span class="nx">replace</span><span class="p">()</span><span class="nt">&lt;/script&gt;</span>
-</code></pre></div></div>
-
+<pre><code class="language-html">&lt;script src=&quot;https://unpkg.com/feather-icons&quot;&gt;&lt;/script&gt;
+&lt;script&gt;feather.replace()&lt;/script&gt;
+</code></pre>
 <p>See them in action <a href="https://github.com/emmasax4/emmasax4.info/blob/129867d8135a930f4d364fe026db123d655b5ca8/_includes/site/scripts.html#L3-L4">here</a>.</p>
-
-<h2 id="conclusion">Conclusion</h2>
-
+<h2>Conclusion</h2>
 <p>Now that you’ve seen how Bootstrap and Feather Icons have improved my website, it’s your turn! Check out my blog post <a href="/blog/posts/adding-bootstrap-to-your-static-content-site/">here</a> for more information on how to get Bootstrap started on your site.</p>
 
       

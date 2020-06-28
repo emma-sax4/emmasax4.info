@@ -36,7 +36,7 @@
 <meta name="msvalidate.01" content="89B2B19FF966341B78EF64EDADE6DF81" />
 <meta name="yandex-verification" content="c2741887f8c30dd1" />
 <script type="application/ld+json">
-{"description":"Emma Sax’s personal website and blog. Includes information about my social media profiles, résumé, and hobbies.","mainEntityOfPage":{"@type":"WebPage","@id":"https://emmasax4.info/blog/posts/dns-domains-and-personal-websites/"},"@type":"BlogPosting","url":"https://emmasax4.info/blog/posts/dns-domains-and-personal-websites/","dateModified":"2020-05-29T06:22:04+00:00","datePublished":"2019-12-20T06:00:00+00:00","headline":"DNS, Domains, and Personal Websites","author":{"@type":"Person","name":"Emma Sax"},"@context":"https://schema.org"}</script>
+{"description":"Emma Sax’s personal website and blog. Includes information about my social media profiles, résumé, and hobbies.","mainEntityOfPage":{"@type":"WebPage","@id":"https://emmasax4.info/blog/posts/dns-domains-and-personal-websites/"},"author":{"@type":"Person","name":"Emma Sax"},"@type":"BlogPosting","url":"https://emmasax4.info/blog/posts/dns-domains-and-personal-websites/","headline":"DNS, Domains, and Personal Websites","dateModified":"2020-05-29T06:22:04+00:00","datePublished":"2019-12-20T06:00:00+00:00","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -179,23 +179,14 @@
 
     <div class="page-body">
       <p>There’s many companies that provide the ability for individuals to have their own websites. They include <a href="https://pages.github.com/">GitHub Pages</a> (where this site is hosted), <a href="https://about.gitlab.com/blog/2016/04/07/gitlab-pages-setup/">GitLab Pages</a>, <a href="https://wordpress.com/">WordPress</a>, <a href="https://www.blogger.com/about/?r=2">Blogger</a>, <a href="https://www.wix.com/">Wix</a>, <a href="https://support.google.com/a/users/answer/9314941?hl=en">Google Sites</a>, <a href="https://www.weebly.com/">Weebly</a>, <a href="https://www.hostgator.com/">HostGator</a>, <a href="https://www.godaddy.com/websites/website-builder">GoDaddy</a>, and even <a href="https://www.theknot.com/gs/wedding-websites">The Knot</a>. That’s only naming a few. Every single site has their own pros and cons. Some provide more themes. Some provide more flexibility but require the user to know how to code. Some are completely free but usually sacrifice flexibility and theme options. Some start as free but then have payment plans to get more features.</p>
-
 <p>Individuals may choose different hosting options for different websites, depending on their needs for the site. As an example, I have two maintained websites on my domain. This is my first one. I host on GitHub Pages because I feel comfortable enough to code and maintain my own site, and I like the flexibility it provides. But I also host a site on Google Sites. I host there because it doesn’t need a fancy theme, and setup needed to be extra fast (I managed to easily set up that site within four hours).</p>
-
 <p>People may choose to have a website for multiple reasons, including: personal blogs, advertisement of themselves and their career, a business they’re starting, etc. The good news is that with the internet, people can basically make a website for whatever they want (my partner once had one that just had a bunch of pictures of legos he made). The bad news is that unless you specifically set your website to be private (and that feature is only available from some hosting companies), anybody browsing the web can find your website. Pros and cons, right?</p>
-
 <p>But, one thing is for certain. Basically, no matter how where you decide to host your website, there’s going to be an option to provide your own domain.</p>
-
-<p>Most of these sites will provide you with half-customized domain. This could look like <code class="highlighter-rouge">myblog.wordpress.com</code> or <code class="highlighter-rouge">firstnamelastname.weebly.com</code> or <code class="highlighter-rouge">github-user.github.io</code>. For the company, this is really easy to do. The user can choose whatever the front portion of that should be (called a <code class="highlighter-rouge">subdomain</code>). And then the back portion (the <code class="highlighter-rouge">domain</code> itself—ex: <code class="highlighter-rouge">wordpress.com</code>, <code class="highlighter-rouge">weebly.com</code>) functions both as an advertisement for their service, and it is easy to manage and make SSL certificates for (it’s what’s called a wildcard domain: <code class="highlighter-rouge">*.wordpress.com</code>).</p>
-
+<p>Most of these sites will provide you with half-customized domain. This could look like <code>myblog.wordpress.com</code> or <code>firstnamelastname.weebly.com</code> or <code>github-user.github.io</code>. For the company, this is really easy to do. The user can choose whatever the front portion of that should be (called a <code>subdomain</code>). And then the back portion (the <code>domain</code> itself—ex: <code>wordpress.com</code>, <code>weebly.com</code>) functions both as an advertisement for their service, and it is easy to manage and make SSL certificates for (it’s what’s called a wildcard domain: <code>*.wordpress.com</code>).</p>
 <p>But, for many individuals, that’s not quite enough customization for their website (including myself). For whatever reason we each choose, we don’t want to advertise where our website was hosted just by the URL.</p>
-
-<h2 id="domains">Domains</h2>
-
-<p>For some small amount of money annually (usually around $10–$15 per year), an individual can purchase a custom domain name. Each domain name is unique. So since <code class="highlighter-rouge">facebook.com</code> is already purchased, nobody else can get this domain. Hopefully nobody’s name is <code class="highlighter-rouge">Faceb Ook</code>. My domain for my website is <code class="highlighter-rouge">emmasax4.info</code>, so nobody else can buy that, but they could buy <code class="highlighter-rouge">emmasax4.com</code>, or <code class="highlighter-rouge">emmasax.info</code>.</p>
-
-<p>A URL (or Uniform Resource Locator) has multiple parts to it. The first part is the protocol identifier. This is typically <code class="highlighter-rouge">http</code> or <code class="highlighter-rouge">https</code> (the <code class="highlighter-rouge">s</code> means secure connection with an SSL certificate). Other examples of protocols may be <code class="highlighter-rouge">ftp</code> or <code class="highlighter-rouge">telnet</code>. The last two portions (<code class="highlighter-rouge">example.com</code>) is the domain. This the unique name that indicates where the website is being served from. The ending part (<code class="highlighter-rouge">.com</code>, <code class="highlighter-rouge">.org</code>, <code class="highlighter-rouge">.edu</code>, <code class="highlighter-rouge">.net</code>, <code class="highlighter-rouge">.gov</code>, etc) indicates the top-level domain designator. Here are some common top-level domains:</p>
-
+<h2>Domains</h2>
+<p>For some small amount of money annually (usually around $10–$15 per year), an individual can purchase a custom domain name. Each domain name is unique. So since <code>facebook.com</code> is already purchased, nobody else can get this domain. Hopefully nobody’s name is <code>Faceb Ook</code>. My domain for my website is <code>emmasax4.info</code>, so nobody else can buy that, but they could buy <code>emmasax4.com</code>, or <code>emmasax.info</code>.</p>
+<p>A URL (or Uniform Resource Locator) has multiple parts to it. The first part is the protocol identifier. This is typically <code>http</code> or <code>https</code> (the <code>s</code> means secure connection with an SSL certificate). Other examples of protocols may be <code>ftp</code> or <code>telnet</code>. The last two portions (<code>example.com</code>) is the domain. This the unique name that indicates where the website is being served from. The ending part (<code>.com</code>, <code>.org</code>, <code>.edu</code>, <code>.net</code>, <code>.gov</code>, etc) indicates the top-level domain designator. Here are some common top-level domains:</p>
 <div class="table-responsive-sm">
   <table class="table table-hover table-bordered">
     <thead class="text-center">
@@ -232,90 +223,71 @@
     </tbody>
   </table>
 </div>
-
-<p>Sometimes, the top-level domain is also a country code, such as <code class="highlighter-rouge">.us</code>, <code class="highlighter-rouge">.ca</code>, <code class="highlighter-rouge">.de</code>, etc.</p>
-
-<p>The next part of the domain (<code class="highlighter-rouge">example</code>) is the unique identifier. This is what individuals can typically customize.</p>
-
-<p>Anything before that (including a <code class="highlighter-rouge">www</code>) is a subdomain. The history of <code class="highlighter-rouge">www</code> is sort of old-fashioned. It was first made with the idea that every single domain would start with this, as it stands for World Wide Web. But now, that’s outdated, and it’s more common for websites to just omit that portion of the URL entirely.</p>
-
-<p>An individual can also use subdomains to have “multiple websites” that are all part of the same website (ex: <code class="highlighter-rouge">example.com</code> and <code class="highlighter-rouge">blog.example.com</code>).</p>
-
-<p>Individuals can also use their domain as a part of their email (for the ultimate professional look). This would look like <code class="highlighter-rouge">jsmith@example.com</code>, and the domain would be <code class="highlighter-rouge">example.com</code>.</p>
-
-<h2 id="dns">DNS</h2>
-
+<p>Sometimes, the top-level domain is also a country code, such as <code>.us</code>, <code>.ca</code>, <code>.de</code>, etc.</p>
+<p>The next part of the domain (<code>example</code>) is the unique identifier. This is what individuals can typically customize.</p>
+<p>Anything before that (including a <code>www</code>) is a subdomain. The history of <code>www</code> is sort of old-fashioned. It was first made with the idea that every single domain would start with this, as it stands for World Wide Web. But now, that’s outdated, and it’s more common for websites to just omit that portion of the URL entirely.</p>
+<p>An individual can also use subdomains to have “multiple websites” that are all part of the same website (ex: <code>example.com</code> and <code>blog.example.com</code>).</p>
+<p>Individuals can also use their domain as a part of their email (for the ultimate professional look). This would look like <code>jsmith@example.com</code>, and the domain would be <code>example.com</code>.</p>
+<h2>DNS</h2>
 <p>Okay, now that we’ve done an overview of domains, we can talk about DNS. DNS stands for Domain Name System, and is what the internet uses to map each domain to the IP address of the server that’s hosting the website. But IP addresses change regularly, they’re ugly to look at, and hard to remember. Therefore, we often map domains to other domains, which then will map to several other places to get to a final destination IP address. But all you—as the reader—needs to know is that when you purchase a domain, whatever service you purchase that from is also going to give you a DNS. And it’s in <em>that</em> DNS where you can define where you want your domain name(s) to map to.</p>
-
-<p>There’s several different types of configurations. The basic thing to know is that there are <code class="highlighter-rouge">A Records</code>, <code class="highlighter-rouge">ALIAS Records</code>, and <code class="highlighter-rouge">CNAME Records</code>. <code class="highlighter-rouge">A Records</code> map a domain to an IP address (when the IP address is known and stable). A <code class="highlighter-rouge">CNAME Record</code> maps a domain to another domain (leading to that daisy chain I was briefly describing in the paragraph above). <code class="highlighter-rouge">ALIAS Records</code> are a lot like <code class="highlighter-rouge">CNAME Record</code>s, but they can coexist with other records on that name.</p>
-
-<h2 id="domains--your-website">Domains + Your Website</h2>
-
+<p>There’s several different types of configurations. The basic thing to know is that there are <code>A Records</code>, <code>ALIAS Records</code>, and <code>CNAME Records</code>. <code>A Records</code> map a domain to an IP address (when the IP address is known and stable). A <code>CNAME Record</code> maps a domain to another domain (leading to that daisy chain I was briefly describing in the paragraph above). <code>ALIAS Records</code> are a lot like <code>CNAME Record</code>s, but they can coexist with other records on that name.</p>
+<h2>Domains + Your Website</h2>
 <p>Now, let’s walk through some examples of these DNS records may look like if you set up your website on a few different host providers. Note that TTL stands for Time to Live, and it specifies how long a resolver is supposed to cache the DNS query before looking for any new DNS queries. I purchased and manage my DNS on <a href="https://namecheap.com/">Namecheap</a> (that’s not a secret, so I don’t feel bad disclosing that at all).</p>
-
 <p>DNS records when setting up your website with your main domain on GitHub Pages:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    Type               Host                 Value                     TTL
+<pre><code>    Type               Host                 Value                     TTL
 -------------------------------------------------------------------------------
 ALIAS Record            @            github-user.github.io.        Automatic
 CNAME Record           www               mydomain.com.             Automatic
-</code></pre></div></div>
-
+</code></pre>
 <p>DNS records when setting up your website your your main domain on Google Sites:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    Type               Host                 Value                     TTL
+<pre><code>    Type               Host                 Value                     TTL
 -------------------------------------------------------------------------------
 ALIAS Record             @            ghs.googlehosted.com.        Automatic
 CNAME Record            www               mydomain.com.            Automatic
 TXT Record               @          google-site-verification=...   Automatic
-</code></pre></div></div>
+</code></pre>
 <p>* The Google Site Verification is how Google verifies that you are the owner of the domain you wish to use.</p>
-
 <p>DNS records when setting up your website with your main domain on Wordpress:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    Type               Host                 Value                     TTL
+<pre><code>    Type               Host                 Value                     TTL
 -------------------------------------------------------------------------------
 ALIAS Record            @             NS1.WORDPRESS.COM.           Automatic
 ALIAS Record            @             NS2.WORDPRESS.COM.           Automatic
 ALIAS Record            @             NS3.WORDPRESS.COM.           Automatic
 CNAME Record           www               mydomain.com.             Automatic
-</code></pre></div></div>
-<p>* The <code class="highlighter-rouge">NS1.WORDPRESS.COM</code> are WordPress’s name server resolvers. These servers are in charge of finding the IP addresses belonging to <em>every</em> WordPress site out there.</p>
-
+</code></pre>
+<p>* The <code>NS1.WORDPRESS.COM</code> are WordPress’s name server resolvers. These servers are in charge of finding the IP addresses belonging to <em>every</em> WordPress site out there.</p>
 <p>DNS records when setting up your website with a subdomain on GitHub Pages:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    Type               Host                 Value                     TTL
+<pre><code>    Type               Host                 Value                     TTL
 -------------------------------------------------------------------------------
 CNAME Record         subdomain       github-user.github.io.        Automatic
 CNAME Record       www.subdomain     subdomain.mydomain.com.       Automatic
-</code></pre></div></div>
-
+</code></pre>
 <p>DNS records when setting up your website with a subdomain on Google Sites:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    Type               Host                 Value                     TTL
+<pre><code>    Type               Host                 Value                     TTL
 -------------------------------------------------------------------------------
 CNAME Record         subdomain        ghs.googlehosted.com.        Automatic
 CNAME Record       www.subdomain     subdomain.mydomain.com.       Automatic
 TXT Record           subdomain     google-site-verification=...    Automatic
-</code></pre></div></div>
-
+</code></pre>
 <p>DNS records when setting up your website with a subdomain on Wordpress:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    Type               Host                 Value                     TTL
+<pre><code>    Type               Host                 Value                     TTL
 -------------------------------------------------------------------------------
 CNAME Record         subdomain     wordpress-site.wordpress.com.   Automatic
 CNAME Record       www.subdomain     subdomain.mydomain.com.       Automatic
-</code></pre></div></div>
-
+</code></pre>
 <p>I haven’t worked with adding domains to any other website host providers, so I can’t speak to any other providers’ information. But, when a person goes to add a domain to their website, there’s usually plenty of (decently 🤞🏼) helpful documentation to get started.</p>
-
 <p>So there you go! Hopefully this has helped you either learn more about DNS and domains, or will help you in choosing your personal domain and setting it up on your new website! Best of luck. I can attest that having your own website can be fun! It gives you a fun hobby and project, and it’s definitely something that you can be proud of.</p>
-
-<h2 id="references">References</h2>
+<h2>References</h2>
 <ul>
-  <li><a href="https://howdns.works/">hownds.works</a></li>
-  <li><a href="https://dyn.com/blog/dyn-tech-everything-you-ever-wanted-to-know-about-ttls/">dyn.com: everything you ever wanted to know about ttls</a></li>
-  <li><a href="https://support.dnsimple.com/articles/differences-between-a-cname-alias-url/">support.dnsimple.com: differences between a cname alias url</a></li>
-  <li><a href="https://www.quora.com/Why-do-some-websites-have-www-at-the-start-but-others-have-http">quora.com: why do some websites have www at the start but others have http</a></li>
-  <li><a href="https://www.oit.edu/libraries/help/internet-guides/understanding-parts-of-internet-address">www.oit.edu: understanding parts of internet address</a></li>
-  <li><a href="https://www.webopedia.com/TERM/U/URL.html">www.webopedia: url.html</a></li>
-  <li><a href="https://www.howtogeek.com/howto/18799/add-your-own-domain-to-your-wordpress.com-blog/">www.howtogeek.com: add your own domain to your wordpress.com blog</a></li>
-  <li><a href="https://www.quora.com/What-do-you-call-the-section-at-the-end-of-an-email-that-includes-peoples-job-contact-info-etc-How-can-I-design-one-for-myself">quora.com: what do you call the section at the end of an email that includes peoples job contact info</a></li>
-  <li><a href="https://namecheap.com/">namecheap.com</a></li>
+<li><a href="https://howdns.works/">hownds.works</a></li>
+<li><a href="https://dyn.com/blog/dyn-tech-everything-you-ever-wanted-to-know-about-ttls/">dyn.com: everything you ever wanted to know about ttls</a></li>
+<li><a href="https://support.dnsimple.com/articles/differences-between-a-cname-alias-url/">support.dnsimple.com: differences between a cname alias url</a></li>
+<li><a href="https://www.quora.com/Why-do-some-websites-have-www-at-the-start-but-others-have-http">quora.com: why do some websites have www at the start but others have http</a></li>
+<li><a href="https://www.oit.edu/libraries/help/internet-guides/understanding-parts-of-internet-address">www.oit.edu: understanding parts of internet address</a></li>
+<li><a href="https://www.webopedia.com/TERM/U/URL.html">www.webopedia: url.html</a></li>
+<li><a href="https://www.howtogeek.com/howto/18799/add-your-own-domain-to-your-wordpress.com-blog/">www.howtogeek.com: add your own domain to your wordpress.com blog</a></li>
+<li><a href="https://www.quora.com/What-do-you-call-the-section-at-the-end-of-an-email-that-includes-peoples-job-contact-info-etc-How-can-I-design-one-for-myself">quora.com: what do you call the section at the end of an email that includes peoples job contact info</a></li>
+<li><a href="https://namecheap.com/">namecheap.com</a></li>
 </ul>
 
       
