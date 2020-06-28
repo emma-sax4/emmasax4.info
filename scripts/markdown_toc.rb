@@ -30,18 +30,21 @@ class ToCWriter
     File.open(@source_file).each_line.with_index(1) do |line, line_number|
       next if line_number == 1
       next unless line.match(/^#/)
-
-      @level, @header = line.match(/^(#+) *(.*) *$/).captures
-      next if ignore_this_header?
-
-      set_anchor
-      set_start
-
-      puts "#{@start} [#{@header}](##{@anchor})"
+      set_line(line)
     end
   end
 
- private
+  private
+
+  def set_line(line)
+    @level, @header = line.match(/^(#+) *(.*) *$/).captures
+    next if ignore_this_header?
+
+    set_anchor
+    set_start
+
+    puts "#{@start} [#{@header}](##{@anchor})"
+  end
 
   def ignore_this_header?
     @header == "Table of contents" || \
