@@ -19,30 +19,33 @@ class ToCWriter
     @source_file = source_file
     @top = top.to_i
     @max = max.to_i
-    @level  = ""
-    @header = ""
-    @start  = ""
-    @anchor = ""
     @seen = []
+    @level = ""
+    @start = ""
+    @header = ""
+    @anchor = ""
   end
 
   def write
-    File.open(@source_file).each_line.with_index(1) do |line, line_number|
+    open_file.each_line.with_index(1) do |line, line_number|
       next if line_number == 1
       next unless line.match(/^#/)
+      @level, @header = line.match(/^(#+) *(.*) *$/).captures
+      next if ignore_this_header?
+
       set_line(line)
     end
   end
 
   private
 
-  def set_line(line)
-    @level, @header = line.match(/^(#+) *(.*) *$/).captures
-    next if ignore_this_header?
+  def open_file
+    File.open(@source_file)
+  end
 
+  def set_line(line)
     set_anchor
     set_start
-
     puts "#{@start} [#{@header}](##{@anchor})"
   end
 
@@ -53,10 +56,7 @@ class ToCWriter
   end
 
   def set_anchor
-    @anchor = @header
-      .downcase
-      .gsub(/[^a-z\d_\- ]+/, "")
-      .gsub(/ /, "-")
+    @anchor = @header.downcase.gsub(/[^a-z\d_\- ]+/, "").gsub(/ /, "-")
     update_if_seen
   end
 
@@ -76,7 +76,7 @@ class ToCWriter
   def set_start
     len = @level.length
     bullet = len % 2 == 0 ? "-" : "*"
-    @start = "    " * (len - @top) + bullet
+    @start = "  " * (len - @top) + bullet
   end
 end
 

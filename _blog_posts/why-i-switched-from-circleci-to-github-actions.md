@@ -15,10 +15,10 @@ If we make the assumption that I've successfully removed all Bootstrap4, Jquery,
 - [The Story Behind this Extreme Decision](#the-story)
 - [How I Use CI Tools](#how-i-use-ci-tools)
 - [Here Enters GitHub Actions](#here-enters-github-actions)
-    * [1. Building my website](#building-my-website)
-    * [2. Notifying Slack](#notifying-slack)
-    * [3. "Deploying" to GitHub Pages](#deploying-to-github-pages)
-    * [4. Running daily crons](#running-daily-crons)
+  * [1. Building my website](#building-my-website)
+  * [2. Notifying Slack](#notifying-slack)
+  * [3. "Deploying" to GitHub Pages](#deploying-to-github-pages)
+  * [4. Running daily crons](#running-daily-crons)
 - [Conclusion](#conclusion)
 
 <div id="anchor">
