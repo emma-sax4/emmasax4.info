@@ -52,7 +52,7 @@ include:
 
 exclude:
   - scripts
-  - vendor/
+  - vendor
   - Gemfile
   - Gemfile.lock
 

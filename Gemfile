@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 source 'https://rubygems.org'
 
 # Gems from RubyGems that are required for all environments
@@ -20,5 +22,6 @@ gem 'jekyll-sitemap', git: 'https://github.com/emmasax4/jekyll-sitemap.git', bra
 
 # Gems for only test/development environment
 group :test, :development do
-  gem 'html-proofer', '~> 3.15'
+  gem 'html-proofer',   '~> 3.15'
+  gem 'rubocop',        '~> 0.86'
 end
