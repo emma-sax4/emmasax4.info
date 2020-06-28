@@ -7,9 +7,9 @@ TOP = 2; MAX = 4
 def usage
   puts <<-EOF
 Usage: #{$0} FILE.md [TOP [MAX]] [-h]
-     FILE.md          Markdown source document
-     TOP              top-level Markdown heading level (default #{TOP})
-     MAX              maximum heading level (default #{MAX})
+     FILE.md    Markdown source document
+     TOP        top-level Markdown heading level (default #{TOP})
+     MAX        maximum heading level (default #{MAX})
 EOF
   exit 1
 end
