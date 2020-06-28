@@ -48,7 +48,7 @@ jobs:
         GIT_CONFIG_NAME: github-actions[bot]
 
     - name: Set Deploy Status Message
-      run: bash scripts/deploy_status_message.sh
+      run: bash scripts/deploy_status_message.sh ${{ env.DEPLOYMENT_STATUS }}
 
     - name: Notify Slack on Success
       if: success()
