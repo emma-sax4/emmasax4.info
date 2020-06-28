@@ -9,3 +9,7 @@ Layout/LineLength:
 AllCops:
   Exclude:
     - vendor/**/*
+Jekyll/NoPutsAllowed:
+  Enabled: false
+Style/RegexpLiteral:
+  EnforcedStyle: slashes
