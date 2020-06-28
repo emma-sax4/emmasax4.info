@@ -17,17 +17,17 @@ jobs:
       run: git checkout ${{ env.BRANCH }}
 
     - name: Configure Bundler
-      run: sudo gem install bundler -v $(cat Gemfile.lock | tail -1 | tr -d ' ')
+      run: sudo gem install bundler -v $(cat Gemfile.lock | tail -1 | tr -d " ")
 
     - name: Configure Gem Cache
       uses: actions/cache@v1
       with:
         path: vendor/bundle
-        key: bundler-cache-${{ hashFiles('**/Gemfile.lock') }}
+        key: bundler-cache-${{ hashFiles("**/Gemfile.lock") }}
         restore-keys: bundler-cache-
 
     - name: Install Gems
-      run: bundle config set path 'vendor/bundle' && bundle install
+      run: bundle config set path "vendor/bundle" && bundle install
 
     - name: Jekyll Build
       run: JEKYLL_ENV=production bundle exec jekyll build --destination ./_site/
@@ -43,7 +43,7 @@ jobs:
         BRANCH: gh-pages
         FOLDER: _site
         CLEAN: true
-        COMMIT_MESSAGE: 'Deploy to ${{ github.repository }}'
+        COMMIT_MESSAGE: "Deploy to ${{ github.repository }}"
         GIT_CONFIG_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
         GIT_CONFIG_NAME: github-actions[bot]
 
@@ -56,10 +56,10 @@ jobs:
       env:
         SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
       with:
-        channel: '#general'
+        channel: "#general"
         icon_url: https://img.icons8.com/ios-filled/50/000000/github.png
         username: GitHub Actions
-        color: '#23c22e'
+        color: "#23c22e"
         title: ${{ github.repository }}
         title_link: https://github.com/${{ github.repository }}
         author_name: ${{ github.actor }}
@@ -74,10 +74,10 @@ jobs:
       env:
         SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
       with:
-        channel: '#general'
+        channel: "#general"
         icon_url: https://img.icons8.com/ios-filled/50/000000/github.png
         username: GitHub Actions
-        color: '#bd2222'
+        color: "#bd2222"
         title: ${{ github.repository }}
         title_link: https://github.com/${{ github.repository }}
         author_name: ${{ github.actor }}
