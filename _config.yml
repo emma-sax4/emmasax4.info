@@ -53,6 +53,8 @@ include:
 exclude:
   - scripts
   - vendor/
+  - Gemfile
+  - Gemfile.lock
 
 collections:
   - blog_posts
