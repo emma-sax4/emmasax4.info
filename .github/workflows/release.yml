@@ -33,7 +33,7 @@ jobs:
       run: JEKYLL_ENV=production bundle exec jekyll build --destination ./_site/
 
     - name: HTML Proofer
-      run: bash scripts/html_proofer.sh
+      run: bash scripts/html_proofer.sh ${{ env.DEPLOYMENT_STATUS }}
 
     - name: GitHub Pages Deploy
       uses: emmasax4/github-pages-deploy-action@emmasax4_github_pages_deploy_action
