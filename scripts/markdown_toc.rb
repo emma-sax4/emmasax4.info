@@ -1,35 +1,40 @@
 #!/usr/bin/env ruby
 
+# frozen_string_literal: true
+
 # This is originally from: https://github.com/alexharv074/markdown_toc
 
-TOP = 2; MAX = 4
+TOP = 2
+MAX = 4
 
 def usage
-  puts <<-EOF
-Usage: #{$0} FILE.md [TOP [MAX]] [-h]
-     FILE.md    Markdown source document
-     TOP        top-level Markdown heading level (default #{TOP})
-     MAX        maximum heading level (default #{MAX})
-EOF
+  puts <<~USAGE
+    Usage: #{$PROGRAM_NAME} FILE.md [TOP [MAX]] [-h]
+      FILE.md    Markdown source document
+      TOP        top-level Markdown heading level (default #{TOP})
+      MAX        maximum heading level (default #{MAX})
+  USAGE
   exit 1
 end
 
+# A class that's designed read a Markdown file, and automatically generate
+# a Markdown Table of Contents based on the file's header's specified by #s.
 class ToCWriter
-  def initialize(source_file, top=TOP, max=MAX)
+  def initialize(source_file, top = TOP, max = MAX)
     @source_file = source_file
     @top = top.to_i
     @max = max.to_i
     @seen = []
-    @level = ""
-    @start = ""
-    @header = ""
-    @anchor = ""
+    @level = ''
+    @start = ''
+    @header = ''
+    @anchor = ''
   end
 
   def write
     File.open(@source_file).each_line.with_index(1) do |line, line_number|
       next if line_number == 1
-      next unless line.match(/^#/)
+      next unless line.match?(/^#/)
 
       @level, @header = line.match(/^(#+) *(.*) *$/).captures
       next if ignore_this_header?
@@ -44,13 +49,13 @@ class ToCWriter
   private
 
   def ignore_this_header?
-    @header == "Table of contents" || \
+    @header == 'Table of Contents' || \
       @level.length < @top || \
       @level.length > @max
   end
 
   def set_anchor
-    @anchor = @header.downcase.gsub(/[^a-z\d_\- ]+/, "").gsub(/ /, "-")
+    @anchor = @header.downcase.gsub(/[^a-z\d_\- ]+/, '').tr(' ', '-')
     update_if_seen
   end
 
@@ -58,9 +63,9 @@ class ToCWriter
     inc = 2
     while @seen.include?(@anchor)
       if inc == 2
-        @anchor += "-" + inc.to_s
+        @anchor += '-' + inc.to_s
       else
-        @anchor.sub!(/-\d+$/, "-" + inc.to_s)
+        @anchor.sub!(/-\d+$/, '-' + inc.to_s)
       end
       inc += 1
     end
@@ -69,14 +74,12 @@ class ToCWriter
 
   def set_start
     len = @level.length
-    bullet = len % 2 == 0 ? "-" : "*"
-    @start = "  " * (len - @top) + bullet
+    bullet = len.even? ? '-' : '*'
+    @start = '  ' * (len - @top) + bullet
   end
 end
 
-usage if ARGV.length == 0
-usage if ARGV[0] == "-h"
+usage if ARGV.length.zero?
+usage if ARGV[0] == '-h'
 
-if $0 == __FILE__
-  ToCWriter.new(*ARGV).write
-end
+ToCWriter.new(*ARGV).write if $PROGRAM_NAME == __FILE__
