@@ -1,5 +1,7 @@
 #!/usr/bin/env ruby
 
+# This is originally from: https://github.com/alexharv074/markdown_toc
+
 TOP = 2; MAX = 4
 
 def usage

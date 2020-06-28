@@ -12,17 +12,17 @@ I know my website was still dependent on a lot of things: [GitHub Pages](https:/
 
 If we make the assumption that I've successfully removed all Bootstrap4, Jquery, Feather, and Google Fonts dependencies (by downloading them all raw to my GitHub repository... I know, I'm crazy), then I'm left with one big gaping dependency hole. My site relies on GitHub and CircleCI. And this leads me to describe what prompted me to do all of this.
 
-- [The Story Behind this Extreme Decision](#the-story-behind-this-extreme-decision)
+- [The Story Behind this Extreme Decision](#the-story)
 - [How I Use CI Tools](#how-i-use-ci-tools)
 - [Here Enters GitHub Actions](#here-enters-github-actions)
-    * [1. Building my website](#1-building-my-website)
-    * [2. Notifying Slack](#2-notifying-slack)
-    * [3. "Deploying" to GitHub Pages](#3-deploying-to-github-pages)
-    * [4. Running daily crons](#4-running-daily-crons)
+    * [1. Building my website](#building-my-website)
+    * [2. Notifying Slack](#notifying-slack)
+    * [3. "Deploying" to GitHub Pages](#deploying-to-github-pages)
+    * [4. Running daily crons](#running-daily-crons)
 - [Conclusion](#conclusion)
 
 <div id="anchor">
-  <a id="the-story-behind-this-extreme-decision">&nbsp;</a>
+  <a id="the-story">&nbsp;</a>
 
 ## The Story Behind this Extreme Decision
 </div>
@@ -68,7 +68,7 @@ The immediate first thing I noticed was that GitHub Actions requires you to have
 So besides needing a separate workflow file for each workflow, let's jump in to each requirement individually.
 
 <div id="anchor">
-  <a id="1-building-my-website">&nbsp;</a>
+  <a id="building-my-website">&nbsp;</a>
 
 ### 1. Building my website
 </div>
@@ -123,7 +123,7 @@ The next few steps are to set up Bundler, install gems, and build the site. I'll
 Bam! Not too shabby. This now looks _very_ familiar to CircleCI.
 
 <div id="anchor">
-  <a id="2-notifying-slack">&nbsp;</a>
+  <a id="notifying-slack">&nbsp;</a>
 
 ### 2. Notifying Slack
 </div>
@@ -187,7 +187,7 @@ Ah, I almost forgot... I missed the new environment variables. By default, `BUIL
 And that's it. Add those few steps, and now one of the slack steps will always run, depending on the rest of the build.
 
 <div id="anchor">
-  <a id="3-deploying-to-github-pages">&nbsp;</a>
+  <a id="deploying-to-github-pages">&nbsp;</a>
 
 ### 3. "Deploying" to GitHub Pages
 </div>
@@ -229,7 +229,7 @@ And then I can call that new message by using this: `{% raw %}${{ env.DEPLOY_MES
 Important note: when using the generic version of this action, you'll need to pass the `GITHUB_TOKEN` as a `with` variable instead of an `env` variable; I have a specific version of this action that takes it in as an `env` variable.
 
 <div id="anchor">
-  <a id="4-running-daily-crons">&nbsp;</a>
+  <a id="running-daily-crons">&nbsp;</a>
 
 ### 4. Running daily crons
 </div>

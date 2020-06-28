@@ -35,7 +35,7 @@ jobs:
       run: JEKYLL_ENV=production bundle exec jekyll build --destination ./_site/
 
     - name: HTML Proofer
-      run: bundle exec htmlproofer --assume-extension --allow-hash-href --internal-domains /emmasax4.info/ --only_4xx ./_site/
+      run: scripts/html_proofer.sh
 
     - name: Notify Slack on Success
       if: success()

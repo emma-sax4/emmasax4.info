@@ -11,7 +11,7 @@ markdown: CommonMark
 
 commonmark:
   options: ["SMART", "UNSAFE"]
-  extensions: ["strikethrough", "autolink", "table"]
+  extensions: ["autolink", "table"]
 
 webmaster_verifications:
   google: v04az8eo-0UcZrWCJr7SKAvM6hw90qTCBQoKx3PlXCA
@@ -45,6 +45,9 @@ plugins:
 include:
   - _blog_posts
   - _pages
+
+exclude:
+  - scripts
 
 collections:
   - blog_posts
