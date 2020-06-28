@@ -9,4 +9,3 @@ Layout/LineLength:
 AllCops:
   Exclude:
     - vendor/**/*
-    - scripts/markdown_toc.rb
