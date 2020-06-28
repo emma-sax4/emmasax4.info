@@ -17,16 +17,18 @@ def usage
   exit 1
 end
 
+# A class that's designed read a Markdown file, and automatically generate
+# a Markdown Table of Contents based on the file's header's specified by #s.
 class ToCWriter
   def initialize(source_file, top = TOP, max = MAX)
     @source_file = source_file
     @top = top.to_i
     @max = max.to_i
     @seen = []
-    @level = ""
-    @start = ""
-    @header = ""
-    @anchor = ""
+    @level = ''
+    @start = ''
+    @header = ''
+    @anchor = ''
   end
 
   def write
@@ -47,13 +49,13 @@ class ToCWriter
   private
 
   def ignore_this_header?
-    @header == "Table of contents" || \
+    @header == 'Table of Contents' || \
       @level.length < @top || \
       @level.length > @max
   end
 
   def set_anchor
-    @anchor = @header.downcase.gsub(/[^a-z\d_\- ]+/, "").tr(" ", "-")
+    @anchor = @header.downcase.gsub(/[^a-z\d_\- ]+/, '').tr(' ', '-')
     update_if_seen
   end
 
@@ -61,9 +63,9 @@ class ToCWriter
     inc = 2
     while @seen.include?(@anchor)
       if inc == 2
-        @anchor += "-" + inc.to_s
+        @anchor += '-' + inc.to_s
       else
-        @anchor.sub!(/-\d+$/, "-" + inc.to_s)
+        @anchor.sub!(/-\d+$/, '-' + inc.to_s)
       end
       inc += 1
     end
@@ -72,12 +74,12 @@ class ToCWriter
 
   def set_start
     len = @level.length
-    bullet = len.even? ? "-" : "*"
-    @start = "  " * (len - @top) + bullet
+    bullet = len.even? ? '-' : '*'
+    @start = '  ' * (len - @top) + bullet
   end
 end
 
 usage if ARGV.length.zero?
-usage if ARGV[0] == "-h"
+usage if ARGV[0] == '-h'
 
 ToCWriter.new(*ARGV).write if $PROGRAM_NAME == __FILE__
