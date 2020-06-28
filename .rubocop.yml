@@ -6,4 +6,6 @@ Style/HashSyntax:
 Layout/LineLength:
   Exclude:
     - Gemfile
-    - vendor/**
+AllCops:
+  Exclude:
+    - vendor
