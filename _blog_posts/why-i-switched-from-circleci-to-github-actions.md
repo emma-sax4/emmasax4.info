@@ -12,10 +12,20 @@ I know my website was still dependent on a lot of things: [GitHub Pages](https:/
 
 If we make the assumption that I've successfully removed all Bootstrap4, Jquery, Feather, and Google Fonts dependencies (by downloading them all raw to my GitHub repository... I know, I'm crazy), then I'm left with one big gaping dependency hole. My site relies on GitHub and CircleCI. And this leads me to describe what prompted me to do all of this.
 
-* Table of Contents
-{:toc}
+- [The Story Behind this Extreme Decision](#the-story)
+- [How I Use CI Tools](#how-i-use-ci-tools)
+- [Here Enters GitHub Actions](#here-enters-github-actions)
+  * [1. Building my website](#building-my-website)
+  * [2. Notifying Slack](#notifying-slack)
+  * [3. "Deploying" to GitHub Pages](#deploying-to-github-pages)
+  * [4. Running daily crons](#running-daily-crons)
+- [Conclusion](#conclusion)
+
+<div id="anchor">
+  <a id="the-story">&nbsp;</a>
 
 ## The Story Behind this Extreme Decision
+</div>
 
 A few weeks ago, Travis CI had a problem delivering notification webhooks. At my work, we send Travis CI webhooks to one of our internal websites, which then sends Slack notifications and starts deployments to our staging and production environments. And when Travis CI stopped sending our webhooks, we lost all notifications and all deployments—for half a day.
 
@@ -31,7 +41,11 @@ So, how does this relate to my project? After thinking about it for a while, I d
 
 Up until now, I've heard of GitHub Actions, but I've been a little bit scared to try it out. I figured that there was no time like the present to give it a shot. If it doesn't work, then I have a CI solution that I'm really perfectly satisfied with and okay sticking with. If it does work out, then I've got a CI solution I'm happy with that _also_ cuts out a third party platform. I won't need to pass secure tokens and secrets around, and I won't need webhooks. GitHub would handle everything, from storing my source code, to building, to deploying, to hosting. And if GitHub has an outage, well my whole site is down anyway, so as long as they're working on fixing it for me, then I'm satisfied 👍🏼.
 
+<div id="anchor">
+  <a id="how-i-use-ci-tools">&nbsp;</a>
+
 ## How I Use CI Tools
+</div>
 
 As I originally outlined in [this blog post](/blog/posts/why-i-switched-from-travis-ci-to-circleci/), I use CI tools for four main things:
 > 1. Build my Jekyll website quickly, run HTML Proofer on it, and have room to grow my test suite if I desire to do so
@@ -41,7 +55,11 @@ As I originally outlined in [this blog post](/blog/posts/why-i-switched-from-tra
 
 This list of four requirements hasn't changed. CircleCI can do all of these things beautifully, although if I'm honest, I had to do some of my own personal fidgeting around to get #3 working as expected and #2 with a custom Slack message. All of this is fine. I put the time and effort in once, and it's paid off countless times since. #automation #computers. Now it's time to see if GitHub Actions can do the same things for me.
 
+<div id="anchor">
+  <a id="here-enters-github-actions">&nbsp;</a>
+
 ## Here Enters GitHub Actions
+</div>
 
 On the surface, GitHub Actions is _very_ similar to CircleCI. Both of them use Yaml, and both of them use workflows which have multiple jobs, and jobs have multiple steps/commands. Both of them require a `checkout` step, and both of them have capabilities to run on a schedule or on `push`.
 
@@ -49,7 +67,11 @@ The immediate first thing I noticed was that GitHub Actions requires you to have
 
 So besides needing a separate workflow file for each workflow, let's jump in to each requirement individually.
 
+<div id="anchor">
+  <a id="building-my-website">&nbsp;</a>
+
 ### 1. Building my website
+</div>
 
 The first step in each workflow is to `checkout` the code. GitHub Actions provides a [Checkout Action](https://github.com/actions/checkout) that's made to do exactly that. So there, we have our first few steps:
 ```yml
@@ -100,7 +122,11 @@ The next few steps are to set up Bundler, install gems, and build the site. I'll
 
 Bam! Not too shabby. This now looks _very_ familiar to CircleCI.
 
+<div id="anchor">
+  <a id="notifying-slack">&nbsp;</a>
+
 ### 2. Notifying Slack
+</div>
 
 It turns out that GitHub Actions uses actions similarly to how CircleCI uses orbs. So, I went and hunted down the perfect action for slack notifications. I ended up finding [`action-slacker`](https://github.com/marketplace/actions/action-slacker).
 
@@ -160,7 +186,11 @@ Ah, I almost forgot... I missed the new environment variables. By default, `BUIL
 
 And that's it. Add those few steps, and now one of the slack steps will always run, depending on the rest of the build.
 
+<div id="anchor">
+  <a id="deploying-to-github-pages">&nbsp;</a>
+
 ### 3. "Deploying" to GitHub Pages
+</div>
 
 With GitHub Actions' marketplace, it made it simple to find the perfect action to "deploy" to GitHub Pages: [`Deploy to GitHub Pages`](https://github.com/marketplace/actions/deploy-to-github-pages). This action was ideal, since it didn't require me to pass a lot of environment variables or inputs in to get it working correctly. Here's what I needed:
 ```yml
@@ -198,7 +228,11 @@ And then I can call that new message by using this: `{% raw %}${{ env.DEPLOY_MES
 
 Important note: when using the generic version of this action, you'll need to pass the `GITHUB_TOKEN` as a `with` variable instead of an `env` variable; I have a specific version of this action that takes it in as an `env` variable.
 
+<div id="anchor">
+  <a id="running-daily-crons">&nbsp;</a>
+
 ### 4. Running daily crons
+</div>
 
 If I'm completely honest, running daily crons is about the simplest part of this entire process. Either GitHub Actions supports crons, or it doesn't. In this case... it totally does. The [documentation for GitHub Actions schedules](https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions#onschedule) clearly defines that we should submit our crons in UTC in Posix format:
 ```yml
@@ -210,7 +244,11 @@ on:
 
 And that's it. The cron takes a couple of minutes longer to begin than it does with CircleCI, but that's close enough for me.
 
+<div id="anchor">
+  <a id="conclusion">&nbsp;</a>
+
 ## Conclusion
+</div>
 
 After what's probably about 8 hours of work, my new CI solution is complete. My site now completely uses GitHub Actions to build and deploy, and there's only a couple things I compromised.
 

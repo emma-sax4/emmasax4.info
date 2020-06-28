@@ -11,20 +11,13 @@ jobs:
       uses: actions/checkout@v1
 
     - name: Define Variables
-      run: |
-        echo "::set-env name=BRANCH::$(echo ${{ github.ref }} | sed -E 's|refs/[a-zA-Z]+/||')"
-        echo "::set-env name=BUILD_URL::$(echo https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})"
-        if [[ ${{ github.actor }} == 'pr-scheduler[bot]' ]]; then
-          echo "::set-env name=ACTOR_ICON::https://i.imgur.com/tmdeggv.png"
-        else
-          echo "::set-env name=ACTOR_ICON::https://github.com/${{ github.actor }}.png"
-        fi
+      run: bash scripts/set_variables.sh release ${{ github.repository }} ${{ github.ref }} ${{ github.run_id }} ${{ github.actor }}
 
     - name: Switch to Current Branch
       run: git checkout ${{ env.BRANCH }}
 
     - name: Configure Bundler
-      run: sudo gem install bundler -v $(cat Gemfile.lock | tail -1 | tr -d ' ')
+      run: sudo gem install bundler -v $(cat Gemfile.lock | tail -1 | tr -d " ")
 
     - name: Configure Gem Cache
       uses: actions/cache@v1
@@ -34,13 +27,13 @@ jobs:
         restore-keys: bundler-cache-
 
     - name: Install Gems
-      run: bundle config set path 'vendor/bundle' && bundle install
+      run: bundle config set path "vendor/bundle" && bundle install
 
     - name: Jekyll Build
       run: JEKYLL_ENV=production bundle exec jekyll build --destination ./_site/
 
     - name: HTML Proofer
-      run: bundle exec htmlproofer --assume-extension --allow-hash-href --internal-domains /emmasax4.info/ --only_4xx ./_site/
+      run: bash scripts/html_proofer.sh ${{ env.DEPLOYMENT_STATUS }}
 
     - name: Rubocop
       run: bundle exec rubocop
@@ -53,19 +46,12 @@ jobs:
         BRANCH: gh-pages
         FOLDER: _site
         CLEAN: true
-        COMMIT_MESSAGE: 'Deploy to ${{ github.repository }}'
+        COMMIT_MESSAGE: "Deploy to ${{ github.repository }}"
         GIT_CONFIG_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
         GIT_CONFIG_NAME: github-actions[bot]
 
     - name: Set Deploy Status Message
-      run: |
-        if [[ ${{ env.DEPLOYMENT_STATUS }} == skipped ]]; then
-          echo "::set-env name=DEPLOY_MESSAGE::$(echo Deploy to GitHub Pages was *skipped*)"
-        elif [[ ${{ env.DEPLOYMENT_STATUS }} == success ]]; then
-          echo "::set-env name=DEPLOY_MESSAGE::$(echo Deploy to GitHub Pages was *successful*)"
-        elif [[ ${{ env.DEPLOYMENT_STATUS }} == failed ]]; then
-          echo "::set-env name=DEPLOY_MESSAGE::$(echo Deploy to GitHub Pages was *unsuccessful*)"
-        fi
+      run: bash scripts/deploy_status_message.sh ${{ env.DEPLOYMENT_STATUS }}
 
     - name: Notify Slack on Success
       if: success()
@@ -73,10 +59,10 @@ jobs:
       env:
         SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
       with:
-        channel: '#general'
+        channel: "#general"
         icon_url: https://img.icons8.com/ios-filled/50/000000/github.png
         username: GitHub Actions
-        color: '#23c22e'
+        color: "#23c22e"
         title: ${{ github.repository }}
         title_link: https://github.com/${{ github.repository }}
         author_name: ${{ github.actor }}
@@ -91,10 +77,10 @@ jobs:
       env:
         SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
       with:
-        channel: '#general'
+        channel: "#general"
         icon_url: https://img.icons8.com/ios-filled/50/000000/github.png
         username: GitHub Actions
-        color: '#bd2222'
+        color: "#bd2222"
         title: ${{ github.repository }}
         title_link: https://github.com/${{ github.repository }}
         author_name: ${{ github.actor }}
