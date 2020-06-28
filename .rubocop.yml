@@ -1,15 +1,21 @@
 require: rubocop-jekyll
+
 inherit_gem:
   rubocop-jekyll: ./.rubocop.yml
+
 AllCops:
   Exclude:
     - vendor/**/*
+
 Layout/LineLength:
   Exclude:
     - Gemfile
+
 Style/HashSyntax:
   Enabled: false
+
 Jekyll/NoPutsAllowed:
   Enabled: false
+
 Style/RegexpLiteral:
   EnforcedStyle: slashes
