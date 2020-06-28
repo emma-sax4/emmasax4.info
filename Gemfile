@@ -1,7 +1,8 @@
-source "https://rubygems.org"
+source 'https://rubygems.org'
 
 # Gems from RubyGems that are required for all environments
 gem 'jekyll',                      '~> 3.8'
+gem 'jekyll-commonmark',           '~> 1.3'
 gem 'jekyll-default-layout',       '~> 0.1'
 gem 'jekyll-last-modified-at',     '~> 1.3'
 gem 'jekyll-mentions',             '~> 1.6'
