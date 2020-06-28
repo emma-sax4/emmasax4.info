@@ -6,4 +6,4 @@ Style/HashSyntax:
 Layout/LineLength:
   Exclude:
     - Gemfile
-    - vendor/*
+    - vendor/**
