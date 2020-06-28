@@ -35,7 +35,7 @@ jobs:
     - name: HTML Proofer
       run: bash scripts/html_proofer.sh ${{ env.DEPLOYMENT_STATUS }}
 
-    - name: Rubocop
+    - name: Jekyll Rubocop
       run: bundle exec rubocop
 
     - name: GitHub Pages Deploy

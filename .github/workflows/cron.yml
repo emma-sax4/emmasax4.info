@@ -35,7 +35,7 @@ jobs:
     - name: HTML Proofer
       run: bash scripts/html_proofer.sh
 
-    - name: Rubocop
+    - name: Jekyll Rubocop
       run: bundle exec rubocop
 
     - name: Notify Slack on Success
