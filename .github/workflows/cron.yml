@@ -11,7 +11,7 @@ jobs:
       uses: actions/checkout@v1
 
     - name: Define Variables
-      run: scripts/variables.sh cron
+      run: bash scripts/variables.sh cron
 
     - name: Switch to Current Branch
       run: git checkout ${{ env.BRANCH }}
@@ -33,7 +33,7 @@ jobs:
       run: JEKYLL_ENV=production bundle exec jekyll build --destination ./_site/
 
     - name: HTML Proofer
-      run: scripts/html_proofer.sh
+      run: bash scripts/html_proofer.sh
 
     - name: Notify Slack on Success
       if: success()

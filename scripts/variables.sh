@@ -8,9 +8,9 @@ if [ $workflow = "develop" ]; then
   echo "::set-env name=PULL_ID::$pull_id"
   echo "::set-env name=PULL_URL::$(echo https://github.com/${{ github.repository }}/pull/$pull_id)"
   echo "::set-env name=BRANCH::$(echo ${{ github.head_ref }} | sed -E 's|refs/[a-zA-Z]+/||')"
-else if [ $workflow = "release" ]; then
+elif [ $workflow = "release" ]; then
   echo "Release workflow"
-  if [[ ${{ github.actor }} == 'pr-scheduler[bot]' ]]; then
+  if [[ ${{ github.actor }} = 'pr-scheduler[bot]' ]]; then
     echo "pr Scheduler"
     echo "::set-env name=ACTOR_ICON::https://i.imgur.com/tmdeggv.png"
   else
@@ -19,7 +19,7 @@ else if [ $workflow = "release" ]; then
   fi
 fi
 
-if [ $workflow = "release" || $workflow = "cron" ]; then
+if [ $workflow = "release" ] || [ $workflow = "cron" ]; then
   echo "Release workflow or Cron workflow!"
   echo "::set-env name=BRANCH::$(echo ${{ github.ref }} | sed -E 's|refs/[a-zA-Z]+/||')"
 
