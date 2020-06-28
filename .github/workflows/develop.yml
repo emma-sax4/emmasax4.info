@@ -10,9 +10,6 @@ jobs:
     - name: Checkout Code
       uses: actions/checkout@v1
 
-    - name: Set Deploy Status Message
-      run: bash scripts/deploy_status_message.sh skipped
-
     - name: Define Variables
       run: bash scripts/set_variables.sh develop ${{ github.repository }} ${{ github.ref }} ${{ github.run_id }} ${{ github.head_ref }}
 
@@ -54,7 +51,7 @@ jobs:
         author_icon: https://github.com/${{ github.actor }}.png
         text: >-
           Build <${{ env.BUILD_URL }}|${{ github.run_id }}> on branch `${{ env.BRANCH }}`
-          in PR <${{ env.PULL_URL }}|#${{ env.PULL_ID }}> *passed* ${{ env.DEPLOY_MESSAGE }}.
+          in PR <${{ env.PULL_URL }}|#${{ env.PULL_ID }}> *passed*.
 
     - name: Notify Slack on Failure
       if: failure()
@@ -72,4 +69,4 @@ jobs:
         author_icon: https://github.com/${{ github.actor }}.png
         text: >-
           Build <${{ env.BUILD_URL }}|${{ github.run_id }}> on branch `${{ env.BRANCH }}`
-          in PR <${{ env.PULL_URL }}|#${{ env.PULL_ID }}> *failed* ${{ env.DEPLOY_MESSAGE }}.
+          in PR <${{ env.PULL_URL }}|#${{ env.PULL_ID }}> *failed*.
