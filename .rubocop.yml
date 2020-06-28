@@ -1,6 +1,6 @@
 require: rubocop-jekyll
 inherit_gem:
-  rubocop-jekyll: .rubocop.yml
+  rubocop-jekyll: ./.rubocop.yml
 Style/HashSyntax:
   Enabled: false
 Layout/LineLength:
@@ -9,3 +9,4 @@ Layout/LineLength:
 AllCops:
   Exclude:
     - vendor/**
+    - scripts/markdown_toc.rb
