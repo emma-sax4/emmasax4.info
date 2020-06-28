@@ -10,8 +10,12 @@ jekyll-mentions: https://github.com
 markdown: CommonMark
 
 commonmark:
-  options: ["SMART", "UNSAFE"]
-  extensions: ["autolink", "table"]
+  options:
+    - SMART
+    - UNSAFE
+  extensions:
+    - autolink
+    - table
 
 webmaster_verifications:
   google: v04az8eo-0UcZrWCJr7SKAvM6hw90qTCBQoKx3PlXCA

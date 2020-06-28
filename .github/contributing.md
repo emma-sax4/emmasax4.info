@@ -74,7 +74,7 @@ NOTE: Running this process locally will most likely create at least one director
 We can check periodically that all of the HTML links in this website load correctly:
 ```bash
 JEKYLL_ENV=production bundle exec jekyll build
-bundle exec htmlproofer --assume-extension --allow-hash-href --internal-domains /emmasax4.info/ --only_4xx ./_site/
+bash scripts/html_proofer.sh
 ```
 
 If you're in the process of creating a new blog post, then most likely the external link to the new blog post will fail. This makes sense—the blog post isn't live online yet, and that's what the link is checking for.
