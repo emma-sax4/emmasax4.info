@@ -10,13 +10,13 @@ jobs:
     - name: Checkout Code
       uses: actions/checkout@v1
 
-    - name: Define Variables
-      run: bash scripts/set_variables.sh develop ${{ github.repository }} ${{ github.ref }} ${{ github.run_id }} ${{ github.head_ref }}
+    - name: Define Run Variables
+      run: bash scripts/define_run_variables.sh develop ${{ github.repository }} ${{ github.ref }} ${{ github.run_id }} ${{ github.head_ref }}
 
     - name: Switch to Current Branch
       run: git checkout ${{ env.BRANCH }}
 
-    - name: Configure Bundler
+    - name: Configure System
       run: sudo gem update --system 3.0.8 && sudo gem install bundler -v $(cat Gemfile.lock | tail -1 | tr -d " ")
 
     - name: Configure Gem Cache
@@ -35,7 +35,7 @@ jobs:
     - name: HTML Proofer
       run: bash scripts/html_proofer.sh
 
-    - name: Jekyll Rubocop
+    - name: Rubocop
       run: bundle exec rubocop
 
     - name: Notify Slack on Success

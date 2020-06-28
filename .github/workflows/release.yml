@@ -10,14 +10,14 @@ jobs:
     - name: Checkout Code
       uses: actions/checkout@v1
 
-    - name: Define Variables
-      run: bash scripts/set_variables.sh release ${{ github.repository }} ${{ github.ref }} ${{ github.run_id }} ${{ github.actor }}
+    - name: Define Run Variables
+      run: bash scripts/define_run_variables.sh release ${{ github.repository }} ${{ github.ref }} ${{ github.run_id }} ${{ github.actor }}
 
     - name: Switch to Current Branch
       run: git checkout ${{ env.BRANCH }}
 
-    - name: Configure Bundler
-      run: sudo gem install bundler -v $(cat Gemfile.lock | tail -1 | tr -d " ")
+    - name: Configure System
+      run: sudo gem update --system 3.0.8 && sudo gem install bundler -v $(cat Gemfile.lock | tail -1 | tr -d " ")
 
     - name: Configure Gem Cache
       uses: actions/cache@v1
@@ -35,7 +35,7 @@ jobs:
     - name: HTML Proofer
       run: bash scripts/html_proofer.sh ${{ env.DEPLOYMENT_STATUS }}
 
-    - name: Jekyll Rubocop
+    - name: Rubocop
       run: bundle exec rubocop
 
     - name: GitHub Pages Deploy
@@ -51,7 +51,7 @@ jobs:
         GIT_CONFIG_NAME: github-actions[bot]
 
     - name: Set Deploy Status Message
-      run: bash scripts/deploy_status_message.sh ${{ env.DEPLOYMENT_STATUS }}
+      run: bash scripts/set_deploy_status_message.sh ${{ env.DEPLOYMENT_STATUS }}
 
     - name: Notify Slack on Success
       if: success()
