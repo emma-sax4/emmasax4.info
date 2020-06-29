@@ -78,4 +78,4 @@ jobs:
         author_icon: https://github.com/${{ github.actor }}.png
         text: >-
           Build <${{ env.BUILD_URL }}|${{ github.run_id }}> on branch `${{ env.BRANCH }}`
-          in PR <${{ env.PULL_URL }}|#${{ env.PULL_ID }}> *failed*.
+          in PR <${{ env.PULL_URL }}|#${{ env.PULL_ID }}> *failed*. ${{ env.DEPLOY_MESSAGE }}.
