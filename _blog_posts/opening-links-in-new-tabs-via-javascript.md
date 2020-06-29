@@ -17,7 +17,7 @@ Have you ever noticed that some websites you visit have links that open to new t
 First, let's make sure we're all on the same page when I say "opening in a new tab" versus "opening in the current tab." The first example is of a link opening in the current tab. The second is of a link opening in a new tab:
 
 > This will be a link to <a href="https://github.com/" target="_self">GitHub</a>.
-
+>
 > This will be a link to <a href="https://github.com/" target="_blank">GitHub</a>.
 
 Next, for those of you that aren't familiar with Markdown, here's Wikipedia's definition (since Wikipedia is truth 😉):
@@ -47,11 +47,15 @@ In modern internetting (not a real word, but I think I might copyright it), it's
 ## Writing Links in Markdown that Open in a New Tab ⎘
 
 So, I endeavored to find the best way to set my Markdown links to open in new tabs. By default, in Markdown with [kramdown](https://kramdown.gettalong.org/) (my selected Markdown-to-HTML converter), there's only two ways to make this happen:
+
 1. This option is essentially injecting raw HTML into the Markdown sentence. While this is totally acceptable and it works, it's typing a lot of special characters into a sentence, just for a link to open in a new tab. This solution works when Markdown is interpreted with kramdown, and it will render properly on GitHub, although GitHub will still open the link in the same tab.
+
     ```html
     This will be a link to <a href="https://github.com" target="_blank">GitHub</a>.
     ```
+
 2. This option is what kramdown provides as a way to open links in new tabs. It isn't as awful to type, and it's not quite as many extra characters. However, it will not render on GitHub nicely at all. When rendered on GitHub, it will leave the `{:target="_blank"}` as part of the text sentence, meaning it's disrupting the read of the document _and_ confusing readers.
+
     ```markdown
     This will be a link to [GitHub](https://github.com){:target="_blank"}.
     ```

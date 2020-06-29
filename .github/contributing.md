@@ -1,25 +1,28 @@
 # Contributing
 
 ### Table of Contents
-- [Contribution Process](#contribution-process)
-- [Running Locally](#running-locally)
-- [HTML Proofer](#html-proofer)
-- [Continuous Integration](#continuous-integration)
+
+* [Contribution Process](#contribution-process)
+* [Running Locally](#running-locally)
+* [HTML Proofer](#html-proofer)
+* [Rubocop](#rubocop)
+* [Markdown Linter](#markdown-linter)
+* [Continuous Integration](#continuous-integration)
   * [Tests](#tests)
   * [Deployments](#deployments)
   * [Notifications](#notifications)
-- [Categories vs. Tags](#categories-vs-tags)
-- [Directory/File Structure](#directoryfile-structure)
+* [Categories vs. Tags](#categories-vs-tags)
+* [Directory/File Structure](#directoryfile-structure)
   * [`.github/`](#github)
   * [`_blog_posts/`](#_blog_posts)
-    - [Posts with and without Tags](#posts-with-and-without-tags)
-    - [Posts in a Category](#posts-in-a-category)
-    - [Writing Drafts](#writing-drafts)
+    * [Posts with and without Tags](#posts-with-and-without-tags)
+    * [Posts in a Category](#posts-in-a-category)
+    * [Writing Drafts](#writing-drafts)
   * [`_includes/`](#_includes)
   * [`_layouts/`](#_layouts)
   * [`_legos/`](#_legos)
   * [`_pages/`](#_pages)
-    - [`_pages/blog/`](#_pagesblog)
+    * [`_pages/blog/`](#_pagesblog)
   * [`assets/`](#assets)
   * [`_config.yml`](#_configyml)
   * [`favicon.ico`](#faviconico)
@@ -27,7 +30,7 @@
 
 ## Contribution Process
 
-1. Fork this repository: https://github.com/emmasax4/emmasax4.info/fork.
+1. Fork this repository: [https://github.com/emmasax4/emmasax4.info/fork](https://github.com/emmasax4/emmasax4.info/fork).
 2. Triple check you're currently on the `main` branch.
 3. Make your changes on a feature branch:
 
@@ -50,19 +53,25 @@ Happy coding! 🤗
 ## Running Locally
 
 To run this application locally, following these steps:
+
 1. Be sure you have Ruby installed on your machine; the `.ruby-version` file specifies ruby 2.6.5 because that's the latest stable version of Ruby.
 2. First, bundle install and install all of the gems specified in the Gemfile:
+
     ```bash
     gem install bundler
     bundle install
     ```
+
 3. Then build and serve the site using Jekyll:
+
     ```bash
     bundle exec jekyll serve # with optional --future flag
     ```
+
 4. Navigate to the local URL Jekyll provides (`http://127.0.0.1:4000` on my machine).
 
 To view Disqus comments and comment loading locally, run Jekyll in the `production` environment (local development, where the environment is automatically `development`, does not show comments):
+
 ```bash
 JEKYLL_ENV=production bundle exec jekyll serve # with optional --future flag
 ```
@@ -71,7 +80,8 @@ NOTE: Running this process locally will most likely create at least one director
 
 ## HTML Proofer
 
-We can check periodically that all of the HTML links in this website load correctly:
+We can check periodically that all of the HTML links in this website load correctly with [HTML Proofer](https://github.com/gjtorikian/html-proofer):
+
 ```bash
 JEKYLL_ENV=production bundle exec jekyll build
 bash scripts/html_proofer.sh
@@ -80,6 +90,26 @@ bash scripts/html_proofer.sh
 If you're in the process of creating a new blog post, then most likely the external link to the new blog post will fail. This makes sense—the blog post isn't live online yet, and that's what the link is checking for.
 
 GitHub Actions also runs a version of the HTML Proofer which skips over all internal domains. GitHub Actions runs this step after building, just verifying that links are accurate. If a build breaks because of this, the failures can probably be solved by just rerunning the workflow.
+
+## Rubocop
+
+This project uses [Rubocop](https://github.com/rubocop-hq/rubocop) to check its Ruby files. To run Rubocop locally, run:
+
+```bash
+bundle exec rubocop
+```
+
+GitHub Actions also runs Rubocop as well, so if any changes are made to the Ruby files, GitHub Actions will evaluate them.
+
+## Markdown Linter
+
+This project uses the [MarkdownLint](https://github.com/markdownlint/markdownlint) on its Markdown files. There are specific linter [rules](https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md) that I've carefully chosen to omit (because they simply don't fit my Markdown style), and so to run the linter with my rules, run this script:
+
+```bash
+bash scripts/markdown_linter.sh
+```
+
+Note that the linter specifically passes in directories and files to evaluate, so if you create any new Markdown files, you'll have to add them to `scripts/markdown_linter.sh`.
 
 ## Continuous Integration
 
@@ -106,6 +136,7 @@ There's two ways of sorting blog posts. The first way is with a `tag`. A blog po
 ## Directory/File Structure
 
 Here are all of the parts of this project associated with running this application. This list does not include files/directories related to Git.
+
 ```
 .
 ├── .github
@@ -193,6 +224,7 @@ This site builds and "deploys" through GitHub Actions.
 #### Posts with and without Tags
 
 Most of the posts can just go into the general `_blog_posts/` directory, written as Markdown files. For a generic post, the front matter could look like this:
+
 ```yml
 ---
 layout: post
@@ -212,6 +244,7 @@ The `date` front matter indicates the published date and time. Usually, it's tot
 #### Posts in a Category
 
 If I'm going to write a group of posts that all have a common theme, they can each go into a new nested directory: `_blog_posts/category-one/`, and should make use of the `title` and `subtitle` metadata, where the `title` is the name of the `category`, and the `subtitle` is the title of that specific post:
+
 ```yml
 ---
 layout: post
@@ -228,6 +261,7 @@ date: 2001-06-27 20:30:00 -0500 # 2001-06-28 01:30:00 UTC
 To write drafts, make a new file in the `_blog_posts/` directory (or in a subdirectory if the post will be part of a category). The new file should be named in the following pattern: `test-post-title.md`. Because this draft hasn't been published yet, I usually just put in the date I hope to publish the draft (usually a few days in the future).
 
 To the front matter, make sure to add the `layout`, `title`, and `permalink` (`subtitle`, `category`, and `tags` are all optional). Add the following front matter to the new blog post draft:
+
 ```yml
 layout: post
 title: Test Post Title
@@ -238,6 +272,7 @@ draft: true
 Optionally add `subtitle`, `category`, and `tags` to the front matter. Now, when you run `jekyll serve` locally, the draft post(s) should appear at the top of the list of posts, and should show as "Unpublished."
 
 When it's time to publish the post, you can either:
+
 * Publish the post now:
   * Remove the `draft: true` front matter
   * Add the current date/time (in the author's local time zone, properly identifying the current hour offset from UTC) to the front matter: `date: YYYY-MM-DD HH:MM:SS -0X00`
@@ -250,12 +285,14 @@ When it's time to publish the post, you can either:
   * Re-add and commit that file to the pull request
   * Wait for all status checks to pass on the pull request
   * Add a comment to the pull request with the publishing date/time in UTC:
+
     ```
     # example (May 18, 2020 at 17:58 UTC):
     @prscheduler 18-05-2020T17:58
 
     @prscheduler DD-MM-YYYYTHH:MM
     ```
+
   * Wait for the `pr-scheduler` to respond saying the merge was scheduled
   * Now, the PR Merger will automatically merge your pull request at the time specified in the pull request; GitHub Actions will then trigger a build and deploy of your changes
 
@@ -264,6 +301,7 @@ To identify the current hour offset from UTC, look up the time zone offset based
 ### `_includes/`
 
 HTML files in this directory are for page elements, such as buttons, icons, images. It is also for divs that are long or have Jekyll/Liquid logic. Each div or element should have its own file in the appropriate directory. By placing these elements here, they can be reused on multiple pages without duplicating code, and they reduce the clutter in busier pages. To call one of the elements, simply include the file in any other Markdown/HTML file:
+
 ```markdown
 {% include site/header.html %}
 ```
@@ -271,6 +309,7 @@ HTML files in this directory are for page elements, such as buttons, icons, imag
 ### `_layouts/`
 
 HTML files in this directory are for the skeletons of a specific page. The `default.html` is the plainest of the plain. It includes the head, header, footer, and necessary scripts, and defines the body and main content of the page. The other HTML files in the directory are for more detailed pages, such as the home page and blogs page. To specify that a certain page should use a specific layout, write that as the `layout` in the top of any other Markdown/HTML file:
+
 ```yml
 ---
 layout: layout-01
@@ -285,6 +324,7 @@ Layout files should be short (20 lines at the longest) and should not contain an
 ### `_legos/`
 
 This directory is a collection of different LEGO sets and MOCs that I've written. My special LEGO page (which is only linked from the "Interests & Hobbies" page), loops through all of the LEGO entries. The front matter layout of one of these entries looks like this:
+
 ```yml
 ---
 layout: lego
@@ -298,6 +338,7 @@ With the LEGO entries, it matters less exactly what date is presented, since the
 ### `_pages/`
 
 These are the general pages in the top navigation bar of the site, and they're for the main content of the site. They're written in Markdown, but Jekyll and Liquid will use the Markdown content to make HTML files. The front matter of any Markdown/HTML file specifies the settings of the page:
+
 ```yml
 ---
 layout: page # the layout HTML to use (required for almost every page)
@@ -308,6 +349,7 @@ permalink: /page-01/ # the static link this page should have (required for EACH 
 ```
 
 You can also specify custom settings that you want the page to have:
+
 ```yml
 ---
 custom_field_1: true
@@ -316,6 +358,7 @@ custom_field_2: useful_string
 ```
 
 Then, you can reference those custom settings on other HTML files (such as the layout the page is using... 😉):
+
 ```
 {{ page.custom_field_1 }}
 => true
@@ -332,6 +375,7 @@ The first index blog page we paginate is `_pages/blog.md`. The front matter of t
 In addition to that page, we also paginate the `tag` and `category` filtered pages. We specify these blog pages in its own directory, titled `_pages/blog/`, where each `tag` and `category` needs to have its own page. A `tag` should be one word, and should not require camelcase or capitalization, ex: `"tag1"` or `"tag"`. An example would be `_pages/blog/tag1.md`.
 
 For a tag, the front matter should look like this:
+
 ```yml
 ---
 layout: blog
@@ -346,6 +390,7 @@ pagination:
 ```
 
 A `category` _can_ be multiple words, and can require capitalization like a title, ex: `"Category One"` or `"Category Two"`. For a `category`, the front matter should look like this:
+
 ```markdown
 ---
 layout: blog
@@ -368,6 +413,7 @@ This directory has four directories, `css/`, `favicon/`, `images/`, and `resourc
 The `favicon/` directory contains files and multiple icons of different names for favicon displays on Android, iOS, Safari, Chrome, Firefox, IE, and Edge.
 
 The `images/` directory gives me a place to store all of the images this site uses. To call a specific image, you can either ask for it in HTML:
+
 ```html
 <div>
   <img class="custom-image-class" src="/assets/images/picture-01.jpg" alt="Picture 1">
@@ -377,10 +423,13 @@ The `images/` directory gives me a place to store all of the images this site us
 The `js/` directory is where we store all of our javascript files for the site. Some of them are called at the bottom of every page. Others are called in specific places in the code. All of these are parsed by Code Climate.
 
 The `resources/` directory gives me a place to keep PDF documents that are linked in this site. You can put a link to it in Markdown:
+
 ```markdown
 This is an example sentence, so it will throw a 404. See [here](/assets/resources/resource-01.pdf)?
 ```
+
 When calling internal resources like this, it'll automatically open in the same tab that the user is currently in. If you wish to open it in a new tab, you'll have to specify that:
+
 ```markdown
 This is an example sentence, so it will throw a 404. See <a href="/assets/resources/resource-01.pdf" target="_blank">here</a>?
 ```

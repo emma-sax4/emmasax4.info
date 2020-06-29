@@ -21,16 +21,19 @@ Of course, I started with the things I know how to do best: copy-paste 💁🏻�
 </div>
 
 So, I went on a mission to figure out how to make a prettier pagination bar. After a couple of hours, and a good night's sleep, I realized that the answer lies in the `css/main.scss` file. Specifically, this line:
+
 ```css
 @import "core/index.scss";
 ```
 
 Prior to adding that line, the whole Jekyll build would break. When I tried to load the project locally, my server would give me this error back:
+
 ```css
 ".pagination .active .page" failed to
 @extend ".selected". The selector ".selected"
 was not found.
 ```
+
 Clearly, that means my CSS is broken. But I didn't quite understand why 😕. The repository that I was copying pagination from included this line:
 
 <div class="text-center">
@@ -42,6 +45,7 @@ Since I couldn't understand out why my CSS was broken, I figured it was time for
 I had never worked with submodules in Git before. So, I started how any developer-who-doesn't-recognize-anything would start: with Google. I started to google how to add submodules to Git repositories. And me, not liking to actually read anything, just started to jump in.
 
 After everything, I ended up having to add, remove, re-add, re-remove, and re-re-add the `primer` submodule to my Git repo in order for it to commit in the repo, show up in the directory structure, and be sitting on the same commit as my example repository 🤦🏻‍♀️. Here's a list of the resources I used to help me add the `primer` submodule:
+
 * [chrisjean.com: git submodules adding, using, removing, and updating](https://chrisjean.com/git-submodules-adding-using-removing-and-updating/)
 * [stackoverflow.com: how do I check out a specific version of a submodule using git submodule](https://stackoverflow.com/questions/10914022/how-do-i-check-out-a-specific-version-of-a-submodule-using-git-submodule)
 * [2guysarguing.wordpress.com: tie git submodules to a particular commit or branch](https://twoguysarguing.wordpress.com/2010/11/14/tie-git-submodules-to-a-particular-commit-or-branch/)
@@ -51,9 +55,11 @@ After everything, I ended up having to add, remove, re-add, re-remove, and re-re
 Also, note that there is no easy way to remove a submodule. I'm just glad that I attempted this inside of a pull request because then I could `git reset` when things weren't going my way.
 
 After I finished succesfully adding the `primer` submodule 😌, all I had to do was re-add
+
 ```css
 @import "core/index.scss";
 ```
+
 back to my `main.scss`, and finally the pagination was beautiful:
 
 <div class="text-center">
@@ -63,12 +69,15 @@ back to my `main.scss`, and finally the pagination was beautiful:
 I was thrilled with the outcome of this pagination (even though it wasn't Jekyll's officially supported pagination), and I committed to `gh-pages`. However, perhaps a day later, I noticed something wrong with my CSS formatting. Perhaps you can notice it if you compare the before-pretty-pagination and the after-pretty-pagination pictures... I'll give you a hint: it has to do with the indentation and spacing of the words. Somehow, making the pagination bar pretty messed up my CSS formatting!
 
 I was upset. I wanted to have both a pretty pagination bar and proper formatting of the text. So, I went back in my commit changes and commented out everything from when the site last worked as expected. I slowly uncommented line after line until I found the problem line... of course it happened to be with the same line that makes the pagination work:
+
 ```css
 @import "core/index.scss";
 ```
+
 Are we even surprised 😤🙄?
 
 So, I went on a mini-adventure through the `primer` code to see what that line was doing. Apparently, it ends up installing a bunch of CSS files through other nested CSS files. Let's be real, even if I have the time to go through each one looking for what may be conflicting with my `main.scss` file, I don't want to do that. So, I did an entire repository-wide file search for: `primer/pagination/index`, found the single pagination CSS page I needed (since that's all I'm using `primer` for), and switched to import just that:
+
 ```css
 @import "pagination/index.scss";
 ```

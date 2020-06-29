@@ -12,6 +12,7 @@ A couple years ago, after I started working full-time, I thought about pursuing 
 The reasons why a person might decide to get a second (or third) job is usually related to money. If a person is having trouble paying the bills with their first job, they may get another one to cover the difference. But for me, I didn't necessarily _need_ a second job, I just _wanted_ one. Since I had decided to do my Kenya vacation in August (read more about that [here](/blog/welcome-to-kenya/)), I figured that my savings account was going to take a significant hit if I didn't make up some of that money through another job.
 
 ## Working with [Instacart](https://shoppers.instacart.com/)
+
 ### Full-Service Shopper
 
 One of my friends works a second job at Instacart as a full-service shopper/deliverer. She really enjoys it, too. She gets off her 9–5 job, and then drives around to different grocery stores, shops, uses an Instacart-provided debit card to pay, and then delivers the groceries to customers. She gets paid based on each order (what Instacart calls a "batch"), and she receives tips. Some of the deliveries are at apartment buildings, and some are at houses. The idea of shopping for food without spending any of _my_ money appealed to me. So in late January, I applied to work as a full-service shopper for Instacart.
@@ -59,6 +60,7 @@ So one month after returning from Kenya, I worked my last shift as an Instacart 
 ## What I Learned
 
 It's hard for me to summarize what I've learned during this, but I'll do my best:
+
 * It's hard to work more than 40 hours a week. I admire anybody that works more than 40 hours a week for any consistent amount of time. Oh, and nobody working that much should be struggling to pay their bills.
 * People that are paid hourly are not lazy or unintelligent (I already knew this, but it was confirmed).
 * Working physical jobs are super difficult (I sit on a computer at my full-time job).

@@ -84,6 +84,7 @@ There's several different types of configurations. The basic thing to know is th
 Now, let's walk through some examples of these DNS records may look like if you set up your website on a few different host providers. Note that TTL stands for Time to Live, and it specifies how long a resolver is supposed to cache the DNS query before looking for any new DNS queries. I purchased and manage my DNS on [Namecheap](https://namecheap.com/) (that's not a secret, so I don't feel bad disclosing that at all).
 
 DNS records when setting up your website with your main domain on GitHub Pages:
+
 ```
     Type               Host                 Value                     TTL
 -------------------------------------------------------------------------------
@@ -92,6 +93,7 @@ CNAME Record           www               mydomain.com.             Automatic
 ```
 
 DNS records when setting up your website your your main domain on Google Sites:
+
 ```
     Type               Host                 Value                     TTL
 -------------------------------------------------------------------------------
@@ -99,9 +101,11 @@ ALIAS Record             @            ghs.googlehosted.com.        Automatic
 CNAME Record            www               mydomain.com.            Automatic
 TXT Record               @          google-site-verification=...   Automatic
 ```
+
 \* The Google Site Verification is how Google verifies that you are the owner of the domain you wish to use.
 
 DNS records when setting up your website with your main domain on Wordpress:
+
 ```
     Type               Host                 Value                     TTL
 -------------------------------------------------------------------------------
@@ -110,9 +114,11 @@ ALIAS Record            @             NS2.WORDPRESS.COM.           Automatic
 ALIAS Record            @             NS3.WORDPRESS.COM.           Automatic
 CNAME Record           www               mydomain.com.             Automatic
 ```
+
 \* The `NS1.WORDPRESS.COM` are WordPress's name server resolvers. These servers are in charge of finding the IP addresses belonging to _every_ WordPress site out there.
 
 DNS records when setting up your website with a subdomain on GitHub Pages:
+
 ```
     Type               Host                 Value                     TTL
 -------------------------------------------------------------------------------
@@ -121,6 +127,7 @@ CNAME Record       www.subdomain     subdomain.mydomain.com.       Automatic
 ```
 
 DNS records when setting up your website with a subdomain on Google Sites:
+
 ```
     Type               Host                 Value                     TTL
 -------------------------------------------------------------------------------
@@ -130,6 +137,7 @@ TXT Record           subdomain     google-site-verification=...    Automatic
 ```
 
 DNS records when setting up your website with a subdomain on Wordpress:
+
 ```
     Type               Host                 Value                     TTL
 -------------------------------------------------------------------------------
@@ -142,6 +150,7 @@ I haven't worked with adding domains to any other website host providers, so I c
 So there you go! Hopefully this has helped you either learn more about DNS and domains, or will help you in choosing your personal domain and setting it up on your new website! Best of luck. I can attest that having your own website can be fun! It gives you a fun hobby and project, and it's definitely something that you can be proud of.
 
 ## References
+
 * [hownds.works](https://howdns.works/)
 * [dyn.com: everything you ever wanted to know about ttls](https://dyn.com/blog/dyn-tech-everything-you-ever-wanted-to-know-about-ttls/)
 * [support.dnsimple.com: differences between a cname alias url](https://support.dnsimple.com/articles/differences-between-a-cname-alias-url/)
