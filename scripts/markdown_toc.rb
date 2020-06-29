@@ -74,7 +74,7 @@ class ToCWriter
 
   def set_start
     len = @level.length
-    bullet = len.even? ? '-' : '*'
+    bullet = '*'
     @start = '  ' * (len - @top) + bullet
   end
 end
