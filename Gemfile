@@ -23,6 +23,6 @@ gem 'jekyll-sitemap', git: 'https://github.com/emmasax4/jekyll-sitemap.git', bra
 # Gems for only test/development environment
 group :test, :development do
   gem 'html-proofer', '~> 3.15'
-  gem 'mdl',          '~> 0.6.0'
+  gem 'mdl',          '~> 0.6'
   gem 'rubocop',      '~> 0.86'
 end
