@@ -36,7 +36,7 @@
 <meta name="msvalidate.01" content="89B2B19FF966341B78EF64EDADE6DF81" />
 <meta name="yandex-verification" content="c2741887f8c30dd1" />
 <script type="application/ld+json">
-{"description":"Emma Sax’s personal website and blog. Includes information about my social media profiles, résumé, and hobbies.","@type":"BlogPosting","headline":"Opening Links in New Tabs via Javascript","url":"https://emmasax4.info/blog/posts/opening-links-in-new-tabs-via-javascript/","dateModified":"2020-06-08T20:38:52+00:00","datePublished":"2020-01-14T06:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emmasax4.info/blog/posts/opening-links-in-new-tabs-via-javascript/"},"author":{"@type":"Person","name":"Emma Sax"},"@context":"https://schema.org"}</script>
+{"description":"Emma Sax’s personal website and blog. Includes information about my social media profiles, résumé, and hobbies.","@type":"BlogPosting","headline":"Opening Links in New Tabs via Javascript","url":"https://emmasax4.info/blog/posts/opening-links-in-new-tabs-via-javascript/","dateModified":"2020-06-29T22:35:31+00:00","datePublished":"2020-01-14T06:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emmasax4.info/blog/posts/opening-links-in-new-tabs-via-javascript/"},"author":{"@type":"Person","name":"Emma Sax"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -184,8 +184,6 @@
 <p>First, let’s make sure we’re all on the same page when I say “opening in a new tab” versus “opening in the current tab.” The first example is of a link opening in the current tab. The second is of a link opening in a new tab:</p>
 <blockquote>
 <p>This will be a link to <a href="https://github.com/" target="_self">GitHub</a>.</p>
-</blockquote>
-<blockquote>
 <p>This will be a link to <a href="https://github.com/" target="_blank">GitHub</a>.</p>
 </blockquote>
 <p>Next, for those of you that aren’t familiar with Markdown, here’s Wikipedia’s definition (since Wikipedia is truth 😉):</p>
@@ -207,11 +205,13 @@
 <h2>Writing Links in Markdown that Open in a New Tab ⎘</h2>
 <p>So, I endeavored to find the best way to set my Markdown links to open in new tabs. By default, in Markdown with <a href="https://kramdown.gettalong.org/">kramdown</a> (my selected Markdown-to-HTML converter), there’s only two ways to make this happen:</p>
 <ol>
-<li>This option is essentially injecting raw HTML into the Markdown sentence. While this is totally acceptable and it works, it’s typing a lot of special characters into a sentence, just for a link to open in a new tab. This solution works when Markdown is interpreted with kramdown, and it will render properly on GitHub, although GitHub will still open the link in the same tab.
+<li>
+<p>This option is essentially injecting raw HTML into the Markdown sentence. While this is totally acceptable and it works, it’s typing a lot of special characters into a sentence, just for a link to open in a new tab. This solution works when Markdown is interpreted with kramdown, and it will render properly on GitHub, although GitHub will still open the link in the same tab.</p>
 <pre><code class="language-html">This will be a link to &lt;a href="https://github.com" target="_blank"&gt;GitHub&lt;/a&gt;.
 </code></pre>
 </li>
-<li>This option is what kramdown provides as a way to open links in new tabs. It isn’t as awful to type, and it’s not quite as many extra characters. However, it will not render on GitHub nicely at all. When rendered on GitHub, it will leave the <code>{:target="_blank"}</code> as part of the text sentence, meaning it’s disrupting the read of the document <em>and</em> confusing readers.
+<li>
+<p>This option is what kramdown provides as a way to open links in new tabs. It isn’t as awful to type, and it’s not quite as many extra characters. However, it will not render on GitHub nicely at all. When rendered on GitHub, it will leave the <code>{:target="_blank"}</code> as part of the text sentence, meaning it’s disrupting the read of the document <em>and</em> confusing readers.</p>
 <pre><code class="language-markdown">This will be a link to [GitHub](https://github.com){:target="_blank"}.
 </code></pre>
 </li>

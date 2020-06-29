@@ -36,7 +36,7 @@
 <meta name="msvalidate.01" content="89B2B19FF966341B78EF64EDADE6DF81" />
 <meta name="yandex-verification" content="c2741887f8c30dd1" />
 <script type="application/ld+json">
-{"description":"Emma Sax’s personal website and blog. Includes information about my social media profiles, résumé, and hobbies.","@type":"BlogPosting","headline":"Why and How I Renamed my master Branch","url":"https://emmasax4.info/blog/posts/why-and-how-i-renamed-my-master-branch/","dateModified":"2020-06-17T05:00:04+00:00","datePublished":"2020-06-17T05:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emmasax4.info/blog/posts/why-and-how-i-renamed-my-master-branch/"},"author":{"@type":"Person","name":"Emma Sax"},"@context":"https://schema.org"}</script>
+{"description":"Emma Sax’s personal website and blog. Includes information about my social media profiles, résumé, and hobbies.","@type":"BlogPosting","headline":"Why and How I Renamed my master Branch","url":"https://emmasax4.info/blog/posts/why-and-how-i-renamed-my-master-branch/","dateModified":"2020-06-29T22:35:31+00:00","datePublished":"2020-06-17T05:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emmasax4.info/blog/posts/why-and-how-i-renamed-my-master-branch/"},"author":{"@type":"Person","name":"Emma Sax"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -193,12 +193,12 @@ $ git push -u origin main
 # Delete the master branch.
 </code></pre>
 <p>If my projects had more clones or had more collaborators, I’d certainly want to write a brief message in the README and/or try to inform them ahead of time so they could prep their local repositories. After the switch, here’s a suggestion for updating local clones from <a href="https://www.hanselman.com/blog/EasilyRenameYourGitDefaultBranchFromMasterToMain.aspx">Scott Hanselman</a>, but don’t quote me—I haven’t tried it personally:</p>
-<pre><code class="language-bash">$ git checkout master
-$ git branch -m master main
-$ git fetch
-$ git branch --unset-upstream
-$ git branch -u origin/main
-$ git symbolic-ref refs/remotes/origin/HEAD refs/remotes/origin/main
+<pre><code class="language-bash">git checkout master
+git branch -m master main
+git fetch
+git branch --unset-upstream
+git branch -u origin/main
+git symbolic-ref refs/remotes/origin/HEAD refs/remotes/origin/main
 </code></pre>
 <p>I haven’t touched or changed any of my repositories that are forks… I’m still undecided whether I want to change those if the upstreams don’t change their default branch.</p>
 <h2>How with GitHub Pages</h2>
