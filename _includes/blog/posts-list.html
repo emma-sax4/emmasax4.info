@@ -1,8 +1,6 @@
-<ul class="list" style="list-style: none">
-  {% for post in paginator.posts %}
-    {% include blog/post.html %}
-  {% endfor %}
-</ul>
+{% for post in paginator.posts %}
+  {% include blog/post.html %}
+{% endfor %}
 
 {% if paginator.total_pages >= 8 %}
   {% include blog/pagination-trail.html %}
