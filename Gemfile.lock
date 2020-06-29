@@ -179,7 +179,7 @@ DEPENDENCIES
   jekyll-sitemap!
   jekyll-time-to-read (~> 0.1)
   jekyll-titles-from-headings (~> 0.5)
-  mdl
+  mdl (~> 0.6.0)
   rouge (~> 3.19)
   rubocop (~> 0.86)
 
