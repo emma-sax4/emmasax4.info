@@ -37,6 +37,7 @@ This site uses [Bootstrap's buttons](https://getbootstrap.com/docs/4.0/component
 Using Bootstrap for the entire layout of this website, as well as for specific elements means there's so much less CSS in this repository. I started with over 600 lines of CSS, and now I have about 220 lines. But, there are still some pieces that I've chosen to override from Bootstrap's defaults. All of my custom CSS is in [this directory]({{ site.github_repo }}/tree/62b1cc916f71d07f5935b31ae218a0805edf56c8/assets/css).
 
 The pieces I'm overriding are:
+
 * Blockquotes
 * Preformatted monospace (like code snippets)
 * Links and buttons
@@ -49,6 +50,7 @@ The pieces I'm overriding are:
 ## Icons
 
 The site uses [Feather Icons](https://feathericons.com/) for all of its pretty icons, including the
+
 * GitHub icon
 * LinkedIn icon
 * Twitter icon
@@ -58,11 +60,13 @@ The site uses [Feather Icons](https://feathericons.com/) for all of its pretty i
 * Feed/RSS icon
 
 Icons are called like this:
+
 ```html
 <i data-feather="twitter"></i>
 ```
 
 To make the icon into a button, you can write it in an `a href` tag:
+
 ```html
 <a href="https://twitter.com/emma_sax4" class="link-icon">
   <i data-feather="twitter"></i>
@@ -72,6 +76,7 @@ To make the icon into a button, you can write it in an `a href` tag:
 The `link-icon` class is something that I've created with common link-icon settings. Read more about my custom CSS in the secton above.
 
 Lastly, as long as these two lines are at the bottom of the file, the icons appear magically!
+
 ```html
 <script src="https://unpkg.com/feather-icons"></script>
 <script>feather.replace()</script>

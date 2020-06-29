@@ -33,12 +33,12 @@ $ git push -u origin main
 If my projects had more clones or had more collaborators, I'd certainly want to write a brief message in the README and/or try to inform them ahead of time so they could prep their local repositories. After the switch, here's a suggestion for updating local clones from [Scott Hanselman](https://www.hanselman.com/blog/EasilyRenameYourGitDefaultBranchFromMasterToMain.aspx), but don't quote me—I haven't tried it personally:
 
 ```bash
-$ git checkout master
-$ git branch -m master main
-$ git fetch
-$ git branch --unset-upstream
-$ git branch -u origin/main
-$ git symbolic-ref refs/remotes/origin/HEAD refs/remotes/origin/main
+git checkout master
+git branch -m master main
+git fetch
+git branch --unset-upstream
+git branch -u origin/main
+git symbolic-ref refs/remotes/origin/HEAD refs/remotes/origin/main
 ```
 
 I haven't touched or changed any of my repositories that are forks... I'm still undecided whether I want to change those if the upstreams don't change their default branch.
@@ -94,6 +94,7 @@ The truth is that up until now, the concept of a `master` branch has never bothe
 So no, I'm not going to ask _every single repository I ever work on_ be switched to use `main` instead of `master`. But I will support the switch of any repository whose owners want to do it. After all, what have we got to lose?
 
 ## References and Resources
+
 * [help.github.com: working with GitHub Pages](https://help.github.com/en/github/working-with-github-pages/about-github-pages)
 * [mail.gnome.org: desktop devel list 2019 May](https://mail.gnome.org/archives/desktop-devel-list/2019-May/msg00066.html)
 * [twitter.com: @mislav post](https://twitter.com/mislav/status/1270388510684598272)

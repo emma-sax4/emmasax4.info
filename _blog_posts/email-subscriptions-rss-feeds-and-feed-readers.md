@@ -21,6 +21,7 @@ So instead, I began looking into an RSS feed. This is the <i color="orange" data
 But, since a reader requested it, I'll play along and implement an RSS feed on my site, too. I followed [this blog](https://joelglovier.com/writing/rss-for-jekyll) to help me add the RSS feed to my site. It turned out to be super easy. There's no gem requirement, and it doesn't use any 3rd party service to compile properly. It updates the feed whenever `bundle exec jekyll build` is run, and auto-updates when I'm actively serving my site locally.
 
 I added these values to my `_config.yml`:
+
 ```yml
 feed:
   production:
@@ -32,7 +33,9 @@ feed:
     url: http://127.0.0.1:4000
     items: 5
 ```
+
 and added this file to the root of my repository:
+
 ```html
 ---
 layout: none
