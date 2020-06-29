@@ -19,6 +19,7 @@ So, let's walk through the process of adding Bootstrap to a Jekyll site, since t
 ## Install Bootstrap into your site
 
 I selected to use the most recent version of Bootstrap (4.4), and wanted to install it via a `<script>` and CDN. If you put this line right before where your site links your own stylesheets, then it'll automatically import this and combine the two CSS's:
+
 ```html
 <link
   rel="stylesheet"
@@ -43,6 +44,7 @@ To do this part, I started with the biggest single element I could find: my navb
 After I implemented the basics of the navbar, it worked pretty miraculously. It also turned out to basically be responsive right away, all I had to do was modify a few more `class` names. Then, it was time to make the navbar look like mine (with similar colors, sizing, etc).
 
 I did an `Inspect element` on Bootstrap's website to see what I should name the CSS class in my own repo: `nav.navbar`. Then, I simply copied over my color scheme:
+
 ```scss
 nav.navbar {
   background-color: rgb(27, 14, 172);
@@ -53,6 +55,7 @@ nav.navbar {
 Then, right away I could delete all of the old navbar CSS code! This included a solid chunk of lines!
 
 Next, I wanted to make it so the menu button (also known as a hamburger 🍔 icon) would turn into an ❌ button when the navbar expanded. This took more time, and to be honest, if not for @brianMitchL's help, I may still be struggling. In order to save you from struggling, I'll give you some code:
+
 ```scss
 nav.navbar {
   > .navbar-toggler {
@@ -76,12 +79,14 @@ Now, with only 20 minutes of work, I have a fully-functioning navbar that fits A
 After the navbar, I tackled [Boostrap's buttons](https://getbootstrap.com/docs/4.0/components/buttons/), [general page layouts](https://getbootstrap.com/docs/4.0/layout/overview/), and [columns](https://getbootstrap.com/docs/4.0/layout/grid/).
 
 To do the buttons, you can go through the same process as with the navbar:
+
 1. Look up the basic Bootstrap button's HTML
 2. Make your button(s) have the same `class` names
 3. Once the button looks like Bootstrap's then make small tweaks to Bootstrap's CSS class(es) to make it format like how you want it
 4. Delete your button CSS
 
 Same process with the columns. To do the page layouts and responsive breakpoints, the only piece of knowledge that I didn't know (until Brian came along), was that Bootstrap's automatically going to expect:
+
 ```html
 <body>
   <main class="container">

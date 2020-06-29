@@ -8,19 +8,19 @@ date: 2020-03-22 12:51:00 -0500
 
 About three weeks ago, I started my next goal on this website, and that was to slowly move my website's building and testing from [Travis CI](https://travis-ci.org/) to [CircleCI](https://circleci.com/). In this post, I'd like to explain what I use continuous integration (CI) tools for, why I switched third-party tools, and what I liked and disliked about each of them.
 
-- [My Use Case for CI Tools](#my-use-case-for-ci-tools)
-- [Travis CI](#travis-ci)
+* [My Use Case for CI Tools](#my-use-case-for-ci-tools)
+* [Travis CI](#travis-ci)
   * [1. Building my website](#building-my-website)
   * [2. Notifying Slack](#notifying-slack)
   * [3. "Deploying" to GitHub Pages](#deploying-to-github-pages)
   * [4. Running daily crons](#running-daily-crons)
-- [CircleCI](#circleci)
+* [CircleCI](#circleci)
   * [1. Building my website](#building-my-website-2)
   * [2. Notifying Slack](#notifying-slack-2)
   * [3. "Deploying" to GitHub Pages](#deploying-to-github-pages-2)
   * [4. Running daily crons](#running-daily-crons-2)
   * [Adding a <header-code>config.yml</header-code> to the <header-code>gh-pages</header-code> branch](#adding-configyml-to-the-gh-pages-branch)
-- [Conclusion](#conclusion)
+* [Conclusion](#conclusion)
 
 <div id="anchor">
   <a id="my-use-case-for-ci-tools">&nbsp;</a>
@@ -29,6 +29,7 @@ About three weeks ago, I started my next goal on this website, and that was to s
 </div>
 
 The initial reason why I used Travis CI as my integration tool is outlined in [this blog post](/blog/posts/using-jekyll-paginate-v2/). But, as my website has continued to develop, there are four basic things I want my CI platform to be able to do for me:
+
 1. Build my Jekyll website quickly, run HTML Proofer on it, and have room to grow my test suite if I desire to do so
 2. Notify a Slack channel when the build was done
 3. "Deploy" my website by making a commit back to my [`gh-pages` branch in GitHub]({{ site.github_repo }}/tree/gh-pages) (which GitHub Pages will then deploy for me)
@@ -53,6 +54,7 @@ Travis CI also offers free and paid plans. On a personal level, I'm on the free 
 </div>
 
 Building my Jekyll website using Travis CI was extremely easy. It looked something like this:
+
 ```yaml
 script:
   - JEKYLL_ENV=production bundle exec jekyll build --destination ./site
@@ -70,6 +72,7 @@ Overall, running the website and getting this project up and running with Travis
 </div>
 
 Whenever my builds on Travis CI finished, I wanted to be notified via Slack. This way I could have the Slack app installed on my mobile device, and make sure my builds pass from anywhere, with notifications. Setting up Travis CI to notify Slack was easy:
+
 ```yaml
 notifications:
   email: false # Because I don't want my email getting cluttered
@@ -81,6 +84,7 @@ notifications:
 ```
 
 From the Slack side, to get started, I filled out the basic instructions documented [here](https://docs.travis-ci.com/user/notifications/#configuring-slack-notifications). The only huge hiccup I found was when it came to encrypting the secure token value. When I used the unencrypted version (`<MY_DOMAIN>:<MY_TOKEN>`) as the Slack value, notifications worked, but I didn't like the idea of my unencrypted information being in a public GitHub repository. But when I tried to use the `secure` encrypted value, it didn't send any notifications. The solution I found was to use the `--pro` flag:
+
 ```bash
 travis encrypt --pro "<MY_DOMAIN>:<MY_TOKEN>"
 ```
@@ -94,6 +98,7 @@ I'm not sure why this was necessary, as my project isn't a private repository. B
 </div>
 
 The [original blog post I found](https://medium.com/@mcred/supercharge-github-pages-with-jekyll-and-travis-ci-699bc0bde075) nicely outlines (in lots of words) how to deploy to GitHub Pages from Travis CI. The gist is that we use a Travis CI deploy to make a GitHub commit to the `gh-pages` branch of your project repository. In this way, you'll have at least two main branches on your repository: a `gh-pages` branch that GitHub Pages reads from, with only HTML and other site files, and a source code branch (your default branch) which will contain documentation, markdown files, Jekyll configs, etc. [Here's the documentation](https://docs.travis-ci.com/user/deployment-v2/providers/pages/) from Travis CI on GitHub Pages deploys on dpl v2.
+
 ```yaml
 deploy:
   provider: pages
@@ -111,6 +116,7 @@ deploy:
 ```
 
 If all you do is copy my code above, the `MAIN_BRANCH_NAME` is to reference which branch on GitHub you want Travis to run this command on (in my case, it was my `main` branch). The `ENCRYPTED_TOKEN_GOES_HERE` indicates the encrypted value of your GitHub personal access token, which grants Travis CI permission to deploy to your repository. In order to generate the encrypted token, I ran:
+
 ```bash
 travis encrypt "PERSONAL_ACCESS_TOKEN"
 ```
@@ -148,6 +154,7 @@ CircleCI builds are also fully configurable in a file called `.circleci/config.y
 To build my website in CircleCI, I set up a simple [workflow](https://circleci.com/docs/2.0/configuration-reference/#workflows). I did this so that I could have separate flow of the build for different branches (development feature branch, source code branch, `gh-pages` branch, etc).
 
 Here's my first workflow:
+
 ```yaml
 workflows:
   version: 2
@@ -162,6 +169,7 @@ workflows:
 Here, I've named a `develop` workflow which will run the job `test`, on any branch that is not the `MAIN_BRANCH_NAME`. One thing I don't really like about CircleCI's config files is how nested they are. It's yaml, so there's a way to write the code not nested, but it involves a lot of nested brackets and braces. I eventually decided to just deal with the nested yaml, and to move on.
 
 From there, this is what my `test` job looks like:
+
 ```yaml
 jobs:
   test:
@@ -208,6 +216,7 @@ Just by setting these `restore_cache` and `save_cache` steps, my builds sped up 
 Here are the additional files that these steps call.
 
 `.circleci/configure-bundler.sh` is called in the `configure_bundler` command. This file grabs the `bundler` version from the `Gemfile.lock`, and then installs that version of `bundler`.
+
 ```bash
 #!/bin/bash
 echo "export BUNDLER_VERSION=$(cat Gemfile.lock | tail -1 | tr -d ' ')" >> $BASH_ENV
@@ -216,6 +225,7 @@ gem install bundler
 ```
 
 `.circleci/html-proofer.sh` is called in the `html_proofer` command. This file will just run [HTML Proofer](https://github.com/gjtorikian/html-proofer) on the command line.
+
 ```bash
 #!/bin/bash
 {% raw %}bundle exec htmlproofer \
@@ -232,6 +242,7 @@ gem install bundler
 </div>
 
 To notify Slack, I set up the [Slack orb](https://circleci.com/orbs/registry/orb/circleci/slack). I still don't really understand the purpose of orbs, but this slack one wasn't too difficult to use. Here's my configuration which will send a notification message when my build is finished:
+
 ```yaml
 commands:
   set_slack_message:
@@ -255,6 +266,7 @@ jobs:
 ```
 
 The orb comes with a default Slack message, but I wanted to customize mine a bit. So I set a custom message in a `.circleci/generate-slack-message.sh` file:
+
 ```bash
 #!/bin/bash
 
@@ -325,6 +337,7 @@ commands:
 ```
 
 This workflow titled `release` will only run on the `MAIN_BRANCH_NAME`. It will still build the Jekyll site, so there's something to deploy, and it will still notify Slack upon completion. But, we've defined a new command for the job to run, `github_pages_deploy`, which will call the `.circleci/github-pages-deploy.sh` file:
+
 ```bash
 #!/bin/bash
 
@@ -362,6 +375,7 @@ source $BASH_ENV
 Uffda. That was a big file. And I'd be lying if I said that I didn't accidentally delete the whole site a couple of times while I tried to figure out how this file should work. But at the end of the day, this code works perfectly for what I needed.
 
 The last piece was to set up a GitHub deploy key for my project with read/write permissions. I followed a mixture of the instructions located [here](https://developer.github.com/v3/guides/managing-deploy-keys/#deploy-keys) and [here](https://circleci.com/docs/2.0/gh-bb-integration/#creating-a-github-deploy-key). After I obtained that (it looked like an SSH key), then I could provide that to CircleCI so it'd have proper permissions to commit to `gh-pages` branch. Then, I just added the fingerprint to my build and I was ready to go!
+
 ```yaml
 - add_ssh_keys:
     fingerprints: [ a1:a2:a3:a4:a5:a6:a7:a8:a9:b1:b2:b3:b4:b5:b6:b7 ]
@@ -376,6 +390,7 @@ The last piece was to set up a GitHub deploy key for my project with read/write 
 Up until this point, setting CircleCI up was substantially more difficult for me than setting up Travis CI. Part of that may be because CircleCI is less popular than Travis CI, so there's less support on the internet. However, when I reached out to CircleCI customer service to ask a question, they got back to me within a day, and were very polite and helpful—an experience I never had with Travis CI.
 
 But for me, setting up daily crons was probably the easiest part of this entire journey:
+
 ```yaml
 workflows:
   version: 2
@@ -398,6 +413,7 @@ Because I already defined the job I needed, I simply added this little cron work
 </div>
 
 In Travis CI, if there's no `.travis.yml` file, then Travis CI will ignore the commit and it won't run anything. This was useful on branches like the `gh-pages` branch, where there's no need to run a build on each commit. In CircleCI, if there's no `.circleci/config.yml` on a branch, it'll still try to run a build, and then break and say there's no config file. So, I manually added this `.circleci/config.yml` to my `gh-pages` branch, to completely ignore the branch on each commit:
+
 ```yaml
 version: 2.1
 jobs:
