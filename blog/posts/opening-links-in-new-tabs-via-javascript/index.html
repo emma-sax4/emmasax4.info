@@ -1,229 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="msapplication-TileColor" content="#2d89ef">
-  <meta name="msapplication-TileImage" content="/assets/images/favicon/mstile-150x150.png">
-  <meta name="msapplication-config" content="/assets/images/favicon/browserconfig.xml">
-  <meta name="theme-color" content="#ffffff">
-  <link rel="apple-touch-icon" sizes="120x120" href="/assets/images/favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon/android-chrome-96x96.png">
-  <link rel="icon" type="image/png" sizes="48x48" href="/assets/images/favicon/favicon-48x48.png">
-  <link rel="icon" type="image/png" sizes="196x196" href="/assets/images/favicon/favicon-196x196.png">
-  <link rel="manifest" href="/assets/images/favicon/site.webmanifest">
-  <link rel="mask-icon" href="/assets/images/favicon/safari-pinned-tab.svg" color="#1144ef">
-  <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/assets/css/style.css">
-  <link rel="alternate" href="https://emmasax4.info/feed.xml" type="application/rss+xml">
-  <!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Emma Sax | Opening Links in New Tabs via Javascript</title>
-<meta name="generator" content="Jekyll v3.8.7" />
-<meta property="og:title" content="Emma Sax | Opening Links in New Tabs via Javascript" />
-<meta name="author" content="Emma Sax" />
-<meta property="og:locale" content="en_US" />
-<meta name="description" content="Emma Sax’s personal website and blog. Includes information about my social media profiles, résumé, and hobbies." />
-<meta property="og:description" content="Emma Sax’s personal website and blog. Includes information about my social media profiles, résumé, and hobbies." />
-<link rel="canonical" href="https://emmasax4.info/blog/posts/opening-links-in-new-tabs-via-javascript/" />
-<meta property="og:url" content="https://emmasax4.info/blog/posts/opening-links-in-new-tabs-via-javascript/" />
-<meta property="og:site_name" content="Emma Sax" />
-<meta property="og:type" content="article" />
-<meta property="article:published_time" content="2020-01-14T06:00:00+00:00" />
-<meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Opening Links in New Tabs via Javascript" />
-<meta name="google-site-verification" content="v04az8eo-0UcZrWCJr7SKAvM6hw90qTCBQoKx3PlXCA" />
-<meta name="msvalidate.01" content="89B2B19FF966341B78EF64EDADE6DF81" />
-<meta name="yandex-verification" content="c2741887f8c30dd1" />
-<script type="application/ld+json">
-{"description":"Emma Sax’s personal website and blog. Includes information about my social media profiles, résumé, and hobbies.","@type":"BlogPosting","headline":"Opening Links in New Tabs via Javascript","url":"https://emmasax4.info/blog/posts/opening-links-in-new-tabs-via-javascript/","dateModified":"2020-06-29T22:35:31+00:00","datePublished":"2020-01-14T06:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emmasax4.info/blog/posts/opening-links-in-new-tabs-via-javascript/"},"author":{"@type":"Person","name":"Emma Sax"},"@context":"https://schema.org"}</script>
-<!-- End Jekyll SEO tag -->
-
-</head>
-
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="msapplication-TileColor" content="#2d89ef">
+    <meta name="msapplication-TileImage" content="/assets/images/favicon/mstile-150x150.png">
+    <meta name="msapplication-config" content="/assets/images/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="apple-touch-icon" sizes="120x120" href="/assets/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon/android-chrome-96x96.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="/assets/images/favicon/favicon-48x48.png">
+    <link rel="icon" type="image/png" sizes="196x196" href="/assets/images/favicon/favicon-196x196.png">
+    <link rel="manifest" href="/assets/images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/assets/images/favicon/safari-pinned-tab.svg" color="#1144ef">
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="alternate" href="https://emmasax4.info/feed.xml" type="application/rss+xml">
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+    <title>Emma Sax | Opening Links in New Tabs via Javascript</title>
+    <meta name="generator" content="Jekyll v3.8.7" />
+    <meta property="og:title" content="Emma Sax | Opening Links in New Tabs via Javascript" />
+    <meta name="author" content="Emma Sax" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="description" content="Emma Sax’s personal website and blog. Includes information about my social media profiles, résumé, and hobbies." />
+    <meta property="og:description" content="Emma Sax’s personal website and blog. Includes information about my social media profiles, résumé, and hobbies." />
+    <link rel="canonical" href="https://emmasax4.info/blog/posts/opening-links-in-new-tabs-via-javascript/" />
+    <meta property="og:url" content="https://emmasax4.info/blog/posts/opening-links-in-new-tabs-via-javascript/" />
+    <meta property="og:site_name" content="Emma Sax" />
+    <meta property="og:type" content="article" />
+    <meta property="article:published_time" content="2020-01-14T06:00:00+00:00" />
+    <meta name="twitter:card" content="summary" />
+    <meta property="twitter:title" content="Opening Links in New Tabs via Javascript" />
+    <meta name="google-site-verification" content="v04az8eo-0UcZrWCJr7SKAvM6hw90qTCBQoKx3PlXCA" />
+    <meta name="msvalidate.01" content="89B2B19FF966341B78EF64EDADE6DF81" />
+    <meta name="yandex-verification" content="c2741887f8c30dd1" />
+    <script type="application/ld+json">
+      {"description":"Emma Sax’s personal website and blog. Includes information about my social media profiles, résumé, and hobbies.","@type":"BlogPosting","url":"https://emmasax4.info/blog/posts/opening-links-in-new-tabs-via-javascript/","headline":"Opening Links in New Tabs via Javascript","dateModified":"2020-06-29T22:35:31+00:00","datePublished":"2020-01-14T06:00:00+00:00","author":{"@type":"Person","name":"Emma Sax"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://emmasax4.info/blog/posts/opening-links-in-new-tabs-via-javascript/"},"@context":"https://schema.org"}
+    </script>
+    <!-- End Jekyll SEO tag -->
+  </head>
   <header class="sticky-top">
-  <nav class="navbar navbar-expand-md navbar-dark">
-    <a class="navbar-brand mb-0" href="https://emmasax4.info" target="_self">
-      <img src="/assets/images/logos/e-logo-white-40.png" width="30" height="30"
+    <nav class="navbar navbar-expand-md navbar-dark">
+      <a class="navbar-brand mb-0" href="https://emmasax4.info" target="_self">
+        <img src="/assets/images/logos/e-logo-white-40.png" width="30" height="30"
         class="d-inline-block align-top" alt="E logo"
       > Emma Sax
-    </a>
-
-    <button class="navbar-toggler" type="button" data-toggle="collapse"
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse"
       data-target="#navbar-links" aria-controls="navbar-links"
       aria-expanded="false" aria-label="Toggle navigation">
-      <i data-feather="menu"></i>
-      <i data-feather="x"></i>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbar-links">
-      <ul class="navbar-nav ml-auto mt-2 mt-md-0">
-        
-
-        
-          
-            
-
-            
-
-            <li class="nav-item ">
-              <a class="nav-link" href="/about-me/">About Me
-                
-              </a>
-            </li>
-          
-        
-          
-            
-
-            
-
-            <li class="nav-item ">
-              <a class="nav-link" href="/interests-and-hobbies/">Interests & Hobbies
-                
-              </a>
-            </li>
-          
-        
-          
-            
-
-            
-
-            <li class="nav-item active">
-              <a class="nav-link" href="/blog">Blog
-                
-                  <span class="sr-only">(current)</span>
-                
-              </a>
-            </li>
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      </ul>
-    </div>
-  </nav>
-</header>
-
-
+        <i data-feather="menu"></i>
+        <i data-feather="x"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbar-links">
+        <ul class="navbar-nav ml-auto mt-2 mt-md-0">
+          <li class="nav-item ">
+            <a class="nav-link" href="/about-me/">About Me
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="/interests-and-hobbies/">Interests & Hobbies
+            </a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="/blog">Blog
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
   <body>
     <main class="container">
       <div class="row">
-  <div class="col col-12 col-md-2 text-center">
-    <div class="container" style="padding-bottom: 1rem;">
-  <a href="/blog/" class="btn btn-lg btn-outline-secondary">All Posts</a>
-</div>
-
-
-<div class="text-center" style="margin-bottom: .5rem;">
-  <a href="/feed.xml" target="_blank" class="link-icon-rss">
-  <i data-feather="rss"></i>
-</a>
-
-</div>
-
-<div class="text-center" style="margin-bottom: .5rem;">
-  
-
-  
-  <span class="post-meta">
-    <i style="width: 20px; height: 20px;" data-feather="tag"></i>
-    
-      <a href="/blog/tech/">
-        tech
-      </a>
-      
-    
-  </span>
-
-
-
-
-</div>
-
-<div class="text-center" style="margin-bottom: 1rem;">
-  <span class="post-meta">
-    Read time: 7 minutes
-  </span>
-</div>
-
-  </div>
-
-  <div class="col col-12 col-md-10">
-    <h1 style="padding-bottom: .75rem;">
-  <div class="text-center">
-    
-      Opening Links in New Tabs via Javascript
-    
-  </div>
-
-  <div class="text-center" style="margin-top: -.5rem;">
-    
-      
-      
-      
-        <span class="date-meta">2020-01-14 00:00:00 -0600</span>
-      
-    
-  </div>
-</h1>
-
-    <div class="page-body">
-      <p>Have you ever noticed that some websites you visit have links that open to new tabs in your browser, and some open to the current tab in your browser? Does that inconsistency confuse or annoy you? Which do you prefer? Do you ever wonder <em>why</em> that is? Well, since the websites of the internet can’t quite seem to agree and make a choice, let’s discuss how I’ve approached this topic, and what I’ve done to make an easy decision about the important question of new tab… or not to new tab.</p>
-<hr>
-<h2>Introduction</h2>
-<p>First, let’s make sure we’re all on the same page when I say “opening in a new tab” versus “opening in the current tab.” The first example is of a link opening in the current tab. The second is of a link opening in a new tab:</p>
-<blockquote>
-<p>This will be a link to <a href="https://github.com/" target="_self">GitHub</a>.</p>
-<p>This will be a link to <a href="https://github.com/" target="_blank">GitHub</a>.</p>
-</blockquote>
-<p>Next, for those of you that aren’t familiar with Markdown, here’s Wikipedia’s definition (since Wikipedia is truth 😉):</p>
-<blockquote>
-<p>Markdown is a lightweight markup language with plain text formatting syntax. Its design allows it to be converted to many output formats, but the original tool by the same name only supports HTML. Markdown is often used to format readme files, for writing messages in online discussion forums, and to create rich text using a plain text editor.</p>
-</blockquote>
-<p>Because Markdown makes it easy to write paragraphs and content, I actually write all of my website’s pages and blog posts as Markdown files. <a href="https://jekyllrb.com/">Jekyll</a> then reads all of my Markdown files and turns them into HTML files (which is what we see on an internet browser).</p>
-<h2>Writing Links in Markdown ✍🏼</h2>
-<p>In Markdown, the easiest way to add a link to a line of text is like this:</p>
-<pre><code class="language-markdown">This will be a link to [GitHub](https://github.com).
+        <div class="col col-12 col-md-2 text-center">
+          <div class="container" style="padding-bottom: 1rem;">
+            <a href="/blog/" class="btn btn-lg btn-outline-secondary">All Posts</a>
+          </div>
+          <div class="text-center" style="margin-bottom: .5rem;">
+            <a href="/feed.xml" target="_blank" class="link-icon-rss">
+              <i data-feather="rss"></i>
+            </a>
+          </div>
+          <div class="text-center" style="margin-bottom: .5rem;">
+            <span class="post-meta">
+              <i style="width: 20px; height: 20px;" data-feather="tag"></i>
+              <a href="/blog/tech/">
+                tech
+              </a>
+            </span>
+          </div>
+          <div class="text-center" style="margin-bottom: 1rem;">
+            <span class="post-meta">
+              Read time: 7 minutes
+            </span>
+          </div>
+        </div>
+        <div class="col col-12 col-md-10">
+          <h1 style="padding-bottom: .75rem;">
+            <div class="text-center">
+              Opening Links in New Tabs via Javascript
+            </div>
+            <div class="text-center" style="margin-top: -.5rem;">
+              <span class="date-meta">2020-01-14 00:00:00 -0600</span>
+            </div>
+          </h1>
+          <div class="page-body">
+            <p>Have you ever noticed that some websites you visit have links that open to new tabs in your browser, and some open to the current tab in your browser? Does that inconsistency confuse or annoy you? Which do you prefer? Do you ever wonder <em>why</em> that is? Well, since the websites of the internet can’t quite seem to agree and make a choice, let’s discuss how I’ve approached this topic, and what I’ve done to make an easy decision about the important question of new tab… or not to new tab.</p>
+            <hr>
+            <h2>Introduction</h2>
+            <p>First, let’s make sure we’re all on the same page when I say “opening in a new tab” versus “opening in the current tab.” The first example is of a link opening in the current tab. The second is of a link opening in a new tab:</p>
+            <blockquote>
+              <p>This will be a link to <a href="https://github.com/" target="_self">GitHub</a>.</p>
+              <p>This will be a link to <a href="https://github.com/" target="_blank">GitHub</a>.</p>
+            </blockquote>
+            <p>Next, for those of you that aren’t familiar with Markdown, here’s Wikipedia’s definition (since Wikipedia is truth 😉):</p>
+            <blockquote>
+              <p>Markdown is a lightweight markup language with plain text formatting syntax. Its design allows it to be converted to many output formats, but the original tool by the same name only supports HTML. Markdown is often used to format readme files, for writing messages in online discussion forums, and to create rich text using a plain text editor.</p>
+            </blockquote>
+            <p>Because Markdown makes it easy to write paragraphs and content, I actually write all of my website’s pages and blog posts as Markdown files. <a href="https://jekyllrb.com/">Jekyll</a> then reads all of my Markdown files and turns them into HTML files (which is what we see on an internet browser).</p>
+            <h2>Writing Links in Markdown ✍🏼</h2>
+            <p>In Markdown, the easiest way to add a link to a line of text is like this:</p>
+            <pre><code class="language-markdown">This will be a link to [GitHub](https://github.com).
 </code></pre>
-<p>This example will come out looking like this:</p>
-<blockquote>
-<p>This will be a link to <a href="https://github.com" target="_self">GitHub</a>.</p>
-</blockquote>
-<p>In this example, the word <code>GitHub</code> will be a clickable link to <code>https://github.com</code>. And in most Markdown interpreters, including on GitHub, that link will open in the same tab that you’re currently in. And if you’re like me, this is irritating.</p>
-<p>I’m personally in the same boat as <a href="https://www.caktusgroup.com/blog/2017/03/01/opening-external-links-same-tab-or-new/">Basia Coulter</a> and <a href="https://uxmovement.com/navigation/why-external-links-should-open-in-new-tabs/">@anthony</a>. I believe that all EXTERNAL links should open in a new browser tab, and INTERNAL links should open in the same tab. An EXTERNAL link points to a new website, or a website that has a different URL than the website you are currently on. An INTERNAL link points to the same website that you’re currently looking at.</p>
-<p>In modern internetting (not a real word, but I think I might copyright it), it’s totally a good idea to be linking all over the place. The more links the better—within reason of course. And if you’re opening all of the external links in the same tab that the user is looking in, that user will be hitting the <code>Back</code> button <em>a lot</em>. Even I get tired of that much <code>Back</code> buttoning.</p>
-<h2>Writing Links in Markdown that Open in a New Tab ⎘</h2>
-<p>So, I endeavored to find the best way to set my Markdown links to open in new tabs. By default, in Markdown with <a href="https://kramdown.gettalong.org/">kramdown</a> (my selected Markdown-to-HTML converter), there’s only two ways to make this happen:</p>
-<ol>
-<li>
-<p>This option is essentially injecting raw HTML into the Markdown sentence. While this is totally acceptable and it works, it’s typing a lot of special characters into a sentence, just for a link to open in a new tab. This solution works when Markdown is interpreted with kramdown, and it will render properly on GitHub, although GitHub will still open the link in the same tab.</p>
-<pre><code class="language-html">This will be a link to &lt;a href="https://github.com" target="_blank"&gt;GitHub&lt;/a&gt;.
+            <p>This example will come out looking like this:</p>
+            <blockquote>
+              <p>This will be a link to <a href="https://github.com" target="_self">GitHub</a>.</p>
+            </blockquote>
+            <p>In this example, the word <code>GitHub</code> will be a clickable link to <code>https://github.com</code>. And in most Markdown interpreters, including on GitHub, that link will open in the same tab that you’re currently in. And if you’re like me, this is irritating.</p>
+            <p>I’m personally in the same boat as <a href="https://www.caktusgroup.com/blog/2017/03/01/opening-external-links-same-tab-or-new/">Basia Coulter</a> and <a href="https://uxmovement.com/navigation/why-external-links-should-open-in-new-tabs/">@anthony</a>. I believe that all EXTERNAL links should open in a new browser tab, and INTERNAL links should open in the same tab. An EXTERNAL link points to a new website, or a website that has a different URL than the website you are currently on. An INTERNAL link points to the same website that you’re currently looking at.</p>
+            <p>In modern internetting (not a real word, but I think I might copyright it), it’s totally a good idea to be linking all over the place. The more links the better—within reason of course. And if you’re opening all of the external links in the same tab that the user is looking in, that user will be hitting the <code>Back</code> button <em>a lot</em>. Even I get tired of that much <code>Back</code> buttoning.</p>
+            <h2>Writing Links in Markdown that Open in a New Tab ⎘</h2>
+            <p>So, I endeavored to find the best way to set my Markdown links to open in new tabs. By default, in Markdown with <a href="https://kramdown.gettalong.org/">kramdown</a> (my selected Markdown-to-HTML converter), there’s only two ways to make this happen:</p>
+            <ol>
+              <li>
+                <p>This option is essentially injecting raw HTML into the Markdown sentence. While this is totally acceptable and it works, it’s typing a lot of special characters into a sentence, just for a link to open in a new tab. This solution works when Markdown is interpreted with kramdown, and it will render properly on GitHub, although GitHub will still open the link in the same tab.</p>
+                <pre><code class="language-html">This will be a link to &lt;a href="https://github.com" target="_blank"&gt;GitHub&lt;/a&gt;.
 </code></pre>
-</li>
-<li>
-<p>This option is what kramdown provides as a way to open links in new tabs. It isn’t as awful to type, and it’s not quite as many extra characters. However, it will not render on GitHub nicely at all. When rendered on GitHub, it will leave the <code>{:target="_blank"}</code> as part of the text sentence, meaning it’s disrupting the read of the document <em>and</em> confusing readers.</p>
-<pre><code class="language-markdown">This will be a link to [GitHub](https://github.com){:target="_blank"}.
+              </li>
+              <li>
+                <p>This option is what kramdown provides as a way to open links in new tabs. It isn’t as awful to type, and it’s not quite as many extra characters. However, it will not render on GitHub nicely at all. When rendered on GitHub, it will leave the <code>{:target="_blank"}</code> as part of the text sentence, meaning it’s disrupting the read of the document <em>and</em> confusing readers.</p>
+                <pre><code class="language-markdown">This will be a link to [GitHub](https://github.com){:target="_blank"}.
 </code></pre>
-</li>
-</ol>
-<p>And with either of the solutions, GitHub does this weird raw text italisizing that makes looking at these files very painful. Here’s an example. Do you see how half of the paragraphs have been entirely italisized?</p>
-<div class="text-center">
-  <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/49386386903/in/album-72157710863695862/" title="GitHub's weird italisizing"><img class="image" src="https://live.staticflickr.com/65535/49386386903_198f4cc1e2_z.jpg" width="986" height="962" alt="GitHub's weird italisizing"></a>
-</div>
-<p>So, neither of these options are perfect, and I don’t like either of them. I want to be able to easily type a link, with the traditional Markdown format (<code>[link](url)</code>), and I want the link to open in a new tab on the browser (converted to HTML from kramdown), and to read in GitHub properly (not include the <code>{:target="_blank"}</code>).</p>
-<h2>A Not-So Terrible Solution 🤞🏼</h2>
-<p>After several pull requests of me changing my mind about how to write links, and doing massive search-replaces in my codebase, I found a different kind of solution… a solution that involves Javascript. Static sites (like mine) can use Javascript to do view-based logic and methods right in front of the user. It’s unwise to incorporate <em>a lot</em> of Javascript on a single page because it’ll slow down loading and operation times, but it’s how I did simply functionality, like showing the comments on the bottom of each page or loading the Feather icons. And so of course, somebody has written <a href="https://html.com/attributes/a-target/">this blog post</a> which nicely provides a Javascript solution for opening every external URL in a new tab. This script is what is suggested to be placed at the bottom of our HTML files:</p>
-<pre><code class="language-html">&lt;script type="text/javascript"&gt;
+              </li>
+            </ol>
+            <p>And with either of the solutions, GitHub does this weird raw text italisizing that makes looking at these files very painful. Here’s an example. Do you see how half of the paragraphs have been entirely italisized?</p>
+            <div class="text-center">
+              <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/49386386903/in/album-72157710863695862/" title="GitHub's weird italisizing"><img class="image" src="https://live.staticflickr.com/65535/49386386903_198f4cc1e2_z.jpg" width="986" height="962" alt="GitHub's weird italisizing"></a>
+            </div>
+            <p>So, neither of these options are perfect, and I don’t like either of them. I want to be able to easily type a link, with the traditional Markdown format (<code>[link](url)</code>), and I want the link to open in a new tab on the browser (converted to HTML from kramdown), and to read in GitHub properly (not include the <code>{:target="_blank"}</code>).</p>
+            <h2>A Not-So Terrible Solution 🤞🏼</h2>
+            <p>After several pull requests of me changing my mind about how to write links, and doing massive search-replaces in my codebase, I found a different kind of solution… a solution that involves Javascript. Static sites (like mine) can use Javascript to do view-based logic and methods right in front of the user. It’s unwise to incorporate <em>a lot</em> of Javascript on a single page because it’ll slow down loading and operation times, but it’s how I did simply functionality, like showing the comments on the bottom of each page or loading the Feather icons. And so of course, somebody has written <a href="https://html.com/attributes/a-target/">this blog post</a> which nicely provides a Javascript solution for opening every external URL in a new tab. This script is what is suggested to be placed at the bottom of our HTML files:</p>
+            <pre><code class="language-html">&lt;script type="text/javascript"&gt;
   function externalLinks() {
     for(var c = document.getElementsByTagName('a'), a = 0; a &lt; c.length; a++) {
       var b = c[a];
@@ -233,9 +163,9 @@
   externalLinks();
 &lt;/script&gt;
 </code></pre>
-<p>It’s very simple, but yet, it covers almost exactly what I need. On every page that’s loaded, it will go through my converted and compiled HTML, find each attribute that contains a link, and will guarantee that each EXTERNAL link will open to a new tab, and that each INTERNAL link opens to the current tab. Voilà!</p>
-<p>But there’s one piece missing. That’s for exceptions. Every now and then—such as writing this blog post—I want an EXTERNAL link that will open in the current tab. So, I need a way to exclude those few links from opening in a new tab. The answer comes from changing the <code>for</code> loop to look like this:</p>
-<pre><code class="language-javascript">var links = document.getElementsByTagName('a');
+            <p>It’s very simple, but yet, it covers almost exactly what I need. On every page that’s loaded, it will go through my converted and compiled HTML, find each attribute that contains a link, and will guarantee that each EXTERNAL link will open to a new tab, and that each INTERNAL link opens to the current tab. Voilà!</p>
+            <p>But there’s one piece missing. That’s for exceptions. Every now and then—such as writing this blog post—I want an EXTERNAL link that will open in the current tab. So, I need a way to exclude those few links from opening in a new tab. The answer comes from changing the <code>for</code> loop to look like this:</p>
+            <pre><code class="language-javascript">var links = document.getElementsByTagName('a');
 
 for(counter = 0; counter &lt; c.length; counter++) {
   var link = links[counter];
@@ -247,13 +177,13 @@ for(counter = 0; counter &lt; c.length; counter++) {
   };
 };
 </code></pre>
-<p>So, if the link in Markdown is written explicitly requesting the <code>target="_self"</code>, then honor that. So the following link would open in the current tab:</p>
-<pre><code class="language-markdown">This will be a link to &lt;a href="https://github.com/" target="_self"&gt;GitHub&lt;/a&gt;.
+            <p>So, if the link in Markdown is written explicitly requesting the <code>target="_self"</code>, then honor that. So the following link would open in the current tab:</p>
+            <pre><code class="language-markdown">This will be a link to &lt;a href="https://github.com/" target="_self"&gt;GitHub&lt;/a&gt;.
 </code></pre>
-<p>Similarly, if a link is explicitly written with <code>target="_blank"</code>, no matter whether external or internal, the link should always open that in a new tab. If nothing is set for the <code>target</code> at all, then open in a new tab <em>if</em> the link is external.</p>
-<h2>Putting It All Together 🧩</h2>
-<p>Here’s what my new script looks like with <a href="https://html.com/">html.com</a>’s suggestion and my edits:</p>
-<pre><code class="language-html">&lt;!--
+            <p>Similarly, if a link is explicitly written with <code>target="_blank"</code>, no matter whether external or internal, the link should always open that in a new tab. If nothing is set for the <code>target</code> at all, then open in a new tab <em>if</em> the link is external.</p>
+            <h2>Putting It All Together 🧩</h2>
+            <p>Here’s what my new script looks like with <a href="https://html.com/">html.com</a>’s suggestion and my edits:</p>
+            <pre><code class="language-html">&lt;!--
 To open an EXTERNAL link in the CURRENT tab, write your link like this:
   &lt;a href="https://github.com" target="_self"&gt;GitHub&lt;/a&gt;
 
@@ -277,57 +207,49 @@ To open an INTERNAL link in a NEW tab, write your link like this:
   openExternalLinksInNewTabs();
 &lt;/script&gt;
 </code></pre>
-<p>Now this <em><strong>really</strong></em> does everything I need. 🙌🏼</p>
-<h2>References</h2>
-<ul>
-<li><a href="https://en.wikipedia.org/wiki/Markdown">wikipedia.com: Markdown</a></li>
-<li><a href="https://jekyllrb.com/">jekyllrb.com</a></li>
-<li><a href="https://kramdown.gettalong.org/">kramdown</a></li>
-<li><a href="https://html.com/attributes/a-target/">html.com: a Target</a></li>
-<li><a href="https://www.caktusgroup.com/blog/2017/03/01/opening-external-links-same-tab-or-new/">caktusgroup.com: Opening External Links Same Tab or New</a></li>
-<li><a href="https://uxmovement.com/navigation/why-external-links-should-open-in-new-tabs/">uxmovement.com: Why External Links Should Open in New Tabs</a></li>
-</ul>
-
-      
-  <script src="/assets/js/show-comments.js" type="text/javascript"></script>
-
-  <div class="text-center" style="margin-bottom: 1rem;">
-    <button id="show-comments-button" class="btn btn-lg btn-outline-secondary" onclick="loadComments('emmasax4');return false;">
-  Load Comments
-  <i data-feather="message-circle"></i>
-</button>
-
-  </div>
-
-  <div id="disqus_thread"></div>
-
-  <noscript>
-    Please enable JavaScript to view the
-    <a href="https://disqus.com/?ref_noscript" rel="nofollow">
-      comments powered by Disqus.
-    </a>
-  </noscript>
-
-
-    </div>
-  </div>
-</div>
-
+            <p>Now this <em><strong>really</strong></em> does everything I need. 🙌🏼</p>
+            <h2>References</h2>
+            <ul>
+              <li><a href="https://en.wikipedia.org/wiki/Markdown">wikipedia.com: Markdown</a></li>
+              <li><a href="https://jekyllrb.com/">jekyllrb.com</a></li>
+              <li><a href="https://kramdown.gettalong.org/">kramdown</a></li>
+              <li><a href="https://html.com/attributes/a-target/">html.com: a Target</a></li>
+              <li><a href="https://www.caktusgroup.com/blog/2017/03/01/opening-external-links-same-tab-or-new/">caktusgroup.com: Opening External Links Same Tab or New</a></li>
+              <li><a href="https://uxmovement.com/navigation/why-external-links-should-open-in-new-tabs/">uxmovement.com: Why External Links Should Open in New Tabs</a></li>
+            </ul>
+            <script src="/assets/js/show-comments.js" type="text/javascript"></script>
+            <div class="text-center" style="margin-bottom: 1rem;">
+              <button id="show-comments-button" class="btn btn-lg btn-outline-secondary" onclick="loadComments('emmasax4');return false;">
+                Load Comments
+                <i data-feather="message-circle"></i>
+              </button>
+            </div>
+            <div id="disqus_thread"></div>
+            <noscript>
+              Please enable JavaScript to view the
+              <a href="https://disqus.com/?ref_noscript" rel="nofollow">
+                comments powered by Disqus.
+              </a>
+            </noscript>
+          </div>
+        </div>
+      </div>
     </main>
   </body>
-
   <footer>
-  &copy; <script>document.write(new Date().getFullYear());</script>
-  Emma Sax. All rights reserved.
-  <br>
-  View on <a href="https://github.com/emmasax4/emmasax4.info">GitHub</a>.
-</footer>
-
+    &copy; <script>
+      document.write(new Date().getFullYear());
+    </script>
+    Emma Sax. All rights reserved.
+    <br>
+    View on <a href="https://github.com/emmasax4/emmasax4.info">GitHub</a>.
+  </footer>
   <script src="/assets/js/show-dates.js" type="text/javascript"></script>
-<script src="/assets/js/external-links.js" type="text/javascript"></script>
-<script src="/assets/js/jquery.min.js"></script>
-<script src="/assets/js/bootstrap.min.js"></script>
-<script src="/assets/js/feather.min.js"></script>
-<script>feather.replace()</script>
-
+  <script src="/assets/js/external-links.js" type="text/javascript"></script>
+  <script src="/assets/js/jquery.min.js"></script>
+  <script src="/assets/js/bootstrap.min.js"></script>
+  <script src="/assets/js/feather.min.js"></script>
+  <script>
+    feather.replace()
+  </script>
 </html>

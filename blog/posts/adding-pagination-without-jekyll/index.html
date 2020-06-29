@@ -1,280 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="msapplication-TileColor" content="#2d89ef">
-  <meta name="msapplication-TileImage" content="/assets/images/favicon/mstile-150x150.png">
-  <meta name="msapplication-config" content="/assets/images/favicon/browserconfig.xml">
-  <meta name="theme-color" content="#ffffff">
-  <link rel="apple-touch-icon" sizes="120x120" href="/assets/images/favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon/android-chrome-96x96.png">
-  <link rel="icon" type="image/png" sizes="48x48" href="/assets/images/favicon/favicon-48x48.png">
-  <link rel="icon" type="image/png" sizes="196x196" href="/assets/images/favicon/favicon-196x196.png">
-  <link rel="manifest" href="/assets/images/favicon/site.webmanifest">
-  <link rel="mask-icon" href="/assets/images/favicon/safari-pinned-tab.svg" color="#1144ef">
-  <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/assets/css/style.css">
-  <link rel="alternate" href="https://emmasax4.info/feed.xml" type="application/rss+xml">
-  <!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Emma Sax | Adding Pagination without Jekyll</title>
-<meta name="generator" content="Jekyll v3.8.7" />
-<meta property="og:title" content="Emma Sax | Adding Pagination without Jekyll" />
-<meta name="author" content="Emma Sax" />
-<meta property="og:locale" content="en_US" />
-<meta name="description" content="Emma Sax’s personal website and blog. Includes information about my social media profiles, résumé, and hobbies." />
-<meta property="og:description" content="Emma Sax’s personal website and blog. Includes information about my social media profiles, résumé, and hobbies." />
-<link rel="canonical" href="https://emmasax4.info/blog/posts/adding-pagination-without-jekyll/" />
-<meta property="og:url" content="https://emmasax4.info/blog/posts/adding-pagination-without-jekyll/" />
-<meta property="og:site_name" content="Emma Sax" />
-<meta property="og:type" content="article" />
-<meta property="article:published_time" content="2019-09-12T05:00:00+00:00" />
-<meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Adding Pagination without Jekyll" />
-<meta name="google-site-verification" content="v04az8eo-0UcZrWCJr7SKAvM6hw90qTCBQoKx3PlXCA" />
-<meta name="msvalidate.01" content="89B2B19FF966341B78EF64EDADE6DF81" />
-<meta name="yandex-verification" content="c2741887f8c30dd1" />
-<script type="application/ld+json">
-{"description":"Emma Sax’s personal website and blog. Includes information about my social media profiles, résumé, and hobbies.","@type":"BlogPosting","headline":"Adding Pagination without Jekyll","url":"https://emmasax4.info/blog/posts/adding-pagination-without-jekyll/","dateModified":"2020-06-29T22:35:31+00:00","datePublished":"2019-09-12T05:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emmasax4.info/blog/posts/adding-pagination-without-jekyll/"},"author":{"@type":"Person","name":"Emma Sax"},"@context":"https://schema.org"}</script>
-<!-- End Jekyll SEO tag -->
-
-</head>
-
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="msapplication-TileColor" content="#2d89ef">
+    <meta name="msapplication-TileImage" content="/assets/images/favicon/mstile-150x150.png">
+    <meta name="msapplication-config" content="/assets/images/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="apple-touch-icon" sizes="120x120" href="/assets/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon/android-chrome-96x96.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="/assets/images/favicon/favicon-48x48.png">
+    <link rel="icon" type="image/png" sizes="196x196" href="/assets/images/favicon/favicon-196x196.png">
+    <link rel="manifest" href="/assets/images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/assets/images/favicon/safari-pinned-tab.svg" color="#1144ef">
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="alternate" href="https://emmasax4.info/feed.xml" type="application/rss+xml">
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+    <title>Emma Sax | Adding Pagination without Jekyll</title>
+    <meta name="generator" content="Jekyll v3.8.7" />
+    <meta property="og:title" content="Emma Sax | Adding Pagination without Jekyll" />
+    <meta name="author" content="Emma Sax" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="description" content="Emma Sax’s personal website and blog. Includes information about my social media profiles, résumé, and hobbies." />
+    <meta property="og:description" content="Emma Sax’s personal website and blog. Includes information about my social media profiles, résumé, and hobbies." />
+    <link rel="canonical" href="https://emmasax4.info/blog/posts/adding-pagination-without-jekyll/" />
+    <meta property="og:url" content="https://emmasax4.info/blog/posts/adding-pagination-without-jekyll/" />
+    <meta property="og:site_name" content="Emma Sax" />
+    <meta property="og:type" content="article" />
+    <meta property="article:published_time" content="2019-09-12T05:00:00+00:00" />
+    <meta name="twitter:card" content="summary" />
+    <meta property="twitter:title" content="Adding Pagination without Jekyll" />
+    <meta name="google-site-verification" content="v04az8eo-0UcZrWCJr7SKAvM6hw90qTCBQoKx3PlXCA" />
+    <meta name="msvalidate.01" content="89B2B19FF966341B78EF64EDADE6DF81" />
+    <meta name="yandex-verification" content="c2741887f8c30dd1" />
+    <script type="application/ld+json">
+      {"description":"Emma Sax’s personal website and blog. Includes information about my social media profiles, résumé, and hobbies.","@type":"BlogPosting","url":"https://emmasax4.info/blog/posts/adding-pagination-without-jekyll/","headline":"Adding Pagination without Jekyll","dateModified":"2020-06-29T22:35:31+00:00","datePublished":"2019-09-12T05:00:00+00:00","author":{"@type":"Person","name":"Emma Sax"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://emmasax4.info/blog/posts/adding-pagination-without-jekyll/"},"@context":"https://schema.org"}
+    </script>
+    <!-- End Jekyll SEO tag -->
+  </head>
   <header class="sticky-top">
-  <nav class="navbar navbar-expand-md navbar-dark">
-    <a class="navbar-brand mb-0" href="https://emmasax4.info" target="_self">
-      <img src="/assets/images/logos/e-logo-white-40.png" width="30" height="30"
+    <nav class="navbar navbar-expand-md navbar-dark">
+      <a class="navbar-brand mb-0" href="https://emmasax4.info" target="_self">
+        <img src="/assets/images/logos/e-logo-white-40.png" width="30" height="30"
         class="d-inline-block align-top" alt="E logo"
       > Emma Sax
-    </a>
-
-    <button class="navbar-toggler" type="button" data-toggle="collapse"
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse"
       data-target="#navbar-links" aria-controls="navbar-links"
       aria-expanded="false" aria-label="Toggle navigation">
-      <i data-feather="menu"></i>
-      <i data-feather="x"></i>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbar-links">
-      <ul class="navbar-nav ml-auto mt-2 mt-md-0">
-        
-
-        
-          
-            
-
-            
-
-            <li class="nav-item ">
-              <a class="nav-link" href="/about-me/">About Me
-                
-              </a>
-            </li>
-          
-        
-          
-            
-
-            
-
-            <li class="nav-item ">
-              <a class="nav-link" href="/interests-and-hobbies/">Interests & Hobbies
-                
-              </a>
-            </li>
-          
-        
-          
-            
-
-            
-
-            <li class="nav-item active">
-              <a class="nav-link" href="/blog">Blog
-                
-                  <span class="sr-only">(current)</span>
-                
-              </a>
-            </li>
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      </ul>
-    </div>
-  </nav>
-</header>
-
-
+        <i data-feather="menu"></i>
+        <i data-feather="x"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbar-links">
+        <ul class="navbar-nav ml-auto mt-2 mt-md-0">
+          <li class="nav-item ">
+            <a class="nav-link" href="/about-me/">About Me
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="/interests-and-hobbies/">Interests & Hobbies
+            </a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="/blog">Blog
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
   <body>
     <main class="container">
       <div class="row">
-  <div class="col col-12 col-md-2 text-center">
-    <div class="container" style="padding-bottom: 1rem;">
-  <a href="/blog/" class="btn btn-lg btn-outline-secondary">All Posts</a>
-</div>
-
-
-<div class="text-center" style="margin-bottom: .5rem;">
-  <a href="/feed.xml" target="_blank" class="link-icon-rss">
-  <i data-feather="rss"></i>
-</a>
-
-</div>
-
-<div class="text-center" style="margin-bottom: .5rem;">
-  
-
-  
-  <span class="post-meta">
-    <i style="width: 20px; height: 20px;" data-feather="tag"></i>
-    
-      <a href="/blog/jekyll/">
-        jekyll
-      </a>
-      
-        |
-      
-    
-      <a href="/blog/tech/">
-        tech
-      </a>
-      
-    
-  </span>
-
-
-
-
-</div>
-
-<div class="text-center" style="margin-bottom: 1rem;">
-  <span class="post-meta">
-    Read time: 6 minutes
-  </span>
-</div>
-
-  </div>
-
-  <div class="col col-12 col-md-10">
-    <h1 style="padding-bottom: .75rem;">
-  <div class="text-center">
-    
-      Adding Pagination without Jekyll
-    
-  </div>
-
-  <div class="text-center" style="margin-top: -.5rem;">
-    
-      
-      
-      
-        <span class="date-meta">2019-09-12 00:00:00 -0500</span>
-      
-    
-  </div>
-</h1>
-
-    <div class="page-body">
-      <p>As I stated in my original <a href="/blog/posts/switching-to-jekyll/"><em>Switching to Jekyll</em></a> post, one of the original reasons I wanted to move to a Jekyll-based site was so that I could implement pagination on my “Blog” page(s). Converting my site to Jekyll was definitely challenging, and it involved me learning a new framework and a new language (Liquid). And therefore, the <a href="https://github.com/emmasax4/emmasax4.info/pull/6">pull request that made the switch</a> was massive, and took a while—it had 54 changed files and 19 commits. Because of this, I decided that pagination should come in a separate pull request. And then, because I’m in my “website-phase,” I thought I’d write a blog post about it 🤷🏻‍♀️😂.</p>
-<p>I originally tried to add Jekyll’s built-in pagination. Supposedly, it’s pretty slick. You add a few sections to the <code>_config.yml</code>, a couple sections to your <code>index.html</code>, and bam: it’s done and it works 💥. My real experience setting up the pagination was <em>not</em> like that. In fact, within one commit, I learned that Jekyll’s pagination (and other pagination gems), wouldn’t work well with my current directory/file setup. Both <a href="https://jekyllrb.com/docs/pagination/">Jekyll’s built-in pagination</a> and the gem <a href="https://github.com/sverrirs/jekyll-paginate-v2"><code>jekyll-paginate-v2</code></a> expect the blog posts to be in a <code>_posts/</code> directory, and to be referenced by <code>site.posts</code>. They also expect the main “Blog” page to be in its own directory, and my stuff wasn’t formatted like that. And so, instead of fighting with that, I decided to get more creative. That can’t be the only pagination option, right? 🥴😬🙏🏼</p>
-<p>Turns out, the Google doesn’t have a lot of other suggestions on pagination. But, the original Jekyll repository I copied (<a href="https://github.com/UMM-CSci/senior-seminar">UMM-CSci’s <code>senior-seminar</code></a>), implements a version of pagination that’s installed from <a href="https://listjs.com/docs/pagination/"><code>List.js</code></a>. Possibly this is because that site uses <code>seminars</code> instead of <code>posts</code>. But either way, I decided to give it a chance. Worst case scenario, it just wouldn’t work and I’d have to find another pagination option.</p>
-<p>Of course, I started with the things I know how to do best: copy-paste 💁🏻‍♀️. I started with <a href="https://github.com/UMM-CSci/senior-seminar/blob/master/seminars.html#L63-L80">this blob</a>, of course edited to suit my HTML file. Surprisingly, bits of this work right out of the box. But… the pagination isn’t pretty, which is very important to me.</p>
-<div class="text-center">
-  <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/48741690227/in/album-72157710863695862/" title="bad_pagination_bar"><img class="image" src="https://live.staticflickr.com/65535/48741690227_e27cb82884.jpg" width="450" height="367" alt="Bad pagination bar"></a>
-</div>
-<p>So, I went on a mission to figure out how to make a prettier pagination bar. After a couple of hours, and a good night’s sleep, I realized that the answer lies in the <code>css/main.scss</code> file. Specifically, this line:</p>
-<pre><code class="language-css">@import "core/index.scss";
+        <div class="col col-12 col-md-2 text-center">
+          <div class="container" style="padding-bottom: 1rem;">
+            <a href="/blog/" class="btn btn-lg btn-outline-secondary">All Posts</a>
+          </div>
+          <div class="text-center" style="margin-bottom: .5rem;">
+            <a href="/feed.xml" target="_blank" class="link-icon-rss">
+              <i data-feather="rss"></i>
+            </a>
+          </div>
+          <div class="text-center" style="margin-bottom: .5rem;">
+            <span class="post-meta">
+              <i style="width: 20px; height: 20px;" data-feather="tag"></i>
+              <a href="/blog/jekyll/">
+                jekyll
+              </a>
+              |
+              <a href="/blog/tech/">
+                tech
+              </a>
+            </span>
+          </div>
+          <div class="text-center" style="margin-bottom: 1rem;">
+            <span class="post-meta">
+              Read time: 6 minutes
+            </span>
+          </div>
+        </div>
+        <div class="col col-12 col-md-10">
+          <h1 style="padding-bottom: .75rem;">
+            <div class="text-center">
+              Adding Pagination without Jekyll
+            </div>
+            <div class="text-center" style="margin-top: -.5rem;">
+              <span class="date-meta">2019-09-12 00:00:00 -0500</span>
+            </div>
+          </h1>
+          <div class="page-body">
+            <p>As I stated in my original <a href="/blog/posts/switching-to-jekyll/"><em>Switching to Jekyll</em></a> post, one of the original reasons I wanted to move to a Jekyll-based site was so that I could implement pagination on my “Blog” page(s). Converting my site to Jekyll was definitely challenging, and it involved me learning a new framework and a new language (Liquid). And therefore, the <a href="https://github.com/emmasax4/emmasax4.info/pull/6">pull request that made the switch</a> was massive, and took a while—it had 54 changed files and 19 commits. Because of this, I decided that pagination should come in a separate pull request. And then, because I’m in my “website-phase,” I thought I’d write a blog post about it 🤷🏻‍♀️😂.</p>
+            <p>I originally tried to add Jekyll’s built-in pagination. Supposedly, it’s pretty slick. You add a few sections to the <code>_config.yml</code>, a couple sections to your <code>index.html</code>, and bam: it’s done and it works 💥. My real experience setting up the pagination was <em>not</em> like that. In fact, within one commit, I learned that Jekyll’s pagination (and other pagination gems), wouldn’t work well with my current directory/file setup. Both <a href="https://jekyllrb.com/docs/pagination/">Jekyll’s built-in pagination</a> and the gem <a href="https://github.com/sverrirs/jekyll-paginate-v2"><code>jekyll-paginate-v2</code></a> expect the blog posts to be in a <code>_posts/</code> directory, and to be referenced by <code>site.posts</code>. They also expect the main “Blog” page to be in its own directory, and my stuff wasn’t formatted like that. And so, instead of fighting with that, I decided to get more creative. That can’t be the only pagination option, right? 🥴😬🙏🏼</p>
+            <p>Turns out, the Google doesn’t have a lot of other suggestions on pagination. But, the original Jekyll repository I copied (<a href="https://github.com/UMM-CSci/senior-seminar">UMM-CSci’s <code>senior-seminar</code></a>), implements a version of pagination that’s installed from <a href="https://listjs.com/docs/pagination/"><code>List.js</code></a>. Possibly this is because that site uses <code>seminars</code> instead of <code>posts</code>. But either way, I decided to give it a chance. Worst case scenario, it just wouldn’t work and I’d have to find another pagination option.</p>
+            <p>Of course, I started with the things I know how to do best: copy-paste 💁🏻‍♀️. I started with <a href="https://github.com/UMM-CSci/senior-seminar/blob/master/seminars.html#L63-L80">this blob</a>, of course edited to suit my HTML file. Surprisingly, bits of this work right out of the box. But… the pagination isn’t pretty, which is very important to me.</p>
+            <div class="text-center">
+              <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/48741690227/in/album-72157710863695862/" title="bad_pagination_bar"><img class="image" src="https://live.staticflickr.com/65535/48741690227_e27cb82884.jpg" width="450" height="367" alt="Bad pagination bar"></a>
+            </div>
+            <p>So, I went on a mission to figure out how to make a prettier pagination bar. After a couple of hours, and a good night’s sleep, I realized that the answer lies in the <code>css/main.scss</code> file. Specifically, this line:</p>
+            <pre><code class="language-css">@import "core/index.scss";
 </code></pre>
-<p>Prior to adding that line, the whole Jekyll build would break. When I tried to load the project locally, my server would give me this error back:</p>
-<pre><code class="language-css">".pagination .active .page" failed to
+            <p>Prior to adding that line, the whole Jekyll build would break. When I tried to load the project locally, my server would give me this error back:</p>
+            <pre><code class="language-css">".pagination .active .page" failed to
 @extend ".selected". The selector ".selected"
 was not found.
 </code></pre>
-<p>Clearly, that means my CSS is broken. But I didn’t quite understand why 😕. The repository that I was copying pagination from included this line:</p>
-<div class="text-center">
-  <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/48741503991/in/album-72157710863695862/" title="primer_submodule_directory"><img class="image" src="https://live.staticflickr.com/65535/48741503991_c9f4ec3ce4_o.png" width="486" height="45" alt="primer_submodule_directory"></a>
-</div>
-<p>Since I couldn’t understand out why my CSS was broken, I figured it was time for me to try to add that “directory” to my repo.</p>
-<p>I had never worked with submodules in Git before. So, I started how any developer-who-doesn’t-recognize-anything would start: with Google. I started to google how to add submodules to Git repositories. And me, not liking to actually read anything, just started to jump in.</p>
-<p>After everything, I ended up having to add, remove, re-add, re-remove, and re-re-add the <code>primer</code> submodule to my Git repo in order for it to commit in the repo, show up in the directory structure, and be sitting on the same commit as my example repository 🤦🏻‍♀️. Here’s a list of the resources I used to help me add the <code>primer</code> submodule:</p>
-<ul>
-<li><a href="https://chrisjean.com/git-submodules-adding-using-removing-and-updating/">chrisjean.com: git submodules adding, using, removing, and updating</a></li>
-<li><a href="https://stackoverflow.com/questions/10914022/how-do-i-check-out-a-specific-version-of-a-submodule-using-git-submodule">stackoverflow.com: how do I check out a specific version of a submodule using git submodule</a></li>
-<li><a href="https://twoguysarguing.wordpress.com/2010/11/14/tie-git-submodules-to-a-particular-commit-or-branch/">2guysarguing.wordpress.com: tie git submodules to a particular commit or branch</a></li>
-<li><a href="https://subfictional.com/fun-with-git-submodules/">subfictional.com: fun with git submodules</a></li>
-<li>And possibly others I can’t find in my browser history anymore</li>
-</ul>
-<p>Also, note that there is no easy way to remove a submodule. I’m just glad that I attempted this inside of a pull request because then I could <code>git reset</code> when things weren’t going my way.</p>
-<p>After I finished succesfully adding the <code>primer</code> submodule 😌, all I had to do was re-add</p>
-<pre><code class="language-css">@import "core/index.scss";
+            <p>Clearly, that means my CSS is broken. But I didn’t quite understand why 😕. The repository that I was copying pagination from included this line:</p>
+            <div class="text-center">
+              <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/48741503991/in/album-72157710863695862/" title="primer_submodule_directory"><img class="image" src="https://live.staticflickr.com/65535/48741503991_c9f4ec3ce4_o.png" width="486" height="45" alt="primer_submodule_directory"></a>
+            </div>
+            <p>Since I couldn’t understand out why my CSS was broken, I figured it was time for me to try to add that “directory” to my repo.</p>
+            <p>I had never worked with submodules in Git before. So, I started how any developer-who-doesn’t-recognize-anything would start: with Google. I started to google how to add submodules to Git repositories. And me, not liking to actually read anything, just started to jump in.</p>
+            <p>After everything, I ended up having to add, remove, re-add, re-remove, and re-re-add the <code>primer</code> submodule to my Git repo in order for it to commit in the repo, show up in the directory structure, and be sitting on the same commit as my example repository 🤦🏻‍♀️. Here’s a list of the resources I used to help me add the <code>primer</code> submodule:</p>
+            <ul>
+              <li><a href="https://chrisjean.com/git-submodules-adding-using-removing-and-updating/">chrisjean.com: git submodules adding, using, removing, and updating</a></li>
+              <li><a href="https://stackoverflow.com/questions/10914022/how-do-i-check-out-a-specific-version-of-a-submodule-using-git-submodule">stackoverflow.com: how do I check out a specific version of a submodule using git submodule</a></li>
+              <li><a href="https://twoguysarguing.wordpress.com/2010/11/14/tie-git-submodules-to-a-particular-commit-or-branch/">2guysarguing.wordpress.com: tie git submodules to a particular commit or branch</a></li>
+              <li><a href="https://subfictional.com/fun-with-git-submodules/">subfictional.com: fun with git submodules</a></li>
+              <li>And possibly others I can’t find in my browser history anymore</li>
+            </ul>
+            <p>Also, note that there is no easy way to remove a submodule. I’m just glad that I attempted this inside of a pull request because then I could <code>git reset</code> when things weren’t going my way.</p>
+            <p>After I finished succesfully adding the <code>primer</code> submodule 😌, all I had to do was re-add</p>
+            <pre><code class="language-css">@import "core/index.scss";
 </code></pre>
-<p>back to my <code>main.scss</code>, and finally the pagination was beautiful:</p>
-<div class="text-center">
-  <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/48741504061/in/album-72157710863695862/" title="lovely_pagination_bar"><img class="image" src="https://live.staticflickr.com/65535/48741504061_7ebbd630fa.jpg" width="450" height="311" alt="Lovely pagination bar"></a>
-</div>
-<p>I was thrilled with the outcome of this pagination (even though it wasn’t Jekyll’s officially supported pagination), and I committed to <code>gh-pages</code>. However, perhaps a day later, I noticed something wrong with my CSS formatting. Perhaps you can notice it if you compare the before-pretty-pagination and the after-pretty-pagination pictures… I’ll give you a hint: it has to do with the indentation and spacing of the words. Somehow, making the pagination bar pretty messed up my CSS formatting!</p>
-<p>I was upset. I wanted to have both a pretty pagination bar and proper formatting of the text. So, I went back in my commit changes and commented out everything from when the site last worked as expected. I slowly uncommented line after line until I found the problem line… of course it happened to be with the same line that makes the pagination work:</p>
-<pre><code class="language-css">@import "core/index.scss";
+            <p>back to my <code>main.scss</code>, and finally the pagination was beautiful:</p>
+            <div class="text-center">
+              <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/48741504061/in/album-72157710863695862/" title="lovely_pagination_bar"><img class="image" src="https://live.staticflickr.com/65535/48741504061_7ebbd630fa.jpg" width="450" height="311" alt="Lovely pagination bar"></a>
+            </div>
+            <p>I was thrilled with the outcome of this pagination (even though it wasn’t Jekyll’s officially supported pagination), and I committed to <code>gh-pages</code>. However, perhaps a day later, I noticed something wrong with my CSS formatting. Perhaps you can notice it if you compare the before-pretty-pagination and the after-pretty-pagination pictures… I’ll give you a hint: it has to do with the indentation and spacing of the words. Somehow, making the pagination bar pretty messed up my CSS formatting!</p>
+            <p>I was upset. I wanted to have both a pretty pagination bar and proper formatting of the text. So, I went back in my commit changes and commented out everything from when the site last worked as expected. I slowly uncommented line after line until I found the problem line… of course it happened to be with the same line that makes the pagination work:</p>
+            <pre><code class="language-css">@import "core/index.scss";
 </code></pre>
-<p>Are we even surprised 😤🙄?</p>
-<p>So, I went on a mini-adventure through the <code>primer</code> code to see what that line was doing. Apparently, it ends up installing a bunch of CSS files through other nested CSS files. Let’s be real, even if I have the time to go through each one looking for what may be conflicting with my <code>main.scss</code> file, I don’t want to do that. So, I did an entire repository-wide file search for: <code>primer/pagination/index</code>, found the single pagination CSS page I needed (since that’s all I’m using <code>primer</code> for), and switched to import just that:</p>
-<pre><code class="language-css">@import "pagination/index.scss";
+            <p>Are we even surprised 😤🙄?</p>
+            <p>So, I went on a mini-adventure through the <code>primer</code> code to see what that line was doing. Apparently, it ends up installing a bunch of CSS files through other nested CSS files. Let’s be real, even if I have the time to go through each one looking for what may be conflicting with my <code>main.scss</code> file, I don’t want to do that. So, I did an entire repository-wide file search for: <code>primer/pagination/index</code>, found the single pagination CSS page I needed (since that’s all I’m using <code>primer</code> for), and switched to import just that:</p>
+            <pre><code class="language-css">@import "pagination/index.scss";
 </code></pre>
-<p>And it turns out, the answer was as easy as that! Now, I have proper CSS layouts, a lovely pagination bar that works and doesn’t take long to load, and the file structure of my project was able to stay the same. The pagination bar isn’t perfect, but it’s better than anything I had before, and it’s good enough for me—for right now anyway.</p>
-<p>Since the pagination part of this project is <em>finally</em> done, I can officially say that I’ve now gotten everything out of Jekyll that I had hoped to, and then some. Not only did I implement a website with a “blog” that I’m proud of, but I learned a new framework and a new coding language. And most importantly, I reminded myself that one of the most important parts of being a coder is being willing to dive in, try something new, and not be afraid to fail.</p>
-<hr>
-<p>EDIT: Since writing this blog post, I’ve moved my <code>master</code> branch to be called <code>gh-pages</code>, and I’ve updated this blog post accordingly.</p>
-
-      
-  <script src="/assets/js/show-comments.js" type="text/javascript"></script>
-
-  <div class="text-center" style="margin-bottom: 1rem;">
-    <button id="show-comments-button" class="btn btn-lg btn-outline-secondary" onclick="loadComments('emmasax4');return false;">
-  Load Comments
-  <i data-feather="message-circle"></i>
-</button>
-
-  </div>
-
-  <div id="disqus_thread"></div>
-
-  <noscript>
-    Please enable JavaScript to view the
-    <a href="https://disqus.com/?ref_noscript" rel="nofollow">
-      comments powered by Disqus.
-    </a>
-  </noscript>
-
-
-    </div>
-  </div>
-</div>
-
+            <p>And it turns out, the answer was as easy as that! Now, I have proper CSS layouts, a lovely pagination bar that works and doesn’t take long to load, and the file structure of my project was able to stay the same. The pagination bar isn’t perfect, but it’s better than anything I had before, and it’s good enough for me—for right now anyway.</p>
+            <p>Since the pagination part of this project is <em>finally</em> done, I can officially say that I’ve now gotten everything out of Jekyll that I had hoped to, and then some. Not only did I implement a website with a “blog” that I’m proud of, but I learned a new framework and a new coding language. And most importantly, I reminded myself that one of the most important parts of being a coder is being willing to dive in, try something new, and not be afraid to fail.</p>
+            <hr>
+            <p>EDIT: Since writing this blog post, I’ve moved my <code>master</code> branch to be called <code>gh-pages</code>, and I’ve updated this blog post accordingly.</p>
+            <script src="/assets/js/show-comments.js" type="text/javascript"></script>
+            <div class="text-center" style="margin-bottom: 1rem;">
+              <button id="show-comments-button" class="btn btn-lg btn-outline-secondary" onclick="loadComments('emmasax4');return false;">
+                Load Comments
+                <i data-feather="message-circle"></i>
+              </button>
+            </div>
+            <div id="disqus_thread"></div>
+            <noscript>
+              Please enable JavaScript to view the
+              <a href="https://disqus.com/?ref_noscript" rel="nofollow">
+                comments powered by Disqus.
+              </a>
+            </noscript>
+          </div>
+        </div>
+      </div>
     </main>
   </body>
-
   <footer>
-  &copy; <script>document.write(new Date().getFullYear());</script>
-  Emma Sax. All rights reserved.
-  <br>
-  View on <a href="https://github.com/emmasax4/emmasax4.info">GitHub</a>.
-</footer>
-
+    &copy; <script>
+      document.write(new Date().getFullYear());
+    </script>
+    Emma Sax. All rights reserved.
+    <br>
+    View on <a href="https://github.com/emmasax4/emmasax4.info">GitHub</a>.
+  </footer>
   <script src="/assets/js/show-dates.js" type="text/javascript"></script>
-<script src="/assets/js/external-links.js" type="text/javascript"></script>
-<script src="/assets/js/jquery.min.js"></script>
-<script src="/assets/js/bootstrap.min.js"></script>
-<script src="/assets/js/feather.min.js"></script>
-<script>feather.replace()</script>
-
+  <script src="/assets/js/external-links.js" type="text/javascript"></script>
+  <script src="/assets/js/jquery.min.js"></script>
+  <script src="/assets/js/bootstrap.min.js"></script>
+  <script src="/assets/js/feather.min.js"></script>
+  <script>
+    feather.replace()
+  </script>
 </html>
