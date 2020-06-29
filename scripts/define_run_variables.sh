@@ -12,7 +12,7 @@ if [[ $actions_workflow == develop ]]; then
   echo "::set-env name=PULL_ID::$pull_id"
   echo "::set-env name=PULL_URL::$(echo https://github.com/$github_repo/pull/$pull_id)"
   echo "::set-env name=BRANCH::$(echo $head_ref | sed -E 's|refs/[a-zA-Z]+/||')"
-  echo "::set-env name=DEPLOY_MESSAGE::$(echo Deploy to GitHub Pages was *skipped*)"
+  echo "::set-env name=DEPLOY_MESSAGE::$(echo Deploy to GitHub Pages was *failed*)"
 elif [[ $actions_workflow == release ]]; then
   github_actor=$5
   echo "::set-env name=DEPLOY_MESSAGE::$(echo Deploy to GitHub Pages was *skipped*)"
