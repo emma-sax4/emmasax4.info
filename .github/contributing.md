@@ -1,7 +1,6 @@
 # Contributing
 
 ### Table of Contents
-
 * [Contribution Process](#contribution-process)
 * [Running Locally](#running-locally)
 * [HTML Proofer](#html-proofer)
