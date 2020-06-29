@@ -1,6 +1,7 @@
 # Contributing
 
 ### Table of Contents
+
 * [Contribution Process](#contribution-process)
 * [Running Locally](#running-locally)
 * [HTML Proofer](#html-proofer)
@@ -79,7 +80,7 @@ NOTE: Running this process locally will most likely create at least one director
 
 ## HTML Proofer
 
-We can check periodically that all of the HTML links in this website load correctly:
+We can check periodically that all of the HTML links in this website load correctly with [HTML Proofer](https://github.com/gjtorikian/html-proofer):
 
 ```bash
 JEKYLL_ENV=production bundle exec jekyll build
@@ -92,7 +93,7 @@ GitHub Actions also runs a version of the HTML Proofer which skips over all inte
 
 ## Rubocop
 
-This project uses Rubocop to check its Ruby files. To run Rubocop locally, run:
+This project uses [Rubocop](https://github.com/rubocop-hq/rubocop) to check its Ruby files. To run Rubocop locally, run:
 
 ```bash
 bundle exec rubocop
@@ -102,7 +103,7 @@ GitHub Actions also runs Rubocop as well, so if any changes are made to the Ruby
 
 ## Markdown Linter
 
-This project uses the Markdown Linter on its Markdown files. There are specific Markdown Linter rules that I've carefully chosen to omit (because they simply don't fit my Markdown style), and so to run the linter with my rules, run this script:
+This project uses the [MarkdownLint](https://github.com/markdownlint/markdownlint) on its Markdown files. There are specific linter [rules](https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md) that I've carefully chosen to omit (because they simply don't fit my Markdown style), and so to run the linter with my rules, run this script:
 
 ```bash
 bash scripts/markdown_linter.sh
