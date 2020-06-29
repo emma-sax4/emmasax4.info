@@ -49,7 +49,7 @@ layout: none
     {% for post in site.posts limit: feed.items %}
       <item>
         {% if post.subtitle %}
-          {% assign short_title = post.title | append: " → " | append: post.subtitle %}
+          {% assign short_title = post.title | append: " — " | append: post.subtitle %}
         {% else %}
           {% assign short_title = post.title %}
         {% endif %}
