@@ -5,6 +5,8 @@
 * [Contribution Process](#contribution-process)
 * [Running Locally](#running-locally)
 * [HTML Proofer](#html-proofer)
+* [Rubocop](#rubocop)
+* [Markdown Linter](#markdown-linter)
 * [Continuous Integration](#continuous-integration)
   * [Tests](#tests)
   * [Deployments](#deployments)
@@ -88,6 +90,26 @@ bash scripts/html_proofer.sh
 If you're in the process of creating a new blog post, then most likely the external link to the new blog post will fail. This makes sense—the blog post isn't live online yet, and that's what the link is checking for.
 
 GitHub Actions also runs a version of the HTML Proofer which skips over all internal domains. GitHub Actions runs this step after building, just verifying that links are accurate. If a build breaks because of this, the failures can probably be solved by just rerunning the workflow.
+
+## Rubocop
+
+This project uses Rubocop to check its Ruby files. To run Rubocop locally, run:
+
+```bash
+bundle exec rubocop
+```
+
+GitHub Actions also runs Rubocop as well, so if any changes are made to the Ruby files, GitHub Actions will evaluate them.
+
+## Markdown Linter
+
+This project uses the Markdown Linter on its Markdown files. There are specific Markdown Linter rules that I've carefully chosen to omit (because they simply don't fit my Markdown style), and so to run the linter with my rules, run this script:
+
+```bash
+bash scripts/markdown_linter.sh
+```
+
+Note that the linter specifically passes in directories and files to evaluate, so if you create any new Markdown files, you'll have to add them to `scripts/markdown_linter.sh`.
 
 ## Continuous Integration
 
