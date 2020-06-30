@@ -14,6 +14,7 @@ if [[ $actions_workflow == develop ]]; then
   echo "::set-env name=BRANCH::$(echo $head_ref | sed -E 's|refs/[a-zA-Z]+/||')"
 elif [[ $actions_workflow == release ]]; then
   github_actor=$5
+  echo "::set-env name=DEPLOY_MESSAGE::$(echo Deploy to GitHub Pages was *skipped*)"
 
   if [[ $github_actor == "pr-scheduler[bot]" ]]; then
     echo "::set-env name=ACTOR_ICON::https://i.imgur.com/tmdeggv.png"
