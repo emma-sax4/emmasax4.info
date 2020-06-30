@@ -44,9 +44,8 @@ jobs:
     - name: Notify Slack on Success
       if: success()
       uses: emmasax4/slack-notifier-action@emmasax4_slack_notifier_action
-      env:
-        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
       with:
+        slack_webhook: ${{ secrets.SLACK_WEBHOOK }}
         channel: "#general"
         icon_url: https://img.icons8.com/ios-filled/50/000000/github.png
         username: GitHub Actions
@@ -62,9 +61,8 @@ jobs:
     - name: Notify Slack on Failure
       if: failure()
       uses: emmasax4/slack-notifier-action@emmasax4_slack_notifier_action
-      env:
-        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
       with:
+        slack_webhook: ${{ secrets.SLACK_WEBHOOK }}
         channel: "#general"
         icon_url: https://img.icons8.com/ios-filled/50/000000/github.png
         username: GitHub Actions
