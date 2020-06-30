@@ -31,29 +31,8 @@ jobs:
     - name: Jekyll Build
       run: JEKYLL_ENV=production bundle exec jekyll build --destination ./_site/
 
-    - name: print sitemap
-      run: cat _site/sitemap.xml
-
-    - name: HTML Proofer
-      run: bash scripts/html_proofer.sh
-
-    - name: Rubocop
-      run: bundle exec rubocop
-
-    - name: Markdown Linter
-      run: bash scripts/markdown_linter.sh
-
-    - name: GitHub Pages Deploy
-      uses: emmasax4/github-pages-deploy-action@emmasax4_github_pages_deploy_action
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        BRANCH: "checkout.v2"
-        FOLDER: _site
-        CLEAN: true
-        COMMIT_MESSAGE: "TEST Deploy to ${{ github.repository }}"
-        GIT_CONFIG_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
-        GIT_CONFIG_NAME: github-actions[bot]
+    - name: print feed
+      run: cat _site/feed.xml
 
     - name: Notify Slack on Success
       if: success()
