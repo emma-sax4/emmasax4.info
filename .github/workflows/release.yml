@@ -48,6 +48,7 @@ jobs:
         branch: gh-pages
         folder: _site
         clean: true
+        silent: true
         commit_message: "Deploy to ${{ github.repository }}"
         git_config_email: 41898282+github-actions[bot]@users.noreply.github.com
         git_config_name: github-actions[bot]
