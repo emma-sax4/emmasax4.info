@@ -45,7 +45,7 @@ jobs:
       uses: emmasax4/github-pages-deploy-action@emmasax4_github_pages_deploy_action
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        branch: gh-pages-test
+        branch: gh-pages
         folder: _site
         clean: true
         commit_message: "Deploy to ${{ github.repository }}"
