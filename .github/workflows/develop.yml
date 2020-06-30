@@ -57,7 +57,7 @@ jobs:
         author_icon: https://github.com/${{ github.actor }}.png
         text: >-
           Build <${{ env.BUILD_URL }}|${{ github.run_id }}> on branch `${{ env.BRANCH }}`
-          in PR <${{ env.PULL_URL }}|#${{ env.PULL_ID }}> *passed*. ${{ env.DEPLOY_MESSAGE }}.
+          in PR <${{ env.PULL_URL }}|#${{ env.PULL_ID }}> *passed*.
 
     - name: Notify Slack on Failure
       if: failure()
@@ -75,4 +75,4 @@ jobs:
         author_icon: https://github.com/${{ github.actor }}.png
         text: >-
           Build <${{ env.BUILD_URL }}|${{ github.run_id }}> on branch `${{ env.BRANCH }}`
-          in PR <${{ env.PULL_URL }}|#${{ env.PULL_ID }}> *failed*. ${{ env.DEPLOY_MESSAGE }}.
+          in PR <${{ env.PULL_URL }}|#${{ env.PULL_ID }}> *failed*.
