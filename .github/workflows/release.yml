@@ -20,7 +20,7 @@ jobs:
       run: sudo gem update --system 3.0.8 && sudo gem install bundler -v $(cat Gemfile.lock | tail -1 | tr -d " ")
 
     - name: Configure Gem Cache
-      uses: actions/cache@v1
+      uses: actions/cache@v2
       with:
         path: vendor/bundle
         key: bundler-cache-${{ hashFiles('**/Gemfile.lock') }}
@@ -33,7 +33,7 @@ jobs:
       run: JEKYLL_ENV=production bundle exec jekyll build --destination ./_site/
 
     - name: HTML Proofer
-      run: bash scripts/html_proofer.sh ${{ env.DEPLOYMENT_STATUS }}
+      run: bash scripts/html_proofer.sh
 
     - name: Rubocop
       run: bundle exec rubocop
