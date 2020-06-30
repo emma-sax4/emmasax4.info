@@ -41,9 +41,6 @@ jobs:
     - name: Markdown Linter
       run: bash scripts/markdown_linter.sh
 
-    - name: Set Deploy Status Message # overriding the variable
-      run: bash scripts/set_deploy_status_message.sh skipped
-
     - name: Notify Slack on Success
       if: success()
       uses: emmasax4/slack-notifier-action@emmasax4_slack_notifier_action
