@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/emmasax4/jekyll-feed.git
-  revision: 95b92fc052443e90c0bd7e5403c694035f0ac647
+  revision: 036698f852594fbf87b7209624878f2efcab090a
   branch: emmasax4_feed
   specs:
     jekyll-feed (0.14.0)
@@ -16,7 +16,7 @@ GIT
 
 GIT
   remote: https://github.com/emmasax4/jekyll-sitemap.git
-  revision: 09986e9f7d649c9c4ec9fe5e27a3a9964b23e715
+  revision: 885af59df6c98c86baae1179e20627657c303427
   branch: emmasax4_sitemap
   specs:
     jekyll-sitemap (1.4.0)
