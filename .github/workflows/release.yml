@@ -43,15 +43,14 @@ jobs:
 
     - name: GitHub Pages Deploy
       uses: emmasax4/github-pages-deploy-action@emmasax4_github_pages_deploy_action
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        BRANCH: gh-pages
-        FOLDER: _site
-        CLEAN: true
-        COMMIT_MESSAGE: "Deploy to ${{ github.repository }}"
-        GIT_CONFIG_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
-        GIT_CONFIG_NAME: github-actions[bot]
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: gh-pages-test
+        folder: _site
+        clean: true
+        commit_message: "Deploy to ${{ github.repository }}"
+        git_config_email: 41898282+github-actions[bot]@users.noreply.github.com
+        git_config_name: github-actions[bot]
 
     - name: Set Deploy Status Message
       run: bash scripts/set_deploy_status_message.sh ${{ env.DEPLOYMENT_STATUS }}

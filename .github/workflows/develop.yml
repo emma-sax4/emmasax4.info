@@ -41,6 +41,17 @@ jobs:
     - name: Markdown Linter
       run: bash scripts/markdown_linter.sh
 
+    - name: GitHub Pages Deploy
+      uses: emmasax4/github-pages-deploy-action@all_lowercase_vars_as_with
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: gh-pages-test
+        folder: _site
+        clean: true
+        commit_message: "TEST Deploy to ${{ github.repository }}"
+        git_config_email: 41898282+github-actions[bot]@users.noreply.github.com
+        git_config_name: github-actions[bot]
+
     - name: Notify Slack on Success
       if: success()
       uses: emmasax4/slack-notifier-action@emmasax4_slack_notifier_action
