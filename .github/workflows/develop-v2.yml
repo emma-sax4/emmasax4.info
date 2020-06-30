@@ -31,6 +31,9 @@ jobs:
     - name: Jekyll Build
       run: JEKYLL_ENV=production bundle exec jekyll build --destination ./_site/
 
+    - name: print sitemap
+      run: cat _site/sitemap.xml
+
     - name: HTML Proofer
       run: bash scripts/html_proofer.sh
 
