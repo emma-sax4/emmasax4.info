@@ -11,6 +11,4 @@ To submit a feature request or a bug ticket, please submit an official [GitHub I
 
 To report any security vulnerabilities, please view this project's [Security Policy](https://github.com/emmasax4/emmasax4.info/security/policy).
 
-For information on licensing, please see [LICENSE](https://github.com/emmasax4/emmasax4.info/blob/main/LICENSE).
-
 This repository does have a standard [Code of Conduct](https://github.com/emmasax4/emmasax4.info/blob/main/.github/code_of_conduct.md).
