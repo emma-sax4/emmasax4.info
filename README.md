@@ -14,5 +14,3 @@ To report any security vulnerabilities, please view this project's [Security Pol
 For information on licensing, please see [LICENSE](https://github.com/emmasax4/emmasax4.info/blob/main/LICENSE).
 
 This repository does have a standard [Code of Conduct](https://github.com/emmasax4/emmasax4.info/blob/main/.github/code_of_conduct.md).
-
-This website was originally generated using the [Cayman theme](https://github.com/jasonlong/cayman-theme) by [Jason Long](https://twitter.com/jasonlong).
