@@ -44,18 +44,20 @@ plugins:
   - jekyll-time-to-read
   - jekyll-titles-from-headings
 
-# We don't need `_legos` here because we're technically never calling a page for each lego element;
-#   we're only calling the `{{ element.content }}` of each element. If we viewed a page of each
-#   element individually, we'd need to add `_legos` to this list.
-include:
-  - _blog_posts
-  - _pages
-
+# Jekyll does not need to include these in the finished built _site.
 exclude:
   - scripts
   - vendor
   - Gemfile
   - Gemfile.lock
+
+# Add _blog_posts because we want Jekyll to read each file as its own page. It starts with _
+# because it's also a collection that needs to be read below. We don't need to include _legos because
+# Jekyll doesn't need to convert each file inside to its own page; we call `{{ element.content }}`
+# on each lego element instead. If we viewed a page of each element individually, we'd need to
+# add _legos to this list and add a permalink to each one.
+include:
+  - _blog_posts
 
 collections:
   - blog_posts
