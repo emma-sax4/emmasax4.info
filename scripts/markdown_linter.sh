@@ -6,4 +6,4 @@ bundle exec mdl -i \
   .github \
   pages \
   _legos \
-  _blog_posts \
+  _blog_posts
