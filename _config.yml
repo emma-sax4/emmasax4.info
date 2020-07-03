@@ -44,18 +44,16 @@ plugins:
   - jekyll-time-to-read
   - jekyll-titles-from-headings
 
-# We don't need `_legos` here because we're technically never calling a page for each lego element;
-#   we're only calling the `{{ element.content }}` of each element. If we viewed a page of each
-#   element individually, we'd need to add `_legos` to this list.
-include:
-  - _blog_posts
-  - _pages
-
+# We want to intentionally exclude `legos` here because we don't want each lego element to have its
+# own page. Instead, we call `{{ element.content }}` of each lego element. If we viewed a page of each
+# element individually, we'd need to remove `legos` from this list and add a permalink to each one.
 exclude:
+  - legos
   - scripts
   - vendor
   - Gemfile
   - Gemfile.lock
+  - LICENSE
 
 collections:
   - blog_posts
