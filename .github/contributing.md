@@ -133,7 +133,7 @@ There's two ways of sorting blog posts. The first way is with a `tag`. A blog po
 
 ### Posts with and without Tags
 
-Most of the posts can just go into the general `blog_posts/` directory, written as Markdown files. For a generic post, the front matter could look like this:
+Most of the posts can just go into the general `_blog_posts/` directory, written as Markdown files. For a generic post, the front matter could look like this:
 
 ```yml
 ---
@@ -153,7 +153,7 @@ The `date` front matter indicates the published date and time. Usually, it's tot
 
 ### Posts in a Category
 
-If I'm going to write a group of posts that all have a common theme, they can each go into a new nested directory: `blog_posts/category-one/`, and should make use of the `title` and `subtitle` metadata, where the `title` is the name of the `category`, and the `subtitle` is the title of that specific post:
+If I'm going to write a group of posts that all have a common theme, they can each go into a new nested directory: `_blog_posts/category-one/`, and should make use of the `title` and `subtitle` metadata, where the `title` is the name of the `category`, and the `subtitle` is the title of that specific post:
 
 ```yml
 ---
@@ -168,7 +168,7 @@ date: 2001-06-27 20:30:00 -0500 # 2001-06-28 01:30:00 UTC
 
 ### Writing Drafts
 
-To write drafts, make a new file in the `blog_posts/` directory (or in a subdirectory if the post will be part of a category). The new file should be named in the following pattern: `test-post-title.md`. Because this draft hasn't been published yet, I usually just put in the date I hope to publish the draft (usually a few days in the future).
+To write drafts, make a new file in the `_blog_posts/` directory (or in a subdirectory if the post will be part of a category). The new file should be named in the following pattern: `test-post-title.md`. Because this draft hasn't been published yet, I usually just put in the date I hope to publish the draft (usually a few days in the future).
 
 To the front matter, make sure to add the `layout`, `title`, and `permalink` (`subtitle`, `category`, and `tags` are all optional). Add the following front matter to the new blog post draft:
 
@@ -213,7 +213,7 @@ To identify the current hour offset from UTC, look up the time zone offset based
 In order to generate a Table of Contents for a given blog post, run the following:
 
 ```bash
-scripts/markdown_toc.rb blog_posts/NAME-OF-FILE.md
+scripts/markdown_toc.rb _blog_posts/NAME-OF-FILE.md
 ```
 
 This will provide a Markdown-style TOC that you can copy-paste into the blog post. Then, you just need to add the anchors (making the headers of the blog post linkable).
@@ -230,7 +230,7 @@ Note that the empty line in the middle and lack of tabs or spaces before the hea
 
 ## Legos
 
-The `legos/` directory is a collection of different LEGO sets and MOCs that I've written. My special LEGO page (which is only linked from the "Interests & Hobbies" page), loops through all of the LEGO entries. The front matter layout of one of these entries looks like this:
+The `_legos/` directory is a collection of different LEGO sets and MOCs that I've written. My special LEGO page (which is only linked from the "Interests & Hobbies" page), loops through all of the LEGO entries. The front matter layout of one of these entries looks like this:
 
 ```yml
 ---
