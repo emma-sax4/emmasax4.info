@@ -44,6 +44,13 @@ plugins:
   - jekyll-time-to-read
   - jekyll-titles-from-headings
 
+# Jekyll does not need to include these in the finished built _site.
+exclude:
+  - scripts
+  - vendor
+  - Gemfile
+  - Gemfile.lock
+
 # Add _blog_posts because we want Jekyll to read each file as its own page. It starts with _
 # because it's also a collection that needs to be read below. We don't need to include _legos because
 # Jekyll doesn't need to convert each file inside to its own page; we call `{{ element.content }}`
@@ -51,13 +58,6 @@ plugins:
 # add _legos to this list and add a permalink to each one.
 include:
   - _blog_posts
-
-# Jekyll does not need to include these in the finished built _site.
-exclude:
-  - scripts
-  - vendor
-  - Gemfile
-  - Gemfile.lock
 
 collections:
   - blog_posts
