@@ -20,7 +20,7 @@
 * [Legos](#legos)
 * [Site Pages](#site-pages)
   * [Nested Pages](#nested-pages)
-  * [Assets](#assets)
+* [Assets](#assets)
 
 ## Contribution Process
 
@@ -322,7 +322,7 @@ pagination:
 Some words describing this category should go here.
 ```
 
-### Assets
+## Assets
 
 This directory has four directories, `css/`, `favicon/`, `images/`, and `resources/`. The `css/` directory contains all of the CSS files in this site. They're all called together in `style.scss`. The CSS in the project is loaded inside the `_includes/head.html`. This site also uses [Bootstrap](https://getbootstrap.com/docs/4.4/getting-started/introduction/) for a lot of its CSS, including the navigation bar, headers, responsive page, etc.
 
