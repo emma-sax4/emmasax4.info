@@ -123,7 +123,6 @@ A full deployment (including GitHub Actions and GitHub Pages) only takes about f
 
 GitHub Actions sends a Slack notification indicating the build status after each action build finishes (even on pull requests). The Slack notifications are sent to the Slack workspace [emmasax4](https://emmasax4.slack.com). You can ask for an invite to that workspace, but a final invite is not guaranteed. The workspace and notifications are set up for my personal usage, not for communciational purposes.
 
-
 ## Jekyll Configuration
 
 This website builds and runs with the help of Jekyll. All of the configurations for this project live in a file in the root: `_config.yml`. The `_` indicates to Jekyll that this is a special directory/file that Jekyll should not include in the final build. Each time this file is changed, we must restart our local Jekyll server to get the new changes.
