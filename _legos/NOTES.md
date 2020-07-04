@@ -20,6 +20,4 @@ Legos still left to add:
     * [Hogwarts Room of Requirement](https://www.lego.com/en-us/product/hogwarts-room-of-requirement-75966)
     * [Attack on the Burrow](https://www.lego.com/en-us/product/attack-on-the-burrow-75980)
     * [Forbidden Forest — Umbridge's Encounter](https://www.lego.com/en-us/product/forbidden-forest-umbridge-s-encounter-75967)
-* [Unikitty Roller Coaster Wagon](https://www.lego.com/en-us/product/unikitty-roller-coaster-wagon-30406)
-* [Flower Display](https://www.lego.com/en-us/product/lego-flower-display-40187)
 * Raft
