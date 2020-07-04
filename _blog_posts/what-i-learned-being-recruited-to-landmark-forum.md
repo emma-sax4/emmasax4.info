@@ -61,6 +61,7 @@ As you can guess, I have decided **_not_** to sign up for Landmark Forum at this
 ---
 
 To read more about Landmark Forum, and some of the experiences of people who have done Landmark Forum, check out these links:
+
 * [wikipedia.org: Erhard Seminars Training](https://en.wikipedia.org/wiki/Erhard_Seminars_Training)
 * [yelp.com: Landmark Corporate](https://www.yelp.com/biz/landmark-corporate-san-francisco)
 * [landmarkworldwide.com](https://www.landmarkworldwide.com/)
