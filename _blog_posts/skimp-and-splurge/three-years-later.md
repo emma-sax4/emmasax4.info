@@ -30,6 +30,7 @@ I believe I've had maybe three cups of coffee in my entire life, and each one of
 ### 2.
 
 > **SPLURGE: apartment rent**. Even though apartments provide a low-contract living situation, I like knowing that the place I’m living in is decently nice, in a good neighborhood, and I would feel comfortable living there for years to come if I wanted to. And it’s not like I was super picky. In fact, my requirement for living there included 6 things:
+
 * Central heat
 * Air conditioning
 * Dishwasher
@@ -40,6 +41,7 @@ I believe I've had maybe three cups of coffee in my entire life, and each one of
 Since I moved out of my parents home, I've lived in three apartments. And it's been only 2.5 years! There are some things in this category that haven't changed. I still like to live in a decently nice place. I will always try my darnedest not to live in a place where there's thefts, break-ins, and gunshots at night. But, it's okay if my apartment doesn't have a state-of-the-art gym facility.
 
 So, here's my revised list of requirements:
+
 * Central heat (we do live in Minnesota, so hopefully this is common)
 * Air conditioning (less common than heat, but decently easy to find)
 * Dishwasher (considering I use mine at least five times a week, I'd say this is a necessity for me)

@@ -8,20 +8,23 @@ date: 2019-09-13 00:00:00 -0500
 ---
 
 As I've begun working on this website, I've figured that I tend to use this punctuation a lot:
+
 > —
 
 But — is not the same as -. Depending on the font and text editor, it can be hard to tell the difference. Let me show it to you this way:
+
 > —
-
+>
 > –
-
-> -
+>
+> \-
 
 Do you see it 👀? The top line is slightly longer than the middle, and the middle line is slightly longer than the bottom. Because they're all so similar, and I always want to make sure to use the correct punctuation in each circumstance, I thought it'd be a good idea to do some research into what they each mean, how to write them, and how to use them.
 
 ## The Hyphen
 
 The hyphen is what we think of as a small dash. It should be used when combining two words together into a compound word, such as the following:
+
 * well-being
 * like-minded
 * freeze-dried
@@ -52,16 +55,17 @@ They can be useful when trying to write a longer sentence that contains a lot of
 ### Em Dashes vs. Parentheses vs. Commas vs. Semicolons Vs. Ellipsis
 
 When do we use em dashes (versus parenthesis, commas, semicolons, or ellipsis)? Generally, em dashes should only be used when a comma doesn't provide enough break in the sentence. If a comma works, then use that. Parentheses should be used when the enclosed part of the sentence is helpful, but not necessary. Em dashes draw attention to the enclosed words; parentheses draw attention away from them. Semicolons should be used to attach two sentences that go together, such as the sentence right before this one. An ellipsis is used to indicate a longer pause, or that something is missing. Examples:
+
 * Comma:
-> Billy painted the walls blue, even though he doesn't like blue.
+  > Billy painted the walls blue, even though he doesn't like blue.
 * Parentheses:
-> Even though Michael said he didn't like Trish romantically (I didn't believe him one bit), he still asked her to prom.
+  > Even though Michael said he didn't like Trish romantically (I didn't believe him one bit), he still asked her to prom.
 * Semicolon:
-> Chris suggested his mom would be in for the holidays; apparently I misunderstood.
+  > Chris suggested his mom would be in for the holidays; apparently I misunderstood.
 * Ellipsis:
-> I'm going out to buy a ... what is that thing called again?
+  > I'm going out to buy a ... what is that thing called again?
 * Em dash:
-> We spent over $100—most of which was on groceries—at Target the other day.
+  > We spent over $100—most of which was on groceries—at Target the other day.
 
 ### To Space or Not to Space
 
@@ -76,6 +80,7 @@ On iPhones, press and hold the `-`, and a window will pop up that lets you selec
 ## The En
 
 The en dash is slightly longer than a hyphen, but shorter than an em dash (the width of the en dash should be almost exactly the width of the letter "N," while the width of the em dash is the width of the letter "M"). The en dash means "through":
+
 * 1992–2004
 * Page 36–91
 * May 6–17

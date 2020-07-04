@@ -24,6 +24,7 @@ In fact, I don’t drink any coffee at all. Call me lucky that I don’t need th
 ### 2. SPLURGE: apartment rent
 
 Even though apartments provide a low-contract living situation, I like knowing that the place I’m living in is decently nice, in a good neighborhood, and I would feel comfortable living there for years to come if I wanted to. And it’s not like I was super picky. In fact, my requirement for living there included 6 things:
+
 * Central heat
 * Air conditioning
 * Dishwasher

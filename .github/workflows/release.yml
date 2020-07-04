@@ -20,7 +20,7 @@ jobs:
       run: sudo gem update --system 3.0.8 && sudo gem install bundler -v $(cat Gemfile.lock | tail -1 | tr -d " ")
 
     - name: Configure Gem Cache
-      uses: actions/cache@v1
+      uses: actions/cache@v2
       with:
         path: vendor/bundle
         key: bundler-cache-${{ hashFiles('**/Gemfile.lock') }}
@@ -33,22 +33,25 @@ jobs:
       run: JEKYLL_ENV=production bundle exec jekyll build --destination ./_site/
 
     - name: HTML Proofer
-      run: bash scripts/html_proofer.sh ${{ env.DEPLOYMENT_STATUS }}
+      run: bash scripts/html_proofer.sh
 
     - name: Rubocop
       run: bundle exec rubocop
 
+    - name: Markdown Linter
+      run: bash scripts/markdown_linter.sh
+
     - name: GitHub Pages Deploy
       uses: emmasax4/github-pages-deploy-action@emmasax4_github_pages_deploy_action
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        BRANCH: gh-pages
-        FOLDER: _site
-        CLEAN: true
-        COMMIT_MESSAGE: "Deploy to ${{ github.repository }}"
-        GIT_CONFIG_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
-        GIT_CONFIG_NAME: github-actions[bot]
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: gh-pages
+        folder: _site
+        clean: true
+        silent: true
+        commit_message: "Deploy to ${{ github.repository }}"
+        git_config_email: 41898282+github-actions[bot]@users.noreply.github.com
+        git_config_name: github-actions[bot]
 
     - name: Set Deploy Status Message
       run: bash scripts/set_deploy_status_message.sh ${{ env.DEPLOYMENT_STATUS }}
@@ -56,9 +59,8 @@ jobs:
     - name: Notify Slack on Success
       if: success()
       uses: emmasax4/slack-notifier-action@emmasax4_slack_notifier_action
-      env:
-        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
       with:
+        slack_webhook: ${{ secrets.SLACK_WEBHOOK }}
         channel: "#general"
         icon_url: https://img.icons8.com/ios-filled/50/000000/github.png
         username: GitHub Actions
@@ -74,9 +76,8 @@ jobs:
     - name: Notify Slack on Failure
       if: failure()
       uses: emmasax4/slack-notifier-action@emmasax4_slack_notifier_action
-      env:
-        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
       with:
+        slack_webhook: ${{ secrets.SLACK_WEBHOOK }}
         channel: "#general"
         icon_url: https://img.icons8.com/ios-filled/50/000000/github.png
         username: GitHub Actions
