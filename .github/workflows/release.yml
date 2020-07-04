@@ -7,7 +7,7 @@ jobs:
   test-and-deploy:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout Code
+    - name: Check Out Code
       uses: actions/checkout@v1
 
     - name: Define Run Variables
