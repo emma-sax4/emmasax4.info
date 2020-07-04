@@ -12,14 +12,14 @@ I know my website was still dependent on a lot of things: [GitHub Pages](https:/
 
 If we make the assumption that I've successfully removed all Bootstrap4, Jquery, Feather, and Google Fonts dependencies (by downloading them all raw to my GitHub repository... I know, I'm crazy), then I'm left with one big gaping dependency hole. My site relies on GitHub and CircleCI. And this leads me to describe what prompted me to do all of this.
 
-- [The Story Behind this Extreme Decision](#the-story)
-- [How I Use CI Tools](#how-i-use-ci-tools)
-- [Here Enters GitHub Actions](#here-enters-github-actions)
+* [The Story Behind this Extreme Decision](#the-story)
+* [How I Use CI Tools](#how-i-use-ci-tools)
+* [Here Enters GitHub Actions](#here-enters-github-actions)
   * [1. Building my website](#building-my-website)
   * [2. Notifying Slack](#notifying-slack)
   * [3. "Deploying" to GitHub Pages](#deploying-to-github-pages)
   * [4. Running daily crons](#running-daily-crons)
-- [Conclusion](#conclusion)
+* [Conclusion](#conclusion)
 
 <div id="anchor">
   <a id="the-story">&nbsp;</a>
@@ -48,6 +48,7 @@ Up until now, I've heard of GitHub Actions, but I've been a little bit scared to
 </div>
 
 As I originally outlined in [this blog post](/blog/posts/why-i-switched-from-travis-ci-to-circleci/), I use CI tools for four main things:
+
 > 1. Build my Jekyll website quickly, run HTML Proofer on it, and have room to grow my test suite if I desire to do so
 > 2. Notify a Slack channel when the build was done
 > 3. "Deploy" my website by making a commit back to my [`gh-pages` branch in GitHub]({{ site.github_repo }}/tree/gh-pages) (which GitHub Pages will then deploy for me)
@@ -74,6 +75,7 @@ So besides needing a separate workflow file for each workflow, let's jump in to 
 </div>
 
 The first step in each workflow is to `checkout` the code. GitHub Actions provides a [Checkout Action](https://github.com/actions/checkout) that's made to do exactly that. So there, we have our first few steps:
+
 ```yml
 {% raw %}jobs:
   job-name:
@@ -94,6 +96,7 @@ The first step in each workflow is to `checkout` the code. GitHub Actions provid
 Technically the Checkout Action provides a `v2` to use, but I found that it doesn't work for what I wanted. I'll explain more about that later. So to bypass those issues, I paired the checkout step with the `Switch to Current Branch` step to get around that issue.
 
 The next few steps are to set up Bundler, install gems, and build the site. I'll just give these steps instead of explaining:
+
 ```yml
 {% raw %}# install the exact version of bundler that the Gemfile.lock uses
 - name: Configure Bundler
@@ -133,6 +136,7 @@ It turns out that GitHub Actions uses actions similarly to how CircleCI uses orb
 Note: Since deciding to use this action, I've forked my own version of `action-slacker` and renamed it `slack-notifier-action`, and made a few changes for my personal usage. Those aren't anything that my readers need to pay attention to, but just know that I use personalized versions of almost all of my actions.
 
 To use `action-slacker`/`slack-notifier-action` the way I wanted to, I needed to make two different actions: one runs on successful builds, and the other runs on failed builds. They pass in different messages and colors based on the state of the build:
+
 ```yml
 {% raw %}- name: Notify Slack on Success
   if: success()
@@ -175,6 +179,7 @@ To use `action-slacker`/`slack-notifier-action` the way I wanted to, I needed to
 ```
 
 Ah, I almost forgot... I missed the new environment variables. By default, `BUILD_URL`, `BRANCH`, `PULL_URL`, and `PULL_ID` aren't real things. We've already seen defining `BRANCH` above. But how about the others? This is how the the rest of the `Define Variables` step looks:
+
 ```yml
 {% raw %}- name: Define Variables
   run: |
@@ -193,6 +198,7 @@ And that's it. Add those few steps, and now one of the slack steps will always r
 </div>
 
 With GitHub Actions' marketplace, it made it simple to find the perfect action to "deploy" to GitHub Pages: [`Deploy to GitHub Pages`](https://github.com/marketplace/actions/deploy-to-github-pages). This action was ideal, since it didn't require me to pass a lot of environment variables or inputs in to get it working correctly. Here's what I needed:
+
 ```yml
 {% raw %}- name: GitHub Pages Deploy
   uses: emmasax4/github-pages-deploy-action@emmasax4_github_pages_deploy_action
@@ -212,6 +218,7 @@ The `{% raw %}${{ secrets.GITHUB_TOKEN }}{% endraw %}` is something that's built
 The `CLEAN: true` was something that I added in later, when I realized that without it, deleted directories wouldn't be automatically deleted from my `gh-pages` branch. One other thing that I had to take note of was that for some reason, the deploy wouldn't work properly with `actions/checkout@v2` (it rewrites the files upon deploy, meaning each page on my site would receive a new `updated_at` or `lastModifiedAt` date upon each deploy), so I switched to `actions/checkout@v1`. Of course, `v1` of the checkout step had its own cross to bear, but that was fine for me to compromise with. I think that I could've gotten `v2` to work properly, had I finished reading the documentation for the deploy action originally.
 
 One super cool thing that I actually suggested to the author of this action was to have a deployment status that is outputted at the end of the whole thing. It's described a bit [here](https://github.com/marketplace/actions/deploy-to-github-pages#deployment-status), but with this, I was able to custom create a Slack message specifically about the deployment:
+
 ```yml
 {%raw%}- name: Set Deploy Status Message
   run: |
@@ -235,6 +242,7 @@ Important note: when using the generic version of this action, you'll need to pa
 </div>
 
 If I'm completely honest, running daily crons is about the simplest part of this entire process. Either GitHub Actions supports crons, or it doesn't. In this case... it totally does. The [documentation for GitHub Actions schedules](https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions#onschedule) clearly defines that we should submit our crons in UTC in Posix format:
+
 ```yml
 name: Cron
 on:

@@ -19,11 +19,13 @@ One of my flaws when I code is that I'm not always a big fan of thinking and rea
 Before long, I had a working homepage, with a single item in the header ("Home"), and my pictures showed up. As I started adding more pages, I got more understanding of the purpose of each directory, and how the Markdown files and HTML files worked together. By the time I moved onto the most complicated page, the "Blog" page, I had a decent understanding of the basics of Jekyll.
 
 But it wasn't until I started working on the "Blog" page that I got to play around with collections, loops, `if`s, etc. My first goal was to make the list of posts all show up as they were supposed to, with the proper title(s) and dates. It turns out Jekyll makes this pretty easy. This sweet line gathers all of the blog posts on the site:
+
 ```
 {% raw %}{{ site.posts }}{% endraw %}
 ```
 
 And you can loop through them like this:
+
 ```
 {% raw %}{% for post in site.posts %}
   {{ post.title }}

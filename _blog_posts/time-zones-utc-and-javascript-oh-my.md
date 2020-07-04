@@ -26,16 +26,19 @@ So after a lot of thinking, I decided that the best (and most sustainable) way t
 Time zones are complicated. I've dabbled with them a little bit, but they tend to make my head spin 💫. So, I made hefty goal for myself 🥴. When I publish a blog post, I can specify the publish date/time in _my_ local time zone. Jekyll will build the blog post as having been published at the corresponding UTC time. And when a reader looks at the blog post on the website, it'll give the date/time in their local time zone (which may be _my_ time zone, but it could also be different).
 
 Let's look at an example. I publish a blog post at 10:15pm in CST on Jan. 17, 2020:
+
 ```
 2020-01-17 22:15:00 -0600
 ```
 
 Jekyll will compile and store the blog post as having been published in UTC (notice the date change):
+
 ```
 2020-01-18 04:15:00 +0000
 ```
 
 But when a reader looks at the blog post online, it will show in their local time zone (I normally hide the specific times when showing publishing dates):
+
 ```
 ### CST - Minnesota
 January 17, 2020 22:15
@@ -54,6 +57,7 @@ So, with this as my final goal, I went ahead to try to implement this in five st
 ### 1️. The entire Jekyll site must build in UTC
 
 This was easy. I set the following in my `_config.yml`:
+
 ```yml
 timezone: UTC
 ```

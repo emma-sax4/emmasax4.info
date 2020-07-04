@@ -7,6 +7,7 @@ date: 2020-03-04 23:20:00 -0600
 ---
 
 Some helpful definitions (copyright Emma Sax):
+
 * _tomorrow_: the word as defined in the dictionary, used in a sentence; a tangible and understandable day that is coming up in the near future
 * _today_: the word as defined in the dictionary, used in a sentence; the present date
 * _Tomorrow_: the conceptual idea of tomorrow, which in reality, is just an unclear date in the near future that is neither explicit, understandable, nor tangible
