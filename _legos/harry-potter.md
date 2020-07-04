@@ -20,4 +20,3 @@ Legos still left to add:
     * [Hogwarts Room of Requirement](https://www.lego.com/en-us/product/hogwarts-room-of-requirement-75966)
     * [Attack on the Burrow](https://www.lego.com/en-us/product/attack-on-the-burrow-75980)
     * [Forbidden Forest — Umbridge's Encounter](https://www.lego.com/en-us/product/forbidden-forest-umbridge-s-encounter-75967)
-* Raft
