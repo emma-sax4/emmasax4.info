@@ -20,7 +20,7 @@ jobs:
       run: sudo gem update --system 3.0.8 && sudo gem install bundler -v $(cat Gemfile.lock | tail -1 | tr -d " ")
 
     - name: Configure Gem Cache
-      uses: actions/cache@v1
+      uses: actions/cache@v2
       with:
         path: vendor/bundle
         key: bundler-cache-${{ hashFiles('**/Gemfile.lock') }}
@@ -38,12 +38,14 @@ jobs:
     - name: Rubocop
       run: bundle exec rubocop
 
+    - name: Markdown Linter
+      run: bash scripts/markdown_linter.sh
+
     - name: Notify Slack on Success
       if: success()
       uses: emmasax4/slack-notifier-action@emmasax4_slack_notifier_action
-      env:
-        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
       with:
+        slack_webhook: ${{ secrets.SLACK_WEBHOOK }}
         channel: "#general"
         icon_url: https://img.icons8.com/ios-filled/50/000000/github.png
         username: GitHub Actions
@@ -59,9 +61,8 @@ jobs:
     - name: Notify Slack on Failure
       if: failure()
       uses: emmasax4/slack-notifier-action@emmasax4_slack_notifier_action
-      env:
-        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
       with:
+        slack_webhook: ${{ secrets.SLACK_WEBHOOK }}
         channel: "#general"
         icon_url: https://img.icons8.com/ios-filled/50/000000/github.png
         username: GitHub Actions

@@ -11,6 +11,7 @@ gem 'jekyll-mentions',             '~> 1.6'
 gem 'jekyll-paginate-v2',          '~> 3.0'
 gem 'jekyll-redirect-from',        '~> 0.16'
 gem 'jekyll-relative-links',       '~> 0.6'
+gem 'jekyll-tidy',                 '~> 0.2'
 gem 'jekyll-time-to-read',         '~> 0.1'
 gem 'jekyll-titles-from-headings', '~> 0.5'
 gem 'rouge',                       '~> 3.19'
@@ -22,6 +23,7 @@ gem 'jekyll-sitemap', git: 'https://github.com/emmasax4/jekyll-sitemap.git', bra
 
 # Gems for only test/development environment
 group :test, :development do
-  gem 'html-proofer',   '~> 3.15'
-  gem 'rubocop',        '~> 0.86'
+  gem 'html-proofer', '~> 3.15'
+  gem 'mdl',          '~> 0.6'
+  gem 'rubocop',      '~> 0.86'
 end

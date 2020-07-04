@@ -10,6 +10,7 @@ date: 2019-10-01 00:00:00 -0500
 ---
 
 At the end of the trip, we ended in the Maasai Mara, approximately six hours away from Nairobi. So, we had a long day of travel ahead of us to start our journey home. But, our trip planners didn't want to have a boring last day, so they planned a few extra stops. Here's what our original itinerary for the day looked like:
+
 * 8:30am – Optional activity (morning game drive, short game drive + Maasai village visit, sleeping in, etc)
 * 12pm – Meet for lunch at a mall between Maasai Mara and Nairobi
 * 5pm – Meet at Carnivore Kenya for a dinner buffet
