@@ -10,7 +10,13 @@ However, it was a fun little set to put together. The wagon actually rolls, and 
 Here's a link to the set: [Unikitty Roller Coaster Wagon](https://www.lego.com/en-us/product/unikitty-roller-coaster-wagon-30406)
 
 <div class="text-center">
-  <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/50072954158/in/album-72157714494860177/" title="Unikitty Cart"><img class="image" src="https://live.staticflickr.com/65535/50072954158_2a2c1c0431.jpg" width="500" height="375" alt="Unikitty Cart"></a>
-  <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/50072954108/in/album-72157714494860177/" title="Unikitty Cart"><img class="image" src="https://live.staticflickr.com/65535/50072954108_b52e8b1146.jpg" width="500" height="375" alt="Unikitty Cart"></a>
-  <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/50073521661/in/album-72157714494860177/" title="Unikitty Cart"><img class="image" src="https://live.staticflickr.com/65535/50073521661_713d578b40.jpg" width="500" height="375" alt="Unikitty Cart"></a>
+  <a href="https://live.staticflickr.com/65535/50072954158_32c27268d2_k.jpg" width="2048" title="Unikitty Cart" data-lightbox="Unikitty Cart">
+    <img class="image" src="https://live.staticflickr.com/65535/50072954158_2a2c1c0431.jpg" width="200">
+  </a>
+  <a href="https://live.staticflickr.com/65535/50072954108_abe06bd835_k.jpg" width="2048" title="Unikitty Cart" data-lightbox="Unikitty Cart">
+    <img class="image" src="https://live.staticflickr.com/65535/50072954108_b52e8b1146.jpg" width="200">
+  </a>
+  <a href="https://live.staticflickr.com/65535/50073521661_37680a69e1_k.jpg" width="2048" title="Unikitty Cart" data-lightbox="Unikitty Cart">
+    <img class="image" src="https://live.staticflickr.com/65535/50073521661_713d578b40.jpg" width="200">
+  </a>
 </div>
