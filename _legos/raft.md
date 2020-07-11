@@ -8,16 +8,20 @@ This cute little raft was made from pieces that I found in my LEGO piece stash. 
 The minifigures were designed by myself, and I specifically ordered top, bottom, face, and hair pieces of each minifigure (named Ben and Olivia). The chain is the finishing touch, and allows the raft to be hooked up to a dock.
 
 <div class="text-center">
-  <a href="https://live.staticflickr.com/65535/50072953968_e15523675c_k.jpg" width="2048" title="Raft" data-lightbox="Raft">
-    <img class="image" src="https://live.staticflickr.com/65535/50072953968_e15523675c_k.jpg" width="200" alt="Raft">
-  </a>
-  <a href="https://live.staticflickr.com/65535/50072953903_4a5356bea5_k.jpg" width="2048" title="Raft" data-lightbox="Raft">
-    <img class="image" src="https://live.staticflickr.com/65535/50072953903_4a5356bea5_k.jpg" width="200" alt="Raft">
-  </a>
-  <a href="https://live.staticflickr.com/65535/50073521516_072e24ab86_k.jpg" width="2048" title="Raft" data-lightbox="Raft">
-    <img class="image" src="https://live.staticflickr.com/65535/50073521516_072e24ab86_k.jpg" width="200" alt="Raft">
-  </a>
-  <a href="https://live.staticflickr.com/65535/50072953783_a32953e624_k.jpg" width="2048" title="Raft" data-lightbox="Raft">
-    <img class="image" src="https://live.staticflickr.com/65535/50072953783_a32953e624_k.jpg" width="200" alt="Raft">
-  </a>
+  {% include elements/photo.html
+      url="https://live.staticflickr.com/65535/50072953968_e15523675c_k.jpg"
+      photo_width="2048" thumb_width="200" title="Raft"
+  %}
+  {% include elements/photo.html
+      url="https://live.staticflickr.com/65535/50072953903_4a5356bea5_k.jpg"
+      photo_width="2048" thumb_width="200" title="Raft"
+  %}
+  {% include elements/photo.html
+      url="https://live.staticflickr.com/65535/50073521516_072e24ab86_k.jpg"
+      photo_width="2048" thumb_width="200" title="Raft"
+  %}
+  {% include elements/photo.html
+      url="https://live.staticflickr.com/65535/50072953783_a32953e624_k.jpg"
+      photo_width="2048" thumb_width="200" title="Raft"
+  %}
 </div>
