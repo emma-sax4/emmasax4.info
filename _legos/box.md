@@ -12,9 +12,24 @@ Here's a link to the instructions and piece list of the box: <a href="/assets/re
 NOTE: the LDD piece list numbers can sometimes be out of sync with what's in the LEGO Bricks and Pieces database. Sometimes I need to do a more thorough Google search in order to find the correct piece number.
 
 <div class="text-center">
-  <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/49947517557/in/album-72157714494860177/" title="Lego Box"><img class="image" src="https://live.staticflickr.com/65535/49947517557_b2cbbf5532.jpg" width="400" height="400" alt="Lego Box"></a>
-  <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/49947231231/in/album-72157714494860177/" title="Lego Box"><img class="image" src="https://live.staticflickr.com/65535/49947231231_37709f01a3.jpg" width="400" height="400" alt="Lego Box"></a>
-  <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/49947517287/in/album-72157714494860177/" title="Lego Box"><img class="image" src="https://live.staticflickr.com/65535/49947517287_8e7a960c58.jpg" width="400" height="400" alt="Lego Box"></a>
-  <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/49946728308/in/album-72157714494860177/" title="Lego Box"><img class="image" src="https://live.staticflickr.com/65535/49946728308_9ec4dbd4eb.jpg" width="400" height="400" alt="Lego Box"></a>
-  <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/49947516887/in/album-72157714494860177/" title="Lego Box"><img class="image" src="https://live.staticflickr.com/65535/49947516887_c5507a1e1e.jpg" width="400" height="400" alt="Lego Box"></a>
+  {% include elements/photo.html
+      url="https://live.staticflickr.com/65535/49947517557_17d59cec8a_k.jpg"
+      photo_width="2048" thumb_width="200" title="Box with squares on lid closed" lightbox="Box"
+  %}
+  {% include elements/photo.html
+      url="https://live.staticflickr.com/65535/49947231231_f1210a975c_k.jpg"
+      photo_width="2048" thumb_width="200" title="Box with squares on lid open" lightbox="Box"
+  %}
+  {% include elements/photo.html
+      url="https://live.staticflickr.com/65535/49947517287_14879a7720_k.jpg"
+      photo_width="2048" thumb_width="200" title="Grey and black box closed" lightbox="Box"
+  %}
+  {% include elements/photo.html
+      url="https://live.staticflickr.com/65535/49946728308_34ba273aa0_k.jpg"
+      photo_width="2048" thumb_width="200" title="Grey and black box closed from back" lightbox="Box"
+  %}
+  {% include elements/photo.html
+      url="https://live.staticflickr.com/65535/49947516887_e9bea792d3_k.jpg"
+      photo_width="2048" thumb_width="200" title="Grey and black box opened" lightbox="Box"
+  %}
 </div>

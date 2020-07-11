@@ -10,7 +10,16 @@ Here's a link to the set: [DOTS Picture Frame (41914)](https://www.lego.com/en-u
 Also featured in the last photograph is my personal minifigure that my coworker made at the LEGO store for me. Holding a wand, because I'm a _Harry Potter_ lover, and on a platform decorated with leftover DOTS pieces.
 
 <div class="text-center">
-  <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/49978623252/in/album-72157714494860177/" title="LEGO Dots frame"><img class="image" src="https://live.staticflickr.com/65535/49978623252_ebcc61a89b.jpg" width="500" height="500" alt="LEGO Dots frame"></a>
-  <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/49978622887/in/album-72157714494860177/" title="LEGO Dots frame"><img class="image" src="https://live.staticflickr.com/65535/49978622887_ec061eaa98.jpg" width="375" height="500" alt="LEGO Dots frame"></a>
-  <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/49978362791/in/album-72157714494860177/" title="LEGO dots frame and personal minifigure"><img class="image" src="https://live.staticflickr.com/65535/49978362791_d214d17047.jpg" width="500" height="375" alt="LEGO dots frame and personal minifigure"></a>
+  {% include elements/photo.html
+      url="https://live.staticflickr.com/65535/49978623252_0e93eaca6d_k.jpg"
+      photo_width="2048" thumb_width="200" title="DOTS frame design 1 forward" lightbox="DOTS frame"
+  %}
+  {% include elements/photo.html
+      url="https://live.staticflickr.com/65535/49978622887_5d44c13836_k.jpg"
+      photo_width="1536" thumb_width="200" title="DOTS frame design 1 tilted" lightbox="DOTS frame"
+  %}
+  {% include elements/photo.html
+      url="https://live.staticflickr.com/65535/49978362791_4b9eee62c1_k.jpg"
+      photo_width="2048" thumb_width="200" title="DOTS frame and minifigure" lightbox="DOTS frame"
+  %}
 </div>

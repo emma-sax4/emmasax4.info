@@ -333,12 +333,21 @@ The `css/` directory contains all of the CSS files in this site. They're all cal
 
 The `js/` directory is where we store all of our Javascript files for the site. Some of them are called at the bottom of every page. Others are called in specific places in the code. All of these are parsed by Code Climate. The other Javascript files are directly copy-pasted by 3rd party sources online. They're hard-coded into the site to avoid potential dependency breaks later.
 
-The `images/` directory gives me a place to store all of the images this site uses. To call a specific image, you can either ask for it in HTML:
+The `images/` directory gives me a place to store all of the images this site uses. To call a specific image, you can ask for it in HTML:
 
 ```html
 <div>
   <img class="custom-image-class" src="/assets/images/picture-01.jpg" alt="Picture 1">
 </div>
+```
+
+Alternatively, to use Lightbox to make the photo clickable, and then it'll zoom for the user and create a gallery, you can call the photo `_include`:
+
+```html
+{% include elements/photo.html
+    url="/assets/images/picture-01.jpg"
+    photo_width="2048" thumb_width="200" title="Picture 1" lightbox="gallery name goes here"
+%}
 ```
 
 The `resources/` directory gives me a place to keep PDF documents that are linked in this site. You can put a link to it in Markdown:
