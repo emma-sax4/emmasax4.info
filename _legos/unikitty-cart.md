@@ -11,12 +11,12 @@ Here's a link to the set: [Unikitty Roller Coaster Wagon](https://www.lego.com/e
 
 <div class="text-center">
   <a href="https://live.staticflickr.com/65535/50072954158_32c27268d2_k.jpg" width="2048" title="Unikitty Cart" data-lightbox="Unikitty Cart">
-    <img class="image" src="https://live.staticflickr.com/65535/50072954158_2a2c1c0431.jpg" width="200">
+    <img class="image" src="https://live.staticflickr.com/65535/50072954158_2a2c1c0431.jpg" width="200" alt="Unikitty Cart">
   </a>
   <a href="https://live.staticflickr.com/65535/50072954108_abe06bd835_k.jpg" width="2048" title="Unikitty Cart" data-lightbox="Unikitty Cart">
-    <img class="image" src="https://live.staticflickr.com/65535/50072954108_b52e8b1146.jpg" width="200">
+    <img class="image" src="https://live.staticflickr.com/65535/50072954108_b52e8b1146.jpg" width="200" alt="Unikitty Cart">
   </a>
   <a href="https://live.staticflickr.com/65535/50073521661_37680a69e1_k.jpg" width="2048" title="Unikitty Cart" data-lightbox="Unikitty Cart">
-    <img class="image" src="https://live.staticflickr.com/65535/50073521661_713d578b40.jpg" width="200">
+    <img class="image" src="https://live.staticflickr.com/65535/50073521661_713d578b40.jpg" width="200" alt="Unikitty Cart">
   </a>
 </div>
