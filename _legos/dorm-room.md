@@ -16,9 +16,24 @@ Here's a link to the instructions and piece list of the dorm room: <a href="/ass
 NOTES: the LDD piece list numbers can sometimes be out of sync with what's in the LEGO Bricks and Pieces database. Sometimes I need to do a more thorough Google search in order to find the correct piece number. Secondly, the windows that I decided to make the dorm room with aren't widely available on LEGO's website or on LDD. In LDD, I substituted in light blue pieces for what should be the windows.
 
 <div class="text-center">
-  <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/50050573101/in/album-72157714494860177/" title="Dorm Room"><img class="image" src="https://live.staticflickr.com/65535/50050573101_fb17cb502a_k.jpg" width="500" height="375" alt="Dorm Room"></a>
-  <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/50050826537/in/album-72157714494860177/" title="Dorm Room"><img class="image" src="https://live.staticflickr.com/65535/50050826537_4d42eae374_k.jpg" width="500" height="375" alt="Dorm Room"></a>
-  <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/50050572856/in/album-72157714494860177/" title="Dorm Room"><img class="image" src="https://live.staticflickr.com/65535/50050572856_c7703277aa_k.jpg" width="500" height="375" alt="Dorm Room"></a>
-  <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/50050572721/in/album-72157714494860177/" title="Dorm Room"><img class="image" src="https://live.staticflickr.com/65535/50050572721_96905699ca_k.jpg" width="500" height="375" alt="Dorm Room"></a>
-  <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/50050574776/in/album-72157714494860177/" title="Dorm Room"><img class="image" src="https://live.staticflickr.com/65535/50050574776_402215300c_k.jpg" width="500" height="375" alt="Dorm Room"></a>
+  {% include elements/photo.html
+      url="https://live.staticflickr.com/65535/50050573101_fb17cb502a_k.jpg"
+      photo_width="2048" thumb_width="200" title="Dorm Room top facing napping minifigure" lightbox="Dorm Room"
+  %}
+  {% include elements/photo.html
+      url="https://live.staticflickr.com/65535/50050826537_4d42eae374_k.jpg"
+      photo_width="2048" thumb_width="200" title="Dorm Room top facing studying minifigure" lightbox="Dorm Room"
+  %}
+  {% include elements/photo.html
+      url="https://live.staticflickr.com/65535/50050572856_c7703277aa_k.jpg"
+      photo_width="2048" thumb_width="200" title="Dorm Room top facing door" lightbox="Dorm Room"
+  %}
+  {% include elements/photo.html
+      url="https://live.staticflickr.com/65535/50050572721_96905699ca_k.jpg"
+      photo_width="2048" thumb_width="200" title="Dorm Room looking through door" lightbox="Dorm Room"
+  %}
+  {% include elements/photo.html
+      url="https://live.staticflickr.com/65535/50050574776_402215300c_k.jpg"
+      photo_width="2048" thumb_width="200" title="Dorm Room top facing windows" lightbox="Dorm Room"
+  %}
 </div>

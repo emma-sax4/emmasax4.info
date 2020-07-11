@@ -14,9 +14,20 @@ In my pictures, I added a green floor to keep all of the pieces together and sta
 Here's a link to the set: [People Pack – Fun Fair (60234)](https://www.lego.com/en-us/product/people-pack-fun-fair-60234)
 
 <div class="text-center">
-  <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/50050571391/in/album-72157714494860177/" title="Fairground"><img class="image" src="https://live.staticflickr.com/65535/50050571391_c25a153b4f_k.jpg" width="500" height="375" alt="Fairground"></a>
-  <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/50050003703/in/album-72157714494860177/" title="Fairground"><img class="image" src="https://live.staticflickr.com/65535/50050003703_039321bf98_k.jpg" width="500" height="375" alt="Fairground"></a>
-  <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/50050573421/in/album-72157714494860177/" title="Fairground"><img class="image" src="https://live.staticflickr.com/65535/50050573421_9b12a93862_k.jpg" width="500" height="375" alt="Fairground"></a>
-  <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/50050009548/in/album-72157714494860177/" title="Fairground"><img class="image" src="https://live.staticflickr.com/65535/50050009548_b31c09f6d8_k.jpg" width="500" height="375" alt="Fairground"></a>
-  <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/50050009168/in/album-72157714494860177/" title="Fairground"><img class="image" src="https://live.staticflickr.com/65535/50050009168_37e1f860b0_k.jpg" width="500" height="375" alt="Fairground"></a>
+  {% include elements/photo.html
+      url="https://live.staticflickr.com/65535/50050571391_c25a153b4f_k.jpg"
+      photo_width="2048" thumb_width="200" title="Fairground front" lightbox="Fairground"
+  %}
+  {% include elements/photo.html
+      url="https://live.staticflickr.com/65535/50050003703_039321bf98_k.jpg"
+      photo_width="2048" thumb_width="200" title="Fairground back" lightbox="Fairground"
+  %}
+  {% include elements/photo.html
+      url="https://live.staticflickr.com/65535/50050573421_9b12a93862_k.jpg"
+      photo_width="2048" thumb_width="200" title="Fairground side" lightbox="Fairground"
+  %}
+  {% include elements/photo.html
+      url="https://live.staticflickr.com/65535/50050009548_b31c09f6d8_k.jpg"
+      photo_width="2048" thumb_width="200" title="Fairground top" lightbox="Fairground"
+  %}
 </div>

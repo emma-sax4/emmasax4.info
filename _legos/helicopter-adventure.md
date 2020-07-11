@@ -8,10 +8,28 @@ This fun 3-in-1 is a joy to use. All of the sets are simple to follow, and each 
 Here's a link to the set: [Helicopter Adventure (31092)](https://www.lego.com/en-us/product/helicopter-adventure-31092)
 
 <div class="text-center">
-  <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/49977843728/in/album-72157714494860177/" title="LEGO 3-in-1 Creator085"><img class="image" src="https://live.staticflickr.com/65535/49977843728_b59cdbcfdc.jpg" width="500" height="375" alt="LEGO 3-in-1 Creator085"></a>
-  <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/49978363246/in/album-72157714494860177/" title="LEGO 3-in-1 Creator"><img class="image" src="https://live.staticflickr.com/65535/49978363246_642c1ef4d2.jpg" width="500" height="375" alt="LEGO 3-in-1 Creator"></a>
-  <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/49978363141/in/album-72157714494860177/" title="LEGO 3-in-1 Creator"><img class="image" src="https://live.staticflickr.com/65535/49978363141_d78543afd2.jpg" width="500" height="375" alt="LEGO 3-in-1 Creator"></a>
-  <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/49978362646/in/album-72157714494860177/" title="LEGO 3-in-1 Creator"><img class="image" src="https://live.staticflickr.com/65535/49978362646_67558945f0.jpg" width="375" height="500" alt="LEGO 3-in-1 Creator"></a>
-  <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/49978623487/in/album-72157714494860177/" title="LEGO 3-in-1 Creator"><img class="image" src="https://live.staticflickr.com/65535/49978623487_153a7113df.jpg" width="500" height="375" alt="LEGO 3-in-1 Creator"></a>
-  <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/49978362526/in/album-72157714494860177/" title="LEGO 3-in-1 Creator"><img class="image" src="https://live.staticflickr.com/65535/49978362526_e11c2e8357.jpg" width="375" height="500" alt="LEGO 3-in-1 Creator"></a>
+  {% include elements/photo.html
+      url="https://live.staticflickr.com/65535/49977843728_9fc00bb86e_k.jpg"
+      photo_width="2048" thumb_width="150" title="Helicopter front" lightbox="LEGO 3-in-1 Creator085"
+  %}
+  {% include elements/photo.html
+      url="https://live.staticflickr.com/65535/49978363246_77d3d3a753_k.jpg"
+      photo_width="2048" thumb_width="150" title="Helicopter back" lightbox="LEGO 3-in-1 Creator085"
+  %}
+  {% include elements/photo.html
+      url="https://live.staticflickr.com/65535/49978363141_99b96ba922_k.jpg"
+      photo_width="2048" thumb_width="150" title="Steamboat front" lightbox="LEGO 3-in-1 Creator085"
+  %}
+  {% include elements/photo.html
+      url="https://live.staticflickr.com/65535/49978362646_a50bd0f186_k.jpg"
+      photo_width="1536" thumb_width="150" title="Steamboat back" lightbox="LEGO 3-in-1 Creator085"
+  %}
+  {% include elements/photo.html
+      url="https://live.staticflickr.com/65535/49978623487_2fa36eec74_k.jpg"
+      photo_width="2048" thumb_width="150" title="Plane front" lightbox="LEGO 3-in-1 Creator085"
+  %}
+  {% include elements/photo.html
+      url="https://live.staticflickr.com/65535/49978362526_df871ac79c_k.jpg"
+      photo_width="1536" thumb_width="150" title="Plane back" lightbox="LEGO 3-in-1 Creator085"
+  %}
 </div>
