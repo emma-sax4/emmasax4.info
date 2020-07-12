@@ -38,7 +38,7 @@
     <meta name="msvalidate.01" content="89B2B19FF966341B78EF64EDADE6DF81" />
     <meta name="yandex-verification" content="c2741887f8c30dd1" />
     <script type="application/ld+json">
-      {"description":"Emma Sax’s personal website and blog. Includes information about my social media profiles, résumé, and hobbies.","@type":"BlogPosting","url":"https://emmasax4.info/blog/posts/using-jekyll-paginate-v2/","headline":"Using jekyll-paginate-v2","dateModified":"2020-06-29T22:35:31+00:00","datePublished":"2019-12-18T06:00:00+00:00","author":{"@type":"Person","name":"Emma Sax"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://emmasax4.info/blog/posts/using-jekyll-paginate-v2/"},"@context":"https://schema.org"}
+      {"description":"Emma Sax’s personal website and blog. Includes information about my social media profiles, résumé, and hobbies.","@type":"BlogPosting","url":"https://emmasax4.info/blog/posts/using-jekyll-paginate-v2/","headline":"Using jekyll-paginate-v2","dateModified":"2020-07-12T14:32:04+00:00","datePublished":"2019-12-18T06:00:00+00:00","author":{"@type":"Person","name":"Emma Sax"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://emmasax4.info/blog/posts/using-jekyll-paginate-v2/"},"@context":"https://schema.org"}
     </script>
     <!-- End Jekyll SEO tag -->
   </head>
@@ -100,7 +100,7 @@
           </div>
           <div class="text-center" style="margin-bottom: 1rem;">
             <span class="post-meta">
-              Read time: 11 minutes
+              Read time: 12 minutes
             </span>
           </div>
         </div>
@@ -117,7 +117,9 @@
             <p>A couple of weeks ago, I started the endeavor of adding Bootstrap to this website. You can read more about how this repository uses Bootstrap, and how to add Bootstrap to a static content site <a href="/blog/posts/adding-bootstrap-to-your-static-content-site/">here</a>.</p>
             <p>But, soon after I started getting an upgrade in my CSS game, I realized that my pagination bar on my blog site was sorely outdated 😢. At one point, I had the nerve to call this pagination bar beautiful:</p>
             <div class="text-center">
-              <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/48741504061/in/album-72157710863695862/" title="lovely_pagination_bar"><img class="image" src="https://live.staticflickr.com/65535/48741504061_7ebbd630fa.jpg" width="450" height="311" alt="Lovely pagination bar"></a>
+              <a href="https://live.staticflickr.com/65535/48741504061_7ebbd630fa.jpg" title="Pagination bar that's now not quite as lovely" data-lightbox="Pagination">
+                <img class="image" src="https://live.staticflickr.com/65535/48741504061_7ebbd630fa.jpg" width="400" alt="Pagination bar that's now not quite as lovely">
+              </a>
             </div>
             <p>But since completely revamping the whole looks of the site, this pagination bar was no longer acceptable. It was old fashioned, wouldn’t remember the page you were on if you navigated forward and back in your browser, and didn’t have pretty buttons. It was time for me to look into alternate pagination options.</p>
             <p>I build and serve this site with GitHub Pages. Their built-in pagination suggestion is <a href="https://github.com/jekyll/jekyll-paginate"><code>jekyll-paginate</code></a>. But, it very clearly states that <code>jekyll-paginate</code> is no longer supported. The recommended newer version of Jekyll pagination is <a href="https://github.com/sverrirs/jekyll-paginate-v2"><code>jekyll-paginate-v2</code></a>.</p>
@@ -136,7 +138,9 @@
             <p>Despite all of this work, now every single tag and category filters blog posts properly. The last secret to getting pagination working on those pages is that I needed to save the URL of the filtered page: aka <code>/blog/welcome-to-kenya</code> or <code>/blog/tech</code>. And this way, we could append the page count number to the end of that: <code>/blog/welcome-to-kenya/4/</code> or <code>/blog/tech/2/</code>.</p>
             <p>After all of that work, I now have a pagination bar that makes me proud of this website. Just add in a few more pretty icons, and I’m satisfied 😁.</p>
             <div class="text-center">
-              <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/49241327792/in/album-72157710863695862/" title="Bootstrap Pagination"><img class="image" src="https://live.staticflickr.com/65535/49241327792_44bf877bcb.jpg" width="500" height="304" alt="Bootstrap Pagination"></a>
+              <a href="https://live.staticflickr.com/65535/49241327792_e87715127e_o.png" title="Pagination bar that can grow with my site" data-lightbox="Pagination">
+                <img class="image" src="https://live.staticflickr.com/65535/49241327792_e87715127e_o.png" width="400" alt="Pagination bar that can grow with my site">
+              </a>
             </div>
             <hr />
             <p>Haha! You thought the story was over, didn’t you? Well… as soon as I merged in my pull request to add the new pagination, I realized something. That paragraph of the installation instructions that I <em>didn’t</em> finish? Well, the ending part of it warned that <code>jekyll-paginate-v2</code> is <em>not</em> supported by GitHub Pages. This means that when somebody runs the code locally on their computer, they can use <code>jekyll-paginate-v2</code> to their hearts’ content, and the site will load properly. But GitHub’s servers (which normally build the site for me), will not properly execute <code>jekyll-paginate-v2</code>, and there’s no way to compile the pagination code properly without that.</p>

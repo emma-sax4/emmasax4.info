@@ -38,7 +38,7 @@
     <meta name="msvalidate.01" content="89B2B19FF966341B78EF64EDADE6DF81" />
     <meta name="yandex-verification" content="c2741887f8c30dd1" />
     <script type="application/ld+json">
-      {"description":"Emma Sax’s personal website and blog. Includes information about my social media profiles, résumé, and hobbies.","@type":"BlogPosting","url":"https://emmasax4.info/blog/posts/adding-pagination-without-jekyll/","headline":"Adding Pagination without Jekyll","dateModified":"2020-06-29T22:35:31+00:00","datePublished":"2019-09-12T05:00:00+00:00","author":{"@type":"Person","name":"Emma Sax"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://emmasax4.info/blog/posts/adding-pagination-without-jekyll/"},"@context":"https://schema.org"}
+      {"description":"Emma Sax’s personal website and blog. Includes information about my social media profiles, résumé, and hobbies.","@type":"BlogPosting","url":"https://emmasax4.info/blog/posts/adding-pagination-without-jekyll/","headline":"Adding Pagination without Jekyll","dateModified":"2020-07-12T14:32:04+00:00","datePublished":"2019-09-12T05:00:00+00:00","author":{"@type":"Person","name":"Emma Sax"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://emmasax4.info/blog/posts/adding-pagination-without-jekyll/"},"@context":"https://schema.org"}
     </script>
     <!-- End Jekyll SEO tag -->
   </head>
@@ -119,7 +119,9 @@
             <p>Turns out, the Google doesn’t have a lot of other suggestions on pagination. But, the original Jekyll repository I copied (<a href="https://github.com/UMM-CSci/senior-seminar">UMM-CSci’s <code>senior-seminar</code></a>), implements a version of pagination that’s installed from <a href="https://listjs.com/docs/pagination/"><code>List.js</code></a>. Possibly this is because that site uses <code>seminars</code> instead of <code>posts</code>. But either way, I decided to give it a chance. Worst case scenario, it just wouldn’t work and I’d have to find another pagination option.</p>
             <p>Of course, I started with the things I know how to do best: copy-paste 💁🏻‍♀️. I started with <a href="https://github.com/UMM-CSci/senior-seminar/blob/master/seminars.html#L63-L80">this blob</a>, of course edited to suit my HTML file. Surprisingly, bits of this work right out of the box. But… the pagination isn’t pretty, which is very important to me.</p>
             <div class="text-center">
-              <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/48741690227/in/album-72157710863695862/" title="bad_pagination_bar"><img class="image" src="https://live.staticflickr.com/65535/48741690227_e27cb82884.jpg" width="450" height="367" alt="Bad pagination bar"></a>
+              <a href="https://live.staticflickr.com/65535/48741690227_e27cb82884.jpg" title="Ugly vertical pagination bar" data-lightbox="Pagination">
+                <img class="image" src="https://live.staticflickr.com/65535/48741690227_e27cb82884.jpg" width="400" alt="Ugly vertical pagination bar">
+              </a>
             </div>
             <p>So, I went on a mission to figure out how to make a prettier pagination bar. After a couple of hours, and a good night’s sleep, I realized that the answer lies in the <code>css/main.scss</code> file. Specifically, this line:</p>
             <pre><code class="language-css">@import "core/index.scss";
@@ -131,7 +133,9 @@ was not found.
 </code></pre>
             <p>Clearly, that means my CSS is broken. But I didn’t quite understand why 😕. The repository that I was copying pagination from included this line:</p>
             <div class="text-center">
-              <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/48741503991/in/album-72157710863695862/" title="primer_submodule_directory"><img class="image" src="https://live.staticflickr.com/65535/48741503991_c9f4ec3ce4_o.png" width="486" height="45" alt="primer_submodule_directory"></a>
+              <a href="https://live.staticflickr.com/65535/48741503991_ac5c550274.jpg" title="Primer as a submodule" data-lightbox="Pagination">
+                <img class="image" src="https://live.staticflickr.com/65535/48741503991_ac5c550274.jpg" width="450" alt="Primer as a submodule">
+              </a>
             </div>
             <p>Since I couldn’t understand out why my CSS was broken, I figured it was time for me to try to add that “directory” to my repo.</p>
             <p>I had never worked with submodules in Git before. So, I started how any developer-who-doesn’t-recognize-anything would start: with Google. I started to google how to add submodules to Git repositories. And me, not liking to actually read anything, just started to jump in.</p>
@@ -149,7 +153,9 @@ was not found.
 </code></pre>
             <p>back to my <code>main.scss</code>, and finally the pagination was beautiful:</p>
             <div class="text-center">
-              <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/48741504061/in/album-72157710863695862/" title="lovely_pagination_bar"><img class="image" src="https://live.staticflickr.com/65535/48741504061_7ebbd630fa.jpg" width="450" height="311" alt="Lovely pagination bar"></a>
+              <a href="https://live.staticflickr.com/65535/48741504061_7ebbd630fa.jpg" title="Pagination bar that's much better" data-lightbox="Pagination">
+                <img class="image" src="https://live.staticflickr.com/65535/48741504061_7ebbd630fa.jpg" width="400" alt="Pagination bar that's much better">
+              </a>
             </div>
             <p>I was thrilled with the outcome of this pagination (even though it wasn’t Jekyll’s officially supported pagination), and I committed to <code>gh-pages</code>. However, perhaps a day later, I noticed something wrong with my CSS formatting. Perhaps you can notice it if you compare the before-pretty-pagination and the after-pretty-pagination pictures… I’ll give you a hint: it has to do with the indentation and spacing of the words. Somehow, making the pagination bar pretty messed up my CSS formatting!</p>
             <p>I was upset. I wanted to have both a pretty pagination bar and proper formatting of the text. So, I went back in my commit changes and commented out everything from when the site last worked as expected. I slowly uncommented line after line until I found the problem line… of course it happened to be with the same line that makes the pagination work:</p>
