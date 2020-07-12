@@ -6,6 +6,9 @@ layout: default
 
 <div class="page-body">
   {{ content }}
+  {% if content != blank %}
+    <br><br>
+  {% endif %}
   {% include blog/posts-list.html %}
 </div>
 
