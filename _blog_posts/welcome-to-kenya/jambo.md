@@ -20,7 +20,10 @@ But I'm getting ahead of myself. Let's start with the plane ride. We rode with K
 Despite the heat, we persevered, and 9 hours later, and a few naps, movies, and meals later, we were passing over the Sahara Desert. Then another few hours later, our plane was finally nearing Nairobi. If there's anything to remind us that Africa is **huge**, it's the amount of time it took us to cross the continent.
 
 <div class="text-center">
-  <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/48740606523/in/album-72157710860887528/" title="fly_over_nairobi"><img class="image" src="https://live.staticflickr.com/65535/48740606523_77e7b836e4_o.jpg" width="500" height="375" alt="Our plane flying towards Nairobi"></a>
+  {% include elements/photo.html
+      url="https://live.staticflickr.com/65535/48740606523_77e7b836e4_o.jpg"
+      thumb_width="400" title="Map as we flew over Nairobi" lightbox="Jambo"
+  %}
 </div>
 
 After landing, getting through Customs, and picking up our bags, the first thing I noticed was the amount of guns the guards at the airport had. I'm not really a big gun person, so I'm not sure what types of guns they were, but I think maybe they were AK-47s or something... they looked to be military style 🙀. And they were all over. A few of us theorized that they were actually empty, and that people were only carrying them around for show... I didn't feel like seeing if they were right or not. Either way, by the end of the trip, I eventually got used to the security guards always carrying weapons (huge rifles, large sticks, sharp knives, etc).

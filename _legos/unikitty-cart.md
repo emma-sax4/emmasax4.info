@@ -12,14 +12,14 @@ Here's a link to the set: [Unikitty Roller Coaster Wagon](https://www.lego.com/e
 <div class="text-center">
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50072954158_32c27268d2_k.jpg"
-      photo_width="2048" thumb_width="200" title="Cart Front" lightbox="Unikitty Cart"
+      thumb_width="200" title="Cart Front" lightbox="Unikitty Cart"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50072954108_abe06bd835_k.jpg"
-      photo_width="2048" thumb_width="200" title="Cart Back" lightbox="Unikitty Cart"
+      thumb_width="200" title="Cart Back" lightbox="Unikitty Cart"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50073521661_37680a69e1_k.jpg"
-      photo_width="2048" thumb_width="200" title="Cart with piece ejected out" lightbox="Unikitty Cart"
+      thumb_width="200" title="Cart with piece ejected out" lightbox="Unikitty Cart"
   %}
 </div>
