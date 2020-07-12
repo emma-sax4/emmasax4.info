@@ -279,9 +279,9 @@ When it's time to publish the post, you can either:
 
     ```
     # example (May 18, 2020 at 17:58 UTC):
-    @prscheduler 18-05-2020T17:58
+    @prscheduler 2020-05-18 17:58
 
-    @prscheduler DD-MM-YYYYTHH:MM
+    @prscheduler YYYY-MM-DD HH:MM
     ```
 
   * Wait for the `pr-scheduler` to respond saying the merge was scheduled
