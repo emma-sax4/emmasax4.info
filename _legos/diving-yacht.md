@@ -10,18 +10,18 @@ Here's a link to the set: [Diving Yacht (60221)](https://www.lego.com/en-us/prod
 <div class="text-center">
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/49977811291_ddb1464984_k.jpg"
-      photo_width="2048" thumb_width="200" title="Yacht with cover" lightbox="Diving Yacht"
+      thumb_width="200" title="Yacht with cover" lightbox="Diving Yacht"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/49978073062_941dcf47c0_k.jpg"
-      photo_width="2048" thumb_width="200" title="Scuba diver underwater" lightbox="Diving Yacht"
+      thumb_width="200" title="Scuba diver underwater" lightbox="Diving Yacht"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/49977291103_ef9e709552_k.jpg"
-      photo_width="1536" thumb_width="200" title="Yacht with top off" lightbox="Diving Yacht"
+      thumb_width="200" title="Yacht with top off" lightbox="Diving Yacht"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/49978072787_1a3a6f42eb_k.jpg"
-      photo_width="2048" thumb_width="200" title="Two scuba divers underwater" lightbox="Diving Yacht"
+      thumb_width="200" title="Two scuba divers underwater" lightbox="Diving Yacht"
   %}
 </div>

@@ -279,9 +279,9 @@ When it's time to publish the post, you can either:
 
     ```
     # example (May 18, 2020 at 17:58 UTC):
-    @prscheduler 18-05-2020T17:58
+    @prscheduler 2020-05-18 17:58
 
-    @prscheduler DD-MM-YYYYTHH:MM
+    @prscheduler YYYY-MM-DD HH:MM
     ```
 
   * Wait for the `pr-scheduler` to respond saying the merge was scheduled
@@ -346,7 +346,7 @@ Alternatively, to use Lightbox to make the photo clickable, and then it'll zoom 
 ```html
 {% include elements/photo.html
     url="/assets/images/picture-01.jpg"
-    photo_width="2048" thumb_width="200" title="Picture 1" lightbox="gallery name goes here"
+    thumb_width="200" title="Picture 1" lightbox="gallery name goes here"
 %}
 ```
 

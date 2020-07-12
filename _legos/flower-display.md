@@ -12,14 +12,14 @@ Here's a link to the set: [Flower Display (40187)](https://www.lego.com/en-us/pr
 <div class="text-center">
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50072954358_4a7a32c1bd_k.jpg"
-      photo_width="2048" thumb_width="200" title="Flower Display side by side" lightbox="Flower Display"
+      thumb_width="200" title="Flower Display side by side" lightbox="Flower Display"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50073521936_c0875a095f_k.jpg"
-      photo_width="2048" thumb_width="200" title="Flower Display top" lightbox="Flower Display"
+      thumb_width="200" title="Flower Display top" lightbox="Flower Display"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50073521861_e393dd2977_k.jpg"
-      photo_width="2048" thumb_width="200" title="Flower Display showcasing depth" lightbox="Flower Display"
+      thumb_width="200" title="Flower Display showcasing depth" lightbox="Flower Display"
   %}
 </div>
