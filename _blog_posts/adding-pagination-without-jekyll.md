@@ -17,7 +17,10 @@ Turns out, the Google doesn't have a lot of other suggestions on pagination. But
 Of course, I started with the things I know how to do best: copy-paste 💁🏻‍♀️. I started with [this blob](https://github.com/UMM-CSci/senior-seminar/blob/master/seminars.html#L63-L80), of course edited to suit my HTML file. Surprisingly, bits of this work right out of the box. But... the pagination isn't pretty, which is very important to me.
 
 <div class="text-center">
-  <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/48741690227/in/album-72157710863695862/" title="bad_pagination_bar"><img class="image" src="https://live.staticflickr.com/65535/48741690227_e27cb82884.jpg" width="450" height="367" alt="Bad pagination bar"></a>
+  {% include elements/photo.html
+      url="https://live.staticflickr.com/65535/48741690227_e27cb82884.jpg"
+      photo_width="450" thumb_width="400" title="Ugly vertical pagination bar" lightbox="Pagination"
+  %}
 </div>
 
 So, I went on a mission to figure out how to make a prettier pagination bar. After a couple of hours, and a good night's sleep, I realized that the answer lies in the `css/main.scss` file. Specifically, this line:
@@ -37,7 +40,10 @@ was not found.
 Clearly, that means my CSS is broken. But I didn't quite understand why 😕. The repository that I was copying pagination from included this line:
 
 <div class="text-center">
-  <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/48741503991/in/album-72157710863695862/" title="primer_submodule_directory"><img class="image" src="https://live.staticflickr.com/65535/48741503991_c9f4ec3ce4_o.png" width="486" height="45" alt="primer_submodule_directory"></a>
+  {% include elements/photo.html
+      url="https://live.staticflickr.com/65535/48741503991_ac5c550274.jpg"
+      photo_width="486" thumb_width="450" title="Primer as a submodule" lightbox="Pagination"
+  %}
 </div>
 
 Since I couldn't understand out why my CSS was broken, I figured it was time for me to try to add that "directory" to my repo.
@@ -63,7 +69,10 @@ After I finished succesfully adding the `primer` submodule 😌, all I had to do
 back to my `main.scss`, and finally the pagination was beautiful:
 
 <div class="text-center">
-  <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/48741504061/in/album-72157710863695862/" title="lovely_pagination_bar"><img class="image" src="https://live.staticflickr.com/65535/48741504061_7ebbd630fa.jpg" width="450" height="311" alt="Lovely pagination bar"></a>
+  {% include elements/photo.html
+      url="https://live.staticflickr.com/65535/48741504061_7ebbd630fa.jpg"
+      photo_width="450" thumb_width="400" title="Pagination bar that's much better" lightbox="Pagination"
+  %}
 </div>
 
 I was thrilled with the outcome of this pagination (even though it wasn't Jekyll's officially supported pagination), and I committed to `gh-pages`. However, perhaps a day later, I noticed something wrong with my CSS formatting. Perhaps you can notice it if you compare the before-pretty-pagination and the after-pretty-pagination pictures... I'll give you a hint: it has to do with the indentation and spacing of the words. Somehow, making the pagination bar pretty messed up my CSS formatting!
