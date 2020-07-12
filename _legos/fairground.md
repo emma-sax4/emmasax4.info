@@ -16,18 +16,18 @@ Here's a link to the set: [People Pack – Fun Fair (60234)](https://www.lego.co
 <div class="text-center">
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50050571391_c25a153b4f_k.jpg"
-      photo_width="2048" thumb_width="200" title="Fairground front" lightbox="Fairground"
+      thumb_width="200" title="Fairground front" lightbox="Fairground"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50050003703_039321bf98_k.jpg"
-      photo_width="2048" thumb_width="200" title="Fairground back" lightbox="Fairground"
+      thumb_width="200" title="Fairground back" lightbox="Fairground"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50050573421_9b12a93862_k.jpg"
-      photo_width="2048" thumb_width="200" title="Fairground side" lightbox="Fairground"
+      thumb_width="200" title="Fairground side" lightbox="Fairground"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50050009548_b31c09f6d8_k.jpg"
-      photo_width="2048" thumb_width="200" title="Fairground top" lightbox="Fairground"
+      thumb_width="200" title="Fairground top" lightbox="Fairground"
   %}
 </div>

@@ -15,7 +15,7 @@ But, soon after I started getting an upgrade in my CSS game, I realized that my 
 <div class="text-center">
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/48741504061_7ebbd630fa.jpg"
-      photo_width="450" thumb_width="400" title="Pagination bar that's now not quite as lovely" lightbox="Pagination"
+      thumb_width="400" title="Pagination bar that's now not quite as lovely" lightbox="Pagination"
   %}
 </div>
 
@@ -54,7 +54,7 @@ After all of that work, I now have a pagination bar that makes me proud of this 
 <div class="text-center">
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/49241327792_e87715127e_o.png"
-      photo_width="994" thumb_width="400" title="Pagination bar that can grow with my site" lightbox="Pagination"
+      thumb_width="400" title="Pagination bar that can grow with my site" lightbox="Pagination"
   %}
 </div>
 

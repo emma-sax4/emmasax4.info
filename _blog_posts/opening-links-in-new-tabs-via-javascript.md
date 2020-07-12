@@ -65,7 +65,7 @@ And with either of the solutions, GitHub does this weird raw text italisizing th
 <div class="text-center">
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/49386386903_198f4cc1e2_b.jpg"
-      photo_width="986" thumb_width="400" title="GitHub's weird italisizing" lightbox="Opening tabs"
+      thumb_width="400" title="GitHub's weird italisizing" lightbox="Opening tabs"
   %}
 </div>
 

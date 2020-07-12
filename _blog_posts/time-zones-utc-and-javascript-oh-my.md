@@ -136,7 +136,7 @@ In our example, I published a post on the 17th of January at night in CST. But w
 <div class="text-center">
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/49498384557_688bf3652a_o.png"
-      photo_width="530" thumb_width="450" title="Time zone shown in URL" lightbox="Time zones"
+      thumb_width="450" title="Time zone shown in URL" lightbox="Time zones"
   %}
 </div>
 

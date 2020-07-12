@@ -20,7 +20,7 @@ When we got to the airport, our trip leaders were right; it was busy. We didn't 
 <div class="text-center">
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/48871541883_f68f5627c5_o.jpg"
-      photo_width="960" thumb_width="400" title="Our last night in Kenya" lightbox="Kwaheri"
+      thumb_width="400" title="Our last night in Kenya" lightbox="Kwaheri"
   %}
 </div>
 

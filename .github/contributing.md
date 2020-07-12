@@ -346,7 +346,7 @@ Alternatively, to use Lightbox to make the photo clickable, and then it'll zoom 
 ```html
 {% include elements/photo.html
     url="/assets/images/picture-01.jpg"
-    photo_width="2048" thumb_width="200" title="Picture 1" lightbox="gallery name goes here"
+    thumb_width="200" title="Picture 1" lightbox="gallery name goes here"
 %}
 ```
 

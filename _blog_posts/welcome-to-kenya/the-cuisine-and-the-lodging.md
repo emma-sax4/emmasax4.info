@@ -54,11 +54,11 @@ The rooms are small, but that's by design. They feel cozy and snug. The hallways
 <div class="text-center">
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/48797244476_b8b7e63c5d_o.jpg"
-      photo_width="960" thumb_width="400" title="The Ark lodging" lightbox="Cuisine and Lodging"
+      thumb_width="400" title="The Ark lodging" lightbox="Cuisine and Lodging"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/48826445088_4fcce75760_o.jpg"
-      photo_width="4032" thumb_width="400" title="The Ark's buffet line" lightbox="Cuisine and Lodging"
+      thumb_width="400" title="The Ark's buffet line" lightbox="Cuisine and Lodging"
   %}
 </div>
 
@@ -83,11 +83,11 @@ I don't have many pictures of the exterior of Sarova Shaba Game Lodge, and that'
 <div class="text-center">
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/48872057586_638b72d2ca_o.jpg"
-      photo_width="960" thumb_width="400" title="Sarova Shaba pool" lightbox="Cuisine and Lodging"
+      thumb_width="400" title="Sarova Shaba pool" lightbox="Cuisine and Lodging"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/48826445063_35a542e32e_o.jpg"
-      photo_width="960" thumb_width="400" title="Sarova Shaba Room" lightbox="Cuisine and Lodging"
+      thumb_width="400" title="Sarova Shaba Room" lightbox="Cuisine and Lodging"
   %}
 </div>
 
@@ -104,23 +104,23 @@ Women and mothers take care of the children, take care of the livestock, do bead
 <div class="text-center">
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/48799101398_ac4b7ba7c5_o.jpg"
-      photo_width="4032" thumb_width="400" title="Samburu village" lightbox="Cuisine and Lodging"
+      thumb_width="400" title="Samburu village" lightbox="Cuisine and Lodging"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/48799451886_c952b2af60_o.jpg"
-      photo_width="6000" thumb_width="400" title="Samburu children" lightbox="Cuisine and Lodging"
+      thumb_width="400" title="Samburu children" lightbox="Cuisine and Lodging"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/48826820661_e3168ba066_o.png"
-      photo_width="2208" thumb_width="400" title="Samburu village" lightbox="Cuisine and Lodging"
+      thumb_width="400" title="Samburu village" lightbox="Cuisine and Lodging"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/48826444963_7102bf89d2_o.jpg"
-      photo_width="4032" thumb_width="400" title="Samburu hut" lightbox="Cuisine and Lodging"
+      thumb_width="400" title="Samburu hut" lightbox="Cuisine and Lodging"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/48826445033_8dc2101822_o.jpg"
-      photo_width="4032" thumb_width="400" title="Samburu elders" lightbox="Cuisine and Lodging"
+      thumb_width="400" title="Samburu elders" lightbox="Cuisine and Lodging"
   %}
 </div>
 
@@ -131,11 +131,11 @@ Ol Pejeta's Sweetwaters Serena Camp was my favorite place we stayed. It's a tent
 <div class="text-center">
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/48796885958_e5f240a3e4_o.jpg"
-      photo_width="720" thumb_width="200" title="Sweetwaters lodging" lightbox="Cuisine and Lodging"
+      thumb_width="200" title="Sweetwaters lodging" lightbox="Cuisine and Lodging"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/48872252992_5a8b9aea8d_o.jpg"
-      photo_width="960" thumb_width="400" title="Sweetwaters tent" lightbox="Cuisine and Lodging"
+      thumb_width="400" title="Sweetwaters tent" lightbox="Cuisine and Lodging"
   %}
 </div>
 
@@ -148,7 +148,7 @@ Sweetwaters Serena Camp is on the Equator. No joke, the sign at the entrance gav
 <div class="text-center">
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/48802026607_bf7dedd9ea_o.jpg"
-      photo_width="4032" thumb_width="400" title="We stayed on the equator!" lightbox="Cuisine and Lodging"
+      thumb_width="400" title="We stayed on the equator!" lightbox="Cuisine and Lodging"
   %}
 </div>
 
@@ -175,15 +175,15 @@ However, if you're lucky, your cabin windows (or deck on a top floor), gives you
 <div class="text-center">
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/48796885438_3c889d5496_o.jpg"
-      photo_width="720" thumb_width="200" title="Sopa lodging" lightbox="Cuisine and Lodging"
+      thumb_width="200" title="Sopa lodging" lightbox="Cuisine and Lodging"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/48797382142_5ed4a79360_o.jpg"
-      photo_width="960" thumb_width="300" title="Sopa room with couch to watch the hippos" lightbox="Cuisine and Lodging"
+      thumb_width="300" title="Sopa room with couch to watch the hippos" lightbox="Cuisine and Lodging"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/48826444793_daf66a4e6d_o.jpg"
-      photo_width="960" thumb_width="300" title="Sopa lodging building" lightbox="Cuisine and Lodging"
+      thumb_width="300" title="Sopa lodging building" lightbox="Cuisine and Lodging"
   %}
 </div>
 
@@ -204,7 +204,7 @@ Oh, the last thing I'll mention about Fig Tree Camp: they had limited times the 
 <div class="text-center">
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/48826443083_3125e40674_o.jpg"
-      photo_width="4032" thumb_width="400" title="Maasai Mara room" lightbox="Cuisine and Lodging"
+      thumb_width="400" title="Maasai Mara room" lightbox="Cuisine and Lodging"
   %}
 </div>
 
@@ -223,15 +223,15 @@ The last thing I'll mention is that both tribes do a type of ceremonial activity
 <div class="text-center">
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/48799594437_12567ee4f7_o.jpg"
-      photo_width="2988" thumb_width="250" title="Maasai Mara jumping ceremony" lightbox="Cuisine and Lodging"
+      thumb_width="250" title="Maasai Mara jumping ceremony" lightbox="Cuisine and Lodging"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/48799451771_dfeae19ebe_o.jpg"
-      photo_width="1400" thumb_width="250" title="Maasai Mara man and child" lightbox="Cuisine and Lodging"
+      thumb_width="250" title="Maasai Mara man and child" lightbox="Cuisine and Lodging"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/48799595727_faf4d27004_o.jpg"
-      photo_width="4032" thumb_width="400" title="Maasai Mara village" lightbox="Cuisine and Lodging"
+      thumb_width="400" title="Maasai Mara village" lightbox="Cuisine and Lodging"
   %}
 </div>
 

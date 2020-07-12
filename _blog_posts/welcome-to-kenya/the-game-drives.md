@@ -42,15 +42,15 @@ The Ark is where we saw our first cape buffalo, hyenas, warthogs (think Pumbaa!)
 <div class="text-center">
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/48740606838_c65187533b_o.jpg"
-      photo_width="600" thumb_width="200" title="Buffalo at the Ark" lightbox="Game Drives"
+      thumb_width="200" title="Buffalo at the Ark" lightbox="Game Drives"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/48740934946_f3e99feb9b_o.jpg"
-      photo_width="600" thumb_width="200" title="Buffalos at the Ark" lightbox="Game Drives"
+      thumb_width="200" title="Buffalos at the Ark" lightbox="Game Drives"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/48741119477_98156ea6e6_o.jpg"
-      photo_width="600" thumb_width="200" title="Elephants at the Ark" lightbox="Game Drives"
+      thumb_width="200" title="Elephants at the Ark" lightbox="Game Drives"
   %}
 </div>
 
@@ -59,11 +59,11 @@ At the Aberdares Country Club, near the Ark, we also saw some baboons, impalas, 
 <div class="text-center">
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/48740606758_718889f723_o.jpg"
-      photo_width="450" thumb_width="150" title="Peacock at Aberdares Country Club" lightbox="Game Drives"
+      thumb_width="150" title="Peacock at Aberdares Country Club" lightbox="Game Drives"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/48740935281_69b63473b8_o.jpg"
-      photo_width="600" thumb_width="200" title="Peacock close-up at Aberdares Country Club" lightbox="Game Drives"
+      thumb_width="200" title="Peacock close-up at Aberdares Country Club" lightbox="Game Drives"
   %}
 </div>
 
@@ -76,35 +76,35 @@ Samburu is an area north of the equator, located in the center of Kenya. The lan
 <div class="text-center">
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/48740606393_4f24904b75_o.jpg"
-      photo_width="600" thumb_width="200" title="Baboons at Samburu" lightbox="Game Drives"
+      thumb_width="200" title="Baboons at Samburu" lightbox="Game Drives"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/48740606453_02c1dcf73c_o.jpg"
-      photo_width="600" thumb_width="200" title="Elephant at Samburu" lightbox="Game Drives"
+      thumb_width="200" title="Elephant at Samburu" lightbox="Game Drives"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/48741119692_f8d37d4a98_o.jpg"
-      photo_width="600" thumb_width="200" title="Oryx at Samburu" lightbox="Game Drives"
+      thumb_width="200" title="Oryx at Samburu" lightbox="Game Drives"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/48740935066_7e21df8970_o.jpg"
-      photo_width="600" thumb_width="200" title="Reticulated giraffes at Samburu" lightbox="Game Drives"
+      thumb_width="200" title="Reticulated giraffes at Samburu" lightbox="Game Drives"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/48740606638_752252d3bd_o.jpg"
-      photo_width="600" thumb_width="200" title="Impala at Samburu" lightbox="Game Drives"
+      thumb_width="200" title="Impala at Samburu" lightbox="Game Drives"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/48740606678_6d9f3482a6_o.jpg"
-      photo_width="600" thumb_width="200" title="Lioness at Samburu (look closely)" lightbox="Game Drives"
+      thumb_width="200" title="Lioness at Samburu (look closely)" lightbox="Game Drives"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/48741119697_5b99e26766_o.jpg"
-      photo_width="726000" thumb_width="200" title="Ostrich at Samburu" lightbox="Game Drives"
+      thumb_width="200" title="Ostrich at Samburu" lightbox="Game Drives"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/48741119832_225ebe076d_o.jpg"
-      photo_width="600" thumb_width="200" title="Zebras at Samburu" lightbox="Game Drives"
+      thumb_width="200" title="Zebras at Samburu" lightbox="Game Drives"
   %}
 </div>
 
@@ -119,15 +119,15 @@ We managed to visit the Chimpanzee and Rhinoceros conservancies while we were th
 <div class="text-center">
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/48741119427_950e08953a_o.jpg"
-      photo_width="600" thumb_width="200" title="Chimpanzee at Ol Pejeta" lightbox="Game Drives"
+      thumb_width="200" title="Chimpanzee at Ol Pejeta" lightbox="Game Drives"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/48741119722_6ea09cfa61_o.jpg"
-      photo_width="600" thumb_width="200" title="Rhino at Ol Pejeta... and we got to pet it!" lightbox="Game Drives"
+      thumb_width="200" title="Rhino at Ol Pejeta... and we got to pet it!" lightbox="Game Drives"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/48740606828_4cca69618e_o.jpg"
-      photo_width="450" thumb_width="150" title="Rhino feeding at Ol Pejeta" lightbox="Game Drives"
+      thumb_width="150" title="Rhino feeding at Ol Pejeta" lightbox="Game Drives"
   %}
 </div>
 
@@ -146,7 +146,7 @@ The resort where we stayed is famous for having hippos come graze on the grass r
 <div class="text-center">
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/48740935336_73f8a59ae8_o.jpg"
-      photo_width="450" thumb_width="150" title="Waterbucks near Lake Naivasha" lightbox="Game Drives"
+      thumb_width="150" title="Waterbucks near Lake Naivasha" lightbox="Game Drives"
   %}
 </div>
 
@@ -161,63 +161,63 @@ Although I wish I could attach all of the pictures we have from the Maasai Mara,
 <div class="text-center">
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/48740934961_f96f3dd557_o.jpg"
-      photo_width="600" thumb_width="200" title="Cheetah at Maasai Mara" lightbox="Game Drives"
+      thumb_width="200" title="Cheetah at Maasai Mara" lightbox="Game Drives"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/48740935001_ed2ef1a21f_o.jpg"
-      photo_width="600" thumb_width="200" title="Elephants at Maasai Mara" lightbox="Game Drives"
+      thumb_width="200" title="Elephants at Maasai Mara" lightbox="Game Drives"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/48741119482_2a65f2332a_o.jpg"
-      photo_width="600" thumb_width="200" title="Momma elephant with baby at Maasai Mara" lightbox="Game Drives"
+      thumb_width="200" title="Momma elephant with baby at Maasai Mara" lightbox="Game Drives"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/48741119542_20ff32c710_o.jpg"
-      photo_width="600" thumb_width="200" title="Giraffe at Maasai Mara" lightbox="Game Drives"
+      thumb_width="200" title="Giraffe at Maasai Mara" lightbox="Game Drives"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/48741119572_75b99d2f3e_o.jpg"
-      photo_width="600" thumb_width="200" title="Giraffe headshot at Maasai Mara" lightbox="Game Drives"
+      thumb_width="200" title="Giraffe headshot at Maasai Mara" lightbox="Game Drives"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/48740935081_640dc843a8_o.jpg"
-      photo_width="600" thumb_width="200" title="Hippo at Maasai Mara" lightbox="Game Drives"
+      thumb_width="200" title="Hippo at Maasai Mara" lightbox="Game Drives"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/48740935106_67389659e4_o.jpg"
-      photo_width="600" thumb_width="200" title="Swimming hippo at Maasai Mara" lightbox="Game Drives"
+      thumb_width="200" title="Swimming hippo at Maasai Mara" lightbox="Game Drives"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/48741119617_67389659e4_o.jpg"
-      photo_width="450" thumb_width="200" title="Hyenas at Maasai Mara" lightbox="Game Drives"
+      thumb_width="200" title="Hyenas at Maasai Mara" lightbox="Game Drives"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/48740935151_cedbc943a3_o.jpg"
-      photo_width="600" thumb_width="200" title="Leopard laying around at Maasai Mara" lightbox="Game Drives"
+      thumb_width="200" title="Leopard laying around at Maasai Mara" lightbox="Game Drives"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/48740606698_6ae7e8c66d_o.jpg"
-      photo_width="600" thumb_width="200" title="Lions at Maasai Mara" lightbox="Game Drives"
+      thumb_width="200" title="Lions at Maasai Mara" lightbox="Game Drives"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/48740935211_3504edbc65_o.jpg"
-      photo_width="600" thumb_width="200" title="Yawning lion at Maasai Mara" lightbox="Game Drives"
+      thumb_width="200" title="Yawning lion at Maasai Mara" lightbox="Game Drives"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/48740935321_f29e95c343_o.jpg"
-      photo_width="600" thumb_width="200" title="Warthogs at Maasai Mara" lightbox="Game Drives"
+      thumb_width="200" title="Warthogs at Maasai Mara" lightbox="Game Drives"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/48741119787_f547fdb8b4_o.jpg"
-      photo_width="600" thumb_width="200" title="Wildebeests at Maasai Mara" lightbox="Game Drives"
+      thumb_width="200" title="Wildebeests at Maasai Mara" lightbox="Game Drives"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/48740935386_f3d51837f8_o.jpg"
-      photo_width="550" thumb_width="200" title="Walking wildebeests at Maasai Mara" lightbox="Game Drives"
+      thumb_width="200" title="Walking wildebeests at Maasai Mara" lightbox="Game Drives"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/48741119842_aa42e45571_o.jpg"
-      photo_width="600" thumb_width="200" title="Zebras at Maasai Mara" lightbox="Game Drives"
+      thumb_width="200" title="Zebras at Maasai Mara" lightbox="Game Drives"
   %}
 </div>
 

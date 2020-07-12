@@ -22,7 +22,7 @@ Despite the heat, we persevered, and 9 hours later, and a few naps, movies, and 
 <div class="text-center">
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/48740606523_77e7b836e4_o.jpg"
-      photo_width="994" thumb_width="400" title="Map as we flew over Nairobi" lightbox="Jambo"
+      thumb_width="400" title="Map as we flew over Nairobi" lightbox="Jambo"
   %}
 </div>
 

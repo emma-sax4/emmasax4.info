@@ -18,22 +18,22 @@ NOTES: the LDD piece list numbers can sometimes be out of sync with what's in th
 <div class="text-center">
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50050573101_fb17cb502a_k.jpg"
-      photo_width="2048" thumb_width="200" title="Dorm Room top facing napping minifigure" lightbox="Dorm Room"
+      thumb_width="200" title="Dorm Room top facing napping minifigure" lightbox="Dorm Room"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50050826537_4d42eae374_k.jpg"
-      photo_width="2048" thumb_width="200" title="Dorm Room top facing studying minifigure" lightbox="Dorm Room"
+      thumb_width="200" title="Dorm Room top facing studying minifigure" lightbox="Dorm Room"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50050572856_c7703277aa_k.jpg"
-      photo_width="2048" thumb_width="200" title="Dorm Room top facing door" lightbox="Dorm Room"
+      thumb_width="200" title="Dorm Room top facing door" lightbox="Dorm Room"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50050572721_96905699ca_k.jpg"
-      photo_width="2048" thumb_width="200" title="Dorm Room looking through door" lightbox="Dorm Room"
+      thumb_width="200" title="Dorm Room looking through door" lightbox="Dorm Room"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50050574776_402215300c_k.jpg"
-      photo_width="2048" thumb_width="200" title="Dorm Room top facing windows" lightbox="Dorm Room"
+      thumb_width="200" title="Dorm Room top facing windows" lightbox="Dorm Room"
   %}
 </div>

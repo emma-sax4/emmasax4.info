@@ -19,7 +19,7 @@ Of course, I started with the things I know how to do best: copy-paste 💁🏻�
 <div class="text-center">
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/48741690227_e27cb82884.jpg"
-      photo_width="450" thumb_width="400" title="Ugly vertical pagination bar" lightbox="Pagination"
+      thumb_width="400" title="Ugly vertical pagination bar" lightbox="Pagination"
   %}
 </div>
 
@@ -42,7 +42,7 @@ Clearly, that means my CSS is broken. But I didn't quite understand why 😕. Th
 <div class="text-center">
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/48741503991_ac5c550274.jpg"
-      photo_width="486" thumb_width="450" title="Primer as a submodule" lightbox="Pagination"
+      thumb_width="450" title="Primer as a submodule" lightbox="Pagination"
   %}
 </div>
 
@@ -71,7 +71,7 @@ back to my `main.scss`, and finally the pagination was beautiful:
 <div class="text-center">
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/48741504061_7ebbd630fa.jpg"
-      photo_width="450" thumb_width="400" title="Pagination bar that's much better" lightbox="Pagination"
+      thumb_width="400" title="Pagination bar that's much better" lightbox="Pagination"
   %}
 </div>
 
