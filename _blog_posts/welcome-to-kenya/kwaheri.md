@@ -18,7 +18,10 @@ We hurriedly gave the last of our Kenya Shilling cash to our drivers as tips �
 When we got to the airport, our trip leaders were right; it was busy. We didn't have time to hug our drivers one last time, so instead, we pushed our way to the long lines that awaited us inside the airport doors. Kwaheri, Kenya 👋🏼.
 
 <div class="text-center">
-  <a data-flickr-embed="true" href="https://www.flickr.com/photos/184539266@N08/48871541883/in/album-72157710860887528/" title="Van 1 on our last day"><img class="image" src="https://live.staticflickr.com/65535/48871541883_c67c5270c0.jpg" width="500" height="375" alt="Van 1 on our last day"></a>
+  {% include elements/photo.html
+      url="https://live.staticflickr.com/65535/48871541883_f68f5627c5_o.jpg"
+      photo_width="960" thumb_width="400" title="Our last night in Kenya" lightbox="Kwaheri"
+  %}
 </div>
 
 The above picture is of our van on our last day. In it we have Abdi (our driver), Impreet, Myra, Kristen, Andrew, and Jesse as our "photographer." Even over a month later, there's still a part of me that misses them 😢.
