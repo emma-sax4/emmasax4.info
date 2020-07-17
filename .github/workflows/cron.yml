@@ -7,13 +7,13 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-    - name: Define Run Variables
-      run: bash scripts/define_run_variables.sh cron ${{ github.repository }} ${{ github.ref }} ${{ github.run_id }}
-
     - name: Check Out Code
       uses: actions/checkout@v2
       with:
         fetch-depth: 0
+
+    - name: Define Run Variables
+      run: bash scripts/define_run_variables.sh cron ${{ github.repository }} ${{ github.ref }} ${{ github.run_id }}
 
     - name: Switch to Current Branch
       run: git checkout ${{ env.BRANCH }}
