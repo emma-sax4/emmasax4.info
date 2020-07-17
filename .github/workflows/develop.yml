@@ -8,7 +8,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Check Out Code
-      uses: actions/checkout@v1
+      uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
 
     - name: Define Run Variables
       run: bash scripts/define_run_variables.sh develop ${{ github.repository }} ${{ github.ref }} ${{ github.run_id }} ${{ github.head_ref }}
