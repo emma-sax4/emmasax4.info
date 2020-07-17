@@ -167,3 +167,5 @@ All of these changes only took a few of hours, and in my opinion, they were well
 * https://stackoverflow.com/questions/4086107/fixed-page-header-overlaps-in-page-anchors
 * https://codepen.io/Paulie-D/pen/zvkpJ/
 * https://wordpress.org/support/topic/heading-with-anchor-links-are-covered-up-by-top-of-page-header/
+* https://github.com/jekyll/jekyll-commonmark
+* https://github.com/gjtorikian/commonmarker
