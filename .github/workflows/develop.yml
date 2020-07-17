@@ -43,6 +43,10 @@ jobs:
     - name: Markdown Linter
       run: bash scripts/markdown_linter.sh
 
+    - name: print feed
+      run: cat _site/feed.xml
+
+
     - name: Notify Slack on Success
       if: success()
       uses: emmasax4/slack-notifier-action@emmasax4_slack_notifier_action
