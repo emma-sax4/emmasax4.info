@@ -2,13 +2,18 @@ name: Release
 on:
   push:
     branches: [ main ]
+  pull_request:
+    branches: [ main ]
 
 jobs:
   test-and-deploy:
     runs-on: ubuntu-latest
     steps:
     - name: Check Out Code
-      uses: actions/checkout@v1
+      uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+        persist-credentials: false
 
     - name: Define Run Variables
       run: bash scripts/define_run_variables.sh release ${{ github.repository }} ${{ github.ref }} ${{ github.run_id }} ${{ github.actor }}
