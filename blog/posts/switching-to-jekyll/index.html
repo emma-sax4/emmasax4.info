@@ -38,7 +38,7 @@
     <meta name="msvalidate.01" content="89B2B19FF966341B78EF64EDADE6DF81" />
     <meta name="yandex-verification" content="c2741887f8c30dd1" />
     <script type="application/ld+json">
-      {"description":"Emma Sax’s personal website and blog. Includes information about my social media profiles, résumé, and hobbies.","@type":"BlogPosting","url":"https://emmasax4.info/blog/posts/switching-to-jekyll/","headline":"Switching to Jekyll","dateModified":"2020-06-29T22:35:31+00:00","datePublished":"2019-09-09T05:00:00+00:00","author":{"@type":"Person","name":"Emma Sax"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://emmasax4.info/blog/posts/switching-to-jekyll/"},"@context":"https://schema.org"}
+      {"datePublished":"2019-09-09T05:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emmasax4.info/blog/posts/switching-to-jekyll/"},"@type":"BlogPosting","url":"https://emmasax4.info/blog/posts/switching-to-jekyll/","author":{"@type":"Person","name":"Emma Sax"},"headline":"Switching to Jekyll","dateModified":"2020-06-29T22:35:31+00:00","description":"Emma Sax’s personal website and blog. Includes information about my social media profiles, résumé, and hobbies.","@context":"https://schema.org"}
     </script>
     <!-- End Jekyll SEO tag -->
   </head>
@@ -120,13 +120,21 @@
             <p>One of my flaws when I code is that I’m not always a big fan of thinking and reading… I like to just jump in and start coding, especially if I’m working on my own project. So I skipped all of the official Jekyll documentation (I’ve looked at it since when googling, but I didn’t start there), and I started copying files. I began with the <code>_includes/</code> directory, AKA the first directory GitHub shows in the root directory. And I kept copying the basic files, making small changes to my copies, as necessary.</p>
             <p>Before long, I had a working homepage, with a single item in the header (“Home”), and my pictures showed up. As I started adding more pages, I got more understanding of the purpose of each directory, and how the Markdown files and HTML files worked together. By the time I moved onto the most complicated page, the “Blog” page, I had a decent understanding of the basics of Jekyll.</p>
             <p>But it wasn’t until I started working on the “Blog” page that I got to play around with collections, loops, <code>if</code>s, etc. My first goal was to make the list of posts all show up as they were supposed to, with the proper title(s) and dates. It turns out Jekyll makes this pretty easy. This sweet line gathers all of the blog posts on the site:</p>
-            <pre><code>{{ site.posts }}
+            <div class="highlighter-rouge">
+              <div class="highlight">
+                <pre class="highlight"><code>{{ site.posts }}
 </code></pre>
+              </div>
+            </div>
             <p>And you can loop through them like this:</p>
-            <pre><code>{% for post in site.posts %}
+            <div class="highlighter-rouge">
+              <div class="highlight">
+                <pre class="highlight"><code>{% for post in site.posts %}
   {{ post.title }}
 {% endfor %}
 </code></pre>
+              </div>
+            </div>
             <p>Then I wanted to add appropriate buttons to go back to the whole list of posts, and to the more general collections of posts, if there were any posts that were intentionally grouped together. This would also be the start of adding tags to the posts in order to organize them together, beyond just the titles. With this, I had to categorize each post, figure out how to compare the tags, and filter the posts based on the tags assigned. The easiest answer I found was to add a single <code>tag</code> to each main posts list, which would eventually be the tag to show on that page. Then, have each post have a list of <code>tags</code>. And any post that includes that single <code>tag</code> would appear on that list 💡. It only took me about 3️⃣ hours to come up with that.</p>
             <p>The latest addition to the posts collection was to utilize <a href="https://jekyllrb.com/docs/posts/#drafts">Jekyll’s draft</a> capability. I wanted an easy way to make draft posts, where I could work on them, and leave them until I was ready to publish them. I’m fully aware that even drafts aren’t fully private; drafts are stored as Markdown files on GitHub in a public repository, so anyone could see an unpublished draft by just viewing it on GitHub. But, using the built-in draft capability would make it easier for people that only view the website, not in GitHub.</p>
             <p>And then also, there’s a <code>show_drafts: false</code> line to add to the <code>_config.yml</code>, which all of the official documentation fails to mention. They talk about running the local server with the <code>--drafts</code> flag, but don’t talk about changing the config file. So, it took me quite a bit of googling until I could fit together all of those puzzle pieces 🧩.</p>

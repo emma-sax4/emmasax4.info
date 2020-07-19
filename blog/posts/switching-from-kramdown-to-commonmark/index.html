@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="msapplication-TileColor" content="#2d89ef">
+    <meta name="msapplication-TileImage" content="/assets/images/favicon/mstile-150x150.png">
+    <meta name="msapplication-config" content="/assets/images/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="apple-touch-icon" sizes="120x120" href="/assets/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon/android-chrome-96x96.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="/assets/images/favicon/favicon-48x48.png">
+    <link rel="icon" type="image/png" sizes="196x196" href="/assets/images/favicon/favicon-196x196.png">
+    <link rel="manifest" href="/assets/images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/assets/images/favicon/safari-pinned-tab.svg" color="#1144ef">
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/lightbox.min.css">
+    <link rel="stylesheet" href="/assets/css/google_fonts.min.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="alternate" href="https://emmasax4.info/feed.xml" type="application/rss+xml">
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+    <title>Emma Sax | Switching from kramdown to CommonMark</title>
+    <meta name="generator" content="Jekyll v3.8.7" />
+    <meta property="og:title" content="Emma Sax | Switching from kramdown to CommonMark" />
+    <meta name="author" content="Emma Sax" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="description" content="Emma Sax’s personal website and blog. Includes information about my social media profiles, résumé, and hobbies." />
+    <meta property="og:description" content="Emma Sax’s personal website and blog. Includes information about my social media profiles, résumé, and hobbies." />
+    <link rel="canonical" href="https://emmasax4.info/blog/posts/switching-from-kramdown-to-commonmark/" />
+    <meta property="og:url" content="https://emmasax4.info/blog/posts/switching-from-kramdown-to-commonmark/" />
+    <meta property="og:site_name" content="Emma Sax" />
+    <meta name="twitter:card" content="summary" />
+    <meta property="twitter:title" content="Switching from kramdown to CommonMark" />
+    <meta name="google-site-verification" content="v04az8eo-0UcZrWCJr7SKAvM6hw90qTCBQoKx3PlXCA" />
+    <meta name="msvalidate.01" content="89B2B19FF966341B78EF64EDADE6DF81" />
+    <meta name="yandex-verification" content="c2741887f8c30dd1" />
+    <script type="application/ld+json">
+      {"@type":"WebPage","url":"https://emmasax4.info/blog/posts/switching-from-kramdown-to-commonmark/","author":{"@type":"Person","name":"Emma Sax"},"headline":"Switching from kramdown to CommonMark","dateModified":"2020-07-19T15:00:05+00:00","description":"Emma Sax’s personal website and blog. Includes information about my social media profiles, résumé, and hobbies.","@context":"https://schema.org"}
+    </script>
+    <!-- End Jekyll SEO tag -->
+  </head>
+  <header class="sticky-top">
+    <nav class="navbar navbar-expand-md navbar-dark">
+      <a class="navbar-brand mb-0" href="https://emmasax4.info" target="_self">
+        <img src="/assets/images/logos/e-logo-white-40.png" width="30" height="30"
+        class="d-inline-block align-top" alt="E logo"
+      > Emma Sax
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse"
+      data-target="#navbar-links" aria-controls="navbar-links"
+      aria-expanded="false" aria-label="Toggle navigation">
+        <i data-feather="menu"></i>
+        <i data-feather="x"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbar-links">
+        <ul class="navbar-nav ml-auto mt-2 mt-md-0">
+          <li class="nav-item ">
+            <a class="nav-link" href="/about-me/">About Me
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="/interests-and-hobbies/">Interests & Hobbies
+            </a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="/blog">Blog
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <body>
+    <main class="container">
+      <div class="row">
+        <div class="col col-12 col-md-2 text-center">
+          <div class="container" style="padding-bottom: 1rem;">
+            <a href="/blog/" class="btn btn-lg btn-outline-secondary">All Posts</a>
+          </div>
+          <div class="text-center" style="margin-bottom: .5rem;">
+            <a href="/feed.xml" target="_blank" class="link-icon-rss">
+              <i data-feather="rss"></i>
+            </a>
+          </div>
+          <div class="text-center" style="margin-bottom: .5rem;">
+            <span class="post-meta">
+              <i style="width: 20px; height: 20px;" data-feather="tag"></i>
+              <a href="/blog/jekyll/">
+                jekyll
+              </a>
+              |
+              <a href="/blog/tech/">
+                tech
+              </a>
+            </span>
+          </div>
+          <div class="text-center" style="margin-bottom: 1rem;">
+            <span class="post-meta">
+              Read time: 10 minutes
+            </span>
+          </div>
+        </div>
+        <div class="col col-12 col-md-10">
+          <h1 style="padding-bottom: .75rem;">
+            <div class="text-center">
+              Switching from kramdown to CommonMark
+            </div>
+            <div class="text-center" style="margin-top: -.5rem;">
+              <span class="post-meta">Unpublished</span>
+            </div>
+          </h1>
+          <div class="page-body">
+            <ul>
+              <li><a href="#introduction">Introduction</a></li>
+              <li><a href="#adding-jekyll-commonmark">Adding <header-code>jekyll-commonmark</header-code></a></li>
+              <li><a href="#debugging">Debugging 🕷</a></li>
+              <li><a href="#conclusion">Conclusion</a></li>
+              <li><a href="#references">References</a></li>
+            </ul>
+            <div id="anchor">
+              <a id="introduction">&nbsp;</a>
+            </div>
+            <h2>Introduction</h2>
+            <p>Up until a few weeks ago, my website (this website) had always used <a href="https://kramdown.gettalong.org/">kramdown</a> (the lowercase “k” is intentional). GitHub Pages (where my website is hosted) by default uses kramdown, so I kept it that way even as I moved my site to being built on <a href="https://docs.travis-ci.com/user/for-beginners/">Travis CI</a>, and eventually <a href="https://circleci.com/">CircleCI</a>, before finally landing on <a href="https://docs.github.com/en/actions">GitHub Actions</a>.</p>
+            <p>And over time, as I continued to add more content to this site, building the HTML website started to get slower and slower to load. When I started using Travis CI to build my application, running <code>bundle exec jekyll build</code> was maybe taking about 2 minutes of computation time. By the time it go over to CircleCI, it was taking a little bit longer. I don’t think the platform I was running it on mattered… rather my project continued to grow. And my first official build on GitHub Actions took 2.606 seconds.</p>
+            <p>When that happened, I hadn’t yet introduced my <a href="/interests-and-hobbies/legos/">LEGO page</a>. And when I did finally build my LEGO page, suddenly, the build time of my website skyrocketed. Using two different collections (blog posts and LEGOs) and looping over both makes the build time of my site <em>much</em> higher than it was before. Add in a few more blog posts, and my site was taking between 4 and 5 seconds to load locally.</p>
+            <p>The amount of time my site takes to build on its CI tool doesn’t particularly matter to me… a few seconds don’t make a difference. What was almost painful was working locally. When I’m working locally on my computer, every time I make a small change to a file, Jekyll would reload my site. And waiting 5 seconds after adding one comma was pushing my patience.</p>
+            <p>So, when I came across the <a href="https://github.com/jekyll/jekyll-commonmark">jekyll/jekyll-commonmark</a> gem, I was curious. It advertises a Markdown parser that is faster than kramdown. The reason it’s faster is because it uses a C compiler instead of a Ruby compiler (see <a href="https://jekyllrb.com/docs/configuration/markdown/">here</a>). Normally I’m kind of a Ruby-lover, but I will admit that it’s not the fastest language around. So, I thought I may as well try it out on a pull request. If it’s too many changes, or it doesn’t actually benefit me, then no need to switch; kramdown is getting most of what I want done.</p>
+            <div id="anchor">
+              <a id="adding-jekyll-commonmark">&nbsp;</a>
+            </div>
+            <h2>Adding <header-code>jekyll-commonmark</header-code></h2>
+            <p>Things started out easy. I added this to my <code>Gemfile</code>:</p>
+            <div class="language-ruby highlighter-rouge">
+              <div class="highlight">
+                <pre class="highlight"><code data-lang="ruby"><span class="n">gem</span> <span class="s1">'jekyll-commonmark'</span><span class="p">,</span> <span class="s1">'~&gt; 1.3'</span>
+</code></pre>
+              </div>
+            </div>
+            <p>And I ran <code>bundle install</code>. Things installed nicely, and I was up and rolling.</p>
+            <p>Next I had to indicate to Jekyll to use CommonMark instead of kramdown. I deleted this:</p>
+            <div class="language-yml highlighter-rouge">
+              <div class="highlight">
+                <pre class="highlight"><code data-lang="yml"><span class="na">markdown</span><span class="pi">:</span> <span class="s">kramdown</span>
+</code></pre>
+              </div>
+            </div>
+            <p>and added this:</p>
+            <div class="language-yml highlighter-rouge">
+              <div class="highlight">
+                <pre class="highlight"><code data-lang="yml"><span class="na">markdown</span><span class="pi">:</span> <span class="s">CommonMark</span>
+<span class="na">commonmark</span><span class="pi">:</span>
+  <span class="na">options</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">SMART</span>
+    <span class="pi">-</span> <span class="s">UNSAFE</span>
+  <span class="na">extensions</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">autolink</span>
+    <span class="pi">-</span> <span class="s">table</span>
+</code></pre>
+              </div>
+            </div>
+            <p>I selected the <code>options</code> and <code>extensions</code> to use based on <a href="https://github.com/jekyll/jekyll-commonmark#configuration">this documentation</a>, and chose each one specifically based off of my needs as I debugged the switch.</p>
+            <div id="anchor">
+              <a id="debugging">&nbsp;</a>
+            </div>
+            <h2>Debugging 🕷</h2>
+            <p>The very first thing I noticed when I first ran <code>jekyll build</code> was that CommonMark was much faster. My build went from about 5 seconds locally to 2 seconds, all from switching to CommonMark. A blogger could get spoiled with build times that fast!</p>
+            <p>And then I took a look at the results. The first thing I noticed was that none of my Markdown showed up! My immediate thought was that CommonMark isn’t going to work if my content doesn’t show up. But lo-and-behold, the answer was simple… remove every use of <code>markdownify</code> in my entire site. To be completely honest, I’m not sure what <code>markdownify</code> is for, but somehow it previously indicated to kramdown to process a string as Markdown. I guess CommonMark didn’t like that.</p>
+            <p>The only other issue I noticed was that CommonMark doesn’t have an easy Table of Contents feature. This is rather surprising, given the amount of blogs that use CommonMark. This is how I defined a Table of Contents with kramdown:</p>
+            <div class="highlighter-rouge">
+              <div class="highlight">
+                <pre class="highlight"><code>* Table of Contents
+{:toc}
+</code></pre>
+              </div>
+            </div>
+            <p>Nice and easy. But apparently that’s kramdown specific, and the only way to define a Table of Contents in CommonMark is to do it the old-fashioned way (sort of similar to the GitHub Markdown way):</p>
+            <div class="highlighter-rouge">
+              <div class="highlight">
+                <pre class="highlight"><code>* [Header One](#header-one)
+* [Header Two](#header-two)
+  * [Nested Header One](#nested-header-one)
+  * [Nested Header Two](#nested-header-two)
+* [Header Three](#header-three)
+  * [Nested Header One](#nested-header-one-2)
+</code></pre>
+              </div>
+            </div>
+            <p>Now, if I’m completely honest, this isn’t that bad. It’s terrible to have to update, but if I wait until the blog post is written, then it won’t go through lots more changes. Especially when I found <a href="https://github.com/emmasax4/emmasax4.info/blob/main/scripts/markdown_toc.rb">this Ruby file</a> and fixed it up to suit my needs… it makes it easy to generate a Table of Contents based off of existing headers in a particular file.</p>
+            <p>The challenging part was setting the anchors. When I used kramdown’s TOC, the anchors were automatic (because I actually moved my navigation bar to be sticky, they actually had a slight bug in them the whole time, but that’s unrelated). Now, it was time for me to have to set my own anchors on my headers—adding to the amount of “annoying” that is having to update a TOC. This was the ending solution:</p>
+            <div class="language-html highlighter-rouge">
+              <div class="highlight">
+                <pre class="highlight"><code data-lang="html"><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"anchor"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">id=</span><span class="s">"header-two"</span><span class="nt">&gt;</span><span class="ni">&amp;nbsp;</span><span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+## Header Two
+</code></pre>
+              </div>
+            </div>
+            <p>The first line indicates that this is an anchor, and the <code>id=&quot;anchor&quot;</code> calls the CSS class that I added. Because my navigation bar is now sticky, I need my anchor to line up with the <em>bottom</em> of the top navigation bar, versus the <em>top</em> of the entire window. Without the second line, whenever a user clicked on a TOC link, it would slightly cut off the words of the anchor… not a very good user experience! So the second line actually makes an empty line <code>&amp;nbsp;</code> the anchor. And the last line actually prints the words of the header, for users to see. With this, the actual anchor lines up with the top of the window, but to the user, it looks like it’s lining up with the bottom of the top nav bar. There were several links I used as research for this, and I’ll link to all of them below.</p>
+            <p>And then, the last trick was to add CSS:</p>
+            <div class="language-css highlighter-rouge">
+              <div class="highlight">
+                <pre class="highlight"><code data-lang="css"><span class="nf">#anchor</span> <span class="p">{</span>
+  <span class="nl">position</span><span class="p">:</span> <span class="nb">relative</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nf">#anchor</span> <span class="nt">a</span> <span class="p">{</span>
+  <span class="nl">position</span><span class="p">:</span> <span class="nb">absolute</span><span class="p">;</span>
+  <span class="nl">top</span><span class="p">:</span> <span class="m">-60px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+              </div>
+            </div>
+            <p>I’m not exactly sure why <code>#anchor</code> defines the <code>position</code> as <code>relative</code>, and the <code>#anchor a</code> defines the <code>position</code> as <code>absolute</code>, but by a miracle, I got this to work, and I’m not going to question it now!</p>
+            <p>Here’s what my anchor looked like in the beginning:</p>
+            <div class="text-center">
+              <a href="https://live.staticflickr.com/65535/50120866658_714fff8d24_o.png" title="With the anchors misaligned" data-lightbox="kramdown to CommonMark">
+                <img class="image" src="https://live.staticflickr.com/65535/50120866658_714fff8d24_o.png" width="400" alt="With the anchors misaligned">
+              </a>
+            </div>
+            <p>And here’s my anchors at the end:</p>
+            <div class="text-center">
+              <a href="https://live.staticflickr.com/65535/50121433291_c532150c4a_o.png" title="With the anchors properly lined up" data-lightbox="kramdown to CommonMark">
+                <img class="image" src="https://live.staticflickr.com/65535/50121433291_c532150c4a_o.png" width="400" alt="With the anchors properly lined up">
+              </a>
+            </div>
+            <!-- The last big issue was that my LEGO page was completely empty! All of my LEGOs were gone. After doing some googling, I realized that CommonMark does have support for the `<details></details>` HTML, which my LEGO pages were using, but CommonMark somehow wasn't picking up the tags as HTML. The solution? move them back in indentation, so that this:
+
+```html
+  {% for lego in lego_list %}
+    <details>
+      <summary style="font-size: 32px; margin-bottom: 10px;">{{ lego.title }}</summary>
+      {{ lego.content }}
+    </details>
+  {% endfor %}
+```
+
+becomes this:
+
+```html
+  {% for lego in lego_list %}
+
+<details>
+  <summary style="font-size: 32px; margin-bottom: 10px;">{{ lego.title }}</summary>
+  {{ lego.content }}
+</details>
+
+  {% endfor %}
+```
+
+It certainly doesn't look as pretty... I always prefer to have my HTML indented properly. But compromising and being willing to move my lines around is worth a much faster build time. -->
+            <p>After I was satisfied with my changes, I willingly merged my pull request and deployed away. A little while later, I noticed a few other key pieces I missed.</p>
+            <p>First, my syntax highlighting also broke, and I didn’t even notice for several weeks! Here’s an image of how the HTML changed during the switch:</p>
+            <div class="text-center">
+              <a href="https://user-images.githubusercontent.com/7562793/87866750-f695d980-c94a-11ea-87e1-9fc8c5e56d88.png" title="HTML without syntax highlighting" data-lightbox="kramdown to CommonMark">
+                <img class="image" src="https://user-images.githubusercontent.com/7562793/87866750-f695d980-c94a-11ea-87e1-9fc8c5e56d88.png" width="400" alt="HTML without syntax highlighting">
+              </a>
+            </div>
+            <p>In fact, when I originally saw this, I probably thought the HTML looked cleaner after the switch. But in reality, the switch caused all of my syntax highlighting to break.</p>
+            <p>It turns out the solution was simple: pull <code>jekyll-commonmark</code> from the GitHub source directly… the <a href="https://github.com/jekyll/jekyll-commonmark/pull/29">pull request</a> that introduces syntax highlighting was merged over a year ago, but was never officially released on Rubygems.</p>
+            <div class="language-ruby highlighter-rouge">
+              <div class="highlight">
+                <pre class="highlight"><code data-lang="ruby"><span class="n">gem</span> <span class="s1">'jekyll-commonmark'</span><span class="p">,</span> <span class="ss">git: </span><span class="s1">'https://github.com/jekyll/jekyll-commonmark.git'</span><span class="p">,</span> <span class="ss">ref: </span><span class="s1">'6b6c9a'</span>
+</code></pre>
+              </div>
+            </div>
+            <p>The very last thing I needed to add was that CommonMark needs directories specifically <code>exclude</code>d in the <code>_config.yml</code>. I’m not entirely sure <em>why</em> this is, but without it, CommonMark adds a bunch of development directories to finished built site. This means that the public (ignoring my public GitHub repository) could, in theory, potentially access all of these directories and files, which is not good. Here’s the blurb I added to my <code>_config.yml</code>:</p>
+            <div class="language-yml highlighter-rouge">
+              <div class="highlight">
+                <pre class="highlight"><code data-lang="yml"><span class="na">exclude</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">scripts</span>
+  <span class="pi">-</span> <span class="s">vendor</span>
+  <span class="pi">-</span> <span class="s">Gemfile</span>
+  <span class="pi">-</span> <span class="s">Gemfile.lock</span>
+</code></pre>
+              </div>
+            </div>
+            <div id="anchor">
+              <a id="conclusion">&nbsp;</a>
+            </div>
+            <h2>Conclusion</h2>
+            <p>Most of these changes only took a few of hours, and in my opinion, they were well worth the time. In about 120 local builds, I’ll have made up the time that I would’ve spent waiting for my site to build. In writing this blog post alone, I’ve already done about 40 local builds. And the changes reflected on GitHub Actions? The last build with kramdown took <strong>3.796 seconds</strong> to build. My first build with CommonMark took <strong>1.794 seconds</strong>… just a smidgen over 2 seconds faster.</p>
+            <div id="anchor">
+              <a id="references">&nbsp;</a>
+            </div>
+            <h2>References</h2>
+            <ul>
+              <li><a href="https://www.sitepoint.com/community/t/fixed-nav-with-positioning/290073/4">sitepoint.com: fixed nav with positioning</a></li>
+              <li><a href="https://www.caktusgroup.com/blog/2017/10/23/css-tip-fixed-headers-and-section-anchors/">caktusgroup.com: css tip fixed headers and section anchors</a></li>
+              <li><a href="https://stackoverflow.com/questions/4086107/fixed-page-header-overlaps-in-page-anchors">stackoverflow.com: fixed page header overlaps in page anchors</a></li>
+              <li><a href="https://codepen.io/Paulie-D/pen/zvkpJ/">codepen.io: anchor examples</a></li>
+              <li><a href="https://wordpress.org/support/topic/heading-with-anchor-links-are-covered-up-by-top-of-page-header/">wordpress.org: heading with anchor links are covered up by top of page header</a></li>
+              <li><a href="https://github.com/jekyll/jekyll-commonmark">github.com: jekyll/jekyll-commonmark</a></li>
+              <li><a href="https://github.com/gjtorikian/commonmarker">github.com: gjtorikian/commonmarker</a></li>
+            </ul>
+            <script src="/assets/js/show-comments.js" type="text/javascript"></script>
+            <div class="text-center" style="margin-bottom: 1rem;">
+              <button id="show-comments-button" class="btn btn-lg btn-outline-secondary"
+  onclick="loadComments('emmasax4');return false;">
+                Load Comments
+                <i data-feather="message-circle"></i>
+              </button>
+            </div>
+            <div id="disqus_thread"></div>
+            <noscript>
+              Please enable JavaScript to view the
+              <a href="https://disqus.com/?ref_noscript" rel="nofollow">
+                comments powered by Disqus.
+              </a>
+            </noscript>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+  <footer>
+    &copy; <script>
+      document.write(new Date().getFullYear());
+    </script>
+    Emma Sax. All rights reserved.
+    <br>
+    View on <a href="https://github.com/emmasax4/emmasax4.info">GitHub</a>.
+  </footer>
+  <script src="/assets/js/show-dates.js" type="text/javascript"></script>
+  <script src="/assets/js/external-links.js" type="text/javascript"></script>
+  <script src="/assets/js/jquery.min.js"></script>
+  <script src="/assets/js/lightbox.min.js"></script>
+  <script src="/assets/js/bootstrap.min.js"></script>
+  <script src="/assets/js/feather.min.js"></script>
+  <script>
+    feather.replace()
+  </script>
+</html>

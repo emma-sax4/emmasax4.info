@@ -38,7 +38,7 @@
     <meta name="msvalidate.01" content="89B2B19FF966341B78EF64EDADE6DF81" />
     <meta name="yandex-verification" content="c2741887f8c30dd1" />
     <script type="application/ld+json">
-      {"description":"Emma Sax’s personal website and blog. Includes information about my social media profiles, résumé, and hobbies.","@type":"BlogPosting","url":"https://emmasax4.info/blog/posts/email-subscriptions-rss-feeds-and-feed-readers/","headline":"Email Subscriptions, RSS Feeds, and Feed Readers","dateModified":"2020-06-29T22:35:31+00:00","datePublished":"2019-12-30T06:00:00+00:00","author":{"@type":"Person","name":"Emma Sax"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://emmasax4.info/blog/posts/email-subscriptions-rss-feeds-and-feed-readers/"},"@context":"https://schema.org"}
+      {"datePublished":"2019-12-30T06:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emmasax4.info/blog/posts/email-subscriptions-rss-feeds-and-feed-readers/"},"@type":"BlogPosting","url":"https://emmasax4.info/blog/posts/email-subscriptions-rss-feeds-and-feed-readers/","author":{"@type":"Person","name":"Emma Sax"},"headline":"Email Subscriptions, RSS Feeds, and Feed Readers","dateModified":"2020-06-29T22:35:31+00:00","description":"Emma Sax’s personal website and blog. Includes information about my social media profiles, résumé, and hobbies.","@context":"https://schema.org"}
     </script>
     <!-- End Jekyll SEO tag -->
   </head>
@@ -117,46 +117,54 @@
             <p>So instead, I began looking into an RSS feed. This is the <i color="orange" data-feather="rss"></i> icon that you see on this page, and you can probably find a similar icon elsewhere on the internet, too. RSS feeds were originally made with the goal of providing users of sites with a basic overview of the posts on a page, and updates on each page. A user utilizes a <a href="https://whatis.techtarget.com/definition/RSS-reader">feed reader</a> to make a list of all of the feeds their interested in, and then that reader would send them updates about new posts, and link to the full post on each site. But… RSS feed readers never really gained popularity (most readers prefer to just bookmark a site and go back to it to look for updates).</p>
             <p>But, since a reader requested it, I’ll play along and implement an RSS feed on my site, too. I followed <a href="https://joelglovier.com/writing/rss-for-jekyll">this blog</a> to help me add the RSS feed to my site. It turned out to be super easy. There’s no gem requirement, and it doesn’t use any 3rd party service to compile properly. It updates the feed whenever <code>bundle exec jekyll build</code> is run, and auto-updates when I’m actively serving my site locally.</p>
             <p>I added these values to my <code>_config.yml</code>:</p>
-            <pre><code class="language-yml">feed:
-  production:
-    title: Emma Sax's Blog
-    url: https://emmasax4.info
-    items: 5
-  development:
-    title: LOCAL Emma's Blog
-    url: http://127.0.0.1:4000
-    items: 5
+            <div class="language-yml highlighter-rouge">
+              <div class="highlight">
+                <pre class="highlight"><code data-lang="yml"><span class="na">feed</span><span class="pi">:</span>
+  <span class="na">production</span><span class="pi">:</span>
+    <span class="na">title</span><span class="pi">:</span> <span class="s">Emma Sax's Blog</span>
+    <span class="na">url</span><span class="pi">:</span> <span class="s">https://emmasax4.info</span>
+    <span class="na">items</span><span class="pi">:</span> <span class="m">5</span>
+  <span class="na">development</span><span class="pi">:</span>
+    <span class="na">title</span><span class="pi">:</span> <span class="s">LOCAL Emma's Blog</span>
+    <span class="na">url</span><span class="pi">:</span> <span class="s">http://127.0.0.1:4000</span>
+    <span class="na">items</span><span class="pi">:</span> <span class="m">5</span>
 </code></pre>
+              </div>
+            </div>
             <p>and added this file to the root of my repository:</p>
-            <pre><code class="language-html">---
+            <div class="language-html highlighter-rouge">
+              <div class="highlight">
+                <pre class="highlight"><code data-lang="html">---
 layout: none
 ---
 
-&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-&lt;rss version=&quot;2.0&quot; xmlns:atom=&quot;http://www.w3.org/2005/Atom&quot;&gt;
+<span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="nt">&lt;rss</span> <span class="na">version=</span><span class="s">"2.0"</span> <span class="na">xmlns:atom=</span><span class="s">"http://www.w3.org/2005/Atom"</span><span class="nt">&gt;</span>
   {% assign feed = site.feed[jekyll.environment] %}
-  &lt;channel&gt;
-    &lt;title&gt;{{ feed.title | xml_escape }}&lt;/title&gt;
-    &lt;description&gt;{{ feed.description | xml_escape }}&lt;/description&gt;
-    &lt;link&gt;{{ feed.url }}&lt;/link&gt;
-    &lt;atom:link href=&quot;{{ feed.url }}/feed.xml&quot; rel=&quot;self&quot; type=&quot;application/rss+xml&quot; /&gt;
+  <span class="nt">&lt;channel&gt;</span>
+    <span class="nt">&lt;title&gt;</span>{{ feed.title | xml_escape }}<span class="nt">&lt;/title&gt;</span>
+    <span class="nt">&lt;description&gt;</span>{{ feed.description | xml_escape }}<span class="nt">&lt;/description&gt;</span>
+    <span class="nt">&lt;link&gt;</span>{{ feed.url }}<span class="nt">&lt;/link&gt;</span>
+    <span class="nt">&lt;atom:link</span> <span class="na">href=</span><span class="s">"{{ feed.url }}/feed.xml"</span> <span class="na">rel=</span><span class="s">"self"</span> <span class="na">type=</span><span class="s">"application/rss+xml"</span> <span class="nt">/&gt;</span>
     {% for post in site.posts limit: feed.items %}
-      &lt;item&gt;
+      <span class="nt">&lt;item&gt;</span>
         {% if post.subtitle %}
-          {% assign short_title = post.title | append: &quot; — &quot; | append: post.subtitle %}
+          {% assign short_title = post.title | append: " — " | append: post.subtitle %}
         {% else %}
           {% assign short_title = post.title %}
         {% endif %}
-        &lt;title&gt;{{ short_title | xml_escape }}&lt;/title&gt;
-        &lt;description&gt;{{ post.description | xml_escape }}&lt;/description&gt;
-        &lt;pubDate&gt;{{ post.date | date: &quot;%a, %d %b %Y %H:%M:%S %z&quot; }}&lt;/pubDate&gt;
-        &lt;link&gt;{{ feed.url }}{{ post.url }}&lt;/link&gt;
-        &lt;guid isPermaLink=&quot;true&quot;&gt;{{ feed.url }}{{ post.url }}&lt;/guid&gt;
-      &lt;/item&gt;
+        <span class="nt">&lt;title&gt;</span>{{ short_title | xml_escape }}<span class="nt">&lt;/title&gt;</span>
+        <span class="nt">&lt;description&gt;</span>{{ post.description | xml_escape }}<span class="nt">&lt;/description&gt;</span>
+        <span class="nt">&lt;pubDate&gt;</span>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}<span class="nt">&lt;/pubDate&gt;</span>
+        <span class="nt">&lt;link&gt;</span>{{ feed.url }}{{ post.url }}<span class="nt">&lt;/link&gt;</span>
+        <span class="nt">&lt;guid</span> <span class="na">isPermaLink=</span><span class="s">"true"</span><span class="nt">&gt;</span>{{ feed.url }}{{ post.url }}<span class="nt">&lt;/guid&gt;</span>
+      <span class="nt">&lt;/item&gt;</span>
     {% endfor %}
-  &lt;/channel&gt;
-&lt;/rss&gt;
+  <span class="nt">&lt;/channel&gt;</span>
+<span class="nt">&lt;/rss&gt;</span>
 </code></pre>
+              </div>
+            </div>
             <p>And it works! It works locally and in <code>production</code>. I can validate my feed <a href="https://validator.w3.org/feed/">here</a>, and I can add my own feed to my feed reader to test it out locally and on <code>gh-pages</code>.</p>
             <p>Now we’re only left with this question: which feed reader is best? I’m still figuring out the answer to that question. I used <a href="https://feeder.co/reader">feeder.co</a> for most of my testing while implementing this, but it costs about $10/month, and I was just using a free trial. Granted, it did seem handy and it worked well 🤷🏻‍♀️. So now I’ve installed the <a href="https://chrome.google.com/webstore/detail/rss-feed-reader/cdlhhcmmdobckneongkkmgigcimeibpf">RSS Feed Reader Chrome extension</a>, and I’ll play with this just long enough to see if posting a new blog (this one, actually) will update the feed reader. If it does seem to work, then I’ll keep digging for the best feed reader out there (that’s free… I’m cheap, remember?).</p>
             <p>I do know that there are a plethora of mobile apps and desktop/laptop computer apps available that can help users read their feeds. There’s probably even one that sends you an email when it detects a new content.</p>

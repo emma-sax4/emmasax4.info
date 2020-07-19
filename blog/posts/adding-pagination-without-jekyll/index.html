@@ -38,7 +38,7 @@
     <meta name="msvalidate.01" content="89B2B19FF966341B78EF64EDADE6DF81" />
     <meta name="yandex-verification" content="c2741887f8c30dd1" />
     <script type="application/ld+json">
-      {"description":"Emma Sax’s personal website and blog. Includes information about my social media profiles, résumé, and hobbies.","@type":"BlogPosting","url":"https://emmasax4.info/blog/posts/adding-pagination-without-jekyll/","headline":"Adding Pagination without Jekyll","dateModified":"2020-07-12T14:32:04+00:00","datePublished":"2019-09-12T05:00:00+00:00","author":{"@type":"Person","name":"Emma Sax"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://emmasax4.info/blog/posts/adding-pagination-without-jekyll/"},"@context":"https://schema.org"}
+      {"datePublished":"2019-09-12T05:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emmasax4.info/blog/posts/adding-pagination-without-jekyll/"},"@type":"BlogPosting","url":"https://emmasax4.info/blog/posts/adding-pagination-without-jekyll/","author":{"@type":"Person","name":"Emma Sax"},"headline":"Adding Pagination without Jekyll","dateModified":"2020-07-12T14:32:04+00:00","description":"Emma Sax’s personal website and blog. Includes information about my social media profiles, résumé, and hobbies.","@context":"https://schema.org"}
     </script>
     <!-- End Jekyll SEO tag -->
   </head>
@@ -124,13 +124,21 @@
               </a>
             </div>
             <p>So, I went on a mission to figure out how to make a prettier pagination bar. After a couple of hours, and a good night’s sleep, I realized that the answer lies in the <code>css/main.scss</code> file. Specifically, this line:</p>
-            <pre><code class="language-css">@import "core/index.scss";
+            <div class="language-css highlighter-rouge">
+              <div class="highlight">
+                <pre class="highlight"><code data-lang="css"><span class="k">@import</span> <span class="s1">"core/index.scss"</span><span class="p">;</span>
 </code></pre>
+              </div>
+            </div>
             <p>Prior to adding that line, the whole Jekyll build would break. When I tried to load the project locally, my server would give me this error back:</p>
-            <pre><code class="language-css">".pagination .active .page" failed to
-@extend ".selected". The selector ".selected"
-was not found.
+            <div class="language-css highlighter-rouge">
+              <div class="highlight">
+                <pre class="highlight"><code data-lang="css"><span class="s1">".pagination .active .page"</span> <span class="nt">failed</span> <span class="nt">to</span>
+<span class="k">@extend</span> <span class="s1">".selected"</span><span class="p">.</span> <span class="n">The</span> <span class="n">selector</span> <span class="s1">".selected"</span>
+<span class="n">was</span> <span class="n">not</span> <span class="n">found</span><span class="p">.</span>
 </code></pre>
+              </div>
+            </div>
             <p>Clearly, that means my CSS is broken. But I didn’t quite understand why 😕. The repository that I was copying pagination from included this line:</p>
             <div class="text-center">
               <a href="https://live.staticflickr.com/65535/48741503991_ac5c550274.jpg" title="Primer as a submodule" data-lightbox="Pagination">
@@ -149,8 +157,12 @@ was not found.
             </ul>
             <p>Also, note that there is no easy way to remove a submodule. I’m just glad that I attempted this inside of a pull request because then I could <code>git reset</code> when things weren’t going my way.</p>
             <p>After I finished succesfully adding the <code>primer</code> submodule 😌, all I had to do was re-add</p>
-            <pre><code class="language-css">@import "core/index.scss";
+            <div class="language-css highlighter-rouge">
+              <div class="highlight">
+                <pre class="highlight"><code data-lang="css"><span class="k">@import</span> <span class="s1">"core/index.scss"</span><span class="p">;</span>
 </code></pre>
+              </div>
+            </div>
             <p>back to my <code>main.scss</code>, and finally the pagination was beautiful:</p>
             <div class="text-center">
               <a href="https://live.staticflickr.com/65535/48741504061_7ebbd630fa.jpg" title="Pagination bar that's much better" data-lightbox="Pagination">
@@ -159,12 +171,20 @@ was not found.
             </div>
             <p>I was thrilled with the outcome of this pagination (even though it wasn’t Jekyll’s officially supported pagination), and I committed to <code>gh-pages</code>. However, perhaps a day later, I noticed something wrong with my CSS formatting. Perhaps you can notice it if you compare the before-pretty-pagination and the after-pretty-pagination pictures… I’ll give you a hint: it has to do with the indentation and spacing of the words. Somehow, making the pagination bar pretty messed up my CSS formatting!</p>
             <p>I was upset. I wanted to have both a pretty pagination bar and proper formatting of the text. So, I went back in my commit changes and commented out everything from when the site last worked as expected. I slowly uncommented line after line until I found the problem line… of course it happened to be with the same line that makes the pagination work:</p>
-            <pre><code class="language-css">@import "core/index.scss";
+            <div class="language-css highlighter-rouge">
+              <div class="highlight">
+                <pre class="highlight"><code data-lang="css"><span class="k">@import</span> <span class="s1">"core/index.scss"</span><span class="p">;</span>
 </code></pre>
+              </div>
+            </div>
             <p>Are we even surprised 😤🙄?</p>
             <p>So, I went on a mini-adventure through the <code>primer</code> code to see what that line was doing. Apparently, it ends up installing a bunch of CSS files through other nested CSS files. Let’s be real, even if I have the time to go through each one looking for what may be conflicting with my <code>main.scss</code> file, I don’t want to do that. So, I did an entire repository-wide file search for: <code>primer/pagination/index</code>, found the single pagination CSS page I needed (since that’s all I’m using <code>primer</code> for), and switched to import just that:</p>
-            <pre><code class="language-css">@import "pagination/index.scss";
+            <div class="language-css highlighter-rouge">
+              <div class="highlight">
+                <pre class="highlight"><code data-lang="css"><span class="k">@import</span> <span class="s1">"pagination/index.scss"</span><span class="p">;</span>
 </code></pre>
+              </div>
+            </div>
             <p>And it turns out, the answer was as easy as that! Now, I have proper CSS layouts, a lovely pagination bar that works and doesn’t take long to load, and the file structure of my project was able to stay the same. The pagination bar isn’t perfect, but it’s better than anything I had before, and it’s good enough for me—for right now anyway.</p>
             <p>Since the pagination part of this project is <em>finally</em> done, I can officially say that I’ve now gotten everything out of Jekyll that I had hoped to, and then some. Not only did I implement a website with a “blog” that I’m proud of, but I learned a new framework and a new coding language. And most importantly, I reminded myself that one of the most important parts of being a coder is being willing to dive in, try something new, and not be afraid to fail.</p>
             <hr>

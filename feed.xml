@@ -3,13 +3,25 @@
     <generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator>
     <link href="https://emmasax4.info/feed.xml" rel="self" type="application/atom+xml" />
     <link href="https://emmasax4.info/" rel="alternate" type="text/html" />
-    <updated>2020-07-12T14:32:04+00:00</updated>
+    <updated>2020-07-19T15:00:05+00:00</updated>
     <id>https://emmasax4.info/feed.xml</id>
     <title type="html">Emma Sax</title>
     <subtitle>Emma Sax's personal website and blog. Includes information about my social media profiles, résumé, and hobbies.</subtitle>
     <author>
       <name>Emma Sax</name>
     </author>
+    <entry>
+      <title type="html">Switching from kramdown to CommonMark</title>
+      <link href="https://emmasax4.info/blog/posts/switching-from-kramdown-to-commonmark/" rel="alternate" type="text/html" title="Switching from kramdown to CommonMark" />
+      <published>2020-07-19T15:00:33+00:00</published>
+      <updated>2020-07-19T15:00:05+00:00</updated>
+      <id>https://emmasax4.info/blog/posts/switching-from-kramdown-to-commonmark</id>
+      <author>
+        <name>Emma Sax</name>
+      </author>
+      <category term="tech" />
+      <category term="jekyll" />
+    </entry>
     <entry>
       <title type="html">Why and How I Renamed my master Branch</title>
       <link href="https://emmasax4.info/blog/posts/why-and-how-i-renamed-my-master-branch/" rel="alternate" type="text/html" title="Why and How I Renamed my master Branch" />
@@ -25,7 +37,7 @@
       <title type="html">Why I Switched from CircleCI to GitHub Actions</title>
       <link href="https://emmasax4.info/blog/posts/why-i-switched-from-circleci-to-github-actions/" rel="alternate" type="text/html" title="Why I Switched from CircleCI to GitHub Actions" />
       <published>2020-05-28T05:00:00+00:00</published>
-      <updated>2020-06-29T22:35:31+00:00</updated>
+      <updated>2020-07-19T15:00:05+00:00</updated>
       <id>https://emmasax4.info/blog/posts/why-i-switched-from-circleci-to-github-actions</id>
       <author>
         <name>Emma Sax</name>
@@ -36,7 +48,7 @@
       <title type="html">Why I Switched from Travis CI to CircleCI</title>
       <link href="https://emmasax4.info/blog/posts/why-i-switched-from-travis-ci-to-circleci/" rel="alternate" type="text/html" title="Why I Switched from Travis CI to CircleCI" />
       <published>2020-03-22T17:51:00+00:00</published>
-      <updated>2020-06-29T22:35:31+00:00</updated>
+      <updated>2020-07-19T15:00:05+00:00</updated>
       <id>https://emmasax4.info/blog/posts/why-i-switched-from-travis-ci-to-circleci</id>
       <author>
         <name>Emma Sax</name>
@@ -49,17 +61,6 @@
       <published>2020-03-05T05:20:00+00:00</published>
       <updated>2020-06-29T22:35:31+00:00</updated>
       <id>https://emmasax4.info/blog/posts/why-tomorrow-isnt-useful</id>
-      <author>
-        <name>Emma Sax</name>
-      </author>
-      <category term="self-improvement" />
-    </entry>
-    <entry>
-      <title type="html">The Benefits of Gratitude</title>
-      <link href="https://emmasax4.info/blog/posts/the-benefits-of-gratitude/" rel="alternate" type="text/html" title="The Benefits of Gratitude" />
-      <published>2020-02-23T05:30:00+00:00</published>
-      <updated>2020-05-29T06:22:04+00:00</updated>
-      <id>https://emmasax4.info/blog/posts/the-benefits-of-gratitude</id>
       <author>
         <name>Emma Sax</name>
       </author>

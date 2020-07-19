@@ -38,7 +38,7 @@
     <meta name="msvalidate.01" content="89B2B19FF966341B78EF64EDADE6DF81" />
     <meta name="yandex-verification" content="c2741887f8c30dd1" />
     <script type="application/ld+json">
-      {"description":"Emma Sax’s personal website and blog. Includes information about my social media profiles, résumé, and hobbies.","@type":"BlogPosting","url":"https://emmasax4.info/blog/posts/dns-domains-and-personal-websites/","headline":"DNS, Domains, and Personal Websites","dateModified":"2020-06-29T22:35:31+00:00","datePublished":"2019-12-20T06:00:00+00:00","author":{"@type":"Person","name":"Emma Sax"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://emmasax4.info/blog/posts/dns-domains-and-personal-websites/"},"@context":"https://schema.org"}
+      {"datePublished":"2019-12-20T06:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emmasax4.info/blog/posts/dns-domains-and-personal-websites/"},"@type":"BlogPosting","url":"https://emmasax4.info/blog/posts/dns-domains-and-personal-websites/","author":{"@type":"Person","name":"Emma Sax"},"headline":"DNS, Domains, and Personal Websites","dateModified":"2020-06-29T22:35:31+00:00","description":"Emma Sax’s personal website and blog. Includes information about my social media profiles, résumé, and hobbies.","@context":"https://schema.org"}
     </script>
     <!-- End Jekyll SEO tag -->
   </head>
@@ -166,47 +166,71 @@
             <h2>Domains + Your Website</h2>
             <p>Now, let’s walk through some examples of these DNS records may look like if you set up your website on a few different host providers. Note that TTL stands for Time to Live, and it specifies how long a resolver is supposed to cache the DNS query before looking for any new DNS queries. I purchased and manage my DNS on <a href="https://namecheap.com/">Namecheap</a> (that’s not a secret, so I don’t feel bad disclosing that at all).</p>
             <p>DNS records when setting up your website with your main domain on GitHub Pages:</p>
-            <pre><code>    Type               Host                 Value                     TTL
+            <div class="highlighter-rouge">
+              <div class="highlight">
+                <pre class="highlight"><code>    Type               Host                 Value                     TTL
 -------------------------------------------------------------------------------
 ALIAS Record            @            github-user.github.io.        Automatic
 CNAME Record           www               mydomain.com.             Automatic
 </code></pre>
+              </div>
+            </div>
             <p>DNS records when setting up your website your your main domain on Google Sites:</p>
-            <pre><code>    Type               Host                 Value                     TTL
+            <div class="highlighter-rouge">
+              <div class="highlight">
+                <pre class="highlight"><code>    Type               Host                 Value                     TTL
 -------------------------------------------------------------------------------
 ALIAS Record             @            ghs.googlehosted.com.        Automatic
 CNAME Record            www               mydomain.com.            Automatic
 TXT Record               @          google-site-verification=...   Automatic
 </code></pre>
+              </div>
+            </div>
             <p>* The Google Site Verification is how Google verifies that you are the owner of the domain you wish to use.</p>
             <p>DNS records when setting up your website with your main domain on Wordpress:</p>
-            <pre><code>    Type               Host                 Value                     TTL
+            <div class="highlighter-rouge">
+              <div class="highlight">
+                <pre class="highlight"><code>    Type               Host                 Value                     TTL
 -------------------------------------------------------------------------------
 ALIAS Record            @             NS1.WORDPRESS.COM.           Automatic
 ALIAS Record            @             NS2.WORDPRESS.COM.           Automatic
 ALIAS Record            @             NS3.WORDPRESS.COM.           Automatic
 CNAME Record           www               mydomain.com.             Automatic
 </code></pre>
+              </div>
+            </div>
             <p>* The <code>NS1.WORDPRESS.COM</code> are WordPress’s name server resolvers. These servers are in charge of finding the IP addresses belonging to <em>every</em> WordPress site out there.</p>
             <p>DNS records when setting up your website with a subdomain on GitHub Pages:</p>
-            <pre><code>    Type               Host                 Value                     TTL
+            <div class="highlighter-rouge">
+              <div class="highlight">
+                <pre class="highlight"><code>    Type               Host                 Value                     TTL
 -------------------------------------------------------------------------------
 CNAME Record         subdomain       github-user.github.io.        Automatic
 CNAME Record       www.subdomain     subdomain.mydomain.com.       Automatic
 </code></pre>
+              </div>
+            </div>
             <p>DNS records when setting up your website with a subdomain on Google Sites:</p>
-            <pre><code>    Type               Host                 Value                     TTL
+            <div class="highlighter-rouge">
+              <div class="highlight">
+                <pre class="highlight"><code>    Type               Host                 Value                     TTL
 -------------------------------------------------------------------------------
 CNAME Record         subdomain        ghs.googlehosted.com.        Automatic
 CNAME Record       www.subdomain     subdomain.mydomain.com.       Automatic
 TXT Record           subdomain     google-site-verification=...    Automatic
 </code></pre>
+              </div>
+            </div>
             <p>DNS records when setting up your website with a subdomain on Wordpress:</p>
-            <pre><code>    Type               Host                 Value                     TTL
+            <div class="highlighter-rouge">
+              <div class="highlight">
+                <pre class="highlight"><code>    Type               Host                 Value                     TTL
 -------------------------------------------------------------------------------
 CNAME Record         subdomain     wordpress-site.wordpress.com.   Automatic
 CNAME Record       www.subdomain     subdomain.mydomain.com.       Automatic
 </code></pre>
+              </div>
+            </div>
             <p>I haven’t worked with adding domains to any other website host providers, so I can’t speak to any other providers’ information. But, when a person goes to add a domain to their website, there’s usually plenty of (decently 🤞🏼) helpful documentation to get started.</p>
             <p>So there you go! Hopefully this has helped you either learn more about DNS and domains, or will help you in choosing your personal domain and setting it up on your new website! Best of luck. I can attest that having your own website can be fun! It gives you a fun hobby and project, and it’s definitely something that you can be proud of.</p>
             <h2>References</h2>

@@ -38,7 +38,7 @@
     <meta name="msvalidate.01" content="89B2B19FF966341B78EF64EDADE6DF81" />
     <meta name="yandex-verification" content="c2741887f8c30dd1" />
     <script type="application/ld+json">
-      {"description":"Emma Sax’s personal website and blog. Includes information about my social media profiles, résumé, and hobbies.","@type":"BlogPosting","url":"https://emmasax4.info/blog/posts/time-zones-utc-and-javascript-oh-my/","headline":"Time Zones, UTC, and Javascript… Oh My!","dateModified":"2020-07-12T14:32:04+00:00","datePublished":"2020-02-07T06:00:00+00:00","author":{"@type":"Person","name":"Emma Sax"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://emmasax4.info/blog/posts/time-zones-utc-and-javascript-oh-my/"},"@context":"https://schema.org"}
+      {"datePublished":"2020-02-07T06:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emmasax4.info/blog/posts/time-zones-utc-and-javascript-oh-my/"},"@type":"BlogPosting","url":"https://emmasax4.info/blog/posts/time-zones-utc-and-javascript-oh-my/","author":{"@type":"Person","name":"Emma Sax"},"headline":"Time Zones, UTC, and Javascript… Oh My!","dateModified":"2020-07-12T14:32:04+00:00","description":"Emma Sax’s personal website and blog. Includes information about my social media profiles, résumé, and hobbies.","@context":"https://schema.org"}
     </script>
     <!-- End Jekyll SEO tag -->
   </head>
@@ -96,7 +96,7 @@
           </div>
           <div class="text-center" style="margin-bottom: 1rem;">
             <span class="post-meta">
-              Read time: 9 minutes
+              Read time: 12 minutes
             </span>
           </div>
         </div>
@@ -113,21 +113,35 @@
             <p>On my latest blog post, I wanted to try something new. When publishing, I wanted to publish on a future date (specifically at midnight the next day). I set up the date of the post to include the next day, and then planned to go onto Travis at midnight to build the newest version of the site… with the new blog post. And then I continued working on my website for the night.</p>
             <p>But what ended up happening was Travis CI built on my <code>release</code> branch at 6:15pm… and suddenly my new blog post was live 😱! What happened? Well, Travis CI by default runs in UTC. So, since 6:00pm in CST is midnight in UTC, Travis CI determined it was time to publish the blog post. I quickly reverted that commit on my <code>gh-pages</code> branch to hide the new post once again, and then worked to find a solution to make Travis CI behave for the remainder of the night.</p>
             <p>What I ended up finding was this. By adding these lines to the <code>.travis.yml</code> file, we can override Travis CI’s default time zone and have it bundle in CST.</p>
-            <pre><code class="language-yml">before_install:
-  - export TZ=America/Chicago
+            <div class="language-yml highlighter-rouge">
+              <div class="highlight">
+                <pre class="highlight"><code data-lang="yml"><span class="na">before_install</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">export TZ=America/Chicago</span>
 </code></pre>
+              </div>
+            </div>
             <p>I thought I would be satisfied with this. I develop my site in CST (or CDT in the summer), and now Travis will also bundle in that time zone. But, after more thought, I realized that this is really just a bandaid fix 🤕. What if I move across the country and now live in a different time zone permanently? What if I’m traveling internationally (say in France), and I’m blogging while I’m there. I’m no longer going to be thinking in terms of <code>America/Chicago</code> time zone… say I publish a blog post at 12pm noon in France. When I get home to Minneapolis, should the blog post still show up as having been published at 12pm noon? Or should it properly show a 6–7 hour time difference?</p>
             <p>So after a lot of thinking, I decided that the best (and most sustainable) way to design a website is so that all dates/times are UTC in the database (Jekyll doesn’t have a DB, so just in the HTML, <code>feed.xml</code>, and <code>sitemap.xml</code>). Then, we can convert all UTC date/times to become in a user’s local time when they navigate to my site ⏱.</p>
             <h2>The Goal</h2>
             <p>Time zones are complicated. I’ve dabbled with them a little bit, but they tend to make my head spin 💫. So, I made hefty goal for myself 🥴. When I publish a blog post, I can specify the publish date/time in <em>my</em> local time zone. Jekyll will build the blog post as having been published at the corresponding UTC time. And when a reader looks at the blog post on the website, it’ll give the date/time in their local time zone (which may be <em>my</em> time zone, but it could also be different).</p>
             <p>Let’s look at an example. I publish a blog post at 10:15pm in CST on Jan. 17, 2020:</p>
-            <pre><code>2020-01-17 22:15:00 -0600
+            <div class="highlighter-rouge">
+              <div class="highlight">
+                <pre class="highlight"><code>2020-01-17 22:15:00 -0600
 </code></pre>
+              </div>
+            </div>
             <p>Jekyll will compile and store the blog post as having been published in UTC (notice the date change):</p>
-            <pre><code>2020-01-18 04:15:00 +0000
+            <div class="highlighter-rouge">
+              <div class="highlight">
+                <pre class="highlight"><code>2020-01-18 04:15:00 +0000
 </code></pre>
+              </div>
+            </div>
             <p>But when a reader looks at the blog post online, it will show in their local time zone (I normally hide the specific times when showing publishing dates):</p>
-            <pre><code>### CST - Minnesota
+            <div class="highlighter-rouge">
+              <div class="highlight">
+                <pre class="highlight"><code>### CST - Minnesota
 January 17, 2020 22:15
 
 ### PST - California
@@ -136,17 +150,27 @@ January 17, 2020 20:15
 ### CEST - France
 January 18, 2020 05:15
 </code></pre>
+              </div>
+            </div>
             <p>Most of the time, I publish my blog posts at midnight on a specific date. This means that to everybody in <code>America/Chicago</code> and east of me, the date should be that specific date. But technically, to everybody west, the blog post went live on the day <em>before</em>.</p>
             <p>So, with this as my final goal, I went ahead to try to implement this in five steps:</p>
             <h3>1️. The entire Jekyll site must build in UTC</h3>
             <p>This was easy. I set the following in my <code>_config.yml</code>:</p>
-            <pre><code class="language-yml">timezone: UTC
+            <div class="language-yml highlighter-rouge">
+              <div class="highlight">
+                <pre class="highlight"><code data-lang="yml"><span class="na">timezone</span><span class="pi">:</span> <span class="s">UTC</span>
 </code></pre>
+              </div>
+            </div>
             <p>I also took this opportunity to remove the <code>export TZ=America/Chicago</code> from my <code>.travis.yml</code>, since now the Jekyll site and Travis CI will naturally be on the same wavelength.</p>
             <h3>2️. Add the specific date/time of each blog posts’ publish time</h3>
             <p>This was also pretty easy. You can just add the date to the front matter of each blog post:</p>
-            <pre><code class="language-yml">date: 2020-01-17 22:15:00 -0600
+            <div class="language-yml highlighter-rouge">
+              <div class="highlight">
+                <pre class="highlight"><code data-lang="yml"><span class="na">date</span><span class="pi">:</span> <span class="s">2020-01-17 22:15:00 -0600</span>
 </code></pre>
+              </div>
+            </div>
             <p>You can specify the time the post should be published as well, although, as I stated above, I normally just use <code>00:00:00</code>, or midnight. For what I’m working with, the last part is important. That’s the time zone offset. In Minnesota, that’ll be <code>-0600</code> in the winter time (CST), or <code>-0500</code> in the summer (CDT)—I always used to get those two mixed up. But, I’ve decided that I want this to be easy for me to use going forward… so I should always write the date/time as I’m looking at my clock (in 24 hour time of course) with my current time zone offset 📝.</p>
             <h3>3️. Jekyll will store the blog post as being published in UTC</h3>
             <p>When I put both of these pieces together, the result was immediate. As soon as I ran <code>jekyll serve</code> on my website, I noticed that the <code>feed.xml</code> and <code>sitemap.xml</code> label the published date/time as in UTC! Yes! Nice and quick.</p>
@@ -154,42 +178,50 @@ January 18, 2020 05:15
             <p>This was by far the most challenging part. I played with a Jekyll plugin first, to see if there was an easy way to convert the UTC date/time to be in a different time zone. This would’ve worked, if I wanted to hard-code the new time zone (which defeats the purpose of it being flexible to the readers’ location). So, after much googling, I realized the only good way to understand the readers’ location and time zone offset is to use Javascript. Yay…. 😰</p>
             <p>I’m not really a Javascript person. But, I jumped in anyway, and wanted to find a solution. Using some loop syntax from another slice of Javascript I use (read more about that <a href="/blog/posts/opening-links-in-new-tabs-via-javascript/">here</a>), I started typing away. I want the Javascript to go through the HTML, find all of the dates, and then convert them to the readers’ local time and print that back out again.</p>
             <p>The entire script locates all of the HTML elements with the class <code>date-meta</code> (assuming that it is indeed a UTC date), and then Javascript makes it easy to change time zones:</p>
-            <pre><code class="language-javascript">var monthNames = ['January', 'February', 'March', 'April', 'May', 'June',
-                  'July','August', 'September', 'October','November', 'December'
-];
-var dateArray = '2020-01-18 04:15:00 +0000'.split(/[^0-9]/);
-//  localDate = Fri Jan 17 2020 22:15:00 GMT-0600 (Central Standard Time)
-var localDate = new Date(
-  Date.UTC(dateArray[0], dateArray[1]-1, dateArray[2], dateArray[3], dateArray[4], dateArray[5])
-);
-var day = localDate.getDate(); // 17
-var year = localDate.getFullYear(); // 2020
-var monthIndex = localDate.getMonth(); // 0
-return monthNames[monthIndex] + ' ' + day + ', ' + year; // January 17, 2020
+            <div class="language-javascript highlighter-rouge">
+              <div class="highlight">
+                <pre class="highlight"><code data-lang="javascript"><span class="kd">var</span> <span class="nx">monthNames</span> <span class="o">=</span> <span class="p">[</span><span class="dl">'</span><span class="s1">January</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">February</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">March</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">April</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">May</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">June</span><span class="dl">'</span><span class="p">,</span>
+                  <span class="dl">'</span><span class="s1">July</span><span class="dl">'</span><span class="p">,</span><span class="dl">'</span><span class="s1">August</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">September</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">October</span><span class="dl">'</span><span class="p">,</span><span class="dl">'</span><span class="s1">November</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">December</span><span class="dl">'</span>
+<span class="p">];</span>
+<span class="kd">var</span> <span class="nx">dateArray</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">2020-01-18 04:15:00 +0000</span><span class="dl">'</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="sr">/</span><span class="se">[^</span><span class="sr">0-9</span><span class="se">]</span><span class="sr">/</span><span class="p">);</span>
+<span class="c1">//  localDate = Fri Jan 17 2020 22:15:00 GMT-0600 (Central Standard Time)</span>
+<span class="kd">var</span> <span class="nx">localDate</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">(</span>
+  <span class="nb">Date</span><span class="p">.</span><span class="nx">UTC</span><span class="p">(</span><span class="nx">dateArray</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="nx">dateArray</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="nx">dateArray</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="nx">dateArray</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="nx">dateArray</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="nx">dateArray</span><span class="p">[</span><span class="mi">5</span><span class="p">])</span>
+<span class="p">);</span>
+<span class="kd">var</span> <span class="nx">day</span> <span class="o">=</span> <span class="nx">localDate</span><span class="p">.</span><span class="nx">getDate</span><span class="p">();</span> <span class="c1">// 17</span>
+<span class="kd">var</span> <span class="nx">year</span> <span class="o">=</span> <span class="nx">localDate</span><span class="p">.</span><span class="nx">getFullYear</span><span class="p">();</span> <span class="c1">// 2020</span>
+<span class="kd">var</span> <span class="nx">monthIndex</span> <span class="o">=</span> <span class="nx">localDate</span><span class="p">.</span><span class="nx">getMonth</span><span class="p">();</span> <span class="c1">// 0</span>
+<span class="k">return</span> <span class="nx">monthNames</span><span class="p">[</span><span class="nx">monthIndex</span><span class="p">]</span> <span class="o">+</span> <span class="dl">'</span><span class="s1"> </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">day</span> <span class="o">+</span> <span class="dl">'</span><span class="s1">, </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">year</span><span class="p">;</span> <span class="c1">// January 17, 2020</span>
 </code></pre>
+              </div>
+            </div>
             <p>All together, this now looks like this:</p>
-            <pre><code class="language-html">&lt;script type=&quot;text/javascript&quot;&gt;
-  function showDatesInLocalTime() {
-    var dates = document.getElementsByClassName('date-meta');
-    var monthNames = ['January', 'February', 'March', 'April', 'May', 'June',
-                      'July','August', 'September', 'October','November', 'December'
-    ];
+            <div class="language-html highlighter-rouge">
+              <div class="highlight">
+                <pre class="highlight"><code data-lang="html"><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
+  <span class="kd">function</span> <span class="nx">showDatesInLocalTime</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">dates</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByClassName</span><span class="p">(</span><span class="dl">'</span><span class="s1">date-meta</span><span class="dl">'</span><span class="p">);</span>
+    <span class="kd">var</span> <span class="nx">monthNames</span> <span class="o">=</span> <span class="p">[</span><span class="dl">'</span><span class="s1">January</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">February</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">March</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">April</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">May</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">June</span><span class="dl">'</span><span class="p">,</span>
+                      <span class="dl">'</span><span class="s1">July</span><span class="dl">'</span><span class="p">,</span><span class="dl">'</span><span class="s1">August</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">September</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">October</span><span class="dl">'</span><span class="p">,</span><span class="dl">'</span><span class="s1">November</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">December</span><span class="dl">'</span>
+    <span class="p">];</span>
 
-    for(counter = 0; counter &lt; dates.length; counter++) {
-      var htmlDate = dates[counter];
-      var dateArray = htmlDate.innerHTML.trim().split(/[^0-9]/);
-      var localDate = new Date(
-        Date.UTC(dateArray[0], dateArray[1]-1, dateArray[2], dateArray[3], dateArray[4], dateArray[5])
-      );
-      var day = localDate.getDate();
-      var year = localDate.getFullYear();
-      var monthIndex = localDate.getMonth();
-      htmlDate.innerHTML = monthNames[monthIndex] + ' ' + day + ', ' + year;
-    };
-  };
-  showDatesInLocalTime();
-&lt;/script&gt;
+    <span class="k">for</span><span class="p">(</span><span class="nx">counter</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">counter</span> <span class="o">&lt;</span> <span class="nx">dates</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">counter</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+      <span class="kd">var</span> <span class="nx">htmlDate</span> <span class="o">=</span> <span class="nx">dates</span><span class="p">[</span><span class="nx">counter</span><span class="p">];</span>
+      <span class="kd">var</span> <span class="nx">dateArray</span> <span class="o">=</span> <span class="nx">htmlDate</span><span class="p">.</span><span class="nx">innerHTML</span><span class="p">.</span><span class="nx">trim</span><span class="p">().</span><span class="nx">split</span><span class="p">(</span><span class="sr">/</span><span class="se">[^</span><span class="sr">0-9</span><span class="se">]</span><span class="sr">/</span><span class="p">);</span>
+      <span class="kd">var</span> <span class="nx">localDate</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">(</span>
+        <span class="nb">Date</span><span class="p">.</span><span class="nx">UTC</span><span class="p">(</span><span class="nx">dateArray</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="nx">dateArray</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="nx">dateArray</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="nx">dateArray</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="nx">dateArray</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="nx">dateArray</span><span class="p">[</span><span class="mi">5</span><span class="p">])</span>
+      <span class="p">);</span>
+      <span class="kd">var</span> <span class="nx">day</span> <span class="o">=</span> <span class="nx">localDate</span><span class="p">.</span><span class="nx">getDate</span><span class="p">();</span>
+      <span class="kd">var</span> <span class="nx">year</span> <span class="o">=</span> <span class="nx">localDate</span><span class="p">.</span><span class="nx">getFullYear</span><span class="p">();</span>
+      <span class="kd">var</span> <span class="nx">monthIndex</span> <span class="o">=</span> <span class="nx">localDate</span><span class="p">.</span><span class="nx">getMonth</span><span class="p">();</span>
+      <span class="nx">htmlDate</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">monthNames</span><span class="p">[</span><span class="nx">monthIndex</span><span class="p">]</span> <span class="o">+</span> <span class="dl">'</span><span class="s1"> </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">day</span> <span class="o">+</span> <span class="dl">'</span><span class="s1">, </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">year</span><span class="p">;</span>
+    <span class="p">};</span>
+  <span class="p">};</span>
+  <span class="nx">showDatesInLocalTime</span><span class="p">();</span>
+<span class="nt">&lt;/script&gt;</span>
 </code></pre>
+              </div>
+            </div>
             <p>I’m hiding a lot of the effort this took me… don’t get me wrong, it took me what felt like <em>hours</em> to develop this method, and I’m still finding bugs in it 🦟.</p>
             <h3>5️. Don’t show the published date in the URL of the blog posts</h3>
             <p>In our example, I published a post on the 17th of January at night in CST. But we see now, that if I travel to France and look back at past blog posts, it’ll look as if it was published on the 18th of January. BUT, the URL of the blog post will include the published date. See an example below:</p>
@@ -201,10 +233,14 @@ return monthNames[monthIndex] + ' ' + day + ', ' + year; // January 17, 2020
             <p>If the date the site is showing the reader is moving around depending on the readers’ location, then this is confusing—the URL date won’t change!</p>
             <p>If I’m honest, having the date in the URL was never my favorite thing… it always bugged me. I just never cared quite enough to change it, and to deal with the redirects I’d have to set up. But given this inconsistency, I decided that I finally cared enough to make the shift ↪.</p>
             <p>I added the <code>jekyll-redirect-from</code> plugin to my <code>_config.yml</code>. And from there, redirecting is actually quite easy. In the front matter of each blog post, I add the new URL of the blog post, and then redirect to the new URL from the old URL:</p>
-            <pre><code class="language-yml">permalink: /blog/posts/opening-links-in-new-tabs-via-javascript/
-redirect_from:
-  - /blog/posts/2020-01-14-opening-links-in-new-tabs-via-javascript/
+            <div class="language-yml highlighter-rouge">
+              <div class="highlight">
+                <pre class="highlight"><code data-lang="yml"><span class="na">permalink</span><span class="pi">:</span> <span class="s">/blog/posts/opening-links-in-new-tabs-via-javascript/</span>
+<span class="na">redirect_from</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">/blog/posts/2020-01-14-opening-links-in-new-tabs-via-javascript/</span>
 </code></pre>
+              </div>
+            </div>
             <p>Now, when I navigate to my blog posts at the old URL, my browser automatically redirects to the new URL. Hopefully that prevents my SEO ranking from going down 😬.</p>
             <h2>Conclusion</h2>
             <p>At the end of the day, this goal maybe wasn’t too hefty. It maybe took about six hours of total effort. I haven’t traveled yet to see if it works as expected, but I have a trip planned in about a month, so we’ll see then 🤷🏻‍♀️.</p>

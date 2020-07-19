@@ -38,7 +38,7 @@
     <meta name="msvalidate.01" content="89B2B19FF966341B78EF64EDADE6DF81" />
     <meta name="yandex-verification" content="c2741887f8c30dd1" />
     <script type="application/ld+json">
-      {"description":"Emma Sax’s personal website and blog. Includes information about my social media profiles, résumé, and hobbies.","@type":"BlogPosting","url":"https://emmasax4.info/blog/posts/using-jekyll-paginate-v2/","headline":"Using jekyll-paginate-v2","dateModified":"2020-07-12T14:32:04+00:00","datePublished":"2019-12-18T06:00:00+00:00","author":{"@type":"Person","name":"Emma Sax"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://emmasax4.info/blog/posts/using-jekyll-paginate-v2/"},"@context":"https://schema.org"}
+      {"datePublished":"2019-12-18T06:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emmasax4.info/blog/posts/using-jekyll-paginate-v2/"},"@type":"BlogPosting","url":"https://emmasax4.info/blog/posts/using-jekyll-paginate-v2/","author":{"@type":"Person","name":"Emma Sax"},"headline":"Using jekyll-paginate-v2","dateModified":"2020-07-12T14:32:04+00:00","description":"Emma Sax’s personal website and blog. Includes information about my social media profiles, résumé, and hobbies.","@context":"https://schema.org"}
     </script>
     <!-- End Jekyll SEO tag -->
   </head>
@@ -163,16 +163,20 @@
               <p>Travis CI can… [manage] deployments and notifications.</p>
             </blockquote>
             <p>So, we could (in theory) make a change to the source code in GitHub, and then have Travis CI build my website and “deploy” it to GitHub Pages. And, it turns out my site was already using Travis CI to test the Jekyll build process on every commit to the <code>gh-pages</code> branch. So, I only had to add a few lines to have Travis CI <em>also</em> deploy my changes:</p>
-            <pre><code class="language-yml">script:
-  - JEKYLL_ENV=production bundle exec jekyll build --destination ./site
+            <div class="language-yml highlighter-rouge">
+              <div class="highlight">
+                <pre class="highlight"><code data-lang="yml"><span class="na">script</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">JEKYLL_ENV=production bundle exec jekyll build --destination ./site</span>
 
-deploy:
-  provider: pages
-  local-dir: ./site
-  target-branch: gh-pages
-  email: deploy@travis-ci.org
-  name: Deployment Bot
+<span class="na">deploy</span><span class="pi">:</span>
+  <span class="na">provider</span><span class="pi">:</span> <span class="s">pages</span>
+  <span class="na">local-dir</span><span class="pi">:</span> <span class="s">./site</span>
+  <span class="na">target-branch</span><span class="pi">:</span> <span class="s">gh-pages</span>
+  <span class="na">email</span><span class="pi">:</span> <span class="s">deploy@travis-ci.org</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">Deployment Bot</span>
 </code></pre>
+              </div>
+            </div>
             <p>The <code>script</code> section asks Travis CI to build the site to the <code>site</code> destination directory. The <code>deploy</code> section tells Travis CI to run a deploy to the GitHub Pages provider with the <code>./site</code> directory, on the target branch <code>gh-pages</code>, and which GitHub user to use (in this case, <code>Deployment Bot</code> with the email <code>deploy@travis-ci.org</code>). There are a few other little pieces to get it working properly, but you can check out my completed <a href="https://github.com/emmasax4/emmasax4.info/blob/d4c71986f709fd9d341410cf4974ad34424905a6/.travis.yml"><code>.travis.yml</code> file</a> if you want to see more. I did need to make a new branch in GitHub—the <code>release</code> branch. The idea here is that the <code>release</code> branch is used for me to store my source code for this site, and the <code>gh-pages</code> branch is for GitHub Pages to deploy. Only the fully compiled and bundled site lives on the <code>gh-pages</code> branch.</p>
             <p>It’s a little complicated, but, one deploy from Travis CI later, and the site was up and running again. <em>AND</em> I had the pagination option of my choosing that had all of the functionality I could ever want.</p>
             <div class="text-center">

@@ -38,7 +38,7 @@
     <meta name="msvalidate.01" content="89B2B19FF966341B78EF64EDADE6DF81" />
     <meta name="yandex-verification" content="c2741887f8c30dd1" />
     <script type="application/ld+json">
-      {"description":"Emma Sax’s personal website and blog. Includes information about my social media profiles, résumé, and hobbies.","@type":"BlogPosting","url":"https://emmasax4.info/blog/posts/bootstrap-css-and-icons-in-this-site/","headline":"Bootstrap, CSS, and Icons in this Site","dateModified":"2020-06-29T22:35:31+00:00","datePublished":"2019-12-29T06:00:00+00:00","author":{"@type":"Person","name":"Emma Sax"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://emmasax4.info/blog/posts/bootstrap-css-and-icons-in-this-site/"},"@context":"https://schema.org"}
+      {"datePublished":"2019-12-29T06:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emmasax4.info/blog/posts/bootstrap-css-and-icons-in-this-site/"},"@type":"BlogPosting","url":"https://emmasax4.info/blog/posts/bootstrap-css-and-icons-in-this-site/","author":{"@type":"Person","name":"Emma Sax"},"headline":"Bootstrap, CSS, and Icons in this Site","dateModified":"2020-06-29T22:35:31+00:00","description":"Emma Sax’s personal website and blog. Includes information about my social media profiles, résumé, and hobbies.","@context":"https://schema.org"}
     </script>
     <!-- End Jekyll SEO tag -->
   </head>
@@ -150,18 +150,30 @@
               <li>Feed/RSS icon</li>
             </ul>
             <p>Icons are called like this:</p>
-            <pre><code class="language-html">&lt;i data-feather=&quot;twitter&quot;&gt;&lt;/i&gt;
+            <div class="language-html highlighter-rouge">
+              <div class="highlight">
+                <pre class="highlight"><code data-lang="html"><span class="nt">&lt;i</span> <span class="na">data-feather=</span><span class="s">"twitter"</span><span class="nt">&gt;&lt;/i&gt;</span>
 </code></pre>
+              </div>
+            </div>
             <p>To make the icon into a button, you can write it in an <code>a href</code> tag:</p>
-            <pre><code class="language-html">&lt;a href=&quot;https://twitter.com/emma_sax4&quot; class=&quot;link-icon&quot;&gt;
-  &lt;i data-feather=&quot;twitter&quot;&gt;&lt;/i&gt;
-&lt;/a&gt;
+            <div class="language-html highlighter-rouge">
+              <div class="highlight">
+                <pre class="highlight"><code data-lang="html"><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://twitter.com/emma_sax4"</span> <span class="na">class=</span><span class="s">"link-icon"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;i</span> <span class="na">data-feather=</span><span class="s">"twitter"</span><span class="nt">&gt;&lt;/i&gt;</span>
+<span class="nt">&lt;/a&gt;</span>
 </code></pre>
+              </div>
+            </div>
             <p>The <code>link-icon</code> class is something that I’ve created with common link-icon settings. Read more about my custom CSS in the secton above.</p>
             <p>Lastly, as long as these two lines are at the bottom of the file, the icons appear magically!</p>
-            <pre><code class="language-html">&lt;script src=&quot;https://unpkg.com/feather-icons&quot;&gt;&lt;/script&gt;
-&lt;script&gt;feather.replace()&lt;/script&gt;
+            <div class="language-html highlighter-rouge">
+              <div class="highlight">
+                <pre class="highlight"><code data-lang="html"><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://unpkg.com/feather-icons"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script&gt;</span><span class="nx">feather</span><span class="p">.</span><span class="nx">replace</span><span class="p">()</span><span class="nt">&lt;/script&gt;</span>
 </code></pre>
+              </div>
+            </div>
             <p>See them in action <a href="https://github.com/emmasax4/emmasax4.info/blob/129867d8135a930f4d364fe026db123d655b5ca8/_includes/site/scripts.html#L3-L4">here</a>.</p>
             <h2>Conclusion</h2>
             <p>Now that you’ve seen how Bootstrap and Feather Icons have improved my website, it’s your turn! Check out my blog post <a href="/blog/posts/adding-bootstrap-to-your-static-content-site/">here</a> for more information on how to get Bootstrap started on your site.</p>

@@ -38,7 +38,7 @@
     <meta name="msvalidate.01" content="89B2B19FF966341B78EF64EDADE6DF81" />
     <meta name="yandex-verification" content="c2741887f8c30dd1" />
     <script type="application/ld+json">
-      {"description":"Emma Sax’s personal website and blog. Includes information about my social media profiles, résumé, and hobbies.","@type":"BlogPosting","url":"https://emmasax4.info/blog/posts/why-and-how-i-renamed-my-master-branch/","headline":"Why and How I Renamed my master Branch","dateModified":"2020-06-29T22:35:31+00:00","datePublished":"2020-06-17T05:00:00+00:00","author":{"@type":"Person","name":"Emma Sax"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://emmasax4.info/blog/posts/why-and-how-i-renamed-my-master-branch/"},"@context":"https://schema.org"}
+      {"datePublished":"2020-06-17T05:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emmasax4.info/blog/posts/why-and-how-i-renamed-my-master-branch/"},"@type":"BlogPosting","url":"https://emmasax4.info/blog/posts/why-and-how-i-renamed-my-master-branch/","author":{"@type":"Person","name":"Emma Sax"},"headline":"Why and How I Renamed my master Branch","dateModified":"2020-06-29T22:35:31+00:00","description":"Emma Sax’s personal website and blog. Includes information about my social media profiles, résumé, and hobbies.","@context":"https://schema.org"}
     </script>
     <!-- End Jekyll SEO tag -->
   </head>
@@ -118,20 +118,28 @@
             <p>There are people that say the use of <code>master</code> isn’t about “master”/“slave”, but more about “master’s degree” or “Kung Fu master” context (apparently the word “master” is overloaded in English). However, <a href="https://mail.gnome.org/archives/desktop-devel-list/2019-May/msg00066.html">this blog post</a> has kindly pointed out that even Linus Torvalds used the word master, which came from BitKeeper’s use of <code>master</code>, which actually uses the word “slave” in the same sentence with the word “master” in its documentation. So sure, maybe people nowadays don’t think of the phrase “<code>master</code> branch” as in the “master”/“slave” context, but that’s where it started. And now, for better or worse, when I see a <code>master</code> branch, that’s what’ll pop into my head.</p>
             <h2>How</h2>
             <p>Okay, so now we know why I changed my repositories’ default branches. For the most part, I decided to go with <code>main</code>. This is because it’s environment-ambiguous, and it’s short and easy. The word “main” has two characters less than “master”, and it has the benefit that the <code>ma-</code> beginning matches the previous <code>master</code> branch. How I did the switch:</p>
-            <pre><code class="language-bash">$ git branch -m master main
-$ git push -u origin main
-# Change default branch in GitHub repository settings page.
-# Update any branch protection to protect main instead of master.
-# Delete the master branch.
+            <div class="language-bash highlighter-rouge">
+              <div class="highlight">
+                <pre class="highlight"><code data-lang="bash"><span class="nv">$ </span>git branch <span class="nt">-m</span> master main
+<span class="nv">$ </span>git push <span class="nt">-u</span> origin main
+<span class="c"># Change default branch in GitHub repository settings page.</span>
+<span class="c"># Update any branch protection to protect main instead of master.</span>
+<span class="c"># Delete the master branch.</span>
 </code></pre>
+              </div>
+            </div>
             <p>If my projects had more clones or had more collaborators, I’d certainly want to write a brief message in the README and/or try to inform them ahead of time so they could prep their local repositories. After the switch, here’s a suggestion for updating local clones from <a href="https://www.hanselman.com/blog/EasilyRenameYourGitDefaultBranchFromMasterToMain.aspx">Scott Hanselman</a>, but don’t quote me—I haven’t tried it personally:</p>
-            <pre><code class="language-bash">git checkout master
-git branch -m master main
+            <div class="language-bash highlighter-rouge">
+              <div class="highlight">
+                <pre class="highlight"><code data-lang="bash">git checkout master
+git branch <span class="nt">-m</span> master main
 git fetch
-git branch --unset-upstream
-git branch -u origin/main
+git branch <span class="nt">--unset-upstream</span>
+git branch <span class="nt">-u</span> origin/main
 git symbolic-ref refs/remotes/origin/HEAD refs/remotes/origin/main
 </code></pre>
+              </div>
+            </div>
             <p>I haven’t touched or changed any of my repositories that are forks… I’m still undecided whether I want to change those if the upstreams don’t change their default branch.</p>
             <h2>How with GitHub Pages</h2>
             <p>The repository that manages this project had the most difficulty changing branches. GitHub Pages has this strange requirement that for GitHub user pages (which my project was, meaning the repository name ends in <code>.github.io</code>), GitHub Pages <em>needs</em> to use the <code>master</code> branch. I actually think a change on this type of thing <em>could</em> be coming, so I’ll keep an eye out. But until then, this restriction put a damper in my plans. So, instead, my workaround was:</p>
@@ -147,13 +155,17 @@ git symbolic-ref refs/remotes/origin/HEAD refs/remotes/origin/main
             <h3>Change the <header-code>master</header-code> branch to be <header-code>gh-pages</header-code>
             </h3>
             <p>To do this, I followed a similar process to the above instructions for changing <code>master</code> to <code>main</code>:</p>
-            <pre><code class="language-bash">$ git checkout master
-$ git branch -m master gh-pages
-$ git push -u origin gh-pages
-# Change GitHub Pages settings to use gh-pages branch.
-# Update any branch protection to protect gh-pages instead of master.
-# Delete the master branch.
+            <div class="language-bash highlighter-rouge">
+              <div class="highlight">
+                <pre class="highlight"><code data-lang="bash"><span class="nv">$ </span>git checkout master
+<span class="nv">$ </span>git branch <span class="nt">-m</span> master gh-pages
+<span class="nv">$ </span>git push <span class="nt">-u</span> origin gh-pages
+<span class="c"># Change GitHub Pages settings to use gh-pages branch.</span>
+<span class="c"># Update any branch protection to protect gh-pages instead of master.</span>
+<span class="c"># Delete the master branch.</span>
 </code></pre>
+              </div>
+            </div>
             <p>And that was it. There were a couple of minutes where GitHub Pages wouldn’t update my site. To remediate this, I added a commit from the GitHub UI with a verified email, and then when that didn’t seem to work (and I got an email about my custom domain already being in use), I removed and re-added my custom domain <code>CNAME</code> file. I’m not sure which action fixed my issue—or even if I needed to do anything… maybe I just should’ve waited. But after that hiccup, everything went smoothly from there on out, and the change was practically done.</p>
             <h3>Pull Requests</h3>
             <p>Since this shift, I’ve actually made a lot of changes on GitHub. I’ve changed my GitHub username, changed the name of my default branch on my project from <code>source</code> to <code>main</code>, as well as normal updates and changes to the site. So, although the pull requests each look a little bit out-of-date, I’ll link them all here so they can be perused for the changes I had to make as I went:</p>
