@@ -164,6 +164,26 @@ becomes this:
 
 It certainly doesn't look as pretty... I always prefer to have my HTML indented properly. But compromising and being willing to move my lines around is worth a much faster build time. -->
 
+After I was satisfied with my changes, I willingly merged my pull request and deployed away. A little while later, I noticed a few other key pieces I missed.
+
+First, my syntax highlighting also broke, and I didn't even notice for several weeks! Here's an image of how the HTML changed during the switch:
+
+<div class="text-center">
+  {% include elements/photo.html
+    url="https://user-images.githubusercontent.com/7562793/87866750-f695d980-c94a-11ea-87e1-9fc8c5e56d88.png"
+    thumb_width="400" title="HTML without syntax highlighting"
+    lightbox="kramdown to CommonMark"
+  %}
+</div>
+
+In fact, when I originally saw this, I probably thought the HTML looked cleaner after the switch. But in reality, the switch caused all of my syntax highlighting to break.
+
+It turns out the solution was simple: pull `jekyll-commonmark` from the GitHub source directly... the [pull request](https://github.com/jekyll/jekyll-commonmark/pull/29) that introduces syntax highlighting was merged over a year ago, but was never officially released on Rubygems.
+
+```ruby
+gem 'jekyll-commonmark', git: 'https://github.com/jekyll/jekyll-commonmark.git', ref: '6b6c9a'
+```
+
 The very last thing I needed to add was that CommonMark needs directories specifically `exclude`d in the `_config.yml`. I'm not entirely sure _why_ this is, but without it, CommonMark adds a bunch of development directories to finished built site. This means that the public (ignoring my public GitHub repository) could, in theory, potentially access all of these directories and files, which is not good. Here's the blurb I added to my `_config.yml`:
 
 ```yml
@@ -180,7 +200,7 @@ exclude:
 
 ## Conclusion
 
-All of these changes only took a few of hours, and in my opinion, they were well worth the time. In about 120 local builds, I'll have made up the time that I would've spent waiting for my site to build. In writing this blog post alone, I've already done about 40 local builds. And the changes reflected on GitHub Actions? The last build with kramdown took **3.796 seconds** to build. My first build with CommonMark took **1.794 seconds**... just a smidgen over 2 seconds faster.
+Most of these changes only took a few of hours, and in my opinion, they were well worth the time. In about 120 local builds, I'll have made up the time that I would've spent waiting for my site to build. In writing this blog post alone, I've already done about 40 local builds. And the changes reflected on GitHub Actions? The last build with kramdown took **3.796 seconds** to build. My first build with CommonMark took **1.794 seconds**... just a smidgen over 2 seconds faster.
 
 <div id="anchor">
   <a id="references">&nbsp;</a>
