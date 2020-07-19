@@ -3,7 +3,7 @@ layout: post
 title: Switching from kramdown to CommonMark
 tags: [ tech, jekyll ]
 permalink: /blog/posts/switching-from-kramdown-to-commonmark/
-draft: true
+date: 2020-07-19 10:00:33 -0500
 ---
 
 * [Introduction](#introduction)
