@@ -6,6 +6,16 @@ permalink: /blog/posts/switching-from-kramdown-to-commonmark/
 draft: true
 ---
 
+* [Introduction](#introduction)
+* [Adding <header-code>jekyll-commonmark</header-code>](#adding-jekyll-commonmark)
+* [Debugging 🕷](#debugging)
+* [Conclusion](#conclusion)
+* [References](#references)
+
+<div id="anchor">
+  <a id="introduction">&nbsp;</a>
+</div>
+
 ## Introduction
 
 Up until a few weeks ago, my website (this website) had always used [kramdown](https://kramdown.gettalong.org/) (the lowercase "k" is intentional). GitHub Pages (where my website is hosted) by default uses kramdown, so I kept it that way even as I moved my site to being built on [Travis CI](https://docs.travis-ci.com/user/for-beginners/), and eventually [CircleCI](https://circleci.com/), before finally landing on [GitHub Actions](https://docs.github.com/en/actions).
@@ -17,6 +27,10 @@ When that happened, I hadn't yet introduced my [LEGO page](/interests-and-hobbie
 The amount of time my site takes to build on its CI tool doesn't particularly matter to me... a few seconds don't make a difference. What was almost painful was working locally. When I'm working locally on my computer, every time I make a small change to a file, Jekyll would reload my site. And waiting 5 seconds after adding one comma was pushing my patience.
 
 So, when I came across the [jekyll/jekyll-commonmark](https://github.com/jekyll/jekyll-commonmark) gem, I was curious. It advertises a Markdown parser that is faster than kramdown. The reason it's faster is because it uses a C compiler instead of a Ruby compiler (see [here](https://jekyllrb.com/docs/configuration/markdown/)). Normally I'm kind of a Ruby-lover, but I will admit that it's not the fastest language around. So, I thought I may as well try it out on a pull request. If it's too many changes, or it doesn't actually benefit me, then no need to switch; kramdown is getting most of what I want done.
+
+<div id="anchor">
+  <a id="adding-jekyll-commonmark">&nbsp;</a>
+</div>
 
 ## Adding <header-code>jekyll-commonmark</header-code>
 
@@ -48,6 +62,10 @@ commonmark:
 ```
 
 I selected the `options` and `extensions` to use based on [this documentation](https://github.com/jekyll/jekyll-commonmark#configuration), and chose each one specifically based off of my needs as I debugged the switch.
+
+<div id="anchor">
+  <a id="debugging">&nbsp;</a>
+</div>
 
 ## Debugging 🕷
 
@@ -156,9 +174,17 @@ exclude:
   - Gemfile.lock
 ```
 
+<div id="anchor">
+  <a id="conclusion">&nbsp;</a>
+</div>
+
 ## Conclusion
 
 All of these changes only took a few of hours, and in my opinion, they were well worth the time. In about 120 local builds, I'll have made up the time that I would've spent waiting for my site to build. In writing this blog post alone, I've already done about 40 local builds. And the changes reflected on GitHub Actions? The last build with kramdown took **3.796 seconds** to build. My first build with CommonMark took **1.794 seconds**... just a smidgen over 2 seconds faster.
+
+<div id="anchor">
+  <a id="references">&nbsp;</a>
+</div>
 
 ## References
 
