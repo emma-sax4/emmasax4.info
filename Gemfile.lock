@@ -1,14 +1,14 @@
 GIT
   remote: https://github.com/emmasax4/jekyll-feed.git
-  revision: 036698f852594fbf87b7209624878f2efcab090a
+  revision: 2379d50f99044cd9257a75f19addeb4edbd4cc98
   branch: emmasax4_feed
   specs:
-    jekyll-feed (0.14.0)
+    jekyll-feed (0.15.0)
       jekyll (>= 3.7, < 5.0)
 
 GIT
   remote: https://github.com/emmasax4/jekyll-seo-tag.git
-  revision: b5fcfc4bf4ee15e6c929d3b20cdb36987502144f
+  revision: b3191eb5ebe1ddad05c7d81f9f470d99a6278f3a
   branch: emmasax4_seo_tag
   specs:
     jekyll-seo-tag (2.6.1)
