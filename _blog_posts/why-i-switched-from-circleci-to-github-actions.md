@@ -23,9 +23,9 @@ If we make the assumption that I've successfully removed all Bootstrap4, Jquery,
 
 <div id="anchor">
   <a id="the-story">&nbsp;</a>
+</div>
 
 ## The Story Behind this Extreme Decision
-</div>
 
 A few weeks ago, Travis CI had a problem delivering notification webhooks. At my work, we send Travis CI webhooks to one of our internal websites, which then sends Slack notifications and starts deployments to our staging and production environments. And when Travis CI stopped sending our webhooks, we lost all notifications and all deployments—for half a day.
 
@@ -43,9 +43,9 @@ Up until now, I've heard of GitHub Actions, but I've been a little bit scared to
 
 <div id="anchor">
   <a id="how-i-use-ci-tools">&nbsp;</a>
+</div>
 
 ## How I Use CI Tools
-</div>
 
 As I originally outlined in [this blog post](/blog/posts/why-i-switched-from-travis-ci-to-circleci/), I use CI tools for four main things:
 
@@ -58,9 +58,9 @@ This list of four requirements hasn't changed. CircleCI can do all of these thin
 
 <div id="anchor">
   <a id="here-enters-github-actions">&nbsp;</a>
+</div>
 
 ## Here Enters GitHub Actions
-</div>
 
 On the surface, GitHub Actions is _very_ similar to CircleCI. Both of them use Yaml, and both of them use workflows which have multiple jobs, and jobs have multiple steps/commands. Both of them require a `checkout` step, and both of them have capabilities to run on a schedule or on `push`.
 
@@ -70,9 +70,9 @@ So besides needing a separate workflow file for each workflow, let's jump in to 
 
 <div id="anchor">
   <a id="building-my-website">&nbsp;</a>
+</div>
 
 ### 1. Building my website
-</div>
 
 The first step in each workflow is to `checkout` the code. GitHub Actions provides a [Checkout Action](https://github.com/actions/checkout) that's made to do exactly that. So there, we have our first few steps:
 
@@ -127,9 +127,9 @@ Bam! Not too shabby. This now looks _very_ familiar to CircleCI.
 
 <div id="anchor">
   <a id="notifying-slack">&nbsp;</a>
+</div>
 
 ### 2. Notifying Slack
-</div>
 
 It turns out that GitHub Actions uses actions similarly to how CircleCI uses orbs. So, I went and hunted down the perfect action for slack notifications. I ended up finding [`action-slacker`](https://github.com/marketplace/actions/action-slacker).
 
@@ -193,9 +193,9 @@ And that's it. Add those few steps, and now one of the slack steps will always r
 
 <div id="anchor">
   <a id="deploying-to-github-pages">&nbsp;</a>
+</div>
 
 ### 3. "Deploying" to GitHub Pages
-</div>
 
 With GitHub Actions' marketplace, it made it simple to find the perfect action to "deploy" to GitHub Pages: [`Deploy to GitHub Pages`](https://github.com/marketplace/actions/deploy-to-github-pages). This action was ideal, since it didn't require me to pass a lot of environment variables or inputs in to get it working correctly. Here's what I needed:
 
@@ -237,9 +237,9 @@ Important note: when using the generic version of this action, you'll need to pa
 
 <div id="anchor">
   <a id="running-daily-crons">&nbsp;</a>
+</div>
 
 ### 4. Running daily crons
-</div>
 
 If I'm completely honest, running daily crons is about the simplest part of this entire process. Either GitHub Actions supports crons, or it doesn't. In this case... it totally does. The [documentation for GitHub Actions schedules](https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions#onschedule) clearly defines that we should submit our crons in UTC in Posix format:
 
@@ -254,9 +254,9 @@ And that's it. The cron takes a couple of minutes longer to begin than it does w
 
 <div id="anchor">
   <a id="conclusion">&nbsp;</a>
+</div>
 
 ## Conclusion
-</div>
 
 After what's probably about 8 hours of work, my new CI solution is complete. My site now completely uses GitHub Actions to build and deploy, and there's only a couple things I compromised.
 
