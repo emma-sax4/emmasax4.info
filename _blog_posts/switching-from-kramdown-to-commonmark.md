@@ -82,7 +82,7 @@ The only other issue I noticed was that CommonMark doesn't have an easy Table of
 
 Nice and easy. But apparently that's kramdown specific, and the only way to define a Table of Contents in CommonMark is to do it the old-fashioned way (sort of similar to the GitHub Markdown way):
 
-```yml
+```
 * [Header One](#header-one)
 * [Header Two](#header-two)
   * [Nested Header One](#nested-header-one)
