@@ -124,7 +124,7 @@ GEM
     mixlib-cli (2.1.6)
     mixlib-config (2.2.18)
       tomlrb
-    nokogiri (1.10.9)
+    nokogiri (1.10.10)
       mini_portile2 (~> 2.4.0)
     nokogumbo (2.0.2)
       nokogiri (~> 1.8, >= 1.8.4)
@@ -133,7 +133,7 @@ GEM
       ast (~> 2.4.1)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
-    posix-spawn (0.3.14)
+    posix-spawn (0.3.15)
     public_suffix (4.0.5)
     rainbow (3.0.0)
     rb-fsevent (0.10.4)
@@ -141,17 +141,17 @@ GEM
       ffi (~> 1.0)
     regexp_parser (1.7.1)
     rexml (3.2.4)
-    rouge (3.20.0)
-    rubocop (0.86.0)
+    rouge (3.21.0)
+    rubocop (0.88.0)
       parallel (~> 1.10)
-      parser (>= 2.7.0.1)
+      parser (>= 2.7.1.1)
       rainbow (>= 2.2.2, < 4.0)
       regexp_parser (>= 1.7)
       rexml
-      rubocop-ast (>= 0.0.3, < 1.0)
+      rubocop-ast (>= 0.1.0, < 1.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 1.4.0, < 2.0)
-    rubocop-ast (0.1.0)
+    rubocop-ast (0.2.0)
       parser (>= 2.7.0.1)
     ruby-enum (0.8.0)
       i18n
@@ -170,7 +170,7 @@ GEM
       thread_safe (~> 0.1)
     unicode-display_width (1.7.0)
     yell (2.2.2)
-    zeitwerk (2.3.0)
+    zeitwerk (2.4.0)
 
 PLATFORMS
   ruby
