@@ -24,9 +24,9 @@ About three weeks ago, I started my next goal on this website, and that was to s
 
 <div id="anchor">
   <a id="my-use-case-for-ci-tools">&nbsp;</a>
+</div>
 
 ## My Use Case for CI Tools
-</div>
 
 The initial reason why I used Travis CI as my integration tool is outlined in [this blog post](/blog/posts/using-jekyll-paginate-v2/). But, as my website has continued to develop, there are four basic things I want my CI platform to be able to do for me:
 
@@ -39,9 +39,9 @@ Travis CI can do all four of these things, and some of them were easier to set u
 
 <div id="anchor">
   <a id="travis-ci">&nbsp;</a>
+</div>
 
 ## Travis CI
-</div>
 
 [Travis CI](https://travis-ci.org/) is probably one of the most popular CI tools out there. It is almost designed to work with GitHub, with the idea that upon committing to GitHub, it will trigger a _build_ in Travis CI. That build is configurable inside each GitHub repository, defined in a `.travis.yml` file in the root directory of the repo. The build can install dependencies, build a container of your project, run tests, deploy to a variety of web service platforms (such as AWS, GitHub Pages, Azure, Heroku, etc), and a bunch of other stuff. Their builds are highly configurable and extremely flexible.
 
@@ -49,9 +49,9 @@ Travis CI also offers free and paid plans. On a personal level, I'm on the free 
 
 <div id="anchor">
   <a id="building-my-website">&nbsp;</a>
+</div>
 
 ### 1. Building my website
-</div>
 
 Building my Jekyll website using Travis CI was extremely easy. It looked something like this:
 
@@ -67,9 +67,9 @@ Overall, running the website and getting this project up and running with Travis
 
 <div id="anchor">
   <a id="notifying-slack">&nbsp;</a>
+</div>
 
 ### 2. Notifying Slack
-</div>
 
 Whenever my builds on Travis CI finished, I wanted to be notified via Slack. This way I could have the Slack app installed on my mobile device, and make sure my builds pass from anywhere, with notifications. Setting up Travis CI to notify Slack was easy:
 
@@ -93,9 +93,9 @@ I'm not sure why this was necessary, as my project isn't a private repository. B
 
 <div id="anchor">
   <a id="deploying-to-github-pages">&nbsp;</a>
+</div>
 
 ### 3. "Deploying" to GitHub Pages
-</div>
 
 The [original blog post I found](https://medium.com/@mcred/supercharge-github-pages-with-jekyll-and-travis-ci-699bc0bde075) nicely outlines (in lots of words) how to deploy to GitHub Pages from Travis CI. The gist is that we use a Travis CI deploy to make a GitHub commit to the `gh-pages` branch of your project repository. In this way, you'll have at least two main branches on your repository: a `gh-pages` branch that GitHub Pages reads from, with only HTML and other site files, and a source code branch (your default branch) which will contain documentation, markdown files, Jekyll configs, etc. [Here's the documentation](https://docs.travis-ci.com/user/deployment-v2/providers/pages/) from Travis CI on GitHub Pages deploys on dpl v2.
 
@@ -123,9 +123,9 @@ travis encrypt "PERSONAL_ACCESS_TOKEN"
 
 <div id="anchor">
   <a id="running-daily-crons">&nbsp;</a>
+</div>
 
 ### 4. Running daily crons
-</div>
 
 Up until this point, setting up the `.travis.yml` has maybe only taken about 4–6 hours of my time. Not too bad. Setting up the crons won't take long either. But, this is where I'll start having to compromise a bit more. Travis CI does have basic configuration for [cron jobs](https://docs.travis-ci.com/user/cron-jobs/). But cron functionality is limited.
 
@@ -137,9 +137,9 @@ So, to sum it all up, setting up crons was easy. But I didn't like how they were
 
 <div id="anchor">
   <a id="circleci">&nbsp;</a>
+</div>
 
 ## CircleCI
-</div>
 
 Here's where [CircleCI](https://circleci.com/docs/2.0/about-circleci/) enters the picture. I originally heard about CircleCI from a DevOpsDays conference, where they had a sponsorship booth. After talking to them a bit, it seemed really interesting. They claimed CircleCI could do very similar things that Travis CI could do, but _easier?_ So, when I found that I was really not liking the cron functionality on Travis CI, I did some initial research on CircleCI. Can CircleCI do all four of the items on my checklist? Yes. Do they all look relatively simple to set up? Yes. So, that was enough reassurance that I could start to make a CircleCI integration. I'd leave the Travis CI one around, so if something didn't work out, I'd still be just fine with Travis CI.
 
@@ -147,9 +147,9 @@ CircleCI builds are also fully configurable in a file called `.circleci/config.y
 
 <div id="anchor">
   <a id="building-my-website-2">&nbsp;</a>
+</div>
 
 ### 1. Building my website
-</div>
 
 To build my website in CircleCI, I set up a simple [workflow](https://circleci.com/docs/2.0/configuration-reference/#workflows). I did this so that I could have separate flow of the build for different branches (development feature branch, source code branch, `gh-pages` branch, etc).
 
@@ -237,9 +237,9 @@ gem install bundler
 
 <div id="anchor">
   <a id="notifying-slack-2">&nbsp;</a>
+</div>
 
 ### 2. Notifying Slack
-</div>
 
 To notify Slack, I set up the [Slack orb](https://circleci.com/orbs/registry/orb/circleci/slack). I still don't really understand the purpose of orbs, but this slack one wasn't too difficult to use. Here's my configuration which will send a notification message when my build is finished:
 
@@ -301,9 +301,9 @@ To set up credentials, I added a custom CircleCI [Slack app](https://api.slack.c
 
 <div id="anchor">
   <a id="deploying-to-github-pages-2">&nbsp;</a>
+</div>
 
 ### 3. "Deploying" to GitHub Pages
-</div>
 
 Setting up the "deploy" to GitHub Pages consisted of defining a new workflow, job, and command. I set up the new workflow so that I could separate when the deploy job would be run, since there's no need to run it on the `develop` workflow:
 
@@ -383,9 +383,9 @@ The last piece was to set up a GitHub deploy key for my project with read/write 
 
 <div id="anchor">
   <a id="running-daily-crons-2">&nbsp;</a>
+</div>
 
 ### 4. Running daily crons
-</div>
 
 Up until this point, setting CircleCI up was substantially more difficult for me than setting up Travis CI. Part of that may be because CircleCI is less popular than Travis CI, so there's less support on the internet. However, when I reached out to CircleCI customer service to ask a question, they got back to me within a day, and were very polite and helpful—an experience I never had with Travis CI.
 
@@ -408,9 +408,9 @@ Because I already defined the job I needed, I simply added this little cron work
 
 <div id="anchor">
   <a id="adding-configyml-to-the-gh-pages-branch">&nbsp;</a>
+</div>
 
 ### Adding a <header-code>config.yml</header-code> to the <header-code>gh-pages</header-code> branch
-</div>
 
 In Travis CI, if there's no `.travis.yml` file, then Travis CI will ignore the commit and it won't run anything. This was useful on branches like the `gh-pages` branch, where there's no need to run a build on each commit. In CircleCI, if there's no `.circleci/config.yml` on a branch, it'll still try to run a build, and then break and say there's no config file. So, I manually added this `.circleci/config.yml` to my `gh-pages` branch, to completely ignore the branch on each commit:
 
@@ -435,9 +435,9 @@ Now with this, CircleCI will completely ignore my `gh-pages` branch.
 
 <div id="anchor">
   <a id="conclusion">&nbsp;</a>
+</div>
 
 ## Conclusion
-</div>
 
 As you can see, setting up CircleCI actually did take longer than setting up Travis CI, but I'm not sure if that's because I use Travis CI at my work, and have never used CircleCI before at all. My CircleCI files do have more lines of code, and that goes to show that making one command in CircleCI is going to be a little bit more complex than one "command" in Travis CI. But overall, the speedier caching of gems and more precise codification of the crons make CircleCI a clear winner for this website. The only huge con of CircleCI is that Travis CI is more popular, and so there's more functionality and online support with Travis CI.
 
