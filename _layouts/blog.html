@@ -47,7 +47,7 @@ layout: default
         </h3>
 
         {% assign pages_with_tags = site.pages | where_exp: "item", "item.pagination.tag.size > 1" %}
-        {% assign all_tags = site.empty_array %}
+        {% assign all_tags = "" | split: "," %}
 
         {% for page in pages_with_tags %}
           {% assign item = page.pagination.tag | split: ", " %}
@@ -68,7 +68,7 @@ layout: default
         </h3>
 
         {% assign pages_with_category = site.pages | where_exp: "item", "item.pagination.category.size > 1" %}
-        {% assign all_categories = site.empty_array %}
+        {% assign all_categories = "" | split: "," %}
 
         {% for page in pages_with_category %}
           {% assign item = page.pagination.category | split: ", " %}

@@ -1,13 +1,12 @@
 title: Emma Sax
 author: Emma Sax
-description: Emma Sax's personal website and blog. Includes information about my social media profiles, résumé, and hobbies.
+description: Emma Sax's personal website and blog. Includes information about my social media profiles, resumé, and hobbies.
 url: https://emmasax4.info
 github_repo: https://github.com/emmasax4/emmasax4.info
-future: false
 timezone: UTC
 jekyll-mentions: https://github.com
-markdown: CommonMark
 
+markdown: CommonMark
 commonmark:
   options:
     - SMART
@@ -75,5 +74,3 @@ pagination:
   trail:
     before: 1
     after: 1
-
-empty_array: []
