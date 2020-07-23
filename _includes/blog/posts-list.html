@@ -1,9 +1,0 @@
-{% for post in paginator.posts %}
-  {% include blog/post_summary.html %}
-{% endfor %}
-
-{% if paginator.total_pages >= 10 %}
-  {% include blog/pagination-trail.html %}
-{% elsif paginator.total_pages > 1 %}
-  {% include blog/pagination.html %}
-{% endif %}

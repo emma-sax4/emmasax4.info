@@ -3,59 +3,48 @@ layout: default
 ---
 
 <div class="row">
-  <!-- Left hand column -->
-  <div class="col col-12 col-md-2 text-center">
-    {% include elements/all-posts-button.html %}
-
-    <div class="text-center" style="margin-bottom: .5rem;">
-      {% include elements/rss-button.html %}
-    </div>
-
-    <div class="text-center" style="margin-bottom: .5rem;">
-      {% if page.category %}
-        {% assign category_to_show = page.category %}
-        {% assign tags_to_show = nil %}
-      {% elsif page.tags %}
-        {% assign tags_to_show = page.tags | sort %}
-        {% assign category_to_show = nil %}
-      {% endif %}
-
-      {% include blog/post_categorization.html %}
-    </div>
-
-    <div class="text-center" style="margin-bottom: 1rem;">
-      <span class="post-meta">
-        Read time: {{ content | reading_time_as_i }}
-      </span>
-    </div>
-  </div>
-
-  <!-- Post title and publishing date -->
   <div class="col col-12 col-md-10">
+    <!-- Post title and publishing date -->
     <h1 style="padding-bottom: .75rem;">
       <div class="text-center">
+        {{ page.title }}
         {% if page.subtitle %}
-          {{ page.title }}
           <div style="font-size: 32px">
             {{ page.subtitle }}
           </div>
-        {% else %}
-          {{ page.title }}
         {% endif %}
       </div>
 
-      <div class="text-center" style="margin-top: -.5rem;">
-        {% if post.draft %}
-          <span class="post-meta">Unpublished</span>
-        {% else %}
-          {% assign now = "now" | date: "%s" %}
-          {% assign date = page.date | date: "%s" %}
-          {% if date <= now %}
-            <span class="date-meta">{{ page.date }}</span>
-          {% else %}
-            <span class="post-meta">Unpublished</span>
+      <div class="row text-center" style="margin-top: -.5rem;">
+        <div class="col col-12 col-md-4">
+          {% if page.category %}
+            {% assign category_to_show = page.category %}
+            {% assign tags_to_show = nil %}
+          {% elsif page.tags %}
+            {% assign tags_to_show = page.tags | sort %}
+            {% assign category_to_show = nil %}
           {% endif %}
-        {% endif %}
+
+          {% include blog/post_categorization.html %}
+        </div>
+
+        <div class="col col-12 col-md-4">
+          {% if post.draft %}
+            <span class="post-meta">Unpublished</span>
+          {% else %}
+            {% assign now = "now" | date: "%s" %}
+            {% assign date = page.date | date: "%s" %}
+            {% if date <= now %}
+              <span class="date-meta">{{ page.date }}</span>
+            {% else %}
+              <span class="post-meta">Unpublished</span>
+            {% endif %}
+          {% endif %}
+        </div>
+
+        <div class="col col-12 col-md-4">
+          <span class="post-meta">Read time: {{ content | reading_time_as_i }}</span>
+        </div>
       </div>
     </h1>
 
@@ -83,6 +72,15 @@ layout: default
           </a>
         </noscript>
       {% endif %}
+    </div>
+  </div>
+
+  <div class="col col-12 col-md-2 text-center">
+    <!-- Sidebar – button to go back to all posts and blog post info -->
+    {% include elements/all-posts-button.html %}
+
+    <div class="text-center">
+      {% include elements/rss-button.html %}
     </div>
   </div>
 </div>

@@ -75,3 +75,5 @@ pagination:
   trail:
     before: 1
     after: 1
+
+empty_array: []

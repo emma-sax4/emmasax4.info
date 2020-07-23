@@ -3,6 +3,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
+  <!-- Head -->
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -25,14 +26,17 @@
     {% seo %}
   </head>
 
+  <!-- Navigation bar -->
   {% include site_navigation.html %}
 
+  <!-- Page content -->
   <body>
     <main class="container">
       {{ content }}
     </main>
   </body>
 
+  <!-- Footer -->
   <footer>
     &copy; <script>document.write(new Date().getFullYear());</script>
     Emma Sax. All rights reserved.
@@ -40,6 +44,7 @@
     View on <a href="{{ site.github_repo }}">GitHub</a>.
   </footer>
 
+  <!-- Javascript scripts -->
   <script src="/assets/js/show-dates.js" type="text/javascript"></script>
   <script src="/assets/js/external-links.js" type="text/javascript"></script>
   <script src="/assets/js/jquery.min.js"></script>
