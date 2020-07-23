@@ -13,7 +13,6 @@ gem 'jekyll-relative-links',       '~> 0.6'
 gem 'jekyll-tidy',                 '~> 0.2'
 gem 'jekyll-time-to-read',         '~> 0.1'
 gem 'jekyll-titles-from-headings', '~> 0.5'
-gem 'rouge',                       '~> 3.19'
 
 # Gems from GitHub that are required for all environments
 gem 'jekyll-commonmark', git: 'https://github.com/jekyll/jekyll-commonmark.git', ref:    '6b6c9a'

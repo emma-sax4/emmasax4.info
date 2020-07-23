@@ -192,7 +192,6 @@ DEPENDENCIES
   jekyll-time-to-read (~> 0.1)
   jekyll-titles-from-headings (~> 0.5)
   mdl (~> 0.6)
-  rouge (~> 3.19)
   rubocop (~> 0.86)
 
 BUNDLED WITH
