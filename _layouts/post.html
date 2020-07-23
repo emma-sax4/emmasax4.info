@@ -53,7 +53,7 @@ layout: default
       {{ content }}
 
       {% if page.comments != false and jekyll.environment == "production" %}
-        <script src="/assets/js/show-comments.js" type="text/javascript"></script>
+        <script src="/assets/js/show_comments.js" type="text/javascript"></script>
 
         <div class="text-center" style="margin-bottom: 1rem;">
           <button id="show-comments-button" class="btn btn-lg btn-outline-secondary"
@@ -78,8 +78,8 @@ layout: default
   <div class="col col-12 col-md-2 text-center">
     <!-- Sidebar – button to go back to all posts and RSS feed button -->
     <div class="text-center">
-      {% include elements/all-posts-button.html %}
-      {% include elements/rss-button.html %}
+      {% include elements/all_posts_button.html %}
+      {% include elements/rss_button.html %}
     </div>
   </div>
 </div>

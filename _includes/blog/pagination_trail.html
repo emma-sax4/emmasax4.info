@@ -1,0 +1,55 @@
+<nav aria-label="Blog post navigation">
+  <ul class="pagination justify-content-center">
+    {% assign second_to_last_page_number = paginator.total_pages | times: 1 | minus: 1 %}
+    {% assign trail_page_numbers = "" | split: "," %}
+    {% for trail in paginator.page_trail %}
+      {% assign trail_page_numbers = trail_page_numbers | push: trail.num %}
+    {% endfor %}
+
+    <!-- Show the button to the previous page -->
+    {% if paginator.previous_page %}
+      {% include elements/previous_page.html %}
+    {% else %}
+      {% include elements/disabled_x.html %}
+    {% endif %}
+
+    <!-- Always show the first page -->
+    {% unless trail_page_numbers contains 1 %}
+      {% assign page_number = 1 %}
+      {% include elements/numbered_page.html %}
+    {% endunless %}
+
+    <!-- If there's space between the trail and the first page, then show ... -->
+    {% unless trail_page_numbers contains 2 %}
+      {% include elements/empty_ellipsis.html %}
+    {% endunless %}
+
+    <!-- Loop through the trail -->
+    {% for trail in paginator.page_trail %}
+      {% assign page_number = trail.num %}
+      {% if trail.num == paginator.page %}
+        {% include elements/active_page.html %}
+      {% else %}
+        {% include elements/numbered_page.html %}
+      {% endif %}
+    {% endfor %}
+
+    <!-- If there's space between the trail and the last page, then show ... -->
+    {% unless trail_page_numbers contains second_to_last_page_number %}
+      {% include elements/empty_ellipsis.html %}
+    {% endunless %}
+
+    <!-- Always show the last page -->
+    {% unless trail_page_numbers contains paginator.total_pages %}
+      {% assign page_number = paginator.total_pages %}
+      {% include elements/numbered_page.html %}
+    {% endunless %}
+
+    <!-- Show the button to the next page -->
+    {% if paginator.next_page %}
+      {% include elements/next_page.html %}
+    {% else %}
+      {% include elements/disabled_x.html %}
+    {% endif %}
+  </ul>
+</nav>
