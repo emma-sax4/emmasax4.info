@@ -4,7 +4,7 @@ layout: default
 
 <div class="row">
   <div class="col col-12 col-md-10">
-    <!-- Post title and publishing date -->
+    <!-- Blog post title and information -->
     <h1 style="padding-bottom: .75rem;">
       <div class="text-center">
         {{ page.title }}
@@ -48,7 +48,7 @@ layout: default
       </div>
     </h1>
 
-    <!-- Blog post and comments -->
+    <!-- Blog post content and comments -->
     <div class="page-body">
       {{ content }}
 
@@ -76,10 +76,9 @@ layout: default
   </div>
 
   <div class="col col-12 col-md-2 text-center">
-    <!-- Sidebar – button to go back to all posts and blog post info -->
-    {% include elements/all-posts-button.html %}
-
+    <!-- Sidebar – button to go back to all posts and RSS feed button -->
     <div class="text-center">
+      {% include elements/all-posts-button.html %}
       {% include elements/rss-button.html %}
     </div>
   </div>
