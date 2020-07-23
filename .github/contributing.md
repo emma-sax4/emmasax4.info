@@ -294,7 +294,7 @@ To identify the current hour offset from UTC, look up the time zone offset based
 In order to generate a Table of Contents for a given blog post, run the following:
 
 ```bash
-scripts/markdown_toc.rb _blog_posts/NAME-OF-FILE.md
+scripts/toc_markdown.rb _blog_posts/NAME-OF-FILE.md
 ```
 
 This will provide a Markdown-style TOC that you can copy-paste into the blog post. Then, you just need to add the anchors (making the headers of the blog post linkable).
