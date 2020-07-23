@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+  <!-- Head -->
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -25,8 +26,8 @@
     <meta property="og:title" content="Emma Sax | Adding Pagination without Jekyll" />
     <meta name="author" content="Emma Sax" />
     <meta property="og:locale" content="en_US" />
-    <meta name="description" content="Emma Sax’s personal website and blog. Includes information about my social media profiles, résumé, and hobbies." />
-    <meta property="og:description" content="Emma Sax’s personal website and blog. Includes information about my social media profiles, résumé, and hobbies." />
+    <meta name="description" content="Emma Sax’s personal website and blog. Includes information about my social media profiles, resumé, and hobbies." />
+    <meta property="og:description" content="Emma Sax’s personal website and blog. Includes information about my social media profiles, resumé, and hobbies." />
     <link rel="canonical" href="https://emmasax4.info/blog/posts/adding-pagination-without-jekyll/" />
     <meta property="og:url" content="https://emmasax4.info/blog/posts/adding-pagination-without-jekyll/" />
     <meta property="og:site_name" content="Emma Sax" />
@@ -38,23 +39,27 @@
     <meta name="msvalidate.01" content="89B2B19FF966341B78EF64EDADE6DF81" />
     <meta name="yandex-verification" content="c2741887f8c30dd1" />
     <script type="application/ld+json">
-      {"datePublished":"2019-09-12T05:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emmasax4.info/blog/posts/adding-pagination-without-jekyll/"},"@type":"BlogPosting","url":"https://emmasax4.info/blog/posts/adding-pagination-without-jekyll/","author":{"@type":"Person","name":"Emma Sax"},"headline":"Adding Pagination without Jekyll","dateModified":"2020-07-12T14:32:04+00:00","description":"Emma Sax’s personal website and blog. Includes information about my social media profiles, résumé, and hobbies.","@context":"https://schema.org"}
+      {"datePublished":"2019-09-12T05:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emmasax4.info/blog/posts/adding-pagination-without-jekyll/"},"@type":"BlogPosting","url":"https://emmasax4.info/blog/posts/adding-pagination-without-jekyll/","author":{"@type":"Person","name":"Emma Sax"},"headline":"Adding Pagination without Jekyll","dateModified":"2020-07-12T14:32:04+00:00","description":"Emma Sax’s personal website and blog. Includes information about my social media profiles, resumé, and hobbies.","@context":"https://schema.org"}
     </script>
     <!-- End Jekyll SEO tag -->
   </head>
+  <!-- Navigation bar -->
   <header class="sticky-top">
     <nav class="navbar navbar-expand-md navbar-dark">
+      <!-- Left hand side of navbar -->
       <a class="navbar-brand mb-0" href="https://emmasax4.info" target="_self">
         <img src="/assets/images/logos/e-logo-white-40.png" width="30" height="30"
         class="d-inline-block align-top" alt="E logo"
       > Emma Sax
       </a>
+      <!-- Navbar open/close button when on a smaller screen -->
       <button class="navbar-toggler" type="button" data-toggle="collapse"
       data-target="#navbar-links" aria-controls="navbar-links"
       aria-expanded="false" aria-label="Toggle navigation">
         <i data-feather="menu"></i>
         <i data-feather="x"></i>
       </button>
+      <!-- Page links -->
       <div class="collapse navbar-collapse" id="navbar-links">
         <ul class="navbar-nav ml-auto mt-2 mt-md-0">
           <li class="nav-item ">
@@ -74,45 +79,38 @@
       </div>
     </nav>
   </header>
+  <!-- Page content -->
   <body>
     <main class="container">
       <div class="row">
-        <div class="col col-12 col-md-2 text-center">
-          <div class="container" style="padding-bottom: 1rem;">
-            <a href="/blog/" class="btn btn-lg btn-outline-secondary">All Posts</a>
-          </div>
-          <div class="text-center" style="margin-bottom: .5rem;">
-            <a href="/feed.xml" target="_blank" class="link-icon-rss">
-              <i data-feather="rss"></i>
-            </a>
-          </div>
-          <div class="text-center" style="margin-bottom: .5rem;">
-            <span class="post-meta">
-              <i style="width: 20px; height: 20px;" data-feather="tag"></i>
-              <a href="/blog/jekyll/">
-                jekyll
-              </a>
-              |
-              <a href="/blog/tech/">
-                tech
-              </a>
-            </span>
-          </div>
-          <div class="text-center" style="margin-bottom: 1rem;">
-            <span class="post-meta">
-              Read time: 6 minutes
-            </span>
-          </div>
-        </div>
         <div class="col col-12 col-md-10">
-          <h1 style="padding-bottom: .75rem;">
-            <div class="text-center">
+          <!-- Blog post title and information -->
+          <div class="text-center">
+            <h1 style="padding-bottom: .75rem;">
               Adding Pagination without Jekyll
-            </div>
-            <div class="text-center" style="margin-top: -.5rem;">
-              <span class="date-meta">2019-09-12 00:00:00 -0500</span>
-            </div>
-          </h1>
+              <div class="row" style="margin-top: -.5rem;">
+                <div class="col col-12 col-md-4">
+                  <span class="post-meta">
+                    <i style="width: 20px; height: 20px;" data-feather="tag"></i>
+                    <a href="/blog/jekyll/">
+                      jekyll
+                    </a>
+                    |
+                    <a href="/blog/tech/">
+                      tech
+                    </a>
+                  </span>
+                </div>
+                <div class="col col-12 col-md-4">
+                  <span class="date-meta">2019-09-12 00:00:00 -0500</span>
+                </div>
+                <div class="col col-12 col-md-4">
+                  <span class="post-meta">Read time: 6 minutes</span>
+                </div>
+              </div>
+            </h1>
+          </div>
+          <!-- Blog post content and comments -->
           <div class="page-body">
             <p>As I stated in my original <a href="/blog/posts/switching-to-jekyll/"><em>Switching to Jekyll</em></a> post, one of the original reasons I wanted to move to a Jekyll-based site was so that I could implement pagination on my “Blog” page(s). Converting my site to Jekyll was definitely challenging, and it involved me learning a new framework and a new language (Liquid). And therefore, the <a href="https://github.com/emmasax4/emmasax4.info/pull/6">pull request that made the switch</a> was massive, and took a while—it had 54 changed files and 19 commits. Because of this, I decided that pagination should come in a separate pull request. And then, because I’m in my “website-phase,” I thought I’d write a blog post about it 🤷🏻‍♀️😂.</p>
             <p>I originally tried to add Jekyll’s built-in pagination. Supposedly, it’s pretty slick. You add a few sections to the <code>_config.yml</code>, a couple sections to your <code>index.html</code>, and bam: it’s done and it works 💥. My real experience setting up the pagination was <em>not</em> like that. In fact, within one commit, I learned that Jekyll’s pagination (and other pagination gems), wouldn’t work well with my current directory/file setup. Both <a href="https://jekyllrb.com/docs/pagination/">Jekyll’s built-in pagination</a> and the gem <a href="https://github.com/sverrirs/jekyll-paginate-v2"><code>jekyll-paginate-v2</code></a> expect the blog posts to be in a <code>_posts/</code> directory, and to be referenced by <code>site.posts</code>. They also expect the main “Blog” page to be in its own directory, and my stuff wasn’t formatted like that. And so, instead of fighting with that, I decided to get more creative. That can’t be the only pagination option, right? 🥴😬🙏🏼</p>
@@ -205,9 +203,21 @@
             </noscript>
           </div>
         </div>
+        <div class="col col-12 col-md-2 text-center">
+          <!-- Sidebar – button to go back to all posts and RSS feed button -->
+          <div class="text-center">
+            <div class="container" style="padding-bottom: 1rem;">
+              <a href="/blog/" class="btn btn-lg btn-outline-secondary">All Posts</a>
+            </div>
+            <a href="/feed.xml" target="_blank" class="link-icon-rss">
+              <i data-feather="rss"></i>
+            </a>
+          </div>
+        </div>
       </div>
     </main>
   </body>
+  <!-- Footer -->
   <footer>
     &copy; <script>
       document.write(new Date().getFullYear());
@@ -216,6 +226,7 @@
     <br>
     View on <a href="https://github.com/emmasax4/emmasax4.info">GitHub</a>.
   </footer>
+  <!-- Javascript scripts -->
   <script src="/assets/js/show-dates.js" type="text/javascript"></script>
   <script src="/assets/js/external-links.js" type="text/javascript"></script>
   <script src="/assets/js/jquery.min.js"></script>

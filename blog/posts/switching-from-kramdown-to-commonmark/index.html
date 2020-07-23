@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+  <!-- Head -->
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -25,8 +26,8 @@
     <meta property="og:title" content="Emma Sax | Switching from kramdown to CommonMark" />
     <meta name="author" content="Emma Sax" />
     <meta property="og:locale" content="en_US" />
-    <meta name="description" content="Emma Sax’s personal website and blog. Includes information about my social media profiles, résumé, and hobbies." />
-    <meta property="og:description" content="Emma Sax’s personal website and blog. Includes information about my social media profiles, résumé, and hobbies." />
+    <meta name="description" content="Emma Sax’s personal website and blog. Includes information about my social media profiles, resumé, and hobbies." />
+    <meta property="og:description" content="Emma Sax’s personal website and blog. Includes information about my social media profiles, resumé, and hobbies." />
     <link rel="canonical" href="https://emmasax4.info/blog/posts/switching-from-kramdown-to-commonmark/" />
     <meta property="og:url" content="https://emmasax4.info/blog/posts/switching-from-kramdown-to-commonmark/" />
     <meta property="og:site_name" content="Emma Sax" />
@@ -38,23 +39,27 @@
     <meta name="msvalidate.01" content="89B2B19FF966341B78EF64EDADE6DF81" />
     <meta name="yandex-verification" content="c2741887f8c30dd1" />
     <script type="application/ld+json">
-      {"datePublished":"2020-07-19T15:00:33+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emmasax4.info/blog/posts/switching-from-kramdown-to-commonmark/"},"@type":"BlogPosting","url":"https://emmasax4.info/blog/posts/switching-from-kramdown-to-commonmark/","author":{"@type":"Person","name":"Emma Sax"},"headline":"Switching from kramdown to CommonMark","dateModified":"2020-07-19T15:10:28+00:00","description":"Emma Sax’s personal website and blog. Includes information about my social media profiles, résumé, and hobbies.","@context":"https://schema.org"}
+      {"datePublished":"2020-07-19T15:00:33+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emmasax4.info/blog/posts/switching-from-kramdown-to-commonmark/"},"@type":"BlogPosting","url":"https://emmasax4.info/blog/posts/switching-from-kramdown-to-commonmark/","author":{"@type":"Person","name":"Emma Sax"},"headline":"Switching from kramdown to CommonMark","dateModified":"2020-07-23T23:39:11+00:00","description":"Emma Sax’s personal website and blog. Includes information about my social media profiles, resumé, and hobbies.","@context":"https://schema.org"}
     </script>
     <!-- End Jekyll SEO tag -->
   </head>
+  <!-- Navigation bar -->
   <header class="sticky-top">
     <nav class="navbar navbar-expand-md navbar-dark">
+      <!-- Left hand side of navbar -->
       <a class="navbar-brand mb-0" href="https://emmasax4.info" target="_self">
         <img src="/assets/images/logos/e-logo-white-40.png" width="30" height="30"
         class="d-inline-block align-top" alt="E logo"
       > Emma Sax
       </a>
+      <!-- Navbar open/close button when on a smaller screen -->
       <button class="navbar-toggler" type="button" data-toggle="collapse"
       data-target="#navbar-links" aria-controls="navbar-links"
       aria-expanded="false" aria-label="Toggle navigation">
         <i data-feather="menu"></i>
         <i data-feather="x"></i>
       </button>
+      <!-- Page links -->
       <div class="collapse navbar-collapse" id="navbar-links">
         <ul class="navbar-nav ml-auto mt-2 mt-md-0">
           <li class="nav-item ">
@@ -74,45 +79,38 @@
       </div>
     </nav>
   </header>
+  <!-- Page content -->
   <body>
     <main class="container">
       <div class="row">
-        <div class="col col-12 col-md-2 text-center">
-          <div class="container" style="padding-bottom: 1rem;">
-            <a href="/blog/" class="btn btn-lg btn-outline-secondary">All Posts</a>
-          </div>
-          <div class="text-center" style="margin-bottom: .5rem;">
-            <a href="/feed.xml" target="_blank" class="link-icon-rss">
-              <i data-feather="rss"></i>
-            </a>
-          </div>
-          <div class="text-center" style="margin-bottom: .5rem;">
-            <span class="post-meta">
-              <i style="width: 20px; height: 20px;" data-feather="tag"></i>
-              <a href="/blog/jekyll/">
-                jekyll
-              </a>
-              |
-              <a href="/blog/tech/">
-                tech
-              </a>
-            </span>
-          </div>
-          <div class="text-center" style="margin-bottom: 1rem;">
-            <span class="post-meta">
-              Read time: 10 minutes
-            </span>
-          </div>
-        </div>
         <div class="col col-12 col-md-10">
-          <h1 style="padding-bottom: .75rem;">
-            <div class="text-center">
+          <!-- Blog post title and information -->
+          <div class="text-center">
+            <h1 style="padding-bottom: .75rem;">
               Switching from kramdown to CommonMark
-            </div>
-            <div class="text-center" style="margin-top: -.5rem;">
-              <span class="date-meta">2020-07-19 10:00:33 -0500</span>
-            </div>
-          </h1>
+              <div class="row" style="margin-top: -.5rem;">
+                <div class="col col-12 col-md-4">
+                  <span class="post-meta">
+                    <i style="width: 20px; height: 20px;" data-feather="tag"></i>
+                    <a href="/blog/jekyll/">
+                      jekyll
+                    </a>
+                    |
+                    <a href="/blog/tech/">
+                      tech
+                    </a>
+                  </span>
+                </div>
+                <div class="col col-12 col-md-4">
+                  <span class="date-meta">2020-07-19 10:00:33 -0500</span>
+                </div>
+                <div class="col col-12 col-md-4">
+                  <span class="post-meta">Read time: 10 minutes</span>
+                </div>
+              </div>
+            </h1>
+          </div>
+          <!-- Blog post content and comments -->
           <div class="page-body">
             <ul>
               <li><a href="#introduction">Introduction</a></li>
@@ -190,7 +188,7 @@
 </code></pre>
               </div>
             </div>
-            <p>Now, if I’m completely honest, this isn’t that bad. It’s terrible to have to update, but if I wait until the blog post is written, then it won’t go through lots more changes. Especially when I found <a href="https://github.com/emmasax4/emmasax4.info/blob/main/scripts/markdown_toc.rb">this Ruby file</a> and fixed it up to suit my needs… it makes it easy to generate a Table of Contents based off of existing headers in a particular file.</p>
+            <p>Now, if I’m completely honest, this isn’t that bad. It’s terrible to have to update, but if I wait until the blog post is written, then it won’t go through lots more changes. Especially when I found <a href="https://github.com/emmasax4/emmasax4.info/blob/main/scripts/toc_markdown.rb">this Ruby file</a> and fixed it up to suit my needs… it makes it easy to generate a Table of Contents based off of existing headers in a particular file.</p>
             <p>The challenging part was setting the anchors. When I used kramdown’s TOC, the anchors were automatic (because I actually moved my navigation bar to be sticky, they actually had a slight bug in them the whole time, but that’s unrelated). Now, it was time for me to have to set my own anchors on my headers—adding to the amount of “annoying” that is having to update a TOC. This was the ending solution:</p>
             <div class="language-html highlighter-rouge">
               <div class="highlight">
@@ -302,7 +300,7 @@ It certainly doesn't look as pretty... I always prefer to have my HTML indented 
             <script src="/assets/js/show-comments.js" type="text/javascript"></script>
             <div class="text-center" style="margin-bottom: 1rem;">
               <button id="show-comments-button" class="btn btn-lg btn-outline-secondary"
-  onclick="loadComments('emmasax4');return false;">
+            onclick="loadComments('emmasax4');return false;">
                 Load Comments
                 <i data-feather="message-circle"></i>
               </button>
@@ -316,9 +314,21 @@ It certainly doesn't look as pretty... I always prefer to have my HTML indented 
             </noscript>
           </div>
         </div>
+        <div class="col col-12 col-md-2 text-center">
+          <!-- Sidebar – button to go back to all posts and RSS feed button -->
+          <div class="text-center">
+            <div class="container" style="padding-bottom: 1rem;">
+              <a href="/blog/" class="btn btn-lg btn-outline-secondary">All Posts</a>
+            </div>
+            <a href="/feed.xml" target="_blank" class="link-icon-rss">
+              <i data-feather="rss"></i>
+            </a>
+          </div>
+        </div>
       </div>
     </main>
   </body>
+  <!-- Footer -->
   <footer>
     &copy; <script>
       document.write(new Date().getFullYear());
@@ -327,6 +337,7 @@ It certainly doesn't look as pretty... I always prefer to have my HTML indented 
     <br>
     View on <a href="https://github.com/emmasax4/emmasax4.info">GitHub</a>.
   </footer>
+  <!-- Javascript scripts -->
   <script src="/assets/js/show-dates.js" type="text/javascript"></script>
   <script src="/assets/js/external-links.js" type="text/javascript"></script>
   <script src="/assets/js/jquery.min.js"></script>
