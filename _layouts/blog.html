@@ -2,14 +2,91 @@
 layout: default
 ---
 
-{% include blog/header.html %}
+<div class="row" style="display: flex">
+  <div class="col col-12 col-md-10" style="margin-bottom: 1rem;">
+    <!-- Page title – tag or collection name, or general "Blog" -->
+    <div class="text-center">
+      <h1>
+        {% if page.pagination.tag %}
+          <i style="width: 2.5rem; height: 2.5rem;" data-feather="tag"></i>
+        {% elsif page.pagination.category %}
+          <i style="width: 2.5rem; height: 2.5rem;" data-feather="archive"></i>
+        {% endif %}
+        {{ page.pagination.title }}
+        {% if page.pagination.title == "Blog" %}
+          {% include elements/rss-button.html %}
+        {% endif %}
+      </h1>
+    </div>
 
-<div class="page-body">
-  {{ content }}
-  {% if content != blank %}
-    <br><br>
-  {% endif %}
-  {% include blog/posts-list.html %}
+    <!-- List of blog posts -->
+    <div class="page-body">
+      {{ content }}
+      {% if content != blank %}
+        <br><br>
+      {% endif %}
+      {% for post in paginator.posts %}
+        {% include blog/post_summary.html %}
+      {% endfor %}
+
+      {% if paginator.total_pages >= 10 %}
+        {% include blog/pagination-trail.html %}
+      {% elsif paginator.total_pages > 1 %}
+        {% include blog/pagination.html %}
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="col col-12 col-md-2">
+    <!-- Sidebar -->
+    {% if page.pagination.title == "Blog" %}
+      <div class="text-left">
+        <!-- List of tags -->
+        <h3>
+          <i style="width: 1.5rem; height: 1.5rem;" data-feather="tag"></i> Tags
+        </h3>
+
+        {% assign pages_with_tags = site.pages | where_exp: "item", "item.pagination.tag.size > 1" %}
+        {% assign all_tags = "" | split: "," %}
+
+        {% for page in pages_with_tags %}
+          {% assign item = page.pagination.tag | split: ", " %}
+          {% assign all_tags = all_tags | concat: item %}
+        {% endfor %}
+
+        {% assign all_tags = all_tags | uniq | sort %}
+
+        {% for tag in all_tags %}
+          <div><a href="{{ site.base_url }}/blog/{{ tag }}/">{{ tag }}</a></div>
+        {% endfor %}
+
+        <br>
+
+        <!-- List of collections -->
+        <h3>
+          <i style="width: 1.5rem; height: 1.5rem;" data-feather="archive"></i> Collections
+        </h3>
+
+        {% assign pages_with_category = site.pages | where_exp: "item", "item.pagination.category.size > 1" %}
+        {% assign all_categories = "" | split: "," %}
+
+        {% for page in pages_with_category %}
+          {% assign item = page.pagination.category | split: ", " %}
+          {% assign all_categories = all_categories | concat: item %}
+        {% endfor %}
+
+        {% assign all_categories = all_categories | uniq | sort %}
+
+        {% for category in all_categories %}
+          <div><a href="{{ site.base_url }}/blog/{{ category | downcase | replace: " ", "-" }}/">{{ category }}</a></div>
+        {% endfor %}
+      </div>
+    {% else %}
+      <!-- Button to go back to all posts and RSS feed button -->
+      <div class="text-center">
+        {% include elements/all-posts-button.html %}
+        {% include elements/rss-button.html %}
+      </div>
+    {% endif %}
+  </div>
 </div>
-
-{% include blog/footer.html %}
