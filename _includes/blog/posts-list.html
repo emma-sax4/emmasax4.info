@@ -1,5 +1,5 @@
 {% for post in paginator.posts %}
-  {% include blog/post.html %}
+  {% include blog/post_summary.html %}
 {% endfor %}
 
 {% if paginator.total_pages >= 10 %}

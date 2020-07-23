@@ -2,26 +2,26 @@
   <ul class="pagination justify-content-center">
     <!-- Show the button to the previous page -->
     {% if paginator.previous_page %}
-      {% include elements/pagination/previous-page.html %}
+      {% include elements/previous-page.html %}
     {% else %}
-      {% include elements/pagination/disabled-x.html %}
+      {% include elements/disabled-x.html %}
     {% endif %}
 
     <!-- Loop through the pages -->
     {% for count in (1..paginator.total_pages) %}
       {% assign page_number = count %}
       {% if count == paginator.page %}
-        {% include elements/pagination/active-page.html %}
+        {% include elements/active-page.html %}
       {% else %}
-        {% include elements/pagination/numbered-page.html %}
+        {% include elements/numbered-page.html %}
       {% endif %}
     {% endfor %}
 
     <!-- Show the button to the next page -->
     {% if paginator.next_page %}
-      {% include elements/pagination/next-page.html %}
+      {% include elements/next-page.html %}
     {% else %}
-      {% include elements/pagination/disabled-x.html %}
+      {% include elements/disabled-x.html %}
     {% endif %}
   </ul>
 </div>

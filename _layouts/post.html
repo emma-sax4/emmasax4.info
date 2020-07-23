@@ -3,15 +3,86 @@ layout: default
 ---
 
 <div class="row">
+  <!-- Left hand column -->
   <div class="col col-12 col-md-2 text-center">
-    {% include post/sidebar.html %}
+    {% include elements/all-posts-button.html %}
+
+    <div class="text-center" style="margin-bottom: .5rem;">
+      {% include elements/rss-button.html %}
+    </div>
+
+    <div class="text-center" style="margin-bottom: .5rem;">
+      {% if page.category %}
+        {% assign category_to_show = page.category %}
+        {% assign tags_to_show = nil %}
+      {% elsif page.tags %}
+        {% assign tags_to_show = page.tags | sort %}
+        {% assign category_to_show = nil %}
+      {% endif %}
+
+      {% include blog/post_categorization.html %}
+    </div>
+
+    <div class="text-center" style="margin-bottom: 1rem;">
+      <span class="post-meta">
+        Read time: {{ content | reading_time_as_i }}
+      </span>
+    </div>
   </div>
 
+  <!-- Post title and publishing date -->
   <div class="col col-12 col-md-10">
-    {% include post/header.html %}
+    <h1 style="padding-bottom: .75rem;">
+      <div class="text-center">
+        {% if page.subtitle %}
+          {{ page.title }}
+          <div style="font-size: 32px">
+            {{ page.subtitle }}
+          </div>
+        {% else %}
+          {{ page.title }}
+        {% endif %}
+      </div>
+
+      <div class="text-center" style="margin-top: -.5rem;">
+        {% if post.draft %}
+          <span class="post-meta">Unpublished</span>
+        {% else %}
+          {% assign now = "now" | date: "%s" %}
+          {% assign date = page.date | date: "%s" %}
+          {% if date <= now %}
+            <span class="date-meta">{{ page.date }}</span>
+          {% else %}
+            <span class="post-meta">Unpublished</span>
+          {% endif %}
+        {% endif %}
+      </div>
+    </h1>
+
+    <!-- Blog post and comments -->
     <div class="page-body">
       {{ content }}
-      {% include post/comments.html %}
+
+      {% if page.comments != false and jekyll.environment == "production" %}
+        <script src="/assets/js/show-comments.js" type="text/javascript"></script>
+
+        <div class="text-center" style="margin-bottom: 1rem;">
+          <button id="show-comments-button" class="btn btn-lg btn-outline-secondary"
+            onclick="loadComments('{{ site.disqus.shortname }}');return false;">
+            Load Comments
+            <i data-feather="message-circle"></i>
+          </button>
+        </div>
+
+        <div id="disqus_thread"></div>
+
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript" rel="nofollow">
+            comments powered by Disqus.
+          </a>
+        </noscript>
+      {% endif %}
     </div>
   </div>
 </div>

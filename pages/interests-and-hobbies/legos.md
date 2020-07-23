@@ -6,4 +6,4 @@ redirect_from:
   - /legos/
 ---
 
-{% include legos/list.html %}
+{% include legos_list.html %}

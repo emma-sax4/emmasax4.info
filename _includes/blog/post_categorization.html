@@ -15,7 +15,7 @@
 {% if category_to_show %}
   {% assign category = category_to_show | downcase | replace: " ", "-" %}
   <span class="post-meta">
-    <i style="width: 20px; height: 20px;" data-feather="tag"></i>
+    <i style="width: 20px; height: 20px;" data-feather="archive"></i>
     <a href="{{ "/blog/" | append: category | append: "/" }}">
       {{ category_to_show }}
     </a>
