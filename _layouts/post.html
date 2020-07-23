@@ -5,48 +5,48 @@ layout: default
 <div class="row">
   <div class="col col-12 col-md-10">
     <!-- Blog post title and information -->
-    <h1 style="padding-bottom: .75rem;">
-      <div class="text-center">
+    <div class="text-center">
+      <h1 style="padding-bottom: .75rem;">
         {{ page.title }}
         {% if page.subtitle %}
           <div style="font-size: 32px">
             {{ page.subtitle }}
           </div>
         {% endif %}
-      </div>
 
-      <div class="row text-center" style="margin-top: -.5rem;">
-        <div class="col col-12 col-md-4">
-          {% if page.category %}
-            {% assign category_to_show = page.category %}
-            {% assign tags_to_show = nil %}
-          {% elsif page.tags %}
-            {% assign tags_to_show = page.tags | sort %}
-            {% assign category_to_show = nil %}
-          {% endif %}
-
-          {% include blog/post_categorization.html %}
-        </div>
-
-        <div class="col col-12 col-md-4">
-          {% if post.draft %}
-            <span class="post-meta">Unpublished</span>
-          {% else %}
-            {% assign now = "now" | date: "%s" %}
-            {% assign date = page.date | date: "%s" %}
-            {% if date <= now %}
-              <span class="date-meta">{{ page.date }}</span>
-            {% else %}
-              <span class="post-meta">Unpublished</span>
+        <div class="row" style="margin-top: -.5rem;">
+          <div class="col col-12 col-md-4">
+            {% if page.category %}
+              {% assign category_to_show = page.category %}
+              {% assign tags_to_show = nil %}
+            {% elsif page.tags %}
+              {% assign tags_to_show = page.tags | sort %}
+              {% assign category_to_show = nil %}
             {% endif %}
-          {% endif %}
-        </div>
 
-        <div class="col col-12 col-md-4">
-          <span class="post-meta">Read time: {{ content | reading_time_as_i }}</span>
+            {% include blog/post_categorization.html %}
+          </div>
+
+          <div class="col col-12 col-md-4">
+            {% if post.draft %}
+              <span class="post-meta">Unpublished</span>
+            {% else %}
+              {% assign now = "now" | date: "%s" %}
+              {% assign date = page.date | date: "%s" %}
+              {% if date <= now %}
+                <span class="date-meta">{{ page.date }}</span>
+              {% else %}
+                <span class="post-meta">Unpublished</span>
+              {% endif %}
+            {% endif %}
+          </div>
+
+          <div class="col col-12 col-md-4">
+            <span class="post-meta">Read time: {{ content | reading_time_as_i }}</span>
+          </div>
         </div>
-      </div>
-    </h1>
+      </h1>
+    </div>
 
     <!-- Blog post content and comments -->
     <div class="page-body">
