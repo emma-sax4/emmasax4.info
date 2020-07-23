@@ -1,12 +1,14 @@
 ---
 layout: post
-title: "July Fourth 🇺🇸: To Party 🥳 or Not to Party 😷"
+title: "4th of July 🇺🇸: To Party 🥳 or Not to Party 😷"
 tags: [ holidays, covid ]
-permalink: /blog/posts/july-fourth-to-party-or-not-to-party/
+permalink: /blog/posts/4th-of-july-to-party-or-not-to-party/
 draft: true
 ---
 
-I know that July 4th (2020) was a while ago, but this post was a long time coming. But I think it's important to put out there.
+I know that July 4th (2020) was a while ago, but this post was a long time coming. I've felt very uneasy about writing this, but I think my experience is an important one to show: we can't control everything in the world, and we certainly can't control other peoples' actions. All we can do is try to make the right decisions for us and for our community.
+
+---
 
 I am a member of an events group in the Twin Cities called [Events & Adventures](https://www.eventsandadventures.com/). I joined in 2017 (despite the high price tag), and overall, I've been pretty satisfied with my membership. For sure, there's times where I feel like I'm in an adult high school (complete with cliques, drama, and teachers that do nothing to help students). But the past year and a half has been relatively drama free, and I've been enjoying attending 3–5 events per month.
 

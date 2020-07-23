@@ -15,7 +15,11 @@
     <div class="col col-12 col-md-10">
       <div class="text-center">
         <h1>
-          <i style="width: 2.5rem; height: 2.5rem;" data-feather="tag"></i>
+          {% if page.pagination.tag %}
+            <i style="width: 2.5rem; height: 2.5rem;" data-feather="tag"></i>
+          {% elsif page.pagination.category %}
+            <i style="width: 2.5rem; height: 2.5rem;" data-feather="archive"></i>
+          {% endif %}
           {{ page.pagination.title }}
         </h1>
       </div>
