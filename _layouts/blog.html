@@ -4,8 +4,15 @@ layout: default
 
 <div class="row" style="display: flex">
   <div class="col col-12 col-md-2 text-center" style="margin-bottom: 1rem;">
-    {% include elements/all-posts-button.html %}
-    {% include elements/rss-button.html %}
+    {% if page.pagination.title == "Blog" %}
+      <h3>Tags</h3>
+        {% include blog/tag_list.html %}
+      <h3>Collections</h3>
+      {% include elements/rss-button.html %}
+    {% else %}
+      {% include elements/all-posts-button.html %}
+      {% include elements/rss-button.html %}
+    {% endif %}
   </div>
 
   <div class="col col-12 col-md-10">
