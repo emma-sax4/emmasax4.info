@@ -32,7 +32,7 @@ As the night progressed, we slowly started to realize that we weren't seeing any
 <div class="text-center">
   {% include elements/photo.html
      url="https://media.giphy.com/media/12GUPx3g0PPfYA/giphy.gif"
-     thumb_width="400" title="Too many people gif" lightbox="E&A Covid"
+     thumb_width="400" title="Lost city gif via Giphy" lightbox="E&A Covid"
   %}
 </div>
 
