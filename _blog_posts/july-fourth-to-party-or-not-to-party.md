@@ -3,7 +3,7 @@ layout: post
 title: "4th of July 🇺🇸: To Party 🥳 or Not to Party 😷"
 tags: [ holidays, covid ]
 permalink: /blog/posts/4th-of-july-to-party-or-not-to-party/
-draft: true
+date: 2020-07-25 16:46:00 -0500
 ---
 
 I know that July 4th (2020) was a while ago, but this post was a long time coming. I've felt very uneasy about writing this, but I think my experience is an important one to show: we can't control everything in the world, and we certainly can't control other peoples' actions. All we can do is try to make the right decisions for us and for our community.
@@ -29,30 +29,9 @@ The week before the holiday gathering, my partner and I also decided to attend a
 
 As the night progressed, we slowly started to realize that we weren't seeing any social distancing whatsoever. People that I am pretty sure did _not_ quarantine together were hugging and standing shoulder to shoulder... and nobody was wearing masks. I'm not talking about all of the other customers at the venue, although at least two-thirds of them weren't wearing masks either.
 
-<div class="text-center">
-  {% include elements/photo.html
-     url="https://media.giphy.com/media/12GUPx3g0PPfYA/giphy.gif"
-     thumb_width="400" title="Lost city gif via Giphy" lightbox="E&A Covid"
-  %}
-</div>
-
 The entire event and lack of safety measures concerned me. As soon as we got in the car to leave, I confessed that I had a miserable time. Of course, I didn't like how it was hard to see peoples' facial expressions and it was more difficult to talk, but most importantly, I was concerned about how I felt like nobody else cared about whether they spread COVID or not. That night, my partner and I decided to cancel out of the 4th of July party, regardless of the fact that we wouldn't be able to get refunds. When I went to cancel, I also realized that the minimum cap of the party had been raised... from 40 people to 60. No matter how you cut it, 60 almost-strangers meeting at one big gathering, even outdoors... seems very anti-pandemic to me.
 
-<div class="text-center">
-  {% include elements/photo.html
-     url="https://media.giphy.com/media/26tPghhb310muUkEw/giphy.gif"
-     thumb_width="400" title="Muppets party gif via Giphy" lightbox="E&A Covid"
-  %}
-</div>
-
 My partner and I also cancelled out of almost all other events we had signed up for for the remainder of July. Seeing what seemed like the other members' disregard for safety was unnerving. On that night, I felt 100% positive that if Minnesota has an outbreak, _these_ are the exact types of people that would be making it worse. People that are generally young, healthy, and seem to value socializing and partying more than their health and the health of those around them. To this day, I still don't understand how a mini-outbreak hasn't spread through E&A yet, but if it happens (to be honest) I won't be surprised.
-
-<div class="text-center">
-  {% include elements/photo.html
-     url="https://media.giphy.com/media/cOWrnnf4lxRCS70fra/giphy.gif"
-     thumb_width="400" title="Mean Girls fight gif via Giphy" lightbox="E&A Covid"
-  %}
-</div>
 
 Of course, I cannot speak for the other members of the club. Clearly, I saw the event through my own lens of worry, concern, and care for others... they may view the situation very differently. Somebody else who was at Hops and Hounds has said the event had plenty of social distancing and the situation was fine... from my perspective, I'd beg to differ. But everyone has a right to their own opinions, and they can make their own choices.
 
