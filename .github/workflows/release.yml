@@ -11,7 +11,6 @@ jobs:
       uses: actions/checkout@v2
       with:
         fetch-depth: 0
-        persist-credentials: false
 
     - name: Define Run Variables
       run: bash scripts/define_run_variables.sh release ${{ github.repository }} ${{ github.ref }} ${{ github.run_id }} ${{ github.actor }}
