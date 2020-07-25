@@ -14,7 +14,7 @@ layout: default
         {% endif %}
         {{ page.pagination.title }}
         {% if page.pagination.title == "Blog" %}
-          {% include elements/rss-button.html %}
+          {% include elements/rss_button.html %}
         {% endif %}
       </h1>
     </div>
@@ -30,7 +30,7 @@ layout: default
       {% endfor %}
 
       {% if paginator.total_pages >= 10 %}
-        {% include blog/pagination-trail.html %}
+        {% include blog/pagination_trail.html %}
       {% elsif paginator.total_pages > 1 %}
         {% include blog/pagination.html %}
       {% endif %}
@@ -84,8 +84,8 @@ layout: default
     {% else %}
       <!-- Button to go back to all posts and RSS feed button -->
       <div class="text-center">
-        {% include elements/all-posts-button.html %}
-        {% include elements/rss-button.html %}
+        {% include elements/all_posts_button.html %}
+        {% include elements/rss_button.html %}
       </div>
     {% endif %}
   </div>
