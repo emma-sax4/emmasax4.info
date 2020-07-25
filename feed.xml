@@ -3,13 +3,25 @@
     <generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator>
     <link href="https://emmasax4.info/feed.xml" rel="self" type="application/atom+xml" />
     <link href="https://emmasax4.info/" rel="alternate" type="text/html" />
-    <updated>2020-07-23T23:39:11+00:00</updated>
+    <updated>2020-07-25T21:45:54+00:00</updated>
     <id>https://emmasax4.info/feed.xml</id>
     <title type="html">Emma Sax</title>
     <subtitle>Emma Sax's personal website and blog. Includes information about my social media profiles, resumé, and hobbies.</subtitle>
     <author>
       <name>Emma Sax</name>
     </author>
+    <entry>
+      <title type="html">4th of July 🇺🇸: To Party 🥳 or Not to Party 😷</title>
+      <link href="https://emmasax4.info/blog/posts/4th-of-july-to-party-or-not-to-party/" rel="alternate" type="text/html" title="4th of July 🇺🇸: To Party 🥳 or Not to Party 😷" />
+      <published>2020-07-25T21:46:00+00:00</published>
+      <updated>2020-07-25T21:45:54+00:00</updated>
+      <id>https://emmasax4.info/blog/posts/july-fourth-to-party-or-not-to-party</id>
+      <author>
+        <name>Emma Sax</name>
+      </author>
+      <category term="holidays" />
+      <category term="covid" />
+    </entry>
     <entry>
       <title type="html">Switching from kramdown to CommonMark</title>
       <link href="https://emmasax4.info/blog/posts/switching-from-kramdown-to-commonmark/" rel="alternate" type="text/html" title="Switching from kramdown to CommonMark" />
@@ -54,16 +66,5 @@
         <name>Emma Sax</name>
       </author>
       <category term="tech" />
-    </entry>
-    <entry>
-      <title type="html">Why “Tomorrow” Isn’t Useful</title>
-      <link href="https://emmasax4.info/blog/posts/why-tomorrow-isnt-useful/" rel="alternate" type="text/html" title="Why “Tomorrow” Isn’t Useful" />
-      <published>2020-03-05T05:20:00+00:00</published>
-      <updated>2020-06-29T22:35:31+00:00</updated>
-      <id>https://emmasax4.info/blog/posts/why-tomorrow-isnt-useful</id>
-      <author>
-        <name>Emma Sax</name>
-      </author>
-      <category term="self-improvement" />
     </entry>
   </feed>
