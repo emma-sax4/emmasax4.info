@@ -22,7 +22,7 @@
 
         {% for node in sorted_pages %}
           {% unless node.autogen == "jekyll-paginate-v2" %}
-            {% assign navigation_url = node.url | remove: "/index.html" %}
+            {% assign navigation_url = node.url | remove: "index.html" %}
 
             {% if page.url contains navigation_url %}
               {% assign active = "active" %}
