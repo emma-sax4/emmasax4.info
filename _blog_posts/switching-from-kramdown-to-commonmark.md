@@ -215,3 +215,7 @@ Most of these changes only took a few of hours, and in my opinion, they were wel
 * [wordpress.org: heading with anchor links are covered up by top of page header](https://wordpress.org/support/topic/heading-with-anchor-links-are-covered-up-by-top-of-page-header/)
 * [github.com: jekyll/jekyll-commonmark](https://github.com/jekyll/jekyll-commonmark)
 * [github.com: gjtorikian/commonmarker](https://github.com/gjtorikian/commonmarker)
+
+---
+
+Update: Since publishing this blog post, I've actually added back in almost every usage of `markdownify` that I had previously removed. The only place where it absolutely does not work is when rendering individual blog posts. It's possible `markdownify` wasn't the source of what was broken, but was just masking other issues I resolved around the same time.

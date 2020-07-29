@@ -21,10 +21,7 @@ layout: default
 
     <!-- List of blog posts -->
     <div class="page-body">
-      {{ content }}
-      {% if content != blank %}
-        <br><br>
-      {% endif %}
+      {{ content | markdownify }}
       {% for post in paginator.posts %}
         {% include blog/post_summary.html %}
       {% endfor %}
