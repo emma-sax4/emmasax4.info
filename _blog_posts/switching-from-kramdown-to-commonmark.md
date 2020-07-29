@@ -162,7 +162,7 @@ becomes this:
   {% endfor %}{% endraw %}
 ```
 
-It certainly doesn't look as pretty... I always prefer to have my HTML indented properly. But compromising and being willing to move my lines around is worth a much faster build time. -->
+It certainly doesn't look as pretty... I always prefer to have my HTML indented properly. But compromising and being willing to move my lines around is worth a much faster build time.-->
 
 After I was satisfied with my changes, I willingly merged my pull request and deployed away. A little while later, I noticed a few other key pieces I missed.
 
@@ -215,3 +215,7 @@ Most of these changes only took a few of hours, and in my opinion, they were wel
 * [wordpress.org: heading with anchor links are covered up by top of page header](https://wordpress.org/support/topic/heading-with-anchor-links-are-covered-up-by-top-of-page-header/)
 * [github.com: jekyll/jekyll-commonmark](https://github.com/jekyll/jekyll-commonmark)
 * [github.com: gjtorikian/commonmarker](https://github.com/gjtorikian/commonmarker)
+
+---
+
+Update: Since publishing this blog post, I've actually added back in almost every usage of `markdownify` that I had previously removed. The only place where it absolutely does not work is when rendering individual blog posts. It's possible `markdownify` wasn't the source of what was broken, but was just masking other issues I resolved around the same time.

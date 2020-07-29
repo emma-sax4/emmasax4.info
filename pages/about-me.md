@@ -5,11 +5,11 @@ order: 1
 permalink: /about-me/
 ---
 
-Since graduating from the [University of Minnesota, Morris (UMM)](https://morris.umn.edu/) with a Bachelor of Arts in [Computer Science](https://academics.morris.umn.edu/computer-science), my entire career has been spent on the Operations side of DevOps. But I dabble in website development in Ruby on Rails and Jekyll/Liquid. For a more detailed version of my experience, please visit my [LinkedIn](https://linkedin.com/in/emmasax4).
+Since graduating from the [University of Minnesota, Morris (UMM)](https://morris.umn.edu/) with a Bachelor of Arts in [Computer Science](https://academics.morris.umn.edu/computer-science), my entire career has been spent on the Operations side of DevOps. But I dabble in website development in Ruby on Rails and Jekyll/Liquid. For a more information on my work experience, please visit my [LinkedIn](https://linkedin.com/in/emmasax4).
 
 ## Tools, Frameworks, & Languages
 
-Ruby, Ruby on Rails, Bash, Git, GitHub API, AWS API, HTML/CSS, Yaml/JSON, Chef, Amazon Web Services, Kubernetes/EKS, New Relic, Datadog, Splunk, Jekyll/Liquid
+Ruby, Ruby on Rails, Bash, Git, GitHub API, AWS-SDK, HTML/CSS, Yaml/JSON, Chef, Amazon Web Services, Kubernetes/EKS, New Relic, Datadog, Splunk, Liquid/Jekyll
 
 ## Operating Systems
 
@@ -17,7 +17,7 @@ OS X, Linux
 
 ## Other
 
-Self-motivated, leadership skills, detail-oriented, problem solving skills, pair programming, agile methodologies, communication skills, collaboration, enthusiasm, strong work-ethic
+Self-motivated, leadership skills, detail-oriented, problem-solving skills, pair programming, agile methodologies, communication skills, collaboration, enthusiasm, strong work-ethic
 
 ## Experience
 
