@@ -17,7 +17,7 @@ OS X, Linux
 
 ## Other
 
-Self-motivated, leadership skills, detail-oriented, problem-solving skills, pair programming, agile methodologies, communication skills, collaboration, enthusiasm, strong work-ethic
+Self-motivated, leadership skills, detail-oriented, problem solving skills, pair programming, agile methodologies, communication skills, collaboration, enthusiasm, strong work-ethic
 
 ## Experience
 

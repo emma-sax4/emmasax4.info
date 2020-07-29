@@ -162,7 +162,7 @@ becomes this:
   {% endfor %}{% endraw %}
 ```
 
-It certainly doesn't look as pretty... I always prefer to have my HTML indented properly. But compromising and being willing to move my lines around is worth a much faster build time.-->
+It certainly doesn't look as pretty... I always prefer to have my HTML indented properly. But compromising and being willing to move my lines around is worth a much faster build time. -->
 
 After I was satisfied with my changes, I willingly merged my pull request and deployed away. A little while later, I noticed a few other key pieces I missed.
 
