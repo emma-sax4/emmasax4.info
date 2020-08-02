@@ -54,7 +54,7 @@ layout: default
         {% assign all_tags = all_tags | uniq | sort %}
 
         {% for tag in all_tags %}
-          <div><a href="{{ site.base_url }}/blog/{{ tag }}/">{{ tag }}</a></div>
+          <div><a href="/blog/{{ tag }}/">{{ tag }}</a></div>
         {% endfor %}
 
         <br>
@@ -75,7 +75,7 @@ layout: default
         {% assign all_categories = all_categories | uniq | sort %}
 
         {% for category in all_categories %}
-          <div><a href="{{ site.base_url }}/blog/{{ category | downcase | replace: " ", "-" }}/">{{ category }}</a></div>
+          <div><a href="/blog/{{ category | downcase | replace: " ", "-" }}/">{{ category }}</a></div>
         {% endfor %}
       </div>
     {% else %}
