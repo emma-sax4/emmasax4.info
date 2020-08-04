@@ -146,7 +146,7 @@ To use `action-slacker`/`slack-notifier-action` the way I wanted to, I needed to
     SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
   with:
     channel: '#general'
-    icon_url: https://img.icons8.com/ios-filled/50/000000/github.png
+    icon_url: https://i.imgur.com/DGrghtn.png
     username: GitHub Actions
     color: '#23c22e'
     title: ${{ github.repository }}
@@ -165,7 +165,7 @@ To use `action-slacker`/`slack-notifier-action` the way I wanted to, I needed to
     SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
   with:
     channel: '#general'
-    icon_url: https://img.icons8.com/ios-filled/50/000000/github.png
+    icon_url: https://i.imgur.com/DGrghtn.png
     username: GitHub Actions
     color: '#bd2222'
     title: ${{ github.repository }}
