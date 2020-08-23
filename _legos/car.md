@@ -7,9 +7,9 @@ This 163 brick piece creates a one-of-a-kind minifigure-sized car. This car is u
 
 To make the license plate, I used stickers from the [Hogwarts Whomping Willow (75953)](https://www.lego.com/en-us/product/hogwarts-whomping-willow-75953) set on plain 1x2 black plates.
 
-Here's a link to the instructions and piece list of the car: <a href="/assets/resources/LEGO-building-instructions-car.pdf" target="_blank">LEGO-building-instructions-car</a>
+Here's a link to the instructions and piece list of the car: <a href="/assets/resources/LEGO-car.pdf" target="_blank">LEGO-car.pdf</a>
 
-NOTE: the LDD piece list numbers can sometimes be out of sync with what's in the LEGO Bricks and Pieces database. Sometimes I need to do a more thorough Google search in order to find the correct piece number.
+NOTE: the piece list numbers can sometimes be out of sync with what's in the LEGO Bricks and Pieces database. Sometimes I need to do a more thorough Google search in order to find the correct piece number.
 
 Featured in the photographs are two minifigures I've designed (who I've named Taryn and Emmy for fun).
 
