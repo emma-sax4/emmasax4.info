@@ -1,7 +1,7 @@
-<!-- ---
+---
 title: School Dorm Room with Bathroom
 date: 2020-08-22 09:41:00 -0500
---- -->
+---
 
 This dorm room is designed to be a home for two students, and also contains a combination washer/dryer and a full bathroom with a large sink/vanity, toilet, bathtub, and shower. It's vents are realistic, and contains two doors. However, there are no windows, which isn't particularly realistic.
 
