@@ -1,5 +1,5 @@
 ---
-title: Diving Yacht (Set 60221)
+title: Diving Yacht (60221)
 date: 2020-06-06 17:00:00 -0500
 ---
 

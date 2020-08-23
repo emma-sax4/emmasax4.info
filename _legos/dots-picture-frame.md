@@ -1,5 +1,5 @@
 ---
-title: DOTS Picture Frame (Set 41914)
+title: DOTS Picture Frame (41914)
 date: 2020-06-06 16:00:00 -0500
 ---
 

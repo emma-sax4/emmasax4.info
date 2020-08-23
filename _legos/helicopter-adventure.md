@@ -1,5 +1,5 @@
 ---
-title: Helicopter Adventure 3-in-1 (Set 31092)
+title: Helicopter Adventure 3-in-1 (31092)
 date: 2020-06-06 14:00:00 -0500
 ---
 
