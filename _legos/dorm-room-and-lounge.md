@@ -17,23 +17,23 @@ NOTES: the piece list numbers can sometimes be out of sync with what's in the LE
 
 <div class="text-center">
   {% include elements/photo.html
-      url="https://live.staticflickr.com/65535/50050573101_fb17cb502a_k.jpg"
-      thumb_width="200" title="Dorm Room top facing napping minifigure" lightbox="Dorm Room"
+      url="https://live.staticflickr.com/65535/50260267152_f4053082fd_k.jpg"
+      thumb_width="200" title="Dorm Room top facing windows" lightbox="Dorm Room and Lounge"
   %}
   {% include elements/photo.html
-      url="https://live.staticflickr.com/65535/50050826537_4d42eae374_k.jpg"
-      thumb_width="200" title="Dorm Room top facing studying minifigure" lightbox="Dorm Room"
+      url="https://live.staticflickr.com/65535/50260269917_27e84fe1eb_k.jpg"
+      thumb_width="200" title="Dorm Room top facing napping minifigure" lightbox="Dorm Room and Lounge"
   %}
   {% include elements/photo.html
-      url="https://live.staticflickr.com/65535/50050572856_c7703277aa_k.jpg"
-      thumb_width="200" title="Dorm Room top facing door" lightbox="Dorm Room"
+      url="https://live.staticflickr.com/65535/50260269702_22fca19c1e_k.jpg"
+      thumb_width="200" title="Dorm Room through window" lightbox="Dorm Room and Lounge"
   %}
   {% include elements/photo.html
-      url="https://live.staticflickr.com/65535/50050572721_96905699ca_k.jpg"
-      thumb_width="200" title="Dorm Room looking through door" lightbox="Dorm Room"
+      url="https://live.staticflickr.com/65535/50259424483_b8f67eca4c_k.jpg"
+      thumb_width="200" title="Dorm Room top facing door" lightbox="Dorm Room and Lounge"
   %}
   {% include elements/photo.html
-      url="https://live.staticflickr.com/65535/50050574776_402215300c_k.jpg"
-      thumb_width="200" title="Dorm Room top facing windows" lightbox="Dorm Room"
+      url="https://live.staticflickr.com/65535/50260081341_d7a5d536ac_k.jpg"
+      thumb_width="200" title="Dorm Room top with view of door" lightbox="Dorm Room and Lounge"
   %}
 </div>
