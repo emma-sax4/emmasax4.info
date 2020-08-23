@@ -1,5 +1,5 @@
 ---
-title: Flower Display (Set 40187)
+title: Flower Display (40187)
 date: 2020-07-03 19:06:00 -0500
 ---
 

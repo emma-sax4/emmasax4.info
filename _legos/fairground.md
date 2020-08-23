@@ -1,5 +1,5 @@
 ---
-title: People Pack – Fun Fair (Set 60234)
+title: People Pack – Fun Fair (60234)
 date: 2020-06-27 10:00:00 -0500
 ---
 
