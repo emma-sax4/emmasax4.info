@@ -46,7 +46,7 @@ I know I already claimed to love traveling, but since I try to go to a new count
 
 ## [LEGO Sets and MOCs](/interests-and-hobbies/legos/)
 
-In April 2020, I started to get involved more with LEGO. I think a huge part of this is because we're all stuck inside from the COVID-19 epidemic. But, I discovered a tool called [LEGO Digital Designer (LDD)](https://www.lego.com/en-us/ldd), and you can use it to build your own LEGO sets. So, I thought I'd share some of the LEGO sets I've built and designed (also called MOCs—or My Own Creations), as well as some LEGO sets I've purchased and played around with. See my [dedicated LEGO page](/interests-and-hobbies/legos/) for more!
+In April 2020, I started to get involved more with LEGO. I think a huge part of this is because we're all stuck inside from the COVID-19 epidemic. But, I discovered a tool called [BrickLink Studio](https://www.bricklink.com/v3/studio/download.page), and you can use it to build your own LEGO sets. This tool looks like it's from BrickLink, but it's fully supported by LEGO as well... in fact, LEGO's own employees use Studio to build the official sets! So, I thought I'd share some of the LEGO sets I've built and designed (also called MOCs—or My Own Creations), as well as some LEGO sets I've purchased and played around with. See my [dedicated LEGO page](/interests-and-hobbies/legos/) for more!
 
 ## [Theatre](/interests-and-hobbies/theatre/)
 

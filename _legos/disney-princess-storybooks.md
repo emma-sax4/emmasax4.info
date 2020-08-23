@@ -1,5 +1,5 @@
 ---
-title: Disney Princess Storybook Adventures (Sets 43174, 43175, 43176, 43177)
+title: Disney Princess Storybook Adventures (43174, 43175, 43176, 43177)
 date: 2020-07-03 19:34:00 -0500
 ---
 
