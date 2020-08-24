@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Head -->
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="msapplication-TileColor" content="#2d89ef">
+    <meta name="msapplication-TileImage" content="/assets/images/favicon/mstile-150x150.png">
+    <meta name="msapplication-config" content="/assets/images/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="apple-touch-icon" sizes="120x120" href="/assets/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon/android-chrome-96x96.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="/assets/images/favicon/favicon-48x48.png">
+    <link rel="icon" type="image/png" sizes="196x196" href="/assets/images/favicon/favicon-196x196.png">
+    <link rel="manifest" href="/assets/images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/assets/images/favicon/safari-pinned-tab.svg" color="#1144ef">
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/lightbox.min.css">
+    <link rel="stylesheet" href="/assets/css/google_fonts.min.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="alternate" href="https://emmasax4.info/feed.xml" type="application/rss+xml">
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+    <title>Emma Sax | Adding Lightbox to a Jekyll Website</title>
+    <meta name="generator" content="Jekyll v3.9.0" />
+    <meta property="og:title" content="Emma Sax | Adding Lightbox to a Jekyll Website" />
+    <meta name="author" content="Emma Sax" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="description" content="Emma Sax’s personal website and blog. Includes information about my social media profiles, resumé, and hobbies." />
+    <meta property="og:description" content="Emma Sax’s personal website and blog. Includes information about my social media profiles, resumé, and hobbies." />
+    <link rel="canonical" href="https://emmasax4.info/blog/posts/adding-lightbox-to-a-jekyll-website/" />
+    <meta property="og:url" content="https://emmasax4.info/blog/posts/adding-lightbox-to-a-jekyll-website/" />
+    <meta property="og:site_name" content="Emma Sax" />
+    <meta property="og:type" content="article" />
+    <meta property="article:published_time" content="2020-08-24T04:05:00+00:00" />
+    <meta name="twitter:card" content="summary" />
+    <meta property="twitter:title" content="Adding Lightbox to a Jekyll Website" />
+    <meta name="google-site-verification" content="v04az8eo-0UcZrWCJr7SKAvM6hw90qTCBQoKx3PlXCA" />
+    <meta name="msvalidate.01" content="89B2B19FF966341B78EF64EDADE6DF81" />
+    <meta name="yandex-verification" content="c2741887f8c30dd1" />
+    <script type="application/ld+json">
+      {"description":"Emma Sax’s personal website and blog. Includes information about my social media profiles, resumé, and hobbies.","@type":"BlogPosting","headline":"Adding Lightbox to a Jekyll Website","dateModified":"2020-08-24T04:04:04+00:00","datePublished":"2020-08-24T04:05:00+00:00","url":"https://emmasax4.info/blog/posts/adding-lightbox-to-a-jekyll-website/","mainEntityOfPage":{"@type":"WebPage","@id":"https://emmasax4.info/blog/posts/adding-lightbox-to-a-jekyll-website/"},"author":{"@type":"Person","name":"Emma Sax"},"@context":"https://schema.org"}
+    </script>
+    <!-- End Jekyll SEO tag -->
+  </head>
+  <!-- Navigation bar -->
+  <header class="sticky-top">
+    <nav class="navbar navbar-expand-md navbar-dark py-0 py-md-0">
+      <!-- Left hand side of navbar -->
+      <a class="navbar-brand mb-0" href="https://emmasax4.info" target="_self">
+        <img src="/assets/images/logos/e-logo-white-40.png" width="30" height="30" style="margin-top: 1px; margin-bottom: 1px;"
+        class="d-inline-block align-top" alt="E logo"
+      >&nbsp;&nbsp;Emma Sax
+      </a>
+      <!-- Navbar open/close button when on a smaller screen -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse"
+      data-target="#navbar-links" aria-controls="navbar-links"
+      aria-expanded="false" aria-label="Toggle navigation">
+        <i data-feather="menu"></i>
+        <i data-feather="x"></i>
+      </button>
+      <!-- Page links -->
+      <div class="collapse navbar-collapse" id="navbar-links">
+        <ul class="navbar-nav ml-auto mt-2 mt-md-0">
+          <li class="nav-item ">
+            <a class="nav-link" href="/about-me/">About Me
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="/interests-and-hobbies/">Interests & Hobbies
+            </a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="/blog/">Blog
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <!-- Page content -->
+  <body>
+    <main class="container">
+      <div class="row">
+        <div class="col col-12 col-md-10">
+          <!-- Blog post title and information -->
+          <div class="text-center">
+            <h1 style="padding-bottom: .75rem;">
+              Adding Lightbox to a Jekyll Website
+              <div class="row" style="margin-top: -.5rem;">
+                <div class="col col-12 col-md-4">
+                  <span class="post-meta">
+                    <i style="width: 20px; height: 20px;" data-feather="tag"></i>
+                    <a href="/blog/jekyll/">
+                      jekyll
+                    </a>
+                    |
+                    <a href="/blog/tech/">
+                      tech
+                    </a>
+                  </span>
+                </div>
+                <div class="col col-12 col-md-4">
+                  <span class="date-meta">2020-08-23 23:05:00 -0500</span>
+                </div>
+                <div class="col col-12 col-md-4">
+                  <span class="post-meta">Read time: 4 minutes</span>
+                </div>
+              </div>
+            </h1>
+          </div>
+          <!-- Blog post content and comments -->
+          <div class="page-body">
+            <p>In July, as I worked on adding more LEGOs to my <a href="/interests-and-hobbies/legos/">LEGO page</a>, I realized something. I was adding a <em>lot</em> of pictures. And over time, I’d slowly be adding more. And images, unless you make them really tiny, take up a lot of precious screen space, requiring users to scroll a lot more to bypass lists of pictures. And if they’re not zoommable, what does somebody do when they want to take a closer look?</p>
+            <p>So, the answer to my questions was, to make pictures zoommable, and then show a thumbnail on the general page. This way, the image a user sees on the page is tinier (think 200 pixels wide), and then when they click it, it becomes full-screen (perhaps around 600 pixels wide).</p>
+            <p>So from a preliminary Google search, I realized what I needed was fancy Javascript/CSS to make this happen. I found the <a href="https://lokeshdhakar.com/projects/lightbox2/">Lightbox</a> solution pretty early on into my searching, and it looked so professional that I realized that I needed to give this a go.</p>
+            <p>Check out a tiny demo of what Lightbox looks like in action:</p>
+            <div class="text-center">
+              <h4>Without Lightbox:</h4>
+              <img class="image" src="https://i.imgur.com/lyWrj3r.jpeg" width="400" alt="Adorable creature">
+              <br>
+              <br>
+              <h4>With Lightbox (click the picture):</h4>
+              <a href="https://i.imgur.com/lyWrj3r.jpeg" title="Adorable creature" data-lightbox="PHOTO1">
+                <img class="image" src="https://i.imgur.com/lyWrj3r.jpeg" width="200" alt="Adorable creature">
+              </a>
+            </div>
+            <p>Implementing Lightbox <em>seemed</em> simple. Copy-paste a <a href="https://github.com/lokesh/lightbox2/tree/dev/dist/css">CSS file</a>, a <a href="https://github.com/lokesh/lightbox2/tree/dev/dist/js">Javascript file</a>, and add <a href="https://github.com/lokesh/lightbox2/tree/dev/dist/images">four images</a> to your project. And then call them from your <code>&lt;head&gt;</code> and as a <code>&lt;script&gt;</code>:</p>
+            <div class="language-html highlighter-rouge">
+              <div class="highlight">
+                <pre class="highlight"><code data-lang="html"><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"/assets/css/lightbox.min.css"</span><span class="nt">&gt;</span>
+</code></pre>
+              </div>
+            </div>
+            <p>and</p>
+            <div class="language-html highlighter-rouge">
+              <div class="highlight">
+                <pre class="highlight"><code data-lang="html"><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"/assets/js/lightbox.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+</code></pre>
+              </div>
+            </div>
+            <p>And then just call your image with a <code>data-lightbox</code> element:</p>
+            <div class="language-html highlighter-rouge">
+              <div class="highlight">
+                <pre class="highlight"><code data-lang="html"><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://example-image.com"</span> <span class="na">title=</span><span class="s">"Example image goes here"</span> <span class="na">data-lightbox=</span><span class="s">"IMAGE-1"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"image"</span> <span class="na">src=</span><span class="s">"https://example-image.com"</span> <span class="na">width=</span><span class="s">"200"</span> <span class="na">alt=</span><span class="s">"Example image goes here"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/a&gt;</span>
+</code></pre>
+              </div>
+            </div>
+            <p>But, I quickly ran into issues where the images wouldn’t get bigger on-click. To understand what I mean by the images not getting bigger, check out the official demo <a href="https://lokeshdhakar.com/projects/lightbox2/">here</a> or try to imagine my cute picture from above in its smaller form, but not getting bigger when you click on it. The photo is supposed to grow to full-size upon click, allowing a user to see even a small image more clearly.</p>
+            <p>Well, the solution was that my version of Jquery was outdated. The <a href="https://lokeshdhakar.com/projects/lightbox2/#getting-started">Getting Started</a> notes tell us that we must use 1.7+ version of Jquery and it doesn’t support the <code>slim</code> builds, so my Jquery was broken in two ways—apparently I missed that in my set up. So I ended up just taking Lokesh’s version of Jquery and Sizzle, and replacing my Jquery with those. There’s also a note which states the order that the JS files are loaded matters, and of course I had about 10 minutes of struggling while I learned that on my own.</p>
+            <p>The only pieces that I eventually customized was the fonts I wanted the captions to use, the <code>resizeDuration</code> to <code>500</code> instead of <code>700</code> so that my images would load a bit faster, and the <code>disableScrolling</code> to <code>true</code> instead of <code>false</code> to prevent scrolling while the images are open. Both of those two values I set directly inside my JS file, and the font change was set directly in my CSS file. The final CSS and Javascript files I use are available <a href="https://github.com/emmasax4/emmasax4.info/blob/67e0b5c477ca8fed72f4fc2a364e4eb47af759ab/assets/css/lightbox.min.css">here</a> and <a href="https://github.com/emmasax4/emmasax4.info/blob/8aec2dd10f0397ea25e7f6843126bcc3f58cee3a/assets/js/lightbox.min.js">here</a> respectively.</p>
+            <p>In order to make the use of Lightbox a little bit more Jekyll friendly, I realized that I didn’t really want to be copy-pasting a bunch of HTML code all over the place. What I wanted was a single “method” that could be reused. Although there isn’t an easy solution for this in Liquid/Jekyll, what I decided on was an <code>_includes</code> file:</p>
+            <div class="language-html highlighter-rouge">
+              <div class="highlight">
+                <pre class="highlight"><code data-lang="html"><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"{{ include.url }}"</span> <span class="na">title=</span><span class="s">"{{ include.title }}"</span> <span class="na">data-lightbox=</span><span class="s">"{{ include.lightbox }}"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"image"</span> <span class="na">src=</span><span class="s">"{{ include.url }}"</span> <span class="na">width=</span><span class="s">"{{ include.thumb_width }}"</span> <span class="na">alt=</span><span class="s">"{{ include.title }}"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/a&gt;</span>
+</code></pre>
+              </div>
+            </div>
+            <p>And then, we can call it like this:</p>
+            <div class="language-html highlighter-rouge">
+              <div class="highlight">
+                <pre class="highlight"><code data-lang="html">{% include elements/photo.html url="https://example-photo.com" thumb_width="150"
+                               title="Title of example photo"  lightbox="PHOTO-1"
+%}
+</code></pre>
+              </div>
+            </div>
+            <p>Note the <code>lightbox</code> property is for grouping sets of photos together on a page (particularly handy on pages like my <a href="/interests-and-hobbies/legos/">LEGO page</a> where there’s multiple sets of photos all on one HTML page).</p>
+            <p>And voila! There’s still some copy-pasting, but it’s a little easier than copy-pasting a bunch of repetitive HTML (which calls the URL twice, the title twice, etc).</p>
+            <p>After the first few hours of installation pain (which could’ve been greatly eased if I read <em>all</em> of the instructions before beginning), Lightbox has been flawless ever since. It’s worked well for everything I’ve used it for, and I can’t imagine going back. All of my photos look so much more professional now, both on larger screens and on mobile.</p>
+            <script src="/assets/js/show_comments.js" type="text/javascript"></script>
+            <div class="text-center" style="margin-bottom: 1rem;">
+              <button id="show-comments-button" class="btn btn-lg btn-outline-secondary"
+            onclick="loadComments('emmasax4');return false;">
+                Load Comments
+                <i data-feather="message-circle"></i>
+              </button>
+            </div>
+            <div id="disqus_thread"></div>
+            <noscript>
+              Please enable JavaScript to view the
+              <a href="https://disqus.com/?ref_noscript" rel="nofollow">
+                comments powered by Disqus.
+              </a>
+            </noscript>
+          </div>
+        </div>
+        <div class="col col-12 col-md-2 text-center">
+          <!-- Sidebar – button to go back to all posts and RSS feed button -->
+          <div class="text-center">
+            <div class="container" style="padding-bottom: 1rem;">
+              <a href="/blog/" class="btn btn-lg btn-outline-secondary">All Posts</a>
+            </div>
+            <a href="/feed.xml" target="_blank" class="link-icon-rss">
+              <i data-feather="rss"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+  <!-- Footer -->
+  <footer>
+    &copy; <script>
+      document.write(new Date().getFullYear());
+    </script>
+    Emma Sax. All rights reserved.
+    <br>
+    View on <a href="https://github.com/emmasax4/emmasax4.info">GitHub</a>.
+  </footer>
+  <!-- Javascript scripts -->
+  <script src="/assets/js/show_dates.js" type="text/javascript"></script>
+  <script src="/assets/js/external_links.js" type="text/javascript"></script>
+  <script src="/assets/js/jquery.min.js"></script>
+  <script src="/assets/js/lightbox.min.js"></script>
+  <script src="/assets/js/bootstrap.min.js"></script>
+  <script src="/assets/js/feather.min.js"></script>
+  <script>
+    feather.replace()
+  </script>
+</html>
