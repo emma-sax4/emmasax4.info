@@ -31,11 +31,15 @@ My tagline claims that I love swimming, reading, Netflix, and traveling. While a
 
 ## Traveling
 
-I know I already claimed to love traveling, but since I try to go to a new country every year, here's a cool list of all of the foreign countries I've been to:
+I know I already claimed to love traveling, but since I try to go to a new country every year, here's a cool list of all of the foreign countries (or non-continental U.S. states/territories) I've been to:
+
 <ol start="0">
   <li>China 🇨🇳</li>
+  <li>Iceland 🇮🇸  — it was only a layover and I never left the Reykjavík airport, but I like to count it anyways</li>
   <li>France 🇫🇷</li>
   <li>Spain 🇪🇸</li>
+  <li>Puerto Rico 🇵🇷</li>
+  <li>Alaska</li>
   <li>Czech Republic 🇨🇿</li>
   <li>Austria 🇦🇹</li>
   <li>Germany 🇩🇪</li>
