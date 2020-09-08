@@ -6,7 +6,7 @@
 
 For more information on deployments, tests, running Jekyll locally, contributing to this project, and more, please see the  [Contributing docs](https://github.com/emmasax4/emmasax4.info/blob/main/.github/contributing.md).
 
-To submit a feature request or a bug ticket, please submit an official [GitHub Issue](https://github.com/emmasax4/emmasax4.info/issues/new/choose).
+To submit a feature request or a bug ticket, please submit an official [GitHub Issue](https://github.com/emmasax4/emmasax4.info/issues/new).
 
 To report any security vulnerabilities, please view this project's [Security Policy](https://github.com/emmasax4/emmasax4.info/security/policy).
 
