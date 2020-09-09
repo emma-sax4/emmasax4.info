@@ -32,7 +32,7 @@ jobs:
       run: bundle config set path "vendor/bundle" && bundle install
 
     - name: Jekyll Build
-      run: JEKYLL_ENV=production bundle exec jekyll build --destination ./_site/
+      run: JEKYLL_ENV=production bundle exec jekyll build --destination _site
 
     - name: HTML Proofer
       run: bash scripts/html_proofer.sh || echo ""

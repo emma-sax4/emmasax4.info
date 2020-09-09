@@ -203,7 +203,7 @@ commands:
     steps:
     - run:
         name: Jekyll Build
-        command: {% raw %}JEKYLL_ENV=production bundle exec jekyll build --destination ./_site/{% endraw %}
+        command: {% raw %}JEKYLL_ENV=production bundle exec jekyll build --destination _site{% endraw %}
   html_proofer:
     steps:
     - run:
@@ -232,7 +232,7 @@ gem install bundler
     --assume-extension \
     --allow-hash-href \
     --internal-domains /emmasax4.info/ \
-    ./_site/{% endraw %}
+    _site{% endraw %}
 ```
 
 <div id="anchor">
@@ -352,9 +352,9 @@ git pull origin gh-pages
 # Delete everything except the _site, .git, and .circleci directories
 find . -maxdepth 1 ! -name "_site" ! -name ".git" ! -name ".circleci" -exec rm -rf {} \;
 # Move the _site directory contents into the root directory
-mv ./_site/* .
+mv _site* .
 # Delete the _site directory, as it's now empty
-rm -R ./_site/
+rm -R _site
 
 # Now make a deploy to the gh-pages branch and push!
 git add -fA
