@@ -116,11 +116,11 @@ The next few steps are to set up Bundler, install gems, and build the site. I'll
 
 # build the site
 - name: Jekyll Build
-  run: JEKYLL_ENV=production bundle exec jekyll build --destination ./_site/
+  run: JEKYLL_ENV=production bundle exec jekyll build --destination _site
 
 # run HTML proofer
 - name: HTML Proofer
-  run: bundle exec htmlproofer --assume-extension --allow-hash-href --internal-domains /emmasax4.info/ --only_4xx ./_site/{% endraw %}
+  run: bundle exec htmlproofer --assume-extension --allow-hash-href --internal-domains /emmasax4.info/ --only_4xx _site{% endraw %}
 ```
 
 Bam! Not too shabby. This now looks _very_ familiar to CircleCI.
