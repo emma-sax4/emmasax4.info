@@ -93,7 +93,7 @@ Please fill in the section that best describes your Issue and delete all other s
 <details><summary>General Question or Concern</summary>
 
   ## What's your question or comment?
-  
+
   > A clear and concise question or comment. Please add as much context as possible.
 
 </details>
