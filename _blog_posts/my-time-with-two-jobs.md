@@ -2,8 +2,6 @@
 layout: post
 title: My Time with Two Jobs
 permalink: /blog/posts/my-time-with-two-jobs/
-redirect_from:
-  - /blog/posts/2019-10-18-my-time-with-two-jobs/
 date: 2019-10-18 00:00:00 -0500
 ---
 

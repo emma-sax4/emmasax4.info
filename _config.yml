@@ -64,6 +64,9 @@ collections:
 feed:
   posts_limit: 5
 
+redirect_from:
+  json: false
+
 pagination:
   collection: blog_posts
   enabled: true

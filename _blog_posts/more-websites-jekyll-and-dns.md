@@ -3,8 +3,6 @@ layout: post
 title: More Websites, Jekyll, and DNS
 tags: [ tech, jekyll ]
 permalink: /blog/posts/more-websites-jekyll-and-dns/
-redirect_from:
-  - /blog/posts/2019-11-05-more-websites-jekyll-and-dns/
 date: 2019-11-05 00:00:00 -0600
 ---
 

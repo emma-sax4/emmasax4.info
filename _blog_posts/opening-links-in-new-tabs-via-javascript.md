@@ -3,8 +3,6 @@ layout: post
 title: Opening Links in New Tabs via Javascript
 tags: [ tech ]
 permalink: /blog/posts/opening-links-in-new-tabs-via-javascript/
-redirect_from:
-  - /blog/posts/2020-01-14-opening-links-in-new-tabs-via-javascript/
 date: 2020-01-14 00:00:00 -0600
 ---
 

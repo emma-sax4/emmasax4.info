@@ -3,8 +3,6 @@ layout: page
 title: Interests & Hobbies
 order: 2
 permalink: /interests-and-hobbies/
-redirect_from:
-  - /around-town/
 ---
 
 My tagline claims that I love swimming, reading, video/TV streaming services, and traveling. While all of these are true, here's some other interests and activities I participate in outside the office.

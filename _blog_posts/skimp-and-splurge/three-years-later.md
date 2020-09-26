@@ -4,8 +4,6 @@ title: Skimp and Splurge
 subtitle: "Part 2: Three Years Later"
 category: Skimp and Splurge
 permalink: /blog/posts/skimp-and-splurge/three-years-later/
-redirect_from:
-  - /blog/posts/skimp-and-splurge/2019-11-12-three-years-later/
 date: 2019-11-12 00:00:00 -0600
 ---
 

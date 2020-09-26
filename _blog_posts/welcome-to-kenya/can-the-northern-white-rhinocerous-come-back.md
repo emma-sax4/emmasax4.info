@@ -4,8 +4,6 @@ title: Welcome to Kenya
 subtitle: "Special: Can the Northern White Rhinoceros come back?"
 category: Welcome to Kenya
 permalink: /blog/posts/welcome-to-kenya/can-the-northern-white-rhinocerous-come-back/
-redirect_from:
-  - /blog/posts/welcome-to-kenya/2019-11-20-can-the-northern-white-rhinocerous-come-back/
 date: 2019-11-20 00:00:00 -0600
 ---
 

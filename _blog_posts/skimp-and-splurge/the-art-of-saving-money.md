@@ -4,8 +4,6 @@ title: Skimp and Splurge
 subtitle: "Part 1: The Art of Saving Money"
 category: Skimp and Splurge
 permalink: /blog/posts/skimp-and-splurge/the-art-of-saving-money/
-redirect_from:
-  - /blog/posts/skimp-and-splurge/2019-10-19-the-art-of-saving-money/
 date: 2019-10-19 00:00:00 -0500
 ---
 

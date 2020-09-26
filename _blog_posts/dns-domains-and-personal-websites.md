@@ -3,8 +3,6 @@ layout: post
 title: DNS, Domains, and Personal Websites
 tags: [ tech ]
 permalink: /blog/posts/dns-domains-and-personal-websites/
-redirect_from:
-  - /blog/posts/2019-12-20-dns-domains-and-personal-websites/
 date: 2019-12-20 00:00:00 -0600
 ---
 

@@ -4,8 +4,6 @@ title: Welcome to Kenya
 subtitle: "Part 1: Jambo"
 category: Welcome to Kenya
 permalink: /blog/posts/welcome-to-kenya/jambo/
-redirect_from:
-  - /blog/posts/welcome-to-kenya/2019-09-08-jambo/
 date: 2019-09-08 00:00:00 -0500
 ---
 

@@ -4,8 +4,6 @@ title: Skimp and Splurge
 subtitle: "Part 3: From Others' Perspectives"
 category: Skimp and Splurge
 permalink: /blog/posts/skimp-and-splurge/from-others-perspectives/
-redirect_from:
-  - /blog/posts/skimp-and-splurge/2019-12-28-from-others-perspectives/
 date: 2019-12-28 00:00:00 -0600
 ---
 

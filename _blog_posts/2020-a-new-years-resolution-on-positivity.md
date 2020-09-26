@@ -3,8 +3,6 @@ layout: post
 title: "2020: A New Years Resolution on Positivity"
 tags: [ self-improvement ]
 permalink: /blog/posts/2020-a-new-years-resolution-on-positivity/
-redirect_from:
-  - /blog/posts/2020-01-05-2020-a-new-years-resolution-on-positivity/
 date: 2020-01-05 00:00:00 -0600
 ---
 

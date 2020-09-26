@@ -4,8 +4,6 @@ title: Welcome to Kenya
 subtitle: "Part 5: Kwaheri"
 category: Welcome to Kenya
 permalink: /blog/posts/welcome-to-kenya/kwaheri/
-redirect_from:
-  - /blog/posts/welcome-to-kenya/2019-10-09-kwaheri/
 date: 2019-10-09 00:00:00 -0500
 ---
 

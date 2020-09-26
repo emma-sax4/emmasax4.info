@@ -3,8 +3,6 @@ layout: post
 title: Adding Bootstrap to Your Static Content Site
 tags: [ tech ]
 permalink: /blog/posts/adding-bootstrap-to-your-static-content-site/
-redirect_from:
-  - /blog/posts/2019-12-17-adding-bootstrap-to-your-static-content-site/
 date: 2019-12-17 00:00:00 -0600
 ---
 
