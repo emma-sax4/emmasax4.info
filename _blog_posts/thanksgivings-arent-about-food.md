@@ -3,8 +3,6 @@ layout: post
 title: Thanksgivings Aren't About Food 🍽
 tags: [ holidays ]
 permalink: /blog/posts/thanksgivings-arent-about-food/
-redirect_from:
-  - /blog/posts/2019-12-01-thanksgivings-arent-about-food/
 date: 2019-12-01 00:00:00 -0600
 ---
 

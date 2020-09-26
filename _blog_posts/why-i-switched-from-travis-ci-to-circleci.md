@@ -58,7 +58,7 @@ Building my Jekyll website using Travis CI was extremely easy. It looked somethi
 ```yaml
 script:
   - JEKYLL_ENV=production bundle exec jekyll build --destination ./site
-  - htmlproofer --assume-extension --allow-hash-href --internal-domains /emmasax4.info/ ./site
+  - htmlproofer --assume-extension --allow-hash-href --internal-domains /emmasax4.com/ ./site
 ```
 
 The `script` is one of the [job lifecycle](https://docs.travis-ci.com/user/job-lifecycle/) phases. This `script` section is where I could build the project, run tests, etc. For my site, I wanted to try running [HTML Proofer](https://github.com/gjtorikian/html-proofer), hence the second `script` line.
@@ -231,7 +231,7 @@ gem install bundler
 {% raw %}bundle exec htmlproofer \
     --assume-extension \
     --allow-hash-href \
-    --internal-domains /emmasax4.info/ \
+    --internal-domains /emmasax4.com/ \
     _site{% endraw %}
 ```
 

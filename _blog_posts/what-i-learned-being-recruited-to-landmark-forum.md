@@ -3,8 +3,6 @@ layout: post
 title: What I Learned From Being Recruited to Landmark Forum
 tags: [ self-improvement ]
 permalink: /blog/posts/what-i-learned-being-recruited-to-landmark-forum/
-redirect_from:
-  - /blog/posts/2020-02-01-what-i-learned-being-recruited-to-landmark-forum/
 date: 2020-02-01 00:00:00 -0600
 ---
 

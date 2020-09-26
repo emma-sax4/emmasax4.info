@@ -3,8 +3,6 @@ layout: post
 title: Adding Pagination without Jekyll
 tags: [ tech, jekyll ]
 permalink: /blog/posts/adding-pagination-without-jekyll/
-redirect_from:
-  - /blog/posts/2019-09-12-adding-pagination-without-jekyll/
 date: 2019-09-12 00:00:00 -0500
 ---
 

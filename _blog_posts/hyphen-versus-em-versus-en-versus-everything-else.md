@@ -2,8 +2,6 @@
 layout: post
 title: Hyphen vs. Em vs. En vs. Everything Else
 permalink: /blog/posts/hyphen-versus-em-versus-en-versus-everything-else/
-redirect_from:
-  - /blog/posts/2019-09-13-hyphen-versus-em-versus-en-versus-everything-else/
 date: 2019-09-13 00:00:00 -0500
 ---
 
