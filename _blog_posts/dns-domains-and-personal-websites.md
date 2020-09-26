@@ -160,3 +160,7 @@ So there you go! Hopefully this has helped you either learn more about DNS and d
 * [www.howtogeek.com: add your own domain to your wordpress.com blog](https://www.howtogeek.com/howto/18799/add-your-own-domain-to-your-wordpress.com-blog/)
 * [quora.com: what do you call the section at the end of an email that includes peoples job contact info](https://www.quora.com/What-do-you-call-the-section-at-the-end-of-an-email-that-includes-peoples-job-contact-info-etc-How-can-I-design-one-for-myself)
 * [namecheap.com](https://namecheap.com/)
+
+---
+
+EDIT: Since writing this blog post, I've switched the primary domain for my website from `emmasax4.info` to `emmasax4.com`.
