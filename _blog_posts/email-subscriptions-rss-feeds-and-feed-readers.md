@@ -3,8 +3,6 @@ layout: post
 title: Email Subscriptions, RSS Feeds, and Feed Readers
 tags: [ tech ]
 permalink: /blog/posts/email-subscriptions-rss-feeds-and-feed-readers/
-redirect_from:
-  - /blog/posts/2019-12-30-email-subscriptions-rss-feeds-and-feed-readers/
 date: 2019-12-30 00:00:00 -0600
 ---
 
@@ -26,7 +24,7 @@ I added these values to my `_config.yml`:
 feed:
   production:
     title: Emma Sax's Blog
-    url: https://emmasax4.info
+    url: https://emmasax4.com
     items: 5
   development:
     title: LOCAL Emma's Blog

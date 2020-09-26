@@ -1,8 +1,6 @@
 ---
 layout: index
 permalink: /
-redirect_from:
-  - /contact-me/
 ---
 
 She/Her/Hers. Cloud Operations Engineer at [Dispatch](https://www.dispatchit.com).

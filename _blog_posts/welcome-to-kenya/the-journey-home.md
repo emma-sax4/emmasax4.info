@@ -4,8 +4,6 @@ title: Welcome to Kenya
 subtitle: "Part 4: The Journey Home"
 category: Welcome to Kenya
 permalink: /blog/posts/welcome-to-kenya/the-journey-home/
-redirect_from:
-  - /blog/posts/welcome-to-kenya/2019-10-01-the-journey-home/
 date: 2019-10-01 00:00:00 -0500
 ---
 

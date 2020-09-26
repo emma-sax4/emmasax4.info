@@ -3,8 +3,6 @@ layout: post
 title: My First Blog Post
 tags: [ tech ]
 permalink: /blog/posts/my-first-blog-post/
-redirect_from:
-  - /blog/posts/2019-09-06-my-first-blog-post/
 date: 2019-09-06 00:00:00 -0500
 ---
 

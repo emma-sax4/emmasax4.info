@@ -3,8 +3,6 @@ layout: post
 title: Switching to Jekyll
 tags: [ tech, jekyll ]
 permalink: /blog/posts/switching-to-jekyll/
-redirect_from:
-  - /blog/posts/2019-09-09-switching-to-jekyll/
 date: 2019-09-09 00:00:00 -0500
 ---
 

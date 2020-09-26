@@ -3,8 +3,6 @@ layout: post
 title: Using <header-code>jekyll-paginate-v2</header-code>
 tags: [ jekyll, tech ]
 permalink: /blog/posts/using-jekyll-paginate-v2/
-redirect_from:
-  - /blog/posts/2019-12-18-using-jekyll-paginate-v2/
 date: 2019-12-18 00:00:00 -0600
 ---
 
