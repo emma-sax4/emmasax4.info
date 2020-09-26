@@ -3,7 +3,7 @@
     <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
     <link href="https://emmasax4.info/feed.xml" rel="self" type="application/atom+xml" />
     <link href="https://emmasax4.info/" rel="alternate" type="text/html" />
-    <updated>2020-09-26T02:02:27+00:00</updated>
+    <updated>2020-09-26T04:49:48+00:00</updated>
     <id>https://emmasax4.info/feed.xml</id>
     <title type="html">Emma Sax</title>
     <subtitle>Emma Sax's personal website and blog. Includes information about my social media profiles, resumé, and hobbies.</subtitle>
@@ -14,7 +14,7 @@
       <title type="html">Adding Lightbox to a Jekyll Website</title>
       <link href="https://emmasax4.info/blog/posts/adding-lightbox-to-a-jekyll-website/" rel="alternate" type="text/html" title="Adding Lightbox to a Jekyll Website" />
       <published>2020-08-24T04:05:00+00:00</published>
-      <updated>2020-08-24T04:04:04+00:00</updated>
+      <updated>2020-09-26T04:49:48+00:00</updated>
       <id>https://emmasax4.info/blog/posts/adding-lightbox-to-a-jekyll-website</id>
       <author>
         <name>Emma Sax</name>
@@ -38,7 +38,7 @@
       <title type="html">Switching from kramdown to CommonMark</title>
       <link href="https://emmasax4.info/blog/posts/switching-from-kramdown-to-commonmark/" rel="alternate" type="text/html" title="Switching from kramdown to CommonMark" />
       <published>2020-07-19T15:00:33+00:00</published>
-      <updated>2020-07-29T23:01:01+00:00</updated>
+      <updated>2020-09-26T04:49:48+00:00</updated>
       <id>https://emmasax4.info/blog/posts/switching-from-kramdown-to-commonmark</id>
       <author>
         <name>Emma Sax</name>
