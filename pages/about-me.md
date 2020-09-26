@@ -21,8 +21,10 @@ Self-motivated, leadership skills, detail-oriented, problem solving skills, pair
 
 ## Experience
 
-* SportsEngine (May 2015–present), Minneapolis, MN
-  * Platform Operations Engineer (June 2017–present)
+* Dispatch (September 2020–present), Bloomington, MN
+  * Cloud Operations Engineer
+* SportsEngine (May 2015–September 2020), Minneapolis, MN
+  * Platform Operations Engineer (June 2017–September 2020)
   * Junior Software Engineer (January 2016–May 2017)
   * Software Engineer Intern (May 2015–August 2015)
 * University of Minnesota, Morris (May 2014–December 2014)
