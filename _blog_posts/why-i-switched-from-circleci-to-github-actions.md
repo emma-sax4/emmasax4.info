@@ -98,7 +98,7 @@ Technically the Checkout Action provides a `v2` to use, but I found that it does
 The next few steps are to set up Bundler, install gems, and build the site. I'll just give these steps instead of explaining:
 
 ```yml
-{% raw %}# install the exact version of bundler that the Gemfile.lock uses
+# install the exact version of bundler that the Gemfile.lock uses
 - name: Configure Bundler
   run: sudo gem install bundler -v $(cat Gemfile.lock | tail -1 | tr -d ' ')
 
@@ -107,7 +107,7 @@ The next few steps are to set up Bundler, install gems, and build the site. I'll
   uses: actions/cache@v1
   with:
     path: vendor/bundle
-    key: bundler-cache-${{ hashFiles('**/Gemfile.lock') }}
+    key: bundler-cache-{% raw %}${{ hashFiles('**/Gemfile.lock') }}{% endraw %}
     restore-keys: bundler-cache-
 
 # install all gems or use the cached gems
@@ -120,7 +120,7 @@ The next few steps are to set up Bundler, install gems, and build the site. I'll
 
 # run HTML proofer
 - name: HTML Proofer
-  run: bundle exec htmlproofer --assume-extension --allow-hash-href --internal-domains /emmasax4.com/ --only_4xx _site{% endraw %}
+  run: bundle exec htmlproofer --assume-extension --allow-hash-href --internal-domains /{{ site.domain }}/ --only_4xx _site
 ```
 
 Bam! Not too shabby. This now looks _very_ familiar to CircleCI.

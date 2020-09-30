@@ -161,4 +161,4 @@ So there you go! Hopefully this has helped you either learn more about DNS and d
 
 ---
 
-EDIT: Since writing this blog post, I've switched the primary domain for my website from `emmasax4.info` to `emmasax4.com`.
+EDIT: Since writing this blog post, I've switched the primary domain for my website from `emmasax4.info` to `{{ site.domain }}`.
