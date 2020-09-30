@@ -2,7 +2,7 @@ title: Emma Sax
 author: Emma Sax
 description: Emma Sax's personal website and blog. Includes information about my social media profiles, resumé, and hobbies.
 
-url: https://emmasax4.com
+url: https://emmasax4.com # when running the Jekyll server locally, this becomes the local URL
 domain: emmasax4.com
 github_repo: https://github.com/emmasax4/emmasax4.com
 
