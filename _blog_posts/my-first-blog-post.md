@@ -8,7 +8,7 @@ date: 2019-09-06 00:00:00 -0500
 
 I've been wanting to start a blog for myself for a while, but I've been having trouble figuring out where to start. But, there's no time like the present, so I thought I might as well just go for it!
 
-The very first blog I started, used Ruby On Rails... you can check it out [here](https://github.com/emmasax4/blog). Needless to say, it didn't go very well.
+The very first blog I started, used Ruby On Rails... you can check it out [here]({{ site.author_profiles.github }}/blog). Needless to say, it didn't go very well.
 
 But since I started to beef up this little website (which, 🤫, is actually just a bunch of static HTML files), I decided that I could probably just add the blog functionality to this site.
 
