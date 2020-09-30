@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
   <feed xmlns="http://www.w3.org/2005/Atom" >
     <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
-    <link href="https://emmasax4.com/feed.xml" rel="self" type="application/atom+xml" />
-    <link href="https://emmasax4.com/" rel="alternate" type="text/html" />
-    <updated>2020-09-26T05:57:31+00:00</updated>
-    <id>https://emmasax4.com/feed.xml</id>
+    <link href="/feed.xml" rel="self" type="application/atom+xml" />
+    <link href="/" rel="alternate" type="text/html" />
+    <updated>2020-09-30T03:04:13+00:00</updated>
+    <id>/feed.xml</id>
     <title type="html">Emma Sax</title>
     <subtitle>Emma Sax's personal website and blog. Includes information about my social media profiles, resumé, and hobbies.</subtitle>
     <author>
@@ -12,10 +12,10 @@
     </author>
     <entry>
       <title type="html">Adding Lightbox to a Jekyll Website</title>
-      <link href="https://emmasax4.com/blog/posts/adding-lightbox-to-a-jekyll-website/" rel="alternate" type="text/html" title="Adding Lightbox to a Jekyll Website" />
+      <link href="/blog/posts/adding-lightbox-to-a-jekyll-website/" rel="alternate" type="text/html" title="Adding Lightbox to a Jekyll Website" />
       <published>2020-08-24T04:05:00+00:00</published>
-      <updated>2020-09-26T04:49:48+00:00</updated>
-      <id>https://emmasax4.com/blog/posts/adding-lightbox-to-a-jekyll-website</id>
+      <updated>2020-09-30T03:04:13+00:00</updated>
+      <id>/blog/posts/adding-lightbox-to-a-jekyll-website</id>
       <author>
         <name>Emma Sax</name>
       </author>
@@ -24,10 +24,10 @@
     </entry>
     <entry>
       <title type="html">4th of July 🇺🇸: To Party 🥳 or Not to Party 😷</title>
-      <link href="https://emmasax4.com/blog/posts/4th-of-july-to-party-or-not-to-party/" rel="alternate" type="text/html" title="4th of July 🇺🇸: To Party 🥳 or Not to Party 😷" />
+      <link href="/blog/posts/4th-of-july-to-party-or-not-to-party/" rel="alternate" type="text/html" title="4th of July 🇺🇸: To Party 🥳 or Not to Party 😷" />
       <published>2020-07-25T21:46:00+00:00</published>
       <updated>2020-07-25T21:45:54+00:00</updated>
-      <id>https://emmasax4.com/blog/posts/july-fourth-to-party-or-not-to-party</id>
+      <id>/blog/posts/july-fourth-to-party-or-not-to-party</id>
       <author>
         <name>Emma Sax</name>
       </author>
@@ -36,10 +36,10 @@
     </entry>
     <entry>
       <title type="html">Switching from kramdown to CommonMark</title>
-      <link href="https://emmasax4.com/blog/posts/switching-from-kramdown-to-commonmark/" rel="alternate" type="text/html" title="Switching from kramdown to CommonMark" />
+      <link href="/blog/posts/switching-from-kramdown-to-commonmark/" rel="alternate" type="text/html" title="Switching from kramdown to CommonMark" />
       <published>2020-07-19T15:00:33+00:00</published>
-      <updated>2020-09-26T04:49:48+00:00</updated>
-      <id>https://emmasax4.com/blog/posts/switching-from-kramdown-to-commonmark</id>
+      <updated>2020-09-30T03:04:13+00:00</updated>
+      <id>/blog/posts/switching-from-kramdown-to-commonmark</id>
       <author>
         <name>Emma Sax</name>
       </author>
@@ -48,10 +48,10 @@
     </entry>
     <entry>
       <title type="html">Why and How I Renamed my master Branch</title>
-      <link href="https://emmasax4.com/blog/posts/why-and-how-i-renamed-my-master-branch/" rel="alternate" type="text/html" title="Why and How I Renamed my master Branch" />
+      <link href="/blog/posts/why-and-how-i-renamed-my-master-branch/" rel="alternate" type="text/html" title="Why and How I Renamed my master Branch" />
       <published>2020-06-17T05:00:00+00:00</published>
       <updated>2020-06-29T22:35:31+00:00</updated>
-      <id>https://emmasax4.com/blog/posts/why-and-how-i-renamed-my-master-branch</id>
+      <id>/blog/posts/why-and-how-i-renamed-my-master-branch</id>
       <author>
         <name>Emma Sax</name>
       </author>
@@ -59,10 +59,10 @@
     </entry>
     <entry>
       <title type="html">Why I Switched from CircleCI to GitHub Actions</title>
-      <link href="https://emmasax4.com/blog/posts/why-i-switched-from-circleci-to-github-actions/" rel="alternate" type="text/html" title="Why I Switched from CircleCI to GitHub Actions" />
+      <link href="/blog/posts/why-i-switched-from-circleci-to-github-actions/" rel="alternate" type="text/html" title="Why I Switched from CircleCI to GitHub Actions" />
       <published>2020-05-28T05:00:00+00:00</published>
-      <updated>2020-09-26T05:57:31+00:00</updated>
-      <id>https://emmasax4.com/blog/posts/why-i-switched-from-circleci-to-github-actions</id>
+      <updated>2020-09-30T03:04:13+00:00</updated>
+      <id>/blog/posts/why-i-switched-from-circleci-to-github-actions</id>
       <author>
         <name>Emma Sax</name>
       </author>
