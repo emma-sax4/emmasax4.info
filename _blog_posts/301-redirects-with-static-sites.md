@@ -11,9 +11,73 @@ Anyway, my domain isn't what this blog post is supposed to be about. It's suppos
 
 Firstly, I needed to rename my repository (this repository). Doing this was actually pretty straightforward. Here's the [pull request]({{ site.author_profiles.github }}/{{ site.github_repo }}/pull/305). I used a selective find/replace, made the pull request, merged, and then changed the name in the settings of the repository.
 
-Secondly, I needed to actually change the website. This was a bit longer. I had to find/replace a bunch of places in the code, including in blog posts where I had hard-coded the website name (most likely as a code block). I had to update the `CNAME` file (which actually switches the domain GitHub tries to host the site at). The other two biggest things I had to do was change the Google/Yandex tokens for my SEO ratings (I had to add a "new" site to Google, Yandex, and Bing in order to have those search engines track the new domain). And I removed a bunch of redirects. Although it'd be nice if all of those redirected nicely, I realized it wasn't a priority anymore. What was a higher priority was making `https://emmasax4.info` redirect to `emmasax4.com`. And here is where I realized that with a static site, there's no super-easy way to make awesome redirects.
+Secondly, I needed to actually change the website. This was a bit longer. I had to find/replace a bunch of places in the code, including in blog posts where I had hard-coded the website name (most likely as a code block). I had to update the `CNAME` file (which actually switches the domain GitHub tries to host the site at). The other two biggest things I had to do was change the Google/Yandex tokens for my SEO ratings (I had to add a "new" site to Google, Yandex, and Bing in order to have those search engines track the new domain). And I removed a bunch of redirects. Although it'd be nice if all of those redirected nicely, I realized it wasn't a priority anymore. What was a higher priority was making `https://emmasax4.info` redirect to `https://emmasax4.com`. And here is where I realized that with a static site, there's no super-easy way to make awesome redirects.
 
 The tool that I use to set up my DNS has an easy way to set up redirects. They're functional, and so that's great. But, I wanted my redirects to be fancier. If somebody types in `https://emmasax4.info`, they should be redirected to `https://emmasax4.com`. But what if they pass in something like this: `https://emmasax4.info/path/to/webpage/`? They should be redirected to `https://emmasax4.com/path/to/webpage/`. And my DNS provider wasn't capable of providing that service (transferring path when redirecting). So, I looked for simple, free, easy-to-implement alternatives that could redirect all URLs.
+
+What I found was [this solution](https://opensource.com/article/19/7/permanently-redirect-github-pages) from Oleksii Tsvietnov. The idea is to make a new GitHub repository that will publish to GitHub Pages with the old domain. And then, create an `index.html` file which will redirect to the new domain. So, when a user navigates to the old domain, they'll hit GitHub Pages with your new `index.html`, and then it'll redirect automatically to the new domain (which is also a separate GitHub Pages).
+
+I originally took a modified version of the HTML code in that blog post, which looked something like this:
+
+```html
+
+<!DOCTYPE html>
+<html lang="en-US">
+  <meta charset="utf-8">
+  <title>Redirecting&hellip;</title>
+  <link rel="canonical" href="https://destination-domain.com">
+  <script>
+    location="https://destination-domain.com"
+  </script>
+  <meta http-equiv="refresh" content="0; url=https://destination-domain.com">
+  <meta name="robots" content="noindex">
+  <h1>Redirecting&hellip;</h1>
+  <a href="https://destination-domain.com">Click here if you are not redirected.</a>
+</html>
+```
+
+This worked. I duplicated each HTML file on the site in this new project, replicating the `index.html` files found [here]({{ site.author_profiles.github }}/{{ site.github_repo }}/tree/4c4aaed77f44ccf743ce47ddef9c91c9a89528a4). But I realized this wasn't sustainable. I didn't want to be copy-pasting HTML from each file to another all over the place. I wanted ONE HTML file that would properly redirect any incoming path to the new domain, and forwarding the same path.
+
+Furthermore, I wanted users to know I was redirecting them. I didn't want to do it under the hood, with them potentially not even noticing they were redirected. I wanted them to have a clear message they were being redirected, and for them to know that they were redirecting to a reputable new site. I wanted the redirect page to _look_ like my existing website, so it was clear they were still within the realm of my website.
+
+So, the first thing I did was add CSS. I copy-pasted the `./assets/` directory from [the main repository]({{ site.author_profiles.github }}/{{ site.github_repo }}/tree/4171201807c9e217372dafd130543e5a2da79bba/assets) to the new repository. I did a selective copy-paste, only copying the CSS, JS, images that the new "site" required. And then called those assets straight from my `index.html`, just like in my core repository. I opted not to include the full navigation bar, but just showing a basic blue top bar, to make it feel like it was still my website.
+
+<!-- Add photo here -->
+
+And then the last couple tricks was to add two ways to do the redirect. One was a delayed redirect (for like five seconds), so a user would sit on the redirect page for five seconds and then be automatically redirected. The second was for an easy way for the user to redirect themselves. This eventually turned into a button. The tricky part of both of these was forwarding the incoming path. It turns out, the easiest way to do this is to actually use Javascript. For example, this is how you could read the incoming path that is navigated to, and pass it on in a delayed redirect:
+
+```js
+pathname = window.location.pathname;
+setTimeout(function(){ window.location.href = "https://destination-domain.com" + pathname;}, 5000);
+```
+
+Now, with this Javascript, the key was to use it in two places: the button, and the delay. This was the ending solution:
+
+```html
+<script type="text/javascript">
+  var pathname = window.location.pathname;
+
+  // Perform an automatic timed redirect
+  setTimeout(function(){ window.location.href = "https://destination-domain.com" + pathname;}, 5000);
+
+  // Add button click functionality as well
+  function redirect_now() {
+    window.location.href = "https://destination-domain.com" + pathname;
+  };
+</script>
+
+<button class="btn btn-lg btn-outline-secondary" onclick="redirect_now(); return false;">
+  Click here if you are not redirected.
+</button>
+```
+
+Bam! Now, no matter what path a user passes in after the `/`, they'll be forwarded to the exact same URL with just a different domain. The last part of this project was to remove all of the extra `index.html` files. All we really need are the root `index.html` (to catch when someone navigates to `https://emmasax4.info` directly), and when somebody navigates to.... anything else (`https://emmasax4.info/anything/else/goes/here`). In that case, we can just make a `404.html` file. If the user navigates to anything else, then GitHub Pages should show the `404.html` page. And then if the `404.html` functionality redirects to the new domain, _while passing the end of the path (`/anything/else/goes/here`)_, then the `404.html` page acts as a catch-all. So, I created a symlinked file off of the `index.html` page:
+
+```bash
+ln -s index.html 404.html
+```
+
+This way, if I change one of the HTML files, it'll automatically change the others. My final HTML files look like [this]({{ site.author_profiles.github }}/emmasax4-redirects/blob/13d56749a2675a667bce280c3c701e98453fd784/index.html).
 
 ---
 
