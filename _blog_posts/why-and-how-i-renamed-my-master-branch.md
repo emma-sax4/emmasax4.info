@@ -79,9 +79,9 @@ And that was it. There were a couple of minutes where GitHub Pages wouldn't upda
 
 Since this shift, I've actually made a lot of changes on GitHub. I've changed my GitHub username, changed the name of my default branch on my project from `source` to `main`, as well as normal updates and changes to the site. So, although the pull requests each look a little bit out-of-date, I'll link them all here so they can be perused for the changes I had to make as I went:
 
-* [Renaming the repository]({{ site.github_repo }}/pull/243)
-* [Renaming `master` branch]({{ site.github_repo }}/pull/244)
-* [Renaming default branch]({{ site.github_repo }}/pull/245)
+* [Renaming the repository]({{ site.author_profiles.github }}/{{ site.github_repo }}/pull/243)
+* [Renaming `master` branch]({{ site.author_profiles.github }}/{{ site.github_repo }}/pull/244)
+* [Renaming default branch]({{ site.author_profiles.github }}/{{ site.github_repo }}/pull/245)
 
 By the end of everything, I now have one repository (that's a project GitHub Page instead of a user page), two branches (`main` and `gh-pages`, and each name is descriptive and accurate), and a new GitHub username (that's completely unrelated).
 
