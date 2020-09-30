@@ -9,7 +9,7 @@ This past weekend, I made the big decision to move the domain of my primary webs
 
 Anyway, my domain isn't what this blog post is supposed to be about. It's supposed to be about the actual switch. So, there were four things I realized I needed to do to actually switch out the domains.
 
-Firstly, I needed to rename my repository (this repository). Doing this was actually pretty straightforward. Here's the [pull request]({{ site.github_repo }}/pull/305). I used a selective find/replace, made the pull request, merged, and then changed the name in the settings of the repository.
+Firstly, I needed to rename my repository (this repository). Doing this was actually pretty straightforward. Here's the [pull request]({{ site.author_profiles.github }}/{{ site.github_repo }}/pull/305). I used a selective find/replace, made the pull request, merged, and then changed the name in the settings of the repository.
 
 Secondly, I needed to actually change the website. This was a bit longer. I had to find/replace a bunch of places in the code, including in blog posts where I had hard-coded the website name (most likely as a code block). I had to update the `CNAME` file (which actually switches the domain GitHub tries to host the site at). The other two biggest things I had to do was change the Google/Yandex tokens for my SEO ratings (I had to add a "new" site to Google, Yandex, and Bing in order to have those search engines track the new domain). And I removed a bunch of redirects. Although it'd be nice if all of those redirected nicely, I realized it wasn't a priority anymore. What was a higher priority was making `https://emmasax4.info` redirect to `emmasax4.com`. And here is where I realized that with a static site, there's no super-easy way to make awesome redirects.
 
@@ -19,10 +19,10 @@ The tool that I use to set up my DNS has an easy way to set up redirects. They'r
 
 To summarize, the basic steps I used to change the domain on my static site with GitHub Pages:
 
-1. Rename the repository ([{{ site.github_repo }}#305]({{ site.github_repo }}/pull/305))
-2. Update where the project name is hard-coded ([{{ site.github_repo }}#306]({{ site.github_repo }}/pull/306))
+1. Rename the repository ([{{ site.author_profiles.github }}/{{ site.github_repo }}/pull/305]({{ site.author_profiles.github }}/{{ site.github_repo }}/pull/305))
+2. Update where the project name is hard-coded ([{{ site.author_profiles.github }}/{{ site.github_repo }}/pull/306]({{ site.author_profiles.github }}/{{ site.github_repo }}/pull/306))
 3. Change domain (and set up SSL certificates if needed)
-4. Create redirects from old domain to new domain ([https://github.com/emmasax4/emmasax4-redirects](https://github.com/emmasax4/emmasax4-redirects))
+4. Create redirects from old domain to new domain ([{{ site.author_profiles.github }}/emmasax4-redirects]({{ site.author_profiles.github }}/emmasax4-redirects))
 5. Set up SEO trackers to monitor new domain
 6. Wait a few months
 7. Turn off redirects
