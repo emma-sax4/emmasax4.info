@@ -24,7 +24,7 @@ I added these values to my `_config.yml`:
 feed:
   production:
     title: Emma Sax's Blog
-    url: https://emmasax4.com
+    url: {{ site.production_url }}
     items: 5
   development:
     title: LOCAL Emma's Blog

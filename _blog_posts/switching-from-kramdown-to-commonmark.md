@@ -91,7 +91,7 @@ Nice and easy. But apparently that's kramdown specific, and the only way to defi
   * [Nested Header One](#nested-header-one-2)
 ```
 
-Now, if I'm completely honest, this isn't that bad. It's terrible to have to update, but if I wait until the blog post is written, then it won't go through lots more changes. Especially when I found [this Ruby file](https://github.com/emmasax4/emmasax4.com/blob/main/scripts/toc_markdown.rb) and fixed it up to suit my needs... it makes it easy to generate a Table of Contents based off of existing headers in a particular file.
+Now, if I'm completely honest, this isn't that bad. It's terrible to have to update, but if I wait until the blog post is written, then it won't go through lots more changes. Especially when I found [this Ruby file]({{ site.github_repo }}/blob/bdde3f769413dfe1ce541eeed1126018b68c707d/scripts/toc_markdown.rb) and fixed it up to suit my needs... it makes it easy to generate a Table of Contents based off of existing headers in a particular file.
 
 The challenging part was setting the anchors. When I used kramdown's TOC, the anchors were automatic (because I actually moved my navigation bar to be sticky, they actually had a slight bug in them the whole time, but that's unrelated). Now, it was time for me to have to set my own anchors on my headers—adding to the amount of "annoying" that is having to update a TOC. This was the ending solution:
 

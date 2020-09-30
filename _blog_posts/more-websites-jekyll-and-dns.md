@@ -26,4 +26,4 @@ Throughout my website "spike," I'd like to say that I learned a lot more about J
 
 ---
 
-EDIT: Since writing this blog post, I've switched the primary domain for my website from `emmasax4.info` to `emmasax4.com`.
+EDIT: Since writing this blog post, I've switched the primary domain for my website from `emmasax4.info` to `{{ site.domain }}`.
