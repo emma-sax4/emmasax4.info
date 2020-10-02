@@ -201,7 +201,7 @@ With GitHub Actions' marketplace, it made it simple to find the perfect action t
 
 ```yml
 {% raw %}- name: GitHub Pages Deploy
-  uses: emmasax4/github-pages-deploy-action@emmasax4_github_pages_deploy_action
+  uses: emmasax4/github-pages-deploy-action@main
   env:
     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   with:

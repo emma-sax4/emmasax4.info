@@ -44,7 +44,7 @@ jobs:
       run: bash scripts/markdown_linter.sh
 
     - name: GitHub Pages Deploy
-      uses: emmasax4/github-pages-deploy-action@emmasax4_github_pages_deploy_action
+      uses: emmasax4/github-pages-deploy-action@main
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         branch: gh-pages
