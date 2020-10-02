@@ -24,8 +24,8 @@ GIT
 
 GIT
   remote: https://github.com/jekyll/jekyll-commonmark.git
-  revision: 6b6c9a0950ffb03675f3cff5409f2ec0e4acf6d1
-  ref: 6b6c9a
+  revision: cf41bdbad29ec5f972cafb6978106cbc7a20b02e
+  ref: cf41bd
   specs:
     jekyll-commonmark (1.3.1)
       commonmarker (~> 0.14)
