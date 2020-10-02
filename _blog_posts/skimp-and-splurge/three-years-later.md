@@ -115,4 +115,4 @@ Yes, yes, yes to this! I bought my bed and frame on sale for $1k from Macy's, an
 
 ---
 
-There you go! I hope that taking another look at my opinions on these topics proves useful for you, and gives you a place to start from if you're looking at creating or re-evaluating your budget. Let me know what your opinions on these topics are! Shoot me an email from the link in the [Contact Me](/contact-me/) tab!
+There you go! I hope that taking another look at my opinions on these topics proves useful for you, and gives you a place to start from if you're looking at creating or re-evaluating your budget. Let me know what your opinions on these topics are! Shoot me an email from the paper letter icon-link on the [Home](/) page!
