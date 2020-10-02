@@ -16,11 +16,11 @@ GIT
 
 GIT
   remote: https://github.com/emmasax4/jekyll-sitemap.git
-  revision: 2867381623562e152fcd81d89712c31e585403c3
+  revision: c328d33854c0313dd93b11715c8c372535f6db6d
   branch: main
   specs:
     jekyll-sitemap (1.4.0)
-      jekyll (>= 3.7, < 5.0)
+      jekyll (>= 3.9, < 5.0)
 
 GIT
   remote: https://github.com/jekyll/jekyll-commonmark.git
