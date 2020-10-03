@@ -3,4 +3,4 @@ README.md linguist-detectable=false
 .github/* linguist-detectable=false
 .github/workflows/* linguist-detectable=true
 _blog_posts/* linguist-detectable=false
-_legos/* linguist-detectable=false
+_lego/* linguist-detectable=false

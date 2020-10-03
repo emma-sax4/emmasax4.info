@@ -5,5 +5,5 @@ bundle exec mdl -i \
   README.md \
   .github \
   pages \
-  _legos \
+  _lego \
   _blog_posts

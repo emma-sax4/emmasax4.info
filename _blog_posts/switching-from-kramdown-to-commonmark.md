@@ -22,7 +22,7 @@ Up until a few weeks ago, my website (this website) had always used [kramdown](h
 
 And over time, as I continued to add more content to this site, building the HTML website started to get slower and slower to load. When I started using Travis CI to build my application, running `bundle exec jekyll build` was maybe taking about 2 minutes of computation time. By the time it go over to CircleCI, it was taking a little bit longer. I don't think the platform I was running it on mattered... rather my project continued to grow. And my first official build on GitHub Actions took 2.606 seconds.
 
-When that happened, I hadn't yet introduced my [LEGO page](/interests-and-hobbies/legos/). And when I did finally build my LEGO page, suddenly, the build time of my website skyrocketed. Using two different collections (blog posts and LEGOs) and looping over both makes the build time of my site _much_ higher than it was before. Add in a few more blog posts, and my site was taking between 4 and 5 seconds to load locally.
+When that happened, I hadn't yet introduced my [LEGO page](/interests-and-hobbies/lego/). And when I did finally build my LEGO page, suddenly, the build time of my website skyrocketed. Using two different collections (blog posts and LEGO entries) and looping over both makes the build time of my site _much_ higher than it was before. Add in a few more blog posts, and my site was taking between 4 and 5 seconds to load locally.
 
 The amount of time my site takes to build on its CI tool doesn't particularly matter to me... a few seconds don't make a difference. What was almost painful was working locally. When I'm working locally on my computer, every time I make a small change to a file, Jekyll would reload my site. And waiting 5 seconds after adding one comma was pushing my patience.
 
@@ -138,7 +138,7 @@ And here's my anchors at the end:
   %}
 </div>
 
-<!-- The last big issue was that my LEGO page was completely empty! All of my LEGOs were gone. After doing some googling, I realized that CommonMark does have support for the `<details></details>` HTML, which my LEGO pages were using, but CommonMark somehow wasn't picking up the tags as HTML. The solution? move them back in indentation, so that this:
+<!-- The last big issue was that my LEGO page was completely empty! All of my LEGO entries were gone. After doing some googling, I realized that CommonMark does have support for the `<details></details>` HTML, which my LEGO entries were using, but CommonMark somehow wasn't picking up the tags as HTML. The solution? move them back in indentation, so that this:
 
 ```html
 {% raw %}  {% for lego in lego_list %}
