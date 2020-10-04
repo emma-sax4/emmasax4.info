@@ -6,7 +6,7 @@ permalink: /blog/posts/adding-lightbox-to-a-jekyll-website/
 date: 2020-08-23 23:05:00 -0500
 ---
 
-In July, as I worked on adding more LEGOs to my [LEGO page](/interests-and-hobbies/legos/), I realized something. I was adding a _lot_ of pictures. And over time, I'd slowly be adding more. And images, unless you make them really tiny, take up a lot of precious screen space, requiring users to scroll a lot more to bypass lists of pictures. And if they're not zoommable, what does somebody do when they want to take a closer look?
+In July, as I worked on adding more LEGO entries to my [LEGO page](/interests-and-hobbies/lego/), I realized something. I was adding a _lot_ of pictures. And over time, I'd slowly be adding more. And images, unless you make them really tiny, take up a lot of precious screen space, requiring users to scroll a lot more to bypass lists of pictures. And if they're not zoommable, what does somebody do when they want to take a closer look?
 
 So, the answer to my questions was, to make pictures zoommable, and then show a thumbnail on the general page. This way, the image a user sees on the page is tinier (think 200 pixels wide), and then when they click it, it becomes full-screen (perhaps around 600 pixels wide).
 
@@ -67,7 +67,7 @@ And then, we can call it like this:
 %}{% endraw %}
 ```
 
-Note the `lightbox` property is for grouping sets of photos together on a page (particularly handy on pages like my [LEGO page](/interests-and-hobbies/legos/) where there's multiple sets of photos all on one HTML page).
+Note the `lightbox` property is for grouping sets of photos together on a page (particularly handy on pages like my [LEGO page](/interests-and-hobbies/lego/) where there's multiple sets of photos all on one HTML page).
 
 And voila! There's still some copy-pasting, but it's a little easier than copy-pasting a bunch of repetitive HTML (which calls the URL twice, the title twice, etc).
 

@@ -19,7 +19,7 @@
   * [Posts in a Category](#posts-in-a-category)
   * [Writing Drafts](#writing-drafts)
   * [Generating Tables of Contents](#generating-tables-of-contents)
-* [Legos Collection](#legos-collection)
+* [LEGO Collection](#lego-collection)
 * [Assets](#assets)
 
 ## Contribution Process
@@ -309,11 +309,11 @@ This will provide a Markdown-style TOC that you can copy-paste into the blog pos
 
 Note that the empty line in the middle and lack of tabs or spaces before the header are important.
 
-## Legos Collection
+## LEGO Collection
 
-This section references the Lego data... each Lego set/MOC individually.
+This section references the LEGO data... each LEGO set/MOC individually.
 
-The `_legos/` directory is a collection of different LEGO sets and MOCs that I've written. My special LEGO page (which is only linked from the "Interests & Hobbies" page), loops through all of the LEGO entries. The front matter layout of one of these entries looks like this:
+The `_lego/` directory is a collection of different LEGO sets and MOCs that I've written. My special LEGO page (which is only linked from the "Interests & Hobbies" page), loops through all of the LEGO entries. The front matter layout of one of these entries looks like this:
 
 ```yml
 ---
