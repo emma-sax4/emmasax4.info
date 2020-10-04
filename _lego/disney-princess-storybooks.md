@@ -3,7 +3,7 @@ title: Disney Princess Storybook Adventures (43174, 43175, 43176, 43177)
 date: 2020-07-03 19:34:00 -0500
 ---
 
-At first glance, I wasn't interested in these LEGOs because the minifigures are a different design. But after I realized they had a _Mulan_ set (she's my favorite because she's Chinese), I realized that I should give it a chance.
+At first glance, I wasn't interested in these LEGO sets because the minifigures are a different design. But after I realized they had a _Mulan_ set (she's my favorite because she's Chinese), I realized that I should give it a chance.
 
 So I started with just that one box. I actually really liked it. I liked how the entire set collapses into this latching book for easy moving around. I think the minifigures are actually really cute, and as much as I hate putting stickers on, I like how customizable the stickers make the set.
 
