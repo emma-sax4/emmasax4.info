@@ -5,7 +5,7 @@ date: 2018-08-29 00:00:00 -0500
 
 One of the very first sets that I started putting together recently (the one that I attribute this entire LEGO phase to) are the newest editions of the _Harry Potter_ sets. It started when my partner purchased the [Quidditch Match (75956)](https://www.lego.com/en-us/product/quidditch-match-75956) LEGO set for me for my birthday, and from there, it turned into a whole thing. Now, I have every _Harry Potter_ set that has come out since 2018, and I have a massive collection.
 
-I take a little bit of leeway in putting them together; I add some extra minifigures, I move decorations to different areas, and I rearrange the location of the different Hogwarts rooms. But the gist of all of the sets are here. I think the primary reason that I love the _Harry Potter_ LEGO is that I get to make my own little scenes. I get to create my own little world of a world that I grew up with. And then every now and then, I'll slow down my day to just admire them and remember the good memories associated with _Harry Potter_... essentially I consider them like a collector's item.
+I take a little bit of leeway in putting them together; I add some extra minifigures, I move decorations to different areas, and I rearrange the location of the different Hogwarts rooms. But the gist of all of the sets are here. I think the primary reason that I love the _Harry Potter_ LEGO sets is that I get to make my own little scenes. I get to create my own little world of a world that I grew up with. And then every now and then, I'll slow down my day to just admire them and remember the good memories associated with _Harry Potter_... essentially I consider them like a collector's item.
 
 Here's a list of all of the _Harry Potter_ LEGO sets shown:
 
