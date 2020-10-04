@@ -3,7 +3,7 @@ layout: post
 title: "301 Redirects with Static Sites"
 tags: [ tech ]
 permalink: /blog/posts/301-redirects-with-static-sites/
-date: 2020-10-04 00:12:00 -0500
+date: 2020-10-04 12:00:00 -0500
 ---
 
 This past weekend, I made the big decision to move the domain of my primary website from `https://emmasax4.info` to `https://emmasax4.com`. The main reason I wanted to do this was simply because I actually liked the idea of a `.com` domain. What I read online was that a `.com` domain is oftentimes the default, it's what people tend to remember most, etc. The reason I originally purchased a `.info` domain was because I'm not a commercial business. I'm not trying to sell anything. But `.info` stands for "information", which I later learned was originally designated for information about a famous person, place, thing, or concept. Although I am a person, it just didn't feel right. But somehow, one year into the revamping of this site and my "branding", `emmasax4.com` just felt right. Whether any of this is true or not may be a debate on the internet for a while, but I figured, my website, my domain, my decision 💪🏼.
