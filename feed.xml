@@ -3,7 +3,7 @@
     <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
     <link href="https://emmasax4.com/feed.xml" rel="self" type="application/atom+xml" />
     <link href="https://emmasax4.com/" rel="alternate" type="text/html" />
-    <updated>2020-10-02T05:05:09+00:00</updated>
+    <updated>2020-10-04T17:00:04+00:00</updated>
     <id>https://emmasax4.com/feed.xml</id>
     <title type="html">Emma Sax</title>
     <subtitle>Emma Sax's personal website and blog. Includes information about my social media profiles, resumé, and hobbies.</subtitle>
@@ -11,10 +11,21 @@
       <name>Emma Sax</name>
     </author>
     <entry>
+      <title type="html">301 Redirects with Static Sites</title>
+      <link href="https://emmasax4.com/blog/posts/301-redirects-with-static-sites/" rel="alternate" type="text/html" title="301 Redirects with Static Sites" />
+      <published>2020-10-04T05:12:00+00:00</published>
+      <updated>2020-10-04T17:00:04+00:00</updated>
+      <id>https://emmasax4.com/blog/posts/301-redirects-with-static-sites</id>
+      <author>
+        <name>Emma Sax</name>
+      </author>
+      <category term="tech" />
+    </entry>
+    <entry>
       <title type="html">Adding Lightbox to a Jekyll Website</title>
       <link href="https://emmasax4.com/blog/posts/adding-lightbox-to-a-jekyll-website/" rel="alternate" type="text/html" title="Adding Lightbox to a Jekyll Website" />
       <published>2020-08-24T04:05:00+00:00</published>
-      <updated>2020-09-30T03:51:24+00:00</updated>
+      <updated>2020-10-04T17:00:04+00:00</updated>
       <id>https://emmasax4.com/blog/posts/adding-lightbox-to-a-jekyll-website</id>
       <author>
         <name>Emma Sax</name>
@@ -38,7 +49,7 @@
       <title type="html">Switching from kramdown to CommonMark</title>
       <link href="https://emmasax4.com/blog/posts/switching-from-kramdown-to-commonmark/" rel="alternate" type="text/html" title="Switching from kramdown to CommonMark" />
       <published>2020-07-19T15:00:33+00:00</published>
-      <updated>2020-09-30T03:51:24+00:00</updated>
+      <updated>2020-10-04T17:00:04+00:00</updated>
       <id>https://emmasax4.com/blog/posts/switching-from-kramdown-to-commonmark</id>
       <author>
         <name>Emma Sax</name>
@@ -52,17 +63,6 @@
       <published>2020-06-17T05:00:00+00:00</published>
       <updated>2020-09-30T03:51:24+00:00</updated>
       <id>https://emmasax4.com/blog/posts/why-and-how-i-renamed-my-master-branch</id>
-      <author>
-        <name>Emma Sax</name>
-      </author>
-      <category term="tech" />
-    </entry>
-    <entry>
-      <title type="html">Why I Switched from CircleCI to GitHub Actions</title>
-      <link href="https://emmasax4.com/blog/posts/why-i-switched-from-circleci-to-github-actions/" rel="alternate" type="text/html" title="Why I Switched from CircleCI to GitHub Actions" />
-      <published>2020-05-28T05:00:00+00:00</published>
-      <updated>2020-10-02T05:05:09+00:00</updated>
-      <id>https://emmasax4.com/blog/posts/why-i-switched-from-circleci-to-github-actions</id>
       <author>
         <name>Emma Sax</name>
       </author>
