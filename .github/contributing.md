@@ -46,7 +46,7 @@ Happy coding! 🤗
 
 To run this application locally, following these steps:
 
-1. Be sure you have Ruby installed on your machine; the `.ruby-version` file specifies Ruby 2.6.5.
+1. Be sure you have Ruby installed on your machine; use whichever version the `.ruby-version` file specifies.
 2. First, bundle install and install all of the gems specified in the Gemfile:
 
     ```bash
