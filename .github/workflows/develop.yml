@@ -4,7 +4,7 @@ on:
     branches: [ main ]
 
 jobs:
-  test:
+  build:
     runs-on: ubuntu-latest
     steps:
     - name: Check Out Code
@@ -34,6 +34,7 @@ jobs:
     - name: Jekyll Build
       run: JEKYLL_ENV=production bundle exec jekyll build --destination _site
 
+  test:
     - name: HTML Proofer
       run: bash scripts/html_proofer.sh || echo ""
 
@@ -43,6 +44,7 @@ jobs:
     - name: Markdown Linter
       run: bash scripts/markdown_linter.sh
 
+  notify-slack:
     - name: Notify Slack on Success
       if: success()
       uses: emmasax4/slack-notifier-action@main
