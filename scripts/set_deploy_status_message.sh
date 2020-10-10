@@ -3,9 +3,9 @@
 deploy_status=$1
 
 if [[ $deploy_status == skipped ]]; then
-  echo "::set-env name=DEPLOY_MESSAGE::$(echo Deploy to GitHub Pages was *skipped*)"
+  echo "DEPLOY_MESSAGE=Deploy to GitHub Pages was *skipped*" >> $GITHUB_ENV
 elif [[ $deploy_status == success ]]; then
-  echo "::set-env name=DEPLOY_MESSAGE::$(echo Deploy to GitHub Pages was *successful*)"
+  echo "DEPLOY_MESSAGE=Deploy to GitHub Pages was *successful*" >> $GITHUB_ENV
 elif [[ $deploy_status == failed ]]; then
-  echo "::set-env name=DEPLOY_MESSAGE::$(echo Deploy to GitHub Pages was *unsuccessful*)"
+  echo "DEPLOY_MESSAGE=Deploy to GitHub Pages was *unsuccessful*" >> $GITHUB_ENV
 fi
