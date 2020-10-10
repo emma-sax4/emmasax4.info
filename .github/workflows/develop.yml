@@ -36,6 +36,7 @@ jobs:
 
   test:
     runs-on: ubuntu-latest
+    needs: build
     steps:
     - name: HTML Proofer
       run: bash scripts/html_proofer.sh || echo ""
@@ -48,6 +49,7 @@ jobs:
 
   notify-slack:
     runs-on: ubuntu-latest
+    needs: test
     steps:
     - name: Notify Slack on Success
       if: success()
