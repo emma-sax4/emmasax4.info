@@ -5,7 +5,7 @@ order: 1
 permalink: /about-me/
 ---
 
-Since graduating from the [University of Minnesota, Morris (UMM)](https://morris.umn.edu/) with a Bachelor of Arts in [Computer Science](https://academics.morris.umn.edu/computer-science), my entire career has been spent on the Operations side of DevOps. But I dabble in website development in Ruby on Rails and Jekyll/Liquid. For a more information on my work experience, please visit my [LinkedIn]({{ site.author_profiles.linkedin }}).
+Since graduating from the [University of Minnesota, Morris (UMM)](https://morris.umn.edu/) with a Bachelor of Arts in [Computer Science](https://academics.morris.umn.edu/computer-science) in 2017, my entire career has been spent on the Operations side of DevOps. But I dabble in website development in Ruby on Rails and Jekyll/Liquid. For more information on my work experience, please visit my [LinkedIn]({{ site.author_profiles.linkedin }}).
 
 ## Tools, Frameworks, & Languages
 
