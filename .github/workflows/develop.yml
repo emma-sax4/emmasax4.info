@@ -35,6 +35,8 @@ jobs:
       run: JEKYLL_ENV=production bundle exec jekyll build --destination _site
 
   test:
+    runs-on: ubuntu-latest
+    steps:
     - name: HTML Proofer
       run: bash scripts/html_proofer.sh || echo ""
 
@@ -45,6 +47,8 @@ jobs:
       run: bash scripts/markdown_linter.sh
 
   notify-slack:
+    runs-on: ubuntu-latest
+    steps:
     - name: Notify Slack on Success
       if: success()
       uses: emmasax4/slack-notifier-action@main
