@@ -22,7 +22,7 @@ My tagline claims that I love swimming, reading, video/TV streaming services, an
 * Orientation Group Leader at UMM in 2016
 * Participant in the [UMM Honors Program](https://academics.morris.umn.edu/honors)
 * [UMM Concert Choir](https://academics.morris.umn.edu/ensembles/concert-choir) Dress Manager
-* [UMM Dance Ensemble](https://umnmorris.campuslabs.com/engage/organization/danceensemble) Treasurer
+* [UMM Dance Ensemble](https://morris-umn.presence.io/organization/dance-ensemble) Treasurer
 * Dance teacher to children at a local dance studio
 * Participant in the [NATS Competition](http://www.nats.org/competitions.html) 2014
 * Participant in a [Senior Recital](http://events.morris.umn.edu/event/student_senior_recital_amy_kuller_voice#.Xb7-40VKjOQ) in April 2017
