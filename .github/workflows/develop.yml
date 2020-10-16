@@ -46,7 +46,7 @@ jobs:
 
     - name: 'Notifications: Notify Slack on Success'
       if: success()
-      uses: emmasax4/slack-notifier-action@update_actions_core
+      uses: emmasax4/slack-notifier-action@main
       with:
         slack_webhook: ${{ secrets.SLACK_WEBHOOK }}
         channel: "#general"
@@ -63,7 +63,7 @@ jobs:
 
     - name: 'Notifications: Notify Slack on Failure'
       if: failure()
-      uses: emmasax4/slack-notifier-action@update_actions_core
+      uses: emmasax4/slack-notifier-action@main
       with:
         slack_webhook: ${{ secrets.SLACK_WEBHOOK }}
         channel: "#general"
