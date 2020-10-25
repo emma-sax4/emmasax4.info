@@ -139,5 +139,3 @@ I have dreams of also getting the [Diagon Alley (75978)](https://www.lego.com/en
       thumb_width="150" title="Hogwarts panorama" lightbox="Harry Potter"
   %}
 </div>
-
-<!-- Hogwarts exterior / old panorma -->
