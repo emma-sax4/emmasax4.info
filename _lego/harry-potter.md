@@ -1,11 +1,11 @@
 ---
 title: Harry Potter
-date: 2018-08-29 00:00:00 -0500
+featured: true
 ---
 
 One of the very first sets that I started putting together recently (the one that I attribute this entire LEGO phase to) are the newest editions of the _Harry Potter_ sets. It started when my partner purchased the [Quidditch Match (75956)](https://www.lego.com/en-us/product/quidditch-match-75956) LEGO set for me for my birthday, and from there, it turned into a whole thing. Now, I have every _Harry Potter_ set that has come out since 2018, and I have a massive collection.
 
-I take a little bit of leeway in putting them together; I add some extra minifigures, I move decorations to different areas, and I rearrange the location of the different Hogwarts rooms. But the gist of all of the sets are here. I think the primary reason that I love the _Harry Potter_ LEGO sets is that I get to make my own little scenes. I get to create my own little world of a world that I grew up with. And then every now and then, I'll slow down my day to just admire them and remember the good memories associated with _Harry Potter_... essentially I consider them like a collector's item.
+I take a little bit of leeway in putting them together; I add some extra minifigures, I move decorations to different areas, and I rearrange the location of the different Hogwarts rooms, and change up the colors of some roof decorations and pieces. But the gist of all of the sets are here. I think the primary reason that I love the _Harry Potter_ LEGO sets is that I get to make my own little scenes. I get to create my own little world of a world that I grew up with. And every now and then, I'll slow down my day to just admire them and remember the good memories associated with _Harry Potter_... essentially I consider them like a collector's item.
 
 Here's a list of all of the _Harry Potter_ LEGO sets shown:
 
@@ -21,14 +21,13 @@ Here's a list of all of the _Harry Potter_ LEGO sets shown:
 * [Hogwarts Womping Willow (75953)](https://www.lego.com/en-us/product/hogwarts-whomping-willow-75953)
 * [Quidditch Match (75956)](https://www.lego.com/en-us/product/quidditch-match-75956)
 * [Aragog's Lair (75950)](https://www.lego.com/en-us/product/aragog-s-lair-75950)
-
-And here are the LEGO sets which I'll add to the collection (and post new pictures of) when they're ready:
-
 * [Hogwarts Astronomy Tower (75969)](https://www.lego.com/en-us/product/hogwarts-astronomy-tower-75969)
 * [4 Privet Drive (75968)](https://www.lego.com/en-us/product/4-privet-drive-75968)
 * [Hogwarts Room of Requirement (75966)](https://www.lego.com/en-us/product/hogwarts-room-of-requirement-75966)
 * [Attack on the Burrow (75980)](https://www.lego.com/en-us/product/attack-on-the-burrow-75980)
 * [Forbidden Forest — Umbridge's Encounter (75967)](https://www.lego.com/en-us/product/forbidden-forest-umbridge-s-encounter-75967)
+
+I have dreams of also getting the [Diagon Alley (75978)](https://www.lego.com/en-us/product/diagon-alley-75978) set as well and adding that to my collection, but I don't have the physical space right now to display that set.
 
 <div class="text-center">
   {% include elements/photo.html
@@ -68,10 +67,6 @@ And here are the LEGO sets which I'll add to the collection (and post new pictur
       thumb_width="150" title="The Yule Ball" lightbox="Harry Potter"
   %}
   {% include elements/photo.html
-      url="https://live.staticflickr.com/65535/50260267657_d28587e7dc_k.jpg"
-      thumb_width="150" title="Hogwarts exterior" lightbox="Harry Potter"
-  %}
-  {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50260083901_3314fb37fe_k.jpg"
       thumb_width="150" title="In the Great Hall" lightbox="Harry Potter"
   %}
@@ -80,7 +75,67 @@ And here are the LEGO sets which I'll add to the collection (and post new pictur
       thumb_width="150" title="Hogwarts interior" lightbox="Harry Potter"
   %}
   {% include elements/photo.html
-      url="https://live.staticflickr.com/65535/50260268232_d044df4777_k.jpg"
+      url="https://live.staticflickr.com/65535/50529240111_565bacd9d0_k.jpg"
+      thumb_width="150" title="Full Astronomy Tower" lightbox="Harry Potter"
+  %}
+  {% include elements/photo.html
+      url="https://live.staticflickr.com/65535/50528515018_ed2c41f2f7_k.jpg"
+      thumb_width="150" title="The Astronomy Tower and Ravenclaw common room" lightbox="Harry Potter"
+  %}
+  {% include elements/photo.html
+      url="https://live.staticflickr.com/65535/50529240681_edd2c03ca4_k.jpg"
+      thumb_width="150" title="Slughorn's dinner party" lightbox="Harry Potter"
+  %}
+  {% include elements/photo.html
+      url="https://live.staticflickr.com/65535/50529397092_667eee3c6b_k.jpg"
+      thumb_width="150" title="Inside the Room of Requirement" lightbox="Harry Potter"
+  %}
+  {% include elements/photo.html
+      url="https://live.staticflickr.com/65535/50529396827_9e340a530b_k.jpg"
+      thumb_width="150" title="Outside the Room of Requirement" lightbox="Harry Potter"
+  %}
+  {% include elements/photo.html
+      url="https://live.staticflickr.com/65535/50529239156_814471dde5_k.jpg"
+      thumb_width="150" title="Grawp" lightbox="Harry Potter"
+  %}
+  {% include elements/photo.html
+      url="https://live.staticflickr.com/65535/50529396302_610970ed7a_k.jpg"
+      thumb_width="150" title="Umbridge's encounter with Grawp" lightbox="Harry Potter"
+  %}
+  {% include elements/photo.html
+      url="https://live.staticflickr.com/65535/50528513518_d4d4249667_k.jpg"
+      thumb_width="150" title="The Burrow's living room" lightbox="Harry Potter"
+  %}
+  {% include elements/photo.html
+      url="https://live.staticflickr.com/65535/50529395712_20af0da1cb_k.jpg"
+      thumb_width="150" title="The Burrow's kitchen" lightbox="Harry Potter"
+  %}
+  {% include elements/photo.html
+      url="https://live.staticflickr.com/65535/50529395427_66bd0ed8d2_k.jpg"
+      thumb_width="150" title="The Burrow's bedrooms" lightbox="Harry Potter"
+  %}
+  {% include elements/photo.html
+      url="https://live.staticflickr.com/65535/50529237731_d510a02dbe_k.jpg"
+      thumb_width="150" title="The Burrow from the outside" lightbox="Harry Potter"
+  %}
+  {% include elements/photo.html
+      url="https://live.staticflickr.com/65535/50529395067_6ce76369f3_k.jpg"
+      thumb_width="150" title="Inside 4 Privet Drive" lightbox="Harry Potter"
+  %}
+  {% include elements/photo.html
+      url="https://live.staticflickr.com/65535/50529237346_72ed426611_k.jpg"
+      thumb_width="150" title="4 Privet Drive: Harry's escape" lightbox="Harry Potter"
+  %}
+  {% include elements/photo.html
+      url="https://live.staticflickr.com/65535/50529392727_4122044f0d_k.jpg"
+      thumb_width="150" title="The Great Hall from the outside" lightbox="Harry Potter"
+  %}
+  {% include elements/photo.html
+      url="https://live.staticflickr.com/65535/50528512098_ca1dd38a7d_k.jpg"
+      thumb_width="150" title="Hogwarts from the outside" lightbox="Harry Potter"
+  %}
+  {% include elements/photo.html
+      url="https://live.staticflickr.com/65535/50529236341_3c3d4a1be6_k.jpg"
       thumb_width="150" title="Hogwarts panorama" lightbox="Harry Potter"
   %}
 </div>
