@@ -3,8 +3,8 @@ on:
   pull_request:
     branches: [ main ]
   schedule:
-    - cron: "30 5 * * 1" # On Mondays: 05:30 UTC => 00:30 CDT / 23:30 CST
     - cron: "*/10 * * * *" # TODO: remove this later
+#     - cron: "30 5 * * 1" # On Mondays: 05:30 UTC => 00:30 CDT / 23:30 CST
 
 jobs:
   main:
