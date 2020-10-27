@@ -1,7 +1,7 @@
 #!/bin/bash
 
 args="$*"
-deploy=$(echo "$args" | grep -o 'deploy=[^[:blank:]]*' | sed -e 's#.*=\(\)#\1#') # 'true' or 'false'
+event_name=$(echo "$args" | grep -o 'event_name=[^[:blank:]]*' | sed -e 's#.*=\(\)#\1#') # 'true' or 'false'
 github_repo=$(echo "$args" | grep -o 'github_repo=[^[:blank:]]*' | sed -e 's#.*=\(\)#\1#')
 actions_run_id=$(echo "$args" | grep -o 'actions_run_id=[^[:blank:]]*' | sed -e 's#.*=\(\)#\1#')
 github_actor=$(echo "$args" | grep -o 'github_actor=[^[:blank:]]*' | sed -e 's#.*=\(\)#\1#')
@@ -15,7 +15,7 @@ if [[ $github_ref == 'refs/heads'* ]]; then # this is a branch, not a pull reque
   branch=$(echo $github_ref | sed -E 's|refs/[a-zA-Z]+/||')
   echo "build_message=Build <$build_url|$actions_run_id> on branch \`$branch\`" >> $GITHUB_ENV
 
-  if [[ $deploy == "true" ]]; then
+  if [[ $event_name == "push" ]]; then # this is a merge and a deploy
     echo "actor_name=$github_actor" >> $GITHUB_ENV
 
     if [[ $github_actor == "pr-scheduler[bot]" ]]; then

@@ -121,8 +121,8 @@ jobs:
 
     - name: Define Environment Variables
       run: |
-        bash scripts/define_run_variables.sh \
-          deploy=false github_repo=${{ github.repository }} actions_run_id=${{ github.run_id }} \
+        bash scripts/set_workflow_variables.sh \
+          event_name=${{ github.event_name }} github_repo=${{ github.repository }} actions_run_id=${{ github.run_id }} \
           github_actor=${{ github.actor }} github_ref=${{ github.ref }} head_ref=${{ github.head_ref }}
 
     - name: Notify Slack on Success
