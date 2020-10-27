@@ -12,7 +12,7 @@ build_url="https://github.com/$github_repo/actions/runs/$actions_run_id"
 if [[ $head_ref == "" ]]; then # branch is 'main'
   branch=$(echo $github_ref | sed -E 's|refs/[a-zA-Z]+/||')
   echo "branch=$branch" >> $GITHUB_ENV
-  echo "build_message=Build <$build_url|$actions_run_id> on branch `$branch`" >> $GITHUB_ENV
+  echo "build_message=Build <$build_url|$actions_run_id> on branch \`$branch\`" >> $GITHUB_ENV
   echo "deploy_message=Deploy to GitHub Pages was *skipped*" >> $GITHUB_ENV
 
   if [[ $deploy == "true" ]]; then
@@ -32,7 +32,7 @@ else
   pull_url="https://github.com/$github_repo/pull/$pull_id"
   branch=$(echo $head_ref | sed -E 's|refs/[a-zA-Z]+/||') # this comes to '' if on 'main' branch
   echo "branch=$branch" >> $GITHUB_ENV
-  echo "build_message=Build <$build_url|$actions_run_id> on branch `$branch` in PR <$pull_url|#$pull_id>" >> $GITHUB_ENV
+  echo "build_message=Build <$build_url|$actions_run_id> on branch \`$branch\` in PR <$pull_url|#$pull_id>" >> $GITHUB_ENV
   echo "actor_name=$github_actor" >> $GITHUB_ENV
   echo "actor_icon=https://github.com/$github_actor.png" >> $GITHUB_ENV
 fi
