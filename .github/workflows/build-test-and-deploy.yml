@@ -1,10 +1,10 @@
-name: Release
+name: Build, Test, and Deploy
 on:
   push:
     branches: [ main ]
 
 jobs:
-  build-test-deploy:
+  main:
     runs-on: ubuntu-latest
     steps:
     - name: 'Setup: Check Out Code'
@@ -13,10 +13,13 @@ jobs:
         fetch-depth: 0
 
     - name: 'Setup: Define Run Variables'
-      run: bash scripts/define_run_variables.sh release ${{ github.repository }} ${{ github.ref }} ${{ github.run_id }} ${{ github.actor }}
+      run: |
+        bash scripts/define_run_variables.sh \
+          deploy=true github_repo=${{ github.repository }} actions_run_id=${{ github.run_id }} \
+          github_actor=${{ github.actor }} github_ref=${{ github.ref }} head_ref=${{ github.head_ref }}
 
     - name: 'Setup: Switch to Current Branch'
-      run: git checkout ${{ env.BRANCH }}
+      run: git checkout ${{ env.branch }}
 
     - name: 'Setup: Configure System'
       run: sudo gem update --system 3.0.8 && sudo gem install bundler -v $(cat Gemfile.lock | tail -1 | tr -d " ")
@@ -70,11 +73,9 @@ jobs:
         color: "#23c22e"
         title: ${{ github.repository }}
         title_link: https://github.com/${{ github.repository }}
-        author_name: ${{ github.actor }}
-        author_icon: ${{ env.ACTOR_ICON }}
-        text: >-
-          Build <${{ env.BUILD_URL }}|${{ github.run_id }}> on branch `${{ env.BRANCH }}`
-          *passed*. ${{ env.DEPLOY_MESSAGE }}.
+        author_name: ${{ env.actor_name }}
+        author_icon: ${{ env.actor_icon }}
+        text: ${{ env.build_message }} *passed*. ${{ env.deploy_message }}.
 
     - name: 'Notifications: Notify Slack on Failure'
       if: failure()
@@ -87,8 +88,6 @@ jobs:
         color: "#bd2222"
         title: ${{ github.repository }}
         title_link: https://github.com/${{ github.repository }}
-        author_name: ${{ github.actor }}
-        author_icon: ${{ env.ACTOR_ICON }}
-        text: >-
-          Build <${{ env.BUILD_URL }}|${{ github.run_id }}> on branch `${{ env.BRANCH }}`
-          *failed*. ${{ env.DEPLOY_MESSAGE }}.
+        author_name: ${{ env.actor_name }}
+        author_icon: ${{ env.actor_icon }}
+        text: ${{ env.build_message }} *failed*. ${{ env.deploy_message }}.
