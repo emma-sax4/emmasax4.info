@@ -52,7 +52,6 @@ jobs:
 
     - name: HTML Proofer
       run: bash scripts/html_proofer.sh
-      continue-on-error: true
 
     - name: Rubocop
       run: bundle exec rubocop
