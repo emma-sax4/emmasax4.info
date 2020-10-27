@@ -1,15 +1,13 @@
 #!/bin/bash
 
-deploy=$(sed -e 's#.*=\(\)#\1#' <<< $1) # 'true' or 'false'
-github_repo=$(sed -e 's#.*=\(\)#\1#' <<< $2)
-actions_run_id=$(sed -e 's#.*=\(\)#\1#' <<< $3)
-github_actor=$(sed -e 's#.*=\(\)#\1#' <<< $4)
-github_ref=$(sed -e 's#.*=\(\)#\1#' <<< $5)
-head_ref=$(sed -e 's#.*=\(\)#\1#' <<< $6)
-
+args="$*"
+deploy=$(echo "$args" | grep -o 'deploy=[^[:blank:]]*' | sed -e 's#.*=\(\)#\1#') # 'true' or 'false'
+github_repo=$(echo "$args" | grep -o 'github_repo=[^[:blank:]]*' | sed -e 's#.*=\(\)#\1#')
+actions_run_id=$(echo "$args" | grep -o 'actions_run_id=[^[:blank:]]*' | sed -e 's#.*=\(\)#\1#')
+github_actor=$(echo "$args" | grep -o 'github_actor=[^[:blank:]]*' | sed -e 's#.*=\(\)#\1#')
+github_ref=$(echo "$args" | grep -o 'github_ref=[^[:blank:]]*' | sed -e 's#.*=\(\)#\1#')
+head_ref=$(echo "$args" | grep -o 'head_ref=[^[:blank:]]*' | sed -e 's#.*=\(\)#\1#')
 build_url="https://github.com/$github_repo/actions/runs/$actions_run_id"
-
-echo "Head Ref: $head_ref"
 
 if [[ $head_ref == "" ]]; then # branch is 'main'
   branch=$(echo $github_ref | sed -E 's|refs/[a-zA-Z]+/||')
