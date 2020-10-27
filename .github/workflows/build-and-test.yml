@@ -1,10 +1,10 @@
-name: Cron
+name: Build and Test
 on:
-  schedule:
-    - cron: "30 5 * * 1" # On Mondays: 05:30 UTC => 00:30 CDT / 23:30 CST
+  pull_request:
+    branches: [ main ]
 
 jobs:
-  build-test:
+  main:
     runs-on: ubuntu-latest
     steps:
     - name: 'Setup: Check Out Code'
@@ -13,7 +13,7 @@ jobs:
         fetch-depth: 0
 
     - name: 'Setup: Define Run Variables'
-      run: bash scripts/define_run_variables.sh cron ${{ github.repository }} ${{ github.ref }} ${{ github.run_id }}
+      run: bash scripts/define_run_variables.sh develop ${{ github.repository }} ${{ github.ref }} ${{ github.run_id }} ${{ github.head_ref }}
 
     - name: 'Setup: Switch to Current Branch'
       run: git checkout ${{ env.BRANCH }}
@@ -55,9 +55,11 @@ jobs:
         color: "#23c22e"
         title: ${{ github.repository }}
         title_link: https://github.com/${{ github.repository }}
-        author_name: github-actions[bot]
-        author_icon: https://i.imgur.com/kUxzV44s.png
-        text: Build <${{ env.BUILD_URL }}|${{ github.run_id }}> on branch `${{ env.BRANCH }}` *passed*.
+        author_name: ${{ github.actor }}
+        author_icon: https://github.com/${{ github.actor }}.png
+        text: >-
+          Build <${{ env.BUILD_URL }}|${{ github.run_id }}> on branch `${{ env.BRANCH }}`
+          in PR <${{ env.PULL_URL }}|#${{ env.PULL_ID }}> *passed*.
 
     - name: 'Notifications: Notify Slack on Failure'
       if: failure()
@@ -70,6 +72,8 @@ jobs:
         color: "#bd2222"
         title: ${{ github.repository }}
         title_link: https://github.com/${{ github.repository }}
-        author_name: github-actions[bot]
-        author_icon: https://i.imgur.com/kUxzV44s.png
-        text: Build <${{ env.BUILD_URL }}|${{ github.run_id }}> on branch `${{ env.BRANCH }}` *failed*.
+        author_name: ${{ github.actor }}
+        author_icon: https://github.com/${{ github.actor }}.png
+        text: >-
+          Build <${{ env.BUILD_URL }}|${{ github.run_id }}> on branch `${{ env.BRANCH }}`
+          in PR <${{ env.PULL_URL }}|#${{ env.PULL_ID }}> *failed*.

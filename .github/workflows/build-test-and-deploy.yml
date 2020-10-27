@@ -1,10 +1,10 @@
-name: Release
+name: Build, Test, and Deploy
 on:
   push:
     branches: [ main ]
 
 jobs:
-  build-test-deploy:
+  main:
     runs-on: ubuntu-latest
     steps:
     - name: 'Setup: Check Out Code'
