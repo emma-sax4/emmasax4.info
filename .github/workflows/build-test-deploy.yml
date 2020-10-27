@@ -160,9 +160,13 @@ jobs:
     if: always()
     needs: [ build, deploy, notification ]
     steps:
-    - name: Delete All Artifact(s)
+    - name: Delete Jekyll Site Artifact
       uses: emmasax4/delete-artifact-action@main
       with:
-        name: |
-          jekyll-site
-          deploy-status-message
+        name: jekyll-site
+
+    - name: Delete Deploy Status Message Artifact
+      if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+      uses: emmasax4/delete-artifact-action@main
+      with:
+        name: deploy-status-message
