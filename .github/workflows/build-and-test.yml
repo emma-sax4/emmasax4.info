@@ -16,13 +16,9 @@ jobs:
 
     - name: 'Setup: Define Run Variables'
       run: |
-        bash scripts/define_run_variables.sh   \
-          deploy=false                         \
-          github_repo=${{ github.repository }} \
-          actions_run_id=${{ github.run_id }}  \
-          github_actor=${{ github.actor }}     \
-          github_ref=${{ github.ref }}         \
-          head_ref=${{ github.head_ref }}
+        bash scripts/define_run_variables.sh \
+          deploy=false github_repo=${{ github.repository }} actions_run_id=${{ github.run_id }} \
+          github_actor=${{ github.actor }} github_ref=${{ github.ref }} head_ref=${{ github.head_ref }}
 
     - name: 'Setup: Switch to Current Branch'
       run: git checkout ${{ env.branch }}

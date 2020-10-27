@@ -12,8 +12,8 @@ build_url="https://github.com/$github_repo/actions/runs/$actions_run_id"
 if [[ $head_ref == "" ]]; then # branch is 'main'
   branch=$(echo $github_ref | sed -E 's|refs/[a-zA-Z]+/||')
   echo "branch=$branch" >> $GITHUB_ENV
-  echo "deploy_message=Deploy to GitHub Pages was *skipped*" >> $GITHUB_ENV
   echo "build_message=Build <$build_url|$actions_run_id> on branch `$branch`" >> $GITHUB_ENV
+  echo "deploy_message=Deploy to GitHub Pages was *skipped*" >> $GITHUB_ENV
 
   if [[ $deploy == "true" ]]; then
     echo "actor_name=$github_actor" >> $GITHUB_ENV
