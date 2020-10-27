@@ -9,6 +9,8 @@ head_ref=$(sed -e 's#.*=\(\)#\1#' <<< $6)
 
 build_url="https://github.com/$github_repo/actions/runs/$actions_run_id"
 
+echo "Head Ref: $head_ref"
+
 if [[ $head_ref == "" ]]; then # branch is 'main'
   branch=$(echo $github_ref | sed -E 's|refs/[a-zA-Z]+/||')
   echo "branch=$branch" >> $GITHUB_ENV

@@ -22,7 +22,7 @@ jobs:
           actions_run_id=${{ github.run_id }} \
           github_actor=${{ github.actor }} \
           github_ref=${{ github.ref }}
-          head_ref_ref=${{ github.head_ref}}
+          head_ref=${{ github.head_ref}}
 
     - name: 'Setup: Switch to Current Branch'
       run: git checkout ${{ env.branch }}
