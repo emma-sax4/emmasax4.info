@@ -109,10 +109,15 @@ jobs:
         fetch-depth: 0
 
     - name: Download Deploy Status Message Artifact
+      if: github.event_name == 'push' && github.ref == 'refs/heads/main'
       uses: actions/download-artifact@v2
       with:
         name: deploy-status-message
         path: deploy-status-message.txt
+
+    - name: Set Empty Deploy Status Message
+      if: github.event_name != 'push' || github.ref != 'refs/heads/main'
+      run: echo "" > deploy-status-message.txt
 
     - name: Define Environment Variables
       run: |
