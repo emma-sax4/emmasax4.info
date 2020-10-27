@@ -4,6 +4,7 @@ bundle exec htmlproofer \
   --assume-extension \
   --allow-hash-href \
   --internal-domains /emmasax4.com/ \
+  --url_ignore /linkedin/,/getitwriteonline/,/sopalodges/,/maasaimara/ \
   _site
 
 # https://www.sopalodges.com/lake-naivasha-sopa-resort/the-resort
