@@ -8,6 +8,14 @@ gh_actor=$4
 gh_ref=$5
 head_ref=$6
 
+echo "event:$event_name"
+echo "repository:$repository"
+echo "run_id:$run_id"
+echo "gh_actor:$gh_actor"
+echo "gh_ref:$gh_ref"
+echo "head_ref:$head_ref"
+
+
 build_url="https://github.com/$repository/actions/runs/$run_id"
 
 if [[ $gh_ref == 'refs/pull'* ]]; then # this is a pull request
