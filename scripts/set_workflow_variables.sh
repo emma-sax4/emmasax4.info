@@ -1,12 +1,13 @@
 #!/bin/bash
 
-args="$*"
-event_name=$(echo "$args" | grep -o 'event_name=[^[:blank:]]*' | sed -e 's#.*=\(\)#\1#') # 'true' or 'false'
-github_repo=$(echo "$args" | grep -o 'github_repo=[^[:blank:]]*' | sed -e 's#.*=\(\)#\1#')
-actions_run_id=$(echo "$args" | grep -o 'actions_run_id=[^[:blank:]]*' | sed -e 's#.*=\(\)#\1#')
-github_actor=$(echo "$args" | grep -o 'github_actor=[^[:blank:]]*' | sed -e 's#.*=\(\)#\1#')
-github_ref=$(echo "$args" | grep -o 'github_ref=[^[:blank:]]*' | sed -e 's#.*=\(\)#\1#')
-head_ref=$(echo "$args" | grep -o 'head_ref=[^[:blank:]]*' | sed -e 's#.*=\(\)#\1#')
+# These variables must be provided to this script in the same order as listed here
+event_name=$1
+github_repo=$2
+actions_run_id=$3
+github_actor=$4
+github_ref=$5
+head_ref=$6
+
 build_url="https://github.com/$github_repo/actions/runs/$actions_run_id"
 
 if [[ $github_ref == 'refs/pull'* ]]; then # this is a pull request
