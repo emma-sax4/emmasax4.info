@@ -67,7 +67,7 @@ jobs:
     # Only run this step for events that are push commits to the 'main' branch
     - name: Set Final Deploy Message
       # if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-      run: bash scripts/set_workflow_deploy_message.sh ${{ env.DEPLOYMENT_STATUS }}
+      run: bash scripts/set_workflow_deploy_message.sh ${{ env.deployment_status }}
 
     # Only run this step if this build has been successful
     - name: Notify Slack on Success
