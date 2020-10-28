@@ -97,7 +97,7 @@ jobs:
       with:
         fetch-depth: 0
 
-    - name: Define Environment Variables
+    - name: Set Default Deploy Message
       run: echo "deploy_message=Deploy to GitHub Pages was *skipped*." >> $GITHUB_ENV
 
     - name: Download Jekyll Site Artifact
@@ -118,7 +118,7 @@ jobs:
         git_config_email: 41898282+github-actions[bot]@users.noreply.github.com
         git_config_name: github-actions[bot]
 
-    - name: Set Deploy Status Message
+    - name: Set Final Deploy Message
       run: bash scripts/set_workflow_deploy_message.sh ${{ env.DEPLOYMENT_STATUS }}
 
     - name: Notify Slack on Success
