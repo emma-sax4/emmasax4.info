@@ -6,7 +6,7 @@ on:
     branches: [ main ]
   schedule:
     - cron: "*/10 * * * *" # Every 10 minutes; TODO: remove this later
-    # - cron: "30 5 * * 1" # On Mondays: 05:30 UTC => 00:30 CDT / 23:30 CST
+    - cron: "30 5 * * 1" # On Mondays: 05:30 UTC => 00:30 CDT / 23:30 CST
 
 jobs:
   build:
