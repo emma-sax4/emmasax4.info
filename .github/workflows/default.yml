@@ -1,0 +1,102 @@
+name: Default
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  schedule:
+    - cron: "30 5 * * *" # Every day at 05:30 UTC => 00:30 CDT / 23:30 CST
+
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check Out Code
+      uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+
+    - name: Set Environment Variables
+      run: bash scripts/set_workflow_environment_variables.sh \
+        ${{ github.EVENT_NAME }} ${{ github.REPOSITORY }} ${{ github.RUN_ID }} \
+        ${{ github.ACTOR }} ${{ github.REF }} ${{ github.HEAD_REF }}
+
+    - name: Switch to Current Branch
+      run: git checkout ${{ env.branch }}
+
+    - name: Configure System
+      run: sudo gem update --system 3.0.8 && sudo gem install bundler -v $(cat Gemfile.lock | tail -1 | tr -d " ")
+
+    - name: Configure Gem Cache
+      uses: actions/cache@v2
+      with:
+        path: vendor/bundle
+        key: bundler-cache-${{ hashFiles('**/Gemfile.lock') }}
+        restore-keys: bundler-cache-
+
+    - name: Install Gems
+      run: bundle config set path "vendor/bundle" && bundle install
+
+    - name: Jekyll Build
+      run: JEKYLL_ENV=production bundle exec jekyll build --destination _site
+
+    - name: HTML Proofer
+      run: bash scripts/html_proofer.sh
+      continue-on-error: true
+
+    - name: Rubocop
+      run: bundle exec rubocop
+
+    - name: Markdown Linter
+      run: bash scripts/markdown_linter.sh
+
+    # Only run this step for events that are push commits to the 'main' branch
+    - name: GitHub Pages Deploy
+      if: github.EVENT_NAME == 'push' && github.REF == 'refs/heads/main'
+      uses: emmasax4/github-pages-deploy-action@main
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: gh-pages
+        folder: _site
+        clean: true
+        silent: true
+        commit_message: "Deploy to ${{ github.REPOSITORY }}"
+        git_config_email: 41898282+github-actions[bot]@users.noreply.github.com
+        git_config_name: github-actions[bot]
+
+    # Only run this step for events that are push commits to the 'main' branch
+    - name: Set Final Deploy Message
+      if: github.EVENT_NAME == 'push' && github.REF == 'refs/heads/main'
+      run: bash scripts/set_workflow_deploy_message.sh ${{ env.DEPLOYMENT_STATUS }}
+
+    # Only run this step if this build has been successful
+    - name: Notify Slack on Success
+      if: success()
+      uses: emmasax4/slack-notifier-action@main
+      with:
+        slack_webhook: ${{ secrets.SLACK_WEBHOOK }}
+        channel: "#general"
+        icon_url: https://i.imgur.com/DGrghtn.png
+        username: GitHub Actions
+        color: "#23c22e"
+        title: ${{ github.REPOSITORY }}
+        title_link: https://github.com/${{ github.REPOSITORY }}
+        author_name: ${{ env.AUTHOR_NAME }}
+        author_icon: ${{ env.AUTHOR_ICON }}
+        text: ${{ env.BUILD_MESSAGE }} *passed*.${{ env.DEPLOY_MESSAGE }}
+
+    # Only run this step if this build has failed
+    - name: Notify Slack on Failure
+      if: failure()
+      uses: emmasax4/slack-notifier-action@main
+      with:
+        slack_webhook: ${{ secrets.SLACK_WEBHOOK }}
+        channel: "#general"
+        icon_url: https://i.imgur.com/DGrghtn.png
+        username: GitHub Actions
+        color: "#bd2222"
+        title: ${{ github.REPOSITORY }}
+        title_link: https://github.com/${{ github.REPOSITORY }}
+        author_name: ${{ env.AUTHOR_NAME }}
+        author_icon: ${{ env.AUTHOR_ICON }}
+        text: ${{ env.BUILD_MESSAGE }} *failed*.${{ env.DEPLOY_MESSAGE }}
