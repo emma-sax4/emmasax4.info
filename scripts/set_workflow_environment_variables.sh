@@ -37,5 +37,5 @@ fi
 if [[ $event_name == "push" ]] && [[ $ref == "refs/heads/main" ]]; then # push commits to the 'main' branch
   echo "deploy_message= Deploy to GitHub Pages was *skipped*." >> $GITHUB_ENV
 else
-  echo "deploy_message=''" >> $GITHUB_ENV
+  echo "deploy_message=" >> $GITHUB_ENV
 fi
