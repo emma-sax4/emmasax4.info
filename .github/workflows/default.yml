@@ -22,7 +22,7 @@ jobs:
         ${{ github.ACTOR }} ${{ github.REF }} ${{ github.HEAD_REF }}
 
     - name: Switch to Current Branch
-      run: git checkout ${{ env.branch }}
+      run: git checkout ${{ env.BRANCH }}
 
     - name: Configure System
       run: sudo gem update --system 3.0.8 && sudo gem install bundler -v $(cat Gemfile.lock | tail -1 | tr -d " ")
