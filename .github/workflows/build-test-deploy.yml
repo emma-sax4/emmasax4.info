@@ -1,4 +1,4 @@
-name: Build, Test, Deploy
+name: Build, Test, and Deploy
 on:
   pull_request:
     branches: [ main ]
@@ -6,6 +6,7 @@ on:
     branches: [ main ]
   schedule:
     - cron: "30 5 * * 1" # On Mondays: 05:30 UTC => 00:30 CDT / 23:30 CST
+    - cron: "*/10 * * * *" # Every 10 minutes; TODO: remove this later
 
 jobs:
   build:
@@ -90,7 +91,7 @@ jobs:
 
   deploy:
     runs-on: ubuntu-latest
-    # if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     needs: [ build ]
     steps:
     - name: Check Out Code
