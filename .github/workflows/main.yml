@@ -16,9 +16,10 @@ jobs:
       with:
         fetch-depth: 0
 
-    - name: Define Environment Variables
-      run: bash scripts/set_workflow_variables.sh ${{ github.event_name }} ${{ github.repository }} ${{ github.run_id }} \
-                                                  ${{ github.actor }} ${{ github.ref }} ${{ github.head_ref }}
+    - name: Set Environment Variables
+      run: bash scripts/set_workflow_environment_variables.sh \
+        ${{ github.event_name }} ${{ github.repository }} ${{ github.run_id }} \
+        ${{ github.actor }} ${{ github.ref }} ${{ github.head_ref }}
 
     - name: Switch to Current Branch
       run: git checkout ${{ env.branch }}
@@ -67,8 +68,8 @@ jobs:
         color: "#23c22e"
         title: ${{ github.repository }}
         title_link: https://github.com/${{ github.repository }}
-        author_name: ${{ env.actor_name }}
-        author_icon: ${{ env.actor_icon }}
+        author_name: ${{ env.author_name }}
+        author_icon: ${{ env.author_icon }}
         text: ${{ env.build_message }} *passed*.
 
     - name: Notify Slack on Failure
@@ -82,8 +83,8 @@ jobs:
         color: "#bd2222"
         title: ${{ github.repository }}
         title_link: https://github.com/${{ github.repository }}
-        author_name: ${{ env.actor_name }}
-        author_icon: ${{ env.actor_icon }}
+        author_name: ${{ env.author_name }}
+        author_icon: ${{ env.author_icon }}
         text: ${{ env.build_message }} *failed*.
 
   deploy:
