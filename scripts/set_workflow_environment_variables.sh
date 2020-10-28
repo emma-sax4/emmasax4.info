@@ -2,20 +2,12 @@
 
 # These variables must be provided to this script in the same order as listed here
 args="$*"
-event_name=$(echo $args | cut -d " " -f $1)
-repository=$(echo $args | cut -d " " -f $2)
-run_id=$(echo $args | cut -d " " -f $3)
-gh_actor=$(echo $args | cut -d " " -f $4)
-gh_ref=$(echo $args | cut -d " " -f $5)
-head_ref=$(echo $args | cut -d " " -f $6)
-
-echo "event:$event_name"
-echo "repository:$repository"
-echo "run_id:$run_id"
-echo "gh_actor:$gh_actor"
-echo "gh_ref:$gh_ref"
-echo "head_ref:$head_ref"
-
+event_name=$(echo $args | cut -d " " -f 1)
+repository=$(echo $args | cut -d " " -f 2)
+run_id=$(echo $args | cut -d " " -f 3)
+gh_actor=$(echo $args | cut -d " " -f 4)
+gh_ref=$(echo $args | cut -d " " -f 5)
+head_ref=$(echo $args | cut -d " " -f 6)
 
 build_url="https://github.com/$repository/actions/runs/$run_id"
 
