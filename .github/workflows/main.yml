@@ -57,56 +57,8 @@ jobs:
     - name: Markdown Linter
       run: bash scripts/markdown_linter.sh
 
-    - name: Notify Slack on Success
-      if: success()
-      uses: emmasax4/slack-notifier-action@main
-      with:
-        slack_webhook: ${{ secrets.SLACK_WEBHOOK }}
-        channel: "#general"
-        icon_url: https://i.imgur.com/DGrghtn.png
-        username: GitHub Actions
-        color: "#23c22e"
-        title: ${{ github.repository }}
-        title_link: https://github.com/${{ github.repository }}
-        author_name: ${{ env.author_name }}
-        author_icon: ${{ env.author_icon }}
-        text: ${{ env.build_message }} *passed*.
-
-    - name: Notify Slack on Failure
-      if: failure()
-      uses: emmasax4/slack-notifier-action@main
-      with:
-        slack_webhook: ${{ secrets.SLACK_WEBHOOK }}
-        channel: "#general"
-        icon_url: https://i.imgur.com/DGrghtn.png
-        username: GitHub Actions
-        color: "#bd2222"
-        title: ${{ github.repository }}
-        title_link: https://github.com/${{ github.repository }}
-        author_name: ${{ env.author_name }}
-        author_icon: ${{ env.author_icon }}
-        text: ${{ env.build_message }} *failed*.
-
-  deploy:
-    runs-on: ubuntu-latest
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-    needs: [ build ]
-    steps:
-    - name: Check Out Code
-      uses: actions/checkout@v2
-      with:
-        fetch-depth: 0
-
-    - name: Set Default Deploy Message
-      run: echo "deploy_message=Deploy to GitHub Pages was *skipped*." >> $GITHUB_ENV
-
-    - name: Download Jekyll Site Artifact
-      uses: actions/download-artifact@v2
-      with:
-        name: jekyll-site
-        path: _site
-
     - name: GitHub Pages Deploy
+      if: github.event_name == 'push' && github.ref == 'refs/heads/main'
       uses: emmasax4/github-pages-deploy-action@main
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
@@ -119,6 +71,7 @@ jobs:
         git_config_name: github-actions[bot]
 
     - name: Set Final Deploy Message
+      if: github.event_name == 'push' && github.ref == 'refs/heads/main'
       run: bash scripts/set_workflow_deploy_message.sh ${{ env.DEPLOYMENT_STATUS }}
 
     - name: Notify Slack on Success
@@ -132,9 +85,9 @@ jobs:
         color: "#23c22e"
         title: ${{ github.repository }}
         title_link: https://github.com/${{ github.repository }}
-        author_name: github-actions[bot]
-        author_icon: https://i.imgur.com/kUxzV44s.png
-        text: ${{ env.deploy_message }}
+        author_name: ${{ env.author_name }}
+        author_icon: ${{ env.author_icon }}
+        text: ${{ env.build_message }} *passed*.${{ env.deploy_message }}
 
     - name: Notify Slack on Failure
       if: failure()
@@ -147,16 +100,6 @@ jobs:
         color: "#bd2222"
         title: ${{ github.repository }}
         title_link: https://github.com/${{ github.repository }}
-        author_name: github-actions[bot]
-        author_icon: https://i.imgur.com/kUxzV44s.png
-        text: ${{ env.deploy_message }}
-
-  clean:
-    runs-on: ubuntu-latest
-    if: always()
-    needs: [ build, deploy ]
-    steps:
-    - name: Delete Jekyll Site Artifact
-      uses: emmasax4/delete-artifact-action@main
-      with:
-        name: jekyll-site
+        author_name: ${{ env.author_name }}
+        author_icon: ${{ env.author_icon }}
+        text: ${{ env.build_message }} *failed*.${{ env.deploy_message }}
