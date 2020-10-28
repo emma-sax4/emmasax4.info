@@ -17,10 +17,8 @@ jobs:
         fetch-depth: 0
 
     - name: Define Environment Variables
-      run: |
-        bash scripts/set_workflow_variables.sh \
-          event_name=${{ github.event_name }} github_repo=${{ github.repository }} actions_run_id=${{ github.run_id }} \
-          github_actor=${{ github.actor }} github_ref=${{ github.ref }} head_ref=${{ github.head_ref }}
+      run: bash scripts/set_workflow_variables.sh ${{ github.event_name }} ${{ github.repository }} ${{ github.run_id }} \
+                                                  ${{ github.actor }} ${{ github.ref }} ${{ github.head_ref }}
 
     - name: Switch to Current Branch
       run: git checkout ${{ env.branch }}
@@ -120,7 +118,7 @@ jobs:
         git_config_name: github-actions[bot]
 
     - name: Set Deploy Status Message
-      run: bash scripts/set_deploy_status_message.sh ${{ env.DEPLOYMENT_STATUS }}
+      run: bash scripts/set_workflow_deploy_message.sh ${{ env.DEPLOYMENT_STATUS }}
 
     - name: Notify Slack on Success
       if: success()
