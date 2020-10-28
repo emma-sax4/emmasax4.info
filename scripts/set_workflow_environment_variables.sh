@@ -18,24 +18,24 @@ else
   branch=$(echo $ref | sed -E 's|refs/[a-zA-Z]+/||')
 fi
 
-echo "branch=$branch" >> $GITHUB_ENV
-echo "build_message=Build <https://github.com/$repository/actions/runs/$run_id|$run_id> on branch \`$branch\`$build_message_addition" >> $GITHUB_ENV
+echo "BRANCH=$branch" >> $GITHUB_ENV
+echo "BUILD_MESSAGE=Build <https://github.com/$repository/actions/runs/$run_id|$run_id> on branch \`$branch\`$build_message_addition" >> $GITHUB_ENV
 
 if [[ $event_name == "schedule" ]]; then # this is a cron
-  echo "author_name=github-actions[bot]" >> $GITHUB_ENV
-  echo "author_icon=https://i.imgur.com/kUxzV44s.png" >> $GITHUB_ENV
+  echo "AUTHOR_NAME=github-actions[bot]" >> $GITHUB_ENV
+  echo "AUTHOR_ICON=https://i.imgur.com/kUxzV44s.png" >> $GITHUB_ENV
 else
-  echo "author_name=$author" >> $GITHUB_ENV
+  echo "AUTHOR_NAME=$author" >> $GITHUB_ENV
 
   if [[ $author == "pr-scheduler[bot]" ]]; then
-    echo "author_icon=https://i.imgur.com/tmdeggv.png" >> $GITHUB_ENV
+    echo "AUTHOR_ICON=https://i.imgur.com/tmdeggv.png" >> $GITHUB_ENV
   else
-    echo "author_icon=https://github.com/$author.png" >> $GITHUB_ENV
+    echo "AUTHOR_ICON=https://github.com/$author.png" >> $GITHUB_ENV
   fi
 fi
 
 # if [[ $event_name == "push" ]] && [[ $ref == "refs/heads/main" ]]; then # push commits to the 'main' branch
-  echo "deploy_message= Deploy to GitHub Pages was *skipped* (default message)." >> $GITHUB_ENV
+  echo "DEPLOY_MESSAGE= Deploy to GitHub Pages was *skipped* (default message)." >> $GITHUB_ENV
 # else
-#   echo "deploy_message=" >> $GITHUB_ENV
+#   echo "DEPLOY_MESSAGE=" >> $GITHUB_ENV
 # fi

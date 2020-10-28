@@ -18,8 +18,8 @@ jobs:
 
     - name: Set Environment Variables
       run: bash scripts/set_workflow_environment_variables.sh \
-        ${{ github.event_name }} ${{ github.repository }} ${{ github.run_id }} \
-        ${{ github.actor }} ${{ github.ref }} ${{ github.head_ref }}
+        ${{ github.EVENT_NAME }} ${{ github.REPOSITORY }} ${{ github.RUN_ID }} \
+        ${{ github.ACTOR }} ${{ github.REF }} ${{ github.HEAD_REF }}
 
     - name: Switch to Current Branch
       run: git checkout ${{ env.branch }}
@@ -52,7 +52,7 @@ jobs:
 
     # Only run this step for events that are push commits to the 'main' branch
     - name: GitHub Pages Deploy
-      # if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+      # if: github.EVENT_NAME == 'push' && github.REF == 'refs/heads/main'
       uses: emmasax4/github-pages-deploy-action@main
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
@@ -60,14 +60,14 @@ jobs:
         folder: _site
         clean: true
         silent: true
-        commit_message: "Deploy to ${{ github.repository }}"
+        commit_message: "Deploy to ${{ github.REPOSITORY }}"
         git_config_email: 41898282+github-actions[bot]@users.noreply.github.com
         git_config_name: github-actions[bot]
 
     # Only run this step for events that are push commits to the 'main' branch
     - name: Set Final Deploy Message
-      # if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-      run: bash scripts/set_workflow_deploy_message.sh ${{ env.deployment_status }}
+      # if: github.EVENT_NAME == 'push' && github.REF == 'refs/heads/main'
+      run: bash scripts/set_workflow_deploy_message.sh ${{ env.DEPLOYMENT_STATUS }}
 
     # Only run this step if this build has been successful
     - name: Notify Slack on Success
@@ -79,11 +79,11 @@ jobs:
         icon_url: https://i.imgur.com/DGrghtn.png
         username: GitHub Actions
         color: "#23c22e"
-        title: ${{ github.repository }}
-        title_link: https://github.com/${{ github.repository }}
-        author_name: ${{ env.author_name }}
-        author_icon: ${{ env.author_icon }}
-        text: ${{ env.build_message }} *passed*.${{ env.deploy_message }}
+        title: ${{ github.REPOSITORY }}
+        title_link: https://github.com/${{ github.REPOSITORY }}
+        author_name: ${{ env.AUTHOR_NAME }}
+        author_icon: ${{ env.AUTHOR_ICON }}
+        text: ${{ env.BUILD_MESSAGE }} *passed*.${{ env.DEPLOY_MESSAGE }}
 
     # Only run this step if this build has failed
     - name: Notify Slack on Failure
@@ -95,8 +95,8 @@ jobs:
         icon_url: https://i.imgur.com/DGrghtn.png
         username: GitHub Actions
         color: "#bd2222"
-        title: ${{ github.repository }}
-        title_link: https://github.com/${{ github.repository }}
-        author_name: ${{ env.author_name }}
-        author_icon: ${{ env.author_icon }}
-        text: ${{ env.build_message }} *failed*.${{ env.deploy_message }}
+        title: ${{ github.REPOSITORY }}
+        title_link: https://github.com/${{ github.REPOSITORY }}
+        author_name: ${{ env.AUTHOR_NAME }}
+        author_icon: ${{ env.AUTHOR_ICON }}
+        text: ${{ env.BUILD_MESSAGE }} *failed*.${{ env.DEPLOY_MESSAGE }}
