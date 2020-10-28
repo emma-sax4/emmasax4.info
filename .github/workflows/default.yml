@@ -6,7 +6,6 @@ on:
     branches: [ main ]
   schedule:
     - cron: "30 5 * * *" # Every day at 05:30 UTC => 00:30 CDT / 23:30 CST
-    - cron: "*/15 * * * *" # Every 15 minutes
 
 jobs:
   main:
