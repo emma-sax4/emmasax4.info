@@ -9,8 +9,6 @@ github_ref=$(echo "$args" | grep -o 'github_ref=[^[:blank:]]*' | sed -e 's#.*=\(
 head_ref=$(echo "$args" | grep -o 'head_ref=[^[:blank:]]*' | sed -e 's#.*=\(\)#\1#')
 build_url="https://github.com/$github_repo/actions/runs/$actions_run_id"
 
-echo "deploy_message=Deploy to GitHub Pages was *skipped*" >> $GITHUB_ENV
-
 if [[ $github_ref == 'refs/pull'* ]]; then # this is a pull request
   pull_id=$(echo $github_ref | sed -E 's|refs/pull/||' | sed -E 's|/merge||')
   pull_url="https://github.com/$github_repo/pull/$pull_id"

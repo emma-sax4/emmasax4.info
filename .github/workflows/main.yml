@@ -91,7 +91,7 @@ jobs:
 
   deploy:
     runs-on: ubuntu-latest
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    # if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     needs: [ build ]
     steps:
     - name: Check Out Code
@@ -100,10 +100,7 @@ jobs:
         fetch-depth: 0
 
     - name: Define Environment Variables
-      run: |
-        bash scripts/set_workflow_variables.sh \
-          event_name=${{ github.event_name }} github_repo=${{ github.repository }} actions_run_id=${{ github.run_id }} \
-          github_actor=${{ github.actor }} github_ref=${{ github.ref }} head_ref=${{ github.head_ref }}
+      run: echo "deploy_message=Deploy to GitHub Pages was *skipped*." >> $GITHUB_ENV
 
     - name: Download Jekyll Site Artifact
       uses: actions/download-artifact@v2
@@ -137,8 +134,8 @@ jobs:
         color: "#23c22e"
         title: ${{ github.repository }}
         title_link: https://github.com/${{ github.repository }}
-        author_name: ${{ env.actor_name }}
-        author_icon: ${{ env.actor_icon }}
+        author_name: github-actions[bot]
+        author_icon: https://i.imgur.com/kUxzV44s.png
         text: ${{ env.deploy_message }}
 
     - name: Notify Slack on Failure
@@ -152,8 +149,8 @@ jobs:
         color: "#bd2222"
         title: ${{ github.repository }}
         title_link: https://github.com/${{ github.repository }}
-        author_name: ${{ env.actor_name }}
-        author_icon: ${{ env.actor_icon }}
+        author_name: github-actions[bot]
+        author_icon: https://i.imgur.com/kUxzV44s.png
         text: ${{ env.deploy_message }}
 
   clean:
