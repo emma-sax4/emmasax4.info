@@ -11,8 +11,7 @@ head_ref=$(echo $args | cut -d " " -f 6)
 
 if [[ $ref == 'refs/pull'* ]]; then # this is a pull request
   pull_id=$(echo $ref | sed -E 's|refs/pull/||' | sed -E 's|/merge||')
-  pull_url="https://github.com/$repository/pull/$pull_id"
-  build_message_addition=" in PR <$pull_url|#$pull_id>"
+  build_message_addition=" in PR <https://github.com/$repository/pull/$pull_id|#$pull_id>"
   branch=$(echo $head_ref | sed -E 's|refs/[a-zA-Z]+/||')
 else
   build_message_addition=""

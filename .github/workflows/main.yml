@@ -57,6 +57,7 @@ jobs:
     - name: Markdown Linter
       run: bash scripts/markdown_linter.sh
 
+    # Only run this step for events that are push commits to the 'main' branch
     - name: GitHub Pages Deploy
       if: github.event_name == 'push' && github.ref == 'refs/heads/main'
       uses: emmasax4/github-pages-deploy-action@main
@@ -70,6 +71,7 @@ jobs:
         git_config_email: 41898282+github-actions[bot]@users.noreply.github.com
         git_config_name: github-actions[bot]
 
+    # Only run this step for events that are push commits to the 'main' branch
     - name: Set Final Deploy Message
       if: github.event_name == 'push' && github.ref == 'refs/heads/main'
       run: bash scripts/set_workflow_deploy_message.sh ${{ env.DEPLOYMENT_STATUS }}
