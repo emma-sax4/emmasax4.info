@@ -1,12 +1,12 @@
 ---
 layout: blog
-permalink: /blog/my-20s-matter/
+permalink: /blog/your-20s-matter/
 pagination:
   enabled: true
   collection: blog_posts
   permalink: /:num/
-  title: My 20s Matter
-  category: My 20s Matter
+  title: Your 20s Matter
+  category: Your 20s Matter
 ---
 
 Recently, I finished reading [_The Defining Decade_](https://bookshop.org/books/the-defining-decade-why-your-twenties-matter-and-how-to-make-the-most-of-them-now/9780446561754). I didn't think this book was going to be as groundbreaking for me as it was. Not only did I find it educational and insightful, but I also found it tremendously inspiring and uplifting.
