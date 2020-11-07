@@ -123,6 +123,24 @@ For example, I got one of my first internship interviews because I attended the 
 
 ## Connections
 
+I get it: netowrking isn't fun. And it can feel unfair that people with connections get things (like jobs, interviews, and acceptance letters) easier. But, whether for good or bad, that's the way the world works. We can gain new opportunities by keeping in touch with people that we once knew. Even things as simple as writing down somebody's email address, and then messaging them that you were happy to meet with them, and you hope to work with them again in the future could go a long way.
+
+For my latest job, I was basically asked to interview with the company because of a recommendation from a person I had worked with at my previous company two years ago. I leaned into that request to interview, and I went for it. What did I have to lose? And that worked in my favor: I'm very happy at my new job. And I wouldn't be surprised if within the next 20 years, I work with some other coworkers again.
+
+But, making connections with people goes beyond the workplace. As Jay wrote on pg. 27:
+
+> Most twentysomethings yearn for a feeling of community, and they cling to their strong ties to feel more connected. Ironically, being enmeshed with a group can actually enhance feelings of alienation, because we—and our tribe—become insular and detached. Over time, our initial feeling of being part of a group becomes a sense of disconnection with the larger world.
+
+Let's say you've been spending a lot of time doing the same hobbies with the same friends for the past two years. If you want to branch out and do other things, it could be hard to convince your current friend group to do that, too. Hence, here come those connections. Maybe you worked with somebody previously that has a hobby you're interested in trying. Maybe you have a mutual friend somewhere that is experienced in another activity you'd like to try. If you've kept up with those connections, even a little bit, then you can reach out to them again and ask for a favor.
+
+The _Defining Decade_ points out something called the [Ben Franklin effect](https://en.wikipedia.org/wiki/Ben_Franklin_effect). Simply put, this states that people that have already done a favor for somebody is more likely to do a favor for them again. Basically, if we do favors for other people, our brain starts to tell us that we like that person. This leads us to do more favors, which leads to liking other people more, etc. The point is, if you want somebody to like you, then ask them to do you a favor. If they do it, they'll be more likely to do more favors in the future. Of course, asking someone for help can be scary. The fear of being rejected or mocked is real. But the truth is that people like to help other people, and so if you're nice and friendly, people will want to help you.
+
+Furthermore, if young people in their 20s are trying new things and talking to new people (that may not have the same backgrounds and history as them), then they're more likely to get a broader perspective of the world around them, and they'll be able to learn new skills, trades, and more about themselves. This is important to do now, while young adults' brains are still malleable and they're still in their prime "learning" age (more to come on this in another blog post).
+
+My point is, lean into these weaker connections. These weak connections can eventually become stronger with a little bit of effort, and there's a lot of good that can come from new connections. You all have seen the movies where somebody goes to a party to make their friend happy, even though they don't want to go to the party. And then, they end up meeting their romantic partner for the movie. My point is, if you say 'yes' to those weaker connections, there's lots of possibilities. If you say 'no', you're closing yourself off to _all_ the possibilities.
+
+You don't have to do everything alone. Of course, do your research. Figure out how to make helping you sound as appealing as possible, and always be respectful. Some people will say no, and that's okay. But "[more] than you think will say yes" (pg. 31).
+
 <div id="anchor">
   <a id="comparisons-and-expectations">&nbsp;</a>
 </div>
