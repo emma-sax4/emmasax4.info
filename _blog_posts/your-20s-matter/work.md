@@ -16,7 +16,7 @@ When people think of their 20s, what do they think of? I know what I used to thi
 
 You get the gist of it. Of course, this is all based on what I saw on TV shows and movies that featured young women in their 20s. For the moment, let's focus on the second bullet point: "getting a decent job in a bustling city, maybe around age 26–28". Although this is what those TV shows show their viewers, it's not exactly realistic, and oftentimes getting a "decent job in a bustling city" is more nuanced and complex than just starting in a secretary job in Season 1 and slowly moving up and becoming a magazine editor by Season 3.
 
-For real people, not characters, finding the "right" job in the "right" city is not always the easy, or even the "right" thing. To help summarize what _The Defining Decade_ has explained to me, this blog post will focus on the following areas:
+For real people, not characters, finding the "right" job in the "right" city is not always the easy, or even the "right" thing. To help summarize what [_The Defining Decade_](https://bookshop.org/books/the-defining-decade-why-your-twenties-matter-and-how-to-make-the-most-of-them-now/9780446561754) by [Meg Jay](https://megjay.com) has explained to me, this blog post will focus on the following areas:
 
 * [Identity Capital](#identity-capital)
 * [Connections](#connections)
@@ -147,8 +147,34 @@ You don't have to do everything alone. Of course, do your research. Figure out h
 
 ## Comparisons and Expectations
 
+I'll start this section simple: don't compare your life to your "friends'" lives on social media. Your life is not your friends' lives. Their dream job doesn't have to be (and probably shouldn't be) their dream jobs. Just because they may be working for a non-profit that's saving kids in bad foster homes, doesn't mean your job is a bad job, or like you aren't doing what you should be doing.
+
+According to _The Defining Decade_, "[each] person has an inherent urge to grow toward his or her potential" (pg. 46). But many people don't understand what potential they should be aiming for. We are not all the same. Our potentials are all different, and no one person's potential is smaller or inferior to another's. "Some twentysomethings dream too small, not understanding that their twentysomething choices matter and are, in fact, shaping the years ahead. Others dream too big, fueled more by fantasies about limitless possibilities than experiences" (pg. 46). The truth is, my life journey looks nothing like your life journey, which probably looks nothing like anybody else's life journey.
+
+According to Jay, there's a difference between striving for potential and falling victim to comparisons and expectations. The difference is called "the tyranny of the should" (pg. 47). When you talk about your job and career, are your sentences filled with 'should's and 'supposed to's? "My work should be fulfilling." "My work is supposed to stress me out, or else I'm not being challenged." "I should be in grad school." "College should be easier than this." "My life is supposed to be happier." As Jay wrote on pg. 47:
+
+> Shoulds can masquerade as high standards or lofty goals, but they are not the same. Goals direct us from the inside, but shoulds are paralyzing judgments from the outside.
+
+You shouldn't feel obligated to do anything. If you're unsatisfied in your job, then what can you do to change the situation. If you feel pressured to move to a certain city (hence the "getting a decent job in a bustling city"), but you don't want to move to a big city, then what can you do to ensure you can stay where you are? Focus on what's _real_, not what you _think_ is real (which commonly comes from social media). If you feel obligated to make your life fit all of the 'should's, then you're losing your sense of self and your sense of your own desires.
+
+As an example, I don't really drink or party anymore. I used to. But I don't find it enjoyable anymore... and I'm not really sure if I ever did. I do LEGOs. I write blog posts. I meditate. I don't have any kids, and right now, that's okay with me. If I tried to make my life exactly how all of my one thousand Facebook friends lived their lives... well I probably wouldn't be as happy as I am now.
+
+You don't need to go to parties if you don't want to. You don't need to live in a certain location, just because all of your college friends are living there. You don't need to want to travel if you don't want to. You don't need to only see your family at holidays. You don't need to be a lawyer just because your parents want you to be a lawyer. You're in charge of your own life. Obviously, I write this knowing that comes with a certain amount of privilege. Not everybody can just _change their life_ whenever they want. Creating the life we really want to live is hard for everyone. So you're not alone. Ask for favors. Talk to people, despite being scared. Take leaps of faith. Through all of that discomfort, we grow.
+
+Don't give into those comparisons you subconsciously make with everybody else, and don't let those expectations of you change what you really want to do. If you let those rule your life... well... _that's_ not living up to your full potential.
+
 <div id="anchor">
   <a id="your-life-doesnt-need-to-be-boring">&nbsp;</a>
 </div>
 
 ## Your Life Doesn't Need to be Boring
+
+According to _The Defining Decade_, there's many young adults in their 20s and don't want their life to be "boring". They want to be unique and special. As Jay writes on pg. 56:
+
+> Distinctiveness is a fundamental part of identity. We develop a clearer sense of ourselves by firming up the boundaries between ourselves and others. I am who I am because of how I am different from those around me. [...] Differentness is part of what makes us who we are. It gives our lives meaning.
+
+On a personal level, I never really felt any stress from this standpoint. Maybe it's because, as a non-white woman in tech, I am sort of unique. Maybe it's just that I always sat at the front of the classroom, and that set me apart. Maybe it was as simple as I knew I had the boisterous and energetic attitude to always stand out. But, according to Jay, there's a subsection of young adults that don't commit to career paths or jobs _because_ they don't want to have the same old desk job that everyone else has.
+
+Jay writes that "[we] have to shift from a negative identity, or a sense of what I'm not, to a positive one, or a sense of what I am" (pg. 56). Instead of focusing on what we _don't_ want to do (be the same as everyone else), we need to focus on what we _do_ want to do. Maybe instead of a "desk job", it's writing and drawing. Maybe instead of working as an office manager, it's organizing and planning weddings and parties. "Saying yes to one concrete thing felt like saying no to an interesting or limitless life. In fact, it's the other way around. If [the young adult] didn't say yes to something, [their] life was going to become unremarkable and limited" (pg. 57).
+
+By saying 'yes' to a desk job in your 20s, you're not settling. You're not stuck. What really would make you stuck is if you wait until you're 36, and then you have a baby at 38, and need a job, but aren't qualified for any well-paying job. By claiming a career in your 20s, you're _starting_, not _setting_.
