@@ -1,7 +1,7 @@
 GIT
   remote: https://github.com/emmasax4/jekyll-feed.git
-  revision: 1f0c381923340202d532b9efed64e127683e5275
-  branch: merge_with_upstream
+  revision: b4f5b57330b6f25b7bd81bac7c4ccb9eedcd5b32
+  branch: main
   specs:
     jekyll-feed (0.15.1)
       jekyll (>= 3.7, < 5.0)
@@ -16,7 +16,7 @@ GIT
 
 GIT
   remote: https://github.com/emmasax4/jekyll-sitemap.git
-  revision: 40afc608ac4a8d5361fbe28e0e3f86bb8ff4b9ea
+  revision: 6d9dabf6adb445507e58008bbc489c05d52b96e2
   branch: main
   specs:
     jekyll-sitemap (1.4.0)
