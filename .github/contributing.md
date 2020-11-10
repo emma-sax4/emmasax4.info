@@ -76,7 +76,7 @@ We can check periodically that all of the HTML links in this website load correc
 
 ```bash
 JEKYLL_ENV=production bundle exec jekyll build
-bash scripts/html_proofer.sh
+bash .github/scripts/html_proofer.sh
 ```
 
 If you're in the process of creating a new blog post, then most likely the external link to the new blog post will fail. This makes sense—the blog post isn't live online yet, and that's what the link is checking for.
@@ -98,10 +98,10 @@ GitHub Actions also runs Rubocop as well, so if any changes are made to the Ruby
 This project uses the [MarkdownLint](https://github.com/markdownlint/markdownlint) on its Markdown files. There are specific linter [rules](https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md) that I've carefully chosen to omit (because they simply don't fit my Markdown style), and so to run the linter with my rules, run this script:
 
 ```bash
-bash scripts/markdown_linter.sh
+bash .github/scripts/markdown_linter.sh
 ```
 
-Note that the linter specifically passes in directories and files to evaluate, so if you create any new Markdown files, you'll have to add them to `scripts/markdown_linter.sh`.
+Note that the linter specifically passes in directories and files to evaluate, so if you create any new Markdown files, you'll have to add them to `.github/scripts/markdown_linter.sh`.
 
 ## Continuous Integration
 
@@ -294,7 +294,7 @@ To identify the current hour offset from UTC, look up the time zone offset based
 In order to generate a Table of Contents for a given blog post, run the following:
 
 ```bash
-scripts/toc_markdown.rb _blog_posts/NAME-OF-FILE.md
+.github/scripts/toc_markdown.rb _blog_posts/NAME-OF-FILE.md
 ```
 
 This will provide a Markdown-style TOC that you can copy-paste into the blog post. Then, you just need to add the anchors (making the headers of the blog post linkable).

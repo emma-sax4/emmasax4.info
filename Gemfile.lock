@@ -1,22 +1,22 @@
 GIT
   remote: https://github.com/emmasax4/jekyll-feed.git
-  revision: 50cc08cad6277da2a2da164cfd003c3817fdd956
+  revision: b4f5b57330b6f25b7bd81bac7c4ccb9eedcd5b32
   branch: main
   specs:
-    jekyll-feed (0.15.0)
+    jekyll-feed (0.15.1)
       jekyll (>= 3.7, < 5.0)
 
 GIT
   remote: https://github.com/emmasax4/jekyll-seo-tag.git
-  revision: 8174c3413ddbc08b448bc45b9bd595e0f667bda4
+  revision: 7e7c3832ae7a80eb182ceb5302c74cfb90450706
   branch: main
   specs:
-    jekyll-seo-tag (2.6.1)
-      jekyll (>= 3.3, < 5.0)
+    jekyll-seo-tag (2.7.1)
+      jekyll (>= 3.8, < 5.0)
 
 GIT
   remote: https://github.com/emmasax4/jekyll-sitemap.git
-  revision: c328d33854c0313dd93b11715c8c372535f6db6d
+  revision: 6d9dabf6adb445507e58008bbc489c05d52b96e2
   branch: main
   specs:
     jekyll-sitemap (1.4.0)
@@ -42,7 +42,7 @@ GEM
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
     ast (2.4.1)
-    chef-utils (16.5.77)
+    chef-utils (16.6.14)
     colorator (1.1.0)
     commonmarker (0.21.0)
       ruby-enum (~> 0.5)
@@ -132,13 +132,13 @@ GEM
     mixlib-cli (2.1.8)
     mixlib-config (3.0.9)
       tomlrb
-    mixlib-shellout (3.1.6)
+    mixlib-shellout (3.1.7)
       chef-utils
     nokogiri (1.10.10)
       mini_portile2 (~> 2.4.0)
     nokogumbo (2.0.2)
       nokogiri (~> 1.8, >= 1.8.4)
-    parallel (1.19.2)
+    parallel (1.20.0)
     parser (2.7.2.0)
       ast (~> 2.4.1)
     pathutil (0.16.2)
@@ -149,19 +149,19 @@ GEM
     rb-fsevent (0.10.4)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
-    regexp_parser (1.8.1)
+    regexp_parser (1.8.2)
     rexml (3.2.4)
-    rouge (3.23.0)
-    rubocop (0.93.0)
+    rouge (3.24.0)
+    rubocop (1.2.0)
       parallel (~> 1.10)
       parser (>= 2.7.1.5)
       rainbow (>= 2.2.2, < 4.0)
       regexp_parser (>= 1.8)
       rexml
-      rubocop-ast (>= 0.6.0)
+      rubocop-ast (>= 1.0.1)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 1.4.0, < 2.0)
-    rubocop-ast (0.7.1)
+    rubocop-ast (1.1.1)
       parser (>= 2.7.1.5)
     ruby-enum (0.8.0)
       i18n
@@ -175,11 +175,11 @@ GEM
     tomlrb (1.3.0)
     typhoeus (1.4.0)
       ethon (>= 0.9.0)
-    tzinfo (1.2.7)
+    tzinfo (1.2.8)
       thread_safe (~> 0.1)
     unicode-display_width (1.7.0)
     yell (2.2.2)
-    zeitwerk (2.4.0)
+    zeitwerk (2.4.1)
 
 PLATFORMS
   ruby
