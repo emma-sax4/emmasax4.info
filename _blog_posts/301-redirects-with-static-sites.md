@@ -96,10 +96,10 @@ The next steps are to wait a few months. This is easy! Google recommends waiting
 
 To summarize, the basic steps I used to change the domain on my static site with GitHub Pages:
 
-1. Rename the repository ([{{ site.author_profiles.github }}/{{ site.github_repo }}/pull/305]({{ site.author_profiles.github }}/{{ site.github_repo }}/pull/305))
-2. Update where the project name is hard-coded ([{{ site.author_profiles.github }}/{{ site.github_repo }}/pull/306]({{ site.author_profiles.github }}/{{ site.github_repo }}/pull/306))
+1. Rename the repository ([GitHub: {{ site.github_repo }}/pull/305]({{ site.author_profiles.github }}/{{ site.github_repo }}/pull/305))
+2. Update where the project name is hard-coded ([GitHub: {{ site.github_repo }}/pull/306]({{ site.author_profiles.github }}/{{ site.github_repo }}/pull/306))
 3. Change domain through GitHub Pages settings (or by merging the changes to the `CNAME` file) and set up SSL certificates for the new domain if needed
-4. Create redirects from old domain to new domain ([{{ site.author_profiles.github }}/emmasax4-redirects]({{ site.author_profiles.github }}/emmasax4-redirects))
+4. Create redirects from old domain to new domain ([GitHub: emmasax4-redirects]({{ site.author_profiles.github }}/emmasax4-redirects))
 5. Set up SEO trackers to monitor new domain
 6. Wait a several months and monitor traffic to old domain as you go
 7. (OPTIONAL) Turn off redirects
