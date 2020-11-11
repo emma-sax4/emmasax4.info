@@ -17,7 +17,7 @@ jobs:
         fetch-depth: 0
 
     - name: Set Environment Variables
-      run: bash .github/scripts/set_workflow_environment_variables.sh \
+      run: bash .github/scripts/set_environment_variables.sh \
         ${{ github.EVENT_NAME }} ${{ github.REPOSITORY }} ${{ github.RUN_ID }} \
         ${{ github.ACTOR }} ${{ github.REF }} ${{ github.HEAD_REF }}
 
@@ -67,7 +67,7 @@ jobs:
     # Only run this step for events that are push commits to the 'main' branch
     - name: Set Final Deploy Message
       if: github.EVENT_NAME == 'push' && github.REF == 'refs/heads/main'
-      run: bash .github/scripts/set_workflow_deploy_message.sh ${{ env.DEPLOYMENT_STATUS }}
+      run: bash .github/scripts/set_deploy_message.sh ${{ env.DEPLOYMENT_STATUS }}
 
     # Only run this step if this build has been successful
     - name: Notify Slack on Success
