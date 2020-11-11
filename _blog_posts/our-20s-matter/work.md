@@ -3,7 +3,7 @@ layout: post
 title: Our 20s Matter
 subtitle: "Part 1: Work"
 category: Our 20s Matter
-permalink: /blog/posts/your-20s-matter/work/
+permalink: /blog/posts/our-20s-matter/work/
 draft: true
 ---
 

@@ -3,11 +3,11 @@ layout: post
 title: Our 20s Matter
 subtitle: "Part 2: Love"
 category: Our 20s Matter
-permalink: /blog/posts/your-20s-matter/love/
+permalink: /blog/posts/our-20s-matter/love/
 draft: true
 ---
 
-All right. At this point, we've done a deep dive into our first bullet point (read more about that [here](/blog/posts/your-20s-matter/work/)). Just in case you don't remember our bullet points, let's look at them again:
+All right. At this point, we've done a deep dive into our first bullet point (read more about that [here](/blog/posts/our-20s-matter/work/)). Just in case you don't remember our bullet points, let's look at them again:
 
 > When people think of their 20s, what do they think of? I know what I used to think of:
 >
