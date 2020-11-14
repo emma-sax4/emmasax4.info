@@ -45,59 +45,59 @@ To help clarify the exact price that "late bloomers" will pay, let's crunch some
     <tbody>
       <tr>
         <td class="text-center">1</td>
-        <td class="text-center"><pre class="highlight"><code>$12 * 40 hours * 52 weeks<br>= $24,960</code></pre></td>
-        <td class="text-center"><pre class="highlight"><code>$10 * 40 hours * 52 weeks<br>= $20,800</code></pre></td>
-        <td class="text-center"><pre class="highlight"><code>$20,800 – $24,960<br>= $-4,160</code></pre></td>
-        <td class="text-center"><pre class="highlight"><code>$20,800 – $24,960<br>= $-4,160</code></pre></td>
+        <td class="text-center"><pre class="highlight"><code>$12 × 40 hours × 52 weeks<br>= $24,960</code></pre></td>
+        <td class="text-center"><pre class="highlight"><code>$10 × 40 hours × 52 weeks<br>= $20,800</code></pre></td>
+        <td class="text-center"><pre class="highlight"><code>$20,800 − $24,960<br>= $-4,160</code></pre></td>
+        <td class="text-center"><pre class="highlight"><code>$20,800 − $24,960<br>= $-4,160</code></pre></td>
       </tr>
       <tr>
         <td class="text-center">2</td>
-        <td class="text-center"><pre class="highlight"><code>$12 * 40 hours * 52 weeks<br>= $24,960</code></pre></td>
-        <td class="text-center"><pre class="highlight"><code>$10.40 * 40 hours * 52 weeks<br>= $21,632</code></pre></td>
-        <td class="text-center"><pre class="highlight"><code>$21,632 – $24,960<br>= $-3,328</code></pre></td>
-        <td class="text-center"><pre class="highlight"><code>$42,432 – $49,920<br>= $-7,488</code></pre></td>
+        <td class="text-center"><pre class="highlight"><code>$12 × 40 hours × 52 weeks<br>= $24,960</code></pre></td>
+        <td class="text-center"><pre class="highlight"><code>$10.40 × 40 hours × 52 weeks<br>= $21,632</code></pre></td>
+        <td class="text-center"><pre class="highlight"><code>$21,632 − $24,960<br>= $-3,328</code></pre></td>
+        <td class="text-center"><pre class="highlight"><code>$42,432 − $49,920<br>= $-7,488</code></pre></td>
       </tr>
       <tr>
         <td class="text-center">3</td>
-        <td class="text-center"><pre class="highlight"><code>$12 * 40 hours * 52 weeks<br>= $24,960</code></pre></td>
-        <td class="text-center"><pre class="highlight"><code>$10.82 * 40 hours * 52 weeks<br>= $22,505.60</code></pre></td>
-        <td class="text-center"><pre class="highlight"><code>$22,505.60 – $24,960<br>= $-2,454.40</code></pre></td>
-        <td class="text-center"><pre class="highlight"><code>$64,937.60 – $74,880<br>= $-9,942.40</code></pre></td>
+        <td class="text-center"><pre class="highlight"><code>$12 × 40 hours × 52 weeks<br>= $24,960</code></pre></td>
+        <td class="text-center"><pre class="highlight"><code>$10.82 × 40 hours × 52 weeks<br>= $22,505.60</code></pre></td>
+        <td class="text-center"><pre class="highlight"><code>$22,505.60 − $24,960<br>= $-2,454.40</code></pre></td>
+        <td class="text-center"><pre class="highlight"><code>$64,937.60 − $74,880<br>= $-9,942.40</code></pre></td>
       </tr>
       <tr>
         <td class="text-center">4</td>
-        <td class="text-center"><pre class="highlight"><code>$12 * 40 hours * 52 weeks<br>= $24,960</code></pre></td>
-        <td class="text-center"><pre class="highlight"><code>$22 * 40 hours * 52 weeks<br>= $45,760</code></pre></td>
-        <td class="text-center"><pre class="highlight"><code>$45,760 – $24,960<br>= $20,800</code></pre></td>
-        <td class="text-center"><pre class="highlight"><code>$110,697.60 – $99,840<br>= $10,857.60</code></pre></td>
+        <td class="text-center"><pre class="highlight"><code>$12 × 40 hours × 52 weeks<br>= $24,960</code></pre></td>
+        <td class="text-center"><pre class="highlight"><code>$22 × 40 hours × 52 weeks<br>= $45,760</code></pre></td>
+        <td class="text-center"><pre class="highlight"><code>$45,760 − $24,960<br>= $20,800</code></pre></td>
+        <td class="text-center"><pre class="highlight"><code>$110,697.60 − $99,840<br>= $10,857.60</code></pre></td>
       </tr>
       <tr>
         <td class="text-center">5</td>
-        <td class="text-center"><pre class="highlight"><code>$12 * 40 hours * 52 weeks<br>= $24,960</code></pre></td>
-        <td class="text-center"><pre class="highlight"><code>$22 * 40 hours * 52 weeks<br>= $45,760</code></pre></td>
-        <td class="text-center"><pre class="highlight"><code>$45,760 – $24,960<br>= $20,800</code></pre></td>
-        <td class="text-center"><pre class="highlight"><code>$156,457.60 – $124,800<br>= $31,657.6</code></pre></td>
+        <td class="text-center"><pre class="highlight"><code>$12 × 40 hours × 52 weeks<br>=  $24,960</code></pre></td>
+        <td class="text-center"><pre class="highlight"><code>$22 × 40 hours × 52 weeks<br>= $45,760</code></pre></td>
+        <td class="text-center"><pre class="highlight"><code>$45,760 − $24,960<br>= $20,800</code></pre></td>
+        <td class="text-center"><pre class="highlight"><code>$156,457.60 − $124,800<br>= $31,657.6</code></pre></td>
       </tr>
       <tr>
         <td class="text-center">6</td>
-        <td class="text-center"><pre class="highlight"><code>$12 * 40 hours * 52 weeks<br>= $24,960</code></pre></td>
-        <td class="text-center"><pre class="highlight"><code>$22 * 40 hours * 52 weeks<br>= $45,760</code></pre></td>
-        <td class="text-center"><pre class="highlight"><code>$45,760 – $24,960<br>= $20,800</code></pre></td>
-        <td class="text-center"><pre class="highlight"><code>$202,217.60 – $149,760<br>= $52,457.60</code></pre></td>
+        <td class="text-center"><pre class="highlight"><code>$12 × 40 hours × 52 weeks<br>= $24,960</code></pre></td>
+        <td class="text-center"><pre class="highlight"><code>$22 × 40 hours × 52 weeks<br>= $45,760</code></pre></td>
+        <td class="text-center"><pre class="highlight"><code>$45,760 − $24,960<br>= $20,800</code></pre></td>
+        <td class="text-center"><pre class="highlight"><code>$202,217.60 − $149,760<br>= $52,457.60</code></pre></td>
       </tr>
       <tr>
         <td class="text-center">7</td>
-        <td class="text-center"><pre class="highlight"><code>$12 * 40 hours * 52 weeks<br>= $24,960</code></pre></td>
-        <td class="text-center"><pre class="highlight"><code>$22 * 40 hours * 52 weeks<br>= $45,760</code></pre></td>
-        <td class="text-center"><pre class="highlight"><code>$45,760 – $24,960<br>= $20,800</code></pre></td>
-        <td class="text-center"><pre class="highlight"><code>$247,977.60 – $174,720<br>= $73,257.60</code></pre></td>
+        <td class="text-center"><pre class="highlight"><code>$12 × 40 hours × 52 weeks<br>= $24,960</code></pre></td>
+        <td class="text-center"><pre class="highlight"><code>$22 × 40 hours × 52 weeks<br>= $45,760</code></pre></td>
+        <td class="text-center"><pre class="highlight"><code>$45,760 − $24,960<br>= $20,800</code></pre></td>
+        <td class="text-center"><pre class="highlight"><code>$247,977.60 − $174,720<br>= $73,257.60</code></pre></td>
       </tr>
       <tr>
         <td class="text-center">8</td>
-        <td class="text-center"><pre class="highlight"><code>$12 * 40 hours * 52 weeks<br>= $24,960</code></pre></td>
-        <td class="text-center"><pre class="highlight"><code>$22 * 40 hours * 52 weeks<br>= $45,760</code></pre></td>
-        <td class="text-center"><pre class="highlight"><code>$45,760 – $24,960<br>= $20,800</code></pre></td>
-        <td class="text-center"><pre class="highlight"><code>$293,737.60 – $199,680<br>= $94,057.60</code></pre></td>
+        <td class="text-center"><pre class="highlight"><code>$12 × 40 hours × 52 weeks<br>= $24,960</code></pre></td>
+        <td class="text-center"><pre class="highlight"><code>$22 × 40 hours × 52 weeks<br>= $45,760</code></pre></td>
+        <td class="text-center"><pre class="highlight"><code>$45,760 − $24,960<br>= $20,800</code></pre></td>
+        <td class="text-center"><pre class="highlight"><code>$293,737.60 − $199,680<br>= $94,057.60</code></pre></td>
       </tr>
     </tbody>
   </table>
