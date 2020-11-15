@@ -1,10 +1,9 @@
 AllCops:
-  Exclude:
-    - vendor/**/*
+  NewCops: enable
+  Exclude: [ vendor/**/* ]
 
 Layout/LineLength:
-  Exclude:
-    - Gemfile
+  Exclude: [ Gemfile ]
 
 Style/HashSyntax:
   Enabled: false
@@ -52,4 +51,34 @@ Style/RedundantRegexpEscape:
   Enabled: true
 
 Style/SlicingWithRange:
+  Enabled: true
+
+Lint/DuplicateRegexpCharacterClassElement:
+  Enabled: true
+
+Lint/EmptyBlock:
+  Enabled: true
+
+Lint/NoReturnInBeginEndBlocks:
+  Enabled: true
+
+Lint/ToEnumArguments:
+  Enabled: true
+
+Lint/UnmodifiedReduceAccumulator:
+  Enabled: true
+
+Style/ArgumentsForwarding:
+  Enabled: true
+
+Style/CollectionCompact:
+  Enabled: true
+
+Style/DocumentDynamicEvalDefinition:
+  Enabled: true
+
+Style/NegatedIfElseCondition:
+  Enabled: true
+
+Style/SwapValues:
   Enabled: true
