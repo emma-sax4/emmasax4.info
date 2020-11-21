@@ -4,7 +4,7 @@ title: Our 20s Matter
 subtitle: "Part 2: Love"
 category: Our 20s Matter
 permalink: /blog/posts/our-20s-matter/love/
-draft: true
+date: 2020-11-21 16:05:00 -0600
 ---
 
 All right. Just in case you don't remember our initial bullet points from our [last blog post](/blog/posts/our-20s-matter/work/), let's look at them once more:
@@ -33,13 +33,13 @@ This blog post will cover the following topics, based on [Meg Jay](https://megja
 
 When I was a little kid, I watched a fair amount of Disney princess movies. I loved the idea of having a Prince Charming who loved everything about me. I'd be beautiful and a great singer, and my future husband would just know from one look that I was _the one_. All throughout middle school and high school, as I watched my classmates begin to "date" (by that, I just mean they went to movies together and held hands), and I was always single. I _hated_ being single. I once asked my mother "Why do no boys want to date me?" All I wanted was to be loved.
 
-But as I got into college, the narrative started to change. Of course, I had some deep-rooted self-esteem issues that kept me wanting to find romantic love (as I think, many very young adults have). However, I started to be flooded with images and stories of young adults that were _happy_ being single. Suddenly, being single, flirty, and free was the new thing. Adults got to focus on their careers, friendships, and learning about themselves, all without worrying about having to be there for a significant other or thinking about marriages or kids.
+But as I got into college, the narrative started to change. Of course, I had some deep-rooted self-esteem issues that kept me wanting to find romantic love (as I think, many young adults have). However, I started to be flooded with images and stories of young adults that were _happy_ being single. Suddenly, being single, flirty, and free was the new thing. Adults got to focus on their careers, friendships, and learning about themselves, all without worrying about having to be there for a significant other or thinking about marriages or kids.
 
-The story I have, this ideal of being free, single, and having no obligations or responsibility when it comes to relationships, is not unique. According to _The Defining Decade_, this narrative is quite common.
+The story I was told, this ideal of being free, single, and having no obligations or responsibility when it comes to relationships, is not unique. According to _The Defining Decade_, this narrative is quite common.
 
 > Today's twentysomethings spend more time single than any generation in history. Most will spend years on their own, somewhere between their childhood homes and families of their own. This time gives many people a chance to live it up before they settle down, and to have fun with friends and lovers while the options are open. [...] Some are serial monogamists while others pair with as many people as they can. Pundits and parents worry that marriage is dead, dating is in demise, and hooking up is the new relational medium.
 
-What Jay writes on page 70 is true. I've watched my friends date serially, never having more than two weeks single. I've watched other friends jump from one night stand to one night stand, but never seeing somebody for more than a month. And I've watched other friends stay single for years, just enjoying being themselves, not paying for extra dinners and drinks, and just having a good time with friends. None of these approaches are wrong; we each get to live our lives how we desire. However, Jay believes it's important to know _why_ you're making the decisions you're making.
+What Jay writes on page 70 is true. I've watched my friends date serially, never having more than two weeks single. I've watched other friends jump from one night stand to one night stand, but never seeing somebody for more than a month. And I've watched other friends stay single for years, just enjoying being themselves, not paying for extra dinners and drinks, and just having a good time with friends. None of these approaches are wrong; we each get to live our lives how we desire. However, Jay believes it's important to know _why_ you're making the decisions you're making, and what it can mean for you later on.
 
 What Jay writes is this: "[Behind] closed doors, I hear a different story. I have yet to meet a twentysomething who doesn't want to get married or at least find a committed relationship" (page 71). I know I fell into this category. I didn't want to seem desperate, or "easy", but I wanted love. I wanted somebody to love me (in fact, I _still_ want unconditional love).
 
@@ -65,7 +65,7 @@ So where am I going with this? Be picky. I was told as a kid, that being picky w
 
 Just in case my family ever ends up reading this, I want them to know this: **I love my family**. You can ask my partner; I am very family-oriented, I'm always wishing I could be closer to my extended family, and my mom is my best friend. However, that exact sentence implies what my family is lacking. I wish I had a huge extended family with lots of generations.
 
-Most kids grow up in some version of a crazy family. Families that are shattered from divorce, families that have helicopter parents, families that have removed parents that couldn't care less about their kids, families riddled with addiction and alcoholism, families that are so big that parents forget their kids' names, and families that are so small that Thanksigivng dinner feels just like normal dinner, except with cranberry sauce. And even the luckiest of us, the ones that have kind, loving, involved, and boundary-respecting families wish there was something different (the grass is always greener on the other side, right?).
+Most kids grow up in some version of a crazy family. Families that are shattered from divorce, families that have helicopter parents, families that have removed parents that couldn't care less about their kids, families riddled with addiction and alcoholism, families that are so big that parents forget their kids' names, and families that are so small that Thanksgiving dinner feels just like normal dinner, except with cranberry sauce. And even the luckiest of us, the ones that have kind, loving, involved, and boundary-respecting families wish there was something different (the grass is always greener on the other side, right?).
 
 Well, when you're choosing your future spouse, you're picking your family. Sure, of course there's the "I have to like the person, they have to like me, blah blah blah". But the truth is, for the first time maybe ever, you get to choose your family. On page 85, Jay writes "[often] the clients with the toughest family backgrounds know the least about how to get what they want in love. But these are the clients who need to be the most careful. They are the very clients who need to partner well."
 
@@ -98,7 +98,7 @@ But what if it wasn't that simple? What if it wasn't furniture? What if it was p
 So, if nobody's immune, what can be done? Well, there's a few things:
 
 1. Make sure everybody is clear on each persons' commitment level _before_ moving in.
-2. View cohabitation as a step toward marriage, not just something to do because "it's convenient".
+2. View cohabitation as a step towards marriage, not just something to do because "it's convenient".
 3. Test your relationship in other ways besides moving in together _before_ moving in (aka not just casual dates and sex). Try spending extended weekends together. Try visiting each others' families during holiday season. Plan a vacation together, do it, and share all expenses as if you shared bank accounts. Have tough conversations about futures and kids. Do all that stuff now, before lock-in really sets in.
 4. If you're ever unhappy in a relationship and want to get out, remember that leaving now may be painful and hard, but it's bound to be less painful than leaving in three years.
 5. Claim your love, claim it loud, and claim it proud. Consciously choose your mate. Choose to love them every single day, and don't get lazy, lose commitment, or take it for granted.

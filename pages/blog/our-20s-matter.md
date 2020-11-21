@@ -19,13 +19,8 @@ References for all blog posts:
 * [Meg Jay](https://megjay.com)
 * [merriam-webster.com: privilege](https://www.merriam-webster.com/dictionary/privilege)
 * [wikipedia.org: Ben Franklin effect](https://en.wikipedia.org/wiki/Ben_Franklin_effect)
-
-<!-- Love links
-
 * [google.com: The Cohabitation Effect](https://www.google.com/search?q=the+cohabitation+effect)
 * [wikipedia.org: Vendor Lock-In](https://en.wikipedia.org/wiki/Vendor_lock-in)
-
--->
 
 <!-- The Brain and the Body links
 
