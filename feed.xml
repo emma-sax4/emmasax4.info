@@ -3,13 +3,24 @@
     <generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator>
     <link href="https://emmasax4.com/feed.xml" rel="self" type="application/atom+xml" />
     <link href="https://emmasax4.com/" rel="alternate" type="text/html" />
-    <updated>2020-11-15T05:56:04+00:00</updated>
+    <updated>2020-11-21T22:04:04+00:00</updated>
     <id>https://emmasax4.com/feed.xml</id>
     <title type="html">Emma Sax</title>
     <subtitle>Emma Sax's personal website and blog. Includes information about my social media profiles, resumé, and hobbies.</subtitle>
     <author>
       <name>Emma Sax</name>
     </author>
+    <entry>
+      <title type="html">Our 20s Matter — Part 2: Love</title>
+      <link href="https://emmasax4.com/blog/posts/our-20s-matter/love/" rel="alternate" type="text/html" title="Our 20s Matter — Part 2: Love" />
+      <published>2020-11-21T22:05:00+00:00</published>
+      <updated>2020-11-21T22:04:04+00:00</updated>
+      <id>https://emmasax4.com/blog/posts/our-20s-matter/love</id>
+      <author>
+        <name>Emma Sax</name>
+      </author>
+      <category term="Our 20s Matter" />
+    </entry>
     <entry>
       <title type="html">Our 20s Matter — Part 1: Work</title>
       <link href="https://emmasax4.com/blog/posts/our-20s-matter/work/" rel="alternate" type="text/html" title="Our 20s Matter — Part 1: Work" />
@@ -55,17 +66,5 @@
       </author>
       <category term="holidays" />
       <category term="covid" />
-    </entry>
-    <entry>
-      <title type="html">Switching from kramdown to CommonMark</title>
-      <link href="https://emmasax4.com/blog/posts/switching-from-kramdown-to-commonmark/" rel="alternate" type="text/html" title="Switching from kramdown to CommonMark" />
-      <published>2020-07-19T15:00:33+00:00</published>
-      <updated>2020-10-04T17:00:04+00:00</updated>
-      <id>https://emmasax4.com/blog/posts/switching-from-kramdown-to-commonmark</id>
-      <author>
-        <name>Emma Sax</name>
-      </author>
-      <category term="tech" />
-      <category term="jekyll" />
     </entry>
   </feed>
