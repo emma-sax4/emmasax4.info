@@ -26,6 +26,6 @@ References for all blog posts:
 * [npr.org: Brain Maturity Extends Well Beyond Teen Years](https://www.npr.org/templates/story/story.php?storyId=141164708)
 * [wikipedia.org: William James](https://en.wikipedia.org/wiki/William_James)
 * [amnh.org: A Matter of Time](https://www.amnh.org/exhibitions/einstein/time/a-matter-of-time#:~:text=In%20the%20Special%20Theory%20of,on%20your%20frame%20of%20reference.&text=The%20faster%20a%20clock%20moves,a%20different%20frame%20of%20reference)
-* [youtube.com: Taylor Swift's _22_](https://www.youtube.com/watch?v=AgFeZr5ptV8)
+* [youtube.com: Taylor Swift's 22](https://www.youtube.com/watch?v=AgFeZr5ptV8)
 * [wikipedia.org: Present Bias](https://en.wikipedia.org/wiki/Present_bias)
 * [Motherhood: Is It For Me?](https://www.motherhoodisitforme.com/)
