@@ -75,8 +75,8 @@ jobs:
       uses: emmasax4/slack-notifier-action@main
       with:
         slack_webhook: ${{ secrets.SLACK_WEBHOOK }}
-        channel: "#general"
-        icon_url: https://i.imgur.com/DGrghtn.png
+        channel: general
+        icon_url: https://i.imgur.com/MH87j3l.png
         username: GitHub Actions
         color: "#23c22e"
         title: ${{ github.REPOSITORY }}
@@ -91,8 +91,8 @@ jobs:
       uses: emmasax4/slack-notifier-action@main
       with:
         slack_webhook: ${{ secrets.SLACK_WEBHOOK }}
-        channel: "#general"
-        icon_url: https://i.imgur.com/DGrghtn.png
+        channel: general
+        icon_url: https://i.imgur.com/MH87j3l.png
         username: GitHub Actions
         color: "#bd2222"
         title: ${{ github.REPOSITORY }}

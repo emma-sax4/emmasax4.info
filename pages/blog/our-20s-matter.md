@@ -21,16 +21,11 @@ References for all blog posts:
 * [wikipedia.org: Ben Franklin effect](https://en.wikipedia.org/wiki/Ben_Franklin_effect)
 * [google.com: The Cohabitation Effect](https://www.google.com/search?q=the+cohabitation+effect)
 * [wikipedia.org: Vendor Lock-In](https://en.wikipedia.org/wiki/Vendor_lock-in)
-
-<!-- The Brain and the Body links
-
 * [ncbi.nlm.nih.gov: Adolescent Maturity and the Brain](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2892678/)
 * [urmc.rochester.edu: Understanding the Teen Brain](https://www.urmc.rochester.edu/encyclopedia/content.aspx?ContentTypeID=1&ContentID=3051#:~:text=Good%20judgment%20isn't%20something,cortex%2C%20the%20brain's%20rational%20part)
 * [npr.org: Brain Maturity Extends Well Beyond Teen Years](https://www.npr.org/templates/story/story.php?storyId=141164708)
 * [wikipedia.org: William James](https://en.wikipedia.org/wiki/William_James)
 * [amnh.org: A Matter of Time](https://www.amnh.org/exhibitions/einstein/time/a-matter-of-time#:~:text=In%20the%20Special%20Theory%20of,on%20your%20frame%20of%20reference.&text=The%20faster%20a%20clock%20moves,a%20different%20frame%20of%20reference)
-* [youtube.com: Taylor Swift's _22_](https://www.youtube.com/watch?v=AgFeZr5ptV8)
+* [youtube.com: Taylor Swift's 22](https://www.youtube.com/watch?v=AgFeZr5ptV8)
 * [wikipedia.org: Present Bias](https://en.wikipedia.org/wiki/Present_bias)
 * [Motherhood: Is It For Me?](https://www.motherhoodisitforme.com/)
-
--->
