@@ -76,7 +76,7 @@ jobs:
       with:
         slack_webhook: ${{ secrets.SLACK_WEBHOOK }}
         channel: general
-        icon_url: https://i.imgur.com/3COr5zn.png
+        icon_url: https://i.imgur.com/MH87j3l.png
         username: GitHub Actions
         color: "#23c22e"
         title: ${{ github.REPOSITORY }}
@@ -92,7 +92,7 @@ jobs:
       with:
         slack_webhook: ${{ secrets.SLACK_WEBHOOK }}
         channel: general
-        icon_url: https://i.imgur.com/3COr5zn.png
+        icon_url: https://i.imgur.com/MH87j3l.png
         username: GitHub Actions
         color: "#bd2222"
         title: ${{ github.REPOSITORY }}
