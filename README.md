@@ -26,4 +26,4 @@ To report any security vulnerabilities, please view this project's [Security Pol
 
 For information on licensing, please see [LICENSE](https://github.com/emmasax4/emmasax4.com/blob/main/LICENSE).
 
-This repository does have a standard [Code of Conduct](https://github.com/emmasax4/emmasax4.com/blob/main/.github/code_of_conduct.md).
+When interacting with this repository, please follow the [Contributor Covenant](https://contributor-covenant.org) code of conduct.
