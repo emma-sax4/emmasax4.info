@@ -26,4 +26,4 @@ To report any security vulnerabilities, please view this project's [Security Pol
 
 For information on licensing, please see [LICENSE](https://github.com/emmasax4/emmasax4.com/blob/main/LICENSE).
 
-When interacting with this repository, please follow the [Contributor Covenant](https://contributor-covenant.org) code of conduct.
+When interacting with this repository, please follow [Contributor Covenant's Code of Conduct](https://contributor-covenant.org).
