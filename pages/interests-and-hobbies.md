@@ -25,7 +25,7 @@ My tagline claims that I love swimming, reading, video/TV streaming services, an
 * [UMM Dance Ensemble](https://morris-umn.presence.io/organization/dance-ensemble) Treasurer
 * Dance teacher to children at a local dance studio
 * Participant in the [NATS Competition](http://www.nats.org/competitions.html) 2014
-* Participant in a [Senior Recital](http://events.morris.umn.edu/event/student_senior_recital_amy_kuller_voice#.Xb7-40VKjOQ) in April 2017
+* Participant in a [Senior Recital](http://events.morris.umn.edu/event/student_senior_recital_amy_kuller_voice#.Xb7-40VKjOQ) in April 2017 ([recordings and program](https://drive.google.com/drive/folders/0B6MWcSznaGDROXBZU0RNd0Y5SDg))
 
 ## Traveling
 
