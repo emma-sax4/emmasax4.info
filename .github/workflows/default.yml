@@ -25,7 +25,12 @@ jobs:
       run: git checkout ${{ env.BRANCH }}
 
     - name: Configure System
-      run: sudo gem install bundler -v $(cat Gemfile.lock | tail -1 | tr -d " ")
+      run: |
+        sudo gem update --system 3.0.8 && apt-install ruby 2.7.2 && sudo gem install bundler -v $(cat Gemfile.lock | tail -1 | tr -d " ")
+        curl -sSL https://get.rvm.io | bash
+        source $HOME/.rvm/scripts/rvm
+        rvm install $(cat .ruby-version) --binary
+        rvm --default use $(cat .ruby-version)
 
     - name: Configure Gem Cache
       uses: actions/cache@v2
