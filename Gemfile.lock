@@ -8,7 +8,7 @@ GIT
 
 GIT
   remote: https://github.com/emmasax4/jekyll-seo-tag.git
-  revision: 7e7c3832ae7a80eb182ceb5302c74cfb90450706
+  revision: fb07689f44847246228e9be3f840d1e4ec6dfc9b
   branch: main
   specs:
     jekyll-seo-tag (2.7.1)
