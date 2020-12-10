@@ -31,7 +31,7 @@ jobs:
       uses: actions/cache@v2
       with:
         path: vendor/bundle
-        key: bundler-cache-${{ hashFiles('**/Gemfile.lock') }}
+        key: bundler-cache-${{ hashFiles("**/Gemfile.lock") }}
         restore-keys: bundler-cache-
 
     - name: Install Gems
@@ -50,7 +50,7 @@ jobs:
     - name: Markdown Linter
       run: bash .github/scripts/markdown_linter.sh
 
-    # Only run this step for events that are push commits to the 'main' branch
+    # Only run this step for events that are push commits to the main branch
     - name: GitHub Pages Deploy
       if: github.EVENT_NAME == 'push' && github.REF == 'refs/heads/main'
       uses: emmasax4/github-pages-deploy-action@main
@@ -60,11 +60,11 @@ jobs:
         folder: _site
         clean: true
         silent: true
-        commit_message: "Deploy to ${{ github.REPOSITORY }}"
+        commit_message: Deploy to ${{ github.REPOSITORY }}
         git_config_email: 41898282+github-actions[bot]@users.noreply.github.com
         git_config_name: github-actions[bot]
 
-    # Only run this step for events that are push commits to the 'main' branch
+    # Only run this step for events that are push commits to the main branch
     - name: Set Final Deploy Message
       if: github.EVENT_NAME == 'push' && github.REF == 'refs/heads/main'
       run: bash .github/scripts/set_deploy_message.sh ${{ env.DEPLOYMENT_STATUS }}

@@ -8,6 +8,9 @@ Layout/LineLength:
 Style/HashSyntax:
   Enabled: false
 
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
 Style/RegexpLiteral:
   EnforcedStyle: slashes
 
