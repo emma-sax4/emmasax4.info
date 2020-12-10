@@ -24,18 +24,10 @@ jobs:
     - name: Switch to Current Branch
       run: git checkout ${{ env.BRANCH }}
 
-    - name: Configure System
-      run: sudo gem update --system 3.0.8 && sudo gem install bundler -v $(cat Gemfile.lock | tail -1 | tr -d " ")
-
-    - name: Configure Gem Cache
-      uses: actions/cache@v2
+    - name: Install Ruby and Bundle Install
+      uses: ruby/setup-ruby@v1
       with:
-        path: vendor/bundle
-        key: bundler-cache-${{ hashFiles('**/Gemfile.lock') }}
-        restore-keys: bundler-cache-
-
-    - name: Install Gems
-      run: bundle config set path "vendor/bundle" && bundle install
+        bundler-cache: true
 
     - name: Jekyll Build
       run: JEKYLL_ENV=production bundle exec jekyll build --destination _site
