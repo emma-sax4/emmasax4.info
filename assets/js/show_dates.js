@@ -26,7 +26,7 @@ for (counter = 0; counter < dates.length; counter++) {
   var timezoneAsDigit = dateArrayBySpace[dateArrayBySpace.length - 1];
 
   if (timezoneAsDigit == "+0000") {
-    // Get the local date when it"s written as in UTC timezone
+    // Get the local date when it's written as in UTC timezone
     var localDate = new Date(
       Date.UTC(
         dateArrayByDigit[0], dateArrayByDigit[1]-1, dateArrayByDigit[2],
