@@ -9,13 +9,13 @@ author=$(echo $args | cut -d " " -f 4)
 ref=$(echo $args | cut -d " " -f 5)
 head_ref=$(echo $args | cut -d " " -f 6)
 
-if [[ $ref == 'refs/pull'* ]]; then # this is a pull request
-  pull_id=$(echo $ref | sed -E 's|refs/pull/||' | sed -E 's|/merge||')
+if [[ $ref == "refs/pull"* ]]; then # this is a pull request
+  pull_id=$(echo $ref | sed -E "s|refs/pull/||" | sed -E "s|/merge||")
   build_message_addition=" in PR <https://github.com/$repository/pull/$pull_id|#$pull_id>"
-  branch=$(echo $head_ref | sed -E 's|refs/[a-zA-Z]+/||')
+  branch=$(echo $head_ref | sed -E "s|refs/[a-zA-Z]+/||")
 else
   build_message_addition=""
-  branch=$(echo $ref | sed -E 's|refs/[a-zA-Z]+/||')
+  branch=$(echo $ref | sed -E "s|refs/[a-zA-Z]+/||")
 fi
 
 echo "BRANCH=$branch" >> $GITHUB_ENV
@@ -34,7 +34,7 @@ else
   fi
 fi
 
-if [[ $event_name == "push" ]] && [[ $ref == "refs/heads/main" ]]; then # this is a push commit to the 'main' branch
+if [[ $event_name == "push" ]] && [[ $ref == "refs/heads/main" ]]; then # this is a push commit to the main branch
   echo "DEPLOY_MESSAGE= Deploy to GitHub Pages was *skipped*." >> $GITHUB_ENV
 else
   echo "DEPLOY_MESSAGE=" >> $GITHUB_ENV
