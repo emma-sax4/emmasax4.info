@@ -4,7 +4,7 @@ source "https://rubygems.org"
 
 # Gems required for all environments
 gem "jekyll"
-gem "jekyll-commonmark", git: "https://github.com/jekyll/jekyll-commonmark.git", ref: "cf41bd"
+gem "jekyll-commonmark", git: "https://github.com/jekyll/jekyll-commonmark.git", ref: "cf41bdbad29ec5f972cafb6978106cbc7a20b02e"
 gem "jekyll-default-layout"
 gem "jekyll-feed", git: "https://github.com/emmasax4/jekyll-feed.git", branch: "main"
 gem "jekyll-last-modified-at"
