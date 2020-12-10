@@ -27,10 +27,7 @@ jobs:
     - name: Configure System
       run: |
         sudo gem update --system 3.0.8
-        curl -sSL https://get.rvm.io | bash
-        source $HOME/.rvm/scripts/rvm
-        rvm install $(cat .ruby-version) --binary
-        rvm --default use $(cat .ruby-version)
+        sudo apt-get install ruby-full
         sudo gem install bundler -v $(cat Gemfile.lock | tail -1 | tr -d " ")
 
     - name: Configure Gem Cache
