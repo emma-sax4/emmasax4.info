@@ -6,12 +6,12 @@ function loadComments(disqus_shortname) {
 
     (function() {
       var doc = document;
-      var scripts = doc.createElement('script');
-      scripts.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
-      scripts.setAttribute('data-timestamp', +new Date());
+      var scripts = doc.createElement("script");
+      scripts.src = "https://" + disqus_shortname + ".disqus.com/embed.js";
+      scripts.setAttribute("data-timestamp", +new Date());
       (doc.head || doc.body).appendChild(scripts);
     })();
 
-    document.getElementById('show-comments-button').remove();
+    document.getElementById("show-comments-button").remove();
   };
 };
