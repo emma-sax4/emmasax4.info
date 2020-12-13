@@ -43,7 +43,7 @@ jobs:
       run: bash .github/scripts/markdown_linter.sh
 
     # Only run this step for events that are push commits to the main branch
-    - name: GitHub Pages Deploy
+    - name: Deploy Site
       if: github.EVENT_NAME == 'push' && github.REF == 'refs/heads/main'
       uses: emmasax4/github-pages-deploy-action@main
       with:
