@@ -8,7 +8,7 @@ GIT
 
 GIT
   remote: https://github.com/emmasax4/jekyll-seo-tag.git
-  revision: fb07689f44847246228e9be3f840d1e4ec6dfc9b
+  revision: d85fe54728bcf304914eb8eee318ce8254db388e
   branch: main
   specs:
     jekyll-seo-tag (2.7.1)
@@ -42,7 +42,7 @@ GEM
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
     ast (2.4.1)
-    chef-utils (16.8.9)
+    chef-utils (16.8.14)
     colorator (1.1.0)
     commonmarker (0.21.0)
       ruby-enum (~> 0.5)
