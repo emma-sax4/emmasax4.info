@@ -64,9 +64,9 @@ jobs:
     # Only run this step if this build has been successful
     - name: Notify Slack on Success
       if: success()
-      uses: emmasax4/slack-notifier-action@main
+      uses: emmasax4/notify-slack-action@main
       with:
-        slack_webhook: ${{ secrets.SLACK_WEBHOOK }}
+        slack_webhook: ${{ secrets.SLACK_WEBHOOK_URL }}
         channel: general
         icon_url: https://i.imgur.com/MH87j3l.png
         username: GitHub Actions
@@ -80,9 +80,9 @@ jobs:
     # Only run this step if this build has failed
     - name: Notify Slack on Failure
       if: failure()
-      uses: emmasax4/slack-notifier-action@main
+      uses: emmasax4/notify-slack-action@main
       with:
-        slack_webhook: ${{ secrets.SLACK_WEBHOOK }}
+        slack_webhook: ${{ secrets.SLACK_WEBHOOK_URL }}
         channel: general
         icon_url: https://i.imgur.com/MH87j3l.png
         username: GitHub Actions
