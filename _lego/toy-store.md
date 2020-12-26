@@ -1,6 +1,6 @@
 ---
 title: Townhouse Toy Store 3-in-1 (31105)
-date: 2020-12-26 13:00:00 -0600
+date: 2020-12-26 18:00:00 -0600
 ---
 
 This 3-in-1 Toy Store was such a joy to put together. I put together all 3 sets, starting with the Flower and Cake Shops, and ending with the Toy Store. Each of the sets was fun to put together, and it was fascinating to see how the designers used the same pieces in different ways. In fact, the most enjoyable thing about all of these sets is the variety of the buildings and pieces. It was enjoyable to put all of the sets together, a great way to spend an afternoon, and this set was absolutely worth the time and cost.
