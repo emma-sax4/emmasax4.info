@@ -9,6 +9,9 @@ author=$(echo $args | cut -d " " -f 4)
 ref=$(echo $args | cut -d " " -f 5)
 head_ref=$(echo $args | cut -d " " -f 6)
 
+echo "Head Ref: $head_ref"
+echo "Ref: $ref"
+
 if [[ $ref == "refs/pull"* ]]; then # this is a pull request
   pull_id=$(echo $ref | sed -E "s|refs/pull/||" | sed -E "s|/merge||")
   build_message_addition=" in PR <https://github.com/$repository/pull/$pull_id|#$pull_id>"
