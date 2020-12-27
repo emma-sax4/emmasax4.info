@@ -44,51 +44,13 @@ jobs:
 
     # Only run this step for events that are push commits to the main branch
     - name: Deploy Site
-      if: github.EVENT_NAME == 'push' && github.REF == 'refs/heads/main'
       uses: emmasax4/github-pages-deploy-action@main
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        branch: gh-pages
+        branch: gh-pages-test
         folder: _site
         clean: true
         silent: true
         commit_message: Deploy to ${{ github.REPOSITORY }}
         git_config_email: 41898282+github-actions[bot]@users.noreply.github.com
         git_config_name: github-actions[bot]
-
-    # Only run this step for events that are push commits to the main branch
-    - name: Set Final Deploy Message
-      if: github.EVENT_NAME == 'push' && github.REF == 'refs/heads/main'
-      run: bash .github/scripts/set_deploy_message.sh ${{ env.DEPLOYMENT_STATUS }}
-
-    # Only run this step if this build has been successful
-    - name: Notify Slack on Success
-      if: success()
-      uses: emmasax4/notify-slack-action@main
-      with:
-        slack_webhook: ${{ secrets.SLACK_WEBHOOK_URL }}
-        channel: general
-        icon_url: https://i.imgur.com/MH87j3l.png
-        username: GitHub Actions
-        color: "#23c22e"
-        title: ${{ github.REPOSITORY }}
-        title_link: https://github.com/${{ github.REPOSITORY }}
-        author_name: ${{ env.AUTHOR_NAME }}
-        author_icon: ${{ env.AUTHOR_ICON }}
-        text: ${{ env.BUILD_MESSAGE }} *passed*.${{ env.DEPLOY_MESSAGE }}
-
-    # Only run this step if this build has failed
-    - name: Notify Slack on Failure
-      if: failure()
-      uses: emmasax4/notify-slack-action@main
-      with:
-        slack_webhook: ${{ secrets.SLACK_WEBHOOK_URL }}
-        channel: general
-        icon_url: https://i.imgur.com/MH87j3l.png
-        username: GitHub Actions
-        color: "#bd2222"
-        title: ${{ github.REPOSITORY }}
-        title_link: https://github.com/${{ github.REPOSITORY }}
-        author_name: ${{ env.AUTHOR_NAME }}
-        author_icon: ${{ env.AUTHOR_ICON }}
-        text: ${{ env.BUILD_MESSAGE }} *failed*.${{ env.DEPLOY_MESSAGE }}
