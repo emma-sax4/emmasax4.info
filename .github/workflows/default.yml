@@ -43,6 +43,11 @@ jobs:
     - name: Markdown Linter
       run: bash .github/scripts/markdown_linter.sh
 
+    - name: Check Out Deployed Code
+      uses: actions/checkout@v2
+      with:
+        ref: gh-pages-test
+
     # Only run this step for events that are push commits to the main branch
     - name: Deploy Site
       uses: emmasax4/github-pages-deploy-action@main
