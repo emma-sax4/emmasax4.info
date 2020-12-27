@@ -12,11 +12,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Check Out Code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v1
       with:
-        ref: ${{ github.HEAD_REF }}
+        ref: ${{ github.REF }}
+
+    - name: Check Out Deployed Code
+      uses: actions/checkout@v1
+      with:
         ref: gh-pages-test
-        persist-credentials: false
 
     - name: Set Environment Variables
       run: bash .github/scripts/set_environment_variables.sh \
