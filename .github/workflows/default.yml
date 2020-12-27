@@ -13,6 +13,8 @@ jobs:
     steps:
     - name: Check Out Code
       uses: actions/checkout@v1
+      with:
+        fetch-depth: 1
 
     - name: Set Environment Variables
       run: bash .github/scripts/set_environment_variables.sh \
