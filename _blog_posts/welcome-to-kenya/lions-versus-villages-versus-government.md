@@ -1,10 +1,10 @@
 ---
 layout: post
 title: Welcome to Kenya
-subtitle: "Special: The Lion Guardians"
+subtitle: "Special: Lions vs. Villages vs. Government"
 category: Welcome to Kenya
-permalink: /blog/posts/welcome-to-kenya/the-lion-guardians/
-draft: true
+permalink: /blog/posts/welcome-to-kenya/lions-versus-villages-versus-government/
+date: 2021-01-01 16:00:00 -0600
 ---
 
 It's been over a year since I publisheed my last blog post about Kenya. But recently, somebody on Facebook who travelled with me to Kenya sent us an article titled [The Kenyan Maasai Who Once Hunted Lions Are Now Their Saviors](https://www.thedailybeast.com/the-kenyan-maasai-who-once-hunted-lions-are-now-their-saviors). Not only was this article immensely educational and entertaining, but it also reminded me of some things that were told to me when I visited the Maasai village. I don't want to recap everything the article says; for full explanation of what this article said, you should read the article 😉. But I will mention a couple key things I took away from the article and how it relates to what I experienced in Kenya.
