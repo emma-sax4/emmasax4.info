@@ -3,13 +3,24 @@
     <generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator>
     <link href="https://emmasax4.com/feed.xml" rel="self" type="application/atom+xml" />
     <link href="https://emmasax4.com/" rel="alternate" type="text/html" />
-    <updated>2020-12-30T02:23:14+00:00</updated>
+    <updated>2021-01-01T22:00:05+00:00</updated>
     <id>https://emmasax4.com/feed.xml</id>
     <title type="html">Emma Sax</title>
     <subtitle>Emma Sax's personal website and blog. Includes information about my social media profiles, resumé, and hobbies.</subtitle>
     <author>
       <name>Emma Sax</name>
     </author>
+    <entry>
+      <title type="html">Welcome to Kenya — Special: Lions vs. Villages vs. Government</title>
+      <link href="https://emmasax4.com/blog/posts/welcome-to-kenya/lions-versus-villages-versus-government/" rel="alternate" type="text/html" title="Welcome to Kenya — Special: Lions vs. Villages vs. Government" />
+      <published>2021-01-01T22:00:00+00:00</published>
+      <updated>2021-01-01T22:00:05+00:00</updated>
+      <id>https://emmasax4.com/blog/posts/welcome-to-kenya/lions-versus-villages-versus-government</id>
+      <author>
+        <name>Emma Sax</name>
+      </author>
+      <category term="Welcome to Kenya" />
+    </entry>
     <entry>
       <title type="html">Our 20s Matter — Part 3: The Brain and the Body</title>
       <link href="https://emmasax4.com/blog/posts/our-20s-matter/the-brain-and-the-body/" rel="alternate" type="text/html" title="Our 20s Matter — Part 3: The Brain and the Body" />
@@ -53,17 +64,5 @@
         <name>Emma Sax</name>
       </author>
       <category term="tech" />
-    </entry>
-    <entry>
-      <title type="html">Adding Lightbox to a Jekyll Website</title>
-      <link href="https://emmasax4.com/blog/posts/adding-lightbox-to-a-jekyll-website/" rel="alternate" type="text/html" title="Adding Lightbox to a Jekyll Website" />
-      <published>2020-08-24T04:05:00+00:00</published>
-      <updated>2020-10-04T17:00:04+00:00</updated>
-      <id>https://emmasax4.com/blog/posts/adding-lightbox-to-a-jekyll-website</id>
-      <author>
-        <name>Emma Sax</name>
-      </author>
-      <category term="tech" />
-      <category term="jekyll" />
     </entry>
   </feed>
