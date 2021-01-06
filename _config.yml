@@ -11,7 +11,6 @@ author_profiles:
   facebook: https://facebook.com/emmasax4
   email: emma.sax4@gmail.com
 
-url: https://emmasax4.com # when running the Jekyll server locally, this becomes the local URL; removing this will break the nav bar URLs
 domain: emmasax4.com
 github_repo: emmasax4.com
 
