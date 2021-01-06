@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
   <feed xmlns="http://www.w3.org/2005/Atom" >
     <generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator>
-    <link href="/feed.xml" rel="self" type="application/atom+xml" />
-    <link href="/" rel="alternate" type="text/html" />
+    <link href="https://emmasax4.com/feed.xml" rel="self" type="application/atom+xml" />
+    <link href="https://emmasax4.com/" rel="alternate" type="text/html" />
     <updated>2021-01-01T22:00:05+00:00</updated>
-    <id>/feed.xml</id>
+    <id>https://emmasax4.com/feed.xml</id>
     <title type="html">Emma Sax</title>
     <subtitle>Emma Sax&apos;s personal website and blog. Includes information about my social media profiles, resumé, and hobbies.</subtitle>
     <author>
@@ -12,10 +12,10 @@
     </author>
     <entry>
       <title type="html">Welcome to Kenya — Special: Lions vs. Villages vs. Government</title>
-      <link href="/blog/posts/welcome-to-kenya/lions-versus-villages-versus-government/" rel="alternate" type="text/html" title="Welcome to Kenya — Special: Lions vs. Villages vs. Government" />
+      <link href="https://emmasax4.com/blog/posts/welcome-to-kenya/lions-versus-villages-versus-government/" rel="alternate" type="text/html" title="Welcome to Kenya — Special: Lions vs. Villages vs. Government" />
       <published>2021-01-01T22:00:00+00:00</published>
       <updated>2021-01-01T22:00:05+00:00</updated>
-      <id>/blog/posts/welcome-to-kenya/lions-versus-villages-versus-government</id>
+      <id>https://emmasax4.com/blog/posts/welcome-to-kenya/lions-versus-villages-versus-government</id>
       <author>
         <name>Emma Sax</name>
       </author>
@@ -23,10 +23,10 @@
     </entry>
     <entry>
       <title type="html">Our 20s Matter — Part 3: The Brain and the Body</title>
-      <link href="/blog/posts/our-20s-matter/the-brain-and-the-body/" rel="alternate" type="text/html" title="Our 20s Matter — Part 3: The Brain and the Body" />
+      <link href="https://emmasax4.com/blog/posts/our-20s-matter/the-brain-and-the-body/" rel="alternate" type="text/html" title="Our 20s Matter — Part 3: The Brain and the Body" />
       <published>2020-11-26T20:00:00+00:00</published>
       <updated>2020-11-26T19:58:04+00:00</updated>
-      <id>/blog/posts/our-20s-matter/the-brain-and-the-body</id>
+      <id>https://emmasax4.com/blog/posts/our-20s-matter/the-brain-and-the-body</id>
       <author>
         <name>Emma Sax</name>
       </author>
@@ -34,10 +34,10 @@
     </entry>
     <entry>
       <title type="html">Our 20s Matter — Part 2: Love</title>
-      <link href="/blog/posts/our-20s-matter/love/" rel="alternate" type="text/html" title="Our 20s Matter — Part 2: Love" />
+      <link href="https://emmasax4.com/blog/posts/our-20s-matter/love/" rel="alternate" type="text/html" title="Our 20s Matter — Part 2: Love" />
       <published>2020-11-21T22:05:00+00:00</published>
       <updated>2020-11-21T22:04:04+00:00</updated>
-      <id>/blog/posts/our-20s-matter/love</id>
+      <id>https://emmasax4.com/blog/posts/our-20s-matter/love</id>
       <author>
         <name>Emma Sax</name>
       </author>
@@ -45,10 +45,10 @@
     </entry>
     <entry>
       <title type="html">Our 20s Matter — Part 1: Work</title>
-      <link href="/blog/posts/our-20s-matter/work/" rel="alternate" type="text/html" title="Our 20s Matter — Part 1: Work" />
+      <link href="https://emmasax4.com/blog/posts/our-20s-matter/work/" rel="alternate" type="text/html" title="Our 20s Matter — Part 1: Work" />
       <published>2020-11-15T06:00:00+00:00</published>
       <updated>2020-11-15T05:56:04+00:00</updated>
-      <id>/blog/posts/our-20s-matter/work</id>
+      <id>https://emmasax4.com/blog/posts/our-20s-matter/work</id>
       <author>
         <name>Emma Sax</name>
       </author>
@@ -56,10 +56,10 @@
     </entry>
     <entry>
       <title type="html">301 Redirects with Static Sites</title>
-      <link href="/blog/posts/301-redirects-with-static-sites/" rel="alternate" type="text/html" title="301 Redirects with Static Sites" />
+      <link href="https://emmasax4.com/blog/posts/301-redirects-with-static-sites/" rel="alternate" type="text/html" title="301 Redirects with Static Sites" />
       <published>2020-10-04T17:00:00+00:00</published>
       <updated>2020-11-10T14:41:47+00:00</updated>
-      <id>/blog/posts/301-redirects-with-static-sites</id>
+      <id>https://emmasax4.com/blog/posts/301-redirects-with-static-sites</id>
       <author>
         <name>Emma Sax</name>
       </author>
