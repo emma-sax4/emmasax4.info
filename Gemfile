@@ -17,6 +17,7 @@ gem "jekyll-sitemap", git: "https://github.com/emmasax4/jekyll-sitemap.git", bra
 gem "jekyll-tidy"
 gem "jekyll-time-to-read"
 gem "jekyll-titles-from-headings"
+gem "webrick"
 
 # Gems for only test/development environment
 group :test, :development do
