@@ -4,7 +4,9 @@ title: Contact Me
 permalink: /contact-me/
 ---
 
-Please use this form to contact me directly. Do not send me any inappropriate, solicitation, or recruitment messages.
+Please use this form to contact me directly. Do not send me any solicitation, recruitment, or inappropriate messages.
+
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 <script type="text/javascript">
   var submitted=false;
@@ -22,19 +24,22 @@ Please use this form to contact me directly. Do not send me any inappropriate, s
       onsubmit="submitted=true;"
 >
   <div class="form-group">
-    <label>Full Name*</label>
+    <label>Full Name<span style="color: #d61b1b;">*</span></label>
     <input name="entry.989289036" type="text" class="form-control" id="name" placeholder="John Doe" required>
   </div>
 
   <div class="form-group">
-    <label>Email*</label>
+    <label>Email<span style="color: #d61b1b;">*</span></label>
     <input name="entry.1580808807" type="email" class="form-control" id="email" placeholder="johndoe@example.com" required>
   </div>
 
   <div class="form-group">
-    <label>Message*</label>
+    <label>Message<span style="color: #d61b1b;">*</span></label>
     <textarea name="entry.1379036791" class="form-control" id="message" placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit." rows="5" required></textarea>
   </div>
+
+  <label>Please verify you're a person<span style="color: #d61b1b;">*</span></label>
+  <div class="g-recaptcha" data-sitekey="6Ld6_CcaAAAAAOXP4F6Ze2M5mbeqFRSEN9dlUecn" style="margin-top: -1rem; padding-bottom: .67rem;"></div>
 
   <button type="submit" class="btn btn-primary" style="width: 100%;">
     Submit
