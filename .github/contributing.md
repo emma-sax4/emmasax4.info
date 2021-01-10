@@ -38,7 +38,7 @@
 
 4. Verify tests passes on your pull request. The test configuration lives inside the [`.github/workflows/develop.yml`](https://github.com/emmasax4/emmasax4.com/blob/main/.github/workflows/develop.yml) file. Read more about this repository's tests below.
 5. Check the site looks like how you expect it to look. Follow the instructions below to get your computer running the site locally. If you've been working on GitHub UI up until this point, you may need to switch over to a computer and clone the repository and branch to do this.
-6. When you're absolutely ready for me to look at your pull request, please request a Code Review from me in the pull request. If I don't comment or start looking at the pull request in a few days, feel free to [send me an email](mailto:emma.sax4@gmail.com).
+6. When you're absolutely ready for me to look at your pull request, please request a Code Review from me in the pull request.
 
 Happy coding! 🤗
 
