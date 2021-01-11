@@ -26,6 +26,16 @@
     {% seo %}
   </head>
 
+  <script type="text/javascript">
+    function recaptchaCallback() {
+      $('#submitButton').removeAttr('disabled');
+    };
+
+    function recaptchaExpiredCallback() {
+      $('#submitButton').attr('disabled', true);
+    };
+  </script>
+
   <!-- Navigation bar -->
   {% include site_navigation.html %}
 
