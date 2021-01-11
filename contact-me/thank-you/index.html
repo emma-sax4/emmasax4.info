@@ -37,10 +37,19 @@
     <meta name="msvalidate.01" content="89B2B19FF966341B78EF64EDADE6DF81" />
     <meta name="yandex-verification" content="8d24108cb36eee89" />
     <script type="application/ld+json">
-      {"@type":"WebPage","description":"Emma Sax’s personal website and blog. Includes information about my social media profiles, resumé, and hobbies.","headline":"Contact Me","dateModified":"2021-01-10T23:22:00+00:00","url":"https://emmasax4.com/contact-me/thank-you/","author":{"@type":"Person","name":"Emma Sax"},"@context":"https://schema.org"}
+      {"@type":"WebPage","description":"Emma Sax’s personal website and blog. Includes information about my social media profiles, resumé, and hobbies.","headline":"Contact Me","dateModified":"2021-01-11T05:23:42+00:00","url":"https://emmasax4.com/contact-me/thank-you/","author":{"@type":"Person","name":"Emma Sax"},"@context":"https://schema.org"}
     </script>
     <!-- End Jekyll SEO tag -->
   </head>
+  <script type="text/javascript">
+    function recaptchaCallback() {
+      $('#submitButton').removeAttr('disabled');
+    };
+    
+    function recaptchaExpiredCallback() {
+      $('#submitButton').attr('disabled', true);
+    };
+  </script>
   <!-- Navigation bar -->
   <header class="sticky-top">
     <nav class="navbar navbar-expand-md navbar-dark py-0 py-md-0">
@@ -86,6 +95,9 @@
       <!-- Actual page content -->
       <div class="page-body">
         <p>Thank you for your message! I will respond back as soon as I am able.</p>
+        <div class="text-center container" style="padding-top: 1rem; padding-bottom: 1rem;">
+          <a href="/" class="btn btn-lg btn-outline-secondary">Back to Homepage</a>
+        </div>
       </div>
     </main>
   </body>

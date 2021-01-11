@@ -41,6 +41,15 @@
     </script>
     <!-- End Jekyll SEO tag -->
   </head>
+  <script type="text/javascript">
+    function recaptchaCallback() {
+      $('#submitButton').removeAttr('disabled');
+    };
+    
+    function recaptchaExpiredCallback() {
+      $('#submitButton').attr('disabled', true);
+    };
+  </script>
   <!-- Navigation bar -->
   <header class="sticky-top">
     <nav class="navbar navbar-expand-md navbar-dark py-0 py-md-0">
@@ -90,7 +99,7 @@
             <img class="image" src="/assets/images/bitmoji-309.png" alt="Emma Bitmoji">
           </div>
           <!-- Tagline and URL buttons -->
-          <div class="col-md text-center mt-5">
+          <div class="col-md text-center mt-2">
             <p>She/Her/Hers. Cloud Operations Engineer at <a href="https://www.dispatchit.com">Dispatch</a>.</p>
             <p>Coder, creator, and LEGO fan. Also a lover of swimming 🏊🏻‍♀️ , reading 📖 , video/TV streaming services 📺 , and traveling ✈️ .</p>
             <p>An avid Oxford Comma user.</p>
