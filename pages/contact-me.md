@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: form
 title: Contact Me
 permalink: /contact-me/
 ---
