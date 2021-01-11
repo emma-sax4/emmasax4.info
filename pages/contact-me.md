@@ -39,9 +39,11 @@ Please use this form to contact me directly. Do not send me any solicitation, re
   </div>
 
   <label>Please verify you're a person<span style="color: #d61b1b;">*</span></label>
-  <div class="g-recaptcha" data-sitekey="6Ld6_CcaAAAAAOXP4F6Ze2M5mbeqFRSEN9dlUecn" style="margin-top: -1rem; padding-bottom: .67rem;"></div>
+  <div class="g-recaptcha" data-callback="recaptchaCallback" data-expired-callback="recaptchaExpiredCallback"
+       data-sitekey="6Ld6_CcaAAAAAOXP4F6Ze2M5mbeqFRSEN9dlUecn" style="margin-top: -1rem; padding-bottom: .67rem;">
+  </div>
 
-  <button type="submit" class="btn btn-primary" style="width: 100%;">
+  <button type="submit" id="submitButton" disabled class="btn btn-primary" style="width: 100%;">
     Submit
   </button>
 </form>
