@@ -37,19 +37,10 @@
     <meta name="msvalidate.01" content="89B2B19FF966341B78EF64EDADE6DF81" />
     <meta name="yandex-verification" content="8d24108cb36eee89" />
     <script type="application/ld+json">
-      {"@type":"WebPage","description":"Emma Sax’s personal website and blog. Includes information about my social media profiles, resumé, and hobbies.","headline":"Contact Me","dateModified":"2021-01-11T05:23:42+00:00","url":"https://emmasax4.com/contact-me/","author":{"@type":"Person","name":"Emma Sax"},"@context":"https://schema.org"}
+      {"@type":"WebPage","description":"Emma Sax’s personal website and blog. Includes information about my social media profiles, resumé, and hobbies.","headline":"Contact Me","dateModified":"2021-01-11T05:36:20+00:00","url":"https://emmasax4.com/contact-me/","author":{"@type":"Person","name":"Emma Sax"},"@context":"https://schema.org"}
     </script>
     <!-- End Jekyll SEO tag -->
   </head>
-  <script type="text/javascript">
-    function recaptchaCallback() {
-      $('#submitButton').removeAttr('disabled');
-    };
-    
-    function recaptchaExpiredCallback() {
-      $('#submitButton').attr('disabled', true);
-    };
-  </script>
   <!-- Navigation bar -->
   <header class="sticky-top">
     <nav class="navbar navbar-expand-md navbar-dark py-0 py-md-0">
@@ -92,6 +83,15 @@
       <div class="text-center">
         <h1>Contact Me</h1>
       </div>
+      <script type="text/javascript">
+        function recaptchaCallback() {
+          $('#submitButton').removeAttr('disabled');
+        };
+        
+        function recaptchaExpiredCallback() {
+          $('#submitButton').attr('disabled', true);
+        };
+      </script>
       <!-- Actual page content -->
       <div class="page-body">
         <p>Please use this form to contact me directly. Do not send me any solicitation, recruitment, or inappropriate messages.</p>
@@ -102,7 +102,7 @@
         <iframe name="hidden_iframe"
         id="hidden_iframe"
         style="display: none;"
-        onload="if (submitted) { window.location='/contact-me/thank-you/'; }">
+        onload="if (submitted) { window.location.href = '/contact-me/thank-you/'; }">
         </iframe>
         <form action="https://docs.google.com/forms/d/e/1FAIpQLScEq299mdRxHN_dZ3tTdgp6KTYtcgUHHVbDr0DSX2-zDDCxuQ/formResponse"
       method="post"
