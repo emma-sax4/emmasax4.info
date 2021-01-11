@@ -15,7 +15,7 @@ Please use this form to contact me directly. Do not send me any solicitation, re
 <iframe name="hidden_iframe"
         id="hidden_iframe"
         style="display: none;"
-        onload="if (submitted) { window.location='/contact-me/thank-you/'; }">
+        onload="if (submitted) { window.location.href = '/contact-me/thank-you/'; }">
 </iframe>
 
 <form action="https://docs.google.com/forms/d/e/1FAIpQLScEq299mdRxHN_dZ3tTdgp6KTYtcgUHHVbDr0DSX2-zDDCxuQ/formResponse"
