@@ -34,14 +34,14 @@ jobs:
       run: JEKYLL_ENV=production bundle exec jekyll build --destination _site
 
     - name: HTML Proofer
-      run: bash bin/html_proofer.sh
+      run: bin/html_proofer.sh
       continue-on-error: true
 
     - name: Rubocop
       run: bundle exec rubocop
 
     - name: Markdown Linter
-      run: bash bin/markdown_linter.sh
+      run: bin/markdown_linter.sh
 
     # Only run this step for events that are push commits to the main branch
     - name: Deploy Site
