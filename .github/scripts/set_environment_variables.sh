@@ -11,15 +11,15 @@ head_ref=$(echo $args | cut -d " " -f 6)
 
 if [[ $ref == "refs/pull"* ]]; then # this is a pull request
   pull_id=$(echo $ref | sed -E "s|refs/pull/||" | sed -E "s|/merge||")
-  build_message_addition=" in PR <https://github.com/$repository/pull/$pull_id|#$pull_id>"
+  pr_message=" in PR <https://github.com/$repository/pull/$pull_id|#$pull_id>"
   branch=$(echo $head_ref | sed -E "s|refs/[a-zA-Z]+/||")
 else
-  build_message_addition=""
+  pr_message=""
   branch=$(echo $ref | sed -E "s|refs/[a-zA-Z]+/||")
 fi
 
 echo "BRANCH=$branch" >> $GITHUB_ENV
-echo "BUILD_MESSAGE=Build <https://github.com/$repository/actions/runs/$run_id|#$run_id> on branch \`$branch\`$build_message_addition" >> $GITHUB_ENV
+echo "BUILD_MESSAGE=Build <https://github.com/$repository/actions/runs/$run_id|#$run_id> on branch \`$branch\`$pr_message" >> $GITHUB_ENV
 
 if [[ $event_name == "schedule" ]]; then # this is a cron
   echo "AUTHOR_NAME=github-actions[bot]" >> $GITHUB_ENV
