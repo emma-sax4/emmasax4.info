@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # These variables must be provided to this script in the same order as listed here
-args="$*"
+args=$*
 event_name=$(echo $args | cut -d " " -f 1)
 repository=$(echo $args | cut -d " " -f 2)
 run_id=$(echo $args | cut -d " " -f 3)
@@ -19,7 +19,7 @@ else
 fi
 
 echo "BRANCH=$branch" >> $GITHUB_ENV
-echo "BUILD_MESSAGE=Build <https://github.com/$repository/actions/runs/$run_id|$run_id> on branch \`$branch\`$build_message_addition" >> $GITHUB_ENV
+echo "BUILD_MESSAGE=Build <https://github.com/$repository/actions/runs/$run_id|#$run_id> on branch \`$branch\`$build_message_addition" >> $GITHUB_ENV
 
 if [[ $event_name == "schedule" ]]; then # this is a cron
   echo "AUTHOR_NAME=github-actions[bot]" >> $GITHUB_ENV
@@ -35,7 +35,7 @@ else
 fi
 
 if [[ $event_name == "push" ]] && [[ $ref == "refs/heads/main" ]]; then # this is a push commit to the main branch
-  echo "DEPLOY_MESSAGE= Deploy to GitHub Pages was *skipped*." >> $GITHUB_ENV
+  echo "DEPLOY_MESSAGE= Deploy was *skipped*." >> $GITHUB_ENV
 else
   echo "DEPLOY_MESSAGE=" >> $GITHUB_ENV
 fi
