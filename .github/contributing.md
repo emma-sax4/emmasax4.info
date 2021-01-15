@@ -10,7 +10,6 @@
 * [Continuous Integration](#continuous-integration)
   * [Tests](#tests)
   * [Deployments](#deployments)
-  * [Notifications](#notifications)
 * [Jekyll Configuration](#jekyll-configuration)
 * [Site Pages](#site-pages)
   * [Nested Pages](#nested-pages)
@@ -18,7 +17,7 @@
   * [Posts with and without Tags](#posts-with-and-without-tags)
   * [Posts in a Category](#posts-in-a-category)
   * [Writing Drafts](#writing-drafts)
-  * [Generating Tables of Contents](#generating-tables-of-contents)
+  * [Tables of Contents](#tables-of-contents)
 * [LEGO Collection](#lego-collection)
 * [Assets](#assets)
 
