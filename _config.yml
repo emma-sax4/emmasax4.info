@@ -54,6 +54,7 @@ plugins:
 
 # Jekyll does not need to include these in the finished built _site.
 exclude:
+  - bin
   - vendor
   - Gemfile
   - Gemfile.lock

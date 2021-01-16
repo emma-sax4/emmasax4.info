@@ -10,7 +10,6 @@
 * [Continuous Integration](#continuous-integration)
   * [Tests](#tests)
   * [Deployments](#deployments)
-  * [Notifications](#notifications)
 * [Jekyll Configuration](#jekyll-configuration)
 * [Site Pages](#site-pages)
   * [Nested Pages](#nested-pages)
@@ -18,7 +17,7 @@
   * [Posts with and without Tags](#posts-with-and-without-tags)
   * [Posts in a Category](#posts-in-a-category)
   * [Writing Drafts](#writing-drafts)
-  * [Generating Tables of Contents](#generating-tables-of-contents)
+  * [Tables of Contents](#tables-of-contents)
 * [LEGO Collection](#lego-collection)
 * [Assets](#assets)
 
@@ -76,7 +75,7 @@ We can check periodically that all of the HTML links in this website load correc
 
 ```bash
 JEKYLL_ENV=production bundle exec jekyll build
-bash .github/scripts/html_proofer.sh
+bin/html_proofer.sh
 ```
 
 If you're in the process of creating a new blog post, then most likely the external link to the new blog post will fail. This makes sense—the blog post isn't live online yet, and that's what the link is checking for.
@@ -98,10 +97,10 @@ GitHub Actions also runs Rubocop as well, so if any changes are made to the Ruby
 This project uses the [MarkdownLint](https://github.com/markdownlint/markdownlint) on its Markdown files. There are specific linter [rules](https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md) that I've carefully chosen to omit (because they simply don't fit my Markdown style), and so to run the linter with my rules, run this script:
 
 ```bash
-bash .github/scripts/markdown_linter.sh
+bin/markdown_linter.sh
 ```
 
-Note that the linter specifically passes in directories and files to evaluate, so if you create any new Markdown files, you'll have to add them to `.github/scripts/markdown_linter.sh`.
+Note that the linter specifically passes in directories and files to evaluate, so if you create any new Markdown files, you'll have to add them to `bin/markdown_linter.sh`.
 
 ## Continuous Integration
 
@@ -116,10 +115,6 @@ This repository doesn't really have any unit or integration tests (Jekyll sites 
 Because of the use of Jekyll gems that GitHub Pages doesn't support, this site needs to use a "3rd party" instead of GitHub Pages to compile the code. So, when GitHub Actions runs on the `main` branch, not only does it bundle all of the dependencies and build the site, but it also puts it into a special `./_site` directory. Then, GitHub Actions will run a "deployment" to GitHub Pages to upload that directory to the `gh-pages` branch of this GitHub repository. Then, GitHub Pages automatically deploys the commits in the `gh-pages` branch. In this way, we develop the site on a pull request, we merge pull request into the `main` branch, and then GitHub Actions builds the code and commits that automagically to the `gh-pages` branch. Then GitHub Pages does their thing.
 
 A full deployment (including GitHub Actions and GitHub Pages) only takes about five to ten minutes, but depending on what was changed (HTML files, images, etc), it can take up to about fifteen minutes to propagate the changes. To make the changes appear faster, you can reload the entire website in incognito mode.
-
-### Notifications
-
-GitHub Actions sends a Slack notification indicating the build status after each action build finishes (even on pull requests). The Slack notifications are sent to the Slack workspace [emmasax4](https://emmasax4.slack.com). You can ask for an invite to that workspace, but a final invite is not guaranteed. The workspace and notifications are set up for my personal usage, not for communciational purposes.
 
 ## Jekyll Configuration
 
@@ -289,15 +284,9 @@ When it's time to publish the post, you can either:
 
 To identify the current hour offset from UTC, look up the time zone offset based on your location [here](https://www.timeanddate.com/time/zone/).
 
-### Generating Tables of Contents
+### Tables of Contents
 
-In order to generate a Table of Contents for a given blog post, run the following:
-
-```bash
-.github/scripts/toc_markdown.rb _blog_posts/NAME-OF-FILE.md
-```
-
-This will provide a Markdown-style TOC that you can copy-paste into the blog post. Then, you just need to add the anchors (making the headers of the blog post linkable).
+Write a Markdown-style TOC of each header that should be in the TOC. Add the TOC to the top of the blog post. Then add the anchors the blog post, (making the headers of the blog post linkable).
 
 ```md
 <div id="anchor">
