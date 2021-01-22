@@ -12,7 +12,9 @@ layout: default
         {% elsif page.pagination.category %}
           <i style="width: 2.5rem; height: 2.5rem;" data-feather="archive"></i>
         {% endif %}
+
         {{ page.pagination.title }}
+
         {% if page.pagination.title == "Blog" %}
           {% include elements/rss_button.html %}
         {% endif %}
@@ -22,6 +24,7 @@ layout: default
     <!-- List of blog posts -->
     <div class="page-body">
       {{ content | markdownify }}
+
       {% for post in paginator.posts %}
         {% include blog/post_summary.html %}
       {% endfor %}
