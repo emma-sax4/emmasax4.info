@@ -7,6 +7,7 @@ layout: default
   <h1>{{ page.title }}</h1>
 </div>
 
+<!-- Frame and Javascript information -->
 <script src="/assets/js/forms.js" type="text/javascript"></script>
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
@@ -16,8 +17,7 @@ layout: default
         onload="if (submitted) { showFormResponse() }">
 </iframe>
 
-<!-- Actual page content -->
-
+<!-- The contact form for users to fill out -->
 <div id="form" class="page-body">
   {{ content | markdownify }}
 
@@ -26,7 +26,6 @@ layout: default
         target="hidden_iframe"
         onsubmit="submitted=true;"
   >
-
     <div class="form-group">
       <label>Full Name<span style="color: #d61b1b;">*</span></label>
       <input name="entry.989289036" type="text" class="form-control" id="name" autocapitalize="words" placeholder="John Doe" required>
@@ -53,6 +52,7 @@ layout: default
   </form>
 </div>
 
+<!-- Thank you message to show after submission -->
 <div id="formResponse" class="page-body" style="display: none;">
   Thank you for your message! I will respond back as soon as I am able.
 

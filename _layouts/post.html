@@ -8,6 +8,7 @@ layout: default
     <div class="text-center">
       <h1 style="padding-bottom: .75rem;">
         {{ page.title }}
+
         {% if page.subtitle %}
           <div style="font-size: 32px">
             {{ page.subtitle }}
@@ -51,7 +52,8 @@ layout: default
 
         <div class="text-center" style="margin-bottom: 1rem;">
           <button id="show-comments-button" class="btn btn-lg btn-outline-secondary"
-            onclick="loadComments('{{ site.disqus.shortname }}');return false;">
+                  onclick="loadComments('{{ site.disqus.shortname }}');return false;"
+          >
             Load Comments
             <i data-feather="message-circle"></i>
           </button>
