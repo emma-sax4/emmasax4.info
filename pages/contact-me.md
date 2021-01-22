@@ -25,7 +25,7 @@ Please use this form to contact me directly. Do not send me any solicitation, re
 >
   <div class="form-group">
     <label>Full Name<span style="color: #d61b1b;">*</span></label>
-    <input name="entry.989289036" type="text" class="form-control" id="name" style="text-transform: capitalize;" placeholder="John Doe" required>
+    <input name="entry.989289036" type="text" class="form-control" id="name" autocapitalize="words" placeholder="John Doe" required>
   </div>
 
   <div class="form-group">
