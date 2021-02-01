@@ -94,7 +94,7 @@
       <!-- The contact form for users to fill out -->
       <div id="form" class="page-body">
         <p>Please use this form to contact me directly. Do not send me any solicitation, recruitment, or inappropriate messages.</p>
-        <form method="post" target="hidden_iframe" onsubmit="submitted=true;"
+        <form method="post" target="hidden_iframe" onsubmit="submitted = true;"
     action="https://docs.google.com/forms/d/e/1FAIpQLScEq299mdRxHN_dZ3tTdgp6KTYtcgUHHVbDr0DSX2-zDDCxuQ/formResponse"
   >
           <div class="form-group">
@@ -109,7 +109,11 @@
             <label>Message<span style="color: #d61b1b;">*</span></label>
             <textarea name="entry.1379036791" class="form-control" id="message" placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit." rows="3" required></textarea>
           </div>
-          <label>Please verify you’re a person<span style="color: #d61b1b;">*</span></label>
+          <div class="form-group" style="display: none">
+            <label>Anti-Spam Verification<span style="color: #d61b1b;">*</span></label>
+            <input name="entry.417228047" type="text" class="form-control" id="verification" required>
+          </div>
+          <label>Please verify you’re a human<span style="color: #d61b1b;">*</span></label>
           <div class="g-recaptcha" data-callback="recaptchaCallback" data-expired-callback="recaptchaExpiredCallback"
       data-sitekey="6Ld6_CcaAAAAAOXP4F6Ze2M5mbeqFRSEN9dlUecn" style="padding-bottom: 1rem;"
     ></div>
