@@ -7,11 +7,11 @@ function showFormResponse() {
 };
 
 function recaptchaCallback() {
-  $('#submitButton').removeAttr('disabled');
+  $("#submitButton").removeAttr("disabled");
   document.getElementById("verification").value = code;
 };
 
 function recaptchaExpiredCallback() {
-  $('#submitButton').attr('disabled', true);
+  $("#submitButton").attr("disabled", true);
   document.getElementById("verification").value = null;
 };
