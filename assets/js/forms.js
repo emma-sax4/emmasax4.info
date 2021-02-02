@@ -8,7 +8,7 @@ function showFormResponse() {
 
 function recaptchaCallback(verificationResponse) {
   $("#submitButton").removeAttr("disabled");
-  document.getElementById("verification").value = code + verificationResponse;
+  document.getElementById("verification").value = verificationResponse + code + verificationResponse;
 };
 
 function recaptchaExpiredCallback() {
