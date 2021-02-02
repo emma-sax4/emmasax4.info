@@ -78,4 +78,16 @@ Here is a picture of what the form now looks like:
 
 Voilá! Now my users can submit this form, which will be sent to my Google Form automatically. And then they'll be shown a nice message indicating that I received their message. From a user's viewpoint, they won't even be able to tell the backend is through Google Forms.
 
-But there is a next step... how do I prevent spam messages?
+But there is a next step... how do I prevent spam messages? I want my form to look as professional as possible. Therefore, I decided an easy thing I could do was add a reCAPTCHA check. This is one of those checks and requires users to click all the pictures with sidewalks (or something like that) to verify that the person is indeed a human being (not spam or a bot). Clearly, some spammers will still manage to get through the reCAPTCHA, but it could do a lot when it comes to preventing repeated spam messages.
+
+So, I signed up for a reCAPTCHA from Google [here](https://www.google.com/recaptcha/admin/create), and then implemented the reCAPTCHA with the instructions documented [here](https://developers.google.com/recaptcha/docs/display). Interestingly, there's not a great way to _verify_ the reCAPTCHA... since I'm not really in control of my form's backend. However, I did save the secret key for future reference. Here's my reCAPTCHA HTML code looks like:
+
+```html
+<label>Please verify you’re a human<span style="color: #d61b1b;">*</span></label>
+<div class="g-recaptcha" a-sitekey="KDOIAFWEAIFNOEIWNAFISODAEFE" style="padding-bottom: 1rem;"
+></div>
+```
+
+Now my form visually looks like it's requiring the reCAPTCHA. However, since we're not verifying it anywhere, there's nothing that's actually _requiring_ a user to click the button. Most people would probably assume it's required, so they'd most likely just verify without thinking twice. But it only took my partner two minutes to let me know that it wasn't required and that anyone could bypass it.
+
+So, if I'm not in control of my form's backend, how do I easily verify this token (also without revealing the secret key through my open source project)? Well I decided that my form verification would be not through verifying the token provided by reCAPTCHA, but to instead verify on Google Form's side.
