@@ -4,6 +4,17 @@
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Security-Policy" content="
+      default-src 'self';
+      font-src 'self' fonts.gstatic.com;
+      img-src 'self' data: live.staticflickr.com i.imgur.com referrer.disqus.com c.disquscdn.com;
+      script-src 'self' emmasax4.disqus.com www.google.com www.gstatic.com;
+      prefetch-src disqus.com c.disquscdn.com;
+      frame-src 'self' referrer.disqus.com disqus.com www.google.com docs.google.com;
+      style-src 'self' c.disquscdn.com;
+    ">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block" always>
+    <meta http-equiv="X-Frame-Options" content="deny">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="/favicon.ico">
     <meta name="msapplication-TileColor" content="#2d89ef">
@@ -194,12 +205,12 @@
               <li>(OPTIONAL) Turn off redirects</li>
               <li>(OPTIONAL) Release (or retire) old domain</li>
             </ol>
-            <script src="/assets/js/show_comments.js"></script>
             <div class="text-center margin-bottom-1">
-              <button id="show-comments-button" class="btn btn-lg btn-outline-secondary" onclick="loadComments('emmasax4'); return false;">
+              <button id="show-comments-button" class="btn btn-lg btn-outline-secondary">
                 Load Comments
                 <i data-feather="message-circle"></i>
               </button>
+              <script id="comments" data-name="emmasax4" src="/assets/js/show_comments.js"></script>
             </div>
             <div id="disqus_thread"></div>
             <noscript>

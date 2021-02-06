@@ -4,6 +4,17 @@
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Security-Policy" content="
+      default-src 'self';
+      font-src 'self' fonts.gstatic.com;
+      img-src 'self' data: live.staticflickr.com i.imgur.com referrer.disqus.com c.disquscdn.com;
+      script-src 'self' emmasax4.disqus.com www.google.com www.gstatic.com;
+      prefetch-src disqus.com c.disquscdn.com;
+      frame-src 'self' referrer.disqus.com disqus.com www.google.com docs.google.com;
+      style-src 'self' c.disquscdn.com;
+    ">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block" always>
+    <meta http-equiv="X-Frame-Options" content="deny">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="/favicon.ico">
     <meta name="msapplication-TileColor" content="#2d89ef">
@@ -175,12 +186,12 @@
             <p>See them in action <a href="https://github.com/emmasax4/emmasax4.com/blob/129867d8135a930f4d364fe026db123d655b5ca8/_includes/site/scripts.html#L3-L4">here</a>.</p>
             <h2>Conclusion</h2>
             <p>Now that you’ve seen how Bootstrap and Feather Icons have improved my website, it’s your turn! Check out my blog post <a href="/blog/posts/adding-bootstrap-to-your-static-content-site/">here</a> for more information on how to get Bootstrap started on your site.</p>
-            <script src="/assets/js/show_comments.js"></script>
             <div class="text-center margin-bottom-1">
-              <button id="show-comments-button" class="btn btn-lg btn-outline-secondary" onclick="loadComments('emmasax4'); return false;">
+              <button id="show-comments-button" class="btn btn-lg btn-outline-secondary">
                 Load Comments
                 <i data-feather="message-circle"></i>
               </button>
+              <script id="comments" data-name="emmasax4" src="/assets/js/show_comments.js"></script>
             </div>
             <div id="disqus_thread"></div>
             <noscript>

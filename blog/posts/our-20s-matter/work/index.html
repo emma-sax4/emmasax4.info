@@ -4,6 +4,17 @@
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Security-Policy" content="
+      default-src 'self';
+      font-src 'self' fonts.gstatic.com;
+      img-src 'self' data: live.staticflickr.com i.imgur.com referrer.disqus.com c.disquscdn.com;
+      script-src 'self' emmasax4.disqus.com www.google.com www.gstatic.com;
+      prefetch-src disqus.com c.disquscdn.com;
+      frame-src 'self' referrer.disqus.com disqus.com www.google.com docs.google.com;
+      style-src 'self' c.disquscdn.com;
+    ">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block" always>
+    <meta http-equiv="X-Frame-Options" content="deny">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="/favicon.ico">
     <meta name="msapplication-TileColor" content="#2d89ef">
@@ -315,12 +326,12 @@
               <p>Saying yes to one concrete thing felt like saying no to an interesting or limitless life. In fact, it’s the other way around. If [the young adult] didn’t say yes to something, [their] life was going to become unremarkable and limited.</p>
             </blockquote>
             <p>By saying ‘yes’ to a desk job in your 20s, you’re not settling. You’re not stuck. What really would make you stuck is if you wait until you’re 36, and then you have a baby at 38, and need a job, but aren’t qualified for any well-paying job. By claiming a career in your 20s, you’re <em>starting</em>, not <em>setting</em>.</p>
-            <script src="/assets/js/show_comments.js"></script>
             <div class="text-center margin-bottom-1">
-              <button id="show-comments-button" class="btn btn-lg btn-outline-secondary" onclick="loadComments('emmasax4'); return false;">
+              <button id="show-comments-button" class="btn btn-lg btn-outline-secondary">
                 Load Comments
                 <i data-feather="message-circle"></i>
               </button>
+              <script id="comments" data-name="emmasax4" src="/assets/js/show_comments.js"></script>
             </div>
             <div id="disqus_thread"></div>
             <noscript>

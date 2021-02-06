@@ -4,6 +4,17 @@
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Security-Policy" content="
+      default-src 'self';
+      font-src 'self' fonts.gstatic.com;
+      img-src 'self' data: live.staticflickr.com i.imgur.com referrer.disqus.com c.disquscdn.com;
+      script-src 'self' emmasax4.disqus.com www.google.com www.gstatic.com;
+      prefetch-src disqus.com c.disquscdn.com;
+      frame-src 'self' referrer.disqus.com disqus.com www.google.com docs.google.com;
+      style-src 'self' c.disquscdn.com;
+    ">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block" always>
+    <meta http-equiv="X-Frame-Options" content="deny">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="/favicon.ico">
     <meta name="msapplication-TileColor" content="#2d89ef">
@@ -249,12 +260,12 @@
             </div>
             <h2>Conclusion</h2>
             <p>At the end of the day, we stayed in some incredible resorts in Kenya. They were definitely for the “luxury-safari-traveller,” and we enjoyed every minute of our stays. The food kept us fulfilled and ready for adventure, and we managed to get a sound night’s sleep each night (except that one night where I was suffering from some traveller’s diarrhea 🤢, but that’s another story, and one I won’t both disclosing to you here). If you choose to visit Kenya—which I highly recommend—just be sure you remember your small dollar bills to tip with… tipping in Kenya is expected!</p>
-            <script src="/assets/js/show_comments.js"></script>
             <div class="text-center margin-bottom-1">
-              <button id="show-comments-button" class="btn btn-lg btn-outline-secondary" onclick="loadComments('emmasax4'); return false;">
+              <button id="show-comments-button" class="btn btn-lg btn-outline-secondary">
                 Load Comments
                 <i data-feather="message-circle"></i>
               </button>
+              <script id="comments" data-name="emmasax4" src="/assets/js/show_comments.js"></script>
             </div>
             <div id="disqus_thread"></div>
             <noscript>

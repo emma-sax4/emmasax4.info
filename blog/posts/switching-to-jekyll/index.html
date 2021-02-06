@@ -4,6 +4,17 @@
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Security-Policy" content="
+      default-src 'self';
+      font-src 'self' fonts.gstatic.com;
+      img-src 'self' data: live.staticflickr.com i.imgur.com referrer.disqus.com c.disquscdn.com;
+      script-src 'self' emmasax4.disqus.com www.google.com www.gstatic.com;
+      prefetch-src disqus.com c.disquscdn.com;
+      frame-src 'self' referrer.disqus.com disqus.com www.google.com docs.google.com;
+      style-src 'self' c.disquscdn.com;
+    ">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block" always>
+    <meta http-equiv="X-Frame-Options" content="deny">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="/favicon.ico">
     <meta name="msapplication-TileColor" content="#2d89ef">
@@ -138,12 +149,12 @@
             <p>And then also, there’s a <code>show_drafts: false</code> line to add to the <code>_config.yml</code>, which all of the official documentation fails to mention. They talk about running the local server with the <code>--drafts</code> flag, but don’t talk about changing the config file. So, it took me quite a bit of googling until I could fit together all of those puzzle pieces 🧩.</p>
             <p>Hours of work later—I’m writing this Sunday night, and I started switching to Jekyll on Friday—I finally have a Jekyll-based site that’s hosted fully on GitHub Pages. I stayed up until 2am Friday night, and 5am Saturday night, prepping this. The main before-and-after content pages look <em>super</em> similar, which is the point. The biggest difference is the “Blog” page, which is now set up for success in the future, even if it isn’t too different right now.</p>
             <p>I still have work to do with Jekyll. I haven’t finished setting up my paginated “Blog” pages yet. After that’s done, I’ll start working on filtering the posts by tags, which also Jekyll supports. But the main point is that, the only way I could fully learn Jekyll, and feel more confident with it, is by jumping in, and using it. And, by using Jekyll to help you compile your site, you can avoid typing long blog posts and content pages with HTML… it’s so much easier to get in the writing zone in Markdown 🙌🏼!</p>
-            <script src="/assets/js/show_comments.js"></script>
             <div class="text-center margin-bottom-1">
-              <button id="show-comments-button" class="btn btn-lg btn-outline-secondary" onclick="loadComments('emmasax4'); return false;">
+              <button id="show-comments-button" class="btn btn-lg btn-outline-secondary">
                 Load Comments
                 <i data-feather="message-circle"></i>
               </button>
+              <script id="comments" data-name="emmasax4" src="/assets/js/show_comments.js"></script>
             </div>
             <div id="disqus_thread"></div>
             <noscript>

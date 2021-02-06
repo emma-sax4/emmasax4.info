@@ -4,6 +4,17 @@
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Security-Policy" content="
+      default-src 'self';
+      font-src 'self' fonts.gstatic.com;
+      img-src 'self' data: live.staticflickr.com i.imgur.com referrer.disqus.com c.disquscdn.com;
+      script-src 'self' emmasax4.disqus.com www.google.com www.gstatic.com;
+      prefetch-src disqus.com c.disquscdn.com;
+      frame-src 'self' referrer.disqus.com disqus.com www.google.com docs.google.com;
+      style-src 'self' c.disquscdn.com;
+    ">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block" always>
+    <meta http-equiv="X-Frame-Options" content="deny">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="/favicon.ico">
     <meta name="msapplication-TileColor" content="#2d89ef">
@@ -122,12 +133,12 @@
             <p>But how many times have we told ourselves we’re going to do something Tomorrow, a.k.a., sometime in the future… maybe? I know I’ve done it multiple times. “I’m going to start that new diet Tomorrow.” “I’m going to go to the gym Tomorrow.” “I’m going to call my grandmother Tomorrow.” “Why don’t we just clean up the garage Tomorrow?” We say these sentences when we don’t really <em>want</em> to do whatever thing we’re planning. We’re saying we’ll do the task Tomorrow because we don’t want to do it Today. We’re saying we’ll do the task Tomorrow with the idea that Tomorrow, we’ll be a better, more productive, kinder, healthier, etc, person.</p>
             <p>But what I want to urge you (and myself) to consider is that instead of wanting to be that better person Tomorrow (in the near future), why don’t we try to become that person <em>Today</em>? “I’m going to start that diet Today.” “I’m going to go to the gym Today.” If we keep telling ourselves we’re going to do something Tomorrow… well, Tomorrow will never arrive. What we’ve got—all we’ve got—is Today. And tomorrow, we’ll still only have Today.</p>
             <p>So start those projects you’ve been putting off Today. Start eating carrots instead of chips Today. Start a new exercise routine Today. All we have is Today, and that’s all we’re ever going to have. A person’s life is simply made up of a lot of Todays strung together in a row. And the goals, good deeds, and tasks that we continue to put off until some time in the near, but not explicit, future will never actually happen <em>until</em> we decide that we’re ready to start them Today.</p>
-            <script src="/assets/js/show_comments.js"></script>
             <div class="text-center margin-bottom-1">
-              <button id="show-comments-button" class="btn btn-lg btn-outline-secondary" onclick="loadComments('emmasax4'); return false;">
+              <button id="show-comments-button" class="btn btn-lg btn-outline-secondary">
                 Load Comments
                 <i data-feather="message-circle"></i>
               </button>
+              <script id="comments" data-name="emmasax4" src="/assets/js/show_comments.js"></script>
             </div>
             <div id="disqus_thread"></div>
             <noscript>

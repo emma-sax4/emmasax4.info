@@ -4,6 +4,17 @@
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Security-Policy" content="
+      default-src 'self';
+      font-src 'self' fonts.gstatic.com;
+      img-src 'self' data: live.staticflickr.com i.imgur.com referrer.disqus.com c.disquscdn.com;
+      script-src 'self' emmasax4.disqus.com www.google.com www.gstatic.com;
+      prefetch-src disqus.com c.disquscdn.com;
+      frame-src 'self' referrer.disqus.com disqus.com www.google.com docs.google.com;
+      style-src 'self' c.disquscdn.com;
+    ">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block" always>
+    <meta http-equiv="X-Frame-Options" content="deny">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="/favicon.ico">
     <meta name="msapplication-TileColor" content="#2d89ef">
@@ -151,12 +162,12 @@
             <p>So instead, we should make a new kind of resolution—one that makes us happier on a daily basis. And so, my 2020 New Years Resolution is to become a happier person and to try to live life more fully. So, cheers 🥂 to 2020, and just remember, as Tierney and Baumeister have said: “No matter what disasters occur in 2020, no matter who wins the presidential election, the average person in America and the rest of the world will in all likelihood become healthier and wealthier.”</p>
             <h2>References</h2>
             <p>Don’t forget the article that started it all: <a href="https://www.wsj.com/articles/for-the-new-year-say-no-to-negativity-11577464413"><em>For the New Year, Say No to Negativity</em></a> by John Tierney and Roy F. Baumeister. And thanks to the Wall Street Journal for publishing their awesome articles.</p>
-            <script src="/assets/js/show_comments.js"></script>
             <div class="text-center margin-bottom-1">
-              <button id="show-comments-button" class="btn btn-lg btn-outline-secondary" onclick="loadComments('emmasax4'); return false;">
+              <button id="show-comments-button" class="btn btn-lg btn-outline-secondary">
                 Load Comments
                 <i data-feather="message-circle"></i>
               </button>
+              <script id="comments" data-name="emmasax4" src="/assets/js/show_comments.js"></script>
             </div>
             <div id="disqus_thread"></div>
             <noscript>

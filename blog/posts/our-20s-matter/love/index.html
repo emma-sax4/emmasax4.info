@@ -4,6 +4,17 @@
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Security-Policy" content="
+      default-src 'self';
+      font-src 'self' fonts.gstatic.com;
+      img-src 'self' data: live.staticflickr.com i.imgur.com referrer.disqus.com c.disquscdn.com;
+      script-src 'self' emmasax4.disqus.com www.google.com www.gstatic.com;
+      prefetch-src disqus.com c.disquscdn.com;
+      frame-src 'self' referrer.disqus.com disqus.com www.google.com docs.google.com;
+      style-src 'self' c.disquscdn.com;
+    ">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block" always>
+    <meta http-equiv="X-Frame-Options" content="deny">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="/favicon.ico">
     <meta name="msapplication-TileColor" content="#2d89ef">
@@ -192,12 +203,12 @@
             <p>But even the couple that has the most in common on paper, doesn’t necessarily work out. These are called match makers (versus deal breakers). One of the biggest match makers is personality. My partner is an introvert, and I am an extrovert. We both can easily feel this difference in our relationship dynamic. At gatherings and parties, he gets tired out faster than I do. I relax and get energy, even when we’re in the same room together. He needs more space and time, and sometimes I forget that when he asks me to leave him alone, it doesn’t mean that he doesn’t love me, just that he needs some more personal time. And so, we need to compromise. At the gathering, he always tells me he’s ready to leave, and I always get 20 more minutes. He stays 20 minutes longer than he’d like, and I leave 30 minutes earlier than I’d like. Neither one of us is the happiest we could ever be, but we’re both relatively happy knowing that the other person is also relatively happy. And therefore, we get to go to bed without a fight.</p>
             <p>Couples that have similar personalities have a higher likelihood of getting along together. If one person loves sports, it’d be awesome if the other person did, too. If one person liked cuddling up with a good book on Friday, it may not work out as well if the other person can’t imagine sitting in one place over the weekend. But the truth is that couples don’t always match personalities, and they don’t need to in order to be happy. What matters is how the couples combat their differences. “Personality tells us something about <em>how</em> you and your partner will go about the good and bad days together” (page 121).</p>
             <p>And this brings me to the last point of this blog post. Be picky about what matters… but don’t sweat the small stuff. Be picky about things like core values, visions for the future, huge differences in personality, or which way they put the toilet paper on the dispenser (I’m joking about that one). But it’s probably not worth worrying about the small stuff. My partner <em>never</em> makes the bed, unless he wants to be really nice to me. He’s always messing up the sheets, and he sleeps in the middle of the bed, even if I’m there. But at the end of the day, that’s all small stuff. If he doesn’t give me enough room, I crawl over him and take his side of the bed. If he messes up the sheets, I take the two minutes it takes to make the bed again. “There will always be differences of some kind, but […] that’s not what will kill a relationship. It’s what you do with the differences” (page 127).</p>
-            <script src="/assets/js/show_comments.js"></script>
             <div class="text-center margin-bottom-1">
-              <button id="show-comments-button" class="btn btn-lg btn-outline-secondary" onclick="loadComments('emmasax4'); return false;">
+              <button id="show-comments-button" class="btn btn-lg btn-outline-secondary">
                 Load Comments
                 <i data-feather="message-circle"></i>
               </button>
+              <script id="comments" data-name="emmasax4" src="/assets/js/show_comments.js"></script>
             </div>
             <div id="disqus_thread"></div>
             <noscript>

@@ -4,6 +4,17 @@
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Security-Policy" content="
+      default-src 'self';
+      font-src 'self' fonts.gstatic.com;
+      img-src 'self' data: live.staticflickr.com i.imgur.com referrer.disqus.com c.disquscdn.com;
+      script-src 'self' emmasax4.disqus.com www.google.com www.gstatic.com;
+      prefetch-src disqus.com c.disquscdn.com;
+      frame-src 'self' referrer.disqus.com disqus.com www.google.com docs.google.com;
+      style-src 'self' c.disquscdn.com;
+    ">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block" always>
+    <meta http-equiv="X-Frame-Options" content="deny">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="/favicon.ico">
     <meta name="msapplication-TileColor" content="#2d89ef">
@@ -123,12 +134,12 @@
             </div>
             <p>After landing, getting through Customs, and picking up our bags, the first thing I noticed was the amount of guns the guards at the airport had. I’m not really a big gun person, so I’m not sure what types of guns they were, but I think maybe they were AK-47s or something… they looked to be military style 🙀. And they were all over. A few of us theorized that they were actually empty, and that people were only carrying them around for show… I didn’t feel like seeing if they were right or not. Either way, by the end of the trip, I eventually got used to the security guards always carrying weapons (huge rifles, large sticks, sharp knives, etc).</p>
             <p>After a stop at Safaricom to get an international SIM card (~$10 for one month of data!) and a stop at an ATM to pick up some cash, we checked into our first hotel. We were surprised to find the hotel had metal detectors at the entrance. Shortly after, we were told by our tour guides that we were advised not to leave the hotel for safely reasons 😬. Welcome to Kenya, everybody!</p>
-            <script src="/assets/js/show_comments.js"></script>
             <div class="text-center margin-bottom-1">
-              <button id="show-comments-button" class="btn btn-lg btn-outline-secondary" onclick="loadComments('emmasax4'); return false;">
+              <button id="show-comments-button" class="btn btn-lg btn-outline-secondary">
                 Load Comments
                 <i data-feather="message-circle"></i>
               </button>
+              <script id="comments" data-name="emmasax4" src="/assets/js/show_comments.js"></script>
             </div>
             <div id="disqus_thread"></div>
             <noscript>

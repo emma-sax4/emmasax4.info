@@ -4,6 +4,17 @@
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Security-Policy" content="
+      default-src 'self';
+      font-src 'self' fonts.gstatic.com;
+      img-src 'self' data: live.staticflickr.com i.imgur.com referrer.disqus.com c.disquscdn.com;
+      script-src 'self' emmasax4.disqus.com www.google.com www.gstatic.com;
+      prefetch-src disqus.com c.disquscdn.com;
+      frame-src 'self' referrer.disqus.com disqus.com www.google.com docs.google.com;
+      style-src 'self' c.disquscdn.com;
+    ">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block" always>
+    <meta http-equiv="X-Frame-Options" content="deny">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="/favicon.ico">
     <meta name="msapplication-TileColor" content="#2d89ef">
@@ -173,12 +184,12 @@
             <p>Note the <code>lightbox</code> property is for grouping sets of photos together on a page (particularly handy on pages like my <a href="/interests-and-hobbies/lego/">LEGO page</a> where there’s multiple sets of photos all on one HTML page).</p>
             <p>And voila! There’s still some copy-pasting, but it’s a little easier than copy-pasting a bunch of repetitive HTML (which calls the URL twice, the title twice, etc).</p>
             <p>After the first few hours of installation pain (which could’ve been greatly eased if I read <em>all</em> of the instructions before beginning), Lightbox has been flawless ever since. It’s worked well for everything I’ve used it for, and I can’t imagine going back. All of my photos look so much more professional now, both on larger screens and on mobile.</p>
-            <script src="/assets/js/show_comments.js"></script>
             <div class="text-center margin-bottom-1">
-              <button id="show-comments-button" class="btn btn-lg btn-outline-secondary" onclick="loadComments('emmasax4'); return false;">
+              <button id="show-comments-button" class="btn btn-lg btn-outline-secondary">
                 Load Comments
                 <i data-feather="message-circle"></i>
               </button>
+              <script id="comments" data-name="emmasax4" src="/assets/js/show_comments.js"></script>
             </div>
             <div id="disqus_thread"></div>
             <noscript>

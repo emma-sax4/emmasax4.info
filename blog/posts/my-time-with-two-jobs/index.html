@@ -4,6 +4,17 @@
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Security-Policy" content="
+      default-src 'self';
+      font-src 'self' fonts.gstatic.com;
+      img-src 'self' data: live.staticflickr.com i.imgur.com referrer.disqus.com c.disquscdn.com;
+      script-src 'self' emmasax4.disqus.com www.google.com www.gstatic.com;
+      prefetch-src disqus.com c.disquscdn.com;
+      frame-src 'self' referrer.disqus.com disqus.com www.google.com docs.google.com;
+      style-src 'self' c.disquscdn.com;
+    ">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block" always>
+    <meta http-equiv="X-Frame-Options" content="deny">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="/favicon.ico">
     <meta name="msapplication-TileColor" content="#2d89ef">
@@ -145,12 +156,12 @@
             <p>By the time I finished working with Instacart, I earned approximately an extra ~$5,700. However, I ran into the conundrum where even though I intended to save that money for my trip to Kenya, I just ended up spending additional money as well as my Kenya trip. The more money I made, the more I felt entitled to spend. But at the end of the day, I’m so grateful for the opportunity to work the second job to help bolster my savings account. Because of Instacart, I was able to fund a once-in-a-lifetime vacation without really denting my savings account. I managed to meet new friends, get to socialize, and most importantly, have new experiences and new knowledge about the working economy and society in the U.S. But if I’m completely honest, I’m not sure I’ll work a second job if I can help it ever again. Burnout at work is real.</p>
             <hr />
             <p>NOTE: I did keep detailed records of the miles I drove, the money I made, the hours I worked, and the batches I completed if you’re interested.</p>
-            <script src="/assets/js/show_comments.js"></script>
             <div class="text-center margin-bottom-1">
-              <button id="show-comments-button" class="btn btn-lg btn-outline-secondary" onclick="loadComments('emmasax4'); return false;">
+              <button id="show-comments-button" class="btn btn-lg btn-outline-secondary">
                 Load Comments
                 <i data-feather="message-circle"></i>
               </button>
+              <script id="comments" data-name="emmasax4" src="/assets/js/show_comments.js"></script>
             </div>
             <div id="disqus_thread"></div>
             <noscript>

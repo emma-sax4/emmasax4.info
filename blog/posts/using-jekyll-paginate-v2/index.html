@@ -4,6 +4,17 @@
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Security-Policy" content="
+      default-src 'self';
+      font-src 'self' fonts.gstatic.com;
+      img-src 'self' data: live.staticflickr.com i.imgur.com referrer.disqus.com c.disquscdn.com;
+      script-src 'self' emmasax4.disqus.com www.google.com www.gstatic.com;
+      prefetch-src disqus.com c.disquscdn.com;
+      frame-src 'self' referrer.disqus.com disqus.com www.google.com docs.google.com;
+      style-src 'self' c.disquscdn.com;
+    ">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block" always>
+    <meta http-equiv="X-Frame-Options" content="deny">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="/favicon.ico">
     <meta name="msapplication-TileColor" content="#2d89ef">
@@ -38,7 +49,7 @@
     <meta name="msvalidate.01" content="89B2B19FF966341B78EF64EDADE6DF81" />
     <meta name="yandex-verification" content="8d24108cb36eee89" />
     <script type="application/ld+json">
-      {"@type":"BlogPosting","description":"Emma Sax’s personal website and blog. Includes information about my social media profiles, resumé, and hobbies.","headline":"Using jekyll-paginate-v2","dateModified":"2020-09-30T03:51:24+00:00","datePublished":"2019-12-18T06:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emmasax4.com/blog/posts/using-jekyll-paginate-v2/"},"url":"https://emmasax4.com/blog/posts/using-jekyll-paginate-v2/","author":{"@type":"Person","name":"Emma Sax"},"@context":"https://schema.org"}
+      {"@type":"BlogPosting","description":"Emma Sax’s personal website and blog. Includes information about my social media profiles, resumé, and hobbies.","headline":"Using jekyll-paginate-v2","dateModified":"2021-02-06T21:59:16+00:00","datePublished":"2019-12-18T06:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emmasax4.com/blog/posts/using-jekyll-paginate-v2/"},"url":"https://emmasax4.com/blog/posts/using-jekyll-paginate-v2/","author":{"@type":"Person","name":"Emma Sax"},"@context":"https://schema.org"}
     </script>
     <!-- End Jekyll SEO tag -->
   </head>
@@ -194,12 +205,12 @@
             </ul>
             <hr />
             <p>EDIT: Since writing this blog post, my website has switched to using CircleCI, and then to GitHub Actions, for all continuous integration tools. I wrote a blog post <a href="/blog/posts/why-i-switched-from-travis-ci-to-circleci/">here</a> about why I switched to CircleCI, and wrote another post <a href="/blog/posts/why-i-switched-from-circleci-to-github-actions/">here</a> about why I again switched to GitHub Actions. I’ve also moved my default branch to be <code>main</code>, instead of <code>release</code> and/or <code>source</code>. I originally named it <code>release</code> because the documentation I was following named it that, but realized later that the name <code>main</code> fit my workflow better. Lastly, I’ve moved my <code>master</code> branch to be called <code>gh-pages</code>, and I’ve updated this blog post accordingly.</p>
-            <script src="/assets/js/show_comments.js"></script>
             <div class="text-center margin-bottom-1">
-              <button id="show-comments-button" class="btn btn-lg btn-outline-secondary" onclick="loadComments('emmasax4'); return false;">
+              <button id="show-comments-button" class="btn btn-lg btn-outline-secondary">
                 Load Comments
                 <i data-feather="message-circle"></i>
               </button>
+              <script id="comments" data-name="emmasax4" src="/assets/js/show_comments.js"></script>
             </div>
             <div id="disqus_thread"></div>
             <noscript>
