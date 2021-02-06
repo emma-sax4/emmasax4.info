@@ -6,16 +6,16 @@ layout: default
   <div class="col col-12 col-md-10">
     <!-- Blog post title and information -->
     <div class="text-center">
-      <h1 style="padding-bottom: .75rem;">
+      <h1 class="post-title">
         {{ page.title }}
 
         {% if page.subtitle %}
-          <div style="font-size: 32px">
+          <div class="post-subtitle">
             {{ page.subtitle }}
           </div>
         {% endif %}
 
-        <div class="row" style="margin-top: -.5rem;">
+        <div class="row post-data">
           <div class="col col-12 col-md-4">
             {% if page.category %}
               {% assign category_to_show = page.category %}
@@ -50,7 +50,7 @@ layout: default
       {% if page.comments != false and jekyll.environment == "production" %}
         <script src="/assets/js/show_comments.js"></script>
 
-        <div class="text-center" style="margin-bottom: 1rem;">
+        <div class="text-center margin-bottom-1">
           <button id="show-comments-button" class="btn btn-lg btn-outline-secondary" onclick="loadComments('{{ site.disqus.shortname }}'); return false;">
             Load Comments
             <i data-feather="message-circle"></i>

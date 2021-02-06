@@ -10,7 +10,7 @@
   {% assign short_title = post.title %}
 {% endif %}
 
-<div class="container" style="padding-left: 0; padding-right: 0; padding-bottom: 2rem;">
+<div class="container post-summary-data">
   <!-- Publishing date -->
   <div>
     {% if post.draft %}
@@ -21,7 +21,7 @@
   </div>
 
   <!-- Blog post title -->
-  <a href="{{ post_url }}" style="font-size: 20px;">{{ short_title }}</a>
+  <a href="{{ post_url }}" class="post-summary-title">{{ short_title }}</a>
 
   <!-- Tag list or category -->
   <div>

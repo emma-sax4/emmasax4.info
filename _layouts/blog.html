@@ -2,15 +2,15 @@
 layout: default
 ---
 
-<div class="row" style="display: flex">
-  <div class="col col-12 col-md-10" style="margin-bottom: 1rem;">
+<div class="row">
+  <div class="col col-12 col-md-10 margin-bottom-1">
     <!-- Page title – tag or collection name, or general "Blog" -->
     <div class="text-center">
       <h1>
         {% if page.pagination.tag %}
-          <i style="width: 2.5rem; height: 2.5rem;" data-feather="tag"></i>
+          <i class="blog-list-title-icon" data-feather="tag"></i>
         {% elsif page.pagination.category %}
-          <i style="width: 2.5rem; height: 2.5rem;" data-feather="archive"></i>
+          <i class="blog-list-title-icon" data-feather="archive"></i>
         {% endif %}
 
         {{ page.pagination.title }}
@@ -43,7 +43,7 @@ layout: default
       <div class="text-left">
         <!-- List of tags -->
         <h3>
-          <i style="width: 1.5rem; height: 1.5rem;" data-feather="tag"></i> Tags
+          <i class="blog-list-sidebar-icon" data-feather="tag"></i> Tags
         </h3>
 
         {% assign pages_with_tags = site.pages | where_exp: "item", "item.pagination.tag.size > 1" %}
@@ -64,7 +64,7 @@ layout: default
 
         <!-- List of collections -->
         <h3>
-          <i style="width: 1.5rem; height: 1.5rem;" data-feather="archive"></i> Collections
+          <i class="blog-list-sidebar-icon" data-feather="archive"></i> Collections
         </h3>
 
         {% assign pages_with_category = site.pages | where_exp: "item", "item.pagination.category.size > 1" %}

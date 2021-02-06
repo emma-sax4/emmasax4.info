@@ -7,7 +7,7 @@ layout: default
   <h1>Hello! I’m Emma!</h1>
 </div>
 
-<div class="container" style="padding-top: 1.5rem;">
+<div class="container homepage-content">
   <div class="row">
     <!-- Main photo -->
     <div class="col-md text-center">
@@ -18,8 +18,8 @@ layout: default
     <div class="col-md text-center mt-2">
       {{ content | markdownify }}
 
-      <div class="mt-5" style="padding-bottom:50px;">
-        <h3 style="font-weight: bold; padding-bottom: 1rem;">Connect with me:</h4>
+      <div class="mt-5 connect">
+        <h3 class="connect-header">Connect with me:</h4>
 
         <a href="{{ site.author_profiles.twitter }}" class="link-icon">
           <i data-feather="twitter"></i>
@@ -36,11 +36,11 @@ layout: default
         <a href="{{ site.author_profiles.instagram }}" class="link-icon">
           <i data-feather="instagram"></i>
         </a>
-        <a href="{{ site.author_profiles.facebook }}" class="link-icon" style="padding-left: 0rem; padding-right: 0rem;">
+        <a href="{{ site.author_profiles.facebook }}" class="link-icon facebook-icon">
           <i data-feather="facebook"></i>
         </a>
 
-        <div class="text-center link-icon-button" style="margin-top: 1.5rem;">
+        <div class="text-center link-icon-button contact-button">
           <a href="/contact-me/" class="btn btn-md btn-outline-secondary">
             Send me a message directly
           </a>
