@@ -64,20 +64,36 @@ hr {
   top: -3rem;
 }
 
+.padding-bottom-1 {
+  padding-bottom: 1rem;
+}
+
+.margin-bottom-1 {
+  margin-bottom: 1rem;
+}
+
+// .display-none {
+//   display: none;
+// }
+
+.italic {
+  font-style: italic;
+}
+
+.lego-summary {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
 .image {
   max-width: 100%;
   height: auto;
   padding-bottom: .625rem;
 }
 
-.post-meta {
-  font-size: 16px;
-  color: grey;
-}
-
-.date-meta {
-  font-size: 16px;
-  color: grey;
+.four-0-four {
+  padding-bottom: 2rem;
+  padding-top: 1.5rem;
 }
 
 ::-webkit-input-placeholder {
