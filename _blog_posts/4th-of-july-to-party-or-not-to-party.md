@@ -18,8 +18,8 @@ Like most businesses, E&A closed shop in March/April of 2020 for the pandemic. N
 
 <div class="text-center">
   {% include elements/photo.html
-     url="https://media.giphy.com/media/yyp58Yx3Qk0TK/giphy.gif"
-     thumb_width="400" title="30 Rock gif via Giphy" lightbox="E&A Covid"
+      url="https://media.giphy.com/media/yyp58Yx3Qk0TK/giphy.gif"
+      thumb_width="400" title="30 Rock gif via Giphy" lightbox="E&A Covid"
   %}
 </div>
 
@@ -41,8 +41,8 @@ My partner frequently points out to me that E&A is a company built on close cont
 
 <div class="text-center">
   {% include elements/photo.html
-     url="https://media.giphy.com/media/z9AUvhAEiXOqA/giphy.gif"
-     thumb_width="400" title="This is fine gif via Giphy" lightbox="E&A Covid"
+      url="https://media.giphy.com/media/z9AUvhAEiXOqA/giphy.gif"
+      thumb_width="400" title="This is fine gif via Giphy" lightbox="E&A Covid"
   %}
 </div>
 
@@ -52,7 +52,7 @@ It's hard... knowing what to do and what the right choice is. And I'd be a hypoc
 
 <div class="text-center">
   {% include elements/photo.html
-     url="https://media.giphy.com/media/KeoRcYovftKiilrKir/giphy.gif"
-     thumb_width="400" title="Arthur wearing masks gif via Giphy" lightbox="E&A Covid"
+      url="https://media.giphy.com/media/KeoRcYovftKiilrKir/giphy.gif"
+      thumb_width="400" title="Arthur wearing masks gif via Giphy" lightbox="E&A Covid"
   %}
 </div>

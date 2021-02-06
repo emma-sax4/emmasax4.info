@@ -144,9 +144,8 @@ First, my syntax highlighting also broke, and I didn't even notice for several w
 
 <div class="text-center">
   {% include elements/photo.html
-    url="https://user-images.githubusercontent.com/7562793/87866750-f695d980-c94a-11ea-87e1-9fc8c5e56d88.png"
-    thumb_width="400" title="HTML without syntax highlighting"
-    lightbox="kramdown to CommonMark"
+      url="https://user-images.githubusercontent.com/7562793/87866750-f695d980-c94a-11ea-87e1-9fc8c5e56d88.png"
+      thumb_width="400" title="HTML without syntax highlighting" lightbox="kramdown to CommonMark"
   %}
 </div>
 

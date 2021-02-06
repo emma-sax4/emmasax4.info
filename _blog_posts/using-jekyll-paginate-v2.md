@@ -101,8 +101,8 @@ It's a little complicated, but, one deploy from Travis CI later, and the site wa
 
 <div class="text-center">
   {% include elements/photo.html
-     url="https://media.giphy.com/media/4xpB3eE00FfBm/giphy.gif"
-     thumb_width="400" title="Success baby gif via Giphy" lightbox="Pagination"
+      url="https://media.giphy.com/media/4xpB3eE00FfBm/giphy.gif"
+      thumb_width="400" title="Success baby gif via Giphy" lightbox="Pagination"
   %}
 </div>
 
