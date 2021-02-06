@@ -44,7 +44,7 @@ Here's what my final HTML form looks like. Note that instead of rendering an ent
 
 ```html
 <script>
-  var submitted = false;
+  var formSubmitted = false;
 
   function showFormResponse() {
     document.getElementById("formResponse").style.display = "block";
@@ -55,11 +55,11 @@ Here's what my final HTML form looks like. Note that instead of rendering an ent
 <iframe name="hidden_iframe"
         id="hidden_iframe"
         style="display: none;"
-        onload="if (submitted) { showFormResponse() }">
+        onload="if (formSubmitted) { showFormResponse() }">
 </iframe>
 
 <div id="form">
-  <form method="post" target="hidden_iframe" onsubmit="submitted = true;"
+  <form method="post" target="hidden_iframe" onsubmit="formSubmitted = true;"
     action="https://docs.google.com/forms/d/e/ABDEFGHIJKLMNOPQRSTUVWXYZ/formResponse"
   >
     <div class="form-group">
@@ -219,3 +219,17 @@ All of my completed HTML can be found [here]({{ site.author_profiles.github }}/{
 * [www.google.com: ReCATPCHA creation](https://www.google.com/recaptcha/admin/create)
 * [developers.google.com: ReCAPTCHA docs](https://developers.google.com/recaptcha/docs/display)
 * [www.labnol.org: Useful Regular Expressions for Validating Input in Google Forms](https://www.labnol.org/internet/regular-expressions-forms/28380/)
+
+---
+
+EDIT: Since publishing this blog post, I've made one change to my form. Instead of making the invisible verification input required, I've instead added an additional check that will only show the "thank you" page if the reCAPTCHA was completed. Otherwise, it'll show a browser alert that the reCAPTCHA needs to be filled out first. Under the hood, the form actually tries to submit either way (whether the reCAPTCHA was completed or not), but Google Forms will just deny the request if the reCAPTCHA (and/or the invisible verification input) wasn't completed. To make it extra clear that the invisible input is required by the backend, just not enforced by the frontend, I wrote a little invisible message. This is what my new Javascript function looks like:
+
+```javascript
+function verifyRecaptcha() {
+  if (recaptchaCompleted) {
+    formSubmitted = true;
+  } else {
+    alert('Please fill out the reCAPTCHA to send a message.');
+  };
+};
+```

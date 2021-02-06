@@ -23,6 +23,6 @@ function verifyRecaptcha() {
   if (recaptchaCompleted) {
     formSubmitted = true;
   } else {
-    alert('Please fill out the reCAPTCHA to send message.');
+    alert('Please fill out the reCAPTCHA to send a message.');
   };
 };
