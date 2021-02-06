@@ -14,14 +14,14 @@ layout: default
 <iframe name="hidden_iframe"
         id="hidden_iframe"
         style="display: none;"
-        onload="if (submitted) { showFormResponse() }">
+        onload="if (formSubmitted) { showFormResponse(); };">
 </iframe>
 
 <!-- The contact form for users to fill out -->
 <div id="form" class="page-body">
   {{ content | markdownify }}
 
-  <form method="post" target="hidden_iframe" onsubmit="submitted = true;"
+  <form method="post" target="hidden_iframe" onsubmit="verifyRecaptcha();"
     action="https://docs.google.com/forms/d/e/1FAIpQLScEq299mdRxHN_dZ3tTdgp6KTYtcgUHHVbDr0DSX2-zDDCxuQ/formResponse"
   >
     <div class="form-group">
@@ -39,9 +39,10 @@ layout: default
       <textarea name="entry.1379036791" class="form-control" id="message" placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit." rows="3" required></textarea>
     </div>
 
-    <div class="form-group" style="display: none">
+    <div class="form-group" style="display: none;">
       <label>Anti-Spam Verification<span style="color: #d61b1b;">*</span></label>
-      <input name="entry.417228047" type="text" class="form-control" id="verification" required>
+      <p class="post-meta">NOTE: My HTML does not formally require this input to be filled in order to send a message. However, leaving this value blank will automatically prevent my form from <i>accepting</i> your message, even though my website will <i>tell</i> you the submission was successful.</p>
+      <input name="entry.417228047" type="text" class="form-control" id="verification">
     </div>
 
     <label>Please verify you’re a human<span style="color: #d61b1b;">*</span></label>
@@ -50,7 +51,7 @@ layout: default
     ></div>
 
     <button type="submit" id="submitButton" disabled class="btn btn-primary" style="width: 100%;">
-      Submit
+      Send Message
     </button>
   </form>
 </div>
