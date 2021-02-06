@@ -190,7 +190,7 @@
             <hr>
             <p>Thank you so much for getting to the bottom of that rather technical blog post. I hope it’s enough compelling evidence to remember that using a 3rd party tool to make your website’s CSS better is worth it. If I (a back-end coder with very little CSS experience) can make it happen, then so can you 😉.</p>
             <p>For more information about how my site uses Bootstrap, please see <a href="/blog/posts/bootstrap-css-and-icons-in-this-site/">this blog post</a>. To learn more about Bootstrap, please read their documentation <a href="https://getbootstrap.com/docs/4.4/getting-started/introduction/">here</a>.</p>
-            <script src="/assets/js/show_comments.js" type="text/javascript"></script>
+            <script src="/assets/js/show_comments.js"></script>
             <div class="text-center" style="margin-bottom: 1rem;">
               <button id="show-comments-button" class="btn btn-lg btn-outline-secondary" onclick="loadComments('emmasax4'); return false;">
                 Load Comments
@@ -222,21 +222,17 @@
   </body>
   <!-- Footer -->
   <footer>
-    &copy; <script>
-      document.write(new Date().getFullYear());
-    </script>
+    &copy; <script src="/assets/js/get_full_year.js"></script>
     Emma Sax. All rights reserved.
     <br>
     View on <a href="https://github.com/emmasax4/emmasax4.com">GitHub</a>.
   </footer>
   <!-- Javascript scripts -->
-  <script src="/assets/js/show_dates.js" type="text/javascript"></script>
-  <script src="/assets/js/external_links.js" type="text/javascript"></script>
+  <script src="/assets/js/show_dates.js"></script>
+  <script src="/assets/js/external_links.js"></script>
   <script src="/assets/js/jquery.min.js"></script>
   <script src="/assets/js/lightbox.min.js"></script>
   <script src="/assets/js/bootstrap.min.js"></script>
   <script src="/assets/js/feather.min.js"></script>
-  <script>
-    feather.replace()
-  </script>
+  <script src="/assets/js/activate_feather.js"></script>
 </html>

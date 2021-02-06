@@ -521,7 +521,7 @@ git commit <span class="nt">-m</span> <span class="s2">"Deploy to </span><span c
             <p>But at the end of the day, what matters is that every project uses the CI solution that works best for their needs and their project. For this website, that answer was CircleCI. But for many, that’s Travis CI. As long as projects are running tests, that’s what matters most.</p>
             <hr />
             <p>EDIT: Since writing this blog post, I’ve moved my <code>master</code> branch to be called <code>gh-pages</code> and <code>source</code> branch to be called <code>main</code>, and I’ve updated this blog post accordingly. I’ve also switched to using GitHub Actions since this was written, and I’ve written <a href="/blog/posts/why-i-switched-from-circleci-to-github-actions/">this blog post</a> about that.</p>
-            <script src="/assets/js/show_comments.js" type="text/javascript"></script>
+            <script src="/assets/js/show_comments.js"></script>
             <div class="text-center" style="margin-bottom: 1rem;">
               <button id="show-comments-button" class="btn btn-lg btn-outline-secondary" onclick="loadComments('emmasax4'); return false;">
                 Load Comments
@@ -553,21 +553,17 @@ git commit <span class="nt">-m</span> <span class="s2">"Deploy to </span><span c
   </body>
   <!-- Footer -->
   <footer>
-    &copy; <script>
-      document.write(new Date().getFullYear());
-    </script>
+    &copy; <script src="/assets/js/get_full_year.js"></script>
     Emma Sax. All rights reserved.
     <br>
     View on <a href="https://github.com/emmasax4/emmasax4.com">GitHub</a>.
   </footer>
   <!-- Javascript scripts -->
-  <script src="/assets/js/show_dates.js" type="text/javascript"></script>
-  <script src="/assets/js/external_links.js" type="text/javascript"></script>
+  <script src="/assets/js/show_dates.js"></script>
+  <script src="/assets/js/external_links.js"></script>
   <script src="/assets/js/jquery.min.js"></script>
   <script src="/assets/js/lightbox.min.js"></script>
   <script src="/assets/js/bootstrap.min.js"></script>
   <script src="/assets/js/feather.min.js"></script>
-  <script>
-    feather.replace()
-  </script>
+  <script src="/assets/js/activate_feather.js"></script>
 </html>

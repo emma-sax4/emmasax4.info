@@ -38,7 +38,7 @@
     <meta name="msvalidate.01" content="89B2B19FF966341B78EF64EDADE6DF81" />
     <meta name="yandex-verification" content="8d24108cb36eee89" />
     <script type="application/ld+json">
-      {"@type":"BlogPosting","description":"Emma Sax’s personal website and blog. Includes information about my social media profiles, resumé, and hobbies.","headline":"Time Zones, UTC, and Javascript… Oh My!","dateModified":"2020-07-12T14:32:04+00:00","datePublished":"2020-02-07T06:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emmasax4.com/blog/posts/time-zones-utc-and-javascript-oh-my/"},"url":"https://emmasax4.com/blog/posts/time-zones-utc-and-javascript-oh-my/","author":{"@type":"Person","name":"Emma Sax"},"@context":"https://schema.org"}
+      {"@type":"BlogPosting","description":"Emma Sax’s personal website and blog. Includes information about my social media profiles, resumé, and hobbies.","headline":"Time Zones, UTC, and Javascript… Oh My!","dateModified":"2021-02-06T20:14:05+00:00","datePublished":"2020-02-07T06:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emmasax4.com/blog/posts/time-zones-utc-and-javascript-oh-my/"},"url":"https://emmasax4.com/blog/posts/time-zones-utc-and-javascript-oh-my/","author":{"@type":"Person","name":"Emma Sax"},"@context":"https://schema.org"}
     </script>
     <!-- End Jekyll SEO tag -->
   </head>
@@ -246,7 +246,7 @@ January 18, 2020 05:15
             <p>I’m still working on perfecting my time zone processing. It’s complicated, and not all browsers react the same way to Javascript (who knew, right ¯\_(ツ)_/¯). But, I’d strongly urge to you take the plunge on your website… it’ll be worth it when your blog becomes internationally popular 😜.</p>
             <hr />
             <p>EDIT: Since writing this blog post, I’ve moved my default branch to be <code>main</code>, instead of <code>release</code> and/or <code>source</code>. I originally named it <code>release</code> because the documentation I was following named it that, but realized later that the name <code>main</code> fit my workflow better. Also, I’ve moved my <code>master</code> branch to be called <code>gh-pages</code>, and I’ve updated this blog post accordingly.</p>
-            <script src="/assets/js/show_comments.js" type="text/javascript"></script>
+            <script src="/assets/js/show_comments.js"></script>
             <div class="text-center" style="margin-bottom: 1rem;">
               <button id="show-comments-button" class="btn btn-lg btn-outline-secondary" onclick="loadComments('emmasax4'); return false;">
                 Load Comments
@@ -278,21 +278,17 @@ January 18, 2020 05:15
   </body>
   <!-- Footer -->
   <footer>
-    &copy; <script>
-      document.write(new Date().getFullYear());
-    </script>
+    &copy; <script src="/assets/js/get_full_year.js"></script>
     Emma Sax. All rights reserved.
     <br>
     View on <a href="https://github.com/emmasax4/emmasax4.com">GitHub</a>.
   </footer>
   <!-- Javascript scripts -->
-  <script src="/assets/js/show_dates.js" type="text/javascript"></script>
-  <script src="/assets/js/external_links.js" type="text/javascript"></script>
+  <script src="/assets/js/show_dates.js"></script>
+  <script src="/assets/js/external_links.js"></script>
   <script src="/assets/js/jquery.min.js"></script>
   <script src="/assets/js/lightbox.min.js"></script>
   <script src="/assets/js/bootstrap.min.js"></script>
   <script src="/assets/js/feather.min.js"></script>
-  <script>
-    feather.replace()
-  </script>
+  <script src="/assets/js/activate_feather.js"></script>
 </html>

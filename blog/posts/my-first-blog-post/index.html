@@ -116,7 +116,7 @@
             <p>Then, I went a step further. I added a <code>.htaccess</code> file (even though GitHub Pages normally doesn’t play nice with that file), so that the URLs of this website could hide the <code>.html</code> endings of the HTML pages. In this way, the website wouldn’t show up as obviously just a compilation of HTML files… aka it makes it look like the whole website is served using RoR or something like that. And then, using a little bit of directory-magic, I can add a bunch of posts in a <code>_posts/</code> directory — and link to them appropriately. Add in a <code>Back</code> button, and voilà… here we are!</p>
             <p>Now I have a blog feature that I can edit as I choose (as long as I’m willing to duplicate my code). I’m excited to add my next blog post to the list. Let’s see how long it takes for this blog to stop being updated… it may just be a phase.</p>
             <p>** It’s come to my attention that there are a few aspects of a <em>blog</em> that this doesn’t include. Mainly, the ability to comment, converse with others, and have notes regarding each blog post.</p>
-            <script src="/assets/js/show_comments.js" type="text/javascript"></script>
+            <script src="/assets/js/show_comments.js"></script>
             <div class="text-center" style="margin-bottom: 1rem;">
               <button id="show-comments-button" class="btn btn-lg btn-outline-secondary" onclick="loadComments('emmasax4'); return false;">
                 Load Comments
@@ -148,21 +148,17 @@
   </body>
   <!-- Footer -->
   <footer>
-    &copy; <script>
-      document.write(new Date().getFullYear());
-    </script>
+    &copy; <script src="/assets/js/get_full_year.js"></script>
     Emma Sax. All rights reserved.
     <br>
     View on <a href="https://github.com/emmasax4/emmasax4.com">GitHub</a>.
   </footer>
   <!-- Javascript scripts -->
-  <script src="/assets/js/show_dates.js" type="text/javascript"></script>
-  <script src="/assets/js/external_links.js" type="text/javascript"></script>
+  <script src="/assets/js/show_dates.js"></script>
+  <script src="/assets/js/external_links.js"></script>
   <script src="/assets/js/jquery.min.js"></script>
   <script src="/assets/js/lightbox.min.js"></script>
   <script src="/assets/js/bootstrap.min.js"></script>
   <script src="/assets/js/feather.min.js"></script>
-  <script>
-    feather.replace()
-  </script>
+  <script src="/assets/js/activate_feather.js"></script>
 </html>

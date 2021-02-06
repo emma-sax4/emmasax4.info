@@ -173,7 +173,7 @@
             <p>Note the <code>lightbox</code> property is for grouping sets of photos together on a page (particularly handy on pages like my <a href="/interests-and-hobbies/lego/">LEGO page</a> where there’s multiple sets of photos all on one HTML page).</p>
             <p>And voila! There’s still some copy-pasting, but it’s a little easier than copy-pasting a bunch of repetitive HTML (which calls the URL twice, the title twice, etc).</p>
             <p>After the first few hours of installation pain (which could’ve been greatly eased if I read <em>all</em> of the instructions before beginning), Lightbox has been flawless ever since. It’s worked well for everything I’ve used it for, and I can’t imagine going back. All of my photos look so much more professional now, both on larger screens and on mobile.</p>
-            <script src="/assets/js/show_comments.js" type="text/javascript"></script>
+            <script src="/assets/js/show_comments.js"></script>
             <div class="text-center" style="margin-bottom: 1rem;">
               <button id="show-comments-button" class="btn btn-lg btn-outline-secondary" onclick="loadComments('emmasax4'); return false;">
                 Load Comments
@@ -205,21 +205,17 @@
   </body>
   <!-- Footer -->
   <footer>
-    &copy; <script>
-      document.write(new Date().getFullYear());
-    </script>
+    &copy; <script src="/assets/js/get_full_year.js"></script>
     Emma Sax. All rights reserved.
     <br>
     View on <a href="https://github.com/emmasax4/emmasax4.com">GitHub</a>.
   </footer>
   <!-- Javascript scripts -->
-  <script src="/assets/js/show_dates.js" type="text/javascript"></script>
-  <script src="/assets/js/external_links.js" type="text/javascript"></script>
+  <script src="/assets/js/show_dates.js"></script>
+  <script src="/assets/js/external_links.js"></script>
   <script src="/assets/js/jquery.min.js"></script>
   <script src="/assets/js/lightbox.min.js"></script>
   <script src="/assets/js/bootstrap.min.js"></script>
   <script src="/assets/js/feather.min.js"></script>
-  <script>
-    feather.replace()
-  </script>
+  <script src="/assets/js/activate_feather.js"></script>
 </html>
