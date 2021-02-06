@@ -38,7 +38,7 @@
     <meta name="msvalidate.01" content="89B2B19FF966341B78EF64EDADE6DF81" />
     <meta name="yandex-verification" content="8d24108cb36eee89" />
     <script type="application/ld+json">
-      {"@type":"BlogPosting","description":"Emma Sax’s personal website and blog. Includes information about my social media profiles, resumé, and hobbies.","headline":"Switching from kramdown to CommonMark","dateModified":"2020-10-04T17:00:04+00:00","datePublished":"2020-07-19T15:00:33+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emmasax4.com/blog/posts/switching-from-kramdown-to-commonmark/"},"url":"https://emmasax4.com/blog/posts/switching-from-kramdown-to-commonmark/","author":{"@type":"Person","name":"Emma Sax"},"@context":"https://schema.org"}
+      {"@type":"BlogPosting","description":"Emma Sax’s personal website and blog. Includes information about my social media profiles, resumé, and hobbies.","headline":"Switching from kramdown to CommonMark","dateModified":"2021-02-06T20:33:53+00:00","datePublished":"2020-07-19T15:00:33+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://emmasax4.com/blog/posts/switching-from-kramdown-to-commonmark/"},"url":"https://emmasax4.com/blog/posts/switching-from-kramdown-to-commonmark/","author":{"@type":"Person","name":"Emma Sax"},"@context":"https://schema.org"}
     </script>
     <!-- End Jekyll SEO tag -->
   </head>
@@ -47,8 +47,8 @@
     <nav class="navbar navbar-expand-md navbar-dark py-0 py-md-0">
       <!-- Left hand side of navbar -->
       <a class="navbar-brand mb-0" href="/" target="_self">
-        <img src="/assets/images/logos/e-logo-white-40.png" width="30" height="30" style="margin-top: 1px; margin-bottom: 1px;"
-        class="d-inline-block align-top" alt="E logo"
+        <img src="/assets/images/logos/e-logo-white-40.png" width="30" height="30"
+        class="d-inline-block align-top nav-icon" alt="E logo"
       >&nbsp;&nbsp;Emma Sax
       </a>
       <!-- Navbar open/close button when on a smaller screen -->
@@ -86,12 +86,12 @@
         <div class="col col-12 col-md-10">
           <!-- Blog post title and information -->
           <div class="text-center">
-            <h1 style="padding-bottom: .75rem;">
+            <h1 class="post-title">
               Switching from kramdown to CommonMark
-              <div class="row" style="margin-top: -.5rem;">
+              <div class="row post-data">
                 <div class="col col-12 col-md-4">
                   <span class="post-meta">
-                    <i style="width: 20px; height: 20px;" data-feather="tag"></i>
+                    <i class="post-categorization-icon" data-feather="tag"></i>
                     <a href="/blog/jekyll/">
                       jekyll
                     </a>
@@ -105,7 +105,7 @@
                   <span class="date-meta">2020-07-19 10:00:33 -0500</span>
                 </div>
                 <div class="col col-12 col-md-4">
-                  <span class="post-meta">Read time: 10 minutes</span>
+                  <span class="post-meta">Read time: 9 minutes</span>
                 </div>
               </div>
             </h1>
@@ -228,31 +228,6 @@
                 <img class="image" src="https://live.staticflickr.com/65535/50121433291_c532150c4a_o.png" width="400" alt="With the anchors properly lined up">
               </a>
             </div>
-            <!-- The last big issue was that my LEGO page was completely empty! All of my LEGO entries were gone. After doing some googling, I realized that CommonMark does have support for the `<details></details>` HTML, which my LEGO entries were using, but CommonMark somehow wasn't picking up the tags as HTML. The solution? move them back in indentation, so that this:
-
-```html
-  {% for lego in lego_list %}
-    <details>
-      <summary style="font-size: 32px; margin-bottom: 10px;">{{ lego.title }}</summary>
-      {{ lego.content }}
-    </details>
-  {% endfor %}
-```
-
-becomes this:
-
-```html
-  {% for lego in lego_list %}
-
-<details>
-  <summary style="font-size: 32px; margin-bottom: 10px;">{{ lego.title }}</summary>
-  {{ lego.content }}
-</details>
-
-  {% endfor %}
-```
-
-It certainly doesn't look as pretty... I always prefer to have my HTML indented properly. But compromising and being willing to move my lines around is worth a much faster build time. -->
             <p>After I was satisfied with my changes, I willingly merged my pull request and deployed away. A little while later, I noticed a few other key pieces I missed.</p>
             <p>First, my syntax highlighting also broke, and I didn’t even notice for several weeks! Here’s an image of how the HTML changed during the switch:</p>
             <div class="text-center">
@@ -300,7 +275,7 @@ It certainly doesn't look as pretty... I always prefer to have my HTML indented 
             <hr />
             <p>Update: Since publishing this blog post, I’ve actually added back in almost every usage of <code>markdownify</code> that I had previously removed. The only place where it absolutely does not work is when rendering individual blog posts. It’s possible <code>markdownify</code> wasn’t the source of what was broken, but was just masking other issues I resolved around the same time.</p>
             <script src="/assets/js/show_comments.js"></script>
-            <div class="text-center" style="margin-bottom: 1rem;">
+            <div class="text-center margin-bottom-1">
               <button id="show-comments-button" class="btn btn-lg btn-outline-secondary" onclick="loadComments('emmasax4'); return false;">
                 Load Comments
                 <i data-feather="message-circle"></i>
@@ -318,7 +293,7 @@ It certainly doesn't look as pretty... I always prefer to have my HTML indented 
         <div class="col col-12 col-md-2 text-center">
           <!-- Sidebar – button to go back to all posts and RSS feed button -->
           <div class="text-center">
-            <div class="container" style="padding-bottom: 1rem;">
+            <div class="container padding-bottom-1">
               <a href="/blog/" class="btn btn-lg btn-outline-secondary">All Posts</a>
             </div>
             <a href="/feed.xml" target="_blank" class="link-icon-rss">
