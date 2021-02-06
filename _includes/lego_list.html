@@ -2,7 +2,7 @@
 
 {% for lego in featured %}
   <details>
-    <summary style="font-size: 24px; margin-bottom: 10px;">Featured: <i>{{ lego.title }}</i></summary>
+    <summary class="lego-summary">Featured: <i>{{ lego.title }}</i></summary>
     {{ lego.content }}
   </details>
 {% endfor %}
@@ -11,7 +11,7 @@
 
 {% for lego in lego_list %}
   <details>
-    <summary style="font-size: 24px; margin-bottom: 10px;">{{ lego.title }}</summary>
+    <summary class="lego-summary">{{ lego.title }}</summary>
     {{ lego.content }}
   </details>
 {% endfor %}

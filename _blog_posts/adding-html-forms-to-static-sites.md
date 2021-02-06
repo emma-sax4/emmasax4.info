@@ -134,10 +134,10 @@ So now we're onto step six. I added a short-answer question to my Google Form, a
 Now, in step seven, I'll add another form input to my HTML, and attach it to the new Google Forms question:
 
 ```html
-<div class="form-group" style="display: none">
+{% raw %}<div class="form-group" style="display: none">
   <label>Anti-Spam Verification</label>
   <input name="entry.102938475" type="text" class="form-control" id="verification" required>
-</div>
+</div>{% endraw %}
 ```
 
 I can put this section pretty much anywhere in the entire form—the `style="display: none"` makes it so that it's invisble by default. By making it required, I'm telling the form that it cannot be sent without that input being filled out (with anything... the HTML form doesn't care what's there).

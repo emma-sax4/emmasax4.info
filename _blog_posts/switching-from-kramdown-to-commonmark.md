@@ -138,32 +138,6 @@ And here's my anchors at the end:
   %}
 </div>
 
-<!-- The last big issue was that my LEGO page was completely empty! All of my LEGO entries were gone. After doing some googling, I realized that CommonMark does have support for the `<details></details>` HTML, which my LEGO entries were using, but CommonMark somehow wasn't picking up the tags as HTML. The solution? move them back in indentation, so that this:
-
-```html
-{% raw %}  {% for lego in lego_list %}
-    <details>
-      <summary style="font-size: 32px; margin-bottom: 10px;">{{ lego.title }}</summary>
-      {{ lego.content }}
-    </details>
-  {% endfor %}{% endraw %}
-```
-
-becomes this:
-
-```html
-{% raw %}  {% for lego in lego_list %}
-
-<details>
-  <summary style="font-size: 32px; margin-bottom: 10px;">{{ lego.title }}</summary>
-  {{ lego.content }}
-</details>
-
-  {% endfor %}{% endraw %}
-```
-
-It certainly doesn't look as pretty... I always prefer to have my HTML indented properly. But compromising and being willing to move my lines around is worth a much faster build time. -->
-
 After I was satisfied with my changes, I willingly merged my pull request and deployed away. A little while later, I noticed a few other key pieces I missed.
 
 First, my syntax highlighting also broke, and I didn't even notice for several weeks! Here's an image of how the HTML changed during the switch:
