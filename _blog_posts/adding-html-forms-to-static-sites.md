@@ -43,7 +43,7 @@ For the first four steps (creating a Google Form, creating a custom HTML form th
 Here's what my final HTML form looks like. Note that instead of rendering an entirely new "thank you" page, I simply replace the form `div` with a "thank you" `div`. This is my personal preference, so that there's not an entirely new page just to say thanks for submitting a message.
 
 ```html
-<script>
+{% raw %}<script>
   var formSubmitted = false;
 
   function showFormResponse() {
@@ -87,7 +87,7 @@ Here's what my final HTML form looks like. Note that instead of rendering an ent
   <div class="text-center">
     <a href="/" class="btn">Back to Homepage</a>
   </div>
-</div>
+</div>{% endraw %}
 ```
 
 Here is a picture of what the form now looks like:

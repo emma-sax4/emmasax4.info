@@ -74,7 +74,7 @@ So, neither of these options are perfect, and I don't like either of them. I wan
 After several pull requests of me changing my mind about how to write links, and doing massive search-replaces in my codebase, I found a different kind of solution... a solution that involves Javascript. Static sites (like mine) can use Javascript to do view-based logic and methods right in front of the user. It's unwise to incorporate _a lot_ of Javascript on a single page because it'll slow down loading and operation times, but it's how I did simply functionality, like showing the comments on the bottom of each page or loading the Feather icons. And so of course, somebody has written [this blog post](https://html.com/attributes/a-target/) which nicely provides a Javascript solution for opening every external URL in a new tab. This script is what is suggested to be placed at the bottom of our HTML files:
 
 ```html
-<script type="text/javascript">
+{% raw %}<script type="text/javascript">
   function externalLinks() {
     for(var c = document.getElementsByTagName('a'), a = 0; a < c.length; a++) {
       var b = c[a];
@@ -82,7 +82,7 @@ After several pull requests of me changing my mind about how to write links, and
     }
   };
   externalLinks();
-</script>
+</script>{% endraw %}
 ```
 
 It's very simple, but yet, it covers almost exactly what I need. On every page that's loaded, it will go through my converted and compiled HTML, find each attribute that contains a link, and will guarantee that each EXTERNAL link will open to a new tab, and that each INTERNAL link opens to the current tab. Voilà!
@@ -116,7 +116,7 @@ Similarly, if a link is explicitly written with `target="_blank"`, no matter whe
 Here's what my new script looks like with [html.com](https://html.com/)'s suggestion and my edits:
 
 ```html
-<!--
+{% raw %}<!--
 To open an EXTERNAL link in the CURRENT tab, write your link like this:
   <a href="https://github.com" target="_self">GitHub</a>
 
@@ -138,7 +138,7 @@ To open an INTERNAL link in a NEW tab, write your link like this:
     };
   };
   openExternalLinksInNewTabs();
-</script>
+</script>{% endraw %}
 ```
 
 Now this _**really**_ does everything I need. 🙌🏼

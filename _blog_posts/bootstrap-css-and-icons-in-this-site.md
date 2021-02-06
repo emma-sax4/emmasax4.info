@@ -76,8 +76,8 @@ The `link-icon` class is something that I've created with common link-icon setti
 Lastly, as long as these two lines are at the bottom of the file, the icons appear magically!
 
 ```html
-<script src="https://unpkg.com/feather-icons"></script>
-<script>feather.replace()</script>
+{% raw %}<script src="https://unpkg.com/feather-icons"></script>
+<script>feather.replace()</script>{% endraw %}
 ```
 
 See them in action [here]({{ site.author_profiles.github }}/{{ site.github_repo }}/blob/129867d8135a930f4d364fe026db123d655b5ca8/_includes/site/scripts.html#L3-L4).
