@@ -25,7 +25,7 @@ What I found was [this solution](https://opensource.com/article/19/7/permanently
 I created [this repository]({{ site.author_profiles.github }}/emmasax4-redirects) to put my new redirects in. I started by taking a modified version of the HTML code in that blog post, which looked something like this:
 
 ```html
-<!DOCTYPE html>
+{% raw %}<!DOCTYPE html>
 <html lang="en-US">
   <meta charset="utf-8">
   <title>Redirecting&hellip;</title>
@@ -37,7 +37,7 @@ I created [this repository]({{ site.author_profiles.github }}/emmasax4-redirects
   <meta name="robots" content="noindex">
   <h1>Redirecting&hellip;</h1>
   <a href="https://destination-domain.com">Click here if you are not redirected.</a>
-</html>
+</html>{% endraw %}
 ```
 
 This worked. I duplicated each `index.html` file on the original site into this new project, replicating the files found [here]({{ site.author_profiles.github }}/{{ site.github_repo }}/tree/4c4aaed77f44ccf743ce47ddef9c91c9a89528a4). But I realized this wasn't sustainable. I didn't want to be copy-pasting HTML from each file to another all over the place. I wanted _one_ HTML file that would properly redirect any incoming path to the new domain, and forwarding the same path, without me having to make constant updates to the new redirect repository.
@@ -63,7 +63,7 @@ setTimeout(function(){ window.location.href = "https://destination-domain.com" +
 Now, with this Javascript, the key was to use it in two places: the button, and the delay. This was the ending solution:
 
 ```html
-<script type="text/javascript">
+{% raw %}<script type="text/javascript">
   var pathname = window.location.pathname;
 
   // Perform an automatic timed redirect
@@ -77,7 +77,7 @@ Now, with this Javascript, the key was to use it in two places: the button, and 
 
 <button class="btn btn-lg btn-outline-secondary" onclick="redirect_now(); return false;">
   Click here if you are not redirected.
-</button>
+</button>{% endraw %}
 ```
 
 Bam! Now, no matter what path a user passes in after the `/`, they'll be forwarded to the exact same URL with just a different domain 🥳. The last part of this project was to remove all of the extra `index.html` files. All we really need are the root `index.html` to catch when someone navigates to `https://emmasax4.info` directly, and a page to catch when somebody navigates to.... anything else (`https://emmasax4.info/anything/else/goes/here`). In that case, we can just make a `404.html` file. If the user navigates to anything else besides the plain root, then GitHub Pages will show the `404.html` page. And if the `404.html` functionality redirects to the new domain, _while passing the end of the path (`/anything/else/goes/here`)_, then the `404.html` page acts as a catch-all. So, I created a symlinked file off of the `index.html` page:

@@ -104,7 +104,7 @@ return monthNames[monthIndex] + ' ' + day + ', ' + year; // January 17, 2020
 All together, this now looks like this:
 
 ```html
-<script type="text/javascript">
+{% raw %}<script type="text/javascript">
   function showDatesInLocalTime() {
     var dates = document.getElementsByClassName('date-meta');
     var monthNames = ['January', 'February', 'March', 'April', 'May', 'June',
@@ -124,7 +124,7 @@ All together, this now looks like this:
     };
   };
   showDatesInLocalTime();
-</script>
+</script>{% endraw %}
 ```
 
 I'm hiding a lot of the effort this took me... don't get me wrong, it took me what felt like _hours_ to develop this method, and I'm still finding bugs in it 🦟.
