@@ -1,5 +1,5 @@
 GIT
-  remote: https://github.com/emmasax4/jekyll-feed.git
+  remote: https://github.com/emmasax4/jekyll-feed
   revision: a842279d2b696a5d52a60f6caff3618398faee4d
   branch: main
   specs:
@@ -7,15 +7,15 @@ GIT
       jekyll (>= 3.7, < 5.0)
 
 GIT
-  remote: https://github.com/emmasax4/jekyll-seo-tag.git
-  revision: 3e664350d074a925146ef3996469479783a974c5
+  remote: https://github.com/emmasax4/jekyll-seo-tag
+  revision: a63c6609223db15c9cfc04be27fa13e10b6b0778
   branch: main
   specs:
     jekyll-seo-tag (2.7.1)
       jekyll (>= 3.8, < 5.0)
 
 GIT
-  remote: https://github.com/emmasax4/jekyll-sitemap.git
+  remote: https://github.com/emmasax4/jekyll-sitemap
   revision: 20b23fbae6f5a614f94e14d7f32616ec6ee4cb63
   branch: main
   specs:
@@ -23,7 +23,7 @@ GIT
       jekyll (>= 3.9, < 5.0)
 
 GIT
-  remote: https://github.com/jekyll/jekyll-commonmark.git
+  remote: https://github.com/jekyll/jekyll-commonmark
   revision: cdc2700972cff8865f58145c738f186d59e75dd4
   ref: cdc2700972cff8865f58145c738f186d59e75dd4
   specs:
@@ -33,7 +33,7 @@ GIT
 GEM
   remote: https://rubygems.org/
   specs:
-    activesupport (6.1.2)
+    activesupport (6.1.2.1)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (>= 1.6, < 2)
       minitest (>= 5.1)
