@@ -46,13 +46,12 @@ jobs:
     # Only run this step for events that are push commits to the main branch
     - name: Deploy Site
       if: github.EVENT_NAME == 'push' && github.REF == 'refs/heads/main'
-      uses: emmasax4/github-pages-deploy-action@main
+      uses: JamesIves/github-pages-deploy-action@releases/v4
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
         branch: gh-pages
         folder: _site
         clean: true
         silent: true
-        commit_message: Deploy to ${{ github.REPOSITORY }}
-        git_config_email: 41898282+github-actions[bot]@users.noreply.github.com
-        git_config_name: github-actions[bot]
+        commit-message: Deploy to ${{ github.REPOSITORY }}
+        git-config-name: github-actions[bot]
+        git-config-email: 41898282+github-actions[bot]@users.noreply.github.com

@@ -33,7 +33,7 @@ GIT
 GEM
   remote: https://rubygems.org/
   specs:
-    activesupport (6.1.0)
+    activesupport (6.1.2)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (>= 1.6, < 2)
       minitest (>= 5.1)
@@ -41,12 +41,12 @@ GEM
       zeitwerk (~> 2.3)
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
-    ast (2.4.1)
-    chef-utils (16.9.16)
+    ast (2.4.2)
+    chef-utils (16.10.8)
     colorator (1.1.0)
-    commonmarker (0.21.0)
+    commonmarker (0.21.1)
       ruby-enum (~> 0.5)
-    concurrent-ruby (1.1.7)
+    concurrent-ruby (1.1.8)
     em-websocket (0.5.2)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0.6.0)
@@ -69,7 +69,7 @@ GEM
     htmlbeautifier (1.3.1)
     htmlcompressor (0.4.0)
     http_parser.rb (0.6.0)
-    i18n (1.8.7)
+    i18n (1.8.8)
       concurrent-ruby (~> 1.0)
     jekyll (4.2.0)
       addressable (~> 2.4)
@@ -117,7 +117,7 @@ GEM
     kramdown-parser-gfm (1.1.0)
       kramdown (~> 2.0)
     liquid (4.0.3)
-    listen (3.4.0)
+    listen (3.4.1)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
     mdl (0.11.0)
@@ -156,18 +156,18 @@ GEM
     regexp_parser (2.0.3)
     rexml (3.2.4)
     rouge (3.26.0)
-    rubocop (1.7.0)
+    rubocop (1.9.1)
       parallel (~> 1.10)
-      parser (>= 2.7.1.5)
+      parser (>= 3.0.0.0)
       rainbow (>= 2.2.2, < 4.0)
       regexp_parser (>= 1.8, < 3.0)
       rexml
       rubocop-ast (>= 1.2.0, < 2.0)
       ruby-progressbar (~> 1.7)
-      unicode-display_width (>= 1.4.0, < 2.0)
-    rubocop-ast (1.4.0)
+      unicode-display_width (>= 1.4.0, < 3.0)
+    rubocop-ast (1.4.1)
       parser (>= 2.7.1.5)
-    ruby-enum (0.8.0)
+    ruby-enum (0.9.0)
       i18n
     ruby-progressbar (1.11.0)
     safe_yaml (1.0.5)
@@ -210,4 +210,4 @@ DEPENDENCIES
   webrick
 
 BUNDLED WITH
-   2.2.4
+   2.2.9
