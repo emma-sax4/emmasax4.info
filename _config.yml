@@ -16,6 +16,11 @@ github_repo: emmasax4.com
 timezone: UTC
 jekyll-mentions: https://github.com
 
+# This is a custom property for my fork of jekyll-seo-tag. I set it to prioritize the title
+# of my site over the title of each page. If this is not set, the default is to prioritize
+# the title of the page first.
+seo_title_prioritization: site
+
 markdown: CommonMark
 commonmark:
   options:

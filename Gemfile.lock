@@ -6,13 +6,6 @@ GIT
       jekyll (>= 3.7, < 5.0)
 
 GIT
-  remote: https://github.com/emmasax4/jekyll-seo-tag
-  revision: a63c6609223db15c9cfc04be27fa13e10b6b0778
-  specs:
-    jekyll-seo-tag (2.7.1)
-      jekyll (>= 3.8, < 5.0)
-
-GIT
   remote: https://github.com/emmasax4/jekyll-sitemap
   revision: 20b23fbae6f5a614f94e14d7f32616ec6ee4cb63
   specs:
@@ -25,6 +18,12 @@ GIT
   specs:
     jekyll-commonmark (1.3.1)
       commonmarker (~> 0.14)
+
+PATH
+  remote: /Users/emmasax/projects/jekyll-seo-tag
+  specs:
+    jekyll-seo-tag (2.7.1)
+      jekyll (>= 3.8, < 5.0)
 
 GEM
   remote: https://rubygems.org/
