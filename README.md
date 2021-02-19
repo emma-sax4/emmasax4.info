@@ -18,6 +18,8 @@
   </a>
 </p>
 
+<h3 align="center">This website is also available through https://emmasax.com.</h3>
+
 For more information on deployments, tests, running Jekyll locally, contributing to this project, and more, please see the  [Contributing docs](https://github.com/emmasax4/emmasax4.com/blob/main/.github/contributing.md).
 
 To submit a feature request or a bug ticket, please submit an official [GitHub Issue](https://github.com/emmasax4/emmasax4.com/issues/new).
