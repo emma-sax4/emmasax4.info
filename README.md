@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="100px;" style="border-bottom: -100px;" src="https://raw.githubusercontent.com/emmasax4/emmasax4.com/main/favicon.ico" alt="Emma's Favicon">
+  <img width="100px;" style="border-bottom: -100px;" src="https://raw.githubusercontent.com/emmasax4/emmasax4.com/main/assets/images/favicon/original.png" alt="Emma's Favicon">
 </p>
 
 <h1 align="center">
