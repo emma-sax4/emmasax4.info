@@ -22,7 +22,7 @@ The tool that I use to set up my DNS has an easy way to set up redirects. They'r
 
 What I found was [this solution](https://opensource.com/article/19/7/permanently-redirect-github-pages) from Oleksii Tsvietnov. The idea is to make a new GitHub repository that will publish to GitHub Pages with the old domain. And then, create an `index.html` file which will redirect to the new domain. So, when a user navigates to the old domain, they'll hit the new GitHub Pages with your new `index.html`, and then it'll redirect automatically to the new domain (which is hosted on the original GitHub Pages repository) 🤯.
 
-I created [this repository]({{ site.author_profiles.github }}/emmasax4-redirects) to put my new redirects in. I started by taking a modified version of the HTML code in that blog post, which looked something like this:
+I created [this repository]({{ site.author_profiles.github }}/website-redirects) to put my new redirects in. I started by taking a modified version of the HTML code in that blog post, which looked something like this:
 
 ```html
 {% raw %}<!DOCTYPE html>
@@ -86,11 +86,11 @@ Bam! Now, no matter what path a user passes in after the `/`, they'll be forward
 ln -s index.html 404.html
 ```
 
-This way, if I change one of the HTML files, it'll automatically change the other one. My final HTML files look like [this]({{ site.author_profiles.github }}/emmasax4-redirects/blob/13d56749a2675a667bce280c3c701e98453fd784/index.html).
+This way, if I change one of the HTML files, it'll automatically change the other one. My final HTML files look like [this]({{ site.author_profiles.github }}/website-redirects/blob/13d56749a2675a667bce280c3c701e98453fd784/index.html).
 
 The fifth step for me to do in the "soonish" future was to update my SEO trackers, indexers, and crawlers. I previously used Google Search Console, Bing, and Yandex to do my SEO tracking. In each of those, I had the option to add a new website or domain (`https://emmasax4.com`). And on Google, I also used the feature to do a "Change of Address." So for Google, I added the new URL prefix site _and_ completed the Change of Address. Google describes the use of that tool [here](https://support.google.com/webmasters/answer/9370220?hl=en).
 
-The next steps are to wait a few months. This is easy! Google recommends waiting a minimum of six months. Since I still own my old domain for a while, I'm probably going to keep my redirects alive as long as possible, which in my case will be over a year. I'll continue to monitor traffic, clicks, and impressions on tools like Cloudflare, Google Search Console, Yandex, and Bing. With any luck, the amount of traffic going towards the old domain will decrease within a few months, and the traffic on the new domain will increase. But after my waiting period is done, then I can turn off my redirects (in my case, turn off GitHub Pages on the [redirecting repository]({{ site.author_profiles.github }}/emmasax4-redirects)), and release or retire my old domain. If I so desire, I could keep the old domain forever and just eternally let it redirect... it's my choice.
+The next steps are to wait a few months. This is easy! Google recommends waiting a minimum of six months. Since I still own my old domain for a while, I'm probably going to keep my redirects alive as long as possible, which in my case will be over a year. I'll continue to monitor traffic, clicks, and impressions on tools like Cloudflare, Google Search Console, Yandex, and Bing. With any luck, the amount of traffic going towards the old domain will decrease within a few months, and the traffic on the new domain will increase. But after my waiting period is done, then I can turn off my redirects (in my case, turn off GitHub Pages on the [redirecting repository]({{ site.author_profiles.github }}/website-redirects)), and release or retire my old domain. If I so desire, I could keep the old domain forever and just eternally let it redirect... it's my choice.
 
 ---
 
@@ -99,7 +99,7 @@ To summarize, the basic steps I used to change the domain on my static site with
 1. Rename the repository ([GitHub: {{ site.github_repo }}/pull/305]({{ site.author_profiles.github }}/{{ site.github_repo }}/pull/305))
 2. Update where the project name is hard-coded ([GitHub: {{ site.github_repo }}/pull/306]({{ site.author_profiles.github }}/{{ site.github_repo }}/pull/306))
 3. Change domain through GitHub Pages settings (or by merging the changes to the `CNAME` file) and set up SSL certificates for the new domain if needed
-4. Create redirects from old domain to new domain ([GitHub: emmasax4-redirects]({{ site.author_profiles.github }}/emmasax4-redirects))
+4. Create redirects from old domain to new domain ([GitHub: website-redirects]({{ site.author_profiles.github }}/website-redirects))
 5. Set up SEO trackers to monitor new domain
 6. Wait a several months and monitor traffic to old domain as you go
 7. (OPTIONAL) Turn off redirects
