@@ -140,7 +140,7 @@ To use `action-slacker`/`slack-notifier-action` the way I wanted to, I needed to
 ```yml
 {% raw %}- name: Notify Slack on Success
   if: success()
-  uses: emmasax4/slack-notifier-action@main
+  uses: emmahsax/slack-notifier-action@main
   env:
     # I got this from my Slack account and added it as a secret to GitHub
     SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
@@ -160,7 +160,7 @@ To use `action-slacker`/`slack-notifier-action` the way I wanted to, I needed to
 
 - name: Notify Slack on Failure
   if: failure()
-  uses: emmasax4/slack-notifier-action@main
+  uses: emmahsax/slack-notifier-action@main
   env:
     SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
   with:
@@ -201,7 +201,7 @@ With GitHub Actions' marketplace, it made it simple to find the perfect action t
 
 ```yml
 {% raw %}- name: GitHub Pages Deploy
-  uses: emmasax4/github-pages-deploy-action@main
+  uses: emmahsax/github-pages-deploy-action@main
   env:
     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   with:
