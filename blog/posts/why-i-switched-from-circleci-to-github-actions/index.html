@@ -49,7 +49,7 @@
     <meta name="msvalidate.01" content="89B2B19FF966341B78EF64EDADE6DF81" />
     <meta name="yandex-verification" content="8d24108cb36eee89" />
     <script type="application/ld+json">
-      {"headline":"Why I Switched from CircleCI to GitHub Actions","url":"https://emmasax4.com/blog/posts/why-i-switched-from-circleci-to-github-actions/","mainEntityOfPage":{"@type":"WebPage","@id":"https://emmasax4.com/blog/posts/why-i-switched-from-circleci-to-github-actions/"},"dateModified":"2020-10-02T05:05:09+00:00","datePublished":"2020-05-28T05:00:00+00:00","author":{"@type":"Person","name":"Emma Sax"},"description":"Emma Sax’s personal website and blog. Includes information about my social media profiles, resumé, and hobbies.","@type":"BlogPosting","@context":"https://schema.org"}
+      {"headline":"Why I Switched from CircleCI to GitHub Actions","url":"https://emmasax4.com/blog/posts/why-i-switched-from-circleci-to-github-actions/","mainEntityOfPage":{"@type":"WebPage","@id":"https://emmasax4.com/blog/posts/why-i-switched-from-circleci-to-github-actions/"},"dateModified":"2021-02-21T04:24:03+00:00","datePublished":"2020-05-28T05:00:00+00:00","author":{"@type":"Person","name":"Emma Sax"},"description":"Emma Sax’s personal website and blog. Includes information about my social media profiles, resumé, and hobbies.","@type":"BlogPosting","@context":"https://schema.org"}
     </script>
     <!-- End Jekyll SEO tag -->
   </head>
@@ -155,7 +155,7 @@
               <ol>
                 <li>Build my Jekyll website quickly, run HTML Proofer on it, and have room to grow my test suite if I desire to do so</li>
                 <li>Notify a Slack channel when the build was done</li>
-                <li>“Deploy” my website by making a commit back to my <a href="https://github.com/emmasax4/emmasax4.com/tree/gh-pages"><code>gh-pages</code> branch in GitHub</a> (which GitHub Pages will then deploy for me)</li>
+                <li>“Deploy” my website by making a commit back to my <a href="https://github.com/emmahsax/emmasax4.com/tree/gh-pages"><code>gh-pages</code> branch in GitHub</a> (which GitHub Pages will then deploy for me)</li>
                 <li>Run a daily cron so that I can automate the build to run whenever I want (ideal for when I’d like to publish a blog post at a specific time or to check that my site still builds and loads properly every now and then, since my site doesn’t get consistent updates all the time)</li>
               </ol>
             </blockquote>
@@ -233,7 +233,7 @@
               <div class="highlight">
                 <pre class="highlight"><code data-lang="yml"><span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Notify Slack on Success</span>
   <span class="na">if</span><span class="pi">:</span> <span class="s">success()</span>
-  <span class="na">uses</span><span class="pi">:</span> <span class="s">emmasax4/slack-notifier-action@main</span>
+  <span class="na">uses</span><span class="pi">:</span> <span class="s">emmahsax/slack-notifier-action@main</span>
   <span class="na">env</span><span class="pi">:</span>
     <span class="c1"># I got this from my Slack account and added it as a secret to GitHub</span>
     <span class="na">SLACK_WEBHOOK</span><span class="pi">:</span> <span class="s">${{ secrets.SLACK_WEBHOOK }}</span>
@@ -253,7 +253,7 @@
 
 <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Notify Slack on Failure</span>
   <span class="na">if</span><span class="pi">:</span> <span class="s">failure()</span>
-  <span class="na">uses</span><span class="pi">:</span> <span class="s">emmasax4/slack-notifier-action@main</span>
+  <span class="na">uses</span><span class="pi">:</span> <span class="s">emmahsax/slack-notifier-action@main</span>
   <span class="na">env</span><span class="pi">:</span>
     <span class="na">SLACK_WEBHOOK</span><span class="pi">:</span> <span class="s">${{ secrets.SLACK_WEBHOOK }}</span>
   <span class="na">with</span><span class="pi">:</span>
@@ -293,7 +293,7 @@
             <div class="language-yml highlighter-rouge">
               <div class="highlight">
                 <pre class="highlight"><code data-lang="yml"><span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">GitHub Pages Deploy</span>
-  <span class="na">uses</span><span class="pi">:</span> <span class="s">emmasax4/github-pages-deploy-action@main</span>
+  <span class="na">uses</span><span class="pi">:</span> <span class="s">emmahsax/github-pages-deploy-action@main</span>
   <span class="na">env</span><span class="pi">:</span>
     <span class="na">GITHUB_TOKEN</span><span class="pi">:</span> <span class="s">${{ secrets.GITHUB_TOKEN }}</span>
   <span class="na">with</span><span class="pi">:</span>
@@ -390,7 +390,7 @@
     &copy; <script src="/assets/js/get_full_year.js"></script>
     Emma Sax. All rights reserved.
     <br>
-    View on <a href="https://github.com/emmasax4/emmasax4.com">GitHub</a>.
+    View on <a href="https://github.com/emmahsax/emmasax4.com">GitHub</a>.
   </footer>
   <!-- Javascript scripts -->
   <script src="/assets/js/show_dates.js"></script>
