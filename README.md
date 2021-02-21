@@ -8,13 +8,13 @@
 
 <p align="center">
   <a href="https://github.com/emmahsax/emmahsax.github.io/actions">
-    <img src="https://img.shields.io/github/workflow/status/emmahsax/emmasax4.com/Default/main?label=github%20actions%20workflow">
+    <img src="https://img.shields.io/github/workflow/status/emmahsax/emmahsax.github.io/Main?label=github%20actions%20workflow">
   </a>
   <a href="https://github.com/emmahsax/emmahsax.github.io/deployments">
-    <img src="https://img.shields.io/github/deployments/emmahsax/emmasax4.com/github-pages?label=github%20pages%20deployment">
+    <img src="https://img.shields.io/github/deployments/emmahsax/emmahsax.github.io/github-pages?label=github%20pages%20deployment">
   </a>
-  <a href="https://codeclimate.com/github/emmahsax/emmasax4.com/maintainability">
-    <img src="https://img.shields.io/codeclimate/maintainability/emmahsax/emmasax4.com?label=code%20climate%20maintainability">
+  <a href="https://codeclimate.com/github/emmahsax/emmahsax.github.io/maintainability">
+    <img src="https://img.shields.io/codeclimate/maintainability/emmahsax/emmahsax.github.io?label=code%20climate%20maintainability">
   </a>
 </p>
 
