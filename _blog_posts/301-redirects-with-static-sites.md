@@ -104,3 +104,7 @@ To summarize, the basic steps I used to change the domain on my static site with
 6. Wait a several months and monitor traffic to old domain as you go
 7. (OPTIONAL) Turn off redirects
 8. (OPTIONAL) Release (or retire) old domain
+
+---
+
+EDIT: Since writing this blog post, I've switched the primary domain for my website from `emmasax4.com` to `{{ site.domain }}`.
