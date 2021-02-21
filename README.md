@@ -3,7 +3,7 @@
 </p>
 
 <h1 align="center">
-  My Personal Website and Blog (emmahsax.github.io)
+  My Personal Website and Blog
 </h1>
 
 <p align="center">
