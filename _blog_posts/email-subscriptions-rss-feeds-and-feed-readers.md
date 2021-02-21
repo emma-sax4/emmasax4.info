@@ -77,7 +77,7 @@ Please let me know if you currently use any great feed readers or if you come ac
 
 Update:
 
-I believe I've finally found a feed reader that I like! It's called [Feedbro](https://twitter.com/feedbro), and I use it as a Chrome extension. I've added only two feeds: my site's normal [feed](/feed.xml), and a local development version of my site's feed. To learn more about Feedbro, check it out [here](https://nodetics.com/feedbro/). For more information about how I specify a `feed.xml` for two environments, check out [my GitHub gist](https://gist.github.com/emmasax4/7c3b70a8f983fea9610209e9d7618cf4).
+I believe I've finally found a feed reader that I like! It's called [Feedbro](https://twitter.com/feedbro), and I use it as a Chrome extension. I've added only two feeds: my site's normal [feed](/feed.xml), and a local development version of my site's feed. To learn more about Feedbro, check it out [here](https://nodetics.com/feedbro/). For more information about how I specify a `feed.xml` for two environments, check out [my GitHub gist](https://gist.github.com/emmahsax/7c3b70a8f983fea9610209e9d7618cf4).
 
 ## References
 
