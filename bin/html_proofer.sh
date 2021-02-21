@@ -3,7 +3,7 @@
 bundle exec htmlproofer \
   --assume-extension \
   --allow-hash-href \
-  --internal-domains /emmasax4.com/ \
+  --internal-domains /emmasax.com/ \
   --url_ignore /linkedin/,/getitwriteonline/,/sopalodges/,/maasaimara/,/codepen.io/,/twitter.com/ \
   _site
 
