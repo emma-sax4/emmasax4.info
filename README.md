@@ -18,7 +18,7 @@
   </a>
 </p>
 
-<h3 align="center">This website is also available through https://emmasax.com.</h3>
+<h3 align="center">This website is available at https://emmasax.com.</h3>
 
 For more information on deployments, tests, running Jekyll locally, contributing to this project, and more, please see the  [Contributing docs](https://github.com/emmahsax/emmahsax.github.io/blob/main/.github/contributing.md).
 
