@@ -38,3 +38,9 @@ nav.navbar {
   margin-top: 1px;
   margin-bottom: 1px;
 }
+
+@media (max-width: 768px) {
+  .navbar-collapse {
+    padding-bottom: 0.6rem;
+  }
+}
