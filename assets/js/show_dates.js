@@ -14,18 +14,18 @@ And written like this:
   December 28, 2019
 */
 
-var dates = document.getElementsByClassName("date-meta");
-var monthNames = ["January", "February", "March", "April", "May", "June",
-                  "July","August", "September", "October","November", "December"
+var dates = document.getElementsByClassName('date-meta');
+var monthNames = ['January', 'February', 'March', 'April', 'May', 'June',
+                  'July','August', 'September', 'October','November', 'December'
 ];
 
 for (counter = 0; counter < dates.length; counter++) {
   var htmlDate = dates[counter];
   var dateArrayByDigit = htmlDate.innerHTML.trim().split(/[^0-9]/);
-  var dateArrayBySpace = htmlDate.innerHTML.split(" ");
+  var dateArrayBySpace = htmlDate.innerHTML.split(' ');
   var timezoneAsDigit = dateArrayBySpace[dateArrayBySpace.length - 1];
 
-  if (timezoneAsDigit == "+0000") {
+  if (timezoneAsDigit == '+0000') {
     // Get the local date when it's written as in UTC timezone
     var localDate = new Date(
       Date.UTC(
@@ -59,5 +59,5 @@ for (counter = 0; counter < dates.length; counter++) {
   var day = localDate.getDate();
   var year = localDate.getFullYear();
   var monthIndex = localDate.getMonth();
-  htmlDate.innerHTML = monthNames[monthIndex] + " " + day + ", " + year;
+  htmlDate.innerHTML = monthNames[monthIndex] + ' ' + day + ', ' + year;
 };

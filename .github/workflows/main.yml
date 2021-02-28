@@ -6,7 +6,7 @@ on:
     branches: [ main ]
 
 jobs:
-  default:
+  test:
     runs-on: ubuntu-latest
     if: github.EVENT_NAME == 'pull_request'
     steps:
