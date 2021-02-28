@@ -13,9 +13,6 @@
   <a href="https://github.com/emmahsax/emmahsax.github.io/deployments">
     <img src="https://img.shields.io/github/deployments/emmahsax/emmahsax.github.io/github-pages?label=github%20pages%20deployment">
   </a>
-  <a href="https://codeclimate.com/github/emmahsax/emmahsax.github.io/maintainability">
-    <img src="https://img.shields.io/codeclimate/maintainability/emmahsax/emmahsax.github.io?label=code%20climate%20maintainability">
-  </a>
 </p>
 
 <h3 align="center">This website is available at https://emmasax.com.</h3>
