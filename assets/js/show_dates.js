@@ -18,9 +18,8 @@ const dates = document.getElementsByClassName('date-meta')
 const monthNames = ['January', 'February', 'March', 'April', 'May', 'June',
   'July', 'August', 'September', 'October', 'November', 'December'
 ]
-let counter = null
 
-for (counter = 0; counter < dates.length; counter++) {
+for (let counter = 0; counter < dates.length; counter++) {
   const htmlDate = dates[counter]
   const dateArrayByDigit = htmlDate.innerHTML.trim().split(/[^0-9]/)
   const dateArrayBySpace = htmlDate.innerHTML.split(' ')
