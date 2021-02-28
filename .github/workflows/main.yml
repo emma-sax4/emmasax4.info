@@ -41,6 +41,10 @@ jobs:
     - name: Markdown Linter
       run: bin/markdown_linter.sh
 
+    - name: JS Standard Linter
+      run: npm install standard --global && standard assets/js/*.js
+      continue-on-error: true
+
   deploy:
     runs-on: ubuntu-latest
     if: github.EVENT_NAME == 'push' && github.REF == 'refs/heads/main'
