@@ -15,7 +15,8 @@ And written like this:
 */
 
 const dates = document.getElementsByClassName('date-meta')
-const monthNames = ['January', 'February', 'March', 'April', 'May', 'June',
+const monthNames = [
+  'January', 'February', 'March', 'April', 'May', 'June',
   'July', 'August', 'September', 'October', 'November', 'December'
 ]
 
