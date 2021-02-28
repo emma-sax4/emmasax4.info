@@ -26,6 +26,12 @@ jobs:
     - name: Switch to Current Branch
       run: git checkout ${{ env.BRANCH }}
 
+    - name: Install Node
+      uses: actions/setup-node@v1
+      with:
+        node-version: '15.10.0'
+        registry-url: 'https://registry.npmjs.org'
+
     - name: Install Ruby and Bundle Install
       uses: ruby/setup-ruby@v1
       with:
@@ -40,12 +46,7 @@ jobs:
 
     - name: Markdown Linter
       run: bin/markdown_linter.sh
-
-    - name: Install Node
-      uses: actions/setup-node@v1
-      with:
-        node-version: '15.4.0'
-        registry-url: 'https://registry.npmjs.org'
+      continue-on-error: true
 
     - name: Javascript Linter
       run: npm install standard --save-dev && bin/javascript_linter.sh
