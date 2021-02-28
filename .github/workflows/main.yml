@@ -41,8 +41,14 @@ jobs:
     - name: Markdown Linter
       run: bin/markdown_linter.sh
 
-    - name: JS Standard Linter
-      run: npm install standard --global && standard assets/js/*.js
+    - name: Install Node
+      uses: actions/setup-node@v1
+      with:
+        node-version: '15.4.0'
+        registry-url: 'https://registry.npmjs.org'
+
+    - name: Javascript Linter
+      run: npm install standard --save-dev && bin/javascript_linter.sh
       continue-on-error: true
 
   deploy:
