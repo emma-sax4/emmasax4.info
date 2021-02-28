@@ -5,8 +5,8 @@
 * [Contribution Process](#contribution-process)
 * [Running Locally](#running-locally)
 * [HTML Proofer](#html-proofer)
-* [Rubocop](#rubocop)
 * [Markdown Linter](#markdown-linter)
+* [Javascript Linter](#javascript-linter)
 * [Continuous Integration](#continuous-integration)
   * [Tests](#tests)
   * [Deployments](#deployments)
@@ -80,17 +80,7 @@ bin/html_proofer.sh
 
 If you're in the process of creating a new blog post, then most likely the external link to the new blog post will fail. This makes sense—the blog post isn't live online yet, and that's what the link is checking for.
 
-GitHub Actions also runs a version of the HTML Proofer which skips over all internal domains. GitHub Actions runs this step after building, just verifying that links are accurate. If a build breaks because of this, the failures can probably be solved by just rerunning the workflow.
-
-## Rubocop
-
-This project uses [Rubocop](https://github.com/rubocop-hq/rubocop) to check its Ruby files. To run Rubocop locally, run:
-
-```bash
-bundle exec rubocop
-```
-
-GitHub Actions also runs Rubocop as well, so if any changes are made to the Ruby files, GitHub Actions will evaluate them.
+GitHub Actions also runs a version of the HTML Proofer which skips over all internal domains. GitHub Actions runs this step after building, just verifying that links are accurate. We set it to `continue-on-error` though, so developers should make it a habit to check out its results every so often.
 
 ## Markdown Linter
 
@@ -101,6 +91,25 @@ bin/markdown_linter.sh
 ```
 
 Note that the linter specifically passes in directories and files to evaluate, so if you create any new Markdown files, you'll have to add them to `bin/markdown_linter.sh`.
+
+GitHub Actions also runs the same `bin/markdown_linter.sh` script on each test run. We set it to `continue-on-error` though, so developers should make it a habit to check out its results every so often.
+
+## Javascript Linter
+
+This project uses the Javascript [Standard Linter](https://standardjs.com/). To install this linter, install Node and NPM:
+
+```bash
+brew install node
+npm install
+```
+
+And then, you can run the script:
+
+```bash
+bin/javascript_linter.sh
+```
+
+GitHub Actions also runs the same `bin/javascript_linter.sh` script on each test run. We set it to `continue-on-error` though, so developers should make it a habit to check out its results every so often.
 
 ## Continuous Integration
 
@@ -320,7 +329,7 @@ This directory has four directories, `css/`, `js/`, `images/`, and `resources/`.
 
 The `css/` directory contains all of the CSS files in this site. They're all called together in `style.scss`. The CSS in the project is loaded inside the `_includes/head.html`. This site also uses [Bootstrap](https://getbootstrap.com/docs/4.4/getting-started/introduction/) for a lot of its CSS, including the navigation bar, headers, responsive page, etc.
 
-The `js/` directory is where we store all of our Javascript files for the site. Some of them are called at the bottom of every page. Others are called in specific places in the code. All of these are parsed by Code Climate. The other Javascript files are directly copy-pasted by 3rd party sources online. They're hard-coded into the site to avoid potential dependency breaks later.
+The `js/` directory is where we store all of our Javascript files for the site. Some of them are called at the bottom of every page. Others are called in specific places in the code. The other Javascript files are directly copy-pasted by 3rd party sources online. They're hard-coded into the site to avoid potential dependency breaks later.
 
 The `images/` directory gives me a place to store all of the images this site uses. To call a specific image, you can ask for it in HTML:
 

@@ -14,50 +14,52 @@ And written like this:
   December 28, 2019
 */
 
-var dates = document.getElementsByClassName("date-meta");
-var monthNames = ["January", "February", "March", "April", "May", "June",
-                  "July","August", "September", "October","November", "December"
-];
+const dates = document.getElementsByClassName('date-meta')
+const monthNames = [
+  'January', 'February', 'March', 'April', 'May', 'June',
+  'July', 'August', 'September', 'October', 'November', 'December'
+]
 
-for (counter = 0; counter < dates.length; counter++) {
-  var htmlDate = dates[counter];
-  var dateArrayByDigit = htmlDate.innerHTML.trim().split(/[^0-9]/);
-  var dateArrayBySpace = htmlDate.innerHTML.split(" ");
-  var timezoneAsDigit = dateArrayBySpace[dateArrayBySpace.length - 1];
+for (let counter = 0; counter < dates.length; counter++) {
+  const htmlDate = dates[counter]
+  const dateArrayByDigit = htmlDate.innerHTML.trim().split(/[^0-9]/)
+  const dateArrayBySpace = htmlDate.innerHTML.split(' ')
+  const timezoneAsDigit = dateArrayBySpace[dateArrayBySpace.length - 1]
+  let localDate = null
 
-  if (timezoneAsDigit == "+0000") {
+  if (timezoneAsDigit === '+0000') {
     // Get the local date when it's written as in UTC timezone
-    var localDate = new Date(
+    localDate = new Date(
       Date.UTC(
-        dateArrayByDigit[0], dateArrayByDigit[1]-1, dateArrayByDigit[2],
+        dateArrayByDigit[0], dateArrayByDigit[1] - 1, dateArrayByDigit[2],
         dateArrayByDigit[3], dateArrayByDigit[4], dateArrayByDigit[5]
       )
-    );
+    )
   } else {
     // Get the written date in the local timezone (which may not be written timezone)
-    var writtenDate = new Date(
-      dateArrayByDigit[0], dateArrayByDigit[1]-1, dateArrayByDigit[2],
+    const writtenDate = new Date(
+      dateArrayByDigit[0], dateArrayByDigit[1] - 1, dateArrayByDigit[2],
       dateArrayByDigit[3], dateArrayByDigit[4], dateArrayByDigit[5]
-    );
+    )
 
     // Convert written date in local timezone to UTC timezone
-    var utcDateAsNumbers = writtenDate.getTime() - (timezoneAsDigit * 60 * 60 * 10);
-    var utcDate = new Date(utcDateAsNumbers);
-    var utcYear = utcDate.getFullYear();
-    var utcMonth = utcDate.getMonth();
-    var utcDay = utcDate.getDate();
-    var utcHour = utcDate.getHours();
-    var utcMinute = utcDate.getMinutes();
-    var utcMilliseconds = utcDate.getMilliseconds();
+    const utcDateAsNumbers = writtenDate.getTime() - (timezoneAsDigit * 60 * 60 * 10)
+    const utcDate = new Date(utcDateAsNumbers)
+    const utcYear = utcDate.getFullYear()
+    const utcMonth = utcDate.getMonth()
+    const utcDay = utcDate.getDate()
+    const utcHour = utcDate.getHours()
+    const utcMinute = utcDate.getMinutes()
+    const utcMilliseconds = utcDate.getMilliseconds()
 
     // Get the local date when it's written as in UTC timezone
-    var localDate = new Date(
+    localDate = new Date(
       Date.UTC(utcYear, utcMonth, utcDay, utcHour, utcMinute, utcMilliseconds)
-    );
+    )
   };
 
-  var day = localDate.getDate();
-  var year = localDate.getFullYear();
-  var monthIndex = localDate.getMonth();
-  htmlDate.innerHTML = monthNames[monthIndex] + " " + day + ", " + year;
+  const day = localDate.getDate()
+  const year = localDate.getFullYear()
+  const monthIndex = localDate.getMonth()
+  htmlDate.innerHTML = monthNames[monthIndex] + ' ' + day + ', ' + year
 };
