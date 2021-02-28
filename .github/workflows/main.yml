@@ -8,6 +8,7 @@ on:
 jobs:
   default:
     runs-on: ubuntu-latest
+    if: github.EVENT_NAME == 'pull_request'
     steps:
     - name: Check Out Code
       uses: actions/checkout@v2
@@ -37,15 +38,38 @@ jobs:
       run: bin/html_proofer.sh
       continue-on-error: true
 
-    - name: Rubocop
-      run: bundle exec rubocop
-
     - name: Markdown Linter
       run: bin/markdown_linter.sh
 
-    # Only run this step for events that are push commits to the main branch
+  deploy:
+    runs-on: ubuntu-latest
+    if: github.EVENT_NAME == 'push' && github.REF == 'refs/heads/main'
+    steps:
+    - name: Check Out Code
+      uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+
+    - name: Set Environment Variables
+      run: |
+        if [[ ${{ github.REF }} == 'refs/heads'* ]]; then # this is a branch, not a pull request
+          echo "BRANCH=$(echo ${{ github.REF }} | sed -E 's|refs/[a-zA-Z]+/||')" >> $GITHUB_ENV
+        else
+          echo "BRANCH=$(echo ${{ github.HEAD_REF }} | sed -E 's|refs/[a-zA-Z]+/||')" >> $GITHUB_ENV
+        fi
+
+    - name: Switch to Current Branch
+      run: git checkout ${{ env.BRANCH }}
+
+    - name: Install Ruby and Bundle Install
+      uses: ruby/setup-ruby@v1
+      with:
+        bundler-cache: true
+
+    - name: Jekyll Build
+      run: JEKYLL_ENV=production bundle exec jekyll build --destination _site
+
     - name: Deploy Site
-      if: github.EVENT_NAME == 'push' && github.REF == 'refs/heads/main'
       uses: JamesIves/github-pages-deploy-action@releases/v4
       with:
         branch: gh-pages
