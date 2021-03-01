@@ -23,4 +23,5 @@ gem 'webrick'
 group :test, :development do
   gem 'html-proofer'
   gem 'mdl'
+  gem 'rubocop'
 end
