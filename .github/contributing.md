@@ -6,6 +6,7 @@
 * [Running Locally](#running-locally)
 * [HTML Proofer](#html-proofer)
 * [Markdown Linter](#markdown-linter)
+* [Rubocop](#rubocop)
 * [Javascript Linter](#javascript-linter)
 * [Continuous Integration](#continuous-integration)
   * [Tests](#tests)
@@ -92,7 +93,17 @@ bin/markdown_linter.sh
 
 Note that the linter specifically passes in directories and files to evaluate, so if you create any new Markdown files, you'll have to add them to `bin/markdown_linter.sh`.
 
-GitHub Actions also runs the same `bin/markdown_linter.sh` script on each test run. We set it to `continue-on-error` though, so developers should make it a habit to check out its results every so often.
+GitHub Actions also runs the same `bin/markdown_linter.sh` script on each test run.
+
+## Rubocop
+
+This project uses [Rubocop](https://github.com/rubocop-hq/rubocop) to check its Ruby files. To run Rubocop locally, run:
+
+```bash
+bundle exec rubocop
+```
+
+GitHub Actions also runs Rubocop on each test run.
 
 ## Javascript Linter
 
