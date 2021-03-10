@@ -51,7 +51,7 @@ jobs:
       run: bundle exec rubocop
 
     - name: Javascript Linter
-      run: npm --quiet install standard --save-dev && bin/javascript_linter.sh
+      run: npm install standard --save-dev && bin/javascript_linter.sh
       continue-on-error: true
 
   deploy:
