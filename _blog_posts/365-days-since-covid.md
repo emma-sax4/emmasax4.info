@@ -132,11 +132,31 @@ The last addition to my home office was a little [circle lamp](https://www.amazo
 
 Anyhow, I consider myself lucky because I already had a home office setup. If you didn't, and you had to do all your shopping this summer... my apologies.
 
-### 8. Just because we're home all the time doesn't mean we suddenly decided to become a chef
+### 8. Just because we're home all the time doesn't mean we all suddenly decided to become a chef
 
-### 9. I love having my commute time back... and I don't know if I'll be able to give it up again
+When all of the restaurants started to close last year, I saw many people on social media pick up cooking. People started subscribing to more mealkit delivery services (see [here](https://www.emarketer.com/content/more-consumers-are-relying-on-meal-kits-amid-covid-19-pandemic)), and people have started baking more. In fact, I've heard of stores running out of simple ingredients like sugar, oil, and flour, simply because people want to start baking to fill their time.
+
+I'm not against baking or cooking. I don't particularly love being in the kitchen—actually, if you talk to people I know, they'll all say that I _hate_ anything to do with the kitchen. So what did I do when the pandemic started?
+
+I got more delivery and pick-up. I don't think I cook or bake any more or less than I ever did before. But what I do get more of is Panera Bread, Chipotle, Qdoba, and other fast-food places. I don't go out to restaurants with friends anymore, but I do get takeout. This just proves to me that a person that doesn't like something isn't going to suddenly pick it up as a hobby just because it's available and more convenient. There's got to be some level of interest in the activity for them to want to start doing it.
+
+### 9. I love having my commute time back... and it'll be hard to give it up again
+
+Before the pandemic, I used to drive 25 minutes each way to go to the office (sometimes more if there was traffic). I didn't even drive in every single day, but rather more like 2–3 days a week. Now, I don't do any driving to work at all. In fact, I barely do any _walking_; my "office" is right next to my bed. And it's rather blissful.
+
+I'm not going to do a deep dive into what I do with my newfound hour each day, but it's something along the lines of sleep, exercise, do yoga, work on side projects, and call friends. And somehow, I've found a way to use up _all_ of that extra hour. Very rarely do I get bored during the week. It's strange to say, but the only times I'm ever bored are during the weekend.
+
+At this point, I can't imagine trying to wake up even earlier than I do currently (I wake up at 7am and start work at 10am, and I manage to use all three hours before I start work), and trying to make time to drive into the office. I can't imagine leaving work at 4:45pm, and not getting home until 5:15pm ('cause traffic). Now, I can actually use all of that time to finish up stuff at work and start getting dinner ready. I've gotten so used to never commuting that the idea of having to do it again sounds like a horrible time crunch.
+
+I know many people miss their office. They miss water-cooler chats, running into people at the coffeemaker, eating lunch with teammates, etc. But I'm actually quite enjoying having that time back. If I'm being completely realistic though, I do see myself going back into the office again sometime. Probably not full-time. And it'll probably take me a while to even get back to a once-a-week pattern. But eventually, you'll most likely see me commuting again.
 
 ### 10. Nothing is a given, and even the best made plans can be turned upside down in just a day
+
+If this pandemic has shown me anything, it's that plans we make can change so suddenly. Nothing we do is a given. We're all just sitting here making plans, and hoping things work out how we expect them to. But sometimes they won't work out. Sometimes plans change. Sometimes we don't have any say in the matter... and when that happens, we're just riding along the rollercoaster with everybody else.
+
+Take weddings as an example. For decades, couples have been planning weddings, relatively trusting that their venue would be open on that special day they choose. But last year, everything changed. We saw couples who had been planning for months suddenly have to question whether to change everything. Now, when I think about potentially planning a wedding, I need to admit that there's a very real possibility that even the best made plans won't come to fruition. It's the same with high school proms, graduation parties, and baby showers. It's the same with big vacations and little vacations. Even events we plan such as visiting our families next Saturday may need to be changed at a moment's notice.
+
+And so, all we can do, is enjoy the moment we have right now. Of course we can plan. In fact, I'd argue that we _should_ plan. If we never plan, then we'll never accomplish anything. However, we also need to remember that sometimes, all we can do is live for today. If all our plans are falling apart because of something external that's not in our control... well, all we can do is trust that we'll figure it out.
 
 ## Resources and More Reading
 
@@ -153,3 +173,4 @@ Anyhow, I consider myself lucky because I already had a home office setup. If yo
 * https://ideas.ted.com/zoom-fatigue-is-real-heres-why-video-calls-are-so-draining/
 * https://www.psychiatrictimes.com/view/psychological-exploration-zoom-fatigue
 * https://www.nationalgeographic.com/science/article/coronavirus-zoom-fatigue-is-taxing-the-brain-here-is-why-that-happens
+* https://www.emarketer.com/content/more-consumers-are-relying-on-meal-kits-amid-covid-19-pandemic
