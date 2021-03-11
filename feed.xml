@@ -3,13 +3,24 @@
     <generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator>
     <link href="https://emmasax.com/feed.xml" rel="self" type="application/atom+xml" />
     <link href="https://emmasax.com/" rel="alternate" type="text/html" />
-    <updated>2021-02-21T17:03:39+00:00</updated>
+    <updated>2021-03-11T05:58:04+00:00</updated>
     <id>https://emmasax.com/feed.xml</id>
     <title type="html">Emma Sax</title>
     <subtitle>Emma Sax&apos;s personal website and blog. Includes information about my social media profiles, resumé, and hobbies.</subtitle>
     <author>
       <name>Emma Sax</name>
     </author>
+    <entry>
+      <title type="html">365 Days Since COVID</title>
+      <link href="https://emmasax.com/blog/posts/365-days-since-covid/" rel="alternate" type="text/html" title="365 Days Since COVID" />
+      <published>2021-03-11T06:00:00+00:00</published>
+      <updated>2021-03-11T05:58:04+00:00</updated>
+      <id>https://emmasax.com/blog/posts/365-days-since-covid</id>
+      <author>
+        <name>Emma Sax</name>
+      </author>
+      <category term="covid" />
+    </entry>
     <entry>
       <title type="html">Adding HTML forms to Static Sites</title>
       <link href="https://emmasax.com/blog/posts/adding-html-forms-to-static-sites/" rel="alternate" type="text/html" title="Adding HTML forms to Static Sites" />
@@ -49,17 +60,6 @@
       <published>2020-11-21T22:05:00+00:00</published>
       <updated>2020-11-21T22:04:04+00:00</updated>
       <id>https://emmasax.com/blog/posts/our-20s-matter/love</id>
-      <author>
-        <name>Emma Sax</name>
-      </author>
-      <category term="Our 20s Matter" />
-    </entry>
-    <entry>
-      <title type="html">Our 20s Matter — Part 1: Work</title>
-      <link href="https://emmasax.com/blog/posts/our-20s-matter/work/" rel="alternate" type="text/html" title="Our 20s Matter — Part 1: Work" />
-      <published>2020-11-15T06:00:00+00:00</published>
-      <updated>2020-11-15T05:56:04+00:00</updated>
-      <id>https://emmasax.com/blog/posts/our-20s-matter/work</id>
       <author>
         <name>Emma Sax</name>
       </author>
