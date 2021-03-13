@@ -117,7 +117,7 @@ npm install
 And then, you can run the script:
 
 ```bash
-bin/javascript_linter.sh
+npm install standard --save-dev && bin/javascript_linter.sh
 ```
 
 GitHub Actions also runs the same `bin/javascript_linter.sh` script on each test run. We set it to `continue-on-error` though, so developers should make it a habit to check out its results every so often.
