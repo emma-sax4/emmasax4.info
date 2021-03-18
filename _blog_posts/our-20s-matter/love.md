@@ -18,7 +18,7 @@ All right. Just in case you don't remember our initial bullet points from our [l
 
 At this point, we've done a deep dive into our second bullet point. So, now let's talk about our third bullet point: "falling in love and having a rollercoaster romance". The truth is that relationships and marriages are almost more confusing than careers. The world has tons of resources to help you when it comes to your career. There's classes, courses, books, inspirational talks, etc. But there's not as much when it comes to relationships. There may be lots of blog posts, but they're generalized, and not specific to each individual person and their circumstances. So how are young adults supposed to learn?
 
-This blog post will cover the following topics, based on [Meg Jay](https://megjay.com)'s [_The Defining Decade_](https://bookshop.org/books/the-defining-decade-why-your-twenties-matter-and-how-to-make-the-most-of-them-now/9780446561754):
+This blog post will cover the following topics, based on [Meg Jay](https://megjay.com)'s [_The Defining Decade_](https://megjay.com/the-defining-decade/):
 
 * [Let's Get Picky](#lets-get-picky)
 * [You Finally Get to Pick Your Family](#you-finally-get-to-pick-your-family)

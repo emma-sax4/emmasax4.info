@@ -3,7 +3,7 @@
 source 'https://rubygems.org'
 
 # Gems required for all environments
-gem 'jekyll'
+gem "jekyll"
 gem 'jekyll-commonmark', git: 'https://github.com/jekyll/jekyll-commonmark'
 gem 'jekyll-default-layout'
 gem 'jekyll-feed', git: 'https://github.com/emmahsax/jekyll-feed'

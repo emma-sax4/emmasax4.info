@@ -16,7 +16,7 @@ When people think of their 20s, what do they think of? I know what I used to thi
 
 You get the gist of it. Of course, this is all based on what I saw on TV shows and movies that featured young women in their 20s. For the moment, let's focus on the second bullet point: "getting a decent job in a bustling city, maybe around age 26–28". Although this is what those TV shows show their viewers, it's not exactly realistic, and oftentimes getting a "decent job in a bustling city" is more nuanced and complex than just starting in a secretary job in Season 1 and slowly moving up and becoming a magazine editor by Season 3.
 
-For real people, not characters, finding the "right" job in the "right" city is not always the easy, or even the "right" thing. To help summarize what [_The Defining Decade_](https://bookshop.org/books/the-defining-decade-why-your-twenties-matter-and-how-to-make-the-most-of-them-now/9780446561754) by [Meg Jay](https://megjay.com) has explained to me, this blog post will focus on the following areas:
+For real people, not characters, finding the "right" job in the "right" city is not always the easy, or even the "right" thing. To help summarize what [_The Defining Decade_](https://megjay.com/the-defining-decade/) by [Meg Jay](https://megjay.com) has explained to me, this blog post will focus on the following areas:
 
 * [Identity Capital](#identity-capital)
 * [Connections](#connections)

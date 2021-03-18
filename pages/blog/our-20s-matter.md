@@ -15,7 +15,7 @@ So, I thought I'd take the chance to process some of my initial thoughts in blog
 
 References for all blog posts:
 
-* [bookshop.org: _The Defining Decade_](https://megjay.com/the-defining-decade/)
+* [megjay.com: _The Defining Decade_](https://megjay.com/the-defining-decade/)
 * [Meg Jay](https://megjay.com)
 * [merriam-webster.com: privilege](https://www.merriam-webster.com/dictionary/privilege)
 * [wikipedia.org: Ben Franklin effect](https://en.wikipedia.org/wiki/Ben_Franklin_effect)
