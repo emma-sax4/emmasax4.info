@@ -1,6 +1,6 @@
 ---
 title: School Singles Singles Dorm Room with Bathroom
-date: 2021-03-17 19:15:00 -0500
+date: 2021-03-17 19:32:00 -0500
 ---
 
 Based on both of the previous dorm room types, this one is for a student who wishes to live alone. They have a little couch and coffee table, along with a full bathroom, and washer/dryer. They also have a full bedroom as well, but it's all within the same main room, so it's basically a little studio apartment without a kitchen. It's vents are realistic, and contains two doors. However, there are no windows, which isn't particularly realistic.
