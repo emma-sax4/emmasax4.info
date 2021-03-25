@@ -6,7 +6,7 @@ permalink: /blog/posts/365-days-since-covid/
 date: 2021-03-11 00:00:00 -0600
 ---
 
-The World Health Organization (WHO) officially declared COVID-19 a global pandemic on March 11, 2020. Therefore, this post marks exactly one year since that date. To mark this "covidaversay", I thought I'd write a little blog post discussing 10 things I've learned this past year, both about myself, human beings, and about American society.
+The World Health Organization (WHO) officially declared COVID-19 a global pandemic on March 11, 2020. Therefore, this post marks exactly one year since that date. To mark this "covidiversary", I thought I'd write a little blog post discussing 10 things I've learned this past year, both about myself, human beings, and about American society.
 
 ### 1. Every country, and person, defines "essential" differently
 
