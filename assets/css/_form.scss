@@ -14,3 +14,28 @@
   padding-top: 2rem;
   padding-bottom: 1rem;
 }
+
+::-webkit-input-placeholder {
+  color: #667175;
+  opacity:1
+}
+
+.form-control::-moz-placeholder {
+  color: #667175;
+  opacity:1
+}
+
+.form-control:-ms-input-placeholder {
+  color: #667175;
+  opacity:1
+}
+
+.form-control::-ms-input-placeholder {
+  color: #667175;
+  opacity:1
+}
+
+.form-control::placeholder {
+  color: #667175;
+  opacity: 1;
+}

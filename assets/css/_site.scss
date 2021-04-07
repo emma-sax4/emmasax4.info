@@ -9,7 +9,7 @@ body {
   font-family: "Open Sans", "system-ui";
   font-size: 18px;
   line-height: 1.5;
-  color: #606c71;
+  color: #4c565a;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -31,7 +31,7 @@ header, main, footer {
 }
 
 h1 {
-  border-bottom: solid .125rem #eff0f1;
+  border-bottom: solid .125rem #e3e4e6;
   padding-bottom: 1.5rem;
 }
 
@@ -96,36 +96,11 @@ hr {
   padding-top: 1.5rem;
 }
 
-::-webkit-input-placeholder {
-  color: #919090;
-  opacity:1
-}
-
-.form-control::-moz-placeholder {
-  color: #919090;
-  opacity:1
-}
-
-.form-control:-ms-input-placeholder {
-  color: #919090;
-  opacity:1
-}
-
-.form-control::-ms-input-placeholder {
-  color: #919090;
-  opacity:1
-}
-
-.form-control::placeholder {
-  color: #919090;
-  opacity: 1;
-}
-
 footer {
   margin-top: 1rem;
   padding-top: .5rem;
   padding-bottom: .5rem;
-  border-top: solid .125rem #eff0f1;
+  border-top: solid .125rem #e3e4e6;
   left: 0;
   bottom: 0;
   width: 100%;

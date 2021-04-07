@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="100px;" style="border-bottom: -100px;" src="https://raw.githubusercontent.com/emmahsax/emmahsax.github.io/main/assets/images/favicon/original.png" alt="Emma's Favicon">
+  <img width="100px;" style="border-bottom: -100px;" src="https://raw.githubusercontent.com/emmahsax/emmahsax.github.io/main/assets/images/logos/plain-blue-400.png" alt="Emma's Favicon">
 </p>
 
 <h1 align="center">

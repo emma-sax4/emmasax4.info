@@ -1,0 +1,19 @@
+.btn-outline-secondary {
+  color: #4c565a;
+  border-color: #4c565a;
+
+  &:hover {
+    color: #fff;
+    background-color: #001AAF;
+    border-color: #001AAF;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 .2rem rgba(108,117,125,.5)
+  }
+
+  &:disabled {
+    color: #4c565a;
+    background-color: transparent;
+  }
+}

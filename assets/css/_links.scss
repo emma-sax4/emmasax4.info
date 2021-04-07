@@ -1,10 +1,10 @@
 a {
-  color: #3082d4;
+  color: #001AAF;
   text-decoration: none;
 }
 
 a:hover {
-  text-decoration: underline;
+  color: #001AAF;
 }
 
 .link-icon-button > a {
@@ -34,7 +34,7 @@ a:hover {
 
   &:hover,
   &:active {
-    color: #3082d4;
+    color: #001AAF;
     text-decoration: none;
   }
 }
@@ -42,7 +42,7 @@ a:hover {
 .link-icon {
   padding-left: .625rem;
   padding-right: .625rem;
-  color: #829197;
+  color: #6d7375;
 
   > * {
     width: 3rem;
@@ -51,7 +51,7 @@ a:hover {
 
   &:hover,
   &:active {
-    color: #3082d4;
+    color: #001AAF;
     text-decoration: none;
   }
 }
