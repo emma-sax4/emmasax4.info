@@ -11,7 +11,8 @@ nav.navbar {
 
   > .navbar-toggler {
     color: rgba(255,255,255,.95);
-    border-color: rgba(255,255,255,.5);
+    border-color: rgba(255,255,255,.95);
+    margin-right: 5px;
   }
 
   .navbar-toggler[aria-expanded="false"] > .feather-x {
@@ -25,8 +26,7 @@ nav.navbar {
   .navbar-nav > .nav-item > .nav-link {
     color: #ffffff;
     font-size: 1rem;
-    margin-right: -0.5rem;
-    margin-left: 1.5rem;
+    padding-left: 1.5rem;
   }
 
   .navbar-nav > .nav-item.active > .nav-link {
@@ -36,6 +36,7 @@ nav.navbar {
 
 .nav-icon {
   margin-top: 1px;
+  margin-left: 5px;
   margin-bottom: 1px;
 }
 
