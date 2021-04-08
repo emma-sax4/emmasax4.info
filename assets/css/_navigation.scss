@@ -1,5 +1,5 @@
 nav.navbar {
-  background: linear-gradient(to right, rgb(0, 26, 175), rgb(0, 174, 255));
+  background: #001aaf;
 
   :focus {
     outline-color: rgb(255, 58, 58);
@@ -23,7 +23,7 @@ nav.navbar {
   }
 
   .navbar-nav > .nav-item > .nav-link {
-    color: white;
+    color: #ffffff;
     font-size: 1rem;
     padding-right: 1rem;
     padding-left: 1rem;
@@ -36,6 +36,7 @@ nav.navbar {
 
 .nav-icon {
   margin-top: 1px;
+  margin-left: 5px;
   margin-bottom: 1px;
 }
 
