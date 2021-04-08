@@ -25,8 +25,8 @@ nav.navbar {
   .navbar-nav > .nav-item > .nav-link {
     color: #ffffff;
     font-size: 1rem;
-    padding-right: 1rem;
-    padding-left: 1rem;
+    margin-right: -0.5rem;
+    margin-left: 1.5rem;
   }
 
   .navbar-nav > .nav-item.active > .nav-link {
@@ -36,7 +36,6 @@ nav.navbar {
 
 .nav-icon {
   margin-top: 1px;
-  margin-left: 5px;
   margin-bottom: 1px;
 }
 
