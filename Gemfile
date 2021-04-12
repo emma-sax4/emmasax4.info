@@ -1,5 +1,10 @@
 # frozen_string_literal: true
 
+# To install Nokogiri for both Darwin (Mac) and Linux, run:
+#   bundle lock --add-platform x86_64-linux && bundle lock --add-platform x86_64-darwin
+# To make sure all platforms are added to vendor/cache, run:
+#   bundle package --all-platforms
+
 source 'https://rubygems.org'
 
 # Gems required for all environments
