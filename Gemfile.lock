@@ -1,22 +1,22 @@
 GIT
   remote: https://github.com/emmahsax/jekyll-feed
-  revision: 63cffd139621e2c1d71aaca0d691ac0d78a23db5
+  revision: 4a5a90848fd3efbb11932bf9c02ce561d5606ad1
   specs:
-    jekyll-feed (0.15.1)
+    jekyll-feed (0.15.1e)
       jekyll (>= 3.7, < 5.0)
 
 GIT
   remote: https://github.com/emmahsax/jekyll-seo-tag
-  revision: a74fd607e89fc37167f0a83664ea467a61d2725b
+  revision: f59b748b1c085f2188ea4239010d8156354fe96b
   specs:
-    jekyll-seo-tag (2.7.1)
+    jekyll-seo-tag (2.7.1e)
       jekyll (>= 3.8, < 5.0)
 
 GIT
   remote: https://github.com/emmahsax/jekyll-sitemap
-  revision: 36cfcf00c32de112850d8736098a36c4c94a439b
+  revision: fac4da3a6f8c570d5999a6d6163acb96b9f72019
   specs:
-    jekyll-sitemap (1.4.0)
+    jekyll-sitemap (1.4.0e)
       jekyll (>= 3.9, < 5.0)
 
 GIT
@@ -29,7 +29,7 @@ GIT
 GEM
   remote: https://rubygems.org/
   specs:
-    activesupport (6.1.3.1)
+    activesupport (6.1.3.2)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (>= 1.6, < 2)
       minitest (>= 5.1)
@@ -38,7 +38,8 @@ GEM
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
     ast (2.4.2)
-    chef-utils (16.13.16)
+    chef-utils (17.0.242)
+      concurrent-ruby
     colorator (1.1.0)
     commonmarker (0.21.2)
       ruby-enum (~> 0.5)
@@ -46,7 +47,7 @@ GEM
     em-websocket (0.5.2)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0.6.0)
-    ethon (0.13.0)
+    ethon (0.14.0)
       ffi (>= 1.15.0)
     eventmachine (1.2.7)
     ffi (1.15.0)
@@ -54,7 +55,7 @@ GEM
     html-pipeline (2.14.0)
       activesupport (>= 2)
       nokogiri (>= 1.4)
-    html-proofer (3.19.0)
+    html-proofer (3.19.1)
       addressable (~> 2.3)
       mercenary (~> 0.3)
       nokogumbo (~> 2.0)
@@ -123,7 +124,7 @@ GEM
       mixlib-config (>= 2.2.1, < 4)
       mixlib-shellout
     mercenary (0.4.0)
-    mini_portile2 (2.5.0)
+    mini_portile2 (2.5.1)
     minitest (5.14.4)
     mixlib-cli (2.1.8)
     mixlib-config (3.0.9)
@@ -140,7 +141,7 @@ GEM
     nokogumbo (2.0.5)
       nokogiri (~> 1.8, >= 1.8.4)
     parallel (1.20.1)
-    parser (3.0.1.0)
+    parser (3.0.1.1)
       ast (~> 2.4.1)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
@@ -154,17 +155,17 @@ GEM
     regexp_parser (2.1.1)
     rexml (3.2.5)
     rouge (3.26.0)
-    rubocop (1.12.1)
+    rubocop (1.14.0)
       parallel (~> 1.10)
       parser (>= 3.0.0.0)
       rainbow (>= 2.2.2, < 4.0)
       regexp_parser (>= 1.8, < 3.0)
       rexml
-      rubocop-ast (>= 1.2.0, < 2.0)
+      rubocop-ast (>= 1.5.0, < 2.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 1.4.0, < 3.0)
-    rubocop-ast (1.4.1)
-      parser (>= 2.7.1.5)
+    rubocop-ast (1.5.0)
+      parser (>= 3.0.1.1)
     ruby-enum (0.9.0)
       i18n
     ruby-progressbar (1.11.0)
@@ -209,4 +210,4 @@ DEPENDENCIES
   webrick
 
 BUNDLED WITH
-   2.2.15
+   2.2.17
