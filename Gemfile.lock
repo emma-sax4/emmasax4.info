@@ -1,22 +1,22 @@
 GIT
   remote: https://github.com/emmahsax/jekyll-feed
-  revision: 63cffd139621e2c1d71aaca0d691ac0d78a23db5
+  revision: 4a5a90848fd3efbb11932bf9c02ce561d5606ad1
   specs:
-    jekyll-feed (0.15.1)
+    jekyll-feed (0.15.1e)
       jekyll (>= 3.7, < 5.0)
 
 GIT
   remote: https://github.com/emmahsax/jekyll-seo-tag
-  revision: a74fd607e89fc37167f0a83664ea467a61d2725b
+  revision: f59b748b1c085f2188ea4239010d8156354fe96b
   specs:
-    jekyll-seo-tag (2.7.1)
+    jekyll-seo-tag (2.7.1e)
       jekyll (>= 3.8, < 5.0)
 
 GIT
   remote: https://github.com/emmahsax/jekyll-sitemap
-  revision: 36cfcf00c32de112850d8736098a36c4c94a439b
+  revision: fac4da3a6f8c570d5999a6d6163acb96b9f72019
   specs:
-    jekyll-sitemap (1.4.0)
+    jekyll-sitemap (1.4.0e)
       jekyll (>= 3.9, < 5.0)
 
 GIT
