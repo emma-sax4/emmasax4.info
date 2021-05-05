@@ -29,7 +29,7 @@ jobs:
     - name: Install Node
       uses: actions/setup-node@v1
       with:
-        node-version: 15.11.0
+        node-version: 16.1
         registry-url: https://registry.npmjs.org
 
     - name: Install Ruby and Bundle Install
