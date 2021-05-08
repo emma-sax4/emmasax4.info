@@ -9,8 +9,8 @@ My tagline claims that I love swimming, reading, video/TV streaming services, an
 
 ## Volunteering
 
-* Judge at [Technovation Challenge](https://technovationchallenge.org) in 2018–2019
-* Panelist at a Tech Talk at one of the [University of Minnesota's Coding Bootcamps](https://bootcamp.umn.edu/)
+* Judge at [Technovation Challenge](https://technovationchallenge.org) in 2018, 2019, and 2021
+* Panelist at a Tech Talk at several of the [University of Minnesota's Coding Bootcamps](https://bootcamp.umn.edu/)
 * Volunteer at [RailsConf](https://railsconf.org/) 2019
 * Volunteer at various nonprofit organizations, such as [Arc Value Village](https://www.arcsvaluevillage.org/volunteer/), [Perspectives](https://www.perspectives-family.org/get-involved), and [Feed My Starving Children](https://www.fmsc.org/get-involved/) in the Twin Cities
 
