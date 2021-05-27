@@ -38,6 +38,7 @@ I know I already claimed to love traveling, but since I try to go to a new count
   <li>Spain 🇪🇸</li>
   <li>Puerto Rico 🇵🇷</li>
   <li>Alaska 🇺🇸</li>
+  <li>Netherlands 🇳🇱  — also a layover, and I also never left the Amsterdam airport</li>
   <li>Czech Republic 🇨🇿</li>
   <li>Austria 🇦🇹</li>
   <li>Germany 🇩🇪</li>
