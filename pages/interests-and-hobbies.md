@@ -37,7 +37,7 @@ I know I already claimed to love traveling, but since I try to go to a new count
   <li>France 🇫🇷</li>
   <li>Spain 🇪🇸</li>
   <li>Puerto Rico 🇵🇷</li>
-  <li>Alaska</li>
+  <li>Alaska 🇺🇸</li>
   <li>Czech Republic 🇨🇿</li>
   <li>Austria 🇦🇹</li>
   <li>Germany 🇩🇪</li>
