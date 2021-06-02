@@ -14,10 +14,11 @@ Turns out, the Google doesn't have a lot of other suggestions on pagination. But
 
 Of course, I started with the things I know how to do best: copy-paste 💁🏻‍♀️. I started with [this blob](https://github.com/UMM-CSci/senior-seminar/blob/master/seminars.html#L63-L80), of course edited to suit my HTML file. Surprisingly, bits of this work right out of the box. But... the pagination isn't pretty, which is very important to me.
 
-<div class="text-center">
-  {% include elements/photo.html
+<div class="text-center photoswipe-gallery">
+  {% include elements/photoswipe.html
       url="https://live.staticflickr.com/65535/48741690227_e27cb82884.jpg"
-      thumb_width="400" title="Ugly vertical pagination bar" lightbox="Pagination"
+      thumb_width="400" title="Ugly vertical pagination bar"
+      full_width="400" full_height="326"
   %}
 </div>
 
@@ -37,10 +38,11 @@ was not found.
 
 Clearly, that means my CSS is broken. But I didn't quite understand why 😕. The repository that I was copying pagination from included this line:
 
-<div class="text-center">
-  {% include elements/photo.html
+<div class="text-center photoswipe-gallery">
+  {% include elements/photoswipe.html
       url="https://live.staticflickr.com/65535/48741503991_ac5c550274.jpg"
-      thumb_width="450" title="Primer as a submodule" lightbox="Pagination"
+      thumb_width="450" title="Primer as a submodule"
+      full_width="486" full_height="45"
   %}
 </div>
 
@@ -66,10 +68,11 @@ After I finished succesfully adding the `primer` submodule 😌, all I had to do
 
 back to my `main.scss`, and finally the pagination was beautiful:
 
-<div class="text-center">
-  {% include elements/photo.html
+<div class="text-center photoswipe-gallery">
+  {% include elements/photoswipe.html
       url="https://live.staticflickr.com/65535/48741504061_7ebbd630fa.jpg"
-      thumb_width="400" title="Pagination bar that's much better" lightbox="Pagination"
+      thumb_width="400" title="Pagination bar that's much better"
+      full_width="500" full_height="345"
   %}
 </div>
 

@@ -46,10 +46,11 @@ Furthermore, I wanted users to know I was redirecting them. I didn't want to do 
 
 So, the first thing I did was add CSS. I copy-pasted the `./assets/` directory from [the main repository]({{ site.author_profiles.github }}/{{ site.github_repo }}/tree/4171201807c9e217372dafd130543e5a2da79bba/assets) to the new repository. I did a selective copy-paste, only copying the CSS, JS, and images that the new "site" required. And then I called those assets straight from my `index.html`, just like in my core repository. I opted not to include the full navigation bar, but just showing a basic blue top bar, to make it feel like it was still my website.
 
-<div class="text-center">
-  {% include elements/photo.html
+<div class="text-center photoswipe-gallery">
+  {% include elements/photoswipe.html
       url="https://live.staticflickr.com/65535/50413992607_ef05913653_h.jpg"
-      thumb_width="300" title="emmasax4.info redirecting" lightbox="Redirecting"
+      thumb_width="300" title="emmasax4.info redirecting"
+      full_width="1402" full_height="868"
   %}
 </div>
 

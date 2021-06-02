@@ -350,13 +350,16 @@ The `images/` directory gives me a place to store all of the images this site us
 </div>
 ```
 
-Alternatively, to use Lightbox to make the photo clickable, and then it'll zoom for the user and create a gallery, you can call the photo `_include`:
+Alternatively, to use PhotoSwipe to make the photo clickable, and then it'll zoom for the user and create a gallery, you can call the photo `_include`:
 
 ```html
-{% include elements/photo.html
-    url="/assets/images/picture-01.jpg"
-    thumb_width="200" title="Picture 1" lightbox="gallery name goes here"
-%}
+<div class="photoswipe-gallery">
+  {% include elements/photoswipe.html
+      url="/assets/images/picture-01.jpg"
+      thumb_width="200" title="Picture 1"
+      full_width="400" full_height="200"
+  %}
+</div>
 ```
 
 The `resources/` directory gives me a place to keep PDF documents that are linked in this site. You can put a link to it in Markdown:
