@@ -94,14 +94,14 @@ Here is a picture of what the form now looks like:
 
 <div class="text-center photoswipe-gallery">
   {% include elements/photoswipe.html
-     url="https://live.staticflickr.com/65535/50910867482_e25fc606ba_b.jpg"
-     thumb_width="400" title="A basic HTML form"
-     full_width="375" full_height="168"
+      url="https://live.staticflickr.com/65535/50910867482_e25fc606ba_b.jpg"
+      thumb_width="400" title="A basic HTML form"
+      full_width="975" full_height="437"
   %}
   {% include elements/photoswipe.html
-     url="https://live.staticflickr.com/65535/50910770391_a88fce2728_c.jpg"
-     thumb_width="400" title="The 'thank you' that is shown upon submission"
-     full_width="375" full_height="123"
+      url="https://live.staticflickr.com/65535/50910770391_a88fce2728_c.jpg"
+      thumb_width="400" title="The 'thank you' that is shown upon submission"
+      full_width="795" full_height="262"
   %}
 </div>
 
@@ -124,7 +124,7 @@ Now my form visually looks like it's requiring the reCAPTCHA:
   {% include elements/photoswipe.html
       url="https://live.staticflickr.com/65535/50910047008_50718a7f0e_b.jpg"
       thumb_width="600" title="Form with the reCAPTCHA"
-      full_width="375" full_height="209"
+      full_width="992" full_height="554"
   %}
 </div>
 
@@ -203,7 +203,7 @@ Now, here's where it gets fancy. If I go into the browser's inspection tool, rem
   {% include elements/photoswipe.html
       url="https://live.staticflickr.com/65535/50910770401_aa13b0dec4_c.jpg"
       thumb_width="500" title="A demonstration of what a spam message could 'look' like"
-      full_width="375" full_height="198"
+      full_width="800" full_height="424"
   %}
 </div>
 

@@ -22,11 +22,6 @@ Like most businesses, E&A closed shop in March/April of 2020 for the pandemic. N
       thumb_width="480" title="30 Rock gif via Giphy"
       full_width="480" full_height="269"
   %}
-  {% include elements/photoswipe.html
-      url="https://media.giphy.com/media/yyp58Yx3Qk0TK/giphy.gif"
-      thumb_width="480" title="30 Rock gif via Giphy"
-      full_width="480" full_height="269"
-  %}
 </div>
 
 So, when I learned that E&A was going to be hosting a 4th of July party at a member's house with a large outdoor yard, I was pretty excited to be given the chance to leave my apartment, put on a mask, and socialize in-person again. So, my partner and I eagerly signed up for the event, which was capped at a 40 person limit to allow for proper social distancing.
