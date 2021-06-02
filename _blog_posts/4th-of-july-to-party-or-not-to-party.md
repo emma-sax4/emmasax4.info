@@ -16,10 +16,11 @@ I am a member of an events group in the Twin Cities called [Events & Adventures]
 
 Like most businesses, E&A closed shop in March/April of 2020 for the pandemic. Nobody knew when life would get "back to normal", but I think many of us assumed it'd be a few weeks. Well, as we all know, a few weeks turned into a month, which has now turned into a few months, and it probably isn't even close to over yet. And as Minnesota and the United States started to open their doors to customers again, so did E&A.
 
-<div class="text-center">
-  {% include elements/photo.html
+<div class="text-center photoswipe-gallery">
+  {% include elements/photoswipe.html
       url="https://media.giphy.com/media/yyp58Yx3Qk0TK/giphy.gif"
-      thumb_width="400" title="30 Rock gif via Giphy" lightbox="E&A Covid"
+      thumb_width="480" title="30 Rock gif via Giphy"
+      full_width="480" full_height="269"
   %}
 </div>
 
@@ -39,10 +40,11 @@ It's important to note that E&A is following all guidelines set by Governor Walz
 
 My partner frequently points out to me that E&A is a company built on close contact, socialization with strangers, and getting to know each other at events repeatedly and personally... which is just about the opposite of what proper COVID precautions require. The fact that E&A is a company that wants to make a profit does not elude me. I understand that E&A's customers want socializing, and E&A wants customers. I understand why it's tempting to open the in-person events back up and say "This is fine."
 
-<div class="text-center">
-  {% include elements/photo.html
+<div class="text-center photoswipe-gallery">
+  {% include elements/photoswipe.html
       url="https://media.giphy.com/media/z9AUvhAEiXOqA/giphy.gif"
-      thumb_width="400" title="This is fine gif via Giphy" lightbox="E&A Covid"
+      thumb_width="500" title="This is fine gif via Giphy"
+      full_width="500" full_height="278"
   %}
 </div>
 
@@ -50,9 +52,10 @@ I just think it is too much too soon. And at the end of the day, all of us have 
 
 It's hard... knowing what to do and what the right choice is. And I'd be a hypocrite if I said that I'm being the safest person out there. I go for walks outside, and don't wear masks because I don't stand by anybody for a long period of time. I meet with small groups (less than five people total) of family and friends and we try our best to wear masks and stay a few feet apart. I don't wipe down my doorknobs every day, and I don't always wash my cloth mask between runs to the store. I'm not perfect. What matters is that we try our best.... we try to adapt to the "new normal", try to keep a positive attitude, and try to make the next right decision, even if we didn't make the perfect one last time. We can't control other peoples' actions and what they believe, but we can control ourselves. We can make the choices that feel right for us, and for our community.
 
-<div class="text-center">
-  {% include elements/photo.html
+<div class="text-center photoswipe-gallery">
+  {% include elements/photoswipe.html
       url="https://media.giphy.com/media/KeoRcYovftKiilrKir/giphy.gif"
-      thumb_width="400" title="Arthur wearing masks gif via Giphy" lightbox="E&A Covid"
+      thumb_width="320" title="Arthur wearing masks gif via Giphy"
+      full_width="320" full_height="240"
   %}
 </div>
