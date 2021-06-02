@@ -49,7 +49,7 @@
     <meta name="msvalidate.01" content="89B2B19FF966341B78EF64EDADE6DF81" />
     <meta name="yandex-verification" content="32fe10ad6352714a" />
     <script type="application/ld+json">
-      {"headline":"Adding HTML forms to Static Sites","url":"https://emmasax.com/blog/posts/adding-html-forms-to-static-sites/","mainEntityOfPage":{"@type":"WebPage","@id":"https://emmasax.com/blog/posts/adding-html-forms-to-static-sites/"},"dateModified":"2021-02-06T20:33:53+00:00","datePublished":"2021-02-05T08:00:00+00:00","author":{"@type":"Person","name":"Emma Sax"},"description":"Emma Sax’s personal website and blog. Includes information about my social media profiles, resumé, and hobbies.","@type":"BlogPosting","@context":"https://schema.org"}
+      {"headline":"Adding HTML forms to Static Sites","url":"https://emmasax.com/blog/posts/adding-html-forms-to-static-sites/","mainEntityOfPage":{"@type":"WebPage","@id":"https://emmasax.com/blog/posts/adding-html-forms-to-static-sites/"},"dateModified":"2021-06-02T23:54:26+00:00","datePublished":"2021-02-05T08:00:00+00:00","author":{"@type":"Person","name":"Emma Sax"},"description":"Emma Sax’s personal website and blog. Includes information about my social media profiles, resumé, and hobbies.","@type":"BlogPosting","@context":"https://schema.org"}
     </script>
     <!-- End Jekyll SEO tag -->
   </head>
@@ -112,7 +112,7 @@
                   <span class="date-meta">2021-02-05 02:00:00 -0600</span>
                 </div>
                 <div class="col col-12 col-md-4">
-                  <span class="post-meta">Read time: 16 minutes</span>
+                  <span class="post-meta">Read time: 15 minutes</span>
                 </div>
               </div>
             </h1>
@@ -205,11 +205,11 @@
               </div>
             </div>
             <p>Here is a picture of what the form now looks like:</p>
-            <div class="text-center">
-              <a href="https://live.staticflickr.com/65535/50910867482_e25fc606ba_b.jpg" title="A basic HTML form" data-lightbox="adding HTML forms to static sites">
+            <div class="text-center photoswipe-gallery">
+              <a href="https://live.staticflickr.com/65535/50910867482_e25fc606ba_b.jpg" target="_blank" data-pswp-width="975" data-pswp-height="437">
                 <img class="image" src="https://live.staticflickr.com/65535/50910867482_e25fc606ba_b.jpg" width="400" alt="A basic HTML form">
               </a>
-              <a href="https://live.staticflickr.com/65535/50910770391_a88fce2728_c.jpg" title="The 'thank you' that is shown upon submission" data-lightbox="adding HTML forms to static sites">
+              <a href="https://live.staticflickr.com/65535/50910770391_a88fce2728_c.jpg" target="_blank" data-pswp-width="795" data-pswp-height="262">
                 <img class="image" src="https://live.staticflickr.com/65535/50910770391_a88fce2728_c.jpg" width="400" alt="The 'thank you' that is shown upon submission">
               </a>
             </div>
@@ -225,8 +225,8 @@
               </div>
             </div>
             <p>Now my form visually looks like it’s requiring the reCAPTCHA:</p>
-            <div class="text-center">
-              <a href="https://live.staticflickr.com/65535/50910047008_50718a7f0e_b.jpg" title="Form with the reCAPTCHA" data-lightbox="adding HTML forms to static sites">
+            <div class="text-center photoswipe-gallery">
+              <a href="https://live.staticflickr.com/65535/50910047008_50718a7f0e_b.jpg" target="_blank" data-pswp-width="992" data-pswp-height="554">
                 <img class="image" src="https://live.staticflickr.com/65535/50910047008_50718a7f0e_b.jpg" width="600" alt="Form with the reCAPTCHA">
               </a>
             </div>
@@ -299,8 +299,8 @@
             <p>Here, we’ll 1) disable the submission button again, and 2) set the <code>&quot;verification&quot;</code> element to <code>null</code>. Once again, changing the button to be enabled/disabled is really only for people visually on my site—it’s not fancy enough to prevent any sort of spam. However, the setting and resetting of the <code>&quot;verification&quot;</code> element <em>would</em> hopefully prevent those bots.</p>
             <p>And now for step eleven… testing! When testing, I found that as expected, I could not submit anything without first completing the reCAPTCHA. If I never complete the reCAPTCHA, I cannot submit a message. If I complete the reCAPTCHA, and then wait until it expires, then I cannot send the message. If I follow a happy path scenario (fill out a message, complete reCAPTCHA, press submit), then it successfully enters my Google Forms’ spreadsheet.</p>
             <p>Now, here’s where it gets fancy. If I go into the browser’s inspection tool, remove the <code>disable</code> on the button, and show the invisible <code>&quot;verification&quot;</code> form input, then I can enter a random value into the invisible input, and press submit… all without completing the reCAPTCHA. My website even gives a nice message that the submission was successful (as a little decoy). <em>However</em>, Google Forms never receives the message. Google Forms returns a <code>400</code> on the <code>FormResponse</code> (this can be seen in the browser’s inspection tool), and the message goes into a black hole, never to be seen again. Google Forms can only <em>receive</em> the message if the invisible verification input’s string <em>exactly matches</em> the specific regex I set in Google Forms.</p>
-            <div class="text-center">
-              <a href="https://live.staticflickr.com/65535/50910770401_aa13b0dec4_c.jpg" title="A demonstration of what a spam message could 'look' like" data-lightbox="adding HTML forms to static sites">
+            <div class="text-center photoswipe-gallery">
+              <a href="https://live.staticflickr.com/65535/50910770401_aa13b0dec4_c.jpg" target="_blank" data-pswp-width="800" data-pswp-height="424">
                 <img class="image" src="https://live.staticflickr.com/65535/50910770401_aa13b0dec4_c.jpg" width="500" alt="A demonstration of what a spam message could 'look' like">
               </a>
             </div>
@@ -370,6 +370,7 @@
     View on <a href="https://github.com/emmahsax/emmahsax.github.io">GitHub</a>.
   </footer>
   <!-- Javascript scripts -->
+  <script src="/assets/js/activate_photoswipe.js" type="module"></script>
   <script src="/assets/js/show_dates.js"></script>
   <script src="/assets/js/external_links.js"></script>
   <script src="/assets/js/jquery.min.js"></script>

@@ -49,7 +49,7 @@
     <meta name="msvalidate.01" content="89B2B19FF966341B78EF64EDADE6DF81" />
     <meta name="yandex-verification" content="32fe10ad6352714a" />
     <script type="application/ld+json">
-      {"headline":"301 Redirects with Static Sites","url":"https://emmasax.com/blog/posts/301-redirects-with-static-sites/","mainEntityOfPage":{"@type":"WebPage","@id":"https://emmasax.com/blog/posts/301-redirects-with-static-sites/"},"dateModified":"2021-02-21T17:03:39+00:00","datePublished":"2020-10-04T17:00:00+00:00","author":{"@type":"Person","name":"Emma Sax"},"description":"Emma Sax’s personal website and blog. Includes information about my social media profiles, resumé, and hobbies.","@type":"BlogPosting","@context":"https://schema.org"}
+      {"headline":"301 Redirects with Static Sites","url":"https://emmasax.com/blog/posts/301-redirects-with-static-sites/","mainEntityOfPage":{"@type":"WebPage","@id":"https://emmasax.com/blog/posts/301-redirects-with-static-sites/"},"dateModified":"2021-06-02T23:54:26+00:00","datePublished":"2020-10-04T17:00:00+00:00","author":{"@type":"Person","name":"Emma Sax"},"description":"Emma Sax’s personal website and blog. Includes information about my social media profiles, resumé, and hobbies.","@type":"BlogPosting","@context":"https://schema.org"}
     </script>
     <!-- End Jekyll SEO tag -->
   </head>
@@ -149,8 +149,8 @@
             <p>This worked. I duplicated each <code>index.html</code> file on the original site into this new project, replicating the files found <a href="https://github.com/emmahsax/emmahsax.github.io/tree/4c4aaed77f44ccf743ce47ddef9c91c9a89528a4">here</a>. But I realized this wasn’t sustainable. I didn’t want to be copy-pasting HTML from each file to another all over the place. I wanted <em>one</em> HTML file that would properly redirect any incoming path to the new domain, and forwarding the same path, without me having to make constant updates to the new redirect repository.</p>
             <p>Furthermore, I wanted users to know I was redirecting them. I didn’t want to do it under the hood, with them potentially not even noticing they were redirected. I wanted them to have a clear message they were being redirected, and for them to know that they were redirecting to a reputable new site. I wanted the redirect page to <em>look</em> like my existing website, so it was clear they were still within the realm of my original site.</p>
             <p>So, the first thing I did was add CSS. I copy-pasted the <code>./assets/</code> directory from <a href="https://github.com/emmahsax/emmahsax.github.io/tree/4171201807c9e217372dafd130543e5a2da79bba/assets">the main repository</a> to the new repository. I did a selective copy-paste, only copying the CSS, JS, and images that the new “site” required. And then I called those assets straight from my <code>index.html</code>, just like in my core repository. I opted not to include the full navigation bar, but just showing a basic blue top bar, to make it feel like it was still my website.</p>
-            <div class="text-center">
-              <a href="https://live.staticflickr.com/65535/50413992607_ef05913653_h.jpg" title="emmasax4.info redirecting" data-lightbox="Redirecting">
+            <div class="text-center photoswipe-gallery">
+              <a href="https://live.staticflickr.com/65535/50413992607_ef05913653_h.jpg" target="_blank" data-pswp-width="1402" data-pswp-height="868">
                 <img class="image" src="https://live.staticflickr.com/65535/50413992607_ef05913653_h.jpg" width="300" alt="emmasax4.info redirecting">
               </a>
             </div>
@@ -245,6 +245,7 @@
     View on <a href="https://github.com/emmahsax/emmahsax.github.io">GitHub</a>.
   </footer>
   <!-- Javascript scripts -->
+  <script src="/assets/js/activate_photoswipe.js" type="module"></script>
   <script src="/assets/js/show_dates.js"></script>
   <script src="/assets/js/external_links.js"></script>
   <script src="/assets/js/jquery.min.js"></script>

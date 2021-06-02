@@ -49,7 +49,7 @@
     <meta name="msvalidate.01" content="89B2B19FF966341B78EF64EDADE6DF81" />
     <meta name="yandex-verification" content="32fe10ad6352714a" />
     <script type="application/ld+json">
-      {"headline":"Switching from kramdown to CommonMark","url":"https://emmasax.com/blog/posts/switching-from-kramdown-to-commonmark/","mainEntityOfPage":{"@type":"WebPage","@id":"https://emmasax.com/blog/posts/switching-from-kramdown-to-commonmark/"},"dateModified":"2021-02-06T21:59:16+00:00","datePublished":"2020-07-19T15:00:33+00:00","author":{"@type":"Person","name":"Emma Sax"},"description":"Emma Sax’s personal website and blog. Includes information about my social media profiles, resumé, and hobbies.","@type":"BlogPosting","@context":"https://schema.org"}
+      {"headline":"Switching from kramdown to CommonMark","url":"https://emmasax.com/blog/posts/switching-from-kramdown-to-commonmark/","mainEntityOfPage":{"@type":"WebPage","@id":"https://emmasax.com/blog/posts/switching-from-kramdown-to-commonmark/"},"dateModified":"2021-06-02T23:54:26+00:00","datePublished":"2020-07-19T15:00:33+00:00","author":{"@type":"Person","name":"Emma Sax"},"description":"Emma Sax’s personal website and blog. Includes information about my social media profiles, resumé, and hobbies.","@type":"BlogPosting","@context":"https://schema.org"}
     </script>
     <!-- End Jekyll SEO tag -->
   </head>
@@ -228,22 +228,22 @@
             </div>
             <p>I’m not exactly sure why <code>#anchor</code> defines the <code>position</code> as <code>relative</code>, and the <code>#anchor a</code> defines the <code>position</code> as <code>absolute</code>, but by a miracle, I got this to work, and I’m not going to question it now!</p>
             <p>Here’s what my anchor looked like in the beginning:</p>
-            <div class="text-center">
-              <a href="https://live.staticflickr.com/65535/50120866658_714fff8d24_o.png" title="With the anchors misaligned" data-lightbox="kramdown to CommonMark">
+            <div class="text-center photoswipe-gallery">
+              <a href="https://live.staticflickr.com/65535/50120866658_714fff8d24_o.png" target="_blank" data-pswp-width="1112" data-pswp-height="340">
                 <img class="image" src="https://live.staticflickr.com/65535/50120866658_714fff8d24_o.png" width="400" alt="With the anchors misaligned">
               </a>
             </div>
             <p>And here’s my anchors at the end:</p>
-            <div class="text-center">
-              <a href="https://live.staticflickr.com/65535/50121433291_c532150c4a_o.png" title="With the anchors properly lined up" data-lightbox="kramdown to CommonMark">
+            <div class="text-center photoswipe-gallery">
+              <a href="https://live.staticflickr.com/65535/50121433291_c532150c4a_o.png" target="_blank" data-pswp-width="1124" data-pswp-height="417">
                 <img class="image" src="https://live.staticflickr.com/65535/50121433291_c532150c4a_o.png" width="400" alt="With the anchors properly lined up">
               </a>
             </div>
             <p>After I was satisfied with my changes, I willingly merged my pull request and deployed away. A little while later, I noticed a few other key pieces I missed.</p>
             <p>First, my syntax highlighting also broke, and I didn’t even notice for several weeks! Here’s an image of how the HTML changed during the switch:</p>
-            <div class="text-center">
-              <a href="https://user-images.githubusercontent.com/7562793/87866750-f695d980-c94a-11ea-87e1-9fc8c5e56d88.png" title="HTML without syntax highlighting" data-lightbox="kramdown to CommonMark">
-                <img class="image" src="https://user-images.githubusercontent.com/7562793/87866750-f695d980-c94a-11ea-87e1-9fc8c5e56d88.png" width="400" alt="HTML without syntax highlighting">
+            <div class="text-center photoswipe-gallery">
+              <a href="https://live.staticflickr.com/65535/51220531902_fdfc75b7b5_k.jpg" target="_blank" data-pswp-width="1917" data-pswp-height="1094">
+                <img class="image" src="https://live.staticflickr.com/65535/51220531902_fdfc75b7b5_k.jpg" width="400" alt="HTML without syntax highlighting">
               </a>
             </div>
             <p>In fact, when I originally saw this, I probably thought the HTML looked cleaner after the switch. But in reality, the switch caused all of my syntax highlighting to break.</p>
@@ -323,6 +323,7 @@
     View on <a href="https://github.com/emmahsax/emmahsax.github.io">GitHub</a>.
   </footer>
   <!-- Javascript scripts -->
+  <script src="/assets/js/activate_photoswipe.js" type="module"></script>
   <script src="/assets/js/show_dates.js"></script>
   <script src="/assets/js/external_links.js"></script>
   <script src="/assets/js/jquery.min.js"></script>

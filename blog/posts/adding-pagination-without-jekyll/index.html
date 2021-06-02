@@ -49,7 +49,7 @@
     <meta name="msvalidate.01" content="89B2B19FF966341B78EF64EDADE6DF81" />
     <meta name="yandex-verification" content="32fe10ad6352714a" />
     <script type="application/ld+json">
-      {"headline":"Adding Pagination without Jekyll","url":"https://emmasax.com/blog/posts/adding-pagination-without-jekyll/","mainEntityOfPage":{"@type":"WebPage","@id":"https://emmasax.com/blog/posts/adding-pagination-without-jekyll/"},"dateModified":"2020-09-30T03:51:24+00:00","datePublished":"2019-09-12T05:00:00+00:00","author":{"@type":"Person","name":"Emma Sax"},"description":"Emma Sax’s personal website and blog. Includes information about my social media profiles, resumé, and hobbies.","@type":"BlogPosting","@context":"https://schema.org"}
+      {"headline":"Adding Pagination without Jekyll","url":"https://emmasax.com/blog/posts/adding-pagination-without-jekyll/","mainEntityOfPage":{"@type":"WebPage","@id":"https://emmasax.com/blog/posts/adding-pagination-without-jekyll/"},"dateModified":"2021-06-02T23:54:26+00:00","datePublished":"2019-09-12T05:00:00+00:00","author":{"@type":"Person","name":"Emma Sax"},"description":"Emma Sax’s personal website and blog. Includes information about my social media profiles, resumé, and hobbies.","@type":"BlogPosting","@context":"https://schema.org"}
     </script>
     <!-- End Jekyll SEO tag -->
   </head>
@@ -127,8 +127,8 @@
             <p>I originally tried to add Jekyll’s built-in pagination. Supposedly, it’s pretty slick. You add a few sections to the <code>_config.yml</code>, a couple sections to your <code>index.html</code>, and bam: it’s done and it works 💥. My real experience setting up the pagination was <em>not</em> like that. In fact, within one commit, I learned that Jekyll’s pagination (and other pagination gems), wouldn’t work well with my current directory/file setup. Both <a href="https://jekyllrb.com/docs/pagination/">Jekyll’s built-in pagination</a> and the gem <a href="https://github.com/sverrirs/jekyll-paginate-v2"><code>jekyll-paginate-v2</code></a> expect the blog posts to be in a <code>_posts/</code> directory, and to be referenced by <code>site.posts</code>. They also expect the main “Blog” page to be in its own directory, and my stuff wasn’t formatted like that. And so, instead of fighting with that, I decided to get more creative. That can’t be the only pagination option, right? 🥴😬🙏🏼</p>
             <p>Turns out, the Google doesn’t have a lot of other suggestions on pagination. But, the original Jekyll repository I copied (<a href="https://github.com/UMM-CSci/senior-seminar">UMM-CSci’s <code>senior-seminar</code></a>), implements a version of pagination that’s installed from <a href="https://listjs.com/docs/pagination/"><code>List.js</code></a>. Possibly this is because that site uses <code>seminars</code> instead of <code>posts</code>. But either way, I decided to give it a chance. Worst case scenario, it just wouldn’t work and I’d have to find another pagination option.</p>
             <p>Of course, I started with the things I know how to do best: copy-paste 💁🏻‍♀️. I started with <a href="https://github.com/UMM-CSci/senior-seminar/blob/master/seminars.html#L63-L80">this blob</a>, of course edited to suit my HTML file. Surprisingly, bits of this work right out of the box. But… the pagination isn’t pretty, which is very important to me.</p>
-            <div class="text-center">
-              <a href="https://live.staticflickr.com/65535/48741690227_e27cb82884.jpg" title="Ugly vertical pagination bar" data-lightbox="Pagination">
+            <div class="text-center photoswipe-gallery">
+              <a href="https://live.staticflickr.com/65535/48741690227_e27cb82884.jpg" target="_blank" data-pswp-width="400" data-pswp-height="326">
                 <img class="image" src="https://live.staticflickr.com/65535/48741690227_e27cb82884.jpg" width="400" alt="Ugly vertical pagination bar">
               </a>
             </div>
@@ -149,8 +149,8 @@
               </div>
             </div>
             <p>Clearly, that means my CSS is broken. But I didn’t quite understand why 😕. The repository that I was copying pagination from included this line:</p>
-            <div class="text-center">
-              <a href="https://live.staticflickr.com/65535/48741503991_ac5c550274.jpg" title="Primer as a submodule" data-lightbox="Pagination">
+            <div class="text-center photoswipe-gallery">
+              <a href="https://live.staticflickr.com/65535/48741503991_ac5c550274.jpg" target="_blank" data-pswp-width="486" data-pswp-height="45">
                 <img class="image" src="https://live.staticflickr.com/65535/48741503991_ac5c550274.jpg" width="450" alt="Primer as a submodule">
               </a>
             </div>
@@ -173,8 +173,8 @@
               </div>
             </div>
             <p>back to my <code>main.scss</code>, and finally the pagination was beautiful:</p>
-            <div class="text-center">
-              <a href="https://live.staticflickr.com/65535/48741504061_7ebbd630fa.jpg" title="Pagination bar that's much better" data-lightbox="Pagination">
+            <div class="text-center photoswipe-gallery">
+              <a href="https://live.staticflickr.com/65535/48741504061_7ebbd630fa.jpg" target="_blank" data-pswp-width="500" data-pswp-height="345">
                 <img class="image" src="https://live.staticflickr.com/65535/48741504061_7ebbd630fa.jpg" width="400" alt="Pagination bar that's much better">
               </a>
             </div>
@@ -236,6 +236,7 @@
     View on <a href="https://github.com/emmahsax/emmahsax.github.io">GitHub</a>.
   </footer>
   <!-- Javascript scripts -->
+  <script src="/assets/js/activate_photoswipe.js" type="module"></script>
   <script src="/assets/js/show_dates.js"></script>
   <script src="/assets/js/external_links.js"></script>
   <script src="/assets/js/jquery.min.js"></script>
