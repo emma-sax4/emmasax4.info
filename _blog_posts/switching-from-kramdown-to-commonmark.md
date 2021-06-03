@@ -125,7 +125,7 @@ Here's what my anchor looked like in the beginning:
   <div class="text-center">
     {% include elements/photoswipe.html
         url="https://live.staticflickr.com/65535/50120866658_714fff8d24_o.png"
-        thumb_width="400" title="With the anchors misaligned"
+        thumb_width="400" caption="With the anchors misaligned"
         full_width="1112" full_height="340"
     %}
   </div>
@@ -135,7 +135,7 @@ And here's my anchors at the end:
   <div class="text-center">
     {% include elements/photoswipe.html
         url="https://live.staticflickr.com/65535/50121433291_c532150c4a_o.png"
-        thumb_width="400" title="With the anchors properly lined up"
+        thumb_width="400" caption="With the anchors properly lined up"
         full_width="1124" full_height="417"
     %}
   </div>
@@ -148,7 +148,7 @@ First, my syntax highlighting also broke, and I didn't even notice for several w
 <div class="text-center photoswipe-gallery">
   {% include elements/photoswipe.html
       url="https://live.staticflickr.com/65535/51220531902_fdfc75b7b5_k.jpg"
-      thumb_width="400" title="HTML without syntax highlighting"
+      thumb_width="400" caption="HTML without syntax highlighting"
       full_width="1917" full_height="1094"
   %}
 </div>

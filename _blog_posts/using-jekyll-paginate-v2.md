@@ -13,7 +13,7 @@ But, soon after I started getting an upgrade in my CSS game, I realized that my 
 <div class="text-center photoswipe-gallery">
   {% include elements/photoswipe.html
       url="https://live.staticflickr.com/65535/48741504061_7ebbd630fa.jpg"
-      thumb_width="400" title="Pagination bar that's now not quite as lovely"
+      thumb_width="400" caption="Pagination bar that's now not quite as lovely"
       full_width="500" full_height="345"
   %}
 </div>
@@ -53,7 +53,7 @@ After all of that work, I now have a pagination bar that makes me proud of this 
 <div class="text-center photoswipe-gallery">
   {% include elements/photoswipe.html
       url="https://live.staticflickr.com/65535/49241327792_e87715127e_o.png"
-      thumb_width="400" title="Pagination bar that can grow with my site"
+      thumb_width="400" caption="Pagination bar that can grow with my site"
       full_width="994" full_height="604"
   %}
 </div>
@@ -104,7 +104,7 @@ It's a little complicated, but, one deploy from Travis CI later, and the site wa
 <div class="text-center photoswipe-gallery">
   {% include elements/photoswipe.html
       url="https://media.giphy.com/media/4xpB3eE00FfBm/giphy.gif"
-      thumb_width="400" title="Success baby gif via Giphy"
+      thumb_width="400" caption="Success baby gif via Giphy"
       full_width="480" full_height="458"
   %}
 </div>

@@ -18,7 +18,7 @@ When we got to the airport, our trip leaders were right; it was busy. We didn't 
 <div class="text-center photoswipe-gallery">
   {% include elements/photoswipe.html
       url="https://live.staticflickr.com/65535/48871541883_f68f5627c5_o.jpg"
-      thumb_width="400" title="Our last night in Kenya"
+      thumb_width="400" caption="Our last night in Kenya"
       full_width="960" full_height="720"
   %}
 </div>
