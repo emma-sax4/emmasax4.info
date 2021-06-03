@@ -1,0 +1,62 @@
+---
+layout: default
+---
+
+<!--
+  To load this locally:
+  1. Run: bundle install
+  2. Run: jekyll serve
+  3. Navigate to: http://localhost:4000/blog/posts/trial-nested-photoswipe-galleries/
+-->
+
+<!-- Title of page -->
+<div class="text-center">
+  <h1>{{ page.title }}</h1>
+</div>
+
+<!-- Actual page content -->
+<div class="page-body">
+  <p>Here’s the “full” PhotoSwipe gallery with pictures of an alpaca, bobcat, chipmunk, dolphin, ermine, and fox:</p>
+
+  <div class="photoswipe-gallery"> <!-- This is the start of the "full" gallery -->
+    <div class="text-center">
+      <a class="photoswipe" href="https://i.imgur.com/Y3ibubf.jpg" target="_blank" data-pswp-width="720" data-pswp-height="960">
+        <img class="image" src="https://i.imgur.com/Y3ibubf.jpg" width="170" alt="Alpaca">
+      </a>
+      <a class="photoswipe" href="https://i.imgur.com/8K0L9VU.jpg" target="_blank" data-pswp-width="1600" data-pswp-height="1200">
+        <img class="image" src="https://i.imgur.com/8K0L9VU.jpg" width="300" alt="Bobcat">
+      </a>
+      <a class="photoswipe" href="https://i.imgur.com/Sd4hAvW.jpg" target="_blank" data-pswp-width="1280" data-pswp-height="852">
+        <img class="image" src="https://i.imgur.com/Sd4hAvW.jpg" width="340" alt="Chipmunk">
+      </a>
+    </div>
+
+    <p>Here’s an “inner” PhotoSwipe gallery. The photos in this gallery <em>are not</em> included in the “full” gallery, but have their own smaller gallery with just these photos. And photos from the “full” gallery <em>are not</em> included in the “inner” gallery. The pictures in the “inner” gallery include pictures of a zebu, yak, and xerus:</p>
+
+    <div class="text-center photoswipe-gallery"> <!-- This is the start of the "inner" gallery -->
+      <a class="photoswipe" href="https://i.imgur.com/WNa7Bxx.jpg" target="_blank" data-pswp-width="1180" data-pswp-height="520">
+        <img class="image" src="https://i.imgur.com/WNa7Bxx.jpg" width="150" alt="Zebu">
+      </a>
+      <a class="photoswipe" href="https://i.imgur.com/nR8jJEM.jpeg" target="_blank" data-pswp-width="5184" data-pswp-height="3456">
+        <img class="image" src="https://i.imgur.com/nR8jJEM.jpeg" width="100" alt="Yak">
+      </a>
+      <a class="photoswipe" href="https://live.staticflickr.com/65535/51222953803_bb61bb4368_b.jpg" target="_blank" data-pswp-width="1000" data-pswp-height="667">
+        <img class="image" src="https://live.staticflickr.com/65535/51222953803_bb61bb4368_b.jpg" width="100" alt="Xerus">
+      </a>
+    </div> <!-- This is the end of the "inner" gallery -->
+
+    <p>And now we’re back to the “full” gallery:</p>
+
+    <div class="text-center">
+      <a class="photoswipe" href="https://i.imgur.com/pk5308U.jpg" target="_blank" data-pswp-width="530" data-pswp-height="765">
+        <img class="image" src="https://i.imgur.com/pk5308U.jpg" width="155" alt="Dolphin">
+      </a>
+      <a class="photoswipe" href="https://i.imgur.com/wdg3S.jpg" target="_blank" data-pswp-width="316" data-pswp-height="474">
+        <img class="image" src="https://i.imgur.com/wdg3S.jpg" width="150" alt="Ermine">
+      </a>
+      <a class="photoswipe" href="https://i.imgur.com/1VkY1R4.jpg" target="_blank" data-pswp-width="540" data-pswp-height="405">
+        <img class="image" src="https://i.imgur.com/1VkY1R4.jpg" width="300" alt="Fox">
+      </a>
+    </div>
+  </div> <!-- This is the end of the "full" gallery -->
+</div>
