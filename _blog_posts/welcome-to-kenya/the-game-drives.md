@@ -37,32 +37,39 @@ We started our safaris at the Ark in the Aberdares mountain range. I'll talk mor
 
 The Ark is where we saw our first cape buffalo, hyenas, warthogs (think Pumbaa!), and elephants.
 
-<div class="text-center">
-  {% include elements/photo.html
-      url="https://live.staticflickr.com/65535/48740606838_c65187533b_o.jpg"
-      thumb_width="200" title="Buffalo at the Ark" lightbox="Game Drives"
-  %}
-  {% include elements/photo.html
-      url="https://live.staticflickr.com/65535/48740934946_f3e99feb9b_o.jpg"
-      thumb_width="200" title="Buffalos at the Ark" lightbox="Game Drives"
-  %}
-  {% include elements/photo.html
-      url="https://live.staticflickr.com/65535/48741119477_98156ea6e6_o.jpg"
-      thumb_width="200" title="Elephants at the Ark" lightbox="Game Drives"
-  %}
-</div>
+<div class="photoswipe-gallery">
+  <div class="text-center">
+    {% include elements/photoswipe.html
+        url="https://live.staticflickr.com/65535/48740606838_c65187533b_o.jpg"
+        thumb_width="200" title="Buffalo at the Ark"
+        full_width="600" full_height="450"
+    %}
+    {% include elements/photoswipe.html
+        url="https://live.staticflickr.com/65535/48740934946_f3e99feb9b_o.jpg"
+        thumb_width="200" title="Buffalos at the Ark"
+        full_width="600" full_height="450"
+    %}
+    {% include elements/photoswipe.html
+        url="https://live.staticflickr.com/65535/48741119477_98156ea6e6_o.jpg"
+        thumb_width="200" title="Elephants at the Ark"
+        full_width="600" full_height="450"
+    %}
+  </div>
 
 At the Aberdares Country Club, near the Ark, we also saw some baboons, impalas, thomson's gazelles, and a peacock.
 
-<div class="text-center">
-  {% include elements/photo.html
-      url="https://live.staticflickr.com/65535/48740606758_718889f723_o.jpg"
-      thumb_width="150" title="Peacock at Aberdares Country Club" lightbox="Game Drives"
-  %}
-  {% include elements/photo.html
-      url="https://live.staticflickr.com/65535/48740935281_69b63473b8_o.jpg"
-      thumb_width="200" title="Peacock close-up at Aberdares Country Club" lightbox="Game Drives"
-  %}
+  <div class="text-center">
+    {% include elements/photoswipe.html
+        url="https://live.staticflickr.com/65535/48740606758_718889f723_o.jpg"
+        thumb_width="150" title="Peacock at Aberdares Country Club"
+        full_width="450" full_height="600"
+    %}
+    {% include elements/photoswipe.html
+        url="https://live.staticflickr.com/65535/48740935281_69b63473b8_o.jpg"
+        thumb_width="300" title="Peacock close-up at Aberdares Country Club"
+        full_width="600" full_height="400"
+    %}
+  </div>
 </div>
 
 Although there weren't many animals at the Ark, it was our first real chance to see some wildlife, and it was exciting, nevertheless.
@@ -71,38 +78,46 @@ Although there weren't many animals at the Ark, it was our first real chance to 
 
 Samburu is an area north of the equator, located in the center of Kenya. The land around here is dry and desert-like, with few bushes and trees. Here, we saw baboons, reticulated giraffes, oryxes, impalas, thomson's gazelles, elephants, dik diks, ostriches, grevy's zebras, grant's gazelles (what our safari truck called "diaper butts," and see why [here](https://en.wikipedia.org/wiki/Grant%27s_gazelle)), and even a lioness resting in some bushes.
 
-<div class="text-center">
-  {% include elements/photo.html
+<div class="text-center photoswipe-gallery">
+  {% include elements/photoswipe.html
       url="https://live.staticflickr.com/65535/48740606393_4f24904b75_o.jpg"
-      thumb_width="200" title="Baboons at Samburu" lightbox="Game Drives"
+      thumb_width="200" title="Baboons at Samburu"
+      full_width="600" full_height="450"
   %}
-  {% include elements/photo.html
+  {% include elements/photoswipe.html
       url="https://live.staticflickr.com/65535/48740606453_02c1dcf73c_o.jpg"
-      thumb_width="200" title="Elephant at Samburu" lightbox="Game Drives"
+      thumb_width="200" title="Elephant at Samburu"
+      full_width="600" full_height="450"
   %}
-  {% include elements/photo.html
+  {% include elements/photoswipe.html
       url="https://live.staticflickr.com/65535/48741119692_f8d37d4a98_o.jpg"
-      thumb_width="200" title="Oryx at Samburu" lightbox="Game Drives"
+      thumb_width="200" title="Oryx at Samburu"
+      full_width="600" full_height="450"
   %}
-  {% include elements/photo.html
+  {% include elements/photoswipe.html
       url="https://live.staticflickr.com/65535/48740935066_7e21df8970_o.jpg"
-      thumb_width="200" title="Reticulated giraffes at Samburu" lightbox="Game Drives"
+      thumb_width="200" title="Reticulated giraffes at Samburu"
+      full_width="600" full_height="450"
   %}
-  {% include elements/photo.html
+  {% include elements/photoswipe.html
       url="https://live.staticflickr.com/65535/48740606638_752252d3bd_o.jpg"
-      thumb_width="200" title="Impala at Samburu" lightbox="Game Drives"
+      thumb_width="200" title="Impala at Samburu"
+      full_width="600" full_height="450"
   %}
-  {% include elements/photo.html
+  {% include elements/photoswipe.html
       url="https://live.staticflickr.com/65535/48740606678_6d9f3482a6_o.jpg"
-      thumb_width="200" title="Lioness at Samburu (look closely)" lightbox="Game Drives"
+      thumb_width="170" title="Lioness at Samburu"
+      full_width="600" full_height="536"
   %}
-  {% include elements/photo.html
+  {% include elements/photoswipe.html
       url="https://live.staticflickr.com/65535/48741119697_5b99e26766_o.jpg"
-      thumb_width="200" title="Ostrich at Samburu" lightbox="Game Drives"
+      thumb_width="200" title="Ostrich at Samburu"
+      full_width="600" full_height="450"
   %}
-  {% include elements/photo.html
+  {% include elements/photoswipe.html
       url="https://live.staticflickr.com/65535/48741119832_225ebe076d_o.jpg"
-      thumb_width="200" title="Zebras at Samburu" lightbox="Game Drives"
+      thumb_width="200" title="Zebras at Samburu"
+      full_width="600" full_height="450"
   %}
 </div>
 
@@ -114,18 +129,21 @@ Ol Pejeta is located in central Kenya, just straight north of Nairobi. The game 
 
 We managed to visit the Chimpanzee and Rhinoceros conservancies while we were there, and we managed to actually see chimpanzees interacting with each other (although they were lazily just lying around). We also had the unique opportunity to feed one of the black rhinos, a blind rhino named Baraka.
 
-<div class="text-center">
-  {% include elements/photo.html
+<div class="text-center photoswipe-gallery">
+  {% include elements/photoswipe.html
       url="https://live.staticflickr.com/65535/48741119427_950e08953a_o.jpg"
-      thumb_width="200" title="Chimpanzee at Ol Pejeta" lightbox="Game Drives"
+      thumb_width="300" title="Chimpanzee at Ol Pejeta"
+      full_width="600" full_height="400"
   %}
-  {% include elements/photo.html
+  {% include elements/photoswipe.html
       url="https://live.staticflickr.com/65535/48741119722_6ea09cfa61_o.jpg"
-      thumb_width="200" title="Rhino at Ol Pejeta... and we got to pet it!" lightbox="Game Drives"
+      thumb_width="270" title="Rhino at Ol Pejeta... and we got to pet it!"
+      full_width="600" full_height="450"
   %}
-  {% include elements/photo.html
+  {% include elements/photoswipe.html
       url="https://live.staticflickr.com/65535/48740606828_4cca69618e_o.jpg"
-      thumb_width="150" title="Rhino feeding at Ol Pejeta" lightbox="Game Drives"
+      thumb_width="150" title="Rhino feeding at Ol Pejeta"
+      full_width="450" full_height="600"
   %}
 </div>
 
@@ -141,10 +159,11 @@ Lake Naivasha is a small lake just to the west of Nairobi. While there, we got t
 
 The resort where we stayed is famous for having hippos come graze on the grass right by the cabins, but we didn't see any hippos that night. We did manage to see some waterbucks grazing, but that was about it.
 
-<div class="text-center">
-  {% include elements/photo.html
+<div class="text-center photoswipe-gallery">
+  {% include elements/photoswipe.html
       url="https://live.staticflickr.com/65535/48740935336_73f8a59ae8_o.jpg"
-      thumb_width="150" title="Waterbucks near Lake Naivasha" lightbox="Game Drives"
+      thumb_width="150" title="Waterbucks near Lake Naivasha"
+      full_width="450" full_height="600"
   %}
 </div>
 
@@ -156,66 +175,81 @@ Because of the time of year we went, and the location, we managed to see thousan
 
 Although I wish I could attach all of the pictures we have from the Maasai Mara, I honestly can't... there's too many incredible ones. Intead, I'll have to add some of my favorites:
 
-<div class="text-center">
-  {% include elements/photo.html
+<div class="text-center photoswipe-gallery">
+  {% include elements/photoswipe.html
       url="https://live.staticflickr.com/65535/48740934961_f96f3dd557_o.jpg"
-      thumb_width="200" title="Cheetah at Maasai Mara" lightbox="Game Drives"
+      thumb_width="215" title="Cheetah at Maasai Mara"
+      full_width="600" full_height="414"
   %}
-  {% include elements/photo.html
+  {% include elements/photoswipe.html
       url="https://live.staticflickr.com/65535/48740935001_ed2ef1a21f_o.jpg"
-      thumb_width="200" title="Elephants at Maasai Mara" lightbox="Game Drives"
+      thumb_width="200" title="Elephants at Maasai Mara"
+      full_width="600" full_height="450"
   %}
-  {% include elements/photo.html
+  {% include elements/photoswipe.html
       url="https://live.staticflickr.com/65535/48741119482_2a65f2332a_o.jpg"
-      thumb_width="200" title="Momma elephant with baby at Maasai Mara" lightbox="Game Drives"
+      thumb_width="225" title="Momma elephant with baby at Maasai Mara"
+      full_width="600" full_height="400"
   %}
-  {% include elements/photo.html
+  {% include elements/photoswipe.html
       url="https://live.staticflickr.com/65535/48741119542_20ff32c710_o.jpg"
-      thumb_width="200" title="Giraffe at Maasai Mara" lightbox="Game Drives"
+      thumb_width="200" title="Giraffe at Maasai Mara"
+      full_width="600" full_height="450"
   %}
-  {% include elements/photo.html
+  {% include elements/photoswipe.html
       url="https://live.staticflickr.com/65535/48741119572_75b99d2f3e_o.jpg"
-      thumb_width="200" title="Giraffe headshot at Maasai Mara" lightbox="Game Drives"
+      thumb_width="200" title="Giraffe headshot at Maasai Mara"
+      full_width="600" full_height="450"
   %}
-  {% include elements/photo.html
+  {% include elements/photoswipe.html
       url="https://live.staticflickr.com/65535/48740935081_640dc843a8_o.jpg"
-      thumb_width="200" title="Hippo at Maasai Mara" lightbox="Game Drives"
+      thumb_width="225" title="Hippo at Maasai Mara"
+      full_width="600" full_height="400"
   %}
-  {% include elements/photo.html
+  {% include elements/photoswipe.html
       url="https://live.staticflickr.com/65535/48740935106_67389659e4_o.jpg"
-      thumb_width="200" title="Swimming hippo at Maasai Mara" lightbox="Game Drives"
+      thumb_width="200" title="Swimming hippo at Maasai Mara"
+      full_width="600" full_height="450"
   %}
-  {% include elements/photo.html
+  {% include elements/photoswipe.html
       url="https://live.staticflickr.com/65535/48741119617_67389659e4_o.jpg"
-      thumb_width="200" title="Hyenas at Maasai Mara" lightbox="Game Drives"
+      thumb_width="200" title="Hyenas at Maasai Mara"
+      full_width="600" full_height="450"
   %}
-  {% include elements/photo.html
+  {% include elements/photoswipe.html
       url="https://live.staticflickr.com/65535/48740935151_cedbc943a3_o.jpg"
-      thumb_width="200" title="Leopard laying around at Maasai Mara" lightbox="Game Drives"
+      thumb_width="200" title="Leopard laying around at Maasai Mara"
+      full_width="600" full_height="450"
   %}
-  {% include elements/photo.html
+  {% include elements/photoswipe.html
       url="https://live.staticflickr.com/65535/48740606698_6ae7e8c66d_o.jpg"
-      thumb_width="200" title="Lions at Maasai Mara" lightbox="Game Drives"
+      thumb_width="210" title="Lions at Maasai Mara"
+      full_width="600" full_height="424"
   %}
-  {% include elements/photo.html
+  {% include elements/photoswipe.html
       url="https://live.staticflickr.com/65535/48740935211_3504edbc65_o.jpg"
-      thumb_width="200" title="Yawning lion at Maasai Mara" lightbox="Game Drives"
+      thumb_width="200" title="Yawning lion at Maasai Mara"
+      full_width="600" full_height="450"
   %}
-  {% include elements/photo.html
+  {% include elements/photoswipe.html
       url="https://live.staticflickr.com/65535/48740935321_f29e95c343_o.jpg"
-      thumb_width="200" title="Warthogs at Maasai Mara" lightbox="Game Drives"
+      thumb_width="225" title="Warthogs at Maasai Mara"
+      full_width="600" full_height="400"
   %}
-  {% include elements/photo.html
+  {% include elements/photoswipe.html
       url="https://live.staticflickr.com/65535/48741119787_f547fdb8b4_o.jpg"
-      thumb_width="200" title="Wildebeests at Maasai Mara" lightbox="Game Drives"
+      thumb_width="225" title="Wildebeests at Maasai Mara"
+      full_width="600" full_height="400"
   %}
-  {% include elements/photo.html
+  {% include elements/photoswipe.html
       url="https://live.staticflickr.com/65535/48740935386_f3d51837f8_o.jpg"
-      thumb_width="200" title="Walking wildebeests at Maasai Mara" lightbox="Game Drives"
+      thumb_width="200" title="Walking wildebeests at Maasai Mara"
+      full_width="600" full_height="450"
   %}
-  {% include elements/photo.html
+  {% include elements/photoswipe.html
       url="https://live.staticflickr.com/65535/48741119842_aa42e45571_o.jpg"
-      thumb_width="200" title="Zebras at Maasai Mara" lightbox="Game Drives"
+      thumb_width="200" title="Zebras at Maasai Mara"
+      full_width="600" full_height="446"
   %}
 </div>
 
