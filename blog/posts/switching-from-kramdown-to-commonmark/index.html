@@ -49,7 +49,7 @@
     <meta name="msvalidate.01" content="89B2B19FF966341B78EF64EDADE6DF81" />
     <meta name="yandex-verification" content="32fe10ad6352714a" />
     <script type="application/ld+json">
-      {"headline":"Switching from kramdown to CommonMark","url":"https://emmasax.com/blog/posts/switching-from-kramdown-to-commonmark/","mainEntityOfPage":{"@type":"WebPage","@id":"https://emmasax.com/blog/posts/switching-from-kramdown-to-commonmark/"},"dateModified":"2021-06-03T00:10:03+00:00","datePublished":"2020-07-19T15:00:33+00:00","author":{"@type":"Person","name":"Emma Sax"},"description":"Emma Sax’s personal website and blog. Includes information about my social media profiles, resumé, and hobbies.","@type":"BlogPosting","@context":"https://schema.org"}
+      {"headline":"Switching from kramdown to CommonMark","url":"https://emmasax.com/blog/posts/switching-from-kramdown-to-commonmark/","mainEntityOfPage":{"@type":"WebPage","@id":"https://emmasax.com/blog/posts/switching-from-kramdown-to-commonmark/"},"dateModified":"2021-06-03T23:41:52+00:00","datePublished":"2020-07-19T15:00:33+00:00","author":{"@type":"Person","name":"Emma Sax"},"description":"Emma Sax’s personal website and blog. Includes information about my social media profiles, resumé, and hobbies.","@type":"BlogPosting","@context":"https://schema.org"}
     </script>
     <!-- End Jekyll SEO tag -->
   </head>
@@ -230,22 +230,31 @@
             <p>Here’s what my anchor looked like in the beginning:</p>
             <div class="photoswipe-gallery">
               <div class="text-center">
+                <!-- caption is present -->
+                <!-- and alt is not present -->
                 <a class="photoswipe" href="https://live.staticflickr.com/65535/50120866658_714fff8d24_o.png" target="_blank" data-pswp-width="1112" data-pswp-height="340">
                   <img class="image" src="https://live.staticflickr.com/65535/50120866658_714fff8d24_o.png" width="400" alt="With the anchors misaligned">
+                  <div class="hidden-caption-content invisible">With the anchors misaligned</div>
                 </a>
               </div>
               <p>And here’s my anchors at the end:</p>
               <div class="text-center">
+                <!-- caption is present -->
+                <!-- and alt is not present -->
                 <a class="photoswipe" href="https://live.staticflickr.com/65535/50121433291_c532150c4a_o.png" target="_blank" data-pswp-width="1124" data-pswp-height="417">
                   <img class="image" src="https://live.staticflickr.com/65535/50121433291_c532150c4a_o.png" width="400" alt="With the anchors properly lined up">
+                  <div class="hidden-caption-content invisible">With the anchors properly lined up</div>
                 </a>
               </div>
             </div>
             <p>After I was satisfied with my changes, I willingly merged my pull request and deployed away. A little while later, I noticed a few other key pieces I missed.</p>
             <p>First, my syntax highlighting also broke, and I didn’t even notice for several weeks! Here’s an image of how the HTML changed during the switch:</p>
             <div class="text-center photoswipe-gallery">
+              <!-- caption is present -->
+              <!-- and alt is not present -->
               <a class="photoswipe" href="https://live.staticflickr.com/65535/51220531902_fdfc75b7b5_k.jpg" target="_blank" data-pswp-width="1917" data-pswp-height="1094">
                 <img class="image" src="https://live.staticflickr.com/65535/51220531902_fdfc75b7b5_k.jpg" width="400" alt="HTML without syntax highlighting">
+                <div class="hidden-caption-content invisible">HTML without syntax highlighting</div>
               </a>
             </div>
             <p>In fact, when I originally saw this, I probably thought the HTML looked cleaner after the switch. But in reality, the switch caused all of my syntax highlighting to break.</p>

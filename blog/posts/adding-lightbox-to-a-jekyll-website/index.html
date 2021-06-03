@@ -49,7 +49,7 @@
     <meta name="msvalidate.01" content="89B2B19FF966341B78EF64EDADE6DF81" />
     <meta name="yandex-verification" content="32fe10ad6352714a" />
     <script type="application/ld+json">
-      {"headline":"Adding Lightbox to a Jekyll Website","url":"https://emmasax.com/blog/posts/adding-lightbox-to-a-jekyll-website/","mainEntityOfPage":{"@type":"WebPage","@id":"https://emmasax.com/blog/posts/adding-lightbox-to-a-jekyll-website/"},"dateModified":"2020-10-04T17:00:04+00:00","datePublished":"2020-08-24T04:05:00+00:00","author":{"@type":"Person","name":"Emma Sax"},"description":"Emma Sax’s personal website and blog. Includes information about my social media profiles, resumé, and hobbies.","@type":"BlogPosting","@context":"https://schema.org"}
+      {"headline":"Adding Lightbox to a Jekyll Website","url":"https://emmasax.com/blog/posts/adding-lightbox-to-a-jekyll-website/","mainEntityOfPage":{"@type":"WebPage","@id":"https://emmasax.com/blog/posts/adding-lightbox-to-a-jekyll-website/"},"dateModified":"2021-06-03T23:41:52+00:00","datePublished":"2020-08-24T04:05:00+00:00","author":{"@type":"Person","name":"Emma Sax"},"description":"Emma Sax’s personal website and blog. Includes information about my social media profiles, resumé, and hobbies.","@type":"BlogPosting","@context":"https://schema.org"}
     </script>
     <!-- End Jekyll SEO tag -->
   </head>
@@ -133,8 +133,8 @@
               <br>
               <br>
               <h4>With Lightbox (click the picture):</h4>
-              <a href="https://i.imgur.com/lyWrj3r.jpeg" title="Adorable creature" data-lightbox="PHOTO1">
-                <img class="image" src="https://i.imgur.com/lyWrj3r.jpeg" width="200" alt="Adorable creature">
+              <a href="https://i.imgur.com/lyWrj3r.jpeg" title="" data-lightbox="PHOTO1">
+                <img class="image" src="https://i.imgur.com/lyWrj3r.jpeg" width="200" alt="">
               </a>
             </div>
             <p>Implementing Lightbox <em>seemed</em> simple. Copy-paste a <a href="https://github.com/lokesh/lightbox2/tree/dev/dist/css">CSS file</a>, a <a href="https://github.com/lokesh/lightbox2/tree/dev/dist/js">Javascript file</a>, and add <a href="https://github.com/lokesh/lightbox2/tree/dev/dist/images">four images</a> to your project. And then call them from your <code>&lt;head&gt;</code> and as a <code>&lt;script&gt;</code>:</p>
@@ -154,7 +154,7 @@
             <p>And then just call your image with a <code>data-lightbox</code> element:</p>
             <div class="language-html highlighter-rouge">
               <div class="highlight">
-                <pre class="highlight"><code data-lang="html"><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://example-image.com"</span> <span class="na">title=</span><span class="s">"Example image goes here"</span> <span class="na">data-lightbox=</span><span class="s">"IMAGE-1"</span><span class="nt">&gt;</span>
+                <pre class="highlight"><code data-lang="html"><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://example-image.com"</span> <span class="na">caption=</span><span class="s">"Example image goes here"</span> <span class="na">data-lightbox=</span><span class="s">"IMAGE-1"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"image"</span> <span class="na">src=</span><span class="s">"https://example-image.com"</span> <span class="na">width=</span><span class="s">"200"</span> <span class="na">alt=</span><span class="s">"Example image goes here"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;/a&gt;</span>
 </code></pre>
@@ -166,7 +166,7 @@
             <p>In order to make the use of Lightbox a little bit more Jekyll friendly, I realized that I didn’t really want to be copy-pasting a bunch of HTML code all over the place. What I wanted was a single “method” that could be reused. Although there isn’t an easy solution for this in Liquid/Jekyll, what I decided on was an <code>_includes</code> file:</p>
             <div class="language-html highlighter-rouge">
               <div class="highlight">
-                <pre class="highlight"><code data-lang="html"><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"{{ include.url }}"</span> <span class="na">title=</span><span class="s">"{{ include.title }}"</span> <span class="na">data-lightbox=</span><span class="s">"{{ include.lightbox }}"</span><span class="nt">&gt;</span>
+                <pre class="highlight"><code data-lang="html"><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"{{ include.url }}"</span> <span class="na">caption=</span><span class="s">"{{ include.title }}"</span> <span class="na">data-lightbox=</span><span class="s">"{{ include.lightbox }}"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"image"</span> <span class="na">src=</span><span class="s">"{{ include.url }}"</span> <span class="na">width=</span><span class="s">"{{ include.thumb_width }}"</span> <span class="na">alt=</span><span class="s">"{{ include.title }}"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;/a&gt;</span>
 </code></pre>
@@ -176,7 +176,7 @@
             <div class="language-html highlighter-rouge">
               <div class="highlight">
                 <pre class="highlight"><code data-lang="html">{% include elements/photo.html url="https://example-photo.com" thumb_width="150"
-                               title="Title of example photo"  lightbox="PHOTO-1"
+                               caption="Title of example photo"  lightbox="PHOTO-1"
 %}
 </code></pre>
               </div>
