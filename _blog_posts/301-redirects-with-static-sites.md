@@ -49,7 +49,7 @@ So, the first thing I did was add CSS. I copy-pasted the `./assets/` directory f
 <div class="text-center photoswipe-gallery">
   {% include elements/photoswipe.html
       url="https://live.staticflickr.com/65535/50413992607_ef05913653_h.jpg"
-      thumb_width="300" title="emmasax4.info redirecting"
+      thumb_width="300" caption="emmasax4.info redirecting"
       full_width="1402" full_height="868"
   %}
 </div>

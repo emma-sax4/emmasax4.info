@@ -17,7 +17,7 @@ Of course, I started with the things I know how to do best: copy-paste 💁🏻�
 <div class="text-center photoswipe-gallery">
   {% include elements/photoswipe.html
       url="https://live.staticflickr.com/65535/48741690227_e27cb82884.jpg"
-      thumb_width="400" title="Ugly vertical pagination bar"
+      thumb_width="400" caption="Ugly vertical pagination bar"
       full_width="400" full_height="326"
   %}
 </div>
@@ -41,7 +41,7 @@ Clearly, that means my CSS is broken. But I didn't quite understand why 😕. Th
 <div class="text-center photoswipe-gallery">
   {% include elements/photoswipe.html
       url="https://live.staticflickr.com/65535/48741503991_ac5c550274.jpg"
-      thumb_width="450" title="Primer as a submodule"
+      thumb_width="450" caption="Primer as a submodule"
       full_width="486" full_height="45"
   %}
 </div>
@@ -71,7 +71,7 @@ back to my `main.scss`, and finally the pagination was beautiful:
 <div class="text-center photoswipe-gallery">
   {% include elements/photoswipe.html
       url="https://live.staticflickr.com/65535/48741504061_7ebbd630fa.jpg"
-      thumb_width="400" title="Pagination bar that's much better"
+      thumb_width="400" caption="Pagination bar that's much better"
       full_width="500" full_height="345"
   %}
 </div>
