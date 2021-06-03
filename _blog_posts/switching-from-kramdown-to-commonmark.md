@@ -121,23 +121,24 @@ And then, the last trick was to add CSS:
 I'm not exactly sure why `#anchor` defines the `position` as `relative`, and the `#anchor a` defines the `position` as `absolute`, but by a miracle, I got this to work, and I'm not going to question it now!
 
 Here's what my anchor looked like in the beginning:
-
-<div class="text-center photoswipe-gallery">
-  {% include elements/photoswipe.html
-      url="https://live.staticflickr.com/65535/50120866658_714fff8d24_o.png"
-      thumb_width="400" title="With the anchors misaligned"
-      full_width="1112" full_height="340"
-  %}
-</div>
+<div class="photoswipe-gallery">
+  <div class="text-center">
+    {% include elements/photoswipe.html
+        url="https://live.staticflickr.com/65535/50120866658_714fff8d24_o.png"
+        thumb_width="400" title="With the anchors misaligned"
+        full_width="1112" full_height="340"
+    %}
+  </div>
 
 And here's my anchors at the end:
 
-<div class="text-center photoswipe-gallery">
-  {% include elements/photoswipe.html
-      url="https://live.staticflickr.com/65535/50121433291_c532150c4a_o.png"
-      thumb_width="400" title="With the anchors properly lined up"
-      full_width="1124" full_height="417"
-  %}
+  <div class="text-center">
+    {% include elements/photoswipe.html
+        url="https://live.staticflickr.com/65535/50121433291_c532150c4a_o.png"
+        thumb_width="400" title="With the anchors properly lined up"
+        full_width="1124" full_height="417"
+    %}
+  </div>
 </div>
 
 After I was satisfied with my changes, I willingly merged my pull request and deployed away. A little while later, I noticed a few other key pieces I missed.
