@@ -52,12 +52,12 @@ The rooms are small, but that's by design. They feel cozy and snug. The hallways
 <div class="text-center photoswipe-gallery">
   {% include elements/photoswipe.html
       url="https://live.staticflickr.com/65535/48797244476_b8b7e63c5d_o.jpg"
-      thumb_width="450" title="The Ark lodging"
+      thumb_width="450" caption="The Ark lodging"
       full_width="960" full_height="720"
   %}
   {% include elements/photoswipe.html
       url="https://live.staticflickr.com/65535/48826445088_4fcce75760_o.jpg"
-      thumb_width="250" title="The Ark's buffet line"
+      thumb_width="250" caption="The Ark's buffet line"
       full_width="3024" full_height="4032"
   %}
 </div>
@@ -83,12 +83,12 @@ I don't have many pictures of the exterior of Sarova Shaba Game Lodge, and that'
 <div class="text-center photoswipe-gallery">
   {% include elements/photoswipe.html
       url="https://live.staticflickr.com/65535/48872057586_638b72d2ca_o.jpg"
-      thumb_width="400" title="Sarova Shaba pool"
+      thumb_width="400" caption="Sarova Shaba pool"
       full_width="960" full_height="720"
   %}
   {% include elements/photoswipe.html
       url="https://live.staticflickr.com/65535/48826445063_35a542e32e_o.jpg"
-      thumb_width="400" title="Sarova Shaba Room"
+      thumb_width="400" caption="Sarova Shaba Room"
       full_width="4032" full_height="3024"
   %}
 </div>
@@ -106,27 +106,27 @@ Women and mothers take care of the children, take care of the livestock, do bead
 <div class="text-center photoswipe-gallery">
   {% include elements/photoswipe.html
       url="https://live.staticflickr.com/65535/48799101398_ac4b7ba7c5_o.jpg"
-      thumb_width="400" title="Samburu village"
+      thumb_width="400" caption="Samburu village"
       full_width="4032" full_height="3024"
   %}
   {% include elements/photoswipe.html
       url="https://live.staticflickr.com/65535/48799451886_c952b2af60_o.jpg"
-      thumb_width="450" title="Samburu children"
+      thumb_width="450" caption="Samburu children"
       full_width="6000" full_height="4000"
   %}
   {% include elements/photoswipe.html
       url="https://live.staticflickr.com/65535/48826820661_e3168ba066_o.png"
-      thumb_width="550" title="Samburu village"
+      thumb_width="550" caption="Samburu village"
       full_width="2208" full_height="1242"
   %}
   {% include elements/photoswipe.html
       url="https://live.staticflickr.com/65535/48826444963_7102bf89d2_o.jpg"
-      thumb_width="400" title="Samburu hut"
+      thumb_width="400" caption="Samburu hut"
       full_width="4032" full_height="3024"
   %}
   {% include elements/photoswipe.html
       url="https://live.staticflickr.com/65535/48826445033_8dc2101822_o.jpg"
-      thumb_width="400" title="Samburu elders"
+      thumb_width="400" caption="Samburu elders"
       full_width="4032" full_height="3024"
   %}
 </div>
@@ -138,12 +138,12 @@ Ol Pejeta's Sweetwaters Serena Camp was my favorite place we stayed. It's a tent
 <div class="text-center photoswipe-gallery">
   {% include elements/photoswipe.html
       url="https://live.staticflickr.com/65535/48796885958_e5f240a3e4_o.jpg"
-      thumb_width="200" title="Sweetwaters lodging"
+      thumb_width="200" caption="Sweetwaters lodging"
       full_width="720" full_height="960"
   %}
   {% include elements/photoswipe.html
       url="https://live.staticflickr.com/65535/48872252992_5a8b9aea8d_o.jpg"
-      thumb_width="400" title="Sweetwaters tent"
+      thumb_width="400" caption="Sweetwaters tent"
       full_width="960" full_height="640"
   %}
 </div>
@@ -157,7 +157,7 @@ Sweetwaters Serena Camp is on the Equator. No joke, the sign at the entrance gav
 <div class="text-center photoswipe-gallery">
   {% include elements/photoswipe.html
       url="https://live.staticflickr.com/65535/48802026607_bf7dedd9ea_o.jpg"
-      thumb_width="400" title="We stayed on the equator!"
+      thumb_width="400" caption="We stayed on the equator!"
       full_width="600" full_height="450"
   %}
 </div>
@@ -185,17 +185,17 @@ However, if you're lucky, your cabin windows (or deck on a top floor), gives you
 <div class="text-center photoswipe-gallery">
   {% include elements/photoswipe.html
       url="https://live.staticflickr.com/65535/48796885438_3c889d5496_o.jpg"
-      thumb_width="170" title="Sopa lodging"
+      thumb_width="170" caption="Sopa lodging"
       full_width="720" full_height="960"
   %}
   {% include elements/photoswipe.html
       url="https://live.staticflickr.com/65535/48797382142_5ed4a79360_o.jpg"
-      thumb_width="300" title="Sopa room with couch to watch the hippos"
+      thumb_width="300" caption="Sopa room with couch to watch the hippos"
       full_width="960" full_height="720"
   %}
   {% include elements/photoswipe.html
       url="https://live.staticflickr.com/65535/48826444793_daf66a4e6d_o.jpg"
-      thumb_width="300" title="Sopa lodging building"
+      thumb_width="300" caption="Sopa lodging building"
       full_width="4032" full_height="3024"
   %}
 </div>
@@ -217,7 +217,7 @@ Oh, the last thing I'll mention about Fig Tree Camp: they had limited times the 
 <div class="text-center photoswipe-gallery">
   {% include elements/photoswipe.html
       url="https://live.staticflickr.com/65535/48826443083_3125e40674_o.jpg"
-      thumb_width="400" title="Maasai Mara room"
+      thumb_width="400" caption="Maasai Mara room"
       full_width="3024" full_height="4032"
   %}
 </div>
@@ -237,17 +237,17 @@ The last thing I'll mention is that both tribes do a type of ceremonial activity
 <div class="text-center photoswipe-gallery">
   {% include elements/photoswipe.html
       url="https://live.staticflickr.com/65535/48799594437_12567ee4f7_o.jpg"
-      thumb_width="250" title="Maasai Mara jumping ceremony"
+      thumb_width="250" caption="Maasai Mara jumping ceremony"
       full_width="2988" full_height="5312"
   %}
   {% include elements/photoswipe.html
       url="https://live.staticflickr.com/65535/48799451771_dfeae19ebe_o.jpg"
-      thumb_width="315" title="Maasai Mara man and child"
+      thumb_width="315" caption="Maasai Mara man and child"
       full_width="1400" full_height="1965"
   %}
   {% include elements/photoswipe.html
       url="https://live.staticflickr.com/65535/48799595727_faf4d27004_o.jpg"
-      thumb_width="500" title="Maasai Mara village"
+      thumb_width="500" caption="Maasai Mara village"
       full_width="900" full_height="675"
   %}
 </div>

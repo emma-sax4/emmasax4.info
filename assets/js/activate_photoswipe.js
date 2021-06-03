@@ -18,22 +18,24 @@ lightbox.on('uiRegister', function() {
     html: 'Caption Text',
     onInit: (el, pswp) => {
       lightbox.pswp.on('change', () => {
-        const currentSlideElement = lightbox.pswp.currSlide.data.element;
-        let captionHTML = '';
-        if (currentSlideElement) {
-          const hiddenCaption = currentSlideElement.querySelector('.hidden-caption-content');
-          if (hiddenCaption) {
-            // get caption from element with class hidden-caption-content
-            captionHTML = hiddenCaption.innerHTML;
-          } else {
-            // get caption from alt attribute
-            captionHTML = currentSlideElement.querySelector('img').getAttribute('alt');
+        const currentSlideElement = lightbox.pswp.currSlide.data.element
+        const hiddenCaption = currentSlideElement.querySelector('.hidden-caption-content')
+
+        if (hiddenCaption == "" || hiddenCaption == null) {
+          const customCaptionElements = document.getElementsByClassName('pswp__custom-caption')
+          for (var counter = 0; counter < customCaptionElements.length; counter++) {
+            customCaptionElements[counter].remove()
           }
+        } else {
+          let captionHTML = '';
+          if (currentSlideElement) {
+            captionHTML = hiddenCaption.innerHTML;
+          }
+          el.innerHTML = captionHTML || '';
         }
-        el.innerHTML = captionHTML || '';
-      });
+      })
     }
-  });
+  })
 })
 
 lightbox.init()
