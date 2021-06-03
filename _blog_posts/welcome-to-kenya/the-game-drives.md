@@ -39,36 +39,36 @@ The Ark is where we saw our first cape buffalo, hyenas, warthogs (think Pumbaa!)
 
 <div class="photoswipe-gallery">
   <div class="text-center">
-  {% include elements/photoswipe.html
-      url="https://live.staticflickr.com/65535/48740606838_c65187533b_o.jpg"
-      thumb_width="200" title="Buffalo at the Ark"
-      full_width="600" full_height="450"
-  %}
-  {% include elements/photoswipe.html
-      url="https://live.staticflickr.com/65535/48740934946_f3e99feb9b_o.jpg"
-      thumb_width="200" title="Buffalos at the Ark"
-      full_width="600" full_height="450"
-  %}
-  {% include elements/photoswipe.html
-      url="https://live.staticflickr.com/65535/48741119477_98156ea6e6_o.jpg"
-      thumb_width="200" title="Elephants at the Ark"
-      full_width="600" full_height="450"
-  %}
+    {% include elements/photoswipe.html
+        url="https://live.staticflickr.com/65535/48740606838_c65187533b_o.jpg"
+        thumb_width="200" title="Buffalo at the Ark"
+        full_width="600" full_height="450"
+    %}
+    {% include elements/photoswipe.html
+        url="https://live.staticflickr.com/65535/48740934946_f3e99feb9b_o.jpg"
+        thumb_width="200" title="Buffalos at the Ark"
+        full_width="600" full_height="450"
+    %}
+    {% include elements/photoswipe.html
+        url="https://live.staticflickr.com/65535/48741119477_98156ea6e6_o.jpg"
+        thumb_width="200" title="Elephants at the Ark"
+        full_width="600" full_height="450"
+    %}
   </div>
 
 At the Aberdares Country Club, near the Ark, we also saw some baboons, impalas, thomson's gazelles, and a peacock.
 
   <div class="text-center">
-  {% include elements/photoswipe.html
-      url="https://live.staticflickr.com/65535/48740606758_718889f723_o.jpg"
-      thumb_width="150" title="Peacock at Aberdares Country Club"
-      full_width="450" full_height="600"
-  %}
-  {% include elements/photoswipe.html
-      url="https://live.staticflickr.com/65535/48740935281_69b63473b8_o.jpg"
-      thumb_width="300" title="Peacock close-up at Aberdares Country Club"
-      full_width="600" full_height="400"
-  %}
+    {% include elements/photoswipe.html
+        url="https://live.staticflickr.com/65535/48740606758_718889f723_o.jpg"
+        thumb_width="150" title="Peacock at Aberdares Country Club"
+        full_width="450" full_height="600"
+    %}
+    {% include elements/photoswipe.html
+        url="https://live.staticflickr.com/65535/48740935281_69b63473b8_o.jpg"
+        thumb_width="300" title="Peacock close-up at Aberdares Country Club"
+        full_width="600" full_height="400"
+    %}
   </div>
 </div>
 
