@@ -206,10 +206,10 @@
             </div>
             <p>Here is a picture of what the form now looks like:</p>
             <div class="text-center photoswipe-gallery">
-              <a class="photoswipe-gallery" href="https://live.staticflickr.com/65535/50910867482_e25fc606ba_b.jpg" target="_blank" data-pswp-width="975" data-pswp-height="437">
+              <a class="photoswipe" href="https://live.staticflickr.com/65535/50910867482_e25fc606ba_b.jpg" target="_blank" data-pswp-width="975" data-pswp-height="437">
                 <img class="image" src="https://live.staticflickr.com/65535/50910867482_e25fc606ba_b.jpg" width="400" alt="A basic HTML form">
               </a>
-              <a class="photoswipe-gallery" href="https://live.staticflickr.com/65535/50910770391_a88fce2728_c.jpg" target="_blank" data-pswp-width="795" data-pswp-height="262">
+              <a class="photoswipe" href="https://live.staticflickr.com/65535/50910770391_a88fce2728_c.jpg" target="_blank" data-pswp-width="795" data-pswp-height="262">
                 <img class="image" src="https://live.staticflickr.com/65535/50910770391_a88fce2728_c.jpg" width="400" alt="The 'thank you' that is shown upon submission">
               </a>
             </div>
@@ -226,7 +226,7 @@
             </div>
             <p>Now my form visually looks like it’s requiring the reCAPTCHA:</p>
             <div class="text-center photoswipe-gallery">
-              <a class="photoswipe-gallery" href="https://live.staticflickr.com/65535/50910047008_50718a7f0e_b.jpg" target="_blank" data-pswp-width="992" data-pswp-height="554">
+              <a class="photoswipe" href="https://live.staticflickr.com/65535/50910047008_50718a7f0e_b.jpg" target="_blank" data-pswp-width="992" data-pswp-height="554">
                 <img class="image" src="https://live.staticflickr.com/65535/50910047008_50718a7f0e_b.jpg" width="600" alt="Form with the reCAPTCHA">
               </a>
             </div>
@@ -300,7 +300,7 @@
             <p>And now for step eleven… testing! When testing, I found that as expected, I could not submit anything without first completing the reCAPTCHA. If I never complete the reCAPTCHA, I cannot submit a message. If I complete the reCAPTCHA, and then wait until it expires, then I cannot send the message. If I follow a happy path scenario (fill out a message, complete reCAPTCHA, press submit), then it successfully enters my Google Forms’ spreadsheet.</p>
             <p>Now, here’s where it gets fancy. If I go into the browser’s inspection tool, remove the <code>disable</code> on the button, and show the invisible <code>&quot;verification&quot;</code> form input, then I can enter a random value into the invisible input, and press submit… all without completing the reCAPTCHA. My website even gives a nice message that the submission was successful (as a little decoy). <em>However</em>, Google Forms never receives the message. Google Forms returns a <code>400</code> on the <code>FormResponse</code> (this can be seen in the browser’s inspection tool), and the message goes into a black hole, never to be seen again. Google Forms can only <em>receive</em> the message if the invisible verification input’s string <em>exactly matches</em> the specific regex I set in Google Forms.</p>
             <div class="text-center photoswipe-gallery">
-              <a class="photoswipe-gallery" href="https://live.staticflickr.com/65535/50910770401_aa13b0dec4_c.jpg" target="_blank" data-pswp-width="800" data-pswp-height="424">
+              <a class="photoswipe" href="https://live.staticflickr.com/65535/50910770401_aa13b0dec4_c.jpg" target="_blank" data-pswp-width="800" data-pswp-height="424">
                 <img class="image" src="https://live.staticflickr.com/65535/50910770401_aa13b0dec4_c.jpg" width="500" alt="A demonstration of what a spam message could 'look' like">
               </a>
             </div>

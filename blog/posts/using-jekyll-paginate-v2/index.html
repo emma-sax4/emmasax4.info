@@ -126,7 +126,7 @@
             <p>A couple of weeks ago, I started the endeavor of adding Bootstrap to this website. You can read more about how this repository uses Bootstrap, and how to add Bootstrap to a static content site <a href="/blog/posts/adding-bootstrap-to-your-static-content-site/">here</a>.</p>
             <p>But, soon after I started getting an upgrade in my CSS game, I realized that my pagination bar on my blog site was sorely outdated 😢. At one point, I had the nerve to call this pagination bar beautiful:</p>
             <div class="text-center photoswipe-gallery">
-              <a class="photoswipe-gallery" href="https://live.staticflickr.com/65535/48741504061_7ebbd630fa.jpg" target="_blank" data-pswp-width="500" data-pswp-height="345">
+              <a class="photoswipe" href="https://live.staticflickr.com/65535/48741504061_7ebbd630fa.jpg" target="_blank" data-pswp-width="500" data-pswp-height="345">
                 <img class="image" src="https://live.staticflickr.com/65535/48741504061_7ebbd630fa.jpg" width="400" alt="Pagination bar that's now not quite as lovely">
               </a>
             </div>
@@ -147,7 +147,7 @@
             <p>Despite all of this work, now every single tag and category filters blog posts properly. The last secret to getting pagination working on those pages is that I needed to save the URL of the filtered page: aka <code>/blog/welcome-to-kenya</code> or <code>/blog/tech</code>. And this way, we could append the page count number to the end of that: <code>/blog/welcome-to-kenya/4/</code> or <code>/blog/tech/2/</code>.</p>
             <p>After all of that work, I now have a pagination bar that makes me proud of this website. Just add in a few more pretty icons, and I’m satisfied 😁.</p>
             <div class="text-center photoswipe-gallery">
-              <a class="photoswipe-gallery" href="https://live.staticflickr.com/65535/49241327792_e87715127e_o.png" target="_blank" data-pswp-width="994" data-pswp-height="604">
+              <a class="photoswipe" href="https://live.staticflickr.com/65535/49241327792_e87715127e_o.png" target="_blank" data-pswp-width="994" data-pswp-height="604">
                 <img class="image" src="https://live.staticflickr.com/65535/49241327792_e87715127e_o.png" width="400" alt="Pagination bar that can grow with my site">
               </a>
             </div>
@@ -189,7 +189,7 @@
             <p>The <code>script</code> section asks Travis CI to build the site to the <code>site</code> destination directory. The <code>deploy</code> section tells Travis CI to run a deploy to the GitHub Pages provider with the <code>./site</code> directory, on the target branch <code>gh-pages</code>, and which GitHub user to use (in this case, <code>Deployment Bot</code> with the email <code>deploy@travis-ci.org</code>). There are a few other little pieces to get it working properly, but you can check out my completed <a href="https://github.com/emmahsax/emmahsax.github.io/blob/d4c71986f709fd9d341410cf4974ad34424905a6/.travis.yml"><code>.travis.yml</code> file</a> if you want to see more. I did need to make a new branch in GitHub—the <code>release</code> branch. The idea here is that the <code>release</code> branch is used for me to store my source code for this site, and the <code>gh-pages</code> branch is for GitHub Pages to deploy. Only the fully compiled and bundled site lives on the <code>gh-pages</code> branch.</p>
             <p>It’s a little complicated, but, one deploy from Travis CI later, and the site was up and running again. <em>AND</em> I had the pagination option of my choosing that had all of the functionality I could ever want.</p>
             <div class="text-center photoswipe-gallery">
-              <a class="photoswipe-gallery" href="https://media.giphy.com/media/4xpB3eE00FfBm/giphy.gif" target="_blank" data-pswp-width="480" data-pswp-height="458">
+              <a class="photoswipe" href="https://media.giphy.com/media/4xpB3eE00FfBm/giphy.gif" target="_blank" data-pswp-width="480" data-pswp-height="458">
                 <img class="image" src="https://media.giphy.com/media/4xpB3eE00FfBm/giphy.gif" width="400" alt="Success baby gif via Giphy">
               </a>
             </div>
