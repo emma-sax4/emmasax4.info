@@ -72,7 +72,6 @@ At the Aberdares Country Club, near the Ark, we also saw some baboons, impalas, 
   </div>
 </div>
 
-
 Although there weren't many animals at the Ark, it was our first real chance to see some wildlife, and it was exciting, nevertheless.
 
 ### Samburu
