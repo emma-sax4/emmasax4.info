@@ -19,7 +19,7 @@ lightbox.on('uiRegister', function () {
     onInit: (el, pswp) => {
       lightbox.pswp.on('change', () => {
         const currentSlideElement = lightbox.pswp.currSlide.data.element
-        const hiddenCaption = currentSlideElement.querySelector('.hidden-caption-content')
+        const hiddenCaption = currentSlideElement.querySelector('.caption')
 
         if (hiddenCaption === '' || hiddenCaption === null) {
           const customCaptionElements = document.getElementsByClassName('pswp__custom-caption')

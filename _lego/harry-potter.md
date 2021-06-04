@@ -33,55 +33,55 @@ I have dreams of also getting the [Diagon Alley (75978)](https://www.lego.com/en
 <div class="text-center">
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50260270132_90e5ed62e9_k.jpg"
-      thumb_width="150" caption="Inside the Knight Bus" lightbox_gallery="Harry Potter"
+      thumb_width="150" caption="Inside the Knight Bus" lightbox_gallery="Harry Potter" type="lightbox2"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50260082281_0fdb0d5d79_k.jpg"
-      thumb_width="150" caption="Knight Bus outside" lightbox_gallery="Harry Potter"
+      thumb_width="150" caption="Knight Bus outside" lightbox_gallery="Harry Potter" type="lightbox2"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50260079471_33079b5531_k.jpg"
-      thumb_width="150" caption="Platform 9 3/4 and the Hogwarts Express" lightbox_gallery="Harry Potter"
+      thumb_width="150" caption="Platform 9 3/4 and the Hogwarts Express" lightbox_gallery="Harry Potter" type="lightbox2"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50260082536_6fc732146c_k.jpg"
-      thumb_width="150" caption="Saving Buckbeak" lightbox_gallery="Harry Potter"
+      thumb_width="150" caption="Saving Buckbeak" lightbox_gallery="Harry Potter" type="lightbox2"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50260082686_17a5d1b217_k.jpg"
-      thumb_width="150" caption="Inside Hagrid's house" lightbox_gallery="Harry Potter"
+      thumb_width="150" caption="Inside Hagrid's house" lightbox_gallery="Harry Potter" type="lightbox2"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50259425778_fce9316f95_k.jpg"
-      thumb_width="150" caption="Resurrecting Voldemort and the Womping Willow" lightbox_gallery="Harry Potter"
+      thumb_width="150" caption="Resurrecting Voldemort and the Womping Willow" lightbox_gallery="Harry Potter" type="lightbox2"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50260083081_7352563c92_k.jpg"
-      thumb_width="150" caption="Saving Sirius and Aragog's lair" lightbox_gallery="Harry Potter"
+      thumb_width="150" caption="Saving Sirius and Aragog's lair" lightbox_gallery="Harry Potter" type="lightbox2"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50260271152_a0d363ae68_k.jpg"
-      thumb_width="150" caption="The first Quidditch match" lightbox_gallery="Harry Potter"
+      thumb_width="150" caption="The first Quidditch match" lightbox_gallery="Harry Potter" type="lightbox2"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50260271292_c6a992978e_k.jpg"
-      thumb_width="150" caption="The Yule Ball" lightbox_gallery="Harry Potter"
+      thumb_width="150" caption="The Yule Ball" lightbox_gallery="Harry Potter" type="lightbox2"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50260083901_3314fb37fe_k.jpg"
-      thumb_width="150" caption="In the Great Hall" lightbox_gallery="Harry Potter"
+      thumb_width="150" caption="In the Great Hall" lightbox_gallery="Harry Potter" type="lightbox2"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50260083631_d868d87b7a_k.jpg"
-      thumb_width="150" caption="Hogwarts interior" lightbox_gallery="Harry Potter"
+      thumb_width="150" caption="Hogwarts interior" lightbox_gallery="Harry Potter" type="lightbox2"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50529240111_565bacd9d0_k.jpg"
-      thumb_width="150" caption="Full Astronomy Tower" lightbox_gallery="Harry Potter"
+      thumb_width="150" caption="Full Astronomy Tower" lightbox_gallery="Harry Potter" type="lightbox2"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50528515018_ed2c41f2f7_k.jpg"
-      thumb_width="150" caption="The Astronomy Tower and Ravenclaw common room" lightbox_gallery="Harry Potter"
+      thumb_width="150" caption="The Astronomy Tower and Ravenclaw common room" lightbox_gallery="Harry Potter" type="lightbox2"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50529240681_edd2c03ca4_k.jpg"

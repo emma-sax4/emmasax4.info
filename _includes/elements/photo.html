@@ -36,9 +36,9 @@
 <img class="image" src="{{ include.url }}" width="{{ include.thumb_width }}" alt="{{ alt }}">
 {% endif %}
 
-{% unless caption == "lightbox2" %}
+{% unless include.type == "lightbox2" %}
   {% unless caption == "" %}
-  <div class="hidden-caption-content invisible">{{ caption }}</div>
+  <div class="invisible caption">{{ caption }}</div>
   {% endunless %}
 {% endunless %}
 
