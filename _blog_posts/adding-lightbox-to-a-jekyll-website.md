@@ -20,8 +20,8 @@ Check out a tiny demo of what Lightbox looks like in action:
   <br><br>
   <h4>With Lightbox (click the picture):</h4>
   {% include elements/photo.html
-      url="https://i.imgur.com/lyWrj3r.jpeg"
-      thumb_width="200" title="Adorable creature" lightbox="PHOTO1"
+      url="https://i.imgur.com/lyWrj3r.jpeg" type="lightbox2"
+      thumb_width="200" caption="Adorable creature" lightbox_gallery="PHOTO1"
   %}
 </div>
 
@@ -54,7 +54,7 @@ The only pieces that I eventually customized was the fonts I wanted the captions
 In order to make the use of Lightbox a little bit more Jekyll friendly, I realized that I didn't really want to be copy-pasting a bunch of HTML code all over the place. What I wanted was a single "method" that could be reused. Although there isn't an easy solution for this in Liquid/Jekyll, what I decided on was an `_includes` file:
 
 ```html
-{% raw %}<a href="{{ include.url }}" title="{{ include.title }}" data-lightbox="{{ include.lightbox }}">
+{% raw %}<a href="{{ include.url }}" caption="{{ include.title }}" data-lightbox="{{ include.lightbox }}">
   <img class="image" src="{{ include.url }}" width="{{ include.thumb_width }}" alt="{{ include.title }}">
 </a>{% endraw %}
 ```
@@ -63,7 +63,7 @@ And then, we can call it like this:
 
 ```html
 {% raw %}{% include elements/photo.html url="https://example-photo.com" thumb_width="150"
-                               title="Title of example photo"  lightbox="PHOTO-1"
+                               caption="Title of example photo" lightbox_gallery="PHOTO-1"
 %}{% endraw %}
 ```
 

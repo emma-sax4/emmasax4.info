@@ -134,9 +134,9 @@ I'm hiding a lot of the effort this took me... don't get me wrong, it took me wh
 In our example, I published a post on the 17th of January at night in CST. But we see now, that if I travel to France and look back at past blog posts, it'll look as if it was published on the 18th of January. BUT, the URL of the blog post will include the published date. See an example below:
 
 <div class="text-center photoswipe-gallery">
-  {% include elements/photoswipe.html
+  {% include elements/photo.html
       url="https://live.staticflickr.com/65535/49498384557_688bf3652a_o.png"
-      thumb_width="450" title="Time zone shown in URL"
+      thumb_width="450" caption="Time zone shown in URL"
       full_width="530" full_height="33"
   %}
 </div>

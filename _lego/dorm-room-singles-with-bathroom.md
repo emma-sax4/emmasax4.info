@@ -18,18 +18,18 @@ NOTE: the piece list numbers can sometimes be out of sync with what's in the LEG
 <div class="text-center">
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/51047685962_0fa6b4e205_z.jpg"
-      thumb_width="200" title="Dorm Room vision of main room and shower" lightbox="Singles Dorm Room with Bathroom"
+      thumb_width="200" caption="Dorm Room vision of main room and shower" lightbox_gallery="Singles Dorm Room with Bathroom" type="lightbox2"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/51047685972_d1b2ed71d8_z.jpg"
-      thumb_width="200" title="Dorm room birds-eye view" lightbox="Singles Dorm Room with Bathroom"
+      thumb_width="200" caption="Dorm room birds-eye view" lightbox_gallery="Singles Dorm Room with Bathroom" type="lightbox2"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50997044074_b5f7b32a49_z.jpg"
-      thumb_width="200" title="Dorm room facing the TV and door" lightbox="Singles Dorm Room with Bathroom"
+      thumb_width="200" caption="Dorm room facing the TV and door" lightbox_gallery="Singles Dorm Room with Bathroom" type="lightbox2"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50997045260_772030fc4e_z.jpg"
-      thumb_width="200" title="Dorm room with view of bathroom" lightbox="Singles Dorm Room with Bathroom"
+      thumb_width="200" caption="Dorm room with view of bathroom" lightbox_gallery="Singles Dorm Room with Bathroom" type="lightbox2"
   %}
 </div>

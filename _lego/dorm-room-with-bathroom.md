@@ -18,18 +18,18 @@ NOTES: the piece list numbers can sometimes be out of sync with what's in the LE
 <div class="text-center">
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50260080916_7e354f1ec9_k.jpg"
-      thumb_width="200" title="Dorm Room top facing minifigures" lightbox="Dorm Room with Bathroom"
+      thumb_width="200" caption="Dorm Room top facing minifigures" lightbox_gallery="Dorm Room with Bathroom" type="lightbox2"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50260266837_a97e901a44_k.jpg"
-      thumb_width="150" title="Dorm Room top facing bathroom mirror" lightbox="Dorm Room with Bathroom"
+      thumb_width="150" caption="Dorm Room top facing bathroom mirror" lightbox_gallery="Dorm Room with Bathroom" type="lightbox2"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50260080716_1672827dbe_k.jpg"
-      thumb_width="200" title="Dorm Room top facing door" lightbox="Dorm Room with Bathroom"
+      thumb_width="200" caption="Dorm Room top facing door" lightbox_gallery="Dorm Room with Bathroom" type="lightbox2"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50259423438_6359c73540_k.jpg"
-      thumb_width="200" title="Dorm Room top facing door" lightbox="Dorm Room with Bathroom"
+      thumb_width="200" caption="Dorm Room top facing door" lightbox_gallery="Dorm Room with Bathroom" type="lightbox2"
   %}
 </div>

@@ -12,14 +12,14 @@ Here's a link to the set: [Unikitty Roller Coaster Wagon (30406)](https://www.le
 <div class="text-center">
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50072954158_32c27268d2_k.jpg"
-      thumb_width="200" title="Cart Front" lightbox="Unikitty Cart"
+      thumb_width="200" caption="Cart Front" lightbox_gallery="Unikitty Cart" type="lightbox2"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50072954108_abe06bd835_k.jpg"
-      thumb_width="200" title="Cart Back" lightbox="Unikitty Cart"
+      thumb_width="200" caption="Cart Back" lightbox_gallery="Unikitty Cart" type="lightbox2"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50073521661_37680a69e1_k.jpg"
-      thumb_width="200" title="Cart with piece ejected out" lightbox="Unikitty Cart"
+      thumb_width="200" caption="Cart with piece ejected out" lightbox_gallery="Unikitty Cart" type="lightbox2"
   %}
 </div>
