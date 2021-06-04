@@ -20,8 +20,8 @@ Check out a tiny demo of what Lightbox looks like in action:
   <br><br>
   <h4>With Lightbox (click the picture):</h4>
   {% include elements/photo.html
-      url="https://i.imgur.com/lyWrj3r.jpeg"
-      thumb_width="200" caption="Adorable creature" lightbox="PHOTO1"
+      url="https://i.imgur.com/lyWrj3r.jpeg" type="lightbox2"
+      thumb_width="200" caption="Adorable creature" lightbox_gallery="PHOTO1"
   %}
 </div>
 
@@ -40,7 +40,7 @@ and
 And then just call your image with a `data-lightbox` element:
 
 ```html
-{% raw %}<a href="https://example-image.com" caption="Example image goes here" data-lightbox="IMAGE-1">
+{% raw %}<a href="https://example-image.com" title="Example image goes here" data-lightbox="IMAGE-1">
   <img class="image" src="https://example-image.com" width="200" alt="Example image goes here">
 </a>{% endraw %}
 ```
@@ -63,7 +63,7 @@ And then, we can call it like this:
 
 ```html
 {% raw %}{% include elements/photo.html url="https://example-photo.com" thumb_width="150"
-                               caption="Title of example photo"  lightbox="PHOTO-1"
+                               caption="Title of example photo" lightbox_gallery="PHOTO-1"
 %}{% endraw %}
 ```
 

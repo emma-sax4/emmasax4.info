@@ -12,22 +12,22 @@ However, putting all three mini-sets together made for a fun little afternoon of
 <div class="text-center">
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50528707218_cd8adc4a06_k.jpg"
-      thumb_width="150" title="Crab front" lightbox="3-in-1 Cat"
+      thumb_width="150" caption="Crab front" lightbox_gallery="3-in-1 Cat" type="lightbox2"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50528707068_c97013d9b9_k.jpg"
-      thumb_width="150" title="Crab side" lightbox="3-in-1 Cat"
+      thumb_width="150" caption="Crab side" lightbox_gallery="3-in-1 Cat" type="lightbox2"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50529431276_151eabda23_k.jpg"
-      thumb_width="150" title="Ostrich" lightbox="3-in-1 Cat"
+      thumb_width="150" caption="Ostrich" lightbox_gallery="3-in-1 Cat" type="lightbox2"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50529431136_a8fc2fb67c_k.jpg"
-      thumb_width="150" title="Ostrich closeup" lightbox="3-in-1 Cat"
+      thumb_width="150" caption="Ostrich closeup" lightbox_gallery="3-in-1 Cat" type="lightbox2"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50529431816_6bfcb77f81_k.jpg"
-      thumb_width="150" title="Cat" lightbox="3-in-1 Cat"
+      thumb_width="150" caption="Cat" lightbox_gallery="3-in-1 Cat" type="lightbox2"
   %}
 </div>

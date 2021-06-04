@@ -10,10 +10,10 @@ Putting together the little motorcycle was fun, and the minifigure's facial expr
 <div class="text-center">
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50528707783_398f54beda_k.jpg"
-      thumb_width="150" title="Monkie Kid" lightbox="Monkie Kid"
+      thumb_width="150" caption="Monkie Kid" lightbox_gallery="Monkie Kid" type="lightbox2"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50529431976_26d9c0c547_k.jpg"
-      thumb_width="150" title="Monkie Kid" lightbox="Monkie Kid"
+      thumb_width="150" caption="Monkie Kid" lightbox_gallery="Monkie Kid" type="lightbox2"
   %}
 </div>

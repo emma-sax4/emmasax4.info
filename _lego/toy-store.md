@@ -10,50 +10,50 @@ Note that for the pictures of the Toy Store, I've substituted the female minifig
 <div class="text-center">
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50762710118_a3d446843e_b.jpg"
-      thumb_width="200" title="Inside the Flower Shop" lightbox="Townhouse Toy Store"
+      thumb_width="200" caption="Inside the Flower Shop" lightbox_gallery="Townhouse Toy Store" type="lightbox2"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50763556647_4501aef110_b.jpg"
-      thumb_width="200" title="Birds-eye view of the Flower Shop" lightbox="Townhouse Toy Store"
+      thumb_width="200" caption="Birds-eye view of the Flower Shop" lightbox_gallery="Townhouse Toy Store" type="lightbox2"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50762710143_aa0cee55fe_b.jpg"
-      thumb_width="200" title="Outside the Flower Shop" lightbox="Townhouse Toy Store"
+      thumb_width="200" caption="Outside the Flower Shop" lightbox_gallery="Townhouse Toy Store" type="lightbox2"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50762710538_d71f7454c5_b.jpg"
-      thumb_width="200" title="Inside the Cake Shop" lightbox="Townhouse Toy Store"
+      thumb_width="200" caption="Inside the Cake Shop" lightbox_gallery="Townhouse Toy Store" type="lightbox2"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50763557092_93aa5916cc_b.jpg"
-      thumb_width="200" title="Inside the Cake Shop with a view of the office" lightbox="Townhouse Toy Store"
+      thumb_width="200" caption="Inside the Cake Shop with a view of the office" lightbox_gallery="Townhouse Toy Store" type="lightbox2"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50763441926_5afcab9d6c_b.jpg"
-      thumb_width="200" title="Outside the Cake Shop looking at the padio" lightbox="Townhouse Toy Store"
+      thumb_width="200" caption="Outside the Cake Shop looking at the padio" lightbox_gallery="Townhouse Toy Store" type="lightbox2"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50762710593_669b9abd25_b.jpg"
-      thumb_width="150" title="Outside the Cake Shop" lightbox="Townhouse Toy Store"
+      thumb_width="150" caption="Outside the Cake Shop" lightbox_gallery="Townhouse Toy Store" type="lightbox2"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50763556972_333d62e86b_b.jpg"
-      thumb_width="200" title="Outside the Cake Shop from the side" lightbox="Townhouse Toy Store"
+      thumb_width="200" caption="Outside the Cake Shop from the side" lightbox_gallery="Townhouse Toy Store" type="lightbox2"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50763441226_944c1dd5e7_b.jpg"
-      thumb_width="200" title="Outside the front of the Toy Store" lightbox="Townhouse Toy Store"
+      thumb_width="200" caption="Outside the front of the Toy Store" lightbox_gallery="Townhouse Toy Store" type="lightbox2"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50762709833_ec1de79915_b.jpg"
-      thumb_width="150" title="Outside the side of the Toy Store" lightbox="Townhouse Toy Store"
+      thumb_width="150" caption="Outside the side of the Toy Store" lightbox_gallery="Townhouse Toy Store" type="lightbox2"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50763441196_a3085ce780_b.jpg"
-      thumb_width="150" title="Inside the Toy Store" lightbox="Townhouse Toy Store"
+      thumb_width="150" caption="Inside the Toy Store" lightbox_gallery="Townhouse Toy Store" type="lightbox2"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50762790398_764395d9b9_b.jpg"
-      thumb_width="200" title="The Toy Store with floors separated" lightbox="Townhouse Toy Store"
+      thumb_width="200" caption="The Toy Store with floors separated" lightbox_gallery="Townhouse Toy Store" type="lightbox2"
   %}
 </div>

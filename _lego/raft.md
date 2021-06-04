@@ -10,18 +10,18 @@ The minifigures were designed by myself, and I specifically ordered top, bottom,
 <div class="text-center">
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50072953968_e15523675c_k.jpg"
-      thumb_width="200" title="Raft Front" lightbox="Raft"
+      thumb_width="200" caption="Raft Front" lightbox_gallery="Raft" type="lightbox2"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50072953903_4a5356bea5_k.jpg"
-      thumb_width="200" title="Raft Back" lightbox="Raft"
+      thumb_width="200" caption="Raft Back" lightbox_gallery="Raft" type="lightbox2"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50073521516_072e24ab86_k.jpg"
-      thumb_width="200" title="Raft hooked on 'dock'" lightbox="Raft"
+      thumb_width="200" caption="Raft hooked on 'dock'" lightbox_gallery="Raft" type="lightbox2"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50072953783_a32953e624_k.jpg"
-      thumb_width="200" title="Raft top" lightbox="Raft"
+      thumb_width="200" caption="Raft top" lightbox_gallery="Raft" type="lightbox2"
   %}
 </div>

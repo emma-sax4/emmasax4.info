@@ -10,26 +10,26 @@ Here's a link to the set: [Helicopter Adventure (31092)](https://www.lego.com/en
 <div class="text-center">
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/49977843728_9fc00bb86e_k.jpg"
-      thumb_width="150" title="Helicopter front" lightbox="LEGO 3-in-1 Creator085"
+      thumb_width="150" caption="Helicopter front" lightbox_gallery="LEGO 3-in-1 Creator085" type="lightbox2"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/49978363246_77d3d3a753_k.jpg"
-      thumb_width="150" title="Helicopter back" lightbox="LEGO 3-in-1 Creator085"
+      thumb_width="150" caption="Helicopter back" lightbox_gallery="LEGO 3-in-1 Creator085" type="lightbox2"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/49978363141_99b96ba922_k.jpg"
-      thumb_width="150" title="Steamboat front" lightbox="LEGO 3-in-1 Creator085"
+      thumb_width="150" caption="Steamboat front" lightbox_gallery="LEGO 3-in-1 Creator085" type="lightbox2"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/49978362646_a50bd0f186_k.jpg"
-      thumb_width="150" title="Steamboat back" lightbox="LEGO 3-in-1 Creator085"
+      thumb_width="150" caption="Steamboat back" lightbox_gallery="LEGO 3-in-1 Creator085" type="lightbox2"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/49978623487_2fa36eec74_k.jpg"
-      thumb_width="150" title="Plane front" lightbox="LEGO 3-in-1 Creator085"
+      thumb_width="150" caption="Plane front" lightbox_gallery="LEGO 3-in-1 Creator085" type="lightbox2"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/49978362526_df871ac79c_k.jpg"
-      thumb_width="150" title="Plane back" lightbox="LEGO 3-in-1 Creator085"
+      thumb_width="150" caption="Plane back" lightbox_gallery="LEGO 3-in-1 Creator085" type="lightbox2"
   %}
 </div>

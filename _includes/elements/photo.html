@@ -1,3 +1,45 @@
-<a href="{{ include.url }}" title="{{ include.title }}" data-lightbox="{{ include.lightbox }}">
-  <img class="image" src="{{ include.url }}" width="{{ include.thumb_width }}" alt="{{ include.title }}">
+{% if include.caption %}
+  {% if include.alt %}
+    {% assign caption = include.caption %}
+    {% assign alt = include.alt %}
+  {% else %}
+    {% assign caption = include.caption %}
+    {% assign alt = include.caption %}
+  {% endif %}
+{% else %}
+  {% if include.alt %}
+    {% assign caption = "" %}
+    {% assign alt = include.alt %}
+  {% else %}
+    {% assign caption = "" %}
+    {% assign alt = "" %}
+  {% endif %}
+{% endif %}
+
+{% if include.type == "lightbox2" %}
+
+{% if caption == "" %}
+<a href="{{ include.url }}" data-lightbox="{{ include.lightbox_gallery }}">
+{% else %}
+<a href="{{ include.url }}" data-lightbox="{{ include.lightbox_gallery }}" title="{{ caption }}">
+{% endif %}
+
+{% else %}
+
+<a class="photoswipe" href="{{ include.url }}" target="_blank" data-pswp-width="{{ include.full_width }}" data-pswp-height="{{ include.full_height }}">
+
+{% endif %}
+
+{% if alt == "" %}
+<img class="image" src="{{ include.url }}" width="{{ include.thumb_width }}">
+{% else %}
+<img class="image" src="{{ include.url }}" width="{{ include.thumb_width }}" alt="{{ alt }}">
+{% endif %}
+
+{% unless caption == "lightbox2" %}
+  {% unless caption == "" %}
+  <div class="hidden-caption-content invisible">{{ caption }}</div>
+  {% endunless %}
+{% endunless %}
+
 </a>

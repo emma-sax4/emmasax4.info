@@ -16,18 +16,18 @@ Featured in the photographs are two minifigures I've designed (who I've named Ta
 <div class="text-center">
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/49985840352_9032841264_b.jpg"
-      thumb_width="200" title="Car front" lightbox="Car"
+      thumb_width="200" caption="Car front" lightbox_gallery="Car" type="lightbox2"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/49985585081_8a33a16dee_b.jpg"
-      thumb_width="200" title="Car back" lightbox="Car"
+      thumb_width="200" caption="Car back" lightbox_gallery="Car" type="lightbox2"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/49985840327_da44a85b5d_b.jpg"
-      thumb_width="200" title="Car with driver door open" lightbox="Car"
+      thumb_width="200" caption="Car with driver door open" lightbox_gallery="Car" type="lightbox2"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/49985065258_fdd7b8c519_b.jpg"
-      thumb_width="200" title="Car top view" lightbox="Car"
+      thumb_width="200" caption="Car top view" lightbox_gallery="Car" type="lightbox2"
   %}
 </div>

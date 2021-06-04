@@ -12,14 +12,14 @@ Also featured in the last photograph is my personal minifigure that my coworker 
 <div class="text-center">
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/49978623252_0e93eaca6d_k.jpg"
-      thumb_width="200" title="DOTS frame design 1 forward" lightbox="DOTS frame"
+      thumb_width="200" caption="DOTS frame design 1 forward" lightbox_gallery="DOTS frame" type="lightbox2"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/49978622887_5d44c13836_k.jpg"
-      thumb_width="200" title="DOTS frame design 1 tilted" lightbox="DOTS frame"
+      thumb_width="200" caption="DOTS frame design 1 tilted" lightbox_gallery="DOTS frame" type="lightbox2"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/49978362791_4b9eee62c1_k.jpg"
-      thumb_width="200" title="DOTS frame and minifigure" lightbox="DOTS frame"
+      thumb_width="200" caption="DOTS frame and minifigure" lightbox_gallery="DOTS frame" type="lightbox2"
   %}
 </div>

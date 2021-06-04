@@ -11,7 +11,7 @@ A couple of weeks ago, I started the endeavor of adding Bootstrap to this websit
 But, soon after I started getting an upgrade in my CSS game, I realized that my pagination bar on my blog site was sorely outdated 😢. At one point, I had the nerve to call this pagination bar beautiful:
 
 <div class="text-center photoswipe-gallery">
-  {% include elements/photoswipe.html
+  {% include elements/photo.html
       url="https://live.staticflickr.com/65535/48741504061_7ebbd630fa.jpg"
       thumb_width="400" caption="Pagination bar that's now not quite as lovely"
       full_width="500" full_height="345"
@@ -51,7 +51,7 @@ Despite all of this work, now every single tag and category filters blog posts p
 After all of that work, I now have a pagination bar that makes me proud of this website. Just add in a few more pretty icons, and I'm satisfied 😁.
 
 <div class="text-center photoswipe-gallery">
-  {% include elements/photoswipe.html
+  {% include elements/photo.html
       url="https://live.staticflickr.com/65535/49241327792_e87715127e_o.png"
       thumb_width="400" caption="Pagination bar that can grow with my site"
       full_width="994" full_height="604"
@@ -102,7 +102,7 @@ The `script` section asks Travis CI to build the site to the `site` destination 
 It's a little complicated, but, one deploy from Travis CI later, and the site was up and running again. _AND_ I had the pagination option of my choosing that had all of the functionality I could ever want.
 
 <div class="text-center photoswipe-gallery">
-  {% include elements/photoswipe.html
+  {% include elements/photo.html
       url="https://media.giphy.com/media/4xpB3eE00FfBm/giphy.gif"
       thumb_width="400" caption="Success baby gif via Giphy"
       full_width="480" full_height="458"
