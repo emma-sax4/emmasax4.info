@@ -7,6 +7,10 @@ a:hover {
   color: #001aaf;
 }
 
+a:hover:not(.photoswipe, .lightbox2) {
+  text-decoration: underline;
+}
+
 .link-icon-button > a {
   svg {
     height: 3rem;

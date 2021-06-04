@@ -19,9 +19,9 @@
 {% if include.type == "lightbox2" %}
 
 {% if caption == "" %}
-<a href="{{ include.url }}" data-lightbox="{{ include.lightbox_gallery }}">
+<a class="lightbox2" href="{{ include.url }}" data-lightbox="{{ include.lightbox_gallery }}">
 {% else %}
-<a href="{{ include.url }}" data-lightbox="{{ include.lightbox_gallery }}" title="{{ caption }}">
+<a class="lightbox2" href="{{ include.url }}" data-lightbox="{{ include.lightbox_gallery }}" title="{{ caption }}">
 {% endif %}
 
 {% else %}
