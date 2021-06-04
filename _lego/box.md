@@ -11,10 +11,6 @@ Here's a link to the instructions and piece list of the box: <a href="/assets/re
 
 NOTE: the piece list numbers can sometimes be out of sync with what's in the LEGO Bricks and Pieces database. Sometimes I need to do a more thorough Google search in order to find the correct piece number.
 
-
-
-
-
 <div class="text-center">
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/49947517557_17d59cec8a_k.jpg"
