@@ -9,7 +9,7 @@ const options = {
 
 const lightbox = new PhotoSwipeLightbox(options)
 
-lightbox.on('uiRegister', function() {
+lightbox.on('uiRegister', function () {
   lightbox.pswp.ui.registerElement({
     name: 'custom-caption',
     order: 9,
@@ -21,17 +21,17 @@ lightbox.on('uiRegister', function() {
         const currentSlideElement = lightbox.pswp.currSlide.data.element
         const hiddenCaption = currentSlideElement.querySelector('.hidden-caption-content')
 
-        if (hiddenCaption == "" || hiddenCaption == null) {
+        if (hiddenCaption === '' || hiddenCaption === null) {
           const customCaptionElements = document.getElementsByClassName('pswp__custom-caption')
-          for (var counter = 0; counter < customCaptionElements.length; counter++) {
+          for (let counter = 0; counter < customCaptionElements.length; counter++) {
             customCaptionElements[counter].remove()
           }
         } else {
-          let captionHTML = '';
+          let captionHTML = ''
           if (currentSlideElement) {
-            captionHTML = hiddenCaption.innerHTML;
+            captionHTML = hiddenCaption.innerHTML
           }
-          el.innerHTML = captionHTML || '';
+          el.innerHTML = captionHTML || ''
         }
       })
     }
