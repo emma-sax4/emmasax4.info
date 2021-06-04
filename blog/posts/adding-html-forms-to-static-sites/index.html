@@ -208,11 +208,11 @@
             <div class="text-center photoswipe-gallery">
               <a class="photoswipe" href="https://live.staticflickr.com/65535/50910867482_e25fc606ba_b.jpg" target="_blank" data-pswp-width="975" data-pswp-height="437">
                 <img class="image" src="https://live.staticflickr.com/65535/50910867482_e25fc606ba_b.jpg" width="400" alt="A basic HTML form">
-                <div class="hidden-caption-content invisible">A basic HTML form</div>
+                <div class="invisible caption">A basic HTML form</div>
               </a>
               <a class="photoswipe" href="https://live.staticflickr.com/65535/50910770391_a88fce2728_c.jpg" target="_blank" data-pswp-width="795" data-pswp-height="262">
                 <img class="image" src="https://live.staticflickr.com/65535/50910770391_a88fce2728_c.jpg" width="400" alt="The 'thank you' that is shown upon submission">
-                <div class="hidden-caption-content invisible">The 'thank you' that is shown upon submission</div>
+                <div class="invisible caption">The 'thank you' that is shown upon submission</div>
               </a>
             </div>
             <p>Voilá! Now my users can submit this form, which will be sent to my Google Form automatically. And then they’ll be shown a nice message indicating that I received their message. From a user’s viewpoint, they won’t even be able to tell the backend is through Google Forms. This achieves everything I wanted in my contact form.</p>
@@ -230,7 +230,7 @@
             <div class="text-center photoswipe-gallery">
               <a class="photoswipe" href="https://live.staticflickr.com/65535/50910047008_50718a7f0e_b.jpg" target="_blank" data-pswp-width="992" data-pswp-height="554">
                 <img class="image" src="https://live.staticflickr.com/65535/50910047008_50718a7f0e_b.jpg" width="600" alt="Form with the reCAPTCHA">
-                <div class="hidden-caption-content invisible">Form with the reCAPTCHA</div>
+                <div class="invisible caption">Form with the reCAPTCHA</div>
               </a>
             </div>
             <p>However, since we’re not actually verifying the reCAPTCHA anywhere, there’s nothing that’s actually <em>requiring</em> a user to click the button. Most people would probably assume it’s required, so they’d most likely just verify without thinking twice. But it only took my partner five minutes to let me know that it wasn’t required and that anyone (or anybot) could bypass it.</p>
@@ -305,7 +305,7 @@
             <div class="text-center photoswipe-gallery">
               <a class="photoswipe" href="https://live.staticflickr.com/65535/50910770401_aa13b0dec4_c.jpg" target="_blank" data-pswp-width="800" data-pswp-height="424">
                 <img class="image" src="https://live.staticflickr.com/65535/50910770401_aa13b0dec4_c.jpg" width="500" alt="A demonstration of what a spam message could 'look' like">
-                <div class="hidden-caption-content invisible">A demonstration of what a spam message could 'look' like</div>
+                <div class="invisible caption">A demonstration of what a spam message could 'look' like</div>
               </a>
             </div>
             <p>Now, asking for a 14 character code, which is hard-coded into my source code, isn’t very secure. Any person that <em>really</em> wanted to spam me (but please don’t) could look in my code, find the 14 character code, and write a little script to send me repeated messages. So, I got fancier. I played around with different ways of taking Google’s reCAPTCHA response, and combining it with a hard-coded “password”. And then, I implemented a fancy regex on Google Forms to verify. Unfortunately for my readers, I won’t be publicizing what regex I developed to verify the verification input, as that would compromise my backend verification.</p>
