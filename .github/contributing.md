@@ -354,13 +354,27 @@ Alternatively, to use PhotoSwipe to make the photo clickable, and then it'll zoo
 
 ```html
 <div class="photoswipe-gallery">
-  {% include elements/photoswipe.html
+  {% include elements/photo.html
       url="/assets/images/picture-01.jpg"
       thumb_width="200" caption="Caption will show when the photo is enlarged" alt="Alt shows if the photo cannot be shown"
       full_width="400" full_height="200"
   %}
 </div>
 ```
+
+Using Lightbox2 in order to make photos clickable is also an option, but this is not recommended (use PhotoSwipe instead!).
+
+<details><summary>Lightbox2 Setup</summary>
+
+```html
+{% include elements/photo.html
+    url="/assets/images/picture-01.jpg"
+    thumb_width="200" caption="Caption will show when the photo is enlarged" alt="Alt shows if the photo cannot be shown"
+    lightbox_gallery="Lightbox Gallery Name" type="lightbox2"
+%}
+```
+
+</details>
 
 NOTE: If a `caption` is given, but not an `alt`, then the `caption` is used as both a caption and an alt. If an `alt` is given, but no `caption`, then there is no caption present on the photo. And if nothing is given, then there's neither a caption nor an alt on the photo.
 

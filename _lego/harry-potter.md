@@ -33,110 +33,110 @@ I have dreams of also getting the [Diagon Alley (75978)](https://www.lego.com/en
 <div class="text-center">
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50260270132_90e5ed62e9_k.jpg"
-      thumb_width="150" title="Inside the Knight Bus" lightbox="Harry Potter"
+      thumb_width="150" caption="Inside the Knight Bus" lightbox_gallery="Harry Potter"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50260082281_0fdb0d5d79_k.jpg"
-      thumb_width="150" title="Knight Bus outside" lightbox="Harry Potter"
+      thumb_width="150" caption="Knight Bus outside" lightbox_gallery="Harry Potter"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50260079471_33079b5531_k.jpg"
-      thumb_width="150" title="Platform 9 3/4 and the Hogwarts Express" lightbox="Harry Potter"
+      thumb_width="150" caption="Platform 9 3/4 and the Hogwarts Express" lightbox_gallery="Harry Potter"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50260082536_6fc732146c_k.jpg"
-      thumb_width="150" title="Saving Buckbeak" lightbox="Harry Potter"
+      thumb_width="150" caption="Saving Buckbeak" lightbox_gallery="Harry Potter"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50260082686_17a5d1b217_k.jpg"
-      thumb_width="150" title="Inside Hagrid's house" lightbox="Harry Potter"
+      thumb_width="150" caption="Inside Hagrid's house" lightbox_gallery="Harry Potter"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50259425778_fce9316f95_k.jpg"
-      thumb_width="150" title="Resurrecting Voldemort and the Womping Willow" lightbox="Harry Potter"
+      thumb_width="150" caption="Resurrecting Voldemort and the Womping Willow" lightbox_gallery="Harry Potter"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50260083081_7352563c92_k.jpg"
-      thumb_width="150" title="Saving Sirius and Aragog's lair" lightbox="Harry Potter"
+      thumb_width="150" caption="Saving Sirius and Aragog's lair" lightbox_gallery="Harry Potter"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50260271152_a0d363ae68_k.jpg"
-      thumb_width="150" title="The first Quidditch match" lightbox="Harry Potter"
+      thumb_width="150" caption="The first Quidditch match" lightbox_gallery="Harry Potter"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50260271292_c6a992978e_k.jpg"
-      thumb_width="150" title="The Yule Ball" lightbox="Harry Potter"
+      thumb_width="150" caption="The Yule Ball" lightbox_gallery="Harry Potter"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50260083901_3314fb37fe_k.jpg"
-      thumb_width="150" title="In the Great Hall" lightbox="Harry Potter"
+      thumb_width="150" caption="In the Great Hall" lightbox_gallery="Harry Potter"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50260083631_d868d87b7a_k.jpg"
-      thumb_width="150" title="Hogwarts interior" lightbox="Harry Potter"
+      thumb_width="150" caption="Hogwarts interior" lightbox_gallery="Harry Potter"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50529240111_565bacd9d0_k.jpg"
-      thumb_width="150" title="Full Astronomy Tower" lightbox="Harry Potter"
+      thumb_width="150" caption="Full Astronomy Tower" lightbox_gallery="Harry Potter"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50528515018_ed2c41f2f7_k.jpg"
-      thumb_width="150" title="The Astronomy Tower and Ravenclaw common room" lightbox="Harry Potter"
+      thumb_width="150" caption="The Astronomy Tower and Ravenclaw common room" lightbox_gallery="Harry Potter"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50529240681_edd2c03ca4_k.jpg"
-      thumb_width="150" title="Slughorn's dinner party" lightbox="Harry Potter"
+      thumb_width="150" caption="Slughorn's dinner party" lightbox_gallery="Harry Potter" type="lightbox2"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50529397092_667eee3c6b_k.jpg"
-      thumb_width="150" title="Inside the Room of Requirement" lightbox="Harry Potter"
+      thumb_width="150" caption="Inside the Room of Requirement" lightbox_gallery="Harry Potter" type="lightbox2"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50529396827_9e340a530b_k.jpg"
-      thumb_width="150" title="Outside the Room of Requirement" lightbox="Harry Potter"
+      thumb_width="150" caption="Outside the Room of Requirement" lightbox_gallery="Harry Potter" type="lightbox2"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50529239156_814471dde5_k.jpg"
-      thumb_width="150" title="Grawp" lightbox="Harry Potter"
+      thumb_width="150" caption="Grawp" lightbox_gallery="Harry Potter" type="lightbox2"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50529396302_610970ed7a_k.jpg"
-      thumb_width="150" title="Umbridge's encounter with Grawp" lightbox="Harry Potter"
+      thumb_width="150" caption="Umbridge's encounter with Grawp" lightbox_gallery="Harry Potter" type="lightbox2"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50528513518_d4d4249667_k.jpg"
-      thumb_width="150" title="The Burrow's living room" lightbox="Harry Potter"
+      thumb_width="150" caption="The Burrow's living room" lightbox_gallery="Harry Potter" type="lightbox2"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50529395712_20af0da1cb_k.jpg"
-      thumb_width="150" title="The Burrow's kitchen" lightbox="Harry Potter"
+      thumb_width="150" caption="The Burrow's kitchen" lightbox_gallery="Harry Potter" type="lightbox2"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50529395427_66bd0ed8d2_k.jpg"
-      thumb_width="150" title="The Burrow's bedrooms" lightbox="Harry Potter"
+      thumb_width="150" caption="The Burrow's bedrooms" lightbox_gallery="Harry Potter" type="lightbox2"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50529237731_d510a02dbe_k.jpg"
-      thumb_width="150" title="The Burrow from the outside" lightbox="Harry Potter"
+      thumb_width="150" caption="The Burrow from the outside" lightbox_gallery="Harry Potter" type="lightbox2"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50529395067_6ce76369f3_k.jpg"
-      thumb_width="150" title="Inside 4 Privet Drive" lightbox="Harry Potter"
+      thumb_width="150" caption="Inside 4 Privet Drive" lightbox_gallery="Harry Potter" type="lightbox2"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50529237346_72ed426611_k.jpg"
-      thumb_width="150" title="4 Privet Drive: Harry's escape" lightbox="Harry Potter"
+      thumb_width="150" caption="4 Privet Drive: Harry's escape" lightbox_gallery="Harry Potter" type="lightbox2"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50529392727_4122044f0d_k.jpg"
-      thumb_width="150" title="The Great Hall from the outside" lightbox="Harry Potter"
+      thumb_width="150" caption="The Great Hall from the outside" lightbox_gallery="Harry Potter" type="lightbox2"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50528512098_ca1dd38a7d_k.jpg"
-      thumb_width="150" title="Hogwarts from the outside" lightbox="Harry Potter"
+      thumb_width="150" caption="Hogwarts from the outside" lightbox_gallery="Harry Potter" type="lightbox2"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50529236341_3c3d4a1be6_k.jpg"
-      thumb_width="150" title="Hogwarts panorama" lightbox="Harry Potter"
+      thumb_width="150" caption="Hogwarts panorama" lightbox_gallery="Harry Potter" type="lightbox2"
   %}
 </div>

@@ -93,12 +93,12 @@ Here's what my final HTML form looks like. Note that instead of rendering an ent
 Here is a picture of what the form now looks like:
 
 <div class="text-center photoswipe-gallery">
-  {% include elements/photoswipe.html
+  {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50910867482_e25fc606ba_b.jpg"
       thumb_width="400" caption="A basic HTML form"
       full_width="975" full_height="437"
   %}
-  {% include elements/photoswipe.html
+  {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50910770391_a88fce2728_c.jpg"
       thumb_width="400" caption="The 'thank you' that is shown upon submission"
       full_width="795" full_height="262"
@@ -121,7 +121,7 @@ Here's my reCAPTCHA HTML code looks like. I just plopped it into the end of my f
 Now my form visually looks like it's requiring the reCAPTCHA:
 
 <div class="text-center photoswipe-gallery">
-  {% include elements/photoswipe.html
+  {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50910047008_50718a7f0e_b.jpg"
       thumb_width="600" caption="Form with the reCAPTCHA"
       full_width="992" full_height="554"
@@ -200,7 +200,7 @@ And now for step eleven... testing! When testing, I found that as expected, I co
 Now, here's where it gets fancy. If I go into the browser's inspection tool, remove the `disable` on the button, and show the invisible `"verification"` form input, then I can enter a random value into the invisible input, and press submit... all without completing the reCAPTCHA. My website even gives a nice message that the submission was successful (as a little decoy). _However_, Google Forms never receives the message. Google Forms returns a `400` on the `FormResponse` (this can be seen in the browser's inspection tool), and the message goes into a black hole, never to be seen again. Google Forms can only _receive_ the message if the invisible verification input's string _exactly matches_ the specific regex I set in Google Forms.
 
 <div class="text-center photoswipe-gallery">
-  {% include elements/photoswipe.html
+  {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50910770401_aa13b0dec4_c.jpg"
       thumb_width="500" caption="A demonstration of what a spam message could 'look' like"
       full_width="800" full_height="424"
