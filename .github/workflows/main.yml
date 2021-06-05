@@ -10,11 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     if: github.EVENT_NAME == 'pull_request'
     steps:
-    - name: Check Out Code
-      uses: actions/checkout@v2
-      with:
-        fetch-depth: 50
-
     - name: Set Environment Variables
       run: |
         if [[ ${{ github.REF }} == 'refs/heads'* ]]; then # this is a branch, not a pull request
@@ -22,6 +17,11 @@ jobs:
         else
           echo "BRANCH=$(echo ${{ github.HEAD_REF }} | sed -E 's|refs/[a-zA-Z]+/||')" >> $GITHUB_ENV
         fi
+
+    - name: Check Out Code
+      uses: actions/checkout@v2
+      with:
+        path: ${{ env.BRANCH }}
 
     - name: Switch to Current Branch
       run: git checkout ${{ env.BRANCH }}
