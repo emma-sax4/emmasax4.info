@@ -379,6 +379,7 @@ Using Lightbox2 in order to make photos clickable is also an option, but this is
 </details>
 
 NOTES:
+
 * If a `caption` is given, but not an `alt`, then the `caption` is used as both a caption and an alt. If an `alt` is given, but no `caption`, then there is no caption present on the photo. And if nothing is given, then there's neither a caption nor an alt on the photo.
 * The `full_width` and `full_height` represent the pixel sizes of the original image. If neither a `thumb_width` or a `thumb_height` is provided, then the thumb photo will be the same size as the original photo. If both a `thumb_width` and `thumb_height` are provided, then the image will warp to fit both parameters.
 
