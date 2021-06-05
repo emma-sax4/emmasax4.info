@@ -95,7 +95,7 @@ Here is a picture of what the form now looks like:
 <div class="text-center photoswipe-gallery">
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50910867482_e25fc606ba_b.jpg"
-      caption="A basic HTML form"
+      thumb_height="150" caption="A basic HTML form"
       full_width="975" full_height="437"
   %}
   {% include elements/photo.html
