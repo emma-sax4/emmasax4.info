@@ -23,9 +23,6 @@ jobs:
       with:
         ref: ${{ env.BRANCH }}
 
-    - name: Switch to Current Branch
-      run: git checkout ${{ env.BRANCH }}
-
     - name: Install Node
       uses: actions/setup-node@v1
       with:
@@ -71,9 +68,6 @@ jobs:
       with:
         ref: ${{ env.BRANCH }}
         fetch-depth: 0
-
-    - name: Switch to Current Branch
-      run: git checkout ${{ env.BRANCH }}
 
     - name: Install Ruby and Bundle Install
       uses: ruby/setup-ruby@v1
