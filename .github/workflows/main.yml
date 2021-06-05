@@ -53,7 +53,7 @@ jobs:
 
   deploy:
     runs-on: ubuntu-latest
-    if: github.EVENT_NAME == 'pull_request'
+    if: github.EVENT_NAME == 'push' && github.REF == 'refs/heads/main'
     steps:
     - name: Set Environment Variables
       run: |
@@ -80,7 +80,7 @@ jobs:
     - name: Deploy Site
       uses: JamesIves/github-pages-deploy-action@releases/v4
       with:
-        branch: gh-pages-test
+        branch: gh-pages
         folder: _site
         clean: true
         silent: true
