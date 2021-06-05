@@ -56,13 +56,8 @@ jobs:
 
   deploy:
     runs-on: ubuntu-latest
-    if: github.EVENT_NAME == 'push' && github.REF == 'refs/heads/main'
+    if: github.EVENT_NAME == 'pull_request'
     steps:
-    - name: Check Out Code
-      uses: actions/checkout@v2
-      with:
-        fetch-depth: 0
-
     - name: Set Environment Variables
       run: |
         if [[ ${{ github.REF }} == 'refs/heads'* ]]; then # this is a branch, not a pull request
@@ -70,6 +65,11 @@ jobs:
         else
           echo "BRANCH=$(echo ${{ github.HEAD_REF }} | sed -E 's|refs/[a-zA-Z]+/||')" >> $GITHUB_ENV
         fi
+
+    - name: Check Out Code
+      uses: actions/checkout@v2
+      with:
+        ref: ${{ env.BRANCH }}
 
     - name: Switch to Current Branch
       run: git checkout ${{ env.BRANCH }}
@@ -85,7 +85,7 @@ jobs:
     - name: Deploy Site
       uses: JamesIves/github-pages-deploy-action@releases/v4
       with:
-        branch: gh-pages
+        branch: gh-pages-test
         folder: _site
         clean: true
         silent: true
