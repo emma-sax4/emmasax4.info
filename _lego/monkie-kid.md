@@ -7,13 +7,15 @@ In normal circumstances, I wouldn't purchase any LEGO sets from _Monkie Kid_. I'
 
 Putting together the little motorcycle was fun, and the minifigure's facial expressions are definitely worth it. All-in-all, it was a fun little 10 minutes to spend doing LEGO. I wouldn't spend any actual money on this set though.
 
-<div class="text-center">
+<div class="text-center photoswipe-gallery">
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50528707783_398f54beda_k.jpg"
-      thumb_width="150" caption="Monkie Kid" lightbox_gallery="Monkie Kid" type="lightbox2"
+      thumb_width="250" caption="Monkie Kid"
+      full_width="2048" full_height="1536"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50529431976_26d9c0c547_k.jpg"
-      thumb_width="150" caption="Monkie Kid" lightbox_gallery="Monkie Kid" type="lightbox2"
+      thumb_width="250" caption="Monkie Kid"
+      full_width="2048" full_height="1536"
   %}
 </div>

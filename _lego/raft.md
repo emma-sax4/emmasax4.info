@@ -7,21 +7,25 @@ This cute little raft was made from pieces that I found in my LEGO piece stash. 
 
 The minifigures were designed by myself, and I specifically ordered top, bottom, face, and hair pieces of each minifigure (named Ben and Olivia). The chain is the finishing touch, and allows the raft to be hooked up to a dock.
 
-<div class="text-center">
+<div class="text-center photoswipe-gallery">
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50072953968_e15523675c_k.jpg"
-      thumb_width="200" caption="Raft Front" lightbox_gallery="Raft" type="lightbox2"
+      thumb_width="200" caption="Raft Front"
+      full_width="2048" full_height="1536"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50072953903_4a5356bea5_k.jpg"
-      thumb_width="200" caption="Raft Back" lightbox_gallery="Raft" type="lightbox2"
+      thumb_width="200" caption="Raft Back"
+      full_width="2048" full_height="1536"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50073521516_072e24ab86_k.jpg"
-      thumb_width="200" caption="Raft hooked on 'dock'" lightbox_gallery="Raft" type="lightbox2"
+      thumb_width="200" caption="Raft hooked on 'dock'"
+      full_width="2048" full_height="1536"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50072953783_a32953e624_k.jpg"
-      thumb_width="200" caption="Raft top" lightbox_gallery="Raft" type="lightbox2"
+      thumb_width="200" caption="Raft top"
+      full_width="2048" full_height="1536"
   %}
 </div>

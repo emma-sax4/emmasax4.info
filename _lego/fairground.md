@@ -13,21 +13,25 @@ In my pictures, I added a green floor to keep all of the pieces together and sta
 
 Here's a link to the set: [People Pack – Fun Fair (60234)](https://www.lego.com/en-us/product/people-pack-fun-fair-60234)
 
-<div class="text-center">
+<div class="text-center photoswipe-gallery">
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50050571391_c25a153b4f_k.jpg"
-      thumb_width="200" caption="Fairground front" lightbox_gallery="Fairground" type="lightbox2"
+      thumb_width="200" caption="Fairground front"
+      full_width="2048" full_height="1536"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50050003703_039321bf98_k.jpg"
-      thumb_width="200" caption="Fairground back" lightbox_gallery="Fairground" type="lightbox2"
+      thumb_width="200" caption="Fairground back"
+      full_width="2048" full_height="1536"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50050573421_9b12a93862_k.jpg"
-      thumb_width="200" caption="Fairground side" lightbox_gallery="Fairground" type="lightbox2"
+      thumb_width="200" caption="Fairground side"
+      full_width="2048" full_height="1536"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50050009548_b31c09f6d8_k.jpg"
-      thumb_width="200" caption="Fairground top" lightbox_gallery="Fairground" type="lightbox2"
+      thumb_width="200" caption="Fairground top"
+      full_width="2048" full_height="1536"
   %}
 </div>

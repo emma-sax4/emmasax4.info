@@ -15,21 +15,25 @@ Here's a link to the instructions and piece list of the dorm room: <a href="/ass
 
 NOTES: the piece list numbers can sometimes be out of sync with what's in the LEGO Bricks and Pieces database. Sometimes I need to do a more thorough Google search in order to find the correct piece number. Also, the mirror pieces in my below pictures are the wrong shade of blue... use your imagination.
 
-<div class="text-center">
+<div class="text-center photoswipe-gallery">
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50260080916_7e354f1ec9_k.jpg"
-      thumb_width="200" caption="Dorm Room top facing minifigures" lightbox_gallery="Dorm Room with Bathroom" type="lightbox2"
+      thumb_height="200" caption="Dorm Room top facing minifigures"
+      full_width="2048" full_height="1536"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50260266837_a97e901a44_k.jpg"
-      thumb_width="150" caption="Dorm Room top facing bathroom mirror" lightbox_gallery="Dorm Room with Bathroom" type="lightbox2"
+      thumb_height="200" caption="Dorm Room top facing bathroom mirror"
+      full_width="1536" full_height="2048"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50260080716_1672827dbe_k.jpg"
-      thumb_width="200" caption="Dorm Room top facing door" lightbox_gallery="Dorm Room with Bathroom" type="lightbox2"
+      thumb_height="200" caption="Dorm Room top facing door"
+      full_width="2048" full_height="1536"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50259423438_6359c73540_k.jpg"
-      thumb_width="200" caption="Dorm Room top facing door" lightbox_gallery="Dorm Room with Bathroom" type="lightbox2"
+      thumb_height="200" caption="Dorm Room top facing door"
+      full_width="2048" full_height="1536"
   %}
 </div>
