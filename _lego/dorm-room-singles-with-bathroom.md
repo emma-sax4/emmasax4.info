@@ -15,21 +15,25 @@ Here's a link to the instructions and piece list of the dorm room: <a href="/ass
 
 NOTE: the piece list numbers can sometimes be out of sync with what's in the LEGO Bricks and Pieces database. Sometimes I need to do a more thorough Google search in order to find the correct piece number.
 
-<div class="text-center">
+<div class="text-center photoswipe-gallery">
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/51047685962_0fa6b4e205_z.jpg"
-      thumb_width="200" caption="Dorm Room vision of main room and shower" lightbox_gallery="Singles Dorm Room with Bathroom" type="lightbox2"
+      thumb_height="200" caption="Dorm Room vision of main room and shower"
+      full_width="640" full_height="592"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/51047685972_d1b2ed71d8_z.jpg"
-      thumb_width="200" caption="Dorm room birds-eye view" lightbox_gallery="Singles Dorm Room with Bathroom" type="lightbox2"
+      thumb_height="200" caption="Dorm room birds-eye view"
+      full_width="639" full_height="419"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50997044074_b5f7b32a49_z.jpg"
-      thumb_width="200" caption="Dorm room facing the TV and door" lightbox_gallery="Singles Dorm Room with Bathroom" type="lightbox2"
+      thumb_height="200" caption="Dorm room facing the TV and door"
+      full_width="640" full_height="461"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50997045260_772030fc4e_z.jpg"
-      thumb_width="200" caption="Dorm room with view of bathroom" lightbox_gallery="Singles Dorm Room with Bathroom" type="lightbox2"
+      thumb_height="200" caption="Dorm room with view of bathroom"
+      full_width="640" full_height="476"
   %}
 </div>

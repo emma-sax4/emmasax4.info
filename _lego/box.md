@@ -11,25 +11,30 @@ Here's a link to the instructions and piece list of the box: <a href="/assets/re
 
 NOTE: the piece list numbers can sometimes be out of sync with what's in the LEGO Bricks and Pieces database. Sometimes I need to do a more thorough Google search in order to find the correct piece number.
 
-<div class="text-center">
+<div class="text-center photoswipe-gallery">
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/49947517557_17d59cec8a_k.jpg"
-      thumb_width="200" caption="Box with squares on lid closed" lightbox_gallery="Box" type="lightbox2"
+      thumb_width="200" caption="Box with squares on lid closed"
+      full_width="2048" full_height="2048"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/49947231231_f1210a975c_k.jpg"
-      thumb_width="200" caption="Box with squares on lid open" lightbox_gallery="Box" type="lightbox2"
+      thumb_width="200" caption="Box with squares on lid open"
+      full_width="2048" full_height="2048"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/49947517287_14879a7720_k.jpg"
-      thumb_width="200" caption="Grey and black box closed" lightbox_gallery="Box" type="lightbox2"
+      thumb_width="200" caption="Grey and black box closed"
+      full_width="2048" full_height="2048"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/49946728308_34ba273aa0_k.jpg"
-      thumb_width="200" caption="Grey and black box closed from back" lightbox_gallery="Box" type="lightbox2"
+      thumb_width="200" caption="Grey and black box closed from back"
+      full_width="2048" full_height="2048"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/49947516887_e9bea792d3_k.jpg"
-      thumb_width="200" caption="Grey and black box opened" lightbox_gallery="Box" type="lightbox2"
+      thumb_width="200" caption="Grey and black box opened"
+      full_width="2048" full_height="2048"
   %}
 </div>

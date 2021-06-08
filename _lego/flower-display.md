@@ -9,17 +9,20 @@ My partner had the inkling that I would enjoy LEGO since he saw me enjoy putting
 
 Here's a link to the set: [Flower Display (40187)](https://www.lego.com/en-us/product/lego-flower-display-40187)
 
-<div class="text-center">
+<div class="text-center photoswipe-gallery">
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50072954358_4a7a32c1bd_k.jpg"
-      thumb_width="200" caption="Flower Display side by side" lightbox_gallery="Flower Display" type="lightbox2"
+      thumb_width="200" caption="Flower Display side by side"
+      full_width="2048" full_height="1536"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50073521936_c0875a095f_k.jpg"
-      thumb_width="200" caption="Flower Display top" lightbox_gallery="Flower Display" type="lightbox2"
+      thumb_width="200" caption="Flower Display top"
+      full_width="2048" full_height="1536"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50073521861_e393dd2977_k.jpg"
-      thumb_width="200" caption="Flower Display showcasing depth" lightbox_gallery="Flower Display" type="lightbox2"
+      thumb_width="200" caption="Flower Display showcasing depth"
+      full_width="2048" full_height="1536"
   %}
 </div>
