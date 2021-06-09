@@ -357,8 +357,8 @@ Alternatively, to use PhotoSwipe to make the photo clickable, and then it'll zoo
   {% include elements/photo.html
       url="/assets/images/picture-01.jpg"
       thumb_width="200" thumb_height="230
-      caption="Caption will show when the photo is enlarged" alt="Alt shows if the photo cannot be shown"
       full_width="400" full_height="200"
+      caption="Caption will show when the photo is enlarged" alt="Alt shows if the photo cannot be shown"
   %}
 </div>
 ```
@@ -371,8 +371,8 @@ Using Lightbox2 in order to make photos clickable is also an option, but this is
 {% include elements/photo.html
     url="/assets/images/picture-01.jpg"
     thumb_width="200" thumb_height="230
-    caption="Caption will show when the photo is enlarged" alt="Alt shows if the photo cannot be shown"
     lightbox_gallery="Lightbox Gallery Name" type="lightbox2"
+    caption="Caption will show when the photo is enlarged" alt="Alt shows if the photo cannot be shown"
 %}
 ```
 
