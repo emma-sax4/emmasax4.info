@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/emmahsax/jekyll-feed
-  revision: 4a5a90848fd3efbb11932bf9c02ce561d5606ad1
+  revision: e9bd53a84559dc2b33bb5d4f7b51340e13e42bbf
   specs:
     jekyll-feed (0.15.1e)
       jekyll (>= 3.7, < 5.0)
@@ -38,12 +38,12 @@ GEM
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
     ast (2.4.2)
-    chef-utils (17.1.35)
+    chef-utils (17.2.29)
       concurrent-ruby
     colorator (1.1.0)
     commonmarker (0.21.2)
       ruby-enum (~> 0.5)
-    concurrent-ruby (1.1.8)
+    concurrent-ruby (1.1.9)
     em-websocket (0.5.2)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0.6.0)
@@ -124,21 +124,21 @@ GEM
       mixlib-config (>= 2.2.1, < 4)
       mixlib-shellout
     mercenary (0.4.0)
-    mini_portile2 (2.5.1)
+    mini_portile2 (2.5.3)
     minitest (5.14.4)
     mixlib-cli (2.1.8)
     mixlib-config (3.0.9)
       tomlrb
     mixlib-shellout (3.2.5)
       chef-utils
-    nokogiri (1.11.5)
+    nokogiri (1.11.7)
       mini_portile2 (~> 2.5.0)
       racc (~> 1.4)
-    nokogiri (1.11.5-arm64-darwin)
+    nokogiri (1.11.7-arm64-darwin)
       racc (~> 1.4)
-    nokogiri (1.11.5-x86_64-darwin)
+    nokogiri (1.11.7-x86_64-darwin)
       racc (~> 1.4)
-    nokogiri (1.11.5-x86_64-linux)
+    nokogiri (1.11.7-x86_64-linux)
       racc (~> 1.4)
     nokogumbo (2.0.5)
       nokogiri (~> 1.8, >= 1.8.4)
@@ -157,16 +157,16 @@ GEM
     regexp_parser (2.1.1)
     rexml (3.2.5)
     rouge (3.26.0)
-    rubocop (1.15.0)
+    rubocop (1.16.1)
       parallel (~> 1.10)
       parser (>= 3.0.0.0)
       rainbow (>= 2.2.2, < 4.0)
       regexp_parser (>= 1.8, < 3.0)
       rexml
-      rubocop-ast (>= 1.5.0, < 2.0)
+      rubocop-ast (>= 1.7.0, < 2.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 1.4.0, < 3.0)
-    rubocop-ast (1.5.0)
+    rubocop-ast (1.7.0)
       parser (>= 3.0.1.1)
     ruby-enum (0.9.0)
       i18n
@@ -213,4 +213,4 @@ DEPENDENCIES
   webrick
 
 BUNDLED WITH
-   2.2.17
+   2.2.19
