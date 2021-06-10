@@ -13,21 +13,25 @@ NOTE: the piece list numbers can sometimes be out of sync with what's in the LEG
 
 Featured in the photographs are two minifigures I've designed (who I've named Taryn and Emmy for fun).
 
-<div class="text-center">
+<div class="text-center photoswipe-gallery">
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/49985840352_9032841264_b.jpg"
-      thumb_width="200" caption="Car front" lightbox_gallery="Car" type="lightbox2"
+      thumb_width="200" caption="Car front"
+      full_width="1024" full_height="768"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/49985585081_8a33a16dee_b.jpg"
-      thumb_width="200" caption="Car back" lightbox_gallery="Car" type="lightbox2"
+      thumb_width="200" caption="Car back"
+      full_width="1024" full_height="768"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/49985840327_da44a85b5d_b.jpg"
-      thumb_width="200" caption="Car with driver door open" lightbox_gallery="Car" type="lightbox2"
+      thumb_width="200" caption="Car with driver door open"
+      full_width="1024" full_height="768"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/49985065258_fdd7b8c519_b.jpg"
-      thumb_width="200" caption="Car top view" lightbox_gallery="Car" type="lightbox2"
+      thumb_width="200" caption="Car top view"
+      full_width="1024" full_height="768"
   %}
 </div>

@@ -30,113 +30,140 @@ Here's a list of all of the _Harry Potter_ LEGO sets shown:
 
 I have dreams of also getting the [Diagon Alley (75978)](https://www.lego.com/en-us/product/diagon-alley-75978) set as well and adding that to my collection, but I don't have the physical space right now to display that set.
 
-<div class="text-center">
+<div class="text-center photoswipe-gallery">
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50260270132_90e5ed62e9_k.jpg"
-      thumb_width="150" caption="Inside the Knight Bus" lightbox_gallery="Harry Potter" type="lightbox2"
+      thumb_height="150" caption="Inside the Knight Bus"
+      full_width="2048" full_height="1536"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50260082281_0fdb0d5d79_k.jpg"
-      thumb_width="150" caption="Knight Bus outside" lightbox_gallery="Harry Potter" type="lightbox2"
+      thumb_height="150" caption="Knight Bus outside"
+      full_width="2048" full_height="1536"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50260079471_33079b5531_k.jpg"
-      thumb_width="150" caption="Platform 9 3/4 and the Hogwarts Express" lightbox_gallery="Harry Potter" type="lightbox2"
+      thumb_height="150" caption="Platform 9 3/4 and the Hogwarts Express"
+      full_width="2048" full_height="1536"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50260082536_6fc732146c_k.jpg"
-      thumb_width="150" caption="Saving Buckbeak" lightbox_gallery="Harry Potter" type="lightbox2"
+      thumb_height="150" caption="Saving Buckbeak"
+      full_width="2048" full_height="1536"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50260082686_17a5d1b217_k.jpg"
-      thumb_width="150" caption="Inside Hagrid's house" lightbox_gallery="Harry Potter" type="lightbox2"
+      thumb_height="150" caption="Inside Hagrid's house"
+      full_width="2048" full_height="1536"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50259425778_fce9316f95_k.jpg"
-      thumb_width="150" caption="Resurrecting Voldemort and the Womping Willow" lightbox_gallery="Harry Potter" type="lightbox2"
+      thumb_height="150" caption="Resurrecting Voldemort and the Womping Willow"
+      full_width="2048" full_height="1536"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50260083081_7352563c92_k.jpg"
-      thumb_width="150" caption="Saving Sirius and Aragog's lair" lightbox_gallery="Harry Potter" type="lightbox2"
+      thumb_height="150" caption="Saving Sirius and Aragog's lair"
+      full_width="2048" full_height="1536"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50260271152_a0d363ae68_k.jpg"
-      thumb_width="150" caption="The first Quidditch match" lightbox_gallery="Harry Potter" type="lightbox2"
+      thumb_height="150" caption="The first Quidditch match"
+      full_width="2048" full_height="1536"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50260271292_c6a992978e_k.jpg"
-      thumb_width="150" caption="The Yule Ball" lightbox_gallery="Harry Potter" type="lightbox2"
+      thumb_height="150" caption="The Yule Ball"
+      full_width="2048" full_height="1536"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50260083901_3314fb37fe_k.jpg"
-      thumb_width="150" caption="In the Great Hall" lightbox_gallery="Harry Potter" type="lightbox2"
+      thumb_height="150" caption="In the Great Hall"
+      full_width="2048" full_height="1536"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50260083631_d868d87b7a_k.jpg"
-      thumb_width="150" caption="Hogwarts interior" lightbox_gallery="Harry Potter" type="lightbox2"
+      thumb_height="150" caption="Hogwarts interior"
+      full_width="1536" full_height="2048"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50529240111_565bacd9d0_k.jpg"
-      thumb_width="150" caption="Full Astronomy Tower" lightbox_gallery="Harry Potter" type="lightbox2"
+      thumb_height="150" caption="Full Astronomy Tower"
+      full_width="1536" full_height="2048"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50528515018_ed2c41f2f7_k.jpg"
-      thumb_width="150" caption="The Astronomy Tower and Ravenclaw common room" lightbox_gallery="Harry Potter" type="lightbox2"
+      thumb_height="150" caption="The Astronomy Tower and Ravenclaw common room"
+      full_width="1536" full_height="2048"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50529240681_edd2c03ca4_k.jpg"
-      thumb_width="150" caption="Slughorn's dinner party" lightbox_gallery="Harry Potter" type="lightbox2"
+      thumb_height="150" caption="Slughorn's dinner party"
+      full_width="2048" full_height="1536"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50529397092_667eee3c6b_k.jpg"
-      thumb_width="150" caption="Inside the Room of Requirement" lightbox_gallery="Harry Potter" type="lightbox2"
+      thumb_height="150" caption="Inside the Room of Requirement"
+      full_width="2048" full_height="1536"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50529396827_9e340a530b_k.jpg"
-      thumb_width="150" caption="Outside the Room of Requirement" lightbox_gallery="Harry Potter" type="lightbox2"
+      thumb_height="150" caption="Outside the Room of Requirement"
+      full_width="2048" full_height="1536"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50529239156_814471dde5_k.jpg"
-      thumb_width="150" caption="Grawp" lightbox_gallery="Harry Potter" type="lightbox2"
+      thumb_height="150" caption="Grawp"
+      full_width="1536" full_height="2048"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50529396302_610970ed7a_k.jpg"
-      thumb_width="150" caption="Umbridge's encounter with Grawp" lightbox_gallery="Harry Potter" type="lightbox2"
+      thumb_height="150" caption="Umbridge's encounter with Grawp"
+      full_width="2048" full_height="1536"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50528513518_d4d4249667_k.jpg"
-      thumb_width="150" caption="The Burrow's living room" lightbox_gallery="Harry Potter" type="lightbox2"
+      thumb_height="150" caption="The Burrow's living room"
+      full_width="2048" full_height="1536"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50529395712_20af0da1cb_k.jpg"
-      thumb_width="150" caption="The Burrow's kitchen" lightbox_gallery="Harry Potter" type="lightbox2"
+      thumb_height="150" caption="The Burrow's kitchen"
+      full_width="2048" full_height="1536"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50529395427_66bd0ed8d2_k.jpg"
-      thumb_width="150" caption="The Burrow's bedrooms" lightbox_gallery="Harry Potter" type="lightbox2"
+      thumb_height="150" caption="The Burrow's bedrooms"
+      full_width="1536" full_height="2048"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50529237731_d510a02dbe_k.jpg"
-      thumb_width="150" caption="The Burrow from the outside" lightbox_gallery="Harry Potter" type="lightbox2"
+      thumb_height="150" caption="The Burrow from the outside"
+      full_width="1536" full_height="2048"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50529395067_6ce76369f3_k.jpg"
-      thumb_width="150" caption="Inside 4 Privet Drive" lightbox_gallery="Harry Potter" type="lightbox2"
+      thumb_height="150" caption="Inside 4 Privet Drive"
+      full_width="2048" full_height="1536"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50529237346_72ed426611_k.jpg"
-      thumb_width="150" caption="4 Privet Drive: Harry's escape" lightbox_gallery="Harry Potter" type="lightbox2"
+      thumb_height="150" caption="4 Privet Drive: Harry's escape"
+      full_width="2048" full_height="1536"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50529392727_4122044f0d_k.jpg"
-      thumb_width="150" caption="The Great Hall from the outside" lightbox_gallery="Harry Potter" type="lightbox2"
+      thumb_height="150" caption="The Great Hall from the outside"
+      full_width="2048" full_height="1536"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50528512098_ca1dd38a7d_k.jpg"
-      thumb_width="150" caption="Hogwarts from the outside" lightbox_gallery="Harry Potter" type="lightbox2"
+      thumb_height="150" caption="Hogwarts from the outside"
+      full_width="2048" full_height="1536"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50529236341_3c3d4a1be6_k.jpg"
-      thumb_width="150" caption="Hogwarts panorama" lightbox_gallery="Harry Potter" type="lightbox2"
+      thumb_height="150" caption="Hogwarts panorama"
+      full_width="2048" full_height="691"
   %}
 </div>

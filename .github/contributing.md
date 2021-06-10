@@ -356,8 +356,9 @@ Alternatively, to use PhotoSwipe to make the photo clickable, and then it'll zoo
 <div class="photoswipe-gallery">
   {% include elements/photo.html
       url="/assets/images/picture-01.jpg"
-      thumb_width="200" caption="Caption will show when the photo is enlarged" alt="Alt shows if the photo cannot be shown"
+      thumb_width="200" thumb_height="230
       full_width="400" full_height="200"
+      caption="Caption will show when the photo is enlarged" alt="Alt shows if the photo cannot be shown"
   %}
 </div>
 ```
@@ -369,14 +370,18 @@ Using Lightbox2 in order to make photos clickable is also an option, but this is
 ```html
 {% include elements/photo.html
     url="/assets/images/picture-01.jpg"
-    thumb_width="200" caption="Caption will show when the photo is enlarged" alt="Alt shows if the photo cannot be shown"
+    thumb_width="200" thumb_height="230
     lightbox_gallery="Lightbox Gallery Name" type="lightbox2"
+    caption="Caption will show when the photo is enlarged" alt="Alt shows if the photo cannot be shown"
 %}
 ```
 
 </details>
 
-NOTE: If a `caption` is given, but not an `alt`, then the `caption` is used as both a caption and an alt. If an `alt` is given, but no `caption`, then there is no caption present on the photo. And if nothing is given, then there's neither a caption nor an alt on the photo.
+NOTES:
+
+* If a `caption` is given, but not an `alt`, then the `caption` is used as both a caption and an alt. If an `alt` is given, but no `caption`, then there is no caption present on the photo. And if nothing is given, then there's neither a caption nor an alt on the photo.
+* The `full_width` and `full_height` represent the pixel sizes of the original image. If neither a `thumb_width` or a `thumb_height` is provided, then the thumb photo will be the same size as the original photo. If both a `thumb_width` and `thumb_height` are provided, then the image will warp to fit both parameters.
 
 The `resources/` directory gives me a place to keep PDF documents that are linked in this site. You can put a link to it in Markdown:
 

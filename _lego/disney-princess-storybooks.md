@@ -18,81 +18,100 @@ Here are their links:
 * [Ariel's Storybook Adventures (43176)](https://www.lego.com/en-us/product/ariel-s-storybook-adventures-43176)
 * [Belle's Storybook Adventures (43177)](https://www.lego.com/en-us/product/belle-s-storybook-adventures-43177)
 
-<div class="text-center">
+<div class="text-center photoswipe-gallery">
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50073767857_581d46f6ba_b.jpg"
-      thumb_width="265" caption="Storybooks all facing front" lightbox_gallery="Disney Storybook Adventures" type="lightbox2"
+      thumb_width="265" caption="Storybooks all facing front"
+      full_width="1024" full_height="565"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50072953473_ced1aba3fe_b.jpg"
-      thumb_width="200" caption="Storybooks from top" lightbox_gallery="Disney Storybook Adventures" type="lightbox2"
+      thumb_width="200" caption="Storybooks from top"
+      full_width="1024" full_height="768"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50072953418_f5729685e4_b.jpg"
-      thumb_width="200" caption="Storybooks at diagonal" lightbox_gallery="Disney Storybook Adventures" type="lightbox2"
+      thumb_width="200" caption="Storybooks at diagonal"
+      full_width="1024" full_height="768"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50073767592_a7b5c7fa25_b.jpg"
-      thumb_width="200" caption="Storybooks from the back" lightbox_gallery="Disney Storybook Adventures" type="lightbox2"
+      thumb_width="200" caption="Storybooks from the back"
+      full_width="1024" full_height="768"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50073520906_15d6211ab4_b.jpg"
-      thumb_width="200" caption="Storybooks from the side" lightbox_gallery="Disney Storybook Adventures" type="lightbox2"
+      thumb_width="200" caption="Storybooks from the side"
+      full_width="1024" full_height="768"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50073768857_d40e8f5e21_b.jpg"
-      thumb_width="200" caption="Beauty and the Beast courtyard" lightbox_gallery="Disney Storybook Adventures" type="lightbox2"
+      thumb_width="200" caption="Beauty and the Beast courtyard"
+      full_width="1024" full_height="768"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50073522166_892972f23d_b.jpg"
-      thumb_width="200" caption="Beauty and the Beast ballroom" lightbox_gallery="Disney Storybook Adventures" type="lightbox2"
+      thumb_width="200" caption="Beauty and the Beast ballroom"
+      full_width="1024" full_height="768"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50073766857_7571423bec_b.jpg"
-      thumb_width="200" caption="Beauty and the Beast top" lightbox_gallery="Disney Storybook Adventures" type="lightbox2"
+      thumb_width="200" caption="Beauty and the Beast top"
+      full_width="1024" full_height="768"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50073768732_dc58b62142_b.jpg"
-      thumb_width="200" caption="The Little Mermaid beach" lightbox_gallery="Disney Storybook Adventures" type="lightbox2"
+      thumb_width="200" caption="The Little Mermaid beach"
+      full_width="1024" full_height="768"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50073522061_963a5ef075_b.jpg"
-      thumb_width="200" caption="The Little Mermaid under the sea" lightbox_gallery="Disney Storybook Adventures" type="lightbox2"
+      thumb_width="200" caption="The Little Mermaid under the sea"
+      full_width="1024" full_height="768"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50073766797_6d43b19eef_b.jpg"
-      thumb_width="200" caption="The Little Mermaid top" lightbox_gallery="Disney Storybook Adventures" type="lightbox2"
+      thumb_width="200" caption="The Little Mermaid top"
+      full_width="1024" full_height="768"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50073520846_c68a00f9b4_b.jpg"
-      thumb_width="200" caption="Frozen indoors close-up" lightbox_gallery="Disney Storybook Adventures" type="lightbox2"
+      thumb_width="200" caption="Frozen indoors close-up"
+      full_width="" full_height=""
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50072953068_3b38fb07a0_b.jpg"
-      thumb_width="200" caption="Frozen indoors" lightbox_gallery="Disney Storybook Adventures" type="lightbox2"
+      thumb_width="200" caption="Frozen indoors"
+      full_width="1024" full_height="768"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50073520691_e54949b788_b.jpg"
-      thumb_width="200" caption="Frozen outdoors" lightbox_gallery="Disney Storybook Adventures" type="lightbox2"
+      thumb_width="200" caption="Frozen outdoors"
+      full_width="1024" full_height="768"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50073520256_5f2be8156b_b.jpg"
-      thumb_width="200" caption="Frozen top" lightbox_gallery="Disney Storybook Adventures" type="lightbox2"
+      thumb_width="200" caption="Frozen top"
+      full_width="1024" full_height="768"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50073520646_a176a34a3a_b.jpg"
-      thumb_width="200" caption="Mulan at home" lightbox_gallery="Disney Storybook Adventures" type="lightbox2"
+      thumb_width="200" caption="Mulan at home"
+      full_width="1024" full_height="768"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50073520601_ae8e013d06_b.jpg"
-      thumb_width="200" caption="Mulan at the army camp" lightbox_gallery="Disney Storybook Adventures" type="lightbox2"
+      thumb_width="200" caption="Mulan at the army camp"
+      full_width="1024" full_height="768"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50073766997_8d946b0458_b.jpg"
-      thumb_width="200" caption="Mulan at the army camp straight ahead" lightbox_gallery="Disney Storybook Adventures" type="lightbox2"
+      thumb_width="200" caption="Mulan at the army camp straight ahead"
+      full_width="1024" full_height="768"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50073520461_d14e47fdb4_b.jpg"
-      thumb_width="200" caption="Mulan top" lightbox_gallery="Disney Storybook Adventures" type="lightbox2"
+      thumb_width="200" caption="Mulan top"
+      full_width="1024" full_height="768"
   %}
 </div>

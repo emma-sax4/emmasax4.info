@@ -81,42 +81,42 @@ Samburu is an area north of the equator, located in the center of Kenya. The lan
 <div class="text-center photoswipe-gallery">
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/48740606393_4f24904b75_o.jpg"
-      thumb_width="200" caption="Baboons at Samburu"
+      thumb_height="230" caption="Baboons at Samburu"
       full_width="600" full_height="450"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/48740606453_02c1dcf73c_o.jpg"
-      thumb_width="200" caption="Elephant at Samburu"
+      thumb_height="230" caption="Elephant at Samburu"
       full_width="600" full_height="450"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/48741119692_f8d37d4a98_o.jpg"
-      thumb_width="200" caption="Oryx at Samburu"
+      thumb_height="230" caption="Oryx at Samburu"
       full_width="600" full_height="450"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/48740935066_7e21df8970_o.jpg"
-      thumb_width="200" caption="Reticulated giraffes at Samburu"
+      thumb_height="230" caption="Reticulated giraffes at Samburu"
       full_width="600" full_height="450"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/48740606638_752252d3bd_o.jpg"
-      thumb_width="200" caption="Impala at Samburu"
+      thumb_height="230" caption="Impala at Samburu"
       full_width="600" full_height="450"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/48740606678_6d9f3482a6_o.jpg"
-      thumb_width="170" caption="Lioness at Samburu"
+      thumb_height="230" caption="Lioness at Samburu"
       full_width="600" full_height="536"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/48741119697_5b99e26766_o.jpg"
-      thumb_width="200" caption="Ostrich at Samburu"
+      thumb_height="230" caption="Ostrich at Samburu"
       full_width="600" full_height="450"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/48741119832_225ebe076d_o.jpg"
-      thumb_width="200" caption="Zebras at Samburu"
+      thumb_height="230" caption="Zebras at Samburu"
       full_width="600" full_height="450"
   %}
 </div>
@@ -132,17 +132,17 @@ We managed to visit the Chimpanzee and Rhinoceros conservancies while we were th
 <div class="text-center photoswipe-gallery">
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/48741119427_950e08953a_o.jpg"
-      thumb_width="300" caption="Chimpanzee at Ol Pejeta"
+      thumb_height="230" caption="Chimpanzee at Ol Pejeta"
       full_width="600" full_height="400"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/48741119722_6ea09cfa61_o.jpg"
-      thumb_width="270" caption="Rhino at Ol Pejeta... and we got to pet it!"
+      thumb_height="230" caption="Rhino at Ol Pejeta... and we got to pet it!"
       full_width="600" full_height="450"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/48740606828_4cca69618e_o.jpg"
-      thumb_width="150" caption="Rhino feeding at Ol Pejeta"
+      thumb_height="230" caption="Rhino feeding at Ol Pejeta"
       full_width="450" full_height="600"
   %}
 </div>
@@ -178,77 +178,77 @@ Although I wish I could attach all of the pictures we have from the Maasai Mara,
 <div class="text-center photoswipe-gallery">
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/48740934961_f96f3dd557_o.jpg"
-      thumb_width="215" caption="Cheetah at Maasai Mara"
+      thumb_height="230" caption="Cheetah at Maasai Mara"
       full_width="600" full_height="414"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/48740935001_ed2ef1a21f_o.jpg"
-      thumb_width="200" caption="Elephants at Maasai Mara"
+      thumb_height="230" caption="Elephants at Maasai Mara"
       full_width="600" full_height="450"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/48741119482_2a65f2332a_o.jpg"
-      thumb_width="225" caption="Momma elephant with baby at Maasai Mara"
+      thumb_height="230" caption="Momma elephant with baby at Maasai Mara"
       full_width="600" full_height="400"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/48741119542_20ff32c710_o.jpg"
-      thumb_width="200" caption="Giraffe at Maasai Mara"
+      thumb_height="230" caption="Giraffe at Maasai Mara"
       full_width="600" full_height="450"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/48741119572_75b99d2f3e_o.jpg"
-      thumb_width="200" caption="Giraffe headshot at Maasai Mara"
+      thumb_height="230" caption="Giraffe headshot at Maasai Mara"
       full_width="600" full_height="450"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/48740935081_640dc843a8_o.jpg"
-      thumb_width="225" caption="Hippo at Maasai Mara"
+      thumb_height="230" caption="Hippo at Maasai Mara"
       full_width="600" full_height="400"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/48740935106_67389659e4_o.jpg"
-      thumb_width="200" caption="Swimming hippo at Maasai Mara"
+      thumb_height="230" caption="Swimming hippo at Maasai Mara"
       full_width="600" full_height="450"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/48741119617_67389659e4_o.jpg"
-      thumb_width="200" caption="Hyenas at Maasai Mara"
+      thumb_height="230" caption="Hyenas at Maasai Mara"
       full_width="600" full_height="450"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/48740935151_cedbc943a3_o.jpg"
-      thumb_width="200" caption="Leopard laying around at Maasai Mara"
+      thumb_height="230" caption="Leopard laying around at Maasai Mara"
       full_width="600" full_height="450"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/48740606698_6ae7e8c66d_o.jpg"
-      thumb_width="210" caption="Lions at Maasai Mara"
+      thumb_height="230" caption="Lions at Maasai Mara"
       full_width="600" full_height="424"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/48740935211_3504edbc65_o.jpg"
-      thumb_width="200" caption="Yawning lion at Maasai Mara"
+      thumb_height="230" caption="Yawning lion at Maasai Mara"
       full_width="600" full_height="450"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/48740935321_f29e95c343_o.jpg"
-      thumb_width="225" caption="Warthogs at Maasai Mara"
+      thumb_height="230" caption="Warthogs at Maasai Mara"
       full_width="600" full_height="400"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/48741119787_f547fdb8b4_o.jpg"
-      thumb_width="225" caption="Wildebeests at Maasai Mara"
+      thumb_height="230" caption="Wildebeests at Maasai Mara"
       full_width="600" full_height="400"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/48740935386_f3d51837f8_o.jpg"
-      thumb_width="200" caption="Walking wildebeests at Maasai Mara"
+      thumb_height="230" caption="Walking wildebeests at Maasai Mara"
       full_width="600" full_height="450"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/48741119842_aa42e45571_o.jpg"
-      thumb_width="200" caption="Zebras at Maasai Mara"
+      thumb_height="230" caption="Zebras at Maasai Mara"
       full_width="600" full_height="446"
   %}
 </div>

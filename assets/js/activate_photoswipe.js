@@ -20,19 +20,24 @@ lightbox.on('uiRegister', function () {
       lightbox.pswp.on('change', () => {
         const currentSlideElement = lightbox.pswp.currSlide.data.element
         const hiddenCaption = currentSlideElement.querySelector('.caption')
+        const customCaptionElements = document.getElementsByClassName('pswp__custom-caption')
+        let captionHTML = ''
 
         if (hiddenCaption === '' || hiddenCaption === null) {
-          const customCaptionElements = document.getElementsByClassName('pswp__custom-caption')
           for (let counter = 0; counter < customCaptionElements.length; counter++) {
-            customCaptionElements[counter].remove()
+            customCaptionElements[counter].classList.add('invisible')
           }
         } else {
-          let captionHTML = ''
+          for (let counter = 0; counter < customCaptionElements.length; counter++) {
+            customCaptionElements[counter].classList.remove('invisible')
+          }
+
           if (currentSlideElement) {
             captionHTML = hiddenCaption.innerHTML
           }
-          el.innerHTML = captionHTML || ''
         }
+
+        el.innerHTML = captionHTML
       })
     }
   })

@@ -9,25 +9,30 @@ The crab was by far the cutest. Its claws were a stretch, but I do have to give 
 
 However, putting all three mini-sets together made for a fun little afternoon of LEGO. But if you're deciding to purchase this set (if it's even available for purchase), don't spend money hoping for an adorable little kitty, because what you'll actually get is the cat of your nightmares.
 
-<div class="text-center">
+<div class="text-center photoswipe-gallery">
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50528707218_cd8adc4a06_k.jpg"
-      thumb_width="150" caption="Crab front" lightbox_gallery="3-in-1 Cat" type="lightbox2"
+      thumb_height="150" caption="Crab front"
+      full_width="2048" full_height="1536"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50528707068_c97013d9b9_k.jpg"
-      thumb_width="150" caption="Crab side" lightbox_gallery="3-in-1 Cat" type="lightbox2"
+      thumb_height="150" caption="Crab side"
+      full_width="2048" full_height="1536"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50529431276_151eabda23_k.jpg"
-      thumb_width="150" caption="Ostrich" lightbox_gallery="3-in-1 Cat" type="lightbox2"
+      thumb_height="150" caption="Ostrich"
+      full_width="1536" full_height="2048"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50529431136_a8fc2fb67c_k.jpg"
-      thumb_width="150" caption="Ostrich closeup" lightbox_gallery="3-in-1 Cat" type="lightbox2"
+      thumb_height="150" caption="Ostrich closeup"
+      full_width="2048" full_height="1536"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50529431816_6bfcb77f81_k.jpg"
-      thumb_width="150" caption="Cat" lightbox_gallery="3-in-1 Cat" type="lightbox2"
+      thumb_height="150" caption="Cat"
+      full_width="2048" full_height="1536"
   %}
 </div>

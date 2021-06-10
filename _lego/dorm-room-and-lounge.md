@@ -15,25 +15,30 @@ Here's a link to the instructions and piece list of the dorm room: <a href="/ass
 
 NOTES: the piece list numbers can sometimes be out of sync with what's in the LEGO Bricks and Pieces database. Sometimes I need to do a more thorough Google search in order to find the correct piece number. Secondly, the windows that I decided to make the dorm room with aren't widely available on LEGO's website, so you may have to do some hunting to find those pieces.
 
-<div class="text-center">
+<div class="text-center photoswipe-gallery">
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50260267152_f4053082fd_k.jpg"
-      thumb_width="200" caption="Dorm Room top facing windows" lightbox_gallery="Dorm Room and Lounge" type="lightbox2"
+      thumb_width="200" caption="Dorm Room top facing windows"
+      full_width="2048" full_height="1536"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50260269917_27e84fe1eb_k.jpg"
-      thumb_width="200" caption="Dorm Room top facing napping minifigure" lightbox_gallery="Dorm Room and Lounge" type="lightbox2"
+      thumb_width="200" caption="Dorm Room top facing napping minifigure"
+      full_width="2048" full_height="1536"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50260269702_22fca19c1e_k.jpg"
-      thumb_width="200" caption="Dorm Room through window" lightbox_gallery="Dorm Room and Lounge" type="lightbox2"
+      thumb_width="200" caption="Dorm Room through window"
+      full_width="2048" full_height="1536"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50259424483_b8f67eca4c_k.jpg"
-      thumb_width="200" caption="Dorm Room top facing door" lightbox_gallery="Dorm Room and Lounge" type="lightbox2"
+      thumb_width="200" caption="Dorm Room top facing door"
+      full_width="2048" full_height="1536"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50260081341_d7a5d536ac_k.jpg"
-      thumb_width="200" caption="Dorm Room top with view of door" lightbox_gallery="Dorm Room and Lounge" type="lightbox2"
+      thumb_width="200" caption="Dorm Room top with view of door"
+      full_width="2048" full_height="1536"
   %}
 </div>

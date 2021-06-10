@@ -95,12 +95,12 @@ Here is a picture of what the form now looks like:
 <div class="text-center photoswipe-gallery">
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50910867482_e25fc606ba_b.jpg"
-      thumb_width="400" caption="A basic HTML form"
+      thumb_height="150" caption="A basic HTML form"
       full_width="975" full_height="437"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50910770391_a88fce2728_c.jpg"
-      thumb_width="400" caption="The 'thank you' that is shown upon submission"
+      thumb_height="150" caption="The 'thank you' that is shown upon submission"
       full_width="795" full_height="262"
   %}
 </div>

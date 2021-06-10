@@ -11,25 +11,30 @@ I think perhaps the greatest part of this set, though, is the fact that it has a
 
 Overall, the design of this little set was really great, and it was enjoyable to put together.
 
-<div class="text-center">
+<div class="text-center photoswipe-gallery">
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50700805371_5f07c1dfeb_k.jpg"
-      thumb_width="150" caption="Front of set" lightbox_gallery="Charles Dickens Tribute" type="lightbox2"
+      thumb_height="150" caption="Front of set"
+      full_width="2048" full_height="1536"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50700805361_0be9b0292a_k.jpg"
-      thumb_width="150" caption="Inside the house" lightbox_gallery="Charles Dickens Tribute" type="lightbox2"
+      thumb_height="150" caption="Inside the house"
+      full_width="2048" full_height="1536"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50700058708_585fd9f802_k.jpg"
-      thumb_width="100" caption="Birds-eye view featuring the drawer" lightbox_gallery="Charles Dickens Tribute" type="lightbox2"
+      thumb_height="150" caption="Birds-eye view featuring the drawer"
+      full_width="1536" full_height="2048"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50700887632_4df928110d_b.jpg"
-      thumb_width="150" caption="Outside" lightbox_gallery="Charles Dickens Tribute" type="lightbox2"
+      thumb_height="150" caption="Outside"
+      full_width="1024" full_height="768"
   %}
   {% include elements/photo.html
       url="https://live.staticflickr.com/65535/50700887962_14fa65a4d2_b.jpg"
-      thumb_width="150" caption="The back of the house" lightbox_gallery="Charles Dickens Tribute" type="lightbox2"
+      thumb_height="150" caption="The back of the house"
+      full_width="1024" full_height="768"
   %}
 </div>
