@@ -308,7 +308,7 @@ To identify the current hour offset from UTC, look up the time zone offset based
 
 Write a Markdown-style TOC of each header that should be in the TOC. Add the TOC to the top of the blog post. Then add the anchors the blog post, (making the headers of the blog post linkable).
 
-```md
+```markdown
 <div id="anchor">
   <a id="the-link-id">&nbsp;</a>
 
@@ -362,6 +362,158 @@ Alternatively, to use PhotoSwipe to make the photo clickable, and then it'll zoo
   %}
 </div>
 ```
+
+To create a "nested" PhotoSwipe gallery (where one gallery sites _inside_ a larger gallery), please view the examples below:
+
+<details><summary>Nested PhotoSwipe Gallery Markdown Example</summary>
+
+```markdown
+Here's the "surrounding" PhotoSwipe gallery with pictures of an alpaca, bobcat, chipmunk, dolphin, ermine, and fox:
+
+<div class="photoswipe-gallery"> <!-- This is the start of the "surrounding" gallery -->
+  <div class="text-center">
+    {% include elements/photo.html
+        url="https://i.imgur.com/Y3ibubf.jpg"
+        thumb_height="225" caption="Alpaca"
+        full_width="720" full_height="960"
+    %}
+    {% include elements/photo.html
+        url="https://i.imgur.com/8K0L9VU.jpg"
+        thumb_height="225" caption="Bobcat"
+        full_width="1600" full_height="1200"
+    %}
+    {% include elements/photo.html
+        url="https://i.imgur.com/Sd4hAvW.jpg"
+        thumb_height="225" caption="Chipmunk"
+        full_width="1280" full_height="852"
+    %}
+  </div>
+
+Here's an "inner" PhotoSwipe gallery. The photos in the "inner" gallery _are not_ included in the "surrounding" gallery. And photos from the "surrounding" gallery _are not_ included in the "inner" gallery.
+
+The pictures in the "inner" gallery include pictures of a zebu, yak, and xerus:
+
+  <div class="text-center inner-photoswipe-gallery"> <!-- This is the start of the "inner" gallery -->
+    {% include elements/photo.html
+        url="https://i.imgur.com/WNa7Bxx.jpg"
+        thumb_height="80" caption="Zebu"
+        full_width="1180" full_height="520"
+        child_selector_class="inner-photoswipe"
+    %}
+    {% include elements/photo.html
+        url="https://i.imgur.com/nR8jJEM.jpeg"
+        thumb_height="80" caption="Yak"
+        full_width="5184" full_height="3456"
+        child_selector_class="inner-photoswipe"
+    %}
+    {% include elements/photo.html
+        url="https://live.staticflickr.com/65535/51222953803_bb61bb4368_b.jpg"
+        thumb_height="80" caption="Xerus"
+        full_width="1000" full_height="667"
+        child_selector_class="inner-photoswipe"
+    %}
+  </div> <!-- This is the end of the "inner" gallery -->
+
+And now we're back to the "surrounding" gallery:
+
+  <div class="text-center">
+    {% include elements/photo.html
+        url="https://i.imgur.com/pk5308U.jpg"
+        thumb_height="225" caption="Dolphin"
+        full_width="530" full_height="765"
+    %}
+    {% include elements/photo.html
+        url="https://i.imgur.com/wdg3S.jpg"
+        thumb_height="225" caption="Ermine"
+        full_width="316" full_height="474"
+    %}
+    {% include elements/photo.html
+        url="https://i.imgur.com/1VkY1R4.jpg"
+        thumb_height="225" caption="Fox"
+        full_width="540" full_height="405"
+    %}
+  </div>
+</div> <!-- This is the end of the "surrounding" gallery -->
+
+<script
+  src="/assets/js/activate_photoswipe.js"
+  type="module"
+  class="photoswipe-activation"
+  gallery-selector=".inner-photoswipe-gallery"
+  child-selector=".inner-photoswipe"
+></script>
+```
+
+</details>
+
+<details><summary>Nested PhotoSwipe Gallery HTML Example</summary>
+
+```html
+<p>Here’s the “surrounding” PhotoSwipe gallery with pictures of an alpaca, bobcat, chipmunk, dolphin, ermine, and fox:</p>
+
+<div class="photoswipe-gallery"> <!-- This is the start of the "surrounding" gallery -->
+  <div class="text-center">
+    <a class="photoswipe" href="https://i.imgur.com/Y3ibubf.jpg" target="_blank" data-pswp-width="720" data-pswp-height="960">
+      <img class="image" src="https://i.imgur.com/Y3ibubf.jpg" width="170" alt="Alpaca">
+      <div class="invisible caption">Alpaca</div>
+    </a>
+    <a class="photoswipe" href="https://i.imgur.com/8K0L9VU.jpg" target="_blank" data-pswp-width="1600" data-pswp-height="1200">
+      <img class="image" src="https://i.imgur.com/8K0L9VU.jpg" width="300" alt="Bobcat">
+      <div class="invisible caption">Bobcat</div>
+    </a>
+    <a class="photoswipe" href="https://i.imgur.com/Sd4hAvW.jpg" target="_blank" data-pswp-width="1280" data-pswp-height="852">
+      <img class="image" src="https://i.imgur.com/Sd4hAvW.jpg" width="340" alt="Chipmunk">
+      <div class="invisible caption">Chipmunk</div>
+    </a>
+  </div>
+
+  <p>Here’s an “inner” PhotoSwipe gallery. The photos in the “inner” gallery <em>are not</em> included in the “surrounding” gallery. And photos from the “surrounding” gallery <em>are not</em> included in the “inner” gallery.</p>
+
+  <p>The pictures in the “inner” gallery include pictures of a zebu, yak, and xerus:</p>
+
+  <div class="text-center inner-photoswipe-gallery"> <!-- This is the start of the "inner" gallery -->
+    <a class="inner-photoswipe" href="https://i.imgur.com/WNa7Bxx.jpg" target="_blank" data-pswp-width="1180" data-pswp-height="520">
+      <img class="image" src="https://i.imgur.com/WNa7Bxx.jpg" width="150" alt="Zebu">
+      <div class="invisible caption">Zebu</div>
+    </a>
+    <a class="inner-photoswipe" href="https://i.imgur.com/nR8jJEM.jpeg" target="_blank" data-pswp-width="5184" data-pswp-height="3456">
+      <img class="image" src="https://i.imgur.com/nR8jJEM.jpeg" width="100" alt="Yak">
+      <div class="invisible caption">Yak</div>
+    </a>
+    <a class="inner-photoswipe" href="https://live.staticflickr.com/65535/51222953803_bb61bb4368_b.jpg" target="_blank" data-pswp-width="1000" data-pswp-height="667">
+      <img class="image" src="https://live.staticflickr.com/65535/51222953803_bb61bb4368_b.jpg" width="100" alt="Xerus">
+      <div class="invisible caption">Xerus</div>
+    </a>
+  </div> <!-- This is the end of the "inner" gallery -->
+
+  <p>And now we’re back to the “surrounding” gallery:</p>
+
+  <div class="text-center">
+    <a class="photoswipe" href="https://i.imgur.com/pk5308U.jpg" target="_blank" data-pswp-width="530" data-pswp-height="765">
+      <img class="image" src="https://i.imgur.com/pk5308U.jpg" width="155" alt="Dolphin">
+      <div class="invisible caption">Dolphin</div>
+    </a>
+    <a class="photoswipe" href="https://i.imgur.com/wdg3S.jpg" target="_blank" data-pswp-width="316" data-pswp-height="474">
+      <img class="image" src="https://i.imgur.com/wdg3S.jpg" width="150" alt="Ermine">
+      <div class="invisible caption">Ermine</div>
+    </a>
+    <a class="photoswipe" href="https://i.imgur.com/1VkY1R4.jpg" target="_blank" data-pswp-width="540" data-pswp-height="405">
+      <img class="image" src="https://i.imgur.com/1VkY1R4.jpg" width="300" alt="Fox">
+      <div class="invisible caption">Fox</div>
+    </a>
+  </div>
+</div> <!-- This is the end of the "surrounding" gallery -->
+
+<script
+  src="/assets/js/activate_photoswipe.js"
+  type="module"
+  class="photoswipe-activation"
+  gallery-selector=".inner-photoswipe-gallery"
+  child-selector=".inner-photoswipe"
+></script>
+```
+
+</details>
 
 Using Lightbox2 in order to make photos clickable is also an option, but this is not recommended (use PhotoSwipe instead!).
 
