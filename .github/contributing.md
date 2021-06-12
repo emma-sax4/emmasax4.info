@@ -21,6 +21,13 @@
   * [Tables of Contents](#tables-of-contents)
 * [LEGO Collection](#lego-collection)
 * [Assets](#assets)
+  * [CSS](#css)
+  * [JS](#js)
+  * [Images](#images)
+    * [PhotoSwipe](#photoswipe)
+    * [Lightbox2](#lightbox2)
+    * [Notes for Lightbox2 and PhotoSwipe](#notes-for-lightbox2-and-photoswipe)
+  * [Resources](#resources)
 
 ## Contribution Process
 
@@ -338,17 +345,27 @@ With the LEGO entries, it matters less exactly what date is presented, since the
 
 This directory has four directories, `css/`, `js/`, `images/`, and `resources/`.
 
+### CSS
+
 The `css/` directory contains all of the CSS files in this site. They're all called together in `style.scss`. The CSS in the project is loaded inside the `_includes/head.html`. This site also uses [Bootstrap](https://getbootstrap.com/docs/4.4/getting-started/introduction/) for a lot of its CSS, including the navigation bar, headers, responsive page, etc.
 
+### JS
+
 The `js/` directory is where we store all of our Javascript files for the site. Some of them are called at the bottom of every page. Others are called in specific places in the code. The other Javascript files are directly copy-pasted by 3rd party sources online. They're hard-coded into the site to avoid potential dependency breaks later.
+
+### Images
 
 The `images/` directory gives me a place to store all of the images this site uses. To call a specific image, you can ask for it in HTML:
 
 ```html
 <div>
-  <img class="custom-image-class" src="/assets/images/picture-01.jpg" alt="Picture 1">
+  <img class="image photo" src="/assets/images/picture-01.jpg" alt="Picture 1">
 </div>
 ```
+
+Yes, both the `image` and `photo` classes would be required.
+
+#### PhotoSwipe
 
 Alternatively, to use PhotoSwipe to make the photo clickable, and then it'll zoom for the user and create a gallery, you can call the photo `_include`:
 
@@ -367,7 +384,7 @@ To create a "nested" PhotoSwipe gallery (where one gallery sites _inside_ a larg
 
 <details><summary>Nested PhotoSwipe Gallery Markdown Example</summary>
 
-```markdown
+```html
 Here's the "surrounding" PhotoSwipe gallery with pictures of an alpaca, bobcat, chipmunk, dolphin, ermine, and fox:
 
 <div class="photoswipe-gallery"> <!-- This is the start of the "surrounding" gallery -->
@@ -515,6 +532,8 @@ And now we're back to the "surrounding" gallery:
 
 </details>
 
+#### Lightbox2
+
 Using Lightbox2 in order to make photos clickable is also an option, but this is not recommended (use PhotoSwipe instead!).
 
 <details><summary>Lightbox2 Setup</summary>
@@ -530,10 +549,12 @@ Using Lightbox2 in order to make photos clickable is also an option, but this is
 
 </details>
 
-NOTES:
+#### Notes for Lightbox2 and PhotoSwipe
 
 * If a `caption` is given, but not an `alt`, then the `caption` is used as both a caption and an alt. If an `alt` is given, but no `caption`, then there is no caption present on the photo. And if nothing is given, then there's neither a caption nor an alt on the photo.
 * The `full_width` and `full_height` represent the pixel sizes of the original image. If neither a `thumb_width` or a `thumb_height` is provided, then the thumb photo will be the same size as the original photo. If both a `thumb_width` and `thumb_height` are provided, then the image will warp to fit both parameters.
+
+### Resources
 
 The `resources/` directory gives me a place to keep PDF documents that are linked in this site. You can put a link to it in Markdown:
 
