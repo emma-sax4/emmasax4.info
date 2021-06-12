@@ -369,6 +369,8 @@ Yes, both the `image` and `photo` classes would be required.
 
 Alternatively, to use PhotoSwipe to make the photo clickable, and then it'll zoom for the user and create a gallery, you can call the photo `_include`:
 
+<details><summary>PhotoSwipe Setup</summary>
+
 ```html
 <div class="photoswipe-gallery">
   {% include elements/photo.html
@@ -379,6 +381,8 @@ Alternatively, to use PhotoSwipe to make the photo clickable, and then it'll zoo
   %}
 </div>
 ```
+
+</details>
 
 To create a "nested" PhotoSwipe gallery (where one gallery sites _inside_ a larger gallery), please view the examples below:
 
@@ -534,7 +538,7 @@ And now we're back to the "surrounding" gallery:
 
 #### Lightbox2
 
-Using Lightbox2 in order to make photos clickable is also an option, but this is not recommended (use PhotoSwipe instead!).
+Using Lightbox2 in order to make photos clickable is also an option, but this is not recommended (use PhotoSwipe instead).
 
 <details><summary>Lightbox2 Setup</summary>
 
