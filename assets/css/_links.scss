@@ -7,23 +7,13 @@ a:hover {
   color: #001aaf;
 }
 
-a:hover:not(.photoswipe, .lightbox2, .nav-link, .navbar-brand) {
+a:hover:not(
+  .photoswipe, .lightbox2,
+  .nav-link, .navbar-brand,
+  .link-icon, .link-icon-rss,
+  .button-text
+) {
   text-decoration: underline;
-}
-
-.link-icon-button > a {
-  svg {
-    height: 3rem;
-    width: 3rem;
-    transition: stroke .15s ease-in-out;
-  }
-
-  &:hover,
-  &:active {
-    svg {
-      stroke: white;
-    }
-  }
 }
 
 .link-icon-rss {
