@@ -21,6 +21,13 @@
   * [Tables of Contents](#tables-of-contents)
 * [LEGO Collection](#lego-collection)
 * [Assets](#assets)
+  * [CSS](#css)
+  * [JS](#js)
+  * [Images](#images)
+    * [PhotoSwipe](#photoswipe)
+    * [Lightbox2](#lightbox2)
+    * [Notes for Lightbox2 and PhotoSwipe](#notes-for-lightbox2-and-photoswipe)
+  * [Resources](#resources)
 
 ## Contribution Process
 
@@ -308,7 +315,7 @@ To identify the current hour offset from UTC, look up the time zone offset based
 
 Write a Markdown-style TOC of each header that should be in the TOC. Add the TOC to the top of the blog post. Then add the anchors the blog post, (making the headers of the blog post linkable).
 
-```md
+```markdown
 <div id="anchor">
   <a id="the-link-id">&nbsp;</a>
 
@@ -338,19 +345,31 @@ With the LEGO entries, it matters less exactly what date is presented, since the
 
 This directory has four directories, `css/`, `js/`, `images/`, and `resources/`.
 
+### CSS
+
 The `css/` directory contains all of the CSS files in this site. They're all called together in `style.scss`. The CSS in the project is loaded inside the `_includes/head.html`. This site also uses [Bootstrap](https://getbootstrap.com/docs/4.4/getting-started/introduction/) for a lot of its CSS, including the navigation bar, headers, responsive page, etc.
 
+### JS
+
 The `js/` directory is where we store all of our Javascript files for the site. Some of them are called at the bottom of every page. Others are called in specific places in the code. The other Javascript files are directly copy-pasted by 3rd party sources online. They're hard-coded into the site to avoid potential dependency breaks later.
+
+### Images
 
 The `images/` directory gives me a place to store all of the images this site uses. To call a specific image, you can ask for it in HTML:
 
 ```html
 <div>
-  <img class="custom-image-class" src="/assets/images/picture-01.jpg" alt="Picture 1">
+  <img class="image photo" src="/assets/images/picture-01.jpg" alt="Picture 1">
 </div>
 ```
 
+Yes, both the `image` and `photo` classes would be required.
+
+#### PhotoSwipe
+
 Alternatively, to use PhotoSwipe to make the photo clickable, and then it'll zoom for the user and create a gallery, you can call the photo `_include`:
+
+<details><summary>PhotoSwipe Setup</summary>
 
 ```html
 <div class="photoswipe-gallery">
@@ -363,7 +382,163 @@ Alternatively, to use PhotoSwipe to make the photo clickable, and then it'll zoo
 </div>
 ```
 
-Using Lightbox2 in order to make photos clickable is also an option, but this is not recommended (use PhotoSwipe instead!).
+</details>
+
+To create a "nested" PhotoSwipe gallery (where one gallery sites _inside_ a larger gallery), please view the examples below:
+
+<details><summary>Nested PhotoSwipe Gallery Markdown Example</summary>
+
+```html
+Here's the "surrounding" PhotoSwipe gallery with pictures of an alpaca, bobcat, chipmunk, dolphin, ermine, and fox:
+
+<div class="photoswipe-gallery"> <!-- This is the start of the "surrounding" gallery -->
+  <div class="text-center">
+    {% include elements/photo.html
+        url="https://i.imgur.com/Y3ibubf.jpg"
+        thumb_height="225" caption="Alpaca"
+        full_width="720" full_height="960"
+    %}
+    {% include elements/photo.html
+        url="https://i.imgur.com/8K0L9VU.jpg"
+        thumb_height="225" caption="Bobcat"
+        full_width="1600" full_height="1200"
+    %}
+    {% include elements/photo.html
+        url="https://i.imgur.com/Sd4hAvW.jpg"
+        thumb_height="225" caption="Chipmunk"
+        full_width="1280" full_height="852"
+    %}
+  </div>
+
+Here's an "inner" PhotoSwipe gallery. The photos in the "inner" gallery _are not_ included in the "surrounding" gallery. And photos from the "surrounding" gallery _are not_ included in the "inner" gallery.
+
+The pictures in the "inner" gallery include pictures of a zebu, yak, and xerus:
+
+  <div class="text-center inner-photoswipe-gallery"> <!-- This is the start of the "inner" gallery -->
+    {% include elements/photo.html
+        url="https://i.imgur.com/WNa7Bxx.jpg"
+        thumb_height="80" caption="Zebu"
+        full_width="1180" full_height="520"
+        child_selector_class="inner-photoswipe"
+    %}
+    {% include elements/photo.html
+        url="https://i.imgur.com/nR8jJEM.jpeg"
+        thumb_height="80" caption="Yak"
+        full_width="5184" full_height="3456"
+        child_selector_class="inner-photoswipe"
+    %}
+    {% include elements/photo.html
+        url="https://live.staticflickr.com/65535/51222953803_bb61bb4368_b.jpg"
+        thumb_height="80" caption="Xerus"
+        full_width="1000" full_height="667"
+        child_selector_class="inner-photoswipe"
+    %}
+  </div> <!-- This is the end of the "inner" gallery -->
+
+And now we're back to the "surrounding" gallery:
+
+  <div class="text-center">
+    {% include elements/photo.html
+        url="https://i.imgur.com/pk5308U.jpg"
+        thumb_height="225" caption="Dolphin"
+        full_width="530" full_height="765"
+    %}
+    {% include elements/photo.html
+        url="https://i.imgur.com/wdg3S.jpg"
+        thumb_height="225" caption="Ermine"
+        full_width="316" full_height="474"
+    %}
+    {% include elements/photo.html
+        url="https://i.imgur.com/1VkY1R4.jpg"
+        thumb_height="225" caption="Fox"
+        full_width="540" full_height="405"
+    %}
+  </div>
+</div> <!-- This is the end of the "surrounding" gallery -->
+
+<script
+  src="/assets/js/activate_photoswipe.js"
+  type="module"
+  class="photoswipe-activation"
+  gallery-selector=".inner-photoswipe-gallery"
+  child-selector=".inner-photoswipe"
+></script>
+```
+
+</details>
+
+<details><summary>Nested PhotoSwipe Gallery HTML Example</summary>
+
+```html
+<p>Here’s the “surrounding” PhotoSwipe gallery with pictures of an alpaca, bobcat, chipmunk, dolphin, ermine, and fox:</p>
+
+<div class="photoswipe-gallery"> <!-- This is the start of the "surrounding" gallery -->
+  <div class="text-center">
+    <a class="photoswipe" href="https://i.imgur.com/Y3ibubf.jpg" target="_blank" data-pswp-width="720" data-pswp-height="960">
+      <img class="image" src="https://i.imgur.com/Y3ibubf.jpg" width="170" alt="Alpaca">
+      <div class="invisible caption">Alpaca</div>
+    </a>
+    <a class="photoswipe" href="https://i.imgur.com/8K0L9VU.jpg" target="_blank" data-pswp-width="1600" data-pswp-height="1200">
+      <img class="image" src="https://i.imgur.com/8K0L9VU.jpg" width="300" alt="Bobcat">
+      <div class="invisible caption">Bobcat</div>
+    </a>
+    <a class="photoswipe" href="https://i.imgur.com/Sd4hAvW.jpg" target="_blank" data-pswp-width="1280" data-pswp-height="852">
+      <img class="image" src="https://i.imgur.com/Sd4hAvW.jpg" width="340" alt="Chipmunk">
+      <div class="invisible caption">Chipmunk</div>
+    </a>
+  </div>
+
+  <p>Here’s an “inner” PhotoSwipe gallery. The photos in the “inner” gallery <em>are not</em> included in the “surrounding” gallery. And photos from the “surrounding” gallery <em>are not</em> included in the “inner” gallery.</p>
+
+  <p>The pictures in the “inner” gallery include pictures of a zebu, yak, and xerus:</p>
+
+  <div class="text-center inner-photoswipe-gallery"> <!-- This is the start of the "inner" gallery -->
+    <a class="inner-photoswipe" href="https://i.imgur.com/WNa7Bxx.jpg" target="_blank" data-pswp-width="1180" data-pswp-height="520">
+      <img class="image" src="https://i.imgur.com/WNa7Bxx.jpg" width="150" alt="Zebu">
+      <div class="invisible caption">Zebu</div>
+    </a>
+    <a class="inner-photoswipe" href="https://i.imgur.com/nR8jJEM.jpeg" target="_blank" data-pswp-width="5184" data-pswp-height="3456">
+      <img class="image" src="https://i.imgur.com/nR8jJEM.jpeg" width="100" alt="Yak">
+      <div class="invisible caption">Yak</div>
+    </a>
+    <a class="inner-photoswipe" href="https://live.staticflickr.com/65535/51222953803_bb61bb4368_b.jpg" target="_blank" data-pswp-width="1000" data-pswp-height="667">
+      <img class="image" src="https://live.staticflickr.com/65535/51222953803_bb61bb4368_b.jpg" width="100" alt="Xerus">
+      <div class="invisible caption">Xerus</div>
+    </a>
+  </div> <!-- This is the end of the "inner" gallery -->
+
+  <p>And now we’re back to the “surrounding” gallery:</p>
+
+  <div class="text-center">
+    <a class="photoswipe" href="https://i.imgur.com/pk5308U.jpg" target="_blank" data-pswp-width="530" data-pswp-height="765">
+      <img class="image" src="https://i.imgur.com/pk5308U.jpg" width="155" alt="Dolphin">
+      <div class="invisible caption">Dolphin</div>
+    </a>
+    <a class="photoswipe" href="https://i.imgur.com/wdg3S.jpg" target="_blank" data-pswp-width="316" data-pswp-height="474">
+      <img class="image" src="https://i.imgur.com/wdg3S.jpg" width="150" alt="Ermine">
+      <div class="invisible caption">Ermine</div>
+    </a>
+    <a class="photoswipe" href="https://i.imgur.com/1VkY1R4.jpg" target="_blank" data-pswp-width="540" data-pswp-height="405">
+      <img class="image" src="https://i.imgur.com/1VkY1R4.jpg" width="300" alt="Fox">
+      <div class="invisible caption">Fox</div>
+    </a>
+  </div>
+</div> <!-- This is the end of the "surrounding" gallery -->
+
+<script
+  src="/assets/js/activate_photoswipe.js"
+  type="module"
+  class="photoswipe-activation"
+  gallery-selector=".inner-photoswipe-gallery"
+  child-selector=".inner-photoswipe"
+></script>
+```
+
+</details>
+
+#### Lightbox2
+
+Using Lightbox2 in order to make photos clickable is also an option, but this is not recommended (use PhotoSwipe instead).
 
 <details><summary>Lightbox2 Setup</summary>
 
@@ -378,10 +553,12 @@ Using Lightbox2 in order to make photos clickable is also an option, but this is
 
 </details>
 
-NOTES:
+#### Notes for Lightbox2 and PhotoSwipe
 
 * If a `caption` is given, but not an `alt`, then the `caption` is used as both a caption and an alt. If an `alt` is given, but no `caption`, then there is no caption present on the photo. And if nothing is given, then there's neither a caption nor an alt on the photo.
 * The `full_width` and `full_height` represent the pixel sizes of the original image. If neither a `thumb_width` or a `thumb_height` is provided, then the thumb photo will be the same size as the original photo. If both a `thumb_width` and `thumb_height` are provided, then the image will warp to fit both parameters.
+
+### Resources
 
 The `resources/` directory gives me a place to keep PDF documents that are linked in this site. You can put a link to it in Markdown:
 

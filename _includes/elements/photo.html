@@ -31,14 +31,20 @@
 {% if include.type == "lightbox2" %}
 
 {% if caption == "" %}
-<a class="lightbox2" href="{{ include.url }}" data-lightbox="{{ include.lightbox_gallery }}">
+<a class="lightbox2 photo" href="{{ include.url }}" data-lightbox="{{ include.lightbox_gallery }}">
 {% else %}
-<a class="lightbox2" href="{{ include.url }}" data-lightbox="{{ include.lightbox_gallery }}" title="{{ caption }}">
+<a class="lightbox2 photo" href="{{ include.url }}" data-lightbox="{{ include.lightbox_gallery }}" title="{{ caption }}">
 {% endif %}
 
 {% else %}
 
-<a class="photoswipe" href="{{ include.url }}" target="_blank" data-pswp-width="{{ include.full_width }}" data-pswp-height="{{ include.full_height }}">
+{% if include.child_selector_class %}
+  {% assign child_selector_class = include.child_selector_class %}
+{% else %}
+  {% assign child_selector_class = "photoswipe" %}
+{% endif %}
+
+<a class="{{ child_selector_class }} photo" href="{{ include.url }}" target="_blank" data-pswp-width="{{ include.full_width }}" data-pswp-height="{{ include.full_height }}">
 
 {% endif %}
 

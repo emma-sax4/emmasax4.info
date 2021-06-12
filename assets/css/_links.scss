@@ -8,10 +8,9 @@ a:hover {
 }
 
 a:hover:not(
-  .photoswipe, .lightbox2,
+  .image, .photo, .button-text,
   .nav-link, .navbar-brand,
-  .link-icon, .link-icon-rss,
-  .button-text
+  .link-icon, .link-icon-rss
 ) {
   text-decoration: underline;
 }
