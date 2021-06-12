@@ -98,7 +98,7 @@
         <div class="row">
           <!-- Main photo -->
           <div class="col-md text-center photoswipe-gallery">
-            <a class="photoswipe" href="/assets/images/SaxProfilePic.jpg" target="_blank"
+            <a class="photoswipe photo" href="/assets/images/SaxProfilePic.jpg" target="_blank"
         data-pswp-width="500" data-pswp-height="333"
       >
               <img class="image" src="/assets/images/SaxProfilePic.jpg" width="500" alt="My profile picture">
@@ -148,7 +148,13 @@
     View on <a href="https://github.com/emmahsax/emmahsax.github.io">GitHub</a>.
   </footer>
   <!-- Javascript scripts -->
-  <script src="/assets/js/activate_photoswipe.js" type="module"></script>
+  <script
+    src="/assets/js/activate_photoswipe.js"
+    type="module"
+    class="photoswipe-activation"
+    gallery-selector=".photoswipe-gallery"
+    child-selector=".photoswipe"
+  ></script>
   <script src="/assets/js/show_dates.js"></script>
   <script src="/assets/js/external_links.js"></script>
   <script src="/assets/js/jquery.min.js"></script>
