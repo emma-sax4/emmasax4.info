@@ -79,7 +79,7 @@ And voilà. PhotoSwipe works! Feel free to compare a Lightbox2 example (left) wi
   %}
   {% include elements/photo.html
       url="https://i.imgur.com/lyWrj3r.jpeg"
-      thumb_height="127"
+      thumb_height="127" alt="Adorable creature"
       full_width="600" full_height="380"
   %}
 </div>
