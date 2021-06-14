@@ -3,9 +3,7 @@
     <i class="post-categorization-icon" data-feather="tag"></i>
 
     {% for tag in tags_to_show %}
-      <a href="/blog/{{ tag }}/">
-        {{ tag }}
-      </a>
+      <a href="/blog/{{ tag }}/">{{ tag }}</a>
 
       {% unless tag == tags_to_show.last %}
         |

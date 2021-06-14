@@ -3,16 +3,16 @@ layout: post
 title: Turning Lightbox2 into PhotoSwipe
 tags: [ tech, jekyll ]
 permalink: /blog/posts/turning-lightbox2-into-photoswipe/
-draft: true
+date: 2021-06-14 12:00:00 -0500
 ---
 
-Last August, I made a big push to add better photo functionality to my website. I added [Lightbox2](https://lokeshdhakar.com/projects/lightbox2/), by @lokesh, to my site. In a [previous blog post](/blog/posts/adding-lightbox-to-a-jekyll-website/), I referenced it as plain Lightbox. It turns out that Lightbox2 is built upon Lightbox JS, by the same author. But technically, I incorporated Lightbox2 to my site.
+In August of 2020, I made a big push to add better photo functionality to my website. I added [Lightbox2](https://lokeshdhakar.com/projects/lightbox2/), by @lokesh, to my site. In a [previous blog post](/blog/posts/adding-lightbox-to-a-jekyll-website/), I referenced it as plain Lightbox. It turns out that Lightbox2 is built upon Lightbox JS, by the same author. But technically, I incorporated Lightbox2.
 
-But recently, upon the advice of an old schoolmate, I came across [PhotoSwipe](https://photoswipe.com/). PhotoSwipe provides similar abilities to Lightbox2, but also provides zooming, faster loading, and swipe actions, as well as clicking and arrow key pressing. This is a definite benefit for viewing the site on mobile.
+But recently, upon the advice of an old schoolmate, I came across [PhotoSwipe](https://photoswipe.com/). PhotoSwipe provides similar abilities to Lightbox2, but also provides zooming, faster loading, and swipe actions, as well as clicking and arrow key pressing. This is a definite benefit for viewing my site on mobile.
 
 The author of PhotoSwipe, @dimsemenov, has been working on a new v5 beta version of PhotoSwipe, which is [documented here](https://photoswipe.com/v5/docs/getting-started/). Although the v5 documentation isn't fully fleshed out (the version is still in beta after all) I still found PhotoSwipe v5 simple enough to set up.
 
-I started with an `activate_photoswipe.js` file:
+I started with an `assets/js/activate_photoswipe.js` file:
 
 ```javascript
 import PhotoSwipeLightbox from './photoswipe-lightbox.esm.min.js'
@@ -37,11 +37,11 @@ And then I modified my `_includes/photo.html` file to allow both Lightbox2 photo
   <a class="photoswipe photo" href="{{ include.url }}" target="_blank" data-pswp-width="{{ include.full_width }}" data-pswp-height="{{ include.full_height }}">
 {% endif %}
 
-    <img class="image" src="{{ include.url }}" width="{{ include.thumb_width }}" height="{{ thumb_height }}" alt="{{ include.alt }}">
+    <img class="image" src="{{ include.url }}" width="{{ include.thumb_width }}" height="{{ include.thumb_height }}" alt="{{ include.alt }}">
   </a>{% endraw %}
 ```
 
-This way, when we call a photo, we can pass in a `type` (only required if using Lightbox2). And if we're using Lightbox2, then create a Lightbox2 photo, else create a PhotoSwipe photo:
+This way, when we call a photo, we can pass in a `type` (only required if using Lightbox2). And if we're using Lightbox2, then create a Lightbox2 photo, else create a PhotoSwipe photo. Here's how I would call the `_includes` file:
 
 ```html
 <!-- Lightbox2 -->
@@ -67,7 +67,7 @@ Then, in my `_layouts/default.html` file, I needed to initialize PhotoSwipe:
 <script src="/assets/js/activate_photoswipe.js" type="module"></script>
 ```
 
-Lastly, I needed to download three files from the [`dist`](https://github.com/dimsemenov/PhotoSwipe/tree/v5-beta/dist) directory: `photoswipe.css`, `photoswipe-lightbox.esm.min.js`, and `photoswipe.esm.min.js`.
+Lastly, I needed to download three files from the [`dist`](https://github.com/dimsemenov/PhotoSwipe/tree/v5-beta/dist) directory: `photoswipe.css`, `photoswipe-lightbox.esm.min.js`, and `photoswipe.esm.min.js`. I placed these in `assets/css` and `assets/js` according to the file types.
 
 And voilà. PhotoSwipe works! Feel free to compare a Lightbox2 example (left) with a PhotoSwipe example (right):
 
@@ -106,7 +106,7 @@ But the real benefit to PhotoSwipe is visible when you have a gallery of images.
   %}
 </div>
 
-The images are slow to load, and although you can navigate by clicking a photo and using arrow keys on keyboard, a mobile user cannot swipe. Furthermore, if you click in _slightly_ the wrong place, a Lightbox2 gallery will exit, making it a tedious tool to use as a viewer.
+The images are slow to load, and although you can navigate by clicking a photo and using arrow keys on keyboard, a mobile user cannot swipe. Furthermore, if you click in _slightly_ the wrong place, a Lightbox2 gallery will exit, making it a tedious viewing experience.
 
 But, take a look at the same gallery through PhotoSwipe:
 
@@ -134,7 +134,7 @@ Now with only those few changes, PhotoSwipe v5 is completely set up, and I can b
 
 But even after all that, you'll notice that there's something huge missing from PhotoSwipe: captions. All of my Lightbox2 photos had captions. Luckily, PhotoSwipe v5 has some detailed documentation on how to enable captions.
 
-First, I added Javascript to `activate_photoswipe.js`. The entire file came out like this:
+First, I added Javascript to `assets/js/activate_photoswipe.js`. Based on the documentation provided, and after some fiddling on my part, the entire file came out like this:
 
 ```javascript
 import PhotoSwipeLightbox from './photoswipe-lightbox.esm.min.js'
@@ -181,6 +181,7 @@ lightbox.on('uiRegister', function () {
     }
   })
 })
+
 lightbox.init()
 ```
 
@@ -204,7 +205,7 @@ What this logic does is when we click on a photo, if the `caption` class is eith
   %}
 </div>
 
-Throughout my PhotoSwipe experimenting, there were several other changes I made to the core files mentioned. In order to avoid attempting to summarize with English language, I'll just provide links to the completed code:
+Throughout my PhotoSwipe experimenting, there were several other changes I made to the core files mentioned. These were in order to implement nested galleries, caption and "alt" interchangeability, optional thumb photo widths and heights, etc. In order to avoid attempting to summarize further with English language, I'll just provide links to the completed code:
 
 * [Documentation about adding PhotoSwipe and Lightbox2]({{ site.author_profiles.github }}/{{ site.github_repo }}/blob/b6661ecdf093cf79dbb755f15eabab1740c75390/.github/contributing.md#images)
 * [`assets/js/activate_photoswipe.js`]({{ site.author_profiles.github }}/{{ site.github_repo }}/blob/b6661ecdf093cf79dbb755f15eabab1740c75390/assets/js/activate_photoswipe.js)
