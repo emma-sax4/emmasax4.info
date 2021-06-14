@@ -49,7 +49,7 @@
     <meta name="msvalidate.01" content="89B2B19FF966341B78EF64EDADE6DF81" />
     <meta name="yandex-verification" content="32fe10ad6352714a" />
     <script type="application/ld+json">
-      {"headline":"301 Redirects with Static Sites","url":"https://emmasax.com/blog/posts/301-redirects-with-static-sites/","mainEntityOfPage":{"@type":"WebPage","@id":"https://emmasax.com/blog/posts/301-redirects-with-static-sites/"},"dateModified":"2021-06-04T00:44:09+00:00","datePublished":"2020-10-04T17:00:00+00:00","author":{"@type":"Person","name":"Emma Sax"},"description":"Emma Sax’s personal website and blog. Includes information about my social media profiles, resumé, and hobbies.","@type":"BlogPosting","@context":"https://schema.org"}
+      {"headline":"301 Redirects with Static Sites","url":"https://emmasax.com/blog/posts/301-redirects-with-static-sites/","mainEntityOfPage":{"@type":"WebPage","@id":"https://emmasax.com/blog/posts/301-redirects-with-static-sites/"},"dateModified":"2021-06-14T16:58:05+00:00","datePublished":"2020-10-04T17:00:00+00:00","author":{"@type":"Person","name":"Emma Sax"},"description":"Emma Sax’s personal website and blog. Includes information about my social media profiles, resumé, and hobbies.","@type":"BlogPosting","@context":"https://schema.org"}
     </script>
     <!-- End Jekyll SEO tag -->
   </head>
@@ -103,9 +103,7 @@
                 <div class="col col-12 col-md-4">
                   <span class="post-meta">
                     <i class="post-categorization-icon" data-feather="tag"></i>
-                    <a href="/blog/tech/">
-                      tech
-                    </a>
+                    <a href="/blog/tech/">tech</a>
                   </span>
                 </div>
                 <div class="col col-12 col-md-4">
@@ -156,9 +154,9 @@
               </a>
             </div>
             <p>And then the last couple tricks was to add two ways to do the redirect. One was a delayed redirect. So a user would sit on the redirect page for five seconds to be able to comprehend what was happening and then they’d be automatically redirected. The second was for an easy way for the user to redirect themselves. This eventually turned into a button. The tricky part of both of these was forwarding the incoming path. It turns out, the easiest way to do this is to actually use Javascript instead of HTML, like the original blog post suggests. For example, this is how you could read the incoming path that is navigated to, and pass it on in a delayed redirect:</p>
-            <div class="language-js highlighter-rouge">
+            <div class="language-javascript highlighter-rouge">
               <div class="highlight">
-                <pre class="highlight"><code data-lang="js"><span class="nx">pathname</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">pathname</span><span class="p">;</span>
+                <pre class="highlight"><code data-lang="javascript"><span class="nx">pathname</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">pathname</span><span class="p">;</span>
 <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span> <span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">href</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">https://destination-domain.com</span><span class="dl">"</span> <span class="o">+</span> <span class="nx">pathname</span><span class="p">;},</span> <span class="mi">5000</span><span class="p">);</span>
 </code></pre>
               </div>

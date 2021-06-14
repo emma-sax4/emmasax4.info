@@ -3,13 +3,25 @@
     <generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator>
     <link href="https://emmasax.com/feed.xml" rel="self" type="application/atom+xml" />
     <link href="https://emmasax.com/" rel="alternate" type="text/html" />
-    <updated>2021-06-05T19:30:42+00:00</updated>
+    <updated>2021-06-14T16:58:05+00:00</updated>
     <id>https://emmasax.com/feed.xml</id>
     <title type="html">Emma Sax</title>
     <subtitle>Emma Sax&apos;s personal website and blog. Includes information about my social media profiles, resumé, and hobbies.</subtitle>
     <author>
       <name>Emma Sax</name>
     </author>
+    <entry>
+      <title type="html">Turning Lightbox2 into PhotoSwipe</title>
+      <link href="https://emmasax.com/blog/posts/turning-lightbox2-into-photoswipe/" rel="alternate" type="text/html" title="Turning Lightbox2 into PhotoSwipe" />
+      <published>2021-06-14T17:00:00+00:00</published>
+      <updated>2021-06-14T16:58:05+00:00</updated>
+      <id>https://emmasax.com/blog/posts/turning-lightbox2-into-photoswipe</id>
+      <author>
+        <name>Emma Sax</name>
+      </author>
+      <category term="tech" />
+      <category term="jekyll" />
+    </entry>
     <entry>
       <title type="html">365 Days Since COVID</title>
       <link href="https://emmasax.com/blog/posts/365-days-since-covid/" rel="alternate" type="text/html" title="365 Days Since COVID" />
@@ -49,17 +61,6 @@
       <published>2020-11-26T20:00:00+00:00</published>
       <updated>2021-03-18T00:32:04+00:00</updated>
       <id>https://emmasax.com/blog/posts/our-20s-matter/the-brain-and-the-body</id>
-      <author>
-        <name>Emma Sax</name>
-      </author>
-      <category term="Our 20s Matter" />
-    </entry>
-    <entry>
-      <title type="html">Our 20s Matter — Part 2: Love</title>
-      <link href="https://emmasax.com/blog/posts/our-20s-matter/love/" rel="alternate" type="text/html" title="Our 20s Matter — Part 2: Love" />
-      <published>2020-11-21T22:05:00+00:00</published>
-      <updated>2021-03-18T00:32:04+00:00</updated>
-      <id>https://emmasax.com/blog/posts/our-20s-matter/love</id>
       <author>
         <name>Emma Sax</name>
       </author>
