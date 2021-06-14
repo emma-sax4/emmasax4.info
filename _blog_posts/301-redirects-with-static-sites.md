@@ -56,7 +56,7 @@ So, the first thing I did was add CSS. I copy-pasted the `./assets/` directory f
 
 And then the last couple tricks was to add two ways to do the redirect. One was a delayed redirect. So a user would sit on the redirect page for five seconds to be able to comprehend what was happening and then they'd be automatically redirected. The second was for an easy way for the user to redirect themselves. This eventually turned into a button. The tricky part of both of these was forwarding the incoming path. It turns out, the easiest way to do this is to actually use Javascript instead of HTML, like the original blog post suggests. For example, this is how you could read the incoming path that is navigated to, and pass it on in a delayed redirect:
 
-```js
+```javascript
 pathname = window.location.pathname;
 setTimeout(function(){ window.location.href = "https://destination-domain.com" + pathname;}, 5000);
 ```
