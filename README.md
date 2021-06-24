@@ -27,7 +27,7 @@ To report any security vulnerabilities, please view this project's [Security Pol
 
 ### Licensing
 
-For information on licensing, please see [LICENSE.md](https://github.com/emmahsax/csci-workshop/blob/main/LICENSE.md).
+For information on licensing, please see [LICENSE.md](https://github.com/emmahsax/emmahsax.github.io/blob/main/LICENSE.md).
 
 ### Code of Conduct
 
