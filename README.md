@@ -17,13 +17,13 @@
 
 <h3 align="center">This website is available at https://emmasax.com.</h3>
 
-For more information on deployments, tests, running Jekyll locally, contributing to this project, and more, please see the [Contributing docs](https://github.com/emmahsax/emmahsax.github.io/blob/main/.github/contributing.md).
+### Contributing
 
-To submit a feature request or a bug ticket, please submit an official [GitHub Issue](https://github.com/emmahsax/emmahsax.github.io/issues/new).
+For more information on deployments, tests, running Jekyll locally, contributing to this project, and more, please see the [Contributing docs](https://github.com/emmahsax/emmahsax.github.io/blob/main/.github/contributing.md). To submit a feature request, bug ticket, etc, please submit an official [GitHub Issue](https://github.com/emmahsax/emmahsax.github.io/issues/new).
 
-To report any security vulnerabilities, please view this project's [Security Policy](https://github.com/emmahsax/emmahsax.github.io/security/policy).
+### Security Policy
 
----
+To report any security vulnerabilities, please view this repository's [Security Policy](https://github.com/emmahsax/emmahsax.github.io/security/policy).
 
 ### Licensing
 
