@@ -3,8 +3,8 @@
 Copyright (c) 2015 Emma Sax.
 All rights reserved.
 
-"Content" is defined as any files or content written in the following directories
-of the default branch:
+"Content" is defined as any files or file contents written in the following
+directories of the default branch:
 
 * `_blog_posts/*`
 * `_lego/*`
@@ -13,11 +13,11 @@ of the default branch:
 * `pages/*`
 
 Content may not be sold, used, modified, copied, published, sublicensed, or
-distributed without prior written permission from the copyright holder. Furthermore,
-use of the copyright holder's name, brand, or logo without prior written
-permission is strictly prohibited. The content, brand, and logo may not be sold
-or used in any way that would generate profit without the copyright holder's
-written permission.
+distributed without prior written permission from the copyright holder.
+Furthermore, use of the copyright holder's name, brand, or logo without prior
+written permission is strictly prohibited. The content, brand, and logo may
+not be sold or used in any way that would generate profit without the copyright
+holder's written permission.
 
 ### Non-Content License
 
