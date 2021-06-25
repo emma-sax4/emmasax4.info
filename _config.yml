@@ -63,6 +63,7 @@ exclude:
   - vendor
   - Gemfile
   - Gemfile.lock
+  - LICENSE.md
 
 # Add _blog_posts because we want Jekyll to read each file as its own page. It starts with _
 # because it's also a collection that needs to be read below. We don't need to include _lego because
