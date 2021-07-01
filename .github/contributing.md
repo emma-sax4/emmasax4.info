@@ -4,6 +4,7 @@
 
 * [Contribution Process](#contribution-process)
 * [Running Locally](#running-locally)
+* [Brand and Site Colors](#brand-and-site-colors)
 * [HTML Proofer](#html-proofer)
 * [Markdown Linter](#markdown-linter)
 * [Rubocop](#rubocop)
@@ -76,6 +77,15 @@ JEKYLL_ENV=production bundle exec jekyll serve
 ```
 
 NOTE: Running this process locally will most likely create at least one directory locally on your machine, such as `_site/` and `.sass-cache/`, and potentially others. All of these are already in the `.gitignore`, but feel free to add others as necessary.
+
+## Brand and Site Colors
+
+* Blue: ![#001aaf](https://via.placeholder.com/15/001aaf/000000?text=+) `#001aaf`
+* White: ![#ffffff](https://via.placeholder.com/15/ffffff/000000?text=+) `#ffffff`
+* Dark Grey: ![#4c565a](https://via.placeholder.com/15/4c565a/000000?text=+) `#4c565a`
+* Light Grey: ![#f3f6fa](https://via.placeholder.com/15/f3f6fa/000000?text=+) `#f3f6fa`
+* Orange: ![#f88e02](https://via.placeholder.com/15/f88e02/000000?text=+) `#f88e02`
+* Red: ![#d61b1b](https://via.placeholder.com/15/d61b1b/000000?text=+) `#d61b1b`
 
 ## HTML Proofer
 
