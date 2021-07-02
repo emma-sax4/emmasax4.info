@@ -19,7 +19,9 @@
 
 ### Contributing
 
-For more information on deployments, tests, running Jekyll locally, contributing to this project, and more, please see the [Contributing docs](https://github.com/emmahsax/emmahsax.github.io/blob/main/.github/contributing.md). To submit a feature request, bug ticket, etc, please submit an official [GitHub Issue](https://github.com/emmahsax/emmahsax.github.io/issues/new).
+For more information on deployments, tests, running Jekyll locally, contributing to this project, and more, please see the [Contributing documentation](https://github.com/emmahsax/emmahsax.github.io/blob/main/.github/contributing.md). To submit a feature request, bug ticket, etc, please submit an official [GitHub issue](https://github.com/emmahsax/emmahsax.github.io/issues/new).
+
+Please follow included Issue Template(s) and Pull Request Template(s) when creating issues or pull requests.
 
 ### Security Policy
 
