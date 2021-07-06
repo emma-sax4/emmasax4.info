@@ -10,6 +10,7 @@
 source 'https://rubygems.org'
 
 # Gems required for all environments
+gem 'commonmarker', '< 0.22'
 gem 'jekyll'
 gem 'jekyll-commonmark', git: 'https://github.com/jekyll/jekyll-commonmark'
 gem 'jekyll-default-layout'
