@@ -49,7 +49,7 @@
     <meta name="msvalidate.01" content="89B2B19FF966341B78EF64EDADE6DF81" />
     <meta name="yandex-verification" content="32fe10ad6352714a" />
     <script type="application/ld+json">
-      {"headline":"Email Subscriptions, RSS Feeds, and Feed Readers","url":"https://emmasax.com/blog/posts/email-subscriptions-rss-feeds-and-feed-readers/","mainEntityOfPage":{"@type":"WebPage","@id":"https://emmasax.com/blog/posts/email-subscriptions-rss-feeds-and-feed-readers/"},"dateModified":"2021-02-21T04:24:03+00:00","datePublished":"2019-12-30T06:00:00+00:00","author":{"@type":"Person","name":"Emma Sax"},"description":"Emma Sax’s personal website and blog. Includes information about my social media profiles, resumé, and hobbies.","@type":"BlogPosting","@context":"https://schema.org"}
+      {"headline":"Email Subscriptions, RSS Feeds, and Feed Readers","url":"https://emmasax.com/blog/posts/email-subscriptions-rss-feeds-and-feed-readers/","mainEntityOfPage":{"@type":"WebPage","@id":"https://emmasax.com/blog/posts/email-subscriptions-rss-feeds-and-feed-readers/"},"dateModified":"2021-07-07T20:34:05+00:00","datePublished":"2019-12-30T06:00:00+00:00","author":{"@type":"Person","name":"Emma Sax"},"description":"Emma Sax’s personal website and blog. Includes information about my social media profiles, resumé, and hobbies.","@type":"BlogPosting","@context":"https://schema.org"}
     </script>
     <!-- End Jekyll SEO tag -->
   </head>
@@ -67,8 +67,8 @@
       data-target="#navbar-links" aria-controls="navbar-links"
       aria-expanded="false" aria-label="Toggle navigation"
     >
-        <i data-feather="menu"></i>
-        <i data-feather="x"></i>
+        <img class="nav-icon-menu" src="/assets/images/icons/menu.svg">
+        <img class="nav-icon-x" src="/assets/images/icons/x.svg">
       </button>
       <!-- Page links -->
       <div class="collapse navbar-collapse" id="navbar-links">
@@ -102,7 +102,7 @@
               <div class="row post-data">
                 <div class="col col-12 col-md-4">
                   <span class="post-meta">
-                    <i class="post-categorization-icon" data-feather="tag"></i>
+                    <img class="post-categorization-icon" src="/assets/images/icons/tag.svg">
                     <a href="/blog/tech/">tech</a>
                   </span>
                 </div>
@@ -121,7 +121,7 @@
             <p>The two most popular forms of subscription is an email service, and a live RSS feed. I started with the email service. The idea is that there’s a form for subscribers (or soon-to-be subscribers) to fill out where they enter their email address, and then a 3rd party service will add them to a list of subscribers. They’ll receive an email saying they successfully subscribed, and then they’ll receive an automated email whenever a new blog post is posted.</p>
             <p>I followed <a href="https://blog.webjeda.com/jekyll-subscribe-form/">this guide</a> for setting up email notifications with <a href="https://mailchimp.com/">MailChimp</a>. The embedded subscription form worked, the automated welcome email worked, and it was all great! Except for one big thing: the <a href="https://www.ftc.gov/tips-advice/business-center/guidance/can-spam-act-compliance-guide-business">CAN-SPAM Act</a>.</p>
             <p>Now, don’t get me wrong, that law is definitely useful and great, but for somebody that doesn’t own a business, isn’t selling any products, and isn’t making any money off of these emails, it seems sort of silly that I need to include a physical address where I can receive old-fashioned snail mail. I don’t have an office, and I don’t even rent a P.O. box. I <em>could</em> rent a P.O. box, for about $8/month. But I don’t want to be dabbling in renting a P.O. box that I won’t really get any mail to, just so I can send out occasional emails to my family and friends. So, if it weren’t for the physical address limitation, I’d probably still be using the email subscription.</p>
-            <p>So instead, I began looking into an RSS feed. This is the <i color="orange" data-feather="rss"></i> icon that you see on this page, and you can probably find a similar icon elsewhere on the internet, too. RSS feeds were originally made with the goal of providing users of sites with a basic overview of the posts on a page, and updates on each page. A user utilizes a <a href="https://whatis.techtarget.com/definition/RSS-reader">feed reader</a> to make a list of all of the feeds their interested in, and then that reader would send them updates about new posts, and link to the full post on each site. But… RSS feed readers never really gained popularity (most readers prefer to just bookmark a site and go back to it to look for updates).</p>
+            <p>So instead, I began looking into an RSS feed. This is the <img class="icon-static" src="/assets/images/icons/rss-fill.svg"> icon that you see on this page, and you can probably find a similar icon elsewhere on the internet, too. RSS feeds were originally made with the goal of providing users of sites with a basic overview of the posts on a page, and updates on each page. A user utilizes a <a href="https://whatis.techtarget.com/definition/RSS-reader">feed reader</a> to make a list of all of the feeds their interested in, and then that reader would send them updates about new posts, and link to the full post on each site. But… RSS feed readers never really gained popularity (most readers prefer to just bookmark a site and go back to it to look for updates).</p>
             <p>But, since a reader requested it, I’ll play along and implement an RSS feed on my site, too. I followed <a href="https://joelglovier.com/writing/rss-for-jekyll">this blog</a> to help me add the RSS feed to my site. It turned out to be super easy. There’s no gem requirement, and it doesn’t use any 3rd party service to compile properly. It updates the feed whenever <code>bundle exec jekyll build</code> is run, and auto-updates when I’m actively serving my site locally.</p>
             <p>I added these values to my <code>_config.yml</code>:</p>
             <div class="language-yml highlighter-rouge">
@@ -195,7 +195,6 @@ layout: none
             <div class="text-center margin-bottom-1">
               <button id="show-comments-button" class="btn btn-lg btn-outline-secondary">
                 Load Comments
-                <i data-feather="message-circle"></i>
               </button>
               <script id="comments" data-name="emmasax4" src="/assets/js/show_comments.js"></script>
             </div>
@@ -215,7 +214,8 @@ layout: none
               <a href="/blog/" class="btn btn-lg btn-outline-secondary button-text">All Posts</a>
             </div>
             <a href="/feed.xml" target="_blank" class="link-icon-rss">
-              <i data-feather="rss"></i>
+              <img class="icon-static" src="/assets/images/icons/rss-fill.svg">
+              <img class="icon-hover" src="/assets/images/icons/rss-fill-hover.svg">
             </a>
           </div>
         </div>
@@ -242,6 +242,4 @@ layout: none
   <script src="/assets/js/jquery.min.js"></script>
   <script src="/assets/js/lightbox.min.js"></script>
   <script src="/assets/js/bootstrap.min.js"></script>
-  <script src="/assets/js/feather.min.js"></script>
-  <script src="/assets/js/activate_feather.js"></script>
 </html>

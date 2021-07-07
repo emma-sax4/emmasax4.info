@@ -66,8 +66,8 @@
       data-target="#navbar-links" aria-controls="navbar-links"
       aria-expanded="false" aria-label="Toggle navigation"
     >
-        <i data-feather="menu"></i>
-        <i data-feather="x"></i>
+        <img class="nav-icon-menu" src="/assets/images/icons/menu.svg">
+        <img class="nav-icon-x" src="/assets/images/icons/x.svg">
       </button>
       <!-- Page links -->
       <div class="collapse navbar-collapse" id="navbar-links">
@@ -99,7 +99,8 @@
             <h1>
               Blog
               <a href="/feed.xml" target="_blank" class="link-icon-rss">
-                <i data-feather="rss"></i>
+                <img class="icon-static" src="/assets/images/icons/rss-fill.svg">
+                <img class="icon-hover" src="/assets/images/icons/rss-fill-hover.svg">
               </a>
             </h1>
           </div>
@@ -115,7 +116,7 @@
               <!-- Tag list or category -->
               <div>
                 <span class="post-meta">
-                  <i class="post-categorization-icon" data-feather="tag"></i>
+                  <img class="post-categorization-icon" src="/assets/images/icons/tag.svg">
                   <a href="/blog/tech/">tech</a>
                 </span>
               </div>
@@ -125,7 +126,7 @@
                 <!-- Show the button to the previous page -->
                 <li class="page-item">
                   <a class="page-link end-link" href="/blog/8/">
-                    <i class="pagination-icon" data-feather="skip-back"></i>
+                    <img class="pagination-icon" src="/assets/images/icons/arrow-left-circle.svg">
                   </a>
                 </li>
                 <!-- Loop through the pages -->
@@ -159,7 +160,7 @@
                 <!-- Show the button to the next page -->
                 <li class="page-item disabled">
                   <a class="page-link end-link">
-                    <i class="pagination-icon" data-feather="x-circle"></i>
+                    <img class="pagination-icon" src="/assets/images/icons/x-circle.svg">
                   </a>
                 </li>
               </ul>
@@ -171,7 +172,7 @@
           <div class="text-left">
             <!-- List of tags -->
             <h3>
-              <i class="blog-list-sidebar-icon" data-feather="tag"></i> Tags
+              <img class="blog-list-sidebar-icon" src="/assets/images/icons/tag.svg"> Tags
             </h3>
             <div><a href="/blog/covid/">covid</a></div>
             <div><a href="/blog/holidays/">holidays</a></div>
@@ -181,7 +182,7 @@
             <br>
             <!-- List of collections -->
             <h3>
-              <i class="blog-list-sidebar-icon" data-feather="archive"></i> Collections
+              <img class="blog-list-sidebar-icon" src="/assets/images/icons/collection.svg"> Collections
             </h3>
             <div><a href="/blog/our-20s-matter/">Our 20s Matter</a></div>
             <div><a href="/blog/skimp-and-splurge/">Skimp and Splurge</a></div>
@@ -211,6 +212,4 @@
   <script src="/assets/js/jquery.min.js"></script>
   <script src="/assets/js/lightbox.min.js"></script>
   <script src="/assets/js/bootstrap.min.js"></script>
-  <script src="/assets/js/feather.min.js"></script>
-  <script src="/assets/js/activate_feather.js"></script>
 </html>

@@ -49,7 +49,7 @@
     <meta name="msvalidate.01" content="89B2B19FF966341B78EF64EDADE6DF81" />
     <meta name="yandex-verification" content="32fe10ad6352714a" />
     <script type="application/ld+json">
-      {"headline":"Why I Switched from CircleCI to GitHub Actions","url":"https://emmasax.com/blog/posts/why-i-switched-from-circleci-to-github-actions/","mainEntityOfPage":{"@type":"WebPage","@id":"https://emmasax.com/blog/posts/why-i-switched-from-circleci-to-github-actions/"},"dateModified":"2021-02-21T04:24:03+00:00","datePublished":"2020-05-28T05:00:00+00:00","author":{"@type":"Person","name":"Emma Sax"},"description":"Emma Sax’s personal website and blog. Includes information about my social media profiles, resumé, and hobbies.","@type":"BlogPosting","@context":"https://schema.org"}
+      {"headline":"Why I Switched from CircleCI to GitHub Actions","url":"https://emmasax.com/blog/posts/why-i-switched-from-circleci-to-github-actions/","mainEntityOfPage":{"@type":"WebPage","@id":"https://emmasax.com/blog/posts/why-i-switched-from-circleci-to-github-actions/"},"dateModified":"2021-07-07T20:34:05+00:00","datePublished":"2020-05-28T05:00:00+00:00","author":{"@type":"Person","name":"Emma Sax"},"description":"Emma Sax’s personal website and blog. Includes information about my social media profiles, resumé, and hobbies.","@type":"BlogPosting","@context":"https://schema.org"}
     </script>
     <!-- End Jekyll SEO tag -->
   </head>
@@ -67,8 +67,8 @@
       data-target="#navbar-links" aria-controls="navbar-links"
       aria-expanded="false" aria-label="Toggle navigation"
     >
-        <i data-feather="menu"></i>
-        <i data-feather="x"></i>
+        <img class="nav-icon-menu" src="/assets/images/icons/menu.svg">
+        <img class="nav-icon-x" src="/assets/images/icons/x.svg">
       </button>
       <!-- Page links -->
       <div class="collapse navbar-collapse" id="navbar-links">
@@ -102,7 +102,7 @@
               <div class="row post-data">
                 <div class="col col-12 col-md-4">
                   <span class="post-meta">
-                    <i class="post-categorization-icon" data-feather="tag"></i>
+                    <img class="post-categorization-icon" src="/assets/images/icons/tag.svg">
                     <a href="/blog/tech/">tech</a>
                   </span>
                 </div>
@@ -352,11 +352,10 @@
             <p>If somebody were to ask me whether to use GitHub Actions, Travis CI, or CircleCI, I’d give different responses based on the use case. If the person wants something supported, familiar, and common, then I’d say to use Travis CI. In an enterprise setting, Travis CI probably has some of the best abilities to connect to AWS, Heroku, Jenkins, etc. If the person wants something that’s still formally supported, and potentially willing to try new things, then CircleCI may be the way to go. It’s fast, simple, and relatively easy to use (if you are willing to make additional bash scripts). And if the person wants something natively built into GitHub, is okay duplicating some code, and is willing to poke around more open source code, then GitHub Actions can be a powerful tool. Also, with either Travis CI or GitHub Actions, if you don’t want builds running on a few select branches, you don’t need to explicitly ignore them, like with CircleCI. It’s worth noting that for all three of these CI solutions, you’ll have to start spending money if you want to use them heavily with private repositories.</p>
             <p>And as for me, I think I’m going to have to cut myself off from new CI solutions for now. GitHub Actions does everything I want it to, and now that it’s all set up, it’s fast, easy to maintain, and of course, I’ve got that one big bonus… I’ve eliminated a third party development dependency.</p>
             <hr />
-            <p>EDIT: Since writing this blog post, I’ve moved my <code>master</code> branch to be called <code>gh-pages</code>, and I’ve updated this blog post accordingly.</p>
+            <p>EDIT: Since writing this blog post, I’ve moved my <code>master</code> branch to be called <code>gh-pages</code>, and I’ve updated this blog post accordingly. I’ve have also moved my site away from <a href="https://feathericons.com">Feather Icons</a>.</p>
             <div class="text-center margin-bottom-1">
               <button id="show-comments-button" class="btn btn-lg btn-outline-secondary">
                 Load Comments
-                <i data-feather="message-circle"></i>
               </button>
               <script id="comments" data-name="emmasax4" src="/assets/js/show_comments.js"></script>
             </div>
@@ -376,7 +375,8 @@
               <a href="/blog/" class="btn btn-lg btn-outline-secondary button-text">All Posts</a>
             </div>
             <a href="/feed.xml" target="_blank" class="link-icon-rss">
-              <i data-feather="rss"></i>
+              <img class="icon-static" src="/assets/images/icons/rss-fill.svg">
+              <img class="icon-hover" src="/assets/images/icons/rss-fill-hover.svg">
             </a>
           </div>
         </div>
@@ -403,6 +403,4 @@
   <script src="/assets/js/jquery.min.js"></script>
   <script src="/assets/js/lightbox.min.js"></script>
   <script src="/assets/js/bootstrap.min.js"></script>
-  <script src="/assets/js/feather.min.js"></script>
-  <script src="/assets/js/activate_feather.js"></script>
 </html>

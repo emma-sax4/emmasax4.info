@@ -49,7 +49,7 @@
     <meta name="msvalidate.01" content="89B2B19FF966341B78EF64EDADE6DF81" />
     <meta name="yandex-verification" content="32fe10ad6352714a" />
     <script type="application/ld+json">
-      {"headline":"Bootstrap, CSS, and Icons in this Site","url":"https://emmasax.com/blog/posts/bootstrap-css-and-icons-in-this-site/","mainEntityOfPage":{"@type":"WebPage","@id":"https://emmasax.com/blog/posts/bootstrap-css-and-icons-in-this-site/"},"dateModified":"2021-02-06T20:14:05+00:00","datePublished":"2019-12-29T06:00:00+00:00","author":{"@type":"Person","name":"Emma Sax"},"description":"Emma Sax’s personal website and blog. Includes information about my social media profiles, resumé, and hobbies.","@type":"BlogPosting","@context":"https://schema.org"}
+      {"headline":"Bootstrap, CSS, and Icons in this Site","url":"https://emmasax.com/blog/posts/bootstrap-css-and-icons-in-this-site/","mainEntityOfPage":{"@type":"WebPage","@id":"https://emmasax.com/blog/posts/bootstrap-css-and-icons-in-this-site/"},"dateModified":"2021-07-07T20:34:05+00:00","datePublished":"2019-12-29T06:00:00+00:00","author":{"@type":"Person","name":"Emma Sax"},"description":"Emma Sax’s personal website and blog. Includes information about my social media profiles, resumé, and hobbies.","@type":"BlogPosting","@context":"https://schema.org"}
     </script>
     <!-- End Jekyll SEO tag -->
   </head>
@@ -67,8 +67,8 @@
       data-target="#navbar-links" aria-controls="navbar-links"
       aria-expanded="false" aria-label="Toggle navigation"
     >
-        <i data-feather="menu"></i>
-        <i data-feather="x"></i>
+        <img class="nav-icon-menu" src="/assets/images/icons/menu.svg">
+        <img class="nav-icon-x" src="/assets/images/icons/x.svg">
       </button>
       <!-- Page links -->
       <div class="collapse navbar-collapse" id="navbar-links">
@@ -102,7 +102,7 @@
               <div class="row post-data">
                 <div class="col col-12 col-md-4">
                   <span class="post-meta">
-                    <i class="post-categorization-icon" data-feather="tag"></i>
+                    <img class="post-categorization-icon" src="/assets/images/icons/tag.svg">
                     <a href="/blog/tech/">tech</a>
                   </span>
                 </div>
@@ -184,10 +184,11 @@
             <p>See them in action <a href="https://github.com/emmahsax/emmahsax.github.io/blob/129867d8135a930f4d364fe026db123d655b5ca8/_includes/site/scripts.html#L3-L4">here</a>.</p>
             <h2>Conclusion</h2>
             <p>Now that you’ve seen how Bootstrap and Feather Icons have improved my website, it’s your turn! Check out my blog post <a href="/blog/posts/adding-bootstrap-to-your-static-content-site/">here</a> for more information on how to get Bootstrap started on your site.</p>
+            <hr />
+            <p>EDIT: Since writing this blog post, I’ve moved my site away from <a href="https://feathericons.com">Feather Icons</a>. I now use a mixture of <a href="https://feathericons.com">Feather Icons</a> and <a href="https://icons.getbootstrap.com">Bootstrap Icons</a>, and all are downloaded specifically to this project and called via an <code>&lt;img&gt;</code> tag.</p>
             <div class="text-center margin-bottom-1">
               <button id="show-comments-button" class="btn btn-lg btn-outline-secondary">
                 Load Comments
-                <i data-feather="message-circle"></i>
               </button>
               <script id="comments" data-name="emmasax4" src="/assets/js/show_comments.js"></script>
             </div>
@@ -207,7 +208,8 @@
               <a href="/blog/" class="btn btn-lg btn-outline-secondary button-text">All Posts</a>
             </div>
             <a href="/feed.xml" target="_blank" class="link-icon-rss">
-              <i data-feather="rss"></i>
+              <img class="icon-static" src="/assets/images/icons/rss-fill.svg">
+              <img class="icon-hover" src="/assets/images/icons/rss-fill-hover.svg">
             </a>
           </div>
         </div>
@@ -234,6 +236,4 @@
   <script src="/assets/js/jquery.min.js"></script>
   <script src="/assets/js/lightbox.min.js"></script>
   <script src="/assets/js/bootstrap.min.js"></script>
-  <script src="/assets/js/feather.min.js"></script>
-  <script src="/assets/js/activate_feather.js"></script>
 </html>

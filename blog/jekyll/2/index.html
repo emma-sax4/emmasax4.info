@@ -66,8 +66,8 @@
       data-target="#navbar-links" aria-controls="navbar-links"
       aria-expanded="false" aria-label="Toggle navigation"
     >
-        <i data-feather="menu"></i>
-        <i data-feather="x"></i>
+        <img class="nav-icon-menu" src="/assets/images/icons/menu.svg">
+        <img class="nav-icon-x" src="/assets/images/icons/x.svg">
       </button>
       <!-- Page links -->
       <div class="collapse navbar-collapse" id="navbar-links">
@@ -97,7 +97,7 @@
           <!-- Page title – tag or collection name, or general "Blog" -->
           <div class="text-center">
             <h1>
-              <i class="blog-list-title-icon" data-feather="tag"></i>
+              <img class="blog-list-title-icon" src="/assets/images/icons/tag.svg">
               Jekyll
             </h1>
           </div>
@@ -130,7 +130,7 @@
                 <!-- Show the button to the previous page -->
                 <li class="page-item">
                   <a class="page-link end-link" href="/blog/jekyll/">
-                    <i class="pagination-icon" data-feather="skip-back"></i>
+                    <img class="pagination-icon" src="/assets/images/icons/arrow-left-circle.svg">
                   </a>
                 </li>
                 <!-- Loop through the pages -->
@@ -143,7 +143,7 @@
                 <!-- Show the button to the next page -->
                 <li class="page-item disabled">
                   <a class="page-link end-link">
-                    <i class="pagination-icon" data-feather="x-circle"></i>
+                    <img class="pagination-icon" src="/assets/images/icons/x-circle.svg">
                   </a>
                 </li>
               </ul>
@@ -158,7 +158,8 @@
               <a href="/blog/" class="btn btn-lg btn-outline-secondary button-text">All Posts</a>
             </div>
             <a href="/feed.xml" target="_blank" class="link-icon-rss">
-              <i data-feather="rss"></i>
+              <img class="icon-static" src="/assets/images/icons/rss-fill.svg">
+              <img class="icon-hover" src="/assets/images/icons/rss-fill-hover.svg">
             </a>
           </div>
         </div>
@@ -185,6 +186,4 @@
   <script src="/assets/js/jquery.min.js"></script>
   <script src="/assets/js/lightbox.min.js"></script>
   <script src="/assets/js/bootstrap.min.js"></script>
-  <script src="/assets/js/feather.min.js"></script>
-  <script src="/assets/js/activate_feather.js"></script>
 </html>
