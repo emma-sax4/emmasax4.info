@@ -152,3 +152,7 @@ Now this _**really**_ does everything I need. 🙌🏼
 * [html.com: a Target](https://html.com/attributes/a-target/)
 * [caktusgroup.com: Opening External Links Same Tab or New](https://www.caktusgroup.com/blog/2017/03/01/opening-external-links-same-tab-or-new/)
 * [uxmovement.com: Why External Links Should Open in New Tabs](https://uxmovement.com/navigation/why-external-links-should-open-in-new-tabs/)
+
+---
+
+EDIT: Since writing this blog post, I've moved my site away from [Feather Icons](https://feathericons.com).

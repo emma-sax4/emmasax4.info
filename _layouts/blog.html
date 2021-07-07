@@ -8,9 +8,9 @@ layout: default
     <div class="text-center">
       <h1>
         {% if page.pagination.tag %}
-          <i class="blog-list-title-icon" data-feather="tag"></i>
+          <img class="blog-list-title-icon" src="/assets/images/icons/tag.svg">
         {% elsif page.pagination.category %}
-          <i class="blog-list-title-icon" data-feather="archive"></i>
+          <img class="blog-list-title-icon" src="/assets/images/icons/collection.svg">
         {% endif %}
 
         {{ page.pagination.title }}
@@ -43,7 +43,7 @@ layout: default
       <div class="text-left">
         <!-- List of tags -->
         <h3>
-          <i class="blog-list-sidebar-icon" data-feather="tag"></i> Tags
+          <img class="blog-list-sidebar-icon" src="/assets/images/icons/tag.svg"> Tags
         </h3>
 
         {% assign pages_with_tags = site.pages | where_exp: "item", "item.pagination.tag.size > 1" %}
@@ -64,7 +64,7 @@ layout: default
 
         <!-- List of collections -->
         <h3>
-          <i class="blog-list-sidebar-icon" data-feather="archive"></i> Collections
+          <img class="blog-list-sidebar-icon" src="/assets/images/icons/collection.svg"> Collections
         </h3>
 
         {% assign pages_with_category = site.pages | where_exp: "item", "item.pagination.category.size > 1" %}

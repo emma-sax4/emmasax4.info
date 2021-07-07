@@ -1,6 +1,6 @@
 {% if tags_to_show and tags_to_show.size > 0 %}
   <span class="post-meta">
-    <i class="post-categorization-icon" data-feather="tag"></i>
+    <img class="post-categorization-icon" src="/assets/images/icons/tag.svg">
 
     {% for tag in tags_to_show %}
       <a href="/blog/{{ tag }}/">{{ tag }}</a>
@@ -16,7 +16,7 @@
   {% assign category = category_to_show | downcase | replace: " ", "-" %}
 
   <span class="post-meta">
-    <i class="post-categorization-icon" data-feather="archive"></i>
+    <img class="post-categorization-icon" src="/assets/images/icons/collection.svg">
     <a href="/blog/{{ category }}/">
       {{ category_to_show }}
     </a>

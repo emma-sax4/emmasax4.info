@@ -18,33 +18,53 @@ a:hover:not(
 .link-icon-rss {
   padding-left: .625rem;
   padding-right: .625rem;
-  color: #f88e02;
 
   > * {
     width: 2rem;
     height: 2rem;
   }
 
+  .icon-hover {
+    display: none;
+  }
+
   &:hover,
   &:active {
-    color: #001aaf;
     text-decoration: none;
+  }
+
+  &:hover .icon-static {
+    display: none;
+  }
+
+  &:hover .icon-hover {
+    display: inline;
   }
 }
 
 .link-icon {
   padding-left: .625rem;
   padding-right: .625rem;
-  color: #6d7375;
 
   > * {
     width: 3rem;
     height: 3rem;
   }
 
+  .icon-hover {
+    display: none;
+  }
+
   &:hover,
   &:active {
-    color: #001aaf;
     text-decoration: none;
+  }
+
+  &:hover .icon-static {
+    display: none;
+  }
+
+  &:hover .icon-hover {
+    display: inline;
   }
 }

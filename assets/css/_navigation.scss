@@ -15,11 +15,11 @@ nav.navbar {
     margin-right: 5px;
   }
 
-  .navbar-toggler[aria-expanded="false"] > .feather-x {
+  .navbar-toggler[aria-expanded="false"] > .nav-icon-x {
     display: none;
   }
 
-  .navbar-toggler[aria-expanded="true"] > .feather-menu {
+  .navbar-toggler[aria-expanded="true"] > .nav-icon-menu {
     display: none;
   }
 

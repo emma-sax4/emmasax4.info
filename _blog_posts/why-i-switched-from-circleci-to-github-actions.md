@@ -272,4 +272,4 @@ And as for me, I think I'm going to have to cut myself off from new CI solutions
 
 ---
 
-EDIT: Since writing this blog post, I've moved my `master` branch to be called `gh-pages`, and I've updated this blog post accordingly.
+EDIT: Since writing this blog post, I've moved my `master` branch to be called `gh-pages`, and I've updated this blog post accordingly. I've have also moved my site away from [Feather Icons](https://feathericons.com).
