@@ -85,3 +85,7 @@ See them in action [here]({{ site.author_profiles.github }}/{{ site.github_repo 
 ## Conclusion
 
 Now that you've seen how Bootstrap and Feather Icons have improved my website, it's your turn! Check out my blog post [here](/blog/posts/adding-bootstrap-to-your-static-content-site/) for more information on how to get Bootstrap started on your site.
+
+---
+
+EDIT: Since writing this blog post, I've moved my site away from [Feather Icons](https://feathericons.com). I now use a mixture of [Feather Icons](https://feathericons.com) and [Bootstrap Icons](https://icons.getbootstrap.com), and all are downloaded specifically to this project and called via an `<img>` tag.
