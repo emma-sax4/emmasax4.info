@@ -20,13 +20,13 @@ form.onsubmit = function verifyRecaptcha () {
 }
 
 function recaptchaCallback (verificationResponse) {
-  $('#submitButton').removeAttr('disabled')
+  document.getElementById('submitButton').removeAttribute('disabled')
   recaptchaCompleted = true
   document.getElementById('verification').value = verificationResponse + code + verificationResponse
 };
 
 function recaptchaExpiredCallback () {
-  $('#submitButton').attr('disabled', true)
+  document.getElementById('submitButton').setAttribute('disabled', true)
   recaptchaCompleted = false
   document.getElementById('verification').value = null
 };
