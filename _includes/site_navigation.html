@@ -1,46 +1,44 @@
 <header class="sticky-top">
   <nav class="navbar navbar-expand-md navbar-dark py-0 py-md-0">
-    <!-- Left hand side of navbar -->
-    <a class="navbar-brand mb-0" href="/" target="_self">
-      <img src="/assets/images/logo-plain-white-400.png" width="30" height="30"
-        class="d-inline-block align-top nav-icon" alt="E logo"
-      >&nbsp;&nbsp;Emma Sax
-    </a>
+    <div class="container-fluid">
+      <!-- Left hand side of navbar -->
+      <a class="navbar-brand mb-0" href="/" target="_self">
+        <img src="/assets/images/logo-plain-white-400.png" width="30" height="30"
+          class="d-inline-block align-top nav-icon" alt="E logo"
+        >&nbsp;&nbsp;Emma Sax
+      </a>
 
-    <!-- Navbar open/close button when on a smaller screen -->
-    <button class="navbar-toggler" type="button" data-toggle="collapse"
-      data-target="#navbar-links" aria-controls="navbar-links"
-      aria-expanded="false" aria-label="Toggle navigation"
-    >
-      <img class="nav-icon-menu" src="/assets/images/icons/menu.svg">
-      <img class="nav-icon-x" src="/assets/images/icons/x.svg">
-    </button>
+      <!-- Navbar open/close button when on a smaller screen -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbar-links" aria-controls="navbar-links"
+        aria-expanded="false" aria-label="Toggle navigation"
+      >
+        <img class="nav-icon-menu" src="/assets/images/icons/menu.svg">
+        <img class="nav-icon-x" src="/assets/images/icons/x.svg">
+      </button>
 
-    <!-- Page links -->
-    <div class="collapse navbar-collapse" id="navbar-links">
-      <ul class="navbar-nav ml-auto mt-2 mt-md-0">
-        {% assign sorted_pages = site.pages | where_exp: "item", "item.order" | sort: "order" %}
+      <!-- Page links -->
+      <div class="collapse navbar-collapse" id="navbar-links">
+        <ul class="navbar-nav ms-auto mt-2 mt-md-0">
+          {% assign sorted_pages = site.pages | where_exp: "item", "item.order" | sort: "order" %}
 
-        {% for node in sorted_pages %}
-          {% unless node.autogen == "jekyll-paginate-v2" %}
-            {% assign navigation_url = node.url | remove: "index.html" %}
+          {% for node in sorted_pages %}
+            {% unless node.autogen == "jekyll-paginate-v2" %}
+              {% assign navigation_url = node.url | remove: "index.html" %}
 
-            {% if page.url contains navigation_url %}
-              {% assign active = "active" %}
-            {% else %}
-              {% assign active = nil %}
-            {% endif %}
+              {% if page.url contains navigation_url %}
+                {% assign active = "active" %}
+              {% else %}
+                {% assign active = nil %}
+              {% endif %}
 
-            <li class="nav-item {{ active }}">
-              <a class="nav-link" href="{{ navigation_url }}">{{ node.title }}
-                {% if active == "active" %}
-                  <span class="sr-only">(current)</span>
-                {% endif %}
-              </a>
-            </li>
-          {% endunless %}
-        {% endfor %}
-      </ul>
+              <li class="nav-item {{ active }}">
+                <a class="nav-link" href="{{ navigation_url }}">{{ node.title }}</a>
+              </li>
+            {% endunless %}
+          {% endfor %}
+        </ul>
+      </div>
     </div>
   </nav>
 </header>

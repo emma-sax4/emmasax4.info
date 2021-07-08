@@ -6,7 +6,7 @@ permalink: /interests-and-hobbies/theatre/
 
 ### On Stage
 
-<div class="table-responsive-sm">
+<div class="table-responsive">
   <table class="table table-hover">
     <tbody>
       <tr>
